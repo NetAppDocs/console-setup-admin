@@ -231,6 +231,7 @@ b. Select *Actions* > *New VM from this template*
 +
 * Proxy information: If you selected explicit proxy, enter the proxy server hostname or IP address and port number, as well as the username, password. If you selected transparent proxy, upload the respective certificate.
 * Virtual Machine Configuration
+** Skip config check: This is unchecked by default. Mark this checkbox if you want to install without running a configuration check.
 ** Maintenance password: Set the password for the maint user that allows access to the agent maintenance console.
 ** NTP servers:
 ** Hostname:
