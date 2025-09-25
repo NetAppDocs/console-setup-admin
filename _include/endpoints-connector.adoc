@@ -95,9 +95,14 @@ a| \https://bluexpinfraprod.eastus2.data.azurecr.io
 | To obtain images for Console agent upgrades. 
 
 
- * For new agent deployments, NetApp checks for these endpoints. If you are still using the previous endpoints used for agent upgrades,  link:reference-networking-saas-console-previous.html[listed here], the validation fails with an error. To avoid this, unmark the check box. NetApp recommends updating your firewall rules to allow access to the current endpoints at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
+* When you deploy a new agent, the validation check tests connectivity to current endpoints. If you use link:link:reference-networking-saas-console-previous.html[previous endpoints], the validation check fails. To avoid this failure, skip the validation check.
++
 
-* If you update the endpoints in your firewall, your existing agents will continue to work.
+Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to allow the current endpoints as soon as possible. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
+
+
+
+* When you update to the current endpoints in your firewall, your existing agents will continue to work.
 
 
 
