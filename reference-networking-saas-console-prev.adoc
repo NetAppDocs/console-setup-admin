@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-networking-saas-console-previous.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp
-summary: When you log in and use the web-based console, it contacts several endpoints to complete the actions that you initiate. Computers that access the NetApp Console must have connections to these endpoints.
+summary: This topic details the network access required for versions of the NetApp Console standard mode previous to the 4.0.0. release of the NetApp Console, the NetApp Console agent, and NetApp data services outbound internet access and the ability to contact the necessary endpoints. You need to ensure that the Console and any agents you install have the right network access to function property.
 ---
 
 = Required network access points for 3.9.55 and below
