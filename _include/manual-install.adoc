@@ -76,7 +76,7 @@ For example:
 +
 \http://bxpproxyuser:netapp1\!@address:3128
 
-+
+
 `--cacert` specifies a CA-signed certificate to use for HTTPS access between Console agent and the proxy server. This parameter is required for HTTPS proxy servers, intercepting proxy servers, and transparent proxy servers.
 
 +
