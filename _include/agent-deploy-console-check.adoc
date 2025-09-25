@@ -3,5 +3,3 @@
 
 + 
 NOTE: If you are still using the previous endpoints used for agent upgrades,  link:reference-networking-saas-console-previous.html[listed here], the validation fails with an error. To avoid this, unmark the check box. NetApp recommends updating your firewall rules to allow access to the current endpoints at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
-+
-link:task-troubleshoot-connector.html#troubleshoot-installation[See troubleshooting information for Console agent installation].

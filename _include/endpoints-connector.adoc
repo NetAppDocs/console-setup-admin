@@ -98,7 +98,7 @@ a| \https://bluexpinfraprod.eastus2.data.azurecr.io
 * When you deploy a new agent, the validation check tests connectivity to current endpoints. If you use link:link:reference-networking-saas-console-previous.html[previous endpoints], the validation check fails. To avoid this failure, skip the validation check.
 +
 
-Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to allow the current endpoints as soon as possible. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
+Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to the current endpoints as soon as possible. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
 
 
 
