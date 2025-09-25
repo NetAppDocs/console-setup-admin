@@ -1,0 +1,4 @@
+---
+permalink: task-setting-up-netapp-accounts.html
+redirect: bluexp-setup-admin/task-managing-netapp-accounts.html
+---

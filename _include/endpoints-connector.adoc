@@ -1,0 +1,144 @@
+//tag::intro[]
+Endpoints contacted from the Console agent::
+The Console agent requires outbound internet access to contact the following endpoints to manage resources and processes within your public cloud environment for day-to-day operations.
++
+The endpoints listed below are all CNAME entries.
+//end::intro[] 
+
+//tag::aws-endpoints[]
+| AWS services (amazonaws.com):
+
+* CloudFormation
+* Elastic Compute Cloud (EC2)
+* Identity and Access Management (IAM)
+* Key Management Service (KMS)
+* Security Token Service (STS)
+* Simple Storage Service (S3)
+
+| To manage AWS resources. The endpoint depends on your AWS region. https://docs.aws.amazon.com/general/latest/gr/rande.html[Refer to AWS documentation for details^]
+//end::aws-endpoints[]
+
+//tag::azure-public-endpoints[]
+| \https://management.azure.com
+\https://login.microsoftonline.com
+\https://blob.core.windows.net
+\https://core.windows.net
+
+| To manage resources in Azure public regions.
+
+//end::azure-public-endpoints[]
+
+//tag::azure-il6-endpoints[]
+| 
+\https://management.azure.microsoft.scloud
+\https://login.microsoftonline.microsoft.scloud
+\https://blob.core.microsoft.scloud
+\https://core.microsoft.scloud
+
+| To manage resources in the Azure IL6 region.
+//end::azure-il6-endpoints[]
+
+//tag::azure-gov-endpoints[]
+| \https://management.usgovcloudapi.net
+\https://login.microsoftonline.us
+\https://blob.core.usgovcloudapi.net
+\https://core.usgovcloudapi.net
+
+| To manage resources in Azure Government regions.
+//end::azure-gov-endpoints[]
+
+//tag::azure-china-endpoints[]
+| \https://management.chinacloudapi.cn
+\https://login.chinacloudapi.cn
+\https://blob.core.chinacloudapi.cn
+\https://core.chinacloudapi.cn
+
+| To manage resources in Azure China regions.
+//end::azure-china-endpoints[]
+
+//tag::google-cloud-endpoints[]
+| \https://www.googleapis.com/compute/v1/
+\https://compute.googleapis.com/compute/v1
+\https://cloudresourcemanager.googleapis.com/v1/projects
+\https://www.googleapis.com/compute/beta
+\https://storage.googleapis.com/storage/v1
+\https://www.googleapis.com/storage/v1
+\https://iam.googleapis.com/v1
+\https://cloudkms.googleapis.com/v1
+\https://www.googleapis.com/deploymentmanager/v2/projects
+
+| To manage resources in Google Cloud.
+//end::google-cloud-endpoints[]
+
+//tag::nss-endpoints[]
+| 
+\https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
+| \https://signin.b2c.netapp.com | To update NetApp Support Site (NSS) credentials or to add new NSS credentials to the NetApp Console.
+//end::nss-endpoints[]
+
+//tag::saas-endpoints[]
+| 
+\https://api.bluexp.netapp.com
+\https://netapp-cloud-account.auth0.com
+\https://netapp-cloud-account.us.auth0.com
+\https://console.netapp.com
+\https://components.console.bluexp.netapp.com
+
+| To provide features and services within the NetApp Console.
+
+
+//end::saas-endpoints[]
+
+//tag::upgrade-endpoints[]
+a| \https://bluexpinfraprod.eastus2.data.azurecr.io
+\https://bluexpinfraprod.azurecr.io 
+| To obtain images for Console agent upgrades. 
+
+
+ * For new agent deployments, NetApp checks for these endpoints. This configuration check fails with an error if you are using the previous endpoints used for upgrades,  link:reference-networking-saas-console-prev.html[listed here^]. Although your agent can still receive upgrades with the previous endpoints, NetApp recommends updating your firewall rules to allow access to the current endpoints and block access to the previous endpoints.
+
+* If you update the endpoints in your firewall, your existing agents will continue to work.
+
+
+
+//end::upgrade-endpoints[]
+
+//tag::upgrade-endpoints-explanation[]
+//Same text is also in endpoints-manual-install
+^1^ NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints. Note the following about these endpoints:
++
+* Starting with the 3.9.47 release of the Console agent, the system supports the endpoints listed in option 1. Previous releases of the Console agent do not support backwards compatibility.
+* The Console agent first contacts the endpoints in option 2. If those endpoints are not accessible, it automatically contacts the endpoints in option 1.
+* If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
+//end::upgrade-endpoints-explanation[]
+
+//tag::upgrade-endpoints-restricted-mode[]
+|
+If the Console agent is in an AWS Government region:
+\https://*.blob.core.windows.net
+\https://cloudmanagerinfraprod.azurecr.io
+
+| To obtain images for Console agent upgrades when the Console agent is installed in an AWS Government region.
+
+| 
+If the Console agent is in an Azure Government region:
+\https://*.blob.core.windows.net
+\https://occmclientinfragov.azurecr.us
+
+| To obtain images for Console agent upgrades when the Console agent is installed in an Azure Government region.
+ 
+a|
+If the Console agent is in a commercial region or sovereign region, you can choose between two sets of endpoints:
+
+* Option 1 (recommended) ^1^
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io
+\https://bluexpinfraprod.azurecr.io
+
+* Option 2
++
+\https://*.blob.core.windows.net
+\https://cloudmanagerinfraprod.azurecr.io
+
+| To obtain images for Console agent upgrades when the Console agent is installed in a commercial region or sovereign region.
+//end::upgrade-endpoints-restricted-mode[]

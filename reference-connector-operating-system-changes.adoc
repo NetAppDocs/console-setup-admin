@@ -1,0 +1,149 @@
+---
+sidebar: sidebar
+permalink: reference-connector-operating-system-changes.html
+keywords: connector, operating systems, connector operating systems, os support, supported operating systems, rhel 8, rhel 9, red hat, docker, podman, agent
+summary: NetApp sometimes adds and removes support for the Console agent on specific Linux operating systems, learn how this support affects your existing Console agents.
+---
+
+= Changes to supported Linux operating systems
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+NetApp sometimes adds and removes support for the Console agent on specific Linux operating systems, learn how this support affects your existing Console agents.
+
+== Supported operating systems
+
+NetApp supports the agent with the following Linux operating systems.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Standard mode
+--
+Manual installation::
+* Ubuntu 24.04 LTS
+* Ubuntu 22.04 LTS
+* Red Hat Enterprise Linux 
+** 8.6 to 8.10
+** 9.1 to 9.4
+
+Deployment from NetApp Console::
+Ubuntu 22.04 LTS
+
+Deployment from the AWS Marketplace::
+Ubuntu 22.04 LTS 
+
+Deployment from the Azure Marketplace::
+Ubuntu 22.04 LTS
+--
+
+.Restricted mode
+--
+Manual installation::
+* Ubuntu 24.04 LTS
+* Ubuntu 22.04 LTS
+* Red Hat Enterprise Linux
+** 8.6 to 8.10
+** 9.1 to 9.4
+
+Deployment from the AWS Marketplace::
+Ubuntu 22.04 LTS
+
+Deployment from the Azure Marketplace::
+Ubuntu 22.04 LTS
+--
+
+.Private mode
+--
+Manual installation::
+* Ubuntu 22.04 LTS
+* Red Hat Enterprise Linux 
+** 8.6 to 8.10
+** 9.1 to 9.4
+--
+
+====
+
+== Support for RHEL 8 and 9
+
+Note the following about support for RHEL 8 and 9:
+
+Limitations::
+NetApp Data Classification is supported if you install the agent on a RHEL 8 or 9 host that resides on-premises. It's not supported if the RHEL 8 or 9 host resides in AWS, Azure, or Google Cloud.
+
+Container orchestration tool::
+You must use the Podman tool as the container orchestration tool when installing the Console agent on a RHEL 8 or 9 host. Docker Engine is not supported with RHEL 8 and 9.
+
+Deployment mode::
+RHEL 8 and 9 are supported when using the Console in standard mode and restricted mode.
+
+Supported Console agent versions::
+NetApp supports RHEL 8 and 9 beginning with the following versions of the Console agent:
++
+* 3.9.40 when using the Console in standard mode or restricted mode
+
+New manual installations only::
+RHEL 8 and 9 are supported with _new_ agent installations when manually installing agents on hosts running on your premises or in the cloud.
+
+RHEL upgrades::
+If you have an existing agent running on a RHEL 7 host, NetApp does not support upgrading the RHEL 7 operating system to RHEL 8 or 9. <<rhel-7-agent,Learn more about existing Console agents on RHEL 7 or CentOS 7>>.
+
+== End of support for RHEL 7 and CentOS 7
+
+On June 30, 2024, RHEL 7 reached end of maintenance (EOM), while CentOS 7 reached end of life (EOL). NetApp discontinued support for agents on these Linux distributions on June 30, 2024.
+
+https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance[Red Hat: What to know about Red Hat Enterprise Linux 7 End of Maintenance^]
+
+[[rhel-7-agent]]
+=== Existing Console agents on RHEL 7 or CentOS 7
+
+If you have an existing agent running on RHEL 7 or CentOS 7, NetApp does not support upgrading or converting the operating system to RHEL 8 or 9. You need to create a new agent on a supported operating system.
+
+. Set up a RHEL 8 or 9 host.
+. Install Podman.
+. Install a _new_ agent.
+. Configure the agent to discover the systems that the previous agent was managing.
+
+== Related information
+
+=== How to get started with RHEL 8 and 9
+
+Refer to the following pages for details about host requirements, Podman requirements, and steps to install Podman and the Cagent:
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Standard mode
+--
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html[Install and set up a Console agent on-premises]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-manual.html[Manually install the Console agent in AWS]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-manual.html[Manually install the Console agent in Azure]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-manual.html[Manually install the Console agent in Google Cloud]
+--
+
+.Restricted mode
+--
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html[Prepare for deployment in restricted mode]
+--
+
+
+====
+
+=== How to rediscover your systems
+
+Refer to the following pages to rediscover your systems after you deploy a new Console agent.
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-adding-systems.html[Add existing Cloud Volumes ONTAP systems^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html[Discover on-premises ONTAP clusters^]
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html[Create or discover an FSx for ONTAP system^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-working-env.html[Create an Azure NetApp Files systems^]
+* https://docs.netapp.com/us-en/bluexp-e-series/task-discover-e-series.html[Discover E-Series systems^]
+* https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html[Discover StorageGRID systems^]

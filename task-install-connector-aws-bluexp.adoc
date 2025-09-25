@@ -1,0 +1,282 @@
+---
+sidebar: sidebar
+permalink: task-install-connector-aws-bluexp.html
+keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector
+summary: You can create a Console agent in AWS directly from the NetApp Console. Before creating a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
+---
+
+= Create a Console agent in AWS from NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a Console agent in AWS directly from the NetApp Console. Before creating a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
+
+.Before you begin
+
+* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should review link:reference-limitations.html[Console agent limitations].
+
+
+[[networking-aws-agent]]
+== Step 1: Set up networking for deploying a Console agent in AWS
+
+Ensure that the network location where you plan to install the Console agent supports the following requirements. These requirements enable the Console agent to manage resources and processes in your hybrid cloud.
+
+//VPC and subnet
+include::_include/networking.adoc[tag=vpc]
+
+//Connections to target networks
+include::_include/networking.adoc[tag=networks]
+
+//Outbound internet access
+include::_include/networking.adoc[tag=outbound]
+
+//Endpoints contacted from the Console agent 
+include::_include/endpoints-connector.adoc[tag=intro]
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+
+//Console endpoints
+include::_include/networking.adoc[tag=endpoints-console]
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
++
+You'll need to implement this networking requirement after you create the Console agent.
+
+
+[[aws-permissions-agent]]
+== Step 2: Set up AWS permissions for the Console agent
+
+The Console needs to authenticate with AWS before it can deploy the Console agent instance in your VPC. You can choose one of these authentication methods:
+
+* Let the Console assume an IAM role that has the required permissions
+* Provide an AWS access key and secret key for an IAM user who has the required permissions
+
+With either option, the first step is to create an IAM policy. This policy contains only the permissions needed to launch the Console agent instance in AWS from the Console.
+
+If needed, you can restrict the IAM policy by using the IAM `Condition` element. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html[AWS documentation: Condition element^]
+
+.Steps
+
+. Go to the AWS IAM console.
+
+. Select *Policies > Create policy*.
+
+. Select *JSON*.
+
+. Copy and paste the following policy:
++
+This policy contains only the permissions needed to launch the Console agent instance in AWS from the Console. When the Console creates the Console agent, it applies a new set of permissions to the Console agent instance that enables the Console agent to manage AWS resources. link:reference-permissions-aws.html[View permissions required for the Console agent instance itself].
++
+[source,json]
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:PutRolePolicy",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteRolePolicy",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:PassRole",
+        "iam:ListRoles",
+        "ec2:DescribeInstanceStatus",
+        "ec2:RunInstances",
+        "ec2:ModifyInstanceAttribute",
+        "ec2:CreateSecurityGroup",
+        "ec2:DeleteSecurityGroup",
+        "ec2:DescribeSecurityGroups",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:CreateNetworkInterface",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DeleteNetworkInterface",
+        "ec2:ModifyNetworkInterfaceAttribute",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeDhcpOptions",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeRegions",
+        "ec2:DescribeInstances",
+        "ec2:CreateTags",
+        "ec2:DescribeImages",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:CreateLaunchTemplate",
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:ValidateTemplate",
+        "ec2:AssociateIamInstanceProfile",
+        "ec2:DescribeIamInstanceProfileAssociations",
+        "ec2:DisassociateIamInstanceProfile",
+        "iam:GetRole",
+        "iam:TagRole",
+        "kms:ListAliases",
+        "cloudformation:ListStacks"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:TerminateInstances"
+      ],
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/OCCMInstance": "*"
+        }
+      },
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ]
+    }
+  ]
+}
+
+. Select *Next* and add tags, if needed.
+
+. Select *Next* and enter a name and description.
+
+. Select *Create policy*.
+
+. Either attach the policy to an IAM role that the Console can assume or to an IAM user so that you can provide the Console with access keys:
+
+* (Option 1) Set up an IAM role that the Console can assume:
++
+.. Go to the AWS IAM console in the target account.
+
+.. Under Access Management, select *Roles > Create Role* and follow the steps to create the role.
+
+.. Under *Trusted entity type*, select *AWS account*.
+
+.. Select *Another AWS account* and enter the ID of the Console SaaS account: 952013314444
+
+.. Select the policy that you created in the previous section.
+
+.. After you create the role, copy the Role ARN so that you can paste it in the Console when you create the Console agent.
+
+* (Option 2) Set up permissions for an IAM user so that you can provide the Console with access keys:
++
+.. From the AWS IAM console, select *Users* and then select the user name.
+
+.. Select *Add permissions > Attach existing policies directly*.
+
+.. Select the policy that you created.
+
+.. Select *Next* and then select *Add permissions*.
+
+.. Ensure that you have the access key and secret key for the IAM user.
+
+.Result
+
+You should now have an IAM role that has the required permissions or an IAM user that has the required permissions. When you create the Console agent from the Console, you can provide information about the role or access keys.
+
+== Step 3: Create the Console agent
+
+Create the Console agent directly from the the Console web-based console.
+
+.About this task
+
+* Creating the Console agent from the Console deploys an EC2 instance in AWS using a default configuration. Do not switch to a smaller EC2 instance with fewer CPUs or less RAM after creating the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+
+* When the Console creates the Console agent, it creates an IAM role and an instance profile for the instance. This role includes permissions that enables the Console agent to manage AWS resources. Ensure the role is updated as new permissions are added in future releases.
+ link:reference-permissions-aws.html[Learn more about the IAM policy for the Console agent].
+
+.Before you begin
+
+You should have the following:
+
+* An AWS authentication method: either an IAM role or access keys for an IAM user with the required permissions.
+
+* A VPC and subnet that meets networking requirements.
+
+* A key pair for the EC2 instance.
+
+* Details about a proxy server, if a proxy is required for internet access from the Console agent.
+
+* Set up link:#networking-aws-agent[networking requirements].
+
+* Set up link:#aws-permissions-agent[AWS permissions].
+
+.Steps
+
+. Select *Administration > Agents*. 
+
+. On the *Overview* page, select *Deploy agent > AWS*
+
+
+. Follow the steps in the wizard to create the Console agent:
+
+. On the *Introduction* page provides an overview of the process
+
+. On the *AWS Credentials* page,  specify your AWS region and then choose an authentication method, which is either an IAM role that the Console can assume or an AWS access key and secret key.
++
+TIP: If you choose *Assume Role*, you can create the first set of credentials from the Console agent deployment wizard. Any additional set of credentials must be created from the Credentials page. They will then be available from the wizard in a drop-down list. link:task-adding-aws-accounts.html[Learn how to add additional credentials].
+
+. On the *Details* page, provide details about the Console agent.
++
+** Enter a name for the instance.
+** Add custom tags (metadata) to the instance.
+** Choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-aws.html[the required permissions].
+** Choose whether you want to encrypt the Console agent's EBS disks. You have the option to use the default encryption key or to use a custom key.
+
+. On the *Network* page, Specify a VPC, subnet, and key pair for the instance, choose whether to enable a public IP address, and optionally specify a proxy configuration.
++
+Ensure you have the correct key pair to access the Console agent virtual machine. Without a key pair, you cannot access it.
+
+. On the  *Security Group* page, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
++
+link:reference-ports-aws.html[View security group rules for AWS].
+
+include::_include/agent-deploy-console-check.adoc[]
+
+. Select *Add*.
++
+The Console prepares the instance in about 7 minutes. Stay on the page until the process completes.
+
+.Result
+
+After the process is complete, the Console agent is available for use from the Console.
+
+
+If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 working environment appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]
+
+
+
+
+
+

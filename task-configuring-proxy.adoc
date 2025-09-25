@@ -1,0 +1,141 @@
+---
+sidebar: sidebar
+permalink: task-configuring-proxy.html
+keywords: proxy, proxy server, proxy, internet, HTTP, http, https, bluexp
+summary: If your corporate policies require you to use a proxy server for all communication to the internet, then you need to configure your agents to use that proxy server. If you didn't configure a Console agent to use a proxy server during installation, then you can configure the Console agent to use that proxy server at any time. 
+---
+
+= Configure a Console agent to use a proxy server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If your corporate policies require you to use a proxy server for all communication to the internet, then you need to configure your agents to use that proxy server. If you didn't configure a Console agent to use a proxy server during installation, then you can configure the Console agent to use that proxy server at any time.
+
+The agent's proxy server enables outbound internet access without a public IP or NAT gateway. The proxy server provides outbound connectivity only for the Console agent, not for Cloud Volumes ONTAP systems.
+
+If Cloud Volumes ONTAP systems lack outbound internet access, the Console configures them to use the Console agent's proxy server. You must ensure that the Console agent's security group allows inbound connections over port 3128. Open this port after deploying the Console agent.
+
+If the Console agent itself doesn't have an outbound internet connection, Cloud Volumes ONTAP systems cannot use the configured proxy server. 
+
+== Supported configurations
+
+* Transparent proxy servers are supported for agents that serve Cloud Volumes ONTAP systems. If you use NetApp data services with Cloud Volumes ONTAP, create a dedicated agent for Cloud Volumes ONTAP where you can use a transparent proxy server.
+* Explicit proxy servers are supported with all agents, including those that manage Cloud Volumes ONTAP systems and those that manage NetApp data services.
+* HTTP and HTTPS. 
+* The proxy server can reside in the cloud or in your network.
+
+IMPORTANT: Once you have configured a proxy, you cannot change the proxy type. If you need to change the proxy type, you remove the Console agent and add a new agent with the new proxy type.
+
+
+== Enable an explicit proxy on a Console agent
+
+When you configure a Console agent to use a proxy server, that agent and the Cloud Volumes ONTAP systems that it manages (including any HA mediators), all use the proxy server.
+
+This operation restarts the Console agent. Verify the Console agent is idle before proceeding.
+
+.Steps
+
+. Select *Administration > Agents*.
+
+. On the *Overview* page, select the action menu for a Console agent and select *Edit agent*.
++
+The Console agent must be active to edit it.
+
+
+. Select *HTTP Proxy Configuration*.
+
+. Select *Explicit proxy* in the Configuration type field.
+
+. Select *Enable Proxy*.
+. Specify the server using the syntax http://_address:port_ or https://_address:port_
+. Specify a user name and password if basic authentication is required for the server.
+
++
+Note the following:
++
+* The user can be a local user or domain user.
+* For a domain user, you must enter the ASCII code for the \ as follows: domain-name%92user-name
++
+For example: netapp%92proxy
+* The Console doesn't support passwords that include the @ character.
+
+
+
+. Select *Save*.
+
+[[transparent-proxy]]
+== Enable a transparent proxy for a Console agent 
+Only Cloud Volumes ONTAP supports using a transparent proxy on the Console agent. If you use NetApp data services in addition to Cloud Volumes ONTAP, you should create a separate agent to use for data services or to use for Cloud Volumes ONTAP. 
+
+Before enabling a transparent proxy, ensure that the following requirements are met:
+
+* The agent is installed on the same network as the transparent proxy server.  
+* TLS inspection is enabled on the proxy server.
+* You have a certificate in PEM format that matches the one used on the transparent proxy server.
+* You do not use the Console agent for any NetApp data services other than Cloud Volumes ONTAP. 
+
+To configure an existing agent to use a transparent proxy server, you use the Console agent maintenance tool that is available through the command line on the Console agent host. 
+
+When you configure a proxy server, the Console agent restarts. Verify the Console agent is idle before proceeding.
+
+
+.Steps
+
+Ensure that you have a certificate file in PEM format for the proxy server. If you do not have a certificate, contact your network administrator to obtain one.
+
+. Open a command-line interface on the Console agent host.
+
+. Navigate to the Console agent maintenance tool directory: `/opt/application/netapp/service-manager-2/agent-maint-console` 
+
+. Run the following command to enable the transparent proxy, where `/home/ubuntu/<certificate-file>.pem` is the directory and name certificate file that you have for the proxy server:
+
++
+[source,CLI]
+----
+./agent-maint-console proxy add -c /home/ubuntu/<certificate-file>.pem 
+----
+
++
+Ensure that the certificate file is in PEM format and resides in the same directory as the command or specify the full path to the certificate file.
+
++
+[source,CLI]
+----
+./agent-maint-console proxy add -c /home/ubuntu/<certificate-file>.pem 
+----
+
+=== Modify the transparent proxy for the Console agent
+
+You can update a Console agent's existing transparent proxy server by using the `proxy update` command or remove the transparent proxy server by using the `proxy remove` command. For more information, review the documentation for link:reference-connector-maint-console.html[Agent maintenance console].
+
+IMPORTANT: Once you have configured a proxy, you cannot change the proxy type. If you need to change the proxy type, you remove the Console agent and add a new agent with the new proxy type.
+
+== Update the Console agent proxy if it loses access to the internet
+If the proxy configuration for your network changes, your agent might lose access to the internet. For example, if someone changes the password for the proxy server or updates the certificate. In this case, you'll need to access the UI from the Console agent host directly and update the settings. Ensure you have network access to the Console agent host and that you can log into the Console.
+
+
+
+== Enable direct API traffic
+
+If you configured a Console agent to use a proxy server, you can enable direct API traffic on the Console agent in order to send API calls directly to cloud provider services without going through the proxy. agents running in AWS, Azure, or Google Cloud support this option.
+
+If you disable Azure Private Links with Cloud Volumes ONTAP and use service endpoints, enable direct API traffic. Otherwise, the traffic won't be routed properly.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html[Learn more about using an Azure Private Link or service endpoints with Cloud Volumes ONTAP^]
+
+.Steps
+
+. Select *Administration > Agents*.
+
+. On the *Overview* page, select the action menu for a Console agent and select *Edit agent*.
++
+The Console agent must be active to edit it.
+
+
+. Select *Support Direct API Traffic*.
+
+. Select the checkbox to enable the option and then select *Save*.

@@ -1,0 +1,383 @@
+---
+sidebar: sidebar
+permalink: task-install-connector-azure-bluexp.html
+keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector
+summary: To create a Console agent in Azure from the NetApp Console, you need to set up your networking, prepare Azure permissions, and then create the Console agent.
+---
+
+= Create a Console agent in Azure from NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+To create a Console agent in Azure from the NetApp Console, you need to set up your networking, prepare Azure permissions, and then create the Console agent.
+
+
+.Before you begin
+
+* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should review link:reference-limitations.html[Console agent limitations].
+
+
+[[networking-azure-agent]]
+== Step 1: Set up networking
+
+Ensure that the network location where you plan to install the Console agent supports the following requirements. These requirements allow the Console agent to manage hybrid cloud resources.
+
+//Azure regions
+include::_include/networking.adoc[tag=azure-region]
+
+//VNet and subnet
+include::_include/networking.adoc[tag=vnet]
+
+//Connections to target networks
+include::_include/networking.adoc[tag=networks]
+
+//Outbound internet access
+include::_include/networking.adoc[tag=outbound]
+
+//Endpoints contacted from the Console agent 
+include::_include/endpoints-connector.adoc[tag=intro]
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+
+//Console endpoints
+include::_include/networking.adoc[tag=endpoints-console]
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
++
+You need to implement this networking requirement after you create the Console agent.
+
+[[connector-custom-role]]
+== Step 2: Create a Console agent deployment policy (custom role)
+
+You need to create a custom role that has permissions to deploy the Console agent in Azure. 
+
+Create an Azure custom role that you can assign to your Azure account or to a Microsoft Entra service principal. The Console authenticates with Azure and uses these permissions to create the Console agent instance on your behalf.
+
+The Console deploys the Console agent VM in Azure, enables a https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[system-assigned managed identity^], creates the required role, and assigns it to the VM. link:reference-permissions-azure.html[Review how the Console uses the permissions].
+
+
+
+
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+
+.Steps
+
+. Copy the required permissions for a new custom role in Azure and save them in a JSON file.
++
+NOTE: This custom role contains only the permissions needed to launch the Console agent VM in Azure from the Console. Don't use this policy for other situations. When the Console creates the Console agent, it applies a new set of permissions to the Console agent VM that enables the Console agent to manage Azure resources.
++
+[source,json]
+{
+    "Name": "Azure SetupAsService",
+    "Actions": [
+        "Microsoft.Compute/disks/delete",
+        "Microsoft.Compute/disks/read",
+        "Microsoft.Compute/disks/write",
+        "Microsoft.Compute/locations/operations/read",
+        "Microsoft.Compute/operations/read",
+        "Microsoft.Compute/virtualMachines/instanceView/read",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.Compute/virtualMachines/write",
+        "Microsoft.Compute/virtualMachines/delete",
+        "Microsoft.Compute/virtualMachines/extensions/write",
+        "Microsoft.Compute/virtualMachines/extensions/read",
+        "Microsoft.Compute/availabilitySets/read",
+        "Microsoft.Network/locations/operationResults/read",
+        "Microsoft.Network/locations/operations/read",
+        "Microsoft.Network/networkInterfaces/join/action",
+        "Microsoft.Network/networkInterfaces/read",
+        "Microsoft.Network/networkInterfaces/write",
+        "Microsoft.Network/networkInterfaces/delete",
+        "Microsoft.Network/networkSecurityGroups/join/action",
+        "Microsoft.Network/networkSecurityGroups/read",
+        "Microsoft.Network/networkSecurityGroups/write",
+        "Microsoft.Network/virtualNetworks/checkIpAddressAvailability/read",
+        "Microsoft.Network/virtualNetworks/read",
+        "Microsoft.Network/virtualNetworks/subnets/join/action",
+        "Microsoft.Network/virtualNetworks/subnets/read",
+        "Microsoft.Network/virtualNetworks/subnets/virtualMachines/read",
+        "Microsoft.Network/virtualNetworks/virtualMachines/read",
+        "Microsoft.Network/publicIPAddresses/write",
+        "Microsoft.Network/publicIPAddresses/read",
+        "Microsoft.Network/publicIPAddresses/delete",
+        "Microsoft.Network/networkSecurityGroups/securityRules/read",
+        "Microsoft.Network/networkSecurityGroups/securityRules/write",
+        "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+        "Microsoft.Network/publicIPAddresses/join/action",
+        "Microsoft.Network/locations/virtualNetworkAvailableEndpointServices/read",
+        "Microsoft.Network/networkInterfaces/ipConfigurations/read",
+        "Microsoft.Resources/deployments/operations/read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/deployments/delete",
+        "Microsoft.Resources/deployments/cancel/action",
+        "Microsoft.Resources/deployments/validate/action",
+        "Microsoft.Resources/resources/read",
+        "Microsoft.Resources/subscriptions/operationresults/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/delete",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/write",
+        "Microsoft.Authorization/roleDefinitions/write",
+        "Microsoft.Authorization/roleAssignments/write",
+        "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+        "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+        "Microsoft.Network/networkSecurityGroups/delete",
+        "Microsoft.Storage/storageAccounts/delete",
+        "Microsoft.Storage/storageAccounts/write",
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Resources/deployments/operationStatuses/read",
+        "Microsoft.Authorization/roleAssignments/read"
+    ],
+    "NotActions": [],
+    "AssignableScopes": [],
+    "Description": "Azure SetupAsService",
+    "IsCustom": "true"
+}
+
+. Modify the JSON by adding your Azure subscription ID to the assignable scope.
++
+*Example*
++
+[source,json]
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz"
+],
+
+. Use the JSON file to create a custom role in Azure.
++
+The following steps describe how to create the role by using Bash in Azure Cloud Shell.
+
+.. Start https://docs.microsoft.com/en-us/azure/cloud-shell/overview[Azure Cloud Shell^] and choose the Bash environment.
+
+.. Upload the JSON file.
++
+image:screenshot_azure_shell_upload.png[A screenshot of the Azure Cloud Shell where you can choose the option to upload a file.]
+
+.. Enter the following Azure CLI command:
++
+[source,azurecli]
+az role definition create --role-definition Policy_for_Setup_As_Service_Azure.json
+
++
+You now have a custom role called _Azure SetupAsService_. You can apply this custom role to your user account or to a service principal.
+
+== Step 3: Set up authentication
+
+When creating the Console agent from the Console, you need to provide a login that enables the Console to authenticate with Azure and deploy the VM. You have two options:
+
+. Sign in with your Azure account when prompted. This account must have specific Azure permissions. This is the default option.
+
+. Provide details about a Microsoft Entra service principal. This service principal also requires specific permissions.
+
+Follow the steps to prepare one of these authentication methods for use with the Console.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Azure account
+--
+Assign the custom role to the user who will deploy the Console agent from the Console.
+
+.Steps
+
+. In the Azure portal, open the *Subscriptions* service and select the user's subscription.
+
+. Click *Access control (IAM)*.
+
+. Click *Add* > *Add role assignment* and then add the permissions:
+
+.. Select the *Azure SetupAsService* role and click *Next*.
++
+NOTE: Azure SetupAsService is the default name provided in the Console agent deployment policy for Azure. If you chose a different name for the role, then select that name instead.
+
+.. Keep *User, group, or service principal* selected.
+
+.. Click *Select members*, choose your user account, and click *Select*.
+
+.. Click *Next*.
+
+.. Click *Review + assign*.
+
+.Result
+
+--
+
+.Service principal
+--
+Rather than logging in with your Azure account, you can provide the Console with the credentials for an Azure service principal that has the required permissions.
+
+Create and set up a service principal in Microsoft Entra ID and obtain the Azure credentials that the Console needs.
+
+.Create a Microsoft Entra application for role-based access control
+
+include::_include/azure-set-up-service-principal.adoc[tag=app]
+
+.Assign the custom role to the application
+
+. From the Azure portal, open the *Subscriptions* service.
+
+. Select the subscription.
+
+. Click *Access control (IAM) > Add > Add role assignment*.
+
+. In the *Role* tab, select the *BlueXP Operator* role and click *Next*.
+
+. In the *Members* tab, complete the following steps:
+
+.. Keep *User, group, or service principal* selected.
+.. Click *Select members*.
++
+image:screenshot-azure-service-principal-role.png[A screenshot of the Azure portal that shows the Members page when adding a role to an application.]
+
+.. Search for the name of the application.
++
+Here's an example:
++
+image:screenshot_azure_service_principal_role.png[A screenshot of the Azure portal that shows the Add role assignment form in the Azure portal.]
+
+.. Select the application and click *Select*.
+.. Click *Next*.
+
+. Click *Review + assign*.
++
+The service principal now has the required Azure permissions to deploy the Console agent.
++
+If you want to manage resources in multiple Azure subscriptions, then you must bind the service principal to each of those subscriptions. For example, the Console enables you to select the subscription that you want to use when deploying Cloud Volumes ONTAP.
+
+.Add Windows Azure Service Management API permissions
+
+include::_include/azure-set-up-service-principal.adoc[tag=api]
+
+.Get the application ID and directory ID for the application
+
+include::_include/azure-set-up-service-principal.adoc[tag=ids]
+
+.Create a client secret
+
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
+
+.Result
+
+Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you create the Console agent.
+--
+
+====
+// end tabbed area
+
+== Step 4: Create the Console agent
+
+Create the Console agent directly from the NetApp Console.
+
+.About this task
+
+* Creating the Console agent from the Console deploys a virtual machine in Azure using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+
+* When the Console deploys the Console agent, it creates a custom role and assigns it to the Console agent VM. This role includes permissions that enables the Console agent to manage Azure resources. You need to ensure that the role is kept up to date as new permissions are added in subsequent releases. link:reference-permissions-azure.html[Learn more about the custom role for the Console agent].
+
+.Before you begin
+
+You should have the following:
+
+* An Azure subscription.
+
+* A VNet and subnet in your Azure region of choice.
+
+* Details about a proxy server, if your organization requires a proxy for all outgoing internet traffic:
+
+** IP address
+** Credentials
+** HTTPS certificate
+
+* An SSH public key, if you want to use that authentication method for the Console agent virtual machine. The other option for the authentication method is to use a password. 
++
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux[Learn about connecting to a Linux VM in Azure^]
+
+* If you don't want the Console to automatically create an Azure role for the Console agent, then you'll need to create your own link:reference-permissions-azure.html[using the policy on this page].
++
+These permissions are for the Console agent instance itself. It's a different set of permissions than what you previously set up to deploy the Console agent VM.
+
+.Steps
+
+. Select *Administration > Agents*. 
+
+. On the *Overview* page, select *Deploy agent > Azure*
+
+. On the *Review* page, review the requirements for deploying an agent. Those requirements are also detailed above on this page.
+
+. On the  *Virtual Machine Authentication* page, select the authentication option that matches how you set up Azure permissions:
++
+* Select *Log in* to log in to your Microsoft account, which should have the required permissions.
++
+The form is owned and hosted by Microsoft. Your credentials are not provided to NetApp.
++
+TIP: If you're already logged in to an Azure account, then the Console automatically uses that account. If you have multiple accounts, then you might need to log out first to ensure that you're using the right account.
+
+* Select *Active Directory service principal* to enter information about the Microsoft Entra service principal that grants the required permissions:
++
+** Application (client) ID
+** Directory (tenant) ID
+** Client Secret
+
++
+<<Step 3: Set up authentication,Learn how to obtain these values for a service principal>>.
+
+
+
+. On the *Virtual Machine Authentication* page, choose an Azure subscription, a location, a new resource group or an existing resource group, and then choose an authentication method for the Console agent virtual machine that you're creating.
++
+The authentication method for the virtual machine can be a password or an SSH public key.
++
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux[Learn about connecting to a Linux VM in Azure^]
+
+. On the  *Details* page, enter a name for the instance, specify tags, and choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-azure.html[the required permissions].
++
+Note that you can choose the Azure subscriptions associated with this role. Each subscription that you choose provides the Console agent permissions to manage resources in that subscription (for example, Cloud Volumes ONTAP).
+
+. On the *Network* page, choose a VNet and subnet, whether to enable a public IP address, and optionally specify a proxy configuration.
+
+* On the *Security Group* page, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
++
+link:reference-ports-azure.html[View security group rules for Azure].
+
+include::_include/agent-deploy-console-check.adoc[]
+
+. Select *Add*.
++
+The Console prepares the instance in about 7 minutes. Stay on the page until the process completes.
+
+.Result
+
+After the process is complete, the Console agent is available for use from the Console.
+
+If you have Azure Blob storage in the same Azure subscription where you created the Console agent, you'll see an Azure Blob storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html[Learn how to manage Azure Blob storage from NetApp Console^]
+

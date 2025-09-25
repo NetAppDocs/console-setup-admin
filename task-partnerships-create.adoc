@@ -1,0 +1,109 @@
+---
+sidebar: sidebar
+permalink: task-partnerships-create.html
+keywords: partner organizations, create partnership, MSPs, service provider access
+summary: Create partnerships to establish secure, managed connections between your organization and trusted partners for collaborative NetApp resource management.
+---
+
+= Manage organization partnerships in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Create partnerships to establish secure, managed connections between your organization and trusted partners for collaborative NetApp resource management.
+
+Organization partnerships let you securely manage NetApp resources across boundaries with role-driven relationships in the Console. The initiating organization grants access to its resources, while the accepting organization provides the users or service accounts to be granted access. Partnerships are established through a self-service workflow, giving the initiating organization full control over which resources are shared, what roles are assigned, and the ability to onboard, manage, or revoke partner access as needed.
+
+
+.Required roles
+The *Partnership admin* role is required to make create and manage partnerships. The *Partnership viewer* can view the Partnerships page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+
+
+== Initiate an organization partnership
+You can request a partnership with another organization if you know their organization ID. The receiving organization approves the request before the partnership can proceed.
+
+Before you begin, ensure you have the organization ID of the partner organization and that you have been assigned the *Partnership admin* role.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select the *Partnerships* tab.
+
+. Select *Add partnership*.
+. In the *Create partnership* dialog box, enter the partner organization ID of the requested partner and select *Add*.
++ 
+The partnership request is sent to the partner organization for approval. You can view the status of the partnership request on the *Partnerships* page.
+
+
+
+== Approve an organization partnership
+An organization partnership request must be accepted by the receiving organization before the partnership can proceed. You must have the *Partnership admin* role to approve and manage partnerships.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Partnerships*.
+
+. Select the *Partnership received* tab.
+
+. Navigate to the received partnership you want to approve and select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Approve*.
+
+. Review the details of the partnership, including the name and organization ID of the organization that requested the partnership and select *Next.*
+
+. Optional, add organization members to the partnership and select *Apply*.
++
+You can add additional members through the *Partnership* page at any time. 
+
++
+NOTE: Any members you add become visible in the partner's organization where the partner can assign them to resources.
+
+.Result
+The partnership you approved now shows a status of *Established*. Users with the *Partnership admim* or *Partnership viewer* roles in either organization can view the partnership.
+
+
+
+
+
+== View partnership status
+
+View the status of your partnerships.
+
+.Required role
+Partnership admin, Partnership viewer. link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+.Steps
+
+
+. Select *Administration > Identity and access*.
+
+. Select the *Partnerships*.
+
+. Select either the *Initiated partnerships* the *Received partnerships* tab.
+
+. Review the respective table that displays partnerships and their statuses.
+
+
+== Disable an organization partnership
+You must be a member of the initiating organization to disable a partnership. Disabling a partnership immediately revokes access to any resources in your organization that were shared with the partner organization.
+
+.Required role
+Partnership admin. link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+.Steps
+
+
+. Select *Administration > Identity and access*.
+
+. Select the *Partnerships*.
+
+. Select either the *Initiated partnerships* tab.
+
+. Review the respective table that displays partnerships and their statuses.
+
+. Navigate to the initiated partnership you want to disable and select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Disable*.

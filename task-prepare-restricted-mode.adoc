@@ -1,0 +1,248 @@
+---
+sidebar: sidebar
+permalink: task-prepare-restricted-mode.html
+keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode
+summary: Prepare your environment before you deploy NetApp Console in restricted mode. You need to review host requirements, prepare networking, set up permissions, and more.
+---
+
+= Prepare for deployment in restricted mode
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Prepare your environment before you deploy NetApp Console in restricted mode. You need to review host requirements, prepare networking, set up permissions, and more.
+
+== Step 1: Understand how restricted mode works
+
+Understand how the NetApp Console works in restricted mode before starting.
+
+Use the browser-based interface available locally from the installed NetApp Console agent. You can't access the NetApp Console from the web-based console that's provided through the SaaS layer.
+
+In addition, not all Console features and NetApp data services are available.
+
+link:concept-modes.html[Learn how restricted mode works].
+
+== Step 2: Review installation options
+
+In restricted mode, you can only install the Console agent in the cloud. The following installation options are available:
+
+* From the AWS Marketplace
+* From the Azure Marketplace
+* Manually installing the Console agent on your own Linux host running in AWS, Azure, or Google Cloud
+
+== Step 3: Review host requirements
+
+A host must meet specific OS, RAM, and port requirements to run the Console agent.
+
+When you deploy the Console agent from the AWS or Azure Marketplace, the image includes the required OS and software components. You simply need to choose an instance type that meets CPU and RAM requirements.
+
+include::_include/os-reqs.adoc[tag=dedicated]
+
+include::_include/os-reqs.adoc[tag=hypervisor]
+
+include::_include/os-reqs.adoc[tag=os]
+
+
+include::_include/os-reqs.adoc[tag=aws-ec2]
+
+include::_include/os-reqs.adoc[tag=azure-vm]
+
+include::_include/os-reqs.adoc[tag=google-machine]
+
+include::_include/os-reqs.adoc[tag=disk-space]
+
+[[podman-configuration]]
+== Step 4: Install Podman or Docker Engine
+
+To manually install the Console agent, prepare the host by installing Podman or Docker Engine.
+
+include::_include/podman-docker.adoc[]
+
+== Step 5: Prepare network access
+
+Set up network access so the Console agent can manage resources in your public cloud. In addition to having a virtual network and subnet for the Console agent, you need to ensure that the following requirements are met.
+
+Connections to target networks::
+Ensure the Console agent has a network connection to the storage locations. For example, the VPC or VNet where you plan to deploy Cloud Volumes ONTAP, or the data center where your on-premises ONTAP clusters reside.
+
+Prepare networking for user access to NetApp Console::
+In restricted mode, users access the Console from the Console agent VM. The Console agent contacts a few endpoints to complete data management tasks. These endpoints are contacted from a user's computer when completing specific actions from the Console.
+
+NOTE: Console agents previous to version 4.0.0 need additional endpoints. If you upgraded to 4.0.0 or later, you can remove the old endpoints from your allow list. link:reference-networking-saas-console-previous.html[Learn more about the required network access for versions previous to 4.0.0.]
+
+
++
+[cols=2*,options="header,autowidth"]
+
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+|\https://cdn.auth0.com
+
+\https://services.cloud.netapp.com
+| Your web browser connects to these endpoints for centralized user authentication through the NetApp Console.
+
+
+|===
+
+
+Outbound internet access for day-to-day operations::
+The Console agent's network location must have outbound internet access. It needs to be able to reach the SaaS services of the NetApp Console as well as endpoints within your respective public cloud environment.
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+2+| *AWS environments*
+include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+
+2+| *Azure environments*
+
+include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-gov-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+
+2+| *Google Cloud environments*
+
+include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+
+2+| *NetApp Console endpoints*
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+
+//Azure public IP
+include::_include/networking.adoc[tag=azure-public-ip]
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
++
+If you're planning to create a Console agent from your cloud provider's marketplace, implement this networking requirement after you create the Console agent.
+
+== Step 6: Prepare cloud permissions
+
+The Console agent requires permissions from your cloud provider to deploy Cloud Volumes ONTAP in a virtual network and to use NetApp data services. You need to set up permissions in your cloud provider and then associate those permissions with the Console agent.
+
+To view the required steps, choose the authentication option to use for your cloud provider. 
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.AWS IAM role
+--
+Use an IAM role to provide the Console agent with permissions.
+
+If you're creating the Console agent from the AWS Marketplace, you are prompted to select that IAM role when you launch the EC2 instance. 
+
+If you're manually installing the Console agent on your own Linux host, attach the role to the EC2 instance.
+
+.Steps
+
+include::_include/aws-permissions.adoc[tag=policy]
+
+include::_include/aws-permissions.adoc[tag=role]
+
+.Result
+
+You now have an IAM role for the Console agent EC2 instance.
+--
+
+.AWS access key
+--
+Set up permissions and an access key for an IAM user. You'll need to provide the Console with the AWS access key after you install the Console agent and set up the Console.
+
+.Steps
+
+include::_include/aws-permissions.adoc[tag=policy]
++
+Depending on the NetApp data services that you plan to use, you might need to create a second policy.
++
+For standard regions, the permissions are spread across two policies. Two policies are required due to a maximum character size limit for managed policies in AWS. link:reference-permissions-aws.html[Learn more about IAM policies for the Console agent].
+
+include::_include/aws-permissions.adoc[tag=keys]
+
+--
+
+.Azure role
+--
+Create an Azure custom role with the required permissions. You'll assign this role to the Console agent VM.
+
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+
+.Steps
+
+. If you're planning to manually install the software on your own host, enable a system-assigned managed identity on the VM so that you can provide the required Azure permissions through a custom role.
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm[Microsoft Azure documentation: Configure managed identities for Azure resources on a VM using the Azure portal^]
+
+include::_include/azure-set-up-role.adoc[]
+--
+
+.Azure service principal
+--
+Create and set up a service principal in Microsoft Entra ID and obtain the Azure credentials that the Console needs. You need to provide the Console with these credentials after you install the Console agent.
+
+.Create a Microsoft Entra application for role-based access control
+
+include::_include/azure-set-up-service-principal.adoc[tag=app]
+
+.Assign the application to a role
+ 
+include::_include/azure-set-up-service-principal.adoc[tag=role]
+
+.Add Windows Azure Service Management API permissions
+
+include::_include/azure-set-up-service-principal.adoc[tag=api]
+
+.Get the application ID and directory ID for the application
+
+include::_include/azure-set-up-service-principal.adoc[tag=ids]
+
+.Create a client secret
+
+include::_include/azure-set-up-service-principal.adoc[tags=secret]
+
+.Result
+
+Your service principal is now set up and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you add an Azure account.
+--
+
+.Google Cloud service account
+--
+include::_include/google-set-up-service-account.adoc[]
+--
+
+====
+// end tabbed area
+
+== Step 7: Enable Google Cloud APIs
+
+Several APIs are required to deploy Cloud Volumes ONTAP in Google Cloud.
+
+.Step
+
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis[Enable the following Google Cloud APIs in your project^]
++
+include::_include/google-cloud-apis.adoc[]

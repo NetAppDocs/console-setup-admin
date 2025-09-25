@@ -1,0 +1,89 @@
+
+BlueXP has been renamed to NetApp Console and redesigned to better reflect the role it has in managing your data infrastructure.  
+
+The NetApp Console centralizes storage and data service management across on-premises and cloud environments, offering real-time insights, quicker workflows, and easier administration. 
+
+The following lists the navigational and terminology changes in the NetApp Console. For a complete list of features in this 6 October 2025 release, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#10-06-2025[What's new in NetApp Console].
+
+ 
+
+
+
+=== Navigation menus
+
+The NetApp Console has moved most menu options to the left-navigation pane (instead of a top or tabbed approach) and reorganized some menus to help users more intuitively find what they need. Here are some of the key changes:
+
+
+
+==== Storage menu
+
+The *Storage* menu includes the following: *Alerts* where you can view alerts from your on-premises ONTAP systems and *Lifecycle planning* (formerly *Economic efficiency*) where you can identify unused and underutilized resources.
+
+Keystone has also been moved to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
+
+
+image:screenshot-alerts-menu.png["A screenshot of the Storage menu."]
+
+==== Management menu (storage management)
+
+The Canvas has been intuitively renamed to the Systems page. View managed and discoverable systems from the *Storage > Management* menu. 
+
+image:screenshot-storage-mgmt.png["A screenshot of the Management menu."]
+
+==== Administration menu
+
+
+Administer the NetApp Console from a centralized *Administration* menu where you can find features related to administrating the NetApp Console, managing support cases, as well as viewing licenses and subscriptions (formerly digital wallet). 
+
+image:screenshot-admin-menu.png["A screenshot of the Administration menu."]
+
+==== Health menu
+
+A reimagined *Health* menu includes *Software updates* where you can manage ONTAP software updates, *Sustainability* where you can monitor your environmental impact, and *Digital Advisor* where you can get proactive recommendations to optimize your storage environment.
+
+==== Governance menu
+
+The *Governance* menu includes *Data Classification* where you can manage data classification and compliance and the *Automation hub* where you can create and manage automation workflows.
+
+
+
+
+=== Home page dashboard
+
+The NetApp Console adds a home page that includes a dashboard view of your enterprise storage. link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html[Learn more about the NetApp Console home page.]
+
+=== NetApp assistant
+Customers new to the NetApp Console can use the NetApp assistant to help them get started. The assistant guides users with the Org admin role through configuring the NetApp Console, including adding an agent, associating a NetApp Support account, adding a storage system, and more.
+
+=== More intuitive naming of elements, data services, and features
+
+NetApp has renamed several elements, data services, and features to better reflect their purpose. Here are some of the key changes:
+
+* *Connectors* have been renamed *Console agents* to better reflect their role in both manageability and connectivity to data services. View, add, and manage your agents from the *Administration > Agents* menu.
+
+* The *Timeline* has been renamed to *Audit* to reflect its purpose of tracking user and system activities. View audit Console activity from the *Administration > Audit* menu.
+
+* *Working environments* have been renamed to *Systems*. View, add, and manage your systems from the *Storage > Management* menu. 
+
+* *BlueXP Ransomware protection* has been renamed to *NetApp Ransomware Resilience*. Ransomware Resilience helps you protect your data and recover quickly from a ransomware attack.
+
+* *BlueXP economic efficiency* has been renamed *Lifecycle planning*. Lifecycle planning helps you optimize your storage costs by identifying unused and underutilized resources.
+
+* *BlueXP digital wallet* has been renamed to *Licenses and subscriptions* to reflect its purpose of managing your NetApp licenses and subscriptions.
+
+=== Select and manage Console agents
+
+Access and manage your Console agents from the *Administration > Agents* menu. They way t-select a Console agent for the Systems page (formerly the Canvas) has also changed. An icon (image:icon-agent.png) has replaced the Connector menu name, allowing you to select the Console agent that you want to view systems for.
+
+image:screenshot-agent-icon-menu.png["A screenshot that shows the icon to select a Console agent."]
+
+You can also manage your agents from the *Administration > Agents* menu.
+
+
+ 
+
+ 
+
+ 
+
+ 

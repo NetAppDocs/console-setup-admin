@@ -1,0 +1,14 @@
+
+
+You can also access the validation report in JSON format and the configuration logs directly from the Console agent host in the following directories:
+[source,cli]
+----
+/opt/application/netapp/logs/config-tool.log
+
+/opt/application/netapp/config-check-tool/results.json
+
+----
+
+
+
+

@@ -1,0 +1,87 @@
+---
+sidebar: sidebar
+permalink: task-federation-adfs.html
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity
+summary: Federate with your Active Directory Federation Services (AD FS) to enable single sign-on (SSO) for the NetApp Console. This allows users to log in using their corporate credentials.
+---
+
+= Federate NetApp Console with Active Directory Federation Services (AD FS)
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Federate your Active Directory Federation Services (AD FS) with the NetApp Console to enable single sign-on (SSO) for the NetApp Console. This allows users to log in to the Console using their corporate credentials.
+
+.Required roles
+The Federation admin role is required to make create and manage federations. Federation viewer can view the Federation page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+NOTE: You can federate with your corporate IdP or with the NetApp Support Site. NetApp recommends choosing one or the other, but not both.
+
+
+NetApp supports service provider-initiated (SP-initiated) SSO only. First, configure the identity provider to trust the NetApp Console as a service provider. Then, create a connection in the Console using your identity provider's configuration.
+
+
+You can set up federation with your AD FS  server to enable single sign-on (SSO) for NetApp Console. The process involves configuring your AD FS to trust the Console as a service provider and then creating the connection in the NetApp Console.
+
+include::_include/federation-prereqs.adoc[]
+
+include::_include/federation-navigation-steps.adoc[]
+
+
+
+
+include::_include/federation-verify-domain-steps.adoc[]
+
+
+
+
+
+
+. For your connection method, choose *Protocol* and then select *Active Directory Federation Services (AD FS)*.
+
+. Select *Next*.
+
+
+
+. Create a Relying Party Trust in your AD FS server. You can use PowerShell or manually configure it on your AD FS server. Consult the AD FS documentation for details on how to create a relying party trust. 
+
+.. Create the trust using PowerShell by using following script:
+
++
+[source, powershell]
+(new-object Net.WebClient -property @{Encoding = [Text.Encoding]::UTF8}).DownloadString("https://raw.github.com/auth0/AD FS-auth0/master/AD FS.ps1") | iex
+AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.auth0.com/login/callback"
+
+.. Alternatively, you can create the trust manually in the AD FS management console. Use the following NetApp Console values when creating the trust:
+
++
+
+* When creating the Relying Trust Identifier, use the **YOUR_TENANT** value: `netapp-cloud-account`
+* When you select *Enable support for the WS-Federation*, use the **YOUR_AUTH0_DOMAIN** value:  `netapp-cloud-account.auth0.com`
+ 
+.. After creating the trust, copy the metadata URL from your AD FS server or download the federation metadata file. You'll need this URL or file to complete the connection in the Console.
+
++ 
+
+NetApp recommends using the metadata URL to let the NetApp Console automatically retrieve the latest AD FS configuration. If you download the federation metadata file, you will need to update it manually in the NetApp Console whenever there are changes to your AD FS configuration.
+
+. Return to the Console, and select *Next* to create the connection.
+
+
+
+. Create the connection with AD FS.  
+.. Enter the *AD FS URL* that you copied from your AD FS server in the previous step or upload the federation metadata file that you downloaded from your AD FS server.
+
+. Select *Create connection*. Creating the connection might take a few seconds.
+
+
+
+include::_include/federation-test-enable-steps.adoc[]
+
+
+
+
+

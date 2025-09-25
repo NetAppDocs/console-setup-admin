@@ -1,0 +1,65 @@
+---
+sidebar: sidebar
+permalink: task-partnerships-resource-access.html
+keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization
+summary: You can grant access to partnership users by assigning them specific roles for folders and projects within your organization.
+---
+
+= Provide resource access to partnership users
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can grant access to partnership users by assigning them specific roles for folders and projects within your organization.
+
+.Required roles
+Partnership admin. link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+A partner organization must first add members to the partnership before you can assign them roles for resources in your organization. link:task-partnerships-assign-users.html[Learn how to add members to a partnership.]
+
+You can manage roles for members of partner organizations in the same way that you do for your own. However, not all roles are available to partnership users. Specifically, you can only grant data services roles to partnership users. link:reference-iam-predefined-roles.html[Learn more about predefined roles and the roles that are available to partnership users.]
+
+
+
+== Add a role to a partner user
+You provide access to your organization's resources by adding a role to a member. When you assign a role, you specify one resource and one role. You can assign more than one role to a user.
+
+For example, if you had two projects and wanted the same user to have the role of Backup and recovery admin for both, you would need to provide the role to the user for each project. Similarly if you wanted to provide a user with two different roles for the same project, you would need to assign each role separately.
+
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Partnerships*.
+
+. Select the *Partnership initiated* tab.
+
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the established partnership that you want view and select *View details*.
++ 
+The *Member* list displays the members that the partner organization has added to the partnership.
+
+include::_include/tasks-role.adoc[tag=add-role]
+
+
+== Change or remove a role from a partner user
+You can change or remove a role that you have assigned to a member of a partner organization.
+
+.Steps
+. Select *Administration > Identity and access*.
+. Select *Partnerships*.
+. Select the *Partnership initiated* tab.
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the established partnership that you want view and select *View details*.
++ 
+The *Member* list displays the members that the partner organization has added to the partnership.
+
+include::_include/tasks-role.adoc[tag=remove-role]
+
+
+
+
+
+

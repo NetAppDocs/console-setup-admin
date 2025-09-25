@@ -1,0 +1,47 @@
+.Steps
+
+. Go to the https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui[NetApp Console Agent listing on the AWS Marketplace^]
+
+. On the Marketplace page, select *Continue to Subscribe*.
++
+image:screenshot-subscribe-aws-continue.png[A screenshot that shows the Continue to Subscribe and Continue to Configuration buttons on the AWS Marketplace.]
+
+. To subscribe to the software, select *Accept Terms*.
++
+The subscription process can take a few minutes.
+
+. After the subscription process is complete, select *Continue to Configuration*.
++
+image:screenshot-subscribe-aws-configuration.png[A screenshot that shows the Continue to Subscribe and Continue to Configuration buttons on the AWS Marketplace.]
+
+. On the *Configure this software* page, ensure that you've selected the correct region and then select *Continue to Launch*.
+
+. On the *Launch this software* page, under *Choose Action*, select *Launch through EC2* and then select *Launch*.
++
+These steps describe how to launch the instance from the EC2 Console because the console enables you to attach an IAM role to the Console agent instance. This isn't possible using the *Launch from Website* action.
+
+. Follow the prompts to configure and deploy the instance:
+
+* *Name and tags*: Enter a name and tags for the instance.
+
+* *Application and OS Images*: Skip this section. The Console agent AMI is already selected.
+
+* *Instance type*: Depending on region availability, choose an instance type that meets RAM and CPU requirements (t3.2xlarge is preselected and recommended).
+
+* *Key pair (login)*: Select the key pair that you want to use to securely connect to the instance.
+
+* *Network settings*: Edit the network settings as needed:
++
+** Choose the desired VPC and subnet.
+** Specify whether the instance should have a public IP address.
+** Specify security group settings that enable the required connection methods for the Console agent instance: SSH, HTTP, and HTTPS.
++
+link:reference-ports-aws.html[View security group rules for AWS].
+
+* *Configure storage*: Keep the default size and disk type for the root volume.
++
+If you want to enable Amazon EBS encryption on the root volume, select *Advanced*, expand *Volume 1*, select *Encrypted*, and then choose a KMS key.
+
+* *Advanced details*: Under *IAM instance profile*, choose the IAM role that includes the required permissions for the Console agent.
+
+* *Summary*: Review the summary and select *Launch instance*.

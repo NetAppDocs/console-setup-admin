@@ -1,0 +1,80 @@
+---
+sidebar: sidebar
+permalink: reference-networking-saas-console.html
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp
+summary: NetApp Console, the NetApp Console agent, and NetApp data services require outbound internet access and the ability to contact the necessary endpoints. 
+
+---
+
+= Prepare network access for NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+NetApp Console, the NetApp Console agent, and NetApp data services require outbound internet access and the ability to contact the necessary endpoints. 
+
+You'll need to set up network access for the following:
+
+* Computers that access the NetApp Console as software as a service (SaaS) 
+* Network locations where you deploy Console agents you install on-premises or in the cloud. 
+* Additional endpoints for certain NetApp data services, including Cloud Volumes ONTAP.
+
+NOTE: Starting with version 4.0.0, Console agents require fewer endpoints. Existing deployments before 4.0.0 remain supported. After upgrading to 4.0.0 or later, you may remove the old endpoints from your allow list when convenient.
+
+Learn how to update your endpoint list. link:reference-networking-saas-console-previous.html[Learn how to update your endpoint list.]
+
+== Endpoints contacted by the NetApp Console
+Each computer that accesses the NetApp Console must have connections to the endpoints listed below.
+
+The system contacts these endpoints in two scenarios:
+
+* From a computer accessing the https://console.netapp.com[NetApp Console^] as software as a service (SaaS).
+
+* From a computer directly accessing an Console agent host, either to log in and set it up or access the Console from the agent host.
+
+
+[cols=2*,options="header,autowidth"]
+
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+
+== Prepare networking for the Console agent
+You install the Console agent on-premises or in the cloud, and it contacts endpoints to complete Console-initiated actions.  
+
+Console agents must have access to the same endpoints as the NetApp Console, plus additional endpoints depending on where you install the agent.
+
+Set up network endpoint access before installing the Console agent.
+
+** link:task-install-connector-aws-bluexp.html#networking-aws-agent[Set up AWS network access for a Console agent]
+** link:task-install-connector-azure-bluexp.html#networking-azure-agent[Set up Azure network access for a Console agent]
+** link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent[Set up Google Cloud network access for a Console agent]
+** link:task-install-connector-on-prem.html#network-access-agent[Set up on-premises network access for a Console agent]
+
+== Prepare networking for Cloud Volumes ONTAP
+
+Some NetApp data services as well as Cloud Volumes ONTAP require the agent to have additional outbound internet access.
+
+
+=== Endpoints for Cloud Volumes ONTAP
+
+** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes[Endpoints for Cloud Volumes ONTAP in AWS]
+
+** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html[Endpoints for Cloud Volumes ONTAP in Azure]
+
+** link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access[Endpoints for Cloud Volumes ONTAP in Google Cloud]
+
+
+https://docs.netapp.com/us-en/data-services-family/[Refer to the respective NetApp data services documentation.^]

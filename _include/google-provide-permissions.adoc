@@ -1,0 +1,10 @@
+Associate the service account with the Console agent VM.
+
+.Steps
+
+. Go to the Google Cloud portal and assign the service account to the Console agent VM instance.
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes[Google Cloud documentation: Changing the service account and access scopes for an instance^]
+
+. If you want to manage resources in other projects, grant access by adding the service account with the Console agent role to that project. You'll need to repeat this step for each project.
+

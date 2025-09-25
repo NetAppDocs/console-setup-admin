@@ -1,0 +1,112 @@
+---
+sidebar: sidebar
+permalink: task-iam-manage-resources.html
+keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management
+summary: Manage the resource hierarchy of your organization by associating resources with specific projects and folders.
+---
+
+= Manage the resource hierarchy in your NetApp Console organization
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When you use associate a member with your organization, you provide permissions at the organization, folder, or project level. To ensure that those members have permissions to access the right resources, you'll need to manage the resource hierarchy of your organization by associating resources with specific projects and folders. A _resource_ is a storage system or Console agent that the Console already manages or is aware of.
+
+== View the resources in your organization
+
+You can view both discovered and undiscovered resources associated with your organization. Undiscovered resources are storage resources identified but not yet added to the Console.
+
+NOTE: NOTE: The Resources page excludes Amazon FSx for NetApp ONTAP resources because users cannot associate them with a role. View them on the Systems page or from Workloads.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Resources*.
+
+. Select *Advanced Search & Filtering*.
+
+. Use any of the available options to find the resource that you're looking for:
++
+* *Search by resource name*: Enter a text string and select *Add*.
+* *Platform*: Select one or more platforms, such as Amazon Web Services.
+* *Resources*: Select one or more resources, such as Cloud Volumes ONTAP.
+* *Organization, folder, or project*: Select the entire organization, a specific folder, or a specific project.
++
+
+. Select *Search*.
+
+[#associate-resource]
+== Associate a resource with folders and projects
+
+Associate a resource to a folder or project to make it available.
+
+.Before you begin
+
+You should understand how resource association works. link:concept-identity-and-access-management.html#resources[Learn about resources, including when to associate a resource with a folder].
+
+.Steps
+
+. From the *Resources* page, navigate to a resource in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Associate to folders or projects*.
+
+. Select a folder or project and then select *Accept*.
+
+. To associate an additional folder or project, select *Add folder or project* and then select the folder or project.
++
+Note that you can only select from the folders and projects for which you have admin permissions.
+
+. Select *Associate resources*.
+
+
+* If you associated the resource with projects, members who have permissions for those projects now have the ability to access the resource from the Console.
+* If you associated the resource with a folder, a _Folder or project admin_ can now access the resource and associate it with a project within the folder. link:concept-identity-and-access-management.html#resources[Learn about associating a resource with a folder].
+
+.After you finish
+
+If you discover a resource using a Console agent, associate the Console agent with the project to grant access. Otherwise, the Console agent and its associated resource are not accessible by members without the _Organization admin_ role.
+
+link:task-iam-associate-connectors.html[Learn how to associate a Console agent with a folder or project].
+
+[#view-folders-and-projects]
+== View the folders and projects associated with a resource
+
+You can view the folders and projects that are associated with a particular resource.
+
+NOTE: If you need to find out which organization members have access to the resource, you can link:task-iam-manage-folders-projects.html#view-associated-resources-members[view the members who have access to the folders and projects that are associated with the resource].
+
+.Steps
+
+. From the *Resources* page, navigate to a resource in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
+
+The following example shows a resource that is associated with one project.
+
+image:screenshot-iam-resource-details.png[A screenshot of the resource details page that shows a resource associated with a project that's directly underneath the organization.]
+
+
+NOTE: If you need to determine which organization members have access to the resource, you can link:task-iam-manage-folders-projects.html#view-associated-resources-members[view the members who have access to the folders and projects that are associated with the resource].
+
+[#remove-resource]
+== Remove a resource from a folder or project
+
+To remove a resource from a folder or project, you need to remove the association between the folder or project and the resource. When you remove the association, it prevents members from managing the resource in the folder or project.
+
+
+NOTE: To remove a discovered resource from the entire organization, remove the system from the *Systems* page.
+
+.Steps
+
+. From the *Resources* page, navigate to a resource in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
+
+. For the folder or project for which you want to remove the resource, select image:icon-delete.png[An icon of a garbage can]
+
+. Confirm that you want to remove the association by selecting *Delete*.
+
+
+== Related information
+
+* link:concept-identity-and-access-management.html[Learn about identity and access in NetApp Console]
+* link:task-iam-get-started.html[Get started with identity and access in NetApp Console]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

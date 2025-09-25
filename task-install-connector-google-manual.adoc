@@ -1,0 +1,134 @@
+---
+sidebar: sidebar
+permalink: task-install-connector-google-manual.html
+keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector
+summary: To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, install the Console, and then provide the permissions that you prepared.
+---
+
+= Manually install the Console agent in Google Cloud
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, install the Console, and then provide the permissions that you prepared.
+
+.Before you begin
+
+* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should review link:reference-limitations.html[Console agent limitations].
+
+== Step 1: Review host requirements
+
+The Console agent software must run on a host that meets specific operating system requirements, RAM requirements, port requirements, and so on.
+
+include::_include/os-reqs.adoc[tag=manual-uid-range]
+
+include::_include/os-reqs.adoc[tag=dedicated]
+
+include::_include/os-reqs.adoc[tag=hypervisor]
+
+include::_include/os-reqs.adoc[tag=os]
+
+
+include::_include/os-reqs.adoc[tag=google-machine]
+
+include::_include/os-reqs.adoc[tag=disk-space]
+
+[[podman-configuration]]
+== Step 2: Install Podman or Docker Engine
+
+include::_include/podman-docker.adoc[]
+
+== Step 3: Set up networking
+
+Set up your networking so the Console agent can manage resources and processes within your hybrid cloud environment. For example, you need to ensure that connections are available to target networks and that outbound internet access is available.
+
+//Connections to target networks
+include::_include/networking.adoc[tag=networks]
+
+//Outbound internet access
+include::_include/networking.adoc[tag=outbound]
+
+//Endpoints contacted from your web browser
+include::_include/endpoints-console.adoc[]
+
+
+//Endpoints contacted from the Console agent 
+include::_include/endpoints-connector.adoc[tag=intro]
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
+
+
+[[agent-permissions-google]]
+== Step 4: Set up permissions for the Console agent
+
+include::_include/google-set-up-connector-permissions.adoc[]
+
+== Step 5: Set up shared VPC permissions
+
+include::_include/google-shared-vpc-permissions.adoc[]
+
+== Step 6: Enable Google Cloud APIs
+
+Several Google Cloud APIs must be enabled before you can deploy Cloud Volumes ONTAP systems in Google Cloud.
+
+.Step
+
+. Enable the following Google Cloud APIs in your project:
++
+include::_include/google-cloud-apis.adoc[]
+
+https://cloud.google.com/apis/docs/getting-started#enabling_apis[Google Cloud documentation: Enabling APIs^]
+
+== Step 7: Install the Console agent
+
+After the pre-requisites are complete, you can manually install the software on your own Linux host.
+
+include::_include/manual-install.adoc[tag=before]
+
+include::_include/manual-install.adoc[tag=about]
+
+include::_include/manual-install.adoc[tag=main-steps]
+
+include::_include/manual-install.adoc[tag=standard-mode-steps-for-cloud]
+
+If you have Google Cloud Storage buckets in the same Google Cloud account where you created the Console agent, you'll see a Google Cloud Storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html[Learn how to manage Google Cloud Storage from the NetApp Console^]
+
+== Step 8: Provide permissions to Console agent
+
+You need to provide the Console agent with the Google Cloud permissions that you previously set up. Providing the permissions enables the Console agent to manage your data and storage infrastructure in Google Cloud.
+
+.Steps
+
+. Go to the Google Cloud portal and assign the service account to the Console agent VM instance.
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes[Google Cloud documentation: Changing the service account and access scopes for an instance^]
+
+. If you want to manage resources in other Google Cloud projects, grant access by adding the service account with the Console agent role to that project. You'll need to repeat this step for each project.
+

@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: task-iam-get-started.html
+keywords: iam, quick start, get started, get started with iam, identity and access management
+summary: "To get started with identity and access management in NetApp Console, customize the organization's hierarchy, add additional members, add or discover resources, and associate those resources with projects."
+---
+
+= Get started with identity and access in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When you sign up for the NetApp Console, you're prompted to create a new organization. The organization includes one member (an Organization admin) and one default project. To set up identity and access management (IAM) to meet your business needs, you'll need to customize your organization's hierarchy, add additional members, add or discover resources, and associate those resources across your hierarchy.
+
+You must have *Organization admin* permissions to administer identity and access for your entire organization. If you have *Folder or project admin* permissions, you can only administer the folders and projects for which you have permissions.
+
+Follow these steps to set up a new organization. The order may vary based on your organization's needs.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Edit the default project or add to your organization's hierarchy
+
+[role="quick-margin-para"]
+Use the default project or create additional projects and folders matching your business hierarchy.
+
+[role="quick-margin-para"]
+link:task-iam-manage-folders-projects.html[Learn how to organize your resources with folders and projects].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Associate members with your organization
+
+[role="quick-margin-para"]
+Link user accounts to your organization and assign permissions. You also have the option to add service accounts to your organization.
+
+[role="quick-margin-para"]
+link:task-iam-manage-members-permissions.html[Learn how to manage members and their permissions].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add or discover resources
+
+[role="quick-margin-para"]
+Add or discover resources (systems) to the Console. Organization members manage systems from within a project.
+
+[role="quick-margin-para"]
+Learn how to create or discover resources:
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html[Azure NetApp Files^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html[Cloud Volumes ONTAP^]
+* https://docs.netapp.com/us-en/bluexp-e-series/index.html[E-Series systems^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html[On-premises ONTAP clusters^]
+* https://docs.netapp.com/us-en/bluexp-storagegrid/index.html[StorageGRID^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Associate resources with additional projects
+
+[role="quick-margin-para"]
+Adding or discovering a system in the Console automatically associates the resource with the currently selected project. To make that resource available to another project in your organization, associate it with the respective project. If a Console agent is used to manage the resource, associate the Console agent with the respective project.
+
+[role="quick-margin-list"]
+* link:task-iam-manage-resources.html[Learn how to manage your organization's resource hierarchy].
+* link:task-iam-associate-connectors.html[Learn how to associate a Console agent with a folder or project].
+
+.Related information
+
+* link:concept-identity-and-access-management.html[Learn about identity and access management in NetApp Console]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

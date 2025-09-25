@@ -1,0 +1,240 @@
+---
+sidebar: sidebar
+permalink: task-iam-manage-members-permissions.html
+keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management
+summary: Manage your organization's members to provide permissions across different levels of your organization's resource hierarchy.
+---
+
+= Add members and service accounts to NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Within the Console, you can add users and service accounts to your organization and assign them one or more roles across your resource hierarchy. A _role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at a specific level of the resource hierarchy. 
+
+
+You need one of the following roles to manage users and permissions:
+
+* Organization admin
++
+Users with this role can manage all members
+
+* Folder or project admin
++
+Users with this role can manage members only of a designated folder or project
+
++ 
+
+_Folder or project admin_ can view all members on the *Members* page but manage permissions only for folders and projects they have access to. link:reference-iam-predefined-roles.html[Learn more about the actions that a _Folder or project admin_ can complete].
+
+[#add-members]
+== Add members to your organization
+
+You can add two types of members to your organization: a user account and a service account. Applications use service accounts to perform API tasks without human intervention. A person typically uses a user account to log in and manage resources.
+
+Users must sign up for the NetApp Console before you can add them to an organization or assign them a role. You create service accounts directly from the Console.
+
+To manage users and their permissions, you must have the *Organization admin* role or the *Folder or project admin* role. Remember that users with the *Folder or project admin* role can only manage members for the folder or projects of which they have admin permissions. 
+
+
+
+
+=== Add a user account
+
+Although users sign up for the NetApp Console on their own, they need to be explicitly added to an organization or to specific folders or projects to access resources in the Console.
+
+.Steps
+
+. Direct the user to visit https://console.netapp.com/[NetApp Console^] to sign up.
++
+Once users sign up, they complete the *Sign up* page, check their email, and log in. If the Console prompts users to create an organization, they close it and notify you of their account creation. You can then add the user to your existing organization.
++
+link:task-sign-up-saas.html[Learn how to sign up for the NetApp Console].
+
+. Select *Administration > Identity and access*.
+
+. Select *Members*.
+
+. Select *Add a member*.
+
+. For *Member Type*, keep *User* selected.
+. For *User's email*,  enter the user's email address that is associated with the login that they created.
+. Use the *Select an organization, folder, or project* section to choose the level of your resource hierarchy that the member should have permissions for.
+
++ 
+Note the following:
+
+** You can only select from the folders and projects for which you have permissions.
+** Selecting an organization or folder grants the member permissions to all its contents.
+** You can only assign the *Organization admin* role at the organization level.
+
+. *Select a category* then select a *Role* that provides the member with permissions for the resources that are associated with the organization, folder, or project that you selected.
+
++
+link:reference-iam-predefined-roles.html[Learn about access roles].
+
+. Optional: Select an additional role or project. If you want to provide access to additional folders or projects within your organization or grant the user additional roles in the selected area, select *Add role*, specify another folder or project or a different role category and then choose a role.
+
+. Select *Add*. 
++
+The Console sends the user an email with instructions.
+
+
+
+[[service-account]]
+=== Add a service account 
+
+You can automate tasks and integrate with Console APIs securely with service accounts. When you create a service account, choose between two authentication methods: using a client ID and secret, or using JWT (JSON Web Token) authentication. The client ID and secret method suits simple setups, while JWT authentication offers stronger security for automated or cloud-native environments. Choose the option that best fits your security needs and how you plan to use the Console.
+
+If you want to use JWT authentication, have your public key or certificate ready to use.
+
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Members*.
+
+. Select *Add a member*.
+
+. For *Member Type*, select *Service account*.
+
+. Enter a name for the service account.
+
+
+. If you want to use JWT authentication, select *Use private key JWT authentication* and upload your public RSA key or certificate. Skip this step if you want to use a client ID and secret instead.
+
++  
+Your X.509 certitificate. It must be in  PEM, CRT, or CER format.
+
+
+. Use the *Select an organization, folder, or project* section to choose the level of your resource hierarchy that the member should have permissions for.
++
+Note the following:
++
+** You can only select from the folders and projects for which you have permissions.
+** Selecting an organization or folder grants the member permissions to all its contents.
+** You can only assign the *Organization admin* role at the organization level.
+
+. Select a *Category* then select a *Role* that provides the member with permissions for the resources that are associated with the organization, folder, or project that you selected.
+
++
+link:reference-iam-predefined-roles.html[Learn about access roles].
+
+. Optional: Select an additional role or project. If you want to provide access to additional folders or projects within your organization or grant the user additional roles in the selected area, select *Add role*, specify another folder or project or a different role category and then choose a role.
+
+. If you didn't choose to use JWT authentication, download or copy the client ID and client secret.
++
+The Console shows the client secret only once. Copy it securely; you can recreate it later if needed.
+
+. If you choose JWT authentication, download or copy the client ID and JWT audience. This information is shown only once and cannot be retrieved later.
+
+. Select *Close*.
+
+
+
+== View organization members
+
+To understand which resources and permissions are available to a member, you can view the roles assigned to the member at different levels of your organization's resource hierarchy. link:task-iam-manage-roles.html[Learn how to use roles to control access to Console resources.^]
+
+You can view both user accounts and service accounts from the *Members* page.
+
+NOTE: You can also view all of the members associated with a specific folder or project. link:task-iam-manage-folders-projects.html#view-associated-resources-members[Learn more].
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Members*.
+
++
+The *Members* table lists the members of your organization.
+
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
+
+== Remove a member from your organization
+
+You might need to remove a member from your organization--for example, if they leave your company.
+
+The system removes the member's permissions but keeps their Console and NetApp Support Site accounts.
+
+.Steps
+
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] then select *Delete user*.
+
+. Confirm that you want to remove the member from your organization.
+
+== Recreate the credentials for a service account
+
+Create new credentials if you lose them or need to update them.
+
+When you recreate the credentials, you delete the existing credentials for the service account and create new ones. You cannot use the previous credentials.
+
+.Steps
+. Select *Administration > Identity and access*.
+
+. Select *Members*.
+
+
+. In the *Members* table, navigate to a service account, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Recreate secrets*.
+
+. Select *Recreate*.
+
+. Download or copy the client ID and client secret.
++The client secret displays only once. Copy or download it and store it securely.
+
+[[manage-mfa]]
+== Manage a user's multi-factor authentication (MFA)
+If a user loses access to their MFA device, you can either remove or disable their MFA configuration. 
+
+Users must reconfigure MFA at login after removal. If the user has only lost access to their MFA device temporarily, they can use the recovery code that they saved when they set up MFA to log in. 
+
+If they do not have their recovery code, temporarily disable MFA to allow login. When you disable MFA for a user, it is disabled for only eight hours and then re-enabled automatically. The user is allowed one login during that time without MFA. After the eight hours, the user must use MFA to log in.
+
+NOTE: To manage a user’s multi-factor authentication, you must have an email address in the same domain as the affected user.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Members*.
++
+The *Members* table lists the members of your organization.
+
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Manage multi-factor authentication*.
+
+. Choose whether to remove or to disable the user's MFA configuration.
+
+
+
+
+
+
+
+
+
+
+//// 
+// keeping this around but hiding it, taking a bulk action was removed
+If you need to change the roles for multiple members in your organization, you can use a bulk action to complete the changes all at once.
+
+
+
+
+
+
+
+
+
+
+
+
+== Related information
+
+* link:concept-identity-and-access-management.html[Learn about identity and access management in NetApp Console]
+* link:task-iam-get-started.html[Get started with identity and access]
+* link:reference-iam-predefined-roles.html[NetApp Console access roles]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

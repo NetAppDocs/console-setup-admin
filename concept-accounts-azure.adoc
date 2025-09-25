@@ -1,0 +1,93 @@
+---
+sidebar: sidebar
+permalink: concept-accounts-azure.html
+keywords: cloud provider accounts, azure, azure accounts, service principal, multiple accounts, permissions, policy, policies, subscriptions, credentials, marketplace subscription, replace subscription, subscription, bluexp
+summary: Learn how the NetApp Console uses Azure credentials to perform actions on your behalf and how those credentials are associated with marketplace subscriptions. Understanding these details can be helpful as you manage the credentials for one or more Azure subscriptions. For example, you might want to learn when to add additional Azure credentials to the Console.
+---
+
+= Learn about Azure credentials and permissions in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Learn how the NetApp Console uses Azure credentials to perform actions on your behalf and how those credentials are associated with marketplace subscriptions. Understanding these details can be helpful as you manage the credentials for one or more Azure subscriptions. For example, you might want to learn when to add additional Azure credentials to the Console.
+
+== Initial Azure credentials
+
+When you deploy a Console agent from the Console, you need to use an Azure account or service principal that has permissions to deploy the Console agent virtual machine. The required permissions are listed in the link:task-install-connector-azure-bluexp.html#connector-custom-role[Agent deployment policy for Azure].
+
+When the Console deploys the Console agent virtual machine in Azure, it enables a https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[system-assigned managed identity^] on the virtual machine, creates a custom role, and assigns it to the virtual machine. The role provides the Console with the permissions required to manage resources and processes within that Azure subscription. link:reference-permissions-azure.html[Review how the Console uses the permissions].
+
+image:diagram_permissions_initial_azure.png[A conceptual image that shows the Console deploying a console agent in an Azure account and subscription. A system-assigned managed identity is enabled and a custom role is assigned to the Console agent virtual machine.]
+
+If you create a new system for Cloud Volumes ONTAP, the Console selects these Azure credentials by default:
+
+image:screenshot_accounts_select_azure.gif[A screenshot that shows the Switch Account option in the Details & Credentials page.]
+
+You can deploy all of your Cloud Volumes ONTAP systems using the initial Azure credentials, or you can add additional credentials.
+
+== Additional Azure subscriptions for a managed identity
+
+The system-assigned managed identity assigned to the Console agent VM is associated with the subscription in which you launched the Console agent. If you want to select a different Azure subscription, then you need to link:task-adding-azure-accounts.html#associate-additional-azure-subscriptions-with-a-managed-identity[associate the managed identity with those subscriptions].
+
+== Additional Azure credentials
+
+If you want to use different Azure credentials with the Console, then you must grant the required permissions by link:task-adding-azure-accounts.html[creating and setting up a service principal in Microsoft Entra ID] for each Azure account. The following image shows two additional accounts, each set up with a service principal and custom role that provides permissions:
+
+image:diagram_permissions_multiple_azure.png["A conceptual image that shows the initial Azure account, which receives permissions through a custom role and managed identity, and two additional accounts that receive permissions through a custom role and service principal."]
+
+You would then link:task-adding-azure-accounts.html#add-credentials-azure[add the account credentials to the Console] by providing details about the AD service principal.
+
+For example, you can switch between credentials when creating a new Cloud Volumes ONTAP system:
+
+image:screenshot_accounts_switch_azure.gif["A screenshot that shows selecting between cloud provider accounts after selecting Switch Account in the Details & Credentials page."]
+
+== Credentials and marketplace subscriptions
+
+The credentials that you add to a console agent must be associated with an Azure Marketplace subscription so that you can pay for Cloud Volumes ONTAP at an hourly rate (PAYGO) or NetApp data services or through an annual contract.
+
+link:task-adding-azure-accounts.html#subscribe[Learn how to associate an Azure subscription].
+
+Note the following about Azure credentials and marketplace subscriptions:
+
+* You can associate only one Azure Marketplace subscription with a set of Azure credentials
+* You can replace an existing marketplace subscription with a new subscription
+
+== FAQ
+
+The following question is related to credentials and subscriptions.
+
+=== Can I change the Azure Marketplace subscription for Cloud Volumes ONTAP systems?
+
+Yes, you can. When you change the Azure Marketplace subscription that's associated with a set of Azure credentials, all existing and new Cloud Volumes ONTAP systems will be charged against the new subscription.
+
+link:task-adding-azure-accounts.html#subscribe[Learn how to associate an Azure subscription].
+
+=== Can I add multiple Azure credentials, each with different marketplace subscriptions?
+
+All Azure credentials that belong to the same Azure subscription will be associated with the same Azure Marketplace subscription.
+
+If you have multiple Azure credentials that belong to different Azure subscriptions, then those credentials can be associated with the same Azure Marketplace subscription or with different marketplace subscriptions.
+
+=== Can I move existing Cloud Volumes ONTAP systems to a different Azure subscription?
+
+No, it's not possible to move the Azure resources associated with your Cloud Volumes ONTAP system to a different Azure subscription.
+
+=== How do credentials work for marketplace deployments and on-premises deployments?
+
+The sections above describe the recommended deployment method for the Console agent, which is from the Console. You can also deploy a console agent in Azure from the Azure Marketplace, and you can install the Console agent software on your own Linux host.
+
+If you use the Marketplace, you can provide permissions by assigning a custom role to the Console agent VM and to a system-assigned managed identity, or you can use a Microsoft Entra service principal.
+
+For on-premises deployments, you can't set up a managed identity for the Console agent, but you can provide permissions by using a service principal.
+
+To learn how to set up permissions, refer to the following pages:
+
+* Standard mode
+** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions[Set up permissions for an Azure Marketplace deployment]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
+* Restricted mode
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]

@@ -1,0 +1,292 @@
+---
+sidebar: sidebar
+permalink: task-install-restricted-mode.html
+keywords: government region, gov, govcloud, connector, sovereign cloud
+summary: Deploy the Console agent in restricted mode so that you can use the NetApp Console with limited outbound connectivity. To get started, install the Console agent, set up the Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
+---
+
+= Deploy the Console agent in restricted mode
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Deploy the Console agent in restricted mode so that you can use the NetApp Console with limited outbound connectivity. To get started, install the Console agent, set up the Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
+
+== Step 1: Install the Console agent
+
+Install the Console agent from your cloud provider's marketplace or manually on a Linux host.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.AWS Commercial Marketplace
+--
+
+.Before you begin
+
+You should have the following:
+
+* A VPC and subnet that meets networking requirements.
++
+link:task-prepare-restricted-mode.html[Learn about networking requirements]
+
+* An IAM role with an attached policy that includes the required permissions for the Console agent.
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn how to set up AWS permissions]
+
+* Permissions to subscribe and unsubscribe from the AWS Marketplace for your IAM user.
+
+* An understanding of CPU and RAM requirements for the instance.
++
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements[Review instance requirements].
+
+* A key pair for the EC2 instance.
+
+include::_include/aws-marketplace.adoc[]
+
+.Result
+
+AWS launches the software with the specified settings. The Console agent instance and software run in approximately five minutes.
+
+.What's next?
+
+Set up the NetApp Console.
+--
+
+.AWS Gov Marketplace
+--
+
+.Before you begin
+
+You should have the following:
+
+* A VPC and subnet that meets networking requirements.
++
+link:task-prepare-restricted-mode.html[Learn about networking requirements]
+* An IAM role with an attached policy that includes the required permissions for the Console agent.
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn how to set up AWS permissions]
+* Permissions to subscribe and unsubscribe from the AWS Marketplace for your IAM user.
+
+* A key pair for the EC2 instance.
+
+.Steps
+
+. Go to the NetApp Console agent offering in the AWS Marketplace.
+
+.. Open the EC2 service and select *Launch instance*.
+.. Select *AWS Marketplace*.
+.. Search for NetApp Console and select the offering.
++
+image:screenshot-gov-cloud-mktp.png[A screenshot that shows the NetApp Console offering after searching for it in the AWS Marketplace]
+
+.. Select *Continue*.
+
+. Follow the prompts to configure and deploy the instance:
+
+* *Choose an Instance Type*: Depending on region availability, choose one of the supported instance types (t3.2xlarge is recommended).
++
+link:task-prepare-restricted-mode.html[Review the instance requirements].
+
+* *Configure Instance Details*: Select a VPC and subnet, choose the IAM role that you created in step 1, enable termination protection (recommended), and choose any other configuration options that meet your requirements.
++
+image:screenshot_aws_iam_role.gif[A screenshot that shows fields on the Configure Instance page in AWS. The IAM role that you should have created in step 1 is selected.]
+
+* *Add Storage*: Keep the default storage options.
+
+* *Add Tags*: Enter tags for the instance, if desired.
+
+* *Configure Security Group*: Specify the required connection methods for the Console agent instance: SSH, HTTP, and HTTPS.
+
+* *Review*: Review your selections and select *Launch*.
+
+.Result
+
+AWS launches the software with the specified settings. The Console agent instance and software run in approximately five minutes.
+
+.What's next?
+
+Set up the Console.
+--
+
+.Azure Marketplace
+--
+.Before you begin
+
+You should have the following:
+
+* A VNet and subnet that meets networking requirements.
++
+link:task-prepare-restricted-mode.html[Learn about networking requirements]
+
+* An Azure custom role that includes the required permissions for the Console agent.
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn how to set up Azure permissions]
+
+.Steps
+
+. Go to the NetApp Console agent VM page in the Azure Marketplace.
++
+* https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager[Azure Marketplace page for commercial regions^]
+* https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol[Azure Marketplace page for Azure Government regions^]
+
+. Select *Get it now* and then select *Continue*.
+
+. From the Azure portal, select *Create* and follow the steps to configure the virtual machine.
++
+Note the following as you configure the VM:
+
+* *VM size*: Choose a VM size that meets CPU and RAM requirements. We recommend Standard_D8s_v3.
+
+* *Disks*: The Console agent can perform optimally with either HDD or SSD disks.
+
+* *Public IP*: If you want to use a public IP address with the Console agent VM, the IP address must use a Basic SKU to ensure that the Console uses this public IP address.
++
+image:screenshot-azure-sku.png[A screenshot of the create new IP address in Azure that enables you to choose Basic under in the SKU field.]
++
+If you use a Standard SKU IP address instead, then the Console uses the _private_ IP address of the Console agent, instead of the public IP. If the machine that you're using to access the Console doesn't have access to that private IP address, then actions from the Console will fail.
++
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku[Azure documentation: Public IP SKU^]
+
+* *Network security group*: The Console agent requires inbound connections using SSH, HTTP, and HTTPS.
++
+link:reference-ports-azure.html[View security group rules for Azure].
+
+* Identity*: Under *Management*, select *Enable system assigned managed identity*.
++
+This setting is important because a managed identity allows the Console agent virtual machine to identify itself to Microsoft Entra ID without providing any credentials. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[Learn more about managed identities for Azure resources^].
+
+. On the *Review + create* page, review your selections and select *Create* to start the deployment.
+
+.Result
+
+Azure deploys the virtual machine with the specified settings. The virtual machine and Console agent software should be running in approximately five minutes.
+
+.What's next?
+
+Set up the NetApp Console.
+--
+
+.Manual install
+--
+include::_include/manual-install.adoc[tag=before]
+
+* Depending on your operating system, either Podman or Docker Engine is required before you install the Console agent.
+
+include::_include/manual-install.adoc[tag=about]
+
+include::_include/manual-install.adoc[tag=main-steps]
+
+.Result
+
+The Console agent is now installed. At the end of the installation, the Console agent service (occm) restarts twice if you specified a proxy server.
+
+.What's next?
+
+Set up the NetApp Console.
+--
+
+====
+// end tabbed area
+
+== Step 2: Set up NetApp Console
+
+When you access the console for the first time, you are prompted to choose an organization for the Console agent and need to enable restricted mode.
+
+.Before you begin
+
+The person who sets up the Console agent must log in to the Console using a login that doesn't already belong to a Console organization.
+ 
+If your login is associated with another organization, you'll need to sign up with a new login. Otherwise, you won't see the option to enable restricted mode on the setup screen.
+
+.Steps
+
+. Open a web browser from a host that has a connection to the Console agent instance and enter the following URL of the Console agent you installed.
+
+. Sign up or log in to the NetApp Console.
+
+. After you're logged in, set up the Console:
+
+.. Enter a name for the Console agent.
+
+.. Enter a name for a new Console organization.
+
+.. Select *Are you running in a secured environment?*
+
+.. Select *Enable restricted mode on this account*.
++
+Note that you can't change this setting after the account is created. You can't enable restricted mode later and you can't disable it later.
++
+If you deployed the Console agent in a Government region, the checkbox is already enabled and can't be changed. This is because restricted mode is the only mode supported in Government regions.
+
+.. Select *Let's start*.
+
+.Result
+
+The Console agent is now installed and set up with your Console organization. All users need to access the Console using the IP address of the Console agent instance.
+
+.What's next?
+
+Provide the Console with the permissions that you previously set up.
+
+== Step 3: Provide permissions to NetApp Console
+
+If you deployed the Console agent from the Azure Marketplace or if you manually installed the Console agent software, you need to provide the permissions that you previously set up.
+
+These steps don't apply if you deployed the Console agent from the AWS Marketplace because you chose the required IAM role during deployment. 
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn how to prepare cloud permissions].
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.AWS IAM role
+--
+Attach the IAM role that you previously created to the EC2 instance where you installed the Console agent.
+
+These steps apply only if you manually installed the Console agent in AWS. For AWS Marketplace deployments, you already associated the Console agent instance with an IAM role that includes the required permissions.
+
+include::_include/provide-permissions-iam-role.adoc[]
+--
+
+.AWS access key
+--
+Provide the NetApp Console with the AWS access key for an IAM user that has the required permissions.
+
+.Steps
+
+include::_include/provide-permissions-access-key.adoc[]
+--
+
+.Azure role
+--
+include::_include/azure-provide-permissions-role.adoc[]
+--
+
+.Azure service principal
+--
+Provide the NetApp Console with the credentials for the Azure service principal that you previously setup.
+
+.Steps
+
+include::_include/azure-provide-permissions-service-principal.adoc[]
+
+.Result
+
+the NetApp Console now has the permissions that it needs to perform actions in Azure on your behalf.
+--
+
+.Google Cloud service account
+--
+include::_include/google-provide-permissions.adoc[]
+--
+
+====
+// end tabbed area

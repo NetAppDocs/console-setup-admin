@@ -1,0 +1,42 @@
+
+
+//tag::add-role[]
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the member that you want to assign a role and select *Add a role*.
+
+. To add a role, complete the steps in the dialog box:
++
+* *Select an organization, folder, or project*: Choose the level of your resource hierarchy that the member should have permissions for.
++
+If you select the organization or a folder, the member will have permissions to everything that resides within the organization or folder.
+
+* *Select a category*: Choose a role category. link:reference-iam-predefined-roles.html[Learn about access roles^].
+
+* Select a *Role*: Choose a role that provides the member with permissions for the resources that are associated with the organization, folder, or project that you selected.
+
+
+* *Add role*: If you want to provide access to additional folders or projects within your organization, select *Add role*, specify another folder or project or role category, and then select a role category and a corresponding role.
+
+. Select *Add new roles*.
+
+//end::add-role[]
+
+//tag::remove-role[]
+
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
+
+. In the table, expand the respective row for organization, folder, or project where you want to change the member's assigned role and select *View* in the *Role* column to view the roles assigned to this member.
+
+. You can change an existing role for a member or remove a role.
+
+.. To change a member's role, select *Change* next to the role you want to change. You can only change a role to a role within the same role category. For example, you can change from one data service role to another. Confirm the change.
+
+.. To unassign a member's role, select image:icon-delete.png["An icon that resembles a trash can"] next to the role to unassign the member the respective role. You'll be asked to confirm the removal.
+
+//end::remove-role[]
+
+//tag::view-role[]
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
+
+. In the table, expand the respective row for organization, folder, or project where you want to view the member's assigned role and select *View* in the *Role* column.
+
+//end::view-role[]

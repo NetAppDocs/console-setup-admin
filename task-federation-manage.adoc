@@ -1,0 +1,124 @@
+---
+sidebar: sidebar
+permalink: task-federation-manage.html
+keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity
+summary: After you've added a federated connection, you can manage it in the NetApp Console. You can view the status of the connection, enable or disable it as needed.
+---
+
+= Manage federations in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can manage your federation in the NetApp Console. You can disable it, update expired credentials, as well as disable it if you no longer need it.
+
+NOTE: If you configured federation using NetApp Cloud Central, import it via the *Federation* page to manage it in the Console. link:task-federation-import.html[Learn how to import your federation]
+
+You can also add a verified domain to an existing federation, which allows you to use multiple domains for your federated connection.
+
+NOTE: Federation management events such as enabling, disabling, and updating federations display in the Timeline. link:task-monitor-cm-operations.html[Learn more about monitoring operations in the NetApp Console.]
+
+.Required roles
+The Federation admin role is required to make create and manage federations. Federation viewer can view the Federation page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+
+== Enable a federation
+If you have created a federation but it is not enabled, you can enable it through the *Federation* page. Enabling a federation allows users associated with the federation to log in to the Console using their corporate credentials. Create and test the federation successfully before enabling it.
+
+.Steps
+. Select *Administration > Identity and access*.
+
+. Select the *Federation* tab.
+
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the federation that you want to enable and select *Enable*.
+
+
+
+
+
+== Add a verified domain to an existing federation
+You can add a verified domain to an existing federation in the Console to use multiple domains with the same identity provider (IdP).
+
+You must have already verified the domain in the Console before you can add it to a federation. If you haven't verified the domain yet, you can do so by following the steps in link:task-federation-verify-domain.html[Verify your domain in the Console].
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select the *Federation* tab.
+
+. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to add a verified domain to and select *Update domains*. The *Update domains* dialog box displays the domain already associated with this federation.
+
+. Select a verified domain from the list of available domains. 
+
+. Select *Update*. New domain users may gain federated Console access within 30 seconds.
+
+
+
+== Updating an expiring federated connection
+
+You can update the details of a federation in the Console. For example, you'll need to update the federation if the credentials such as a certificate or client secret expire. When needed, update the notification date to remind you to update the connection before it expires.
+
+
+IMPORTANT: Update the Console first before updating your IdP to avoid login issues. Stay logged into the Console during the process.
+
+.Steps
+. Select *Administration > Identity and access*.
+
+. Select the *Federation* tab.
+
+. Select the actions menu (three vertical dots) next to the federation that you want to update and select *Update federation*.
+
+. Update the details of the federation as needed.
+. Select *Update*.
+
+
+== Test an existing federation
+Test the connection of an existing federation to verify that it works. This can help you identify any issues with the federation and troubleshoot them.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select the *Federation* tab.
+
+. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to add a verified domain to and select *Test connection*. 
+
+. Select *Test*. The system prompts you to log in with your corporate credentials. If the connection is successful, you are redirected to the NetApp Console. If the connection fails, you see an error message indicating the issue with the federation.
+
+. Select *Done* to return to the *Federation* tab.
+
+== Disable a federation
+If you no longer need a federation, you can disable it. This prevents users associated with the federation from logging in to the Console using their corporate credentials. You can re-enable the federation later if needed.
+
+Disable a federation before deleting it, such as when decommissioning the IdP or discontinuing federation. This allows you to re-enable it later if needed.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select the *Federation* tab.
+
+. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to add a verified domain to and select *Disable*. 
+
+== Delete a federation
+If you no longer need a federation, you can delete it. This removes the federation and prevents any users associated with the federation from logging in to the Console using their corporate credentials. For example, if the IdP is being decommissioned or if the federation is no longer needed. 
+
+You cannot recover a federation after you delete it. You must create a new federation.
+
+IMPORTANT: You must disable a federation before you can delete it. You cannot undelete a federation after you delete it.
+
+.Steps
+
+. Select *Administration > Identity and access* .
+. Select *Federations* to view the *Federations* page.
+. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to add a verified domain to and select *Delete*. 
+
+
+
+
+
+

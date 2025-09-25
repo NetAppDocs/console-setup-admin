@@ -1,14 +1,84 @@
 indexpage:
-  title: # Unquoted string 
-  lead: # Quoted string
-  summary: # Quoted string 
-  keywords: # Unquoted comma-delimited list of keywords 
-  tiles: 
-    # Tile definition 
-    - title: # Quoted or unquoted string
-      links: 
-        # Link definition
-        - title: # Quoted or unquoted string
-          url: # Path to target
-        # Next link on this tile (title/url pair)
-    # Next tile on this page (title/links)
+  title: NetApp Console setup and administration documentation
+  lead: Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Connectors, cloud provider accounts, and more.
+  summary: "Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Connectors, cloud provider accounts, and more."
+  keywords: bluexp, connector, accounts, get started, setup, administration, sign up, log in, login, permissions
+  tiles:
+    - title: Get started
+      links:
+        - title: Learn about the NetApp Console
+          url: concept-overview.html
+        - title: Learn about deployment modes
+          url: concept-modes.html
+    - title: Enable storage management
+      links:
+        - title: Associate NetApp Support Site accounts
+          url: reference-permissions-aws.html
+    - title: Enable NetApp data services
+      links:
+        - title: Learn about NetApp data services
+          url: concept-connectors.html
+        - title: Learn about Connectors
+          url: reference-permissions-aws.html
+    - title: NetApp SaaS console
+      links:
+        - title: Get started in SaaS mode
+          url: task-quick-start-standard-mode.html
+        - title: Signing up for a NetApp Console account
+          url: task-quick-start-private-mode.html
+        - title: Plan your Agent deployment strategy
+          url: reference-permissions-azure.html
+        - title: Manage credentials and subscriptions
+          url: task-adding-azure-accounts.html
+    - title: Restricted cloud deployment 
+      links:
+        - title: Get started in a standard Google Cloud region
+          url: task-quick-start-standard-mode.html
+        - title: View the service account for the Connector
+          url: reference-permissions-gcp.html
+        - title: Manage credentials and subscriptions
+          url: task-adding-gcp-accounts.html
+    - title: Monitor and audit 
+      links:
+        - title: Audit Console actions
+          url: task-install-connector-on-prem.html
+        - title: Monitor capacity and storage performace
+          url: task-quick-start-private-mode.html
+        - title: View storage alerts
+          url: task-quick-start-private-mode.html
+    - title: Identity and Access Management
+      links:
+        - title: Learn about identity and access management
+          url: concept-identity-and-access-management.html
+        - title: Get started with IAM
+          url: task-iam-get-started.html
+        - title: Organize your resources with folders and projects
+          url: task-iam-manage-folders-projects.html
+        - title: Add members and service accounts
+          url: task-iam-manage-members-permissions.html
+        - title: Use roles to control member access to resources
+          url: task-iam-manage-roles.html
+    - title: Security
+      links:
+        - title: Learn about federation
+          url: task-quick-start-standard-mode.html
+        - title: Learn about multi-factor authentication
+          url: task-quick-start-restricted-mode.html
+        - title: Manage credentials and subscriptions
+          url: task-adding-aws-accounts.html
+    - title: Console agents
+      links:
+        - title: Learn about Console agents
+          url: concept-connectors.html
+        - title: Understand Console agent permissions
+          url: reference-permissions-aws.html
+        - title: Maintain Console agents
+          url: reference-permissions-gcp.html
+    - title: Blogs & community
+      links:
+        - title: NetApp Console
+          url: https://www.netapp.com/console
+        - title: NetApp Data Services
+          url: https://www.netapp.com/data-services/
+        - title: NetApp Community
+          url: https://community.netapp.com/

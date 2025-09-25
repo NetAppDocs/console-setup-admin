@@ -1,0 +1,137 @@
+Depending on your operating system, either Podman or Docker Engine is required before installing the agent.
+
+* Podman is required for Red Hat Enterprise Linux 8 and 9.
++
+<<podman-versions,View the supported Podman versions>>.
+
+* Docker Engine is required for Ubuntu.
++
+<<podman-versions,View the supported Docker Engine versions>>.
+
+.Steps
+
+// start tabbed area
+
+[role="tabbed-block"]
+
+====
+
+.Podman
+
+--
+
+Follow these steps to install and configure Podman:
+
+* Enable and start the podman.socket service 
+* Install python3 
+* Install the podman-compose package version 1.0.6 
+* Add podman-compose to the PATH environment variable
+* If using Red Hat Enterprise Linux 8, verify that your Podman version is using Aardvark DNS instead of CNI
+
+NOTE: Adjust the aardvark-dns port (default: 53) after installing the agent to avoid DNS port conflicts. Follow the instructions to configure the port.
+
+.Steps
+
+. Remove the podman-docker package if it's installed on the host.
++
+[source,cli]
+dnf remove podman-docker
+rm /var/run/docker.sock
+
+. Install Podman.
++
+You can obtain Podman from official Red Hat Enterprise Linux repositories.
++
+For Red Hat Enterprise Linux 9:
++
+[source,cli]
+sudo dnf install podman-2:<version>
++
+Where <version> is the supported version of Podman that you're installing. <<podman-versions,View the supported Podman versions>>.
++
+For Red Hat Enterprise Linux 8:
++
+[source,cli]
+sudo dnf install podman-3:<version>
++
+Where <version> is the supported version of Podman that you're installing. <<podman-versions,View the supported Podman versions>>.
+
+. Enable and start the podman.socket service.
++
+[source,cli]
+sudo systemctl enable --now podman.socket
+
+. Install python3.
++
+[source,cli]
+sudo dnf install python3
+
+. Install the EPEL repository package if it's not already available on your system.
+
+. If using Red Hat Enterprise:
++
+This step is required because podman-compose is available from the Extra Packages for Enterprise Linux (EPEL) repository.
++
+For Red Hat Enterprise Linux 9:
++
+[source,cli]
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
++
+For Red Hat Enterprise Linux 8:
++
+[source,cli]
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+. Install podman-compose package 1.0.6. 
++
+[source,cli]
+sudo dnf install podman-compose-1.0.6
++
+NOTE: Using the `dnf install` command meets the requirement for adding podman-compose to the PATH environment variable. The installation command adds podman-compose to /usr/bin, which is already included in the `secure_path` option on the host.
+
+. If using Red Hat Enterprise Linux 8, verify that your Podman version is using NetAvark with Aardvark DNS instead of CNI.
+
+.. Check to see if your networkBackend is set to CNI by running the following command:
+[source,cli]
+podman info | grep networkBackend
+
+.. If the networkBackend is set to `CNI`, you'll need to change it to `netavark`.
+
+.. Install `netavark` and `aardvark-dns` using the following command:
+[source,cli]
+dnf install aardvark-dns netavark
+
+.. Open the `/etc/containers/containers.conf` file and modify the network_backend option to use "netavark" instead of "cni".
+
++ 
+If `/etc/containers/containers.conf` doesn't exist, make the configuration changes to `/usr/share/containers/containers.conf`.
+
+. Restart podman.
+[source,cli]
+systemctl restart podman
+
+. Confirm networkBackend is now changed to "netavark" using the following command:
+[source,cli]
+podman info | grep networkBackend
+
+--
+
+.Docker Engine
+--
+Follow the documentation from Docker to install Docker Engine.
+
+.Steps
+
+. https://docs.docker.com/engine/install/[View installation instructions from Docker^]
++
+Follow the steps to install a supported Docker Engine version. Do not install the latest version, as it is unsupported by the Console.
+
+. Verify that Docker is enabled and running.
++
+[source,cli]
+sudo systemctl enable docker && sudo systemctl start docker
+--
+
+====
+
+// end tabbed area

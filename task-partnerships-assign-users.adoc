@@ -1,0 +1,76 @@
+---
+sidebar: sidebar
+permalink: task-partnerships-assign-users.html
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors
+summary: You can add users to a partnership by adding them to the partner organization. After you add users, the partner organization is responsible for assigning them roles for particular resources in their organization.
+---
+
+= Manage members for a partnership organization
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can add users to a partnership by adding them to the partner organization. After you add users, the partner organization is responsible for assigning them roles for particular resources in their organization.
+
+.Required roles
+The *Partnership admin* role is required to make create and manage partnerships. The *Partnership* viewer can view the Partnerships page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+You can remove users from a partnership at any time. Removing a user from a partnership immediately revokes their access to any resources in partner organization.
+
+== Add members to a partnership
+When you add members to a partnership, the Partnership admin of the partner organization must assign them roles for particular resources in their organization before they can access those resources.
+
+After you add members to a partnership, the members display as members in the partner organization where the partner can assign them to resources.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Partnerships*.
+
+. Select the *Partnership received* tab.
+
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the established partnership that you want to members and select *Add members*.
+
+. Choose one or more members to add to to the partnership and select *Add*.
+
+== Remove members from a partnership
+
+You can remove members from a partnership at any time. Removing a user from a partnership immediately revokes their access to any resources in partner organization.
+
+If you want to adjust the role that a member has or the resources they can access, the Partnership admin of the partner organization must make those changes.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Partnerships*.
+
+. Select the *Partnership received* tab.
+
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to member that you want to remove and select *Remove association*.
+
+. Confirm the action by selecting *Remove* in the dialog box.
+
+== View role information for a user
+You can view the role that has been assigned to a user and the associated resources.
+
+You cannot change the role associated with a user. If you have questions about the resources or the role provided, contact the administrator of the partner organization.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Partnerships*.
+
+. Select the *Partnership received* tab.
+
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
+
+. In the table, expand the respective row for organization, folder, or project where you want to view the member's assigned role and select the number in the *Role* column.
+
+
+

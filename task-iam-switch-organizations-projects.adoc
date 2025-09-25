@@ -1,0 +1,76 @@
+---
+sidebar: sidebar
+permalink: task-iam-switch-organizations-projects.html
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors
+summary: You might belong to multiple Console organizations or have permissions to access multiple projects or agents within an organization. When needed, you can easily switch between organizations, projects, and Console agents to access the resources associated with that organization, project, or agent.
+---
+
+= Switch between Console organizations, projects, and agents
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You might belong to multiple Console organizations or have permissions to access multiple projects or agents within an organization. When needed, you can easily switch between organizations, projects, and Console agents to access the resources associated with that organization, project, or agent.
+
+TIP: You might belong to multiple organizations if another organization invites you to join or if you create one yourself. You can create an additional organization by using the API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html[Learn how to create a new organization^]
+
+== Switch between organizations
+
+If you are a member of multiple organizations, you can switch between them at any time.
+
+.Steps
+
+. In the top header of the Console, select *Organization*.
++
+image:screenshot-iam-switch-organizations.png[A screenshot of the top banner where you can select the Organization drop-down and then select another organization.]
+
+. If you have any partnership organizations, select the *Partnership* tab to view the available partner organizations. 
+
++ The *Partnership* tab does not display if you don't have any partner organizations.
+
+. Select another organization and then select *Switch*.
+
++ If you have any partnership organizations, select the *Partnership* tab to view the available partner organizations. 
+
+
+== Switch between projects
+
+If your organization includes multiple projects and you have access to those projects, you can switch between them at any time.
+
+
+NOTE: You can't switch to another project while you are viewing any of the *Identity and access* pages.
+
+.Steps
+
+. In the top header of the Console, select *Project*.
++
+image:screenshot-iam-switch-projects.png[A screenshot of the top banner where you can select the Scope drop-down and then select another project.]
+
+. Browse through the folders and projects in your organization, select the project that you want, and then select *Switch*.
++
+image:screenshot-iam-switch-projects-select.png[A screenshot of the Scope menu where you can select a new project.]
+
+
+== Switch between Console agents
+
+If you have multiple Console agents, you can switch between them to see the systems that are associated with a specific agent.
+
+.Steps
+
+. In the top header of the Console, select the Agent icon.
+
+. Select another agent and then select *Switch*.
+
+
+.Related information
+
+link:task-iam-associate-connectors.html[Associate agents with folders and projects].
+
+== Related information
+
+* link:concept-identity-and-access-management.html[Learn about identity and access in NetApp Console]
+* link:task-iam-get-started.html[Get started with identity and access]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: task-iam-audit-actions-timeline.html
+keywords: iam, audit, monitor, audit iam actions, monitor iam actions
+summary: "Monitor or audit NetApp Console identity and access management actions from the Audit page."
+---
+
+= Monitor or audit IAM activity
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If you need to monitor or audit an action that was completed related to identity and access, you can view details from the Audit page. For example, you might want to verify who added a member to an organization or that a project was deleted successfully.
+
+.Steps
+
+. Select *Administration > *Audit*.
+
+. On the *Audit* page, use the filters to narrow the results. Select *Service* and then select *Tenancy*.
+
+. Use any of the other filters to change which actions display in the table.
++
+For example, you can use the *User* filter to show actions related to a specific user account.

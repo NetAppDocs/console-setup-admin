@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: task-federation-import.html
+keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity, 
+summary: If you have previously set up federation through NetApp Cloud Central (an external application to the NetApp Console) the Federation page prompts you to import your existing federated connection to the Console so you can manage it in the new interface. You can then take advantage of the latest enhancements without having to recreate your federated connection.
+---
+
+= Import your federation to NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If you have previously set up federation through NetApp Cloud Central (an external application to the NetApp Console) the Federation page prompts you to import your existing federated connection to the Console so you can manage it in the new interface. You can then take advantage of the latest enhancements without having to recreate your federated connection.
+
+
+NOTE: After you import your existing federation, you can manage the federation from the *Federations* page. link:task-federation-manage.html[Learn more about managing federations.]
+
+.Required role
+Organization admin or Federation admin. link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select the *Federation* tab.
+
+. Select *Import Federation*.
+
+
+
+
+

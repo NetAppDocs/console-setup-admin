@@ -1,0 +1,24 @@
+---
+sidebar: sidebar
+permalink: task-partnerships-work.html
+keywords: partner organizations, create partnership, MSPs, service provider access
+summary: Once you have been given a role in a partner organization, you can switch to that organization and perform actions that you have permission to perform.
+---
+
+= Work in a partner organization
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Once you have been given a role in a partner organization, you can switch to that organization and perform actions that you have permission to perform.
+
+Use the Organization menu to switch between your organizations and any partner organizations you have access to. link:task-iam-switch-organizations-projects.html[Learn more about switching organizations and projects.]
+
+You'll be able to see the resources that have been shared with you in the partner organization and perform actions based on the role that has been assigned to you. Work with your partnership admin to ensure you have the appropriate role for the resources you need to access.
+
+
+
+

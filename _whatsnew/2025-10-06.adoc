@@ -1,0 +1,73 @@
+
+
+
+=== BlueXP is now NetApp Console
+
+BlueXP has been renamed and redesigned to better reflect the role it has in managing your data infrastructure.  
+
+The new NetApp Console centralizes storage and data service management across on-premises and cloud environments, offering real-time insights, quicker workflows, and easier administration. 
+
+For a complete list of the navigational and terminology changes in the new NetApp Console,, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#console-intro[What's new in NetApp Console].
+
+=== Console agent 4.0.0
+
+This release of the Console agent includes security improvements, and bug fixes.
+
+The 4.0.0 release is available for standard mode and restricted mode.
+
+==== Consolidation and reduction of required network endpoints
+NetApp reduced the number of network endpoints required for the NetApp Console, improving security and simplifying Console agent deployment. Existing deployments before 4.0.0 remain supported. After upgrading to 4.0.0 or later, you may remove the old endpoints from your allow list when convenient.
+
+* link:link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-prev.html#update-endpoint-list[Learn how to update your endpoint list].[Learn how to update your endpoint list.]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html[Learn more about reduced endpoint list.]
+
+==== Support for VCenter deployment of Console agents
+You can now deploy Console agents in VMware environments using an OVA file. The OVA file includes a pre-configured VM image that you can deploy in your VMware environment. The VM image includes the Console agent software and is pre-configured with the necessary settings to connect to the NetApp Console. A file download or URL deployment is available directly from the NetApp Console. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-agent-on-prem-ova.html[Learn how to deploy a Console agent in VMware environments.]
+
+The Console agent OVA for VMware provides a ready-to-deploy virtual machine image that enables you to quickly and reliably deploy the agent in VMware environments, reducing setup time and complexity. 
+
+==== Validation reports for failed agent deployments
+When you deploy a Console agent from the NetApp Console, you now have the option to validate the agent configuration. If the Console fails to deploy the agent, it provides a downloadable report to help you troubleshoot. 
+
+==== Improved troubleshooting for Console agents
+The Console agent has improved error messages that help you better understand issues. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-troubleshoot-connector.html[Learn how to troubleshoot Console agents.]
+
+=== NetApp Console administration
+
+NetApp Console administration includes the following new features.
+
+
+==== Service account authentication
+
+The NetApp Console now supports service account authentication using either a system-generated client ID and secret or customer-managed JWTs, allowing organizations to select the approach that best fits their security requirements and integration workflows. Private Key JWT Client Authentication leverages asymmetric cryptography, offering enhanced security over traditional client ID and secret methods. With JWT authentication, the private key remains securely within the customer’s environment and is never transmitted, significantly reducing the risk of credential theft and strengthening the overall security of your automation stack or client applications. link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account[Learn how to add a service account.]
+
+==== Session timeouts
+
+The system logs out users after 24 hours or when they close their web browser.
+
+
+==== Support for organization partnerships
+
+You can now create organization partnerships in the NetApp Console that let organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-partnerships-create.html[Learn how to manage organization partnerships].
+
+==== Addition of Super admin and Super viewer roles
+The Super admin and Super viewer roles provide elevated access across all aspects of your Console organization, enabling centralized management and oversight of resources and activities. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[Learn more about access roles.]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

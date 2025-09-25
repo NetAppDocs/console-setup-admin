@@ -1,0 +1,19 @@
+Log into the Console and associate the Console agent with your organization. How you log in depends on the mode in which you are using Console. If you are using the Console in standard mode, you log in through the SaaS website. If you are using the Console in restricted or private mode, you log in locally from the Console agent host.
+
+.Steps
+
+
+. Open a web browser and enter the Console agent host URL:
+
++
+The Console host URL can be a  localhost, a private IP address, or a public IP address, depending on the configuration of the host. For example, if the Console agent is in the public cloud without a public IP address, you must enter a private IP address from a host that has a connection to the Console agent host.
+
+. Sign up or log in.
+
+. After you log in, set up the Console:
+.. Specify the Console organization to associate with the Console agent.
+.. Enter a name for the system.
+.. Under *Are you running in a secured environment?* keep restricted mode disabled.
++
+Restricted mode isn't supported when the Console agent is installed on-premises.
+.. Select *Let's start*.

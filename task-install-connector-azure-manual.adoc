@@ -1,0 +1,200 @@
+---
+sidebar: sidebar
+permalink: task-install-connector-azure-manual.html
+keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install
+summary: To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Azure permissions, install the Console agent, and then provide the permissions that you prepared.
+---
+
+= Manually install the Console agent in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Azure permissions, install the Console agent, and then provide the permissions that you prepared.
+
+.Before you begin
+
+* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should review link:reference-limitations.html[Console agent limitations].
+
+== Step 1: Review host requirements
+
+The Console agent software must run on a host that meets specific operating system requirements, RAM requirements, port requirements, and so on.
+
+include::_include/os-reqs.adoc[tag=manual-uid-range]
+
+include::_include/os-reqs.adoc[tag=dedicated]
+
+include::_include/os-reqs.adoc[tag=hypervisor]
+
+include::_include/os-reqs.adoc[tag=os]
+
+
+include::_include/os-reqs.adoc[tag=azure-vm]
+
+include::_include/os-reqs.adoc[tag=disk-space]
+
+[[podman-configuration]]
+== Step 2: Install Podman or Docker Engine
+
+include::_include/podman-docker.adoc[]
+
+== Step 3: Set up networking
+
+Ensure that the network location where you plan to install the Console agent supports the following requirements. Meeting these requirements enables the Console agent to manage resources and processes within your hybrid cloud environment.
+
+//Azure regions
+include::_include/networking.adoc[tag=azure-region]
+
+//Connections to target networks
+include::_include/networking.adoc[tag=networks]
+
+//Outbound internet access
+include::_include/networking.adoc[tag=outbound]
+
+//Endpoints contacted from your web browser
+include::_include/endpoints-console.adoc[]
+
+
+//Endpoints contacted from the Console agent 
+include::_include/endpoints-connector.adoc[tag=intro]
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
+
+== Step 4: Set up Console agent deployment permissions
+
+You need to provide Azure permissions to the Console agent by using one of the following options:
+
+* Option 1: Assign a custom role to the Azure VM using a system-assigned managed identity.
+
+* Option 2: Provide the Console agent with the credentials for an Azure service principal that has the required permissions.
+
+Follow the steps to prepare permissions for the Console agent.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Create a custom role for Console agent deployment
+--
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+
+.Steps 
+
+. If you're planning to manually install the software on your own host, enable a system-assigned managed identity on the VM so that you can provide the required Azure permissions through a custom role. 
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm[Microsoft Azure documentation: Configure managed identities for Azure resources on a VM using the Azure portal^]
+
+include::_include/azure-set-up-role.adoc[]
+--
+
+.Service principal
+--
+Create and set up a service principal in Microsoft Entra ID and obtain the Azure credentials that the Console agent needs.
+
+.Create a Microsoft Entra application for role-based access control
+
+include::_include/azure-set-up-service-principal.adoc[tag=app]
+
+.Assign the application to a role
+ 
+include::_include/azure-set-up-service-principal.adoc[tag=role]
+
+.Add Windows Azure Service Management API permissions
+
+include::_include/azure-set-up-service-principal.adoc[tag=api]
+
+.Get the application ID and directory ID for the application
+
+include::_include/azure-set-up-service-principal.adoc[tag=ids]
+
+.Create a client secret
+
+include::_include/azure-set-up-service-principal.adoc[tags=secret]
+
+.Result
+
+Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you add an Azure account.
+--
+
+====
+// end tabbed area
+
+== Step 5: Install the Console agent
+
+After the pre-requisites are complete, you can manually install the software on your own Linux host.
+
+include::_include/manual-install.adoc[tag=before]
+
+* A managed identity enabled on the VM in Azure so that you can provide the required Azure permissions through a custom role.
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm[Microsoft Azure documentation: Configure managed identities for Azure resources on a VM using the Azure portal^]
+
+include::_include/manual-install.adoc[tag=about]
+
+include::_include/manual-install.adoc[tag=main-steps]
+
+include::_include/manual-install.adoc[tag=standard-mode-steps-for-cloud]
+
+If you have Azure Blob storage in the same Azure subscription where you created the Console agent, you'll see an Azure Blob storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html[Learn how to manage Azure Blob storage from NetApp Console^]
+
+== Step 6: Provide permissions to NetApp Console
+
+Now that you've installed the Console agent, you need to provide the Console agent with the Azure permissions that you previously set up. Providing the permissions enables the Console to manage your data and storage infrastructure in Azure.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Custom role
+--
+include::_include/azure-provide-permissions-role.adoc[]
+
+.What's next?
+
+Go to the https://console.netapp.com[NetApp Console^] to start using the Console agent.
+--
+
+.Service principal
+--
+.Steps
+
+include::_include/azure-provide-permissions-service-principal.adoc[]
+
+.Result
+
+The Console agent now has the permissions that it needs to perform actions in Azure on your behalf.
+--
+
+====
+// end tabbed area

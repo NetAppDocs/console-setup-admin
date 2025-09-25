@@ -1,0 +1,32 @@
+//tag::policy[]
+. Log in to the AWS console and navigate to the IAM service.
+
+. Create a policy:
+
+.. Select *Policies > Create policy*.
+
+.. Select *JSON* and copy and paste the contents of the link:reference-permissions-aws.html[IAM policy for the Console agent].
+
+.. Finish the remaining steps to create the policy.
+//end::policy[]
+
+//tag::role[]
+. Create an IAM role:
+
+.. Select *Roles > Create role*.
+
+.. Select *AWS service > EC2*.
+
+.. Add permissions by attaching the policy that you just created.
+
+.. Finish the remaining steps to create the role.
+//end::role[]
+
+//tag::keys[]
+. Attach the policies to an IAM user.
++
+* https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html[AWS Documentation: Creating IAM Roles^]
+* https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html[AWS Documentation: Adding and Removing IAM Policies^]
+
+. Ensure that the user has an access key that you can add to the NetApp Console after you install the Console agent.
+//end::keys[]

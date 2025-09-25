@@ -1,0 +1,48 @@
+A Google Cloud service account is required to provide the Console agent with the permissions that the Console needs to manage resources in Google Cloud. When you create the Console agent, you'll need to associate this service account with the Console agent VM.
+
+It's your responsibility to update the custom role as new permissions are added in subsequent releases. If new permissions are required, they will be listed in the release notes.
+
+.Steps
+
+. Create a custom role in Google Cloud:
+
+.. Create a YAML file that includes the contents of the link:reference-permissions-gcp.html[service account permissions for the Console agent].
+
+.. From Google Cloud, activate cloud shell.
+
+.. Upload the YAML file that includes the required permissions.
+
+.. Create a custom role by using the `gcloud iam roles create` command.
++
+The following example creates a role named "connector" at the project level:
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud[Google Cloud docs: Creating and managing custom roles^]
+
+. Create a service account in Google Cloud and assign the role to the service account:
+
+.. From the IAM & Admin service, select *Service Accounts > Create Service Account*.
+
+.. Enter service account details and select *Create and Continue*.
+
+.. Select the role that you just created.
+
+.. Finish the remaining steps to create the role.
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account[Google Cloud docs: Creating a service account^]
+
+. If you plan to deploy Cloud Volumes ONTAP systems in different projects than the project where the Console agent resides, then you'll need to provide the Console agent's service account with access to those projects.
++
+For example, let's say the Console agent is in project 1 and you want to create Cloud Volumes ONTAP systems in project 2. You'll need to grant access to the service account in project 2.
+
+.. From the IAM & Admin service, select the Google Cloud project where you want to create Cloud Volumes ONTAP systems.
+
+.. On the *IAM* page, select *Grant Access* and provide the required details.
++
+* Enter the email of the Console agent's service account.
+* Select the Console agent's custom role.
+* Select *Save*.
+
++
+For more details, refer to https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role[Google Cloud documentation^]
