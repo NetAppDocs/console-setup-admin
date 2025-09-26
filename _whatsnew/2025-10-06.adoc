@@ -16,10 +16,10 @@ This release of the Console agent includes security improvements, and bug fixes.
 The 4.0.0 release is available for standard mode and restricted mode.
 
 ==== Consolidation and reduction of required network endpoints
-NetApp reduced the number of network endpoints required for the NetApp Console and Console agents, improving security and simplifying Console agent deployment. Existing deployments before 4.0.0 remain supported. After upgrading to 4.0.0 or later, Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to the current endpoints as soon as possible. 
+NetApp has reduced the required network endpoints for the Console and Console agents, enhancing security and simplifying deployment. Importantly, all deployments prior to version 4.0.0 continue to be fully supported. While previous endpoints remain available for existing agents, NetApp strongly recommends updating firewall rules to the current endpoints after confirming successful agent upgrades.
 
 * link:link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
-* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html[Learn more about required endpoint list.]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html[Learn more about required endpoints.]
 
 ==== Support for VCenter deployment of Console agents
 You can now deploy Console agents in VMware environments using an OVA file. The OVA file includes a pre-configured VM image that you can deploy in your VMware environment. The VM image includes the Console agent software and is pre-configured with the necessary settings to connect to the NetApp Console. A file download or URL deployment is available directly from the NetApp Console. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html[Learn how to deploy a Console agent in VMware environments.]

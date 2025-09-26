@@ -73,10 +73,22 @@ Docker (for Ubuntu and VCenter deployments)::
 [source,cli]
 docker ps -a
 
-Podman:: 
+Podman (for RedHat Enterprise Linux deployments):: 
 +
 [source,cli]
 podman ps -a
+
+
+== View the Console agent version
+
+You can view the version of your Console agent to verify that the agent automatically upgraded to the latest release or because you need to share it with your NetApp representative.
+
+.Steps
+
+
+. Select *Administration > Support > Agents*.
++
+The version displays at the top of the page.
 
 
 == Verify network access
@@ -95,17 +107,18 @@ include::_include/endpoints-config-check-note.adoc[]
 
 
 === Failed installation on the endpoints used for upgrades
-If the verification report includes ONLY a failure to contact the following endpoints:
+If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the check box. NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoints].
 
+ Be sure to verify that the only error is related to the previous endpoints:
+
+ 
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io 
 
-You can run the installer again and uncheck the *Validate agent configuration* check box on the *Review* page. The Console agent will install without validating the endpoints.
-
-* For new agent deployments, NetApp checks for the following endpoints, link:reference-networking-saas-console.html[listed here^]. This configuration check fails with an error if you are using the previous endpoints used for upgrades,  link:reference-networking-saas-console-previous.html[listed here^]. NetApp recommends updating your firewall rules to allow access to the current endpoints and block access to the previous endpoints at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your networking].
+ If there are other errors, you'll need to resolve them before proceeding.
 
 
-include::_include/endpoints-config-check-note.adoc[]
+
 
 
 
@@ -130,17 +143,6 @@ You can find the system ID at the top of the page.
 image:screenshot-system-id.png[A screenshot that shows the System ID that appears in the Support Dashboard.]
 
 . Hover and click on the ID to copy it.
-
-=== View the Console agent version
-
-You can view the version of your Console agent to verify that the agent automatically upgraded to the latest release or because you need to share it with your NetApp representative.
-
-.Steps
-
-
-. Select *Administration > Support > Agents*.
-+
-The version displays at the top of the page.
 
 === Download or send an AutoSupport message
 
