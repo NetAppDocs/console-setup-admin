@@ -23,13 +23,13 @@ Starting with version 4.0.0, Console agents require fewer endpoints. Existing de
 
 NetApp recommends that you update your firewall rules to use the revised endpoint list. The revised list is smaller, thus more secure and easier to manage. 
 
-See link:reference-networking-saas-console.html[Supported endpoints for 4.0.0 and higher]
+Review link:reference-networking-saas-console.html[supported endpoints for 4.0.0 and higher]
 
 .Steps
 
 . Whitelist the endpoints in link:reference-networking-saas-console.html[Supported endpoints for 4.0.0 and higher].
 . Restart all Console agents so they can use the new endpoints. NetApp recommends doing this during a planned maintenance window.
-. Verifying that the Console agents are working properly. See link:task-troubleshoot-connector.html#check-agent-status[Check agent status].
+. Verifying that the Console agents are working properly. link:task-troubleshoot-connector.html#check-agent-status[Learn how to check agent status].
 . Remove the old endpoints from your allow list.
 
 

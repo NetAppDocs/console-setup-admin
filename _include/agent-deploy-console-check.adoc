@@ -1,7 +1,10 @@
 . Review your selections to verify that your set up is correct.
 .. The *Validate agent configuration* check box is marked by default to have the Console validate the network connectivity requirements when you deploy. If the Console fails to deploy the agent, it provides a report to help you troubleshoot. If the deployment succeeds, no report is provided.
 
-+ 
-NOTE: If you are still using the previous endpoints used for agent upgrades,  link:reference-networking-saas-console-prev.html[listed here], the validation fails with an error. To avoid this, unmark the check box. NetApp recommends updating your firewall rules to allow access to the current endpoints at your earliest convenience. link:reference-networking-saas-console-prev.html#update-endpoint-list[Learn how to update your endpoint list].
 +
-link:task-troubleshoot-connector.html#troubleshoot-installation[See Console agent installation issues].
+[NOTE:] 
+====
+ If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the check box. NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
+
+ Be sure to verify that the only error is related to the previous endpoints. If there are other errors, you'll need to resolve them before proceeding.
+====

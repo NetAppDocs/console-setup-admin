@@ -15,10 +15,9 @@ summary: Install a Console agent on-premises and then log in and set it up to wo
 [.lead]
 Install a Console agent on-premises and then log in and set it up to work with your Console organization. 
 
-If you are a VMWare user, you can use an OVA to install a Console agent in your VCenter. link:task-install-agent-on-prem-ova.html[Use VCenter to install an agent.]
+NOTE: If you are a VMWare user, you can use an OVA to install a Console agent in your VCenter. link:task-install-agent-on-prem-ova.html[Learn more about installing an agent in a VCenter.]
 
 Before you install, you'll need to ensure your host (VM or Linux host) meets requirements and ensure that the Console agent will have outbound access to the internet as well as targeted networks. If you plan to NetApp data services, or cloud storage options such as Cloud Volumes ONTAP, you'll need to create credentials in your cloud provider to add to the Console so that the Console agent can perform actions in the cloud on your behalf.
-
 
 
 == Prepare to install the Console agent

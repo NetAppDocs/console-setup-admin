@@ -2,7 +2,7 @@
 [IMPORTANT]
 ====
 
-* For new agent deployments, NetApp checks for the following endpoints, link:reference-networking-saas-console.html[listed here^]. This configuration check fails with an error if you are using the previous endpoints used for upgrades,  link:reference-networking-saas-console-prev.html[listed here^]. NetApp recommends updating your firewall rules to allow access to the current endpoints and block access to the previous endpoints, link:reference-networking-saas-console.html[listed here^].
+* For new agent deployments, NetApp checks for the following endpoints: link:reference-networking-saas-console.html[listed here^]. This configuration check fails with an error if you are using the previous endpoints used for upgrades,  link:reference-networking-saas-console-previous.html[listed here]. NetApp recommends updating your firewall rules to allow access to the current endpoints and block access to the previous endpoints at your earliest convenience link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your networking].
 
 
 * If you update the endpoints in your firewall, your existing agents will continue to work.
