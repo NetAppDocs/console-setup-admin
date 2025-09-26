@@ -83,20 +83,26 @@ The following is a list of roles in the data service category. Each role grants 
 | Data service role
 | Responsibilities
 
-| link:reference-iam-backup-rec-roles.html[Backup and recovery super admin] | Perform any actions in NetApp Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery admin] | Perform backups to local snapshots, replicate to secondary storage, and back up to object storage.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery restore admin] | Restore workloads in the Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery clone admin] | Clone applications and data in the Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery viewer] | View Backup and recovery information.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery admin] | Perform any actions in NetApp Disaster Recovery service.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery failover admin] | Perform failover and migrations.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery application admin] | Create replication plans, change replication plans, and start test failovers.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery viewer] | View information only.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery super admin] | Perform any actions in NetApp Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery admin] | Perform backups to local snapshots, replicate to secondary storage, and back up to object storage.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery restore admin] | Restore workloads in the Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery clone admin] | Clone applications and data in the Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery viewer] | View Backup and Recovery information.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery admin] | Perform any actions in NetApp Disaster Recovery service.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery failover admin] | Perform failover and migrations.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery application admin] | Create replication plans, change replication plans, and start test failovers.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery viewer] | View information only.
 | Classification viewer | Allows users to view NetApp Data Classification scan results.
 
  Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. Classification does not have a viewer role.
-| link:reference-iam-ransomware-roles.html[Ransomware protection admin]| Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
-| link:reference-iam-ransomware-roles.html[Ransomware protection viewer]| View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| View workload data, view alert data, download Recovery data, and download reports in Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| Manage actions on the Protect, Alerts, Recover, Settings, and Reports.
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| View workload data, view alert data, download recovery data, and download reports.
+
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin]| Configure user behavior and analytics data.
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer]| View user behavior and analytics data.
+
 | SnapCenter admin | Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
 
 * Complete any action from Backup and Recovery > Applications
