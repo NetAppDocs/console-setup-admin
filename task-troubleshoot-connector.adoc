@@ -107,7 +107,9 @@ include::_include/endpoints-config-check-note.adoc[]
 
 
 === Failed installation on the endpoints used for upgrades
-If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the check box. NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoints].
+If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the *Validation agent configuration* check box or skip the configuration check when installing into a VCenter.
+
+NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoints].
 
 Be sure to verify that the only error is related to the previous endpoints:
 
