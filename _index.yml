@@ -3,7 +3,7 @@ indexpage:
   lead: Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Console agents, cloud provider accounts, and more.
   summary: "Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Console agents, cloud provider accounts, and more."
   keywords: bluexp, netapp console, Console agents, accounts, get started, setup, administration, sign up, log in, login, permissions
-tiles:
+  tiles:
     - title: Get started
       links:
         - title: Learn about NetApp Console
@@ -16,7 +16,7 @@ tiles:
           url: /task-quick-start-restricted-mode.html
         - title: Get started with private mode
           url: task-quick-start-private-mode.html
-    - title: Identity and access 
+    - title: Set up identity and access 
       links:
         - title: Learn about Console identity and access management (IAM)
           url: concept-identity-and-access-management.html
