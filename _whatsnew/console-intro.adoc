@@ -1,7 +1,7 @@
 
-BlueXP has been renamed to NetApp Console and redesigned to better reflect the role it has in managing your data infrastructure.  
+BlueXP is now NetApp Console.
 
-The NetApp Console centralizes storage and data service management across on-premises and cloud environments, offering real-time insights, quicker workflows, and easier administration. 
+The NetApp Console, built on the enhanced and restructured BlueXP foundation, provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration, that is highly secure and compliant.
 
 The following lists the navigational and terminology changes in the NetApp Console. For a complete list of features in this 6 October 2025 release, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#10-06-2025[What's new in NetApp Console].
 
@@ -15,20 +15,18 @@ The NetApp Console has moved most menu options to the left-navigation pane (inst
 
 
 
-==== Storage menu
+==== Canvas is replaced by the Storage menu
+
+The Canvas has been intuitively renamed to the Systems page. View managed and discoverable systems from the *Storage > Management* menu. 
+
+image:screenshot-storage-mgmt.png["A screenshot of the Management menu."]
+
+==== Expanded Storage menu
 
 The *Storage* menu includes the following: *Alerts* where you can view alerts from your on-premises ONTAP systems and *Lifecycle planning* (formerly *Economic efficiency*) where you can identify unused and underutilized resources.
 
 Keystone has also been moved to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
-
-image:screenshot-alerts-menu.png["A screenshot of the Storage menu."]
-
-==== Management menu (storage management)
-
-The Canvas has been intuitively renamed to the Systems page. View managed and discoverable systems from the *Storage > Management* menu. 
-
-image:screenshot-storage-mgmt.png["A screenshot of the Management menu."]
 
 ==== Administration menu
 
