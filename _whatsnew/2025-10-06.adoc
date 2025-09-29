@@ -44,9 +44,9 @@ The NetApp Console now supports service account authentication using either a sy
 The system logs out users after 24 hours or when they close their web browser.
 
 
-==== Support for organization partnerships
+==== Support for partnerships between organizations
 
-You can now create organization partnerships in the NetApp Console that let organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html[Learn how to manage organization partnerships].
+You can now create partnerships in the NetApp Console that let partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html[Learn how to manage partnerships].
 
 ==== Super admin and Super viewer roles
 The Super admin and Super viewer roles provide elevated access across all aspects of your Console organization, enabling centralized management and oversight of resources and activities. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[Learn more about access roles.]

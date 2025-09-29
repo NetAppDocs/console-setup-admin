@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-install-agent-on-prem-ova.html
-keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install
-summary: Install a Console agent on-premises and then log in and set it up to work with your Console organization.
+keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install
+summary: If you are a VMWare user, you can use an OVA to install a Console agent in your VCenter. THe OVA download or URL is available through the NetApp Console.
 ---
 
 = Install a Console agent on-premises using VCenter
@@ -13,9 +13,9 @@ summary: Install a Console agent on-premises and then log in and set it up to wo
 :imagesdir: ./media/
 
 [.lead]
-If you are a VMWare user, you can use an OVA to install a Console agent in your VCenter. 
+If you are a VMWare user, you can use an OVA to install a Console agent in your VCenter. THe OVA download or URL is available through the NetApp Console.
 
-NOTE: When you install a Console agent with your VCenter tool, you can use the VM web console to perform maintenance tasks. link:task-agent-vm-config.html[Learn more about the VM console for the agent.]
+NOTE: When you install a Console agent with your VCenter tools, you can use the VM web console to perform maintenance tasks. link:task-agent-vm-config.html[Learn more about the VM console for the agent.]
 
 
 == Prepare to install the Console agent
@@ -50,7 +50,7 @@ include::_include/endpoints-console.adoc[]
 //Endpoints contacted from the Console agent 
 include::_include/endpoints-connector.adoc[tag=intro]
 
-NOTE: A Console agent installed on your premises cannot manage resources in Google Cloud. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
+NOTE:  You can't manage resources in Google Cloud with an Console agent installed on your premises. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
 
 [role="tabbed-block"]
 ====
@@ -118,11 +118,11 @@ include::_include/networking.adoc[tag=ports]
 include::_include/networking.adoc[tag=ntp]
 
 [[agent-permission-aws-azure]]
-== Create Console agent cloud permissions for AWS or Azure
+=== Create Console agent cloud permissions for AWS or Azure
 
 If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider so that you can add the credentials to the Console agent after you install it.
 
-TIP: Google Cloud is not supported because the Console agent installed on your premises cannot manage resources in Google Cloud.
+NOTE: You can't manage resources in Google Cloud with an Console agent installed on your premises. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
 
 // start tabbed area
 
@@ -133,7 +133,7 @@ TIP: Google Cloud is not supported because the Console agent installed on your p
 --
 For on-premises Console agents, provide AWS permissions by adding IAM user access keys.
 
-You must use this authentication method if the Console agent is installed on-premises. You can't use an IAM role.
+You must use IAM user access keys if the Console agent is installed on-premises. You can't use an IAM role.
 
 .Steps
 
@@ -181,7 +181,7 @@ include::_include/azure-set-up-service-principal.adoc[tags=secret]
 
 
 == Install a Console agent in your VCenter environment
-NetApp supports installing the Console agent in your VCenter environment.
+NetApp supports installing the Console agent in your VCenter environment. The OVA file includes a pre-configured VM image that you can deploy in your VMware environment.  A file download or URL deployment is available directly from the NetApp Console. It includes the Console agent software and a self-signed certificate.
 
 === Download the OVA or copy the URL    
 
@@ -202,6 +202,8 @@ Download the OVA or copy the OVA URL directly from the NetApp Console.
 Log into your VCenter environment to deploy the agent.
 
 .Steps
+
+. Upload the self-signed certificate to your trusted certificates if your environment requires it. You can replace this certificate after installation. link:task-installing-https-cert.html[Learn how to replace the self-signed certificate.]
 
 . Deploy the OVA from the content library or local system.
 +
@@ -250,9 +252,9 @@ b. Select *Actions* > *New VM from this template*
 The vSphere task bar shows the progress as the Console agent is deployed.
 . Power on the VM if you didn't select the option to automatically power it on.
 
-=== Access the report and logs from the Console agent host
+==== Access the report and logs from the Console agent host
 
-If the installation fails, you can access the validation report in JSON format and the configuration logs directly from the Console agent host in the following directories:
+If the installation fails, you can access the validation report(JSON format) and the configuration logs directly from the Console agent host in the following directories:
 
 include::_include/validate-agent-host.adoc[]
 
