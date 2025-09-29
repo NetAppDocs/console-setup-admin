@@ -127,13 +127,37 @@ By using Super admin and Super viewer roles with scoped assignments, XYZ Corpora
 
 [cols="2,1",options="header"]
 |===
+| Role | Inherited roles
 
-| Role
-| Inherited roles
-|Super admin | Organization admin, Folder or project admin, Federation admin, Partnership admin, Ransomware Resilience admin, Disaster recovery admin, Disaster recovery failover admin, Disaster recovery application admin, Backup admin, Restore admin, Clone admin, Backup super admin, Storage admin, System health specialist, Operations system analyst, Keystone admin, Google Cloud NetApp Volumes admin
-|Super viewer | Organization viewer, Federation viewer, Partnership viewer, Ransomware Resilience viewer, Disaster recovery viewer, Backup viewer, Storage viewer, Keystone viewer, Google Cloud NetApp Volumes viewer
+a| Super admin
+a| * Organization admin  
+* Folder or project admin 
+* Federation admin 
+* Partnership admin 
+* Ransomware Resilience admin 
+* Disaster recovery admin 
+* Disaster recovery failover admin 
+* Disaster recovery application admin 
+* Backup admin 
+* Restore admin 
+* Clone admin 
+* Backup super admin 
+* Storage admin 
+* System health specialist 
+* Operations system analyst 
+* Keystone admin 
+* Google Cloud NetApp Volumes admin
 
-
-
+a| Super viewer
+a|
+* Organization viewer
+* Federation viewer
+* Partnership viewer
+* Ransomware Resilience viewer
+* Disaster recovery viewer
+* Backup viewer
+* Storage viewer
+* Keystone viewer
+* Google Cloud NetApp Volumes viewer
 
 |===
