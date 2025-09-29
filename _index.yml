@@ -1,12 +1,12 @@
 indexpage:
   title: NetApp Console setup and administration documentation
-  lead: Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Connectors, cloud provider accounts, and more.
-  summary: "Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Connectors, cloud provider accounts, and more."
-  keywords: bluexp, connector, accounts, get started, setup, administration, sign up, log in, login, permissions
+  lead: Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Console agents, cloud provider accounts, and more.
+  summary: "Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Console agents, cloud provider accounts, and more."
+  keywords: bluexp, netapp console, Console agents, accounts, get started, setup, administration, sign up, log in, login, permissions
 tiles:
     - title: Get started
       links:
-        - title: Learn about BlueXP
+        - title: Learn about NetApp Console
           url: concept-overview.html
         - title: Learn about deployment modes
           url: concept-modes.html
@@ -16,11 +16,11 @@ tiles:
           url: /task-quick-start-restricted-mode.html
         - title: Get started with private mode
           url: /task-quick-start-private-mode.html
-    - title: BlueXP IAM
+    - title: Identity and access 
       links:
-        - title: Learn about BlueXP identity and access management
+        - title: Learn about Console identity and access management (IAM)
           url: concept-identity-and-access-management.html
-        - title: Get started with BlueXP IAM
+        - title: Get started with identity and access
           url: task-iam-get-started.html
         - title: Organize your resources with folders and projects
           url: task-iam-manage-folders-projects.html
@@ -28,9 +28,9 @@ tiles:
           url: task-iam-manage-members-permissions.html
         - title: Use roles to control member access to resources
           url: task-iam-manage-roles.html
-    - title: Connectors
+    - title: Console agents
       links:
-        - title: Learn about Connectors
+        - title: Learn about Console agents
           url: concept-connectors.html
         - title: View AWS permissions
           url: reference-permissions-aws.html
@@ -72,16 +72,9 @@ tiles:
           url: task-adding-gcp-accounts.html
     - title: On-premises
       links:
-        - title: Install and set up a Connector in standard mode
+        - title: Install and set up a Console agent in standard mode
           url: task-install-connector-on-prem.html
-        - title: Install and set up a Connector in private mode
-          url: task-quick-start-private-mode.html
-    - title: Logging in
-      links:
-        - title: Log in to BlueXP
-          url: task-logging-in.html
-        - title: Use identity federation with BlueXP
-          url: concept-federation.html
+
     - title: Blogs & community
       links:
         - title: NetApp Console
