@@ -11,11 +11,11 @@ tiles:
         - title: Learn about deployment modes
           url: concept-modes.html
         - title: Get started with standard mode
-          url: /task-quick-start-standard-mode.html
+          url: task-quick-start-standard-mode.html
         - title: Get started with restricted mode
           url: /task-quick-start-restricted-mode.html
         - title: Get started with private mode
-          url: /task-quick-start-private-mode.html
+          url: task-quick-start-private-mode.html
     - title: Identity and access 
       links:
         - title: Learn about Console identity and access management (IAM)
@@ -45,8 +45,8 @@ tiles:
         - title: Get started in an AWS GovCloud region
           url: task-quick-start-restricted-mode.html
         - title: Get started in AWS Secret or Top Secret Cloud
-          url: https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html
-        - title: View IAM policies for the Connector
+          url: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html
+        - title: View IAM policies for the Console agent
           url: reference-permissions-aws.html
         - title: Manage credentials and subscriptions
           url: task-adding-aws-accounts.html
@@ -58,7 +58,7 @@ tiles:
           url: task-quick-start-restricted-mode.html
         - title: Get started in Azure IL6
           url: task-quick-start-private-mode.html
-        - title: View the custom role for the Connector
+        - title: View the custom role for the Console agent
           url: reference-permissions-azure.html
         - title: Manage credentials and subscriptions
           url: task-adding-azure-accounts.html
@@ -66,15 +66,16 @@ tiles:
       links:
         - title: Get started in a standard Google Cloud region
           url: task-quick-start-standard-mode.html
-        - title: View the service account for the Connector
+        - title: View the service account for the Console agent
           url: reference-permissions-gcp.html
         - title: Manage credentials and subscriptions
           url: task-adding-gcp-accounts.html
     - title: On-premises
       links:
-        - title: Install and set up a Console agent in standard mode
+        - title: Manually install and set up a Console agent in standard mode
           url: task-install-connector-on-prem.html
-
+        - title: Install and set up a Console agent in VCenter
+          url: task-install-agent-on-prem-ova.html
     - title: Blogs & community
       links:
         - title: NetApp Console
