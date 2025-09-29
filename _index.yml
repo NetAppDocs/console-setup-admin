@@ -3,7 +3,7 @@ indexpage:
   lead: Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Connectors, cloud provider accounts, and more.
   summary: "Get started with NetApp Console so that you can start building, protecting, and governing data across your on-premises and cloud environments. After set up is complete, you can control access to your resources using identity and access management (IAM), administer Connectors, cloud provider accounts, and more."
   keywords: bluexp, connector, accounts, get started, setup, administration, sign up, log in, login, permissions
-  tiles:
+ tiles:
     - title: Get started
       links:
         - title: Learn about BlueXP
