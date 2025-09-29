@@ -27,6 +27,8 @@ Within the same organization, one user is assigned the *Federation admin* role t
 The following tables indicate the actions that each Console platform role can perform.
 
 
+
+
 [organization-admin-roles]
 == Organization administration roles 
 [cols="2,1,1",options="header"]
@@ -51,7 +53,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 | Associate agents with folders and projects  | Yes | No
 
-| Remove agents from a folders and projects  | Yes | No
+| Remove agents from folders and projects  | Yes | No
 
 | Manage agents (edit certificates, settings, and so on)  | Yes | No
 
@@ -59,7 +61,7 @@ The following tables indicate the actions that each Console platform role can pe
 | Create, manage, and view federations | Yes | No
 | Register for support and submit cases through the Console | Yes |	Yes 
 | Use data services that are not associated with an explicit access role | Yes | Yes 
-| View the the Audit page and notifications | Yes |	Yes 
+| View the Audit page and notifications | Yes |	Yes 
 
 |===
 
@@ -99,7 +101,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 
 | Can create a partnership | Yes | No
-| Create add roles to partner members | Yes | No 
+| Assign roles to partner members | Yes | No 
 
 | Can add members to a partnership |	Yes | No
 
@@ -108,20 +110,30 @@ The following tables indicate the actions that each Console platform role can pe
 
 |===
 
-== Super roles
 
-[cols="2,1,1",options="header"]
+[[super-admin-roles]]
+== Super admin and viewer roles 
+
+The Super admin role is for users needing full access to Console features, data services, and storage resources. These users can administer every aspect of the organization, including creating and managing organizations, folders, projects, and resources. They also have the ability to manage users and assign roles across the organization, ensuring proper governance and security. Super admins configure data services, adjust storage, and manage Console agents, maintaining operational efficiency and oversight.
+
+The Super viewer role provides users read-only access to Console features and resources. These users can view organizations, folders, projects, storage resources, and data service configurations, but cannot make any changes. This role is ideal for auditors, compliance officers, or stakeholders who require visibility into the environment without administrative privileges.
+
+
+.Example for super roles
+XYZ Corporation leverages the flexibility of role assignment by granting Super admin access to specific users for particular projects or folders, rather than the entire organization. For example, a user may be given Super admin rights for the "Europe Storage" folder, enabling them to fully manage resources and users within that scope, while retaining limited or viewer access elsewhere. Similarly, a user can be assigned Super viewer access to a specific project, allowing them to monitor its resources without the ability to modify them.
+
+By using Super admin and Super viewer roles with scoped assignments, XYZ Corporation achieves both robust security and operational flexibility, ensuring that users have the appropriate level of access for their responsibilities.
+
+
+[cols="2,1",options="header"]
 |===
 
-| Task
-| Super admin
-| Super viewer
+| Role
+| Inherited roles
+|Super admin | Organization admin, Folder or project admin, Federation admin, Partnership admin, Ransomware Resilience admin, Disaster recovery admin, Disaster recovery failover admin, Disaster recovery application admin, Backup admin, Restore admin, Clone admin, Backup super admin, Storage admin, System health specialist, Operations system analyst, Keystone admin, Google Cloud NetApp Volumes admin
+|Super viewer | Organization viewer, Federation viewer, Partnership viewer, Ransomware Resilience viewer, Disaster recovery viewer, Backup viewer, Storage viewer, Keystone viewer, Google Cloud NetApp Volumes viewer
 
-
-| Can perform all admin role actions | Yes | No
-| Can perform all viewer role actions| Yes | Yes
 
 
 
 |===
-

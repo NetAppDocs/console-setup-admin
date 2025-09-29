@@ -14,8 +14,6 @@ indexpage:
           url: task-quick-start-standard-mode.html
         - title: Get started with restricted mode
           url: /task-quick-start-restricted-mode.html
-        - title: Get started with private mode
-          url: task-quick-start-private-mode.html
     - title: Set up identity and access 
       links:
         - title: Learn about Console identity and access management (IAM)
