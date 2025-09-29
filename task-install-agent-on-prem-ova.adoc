@@ -226,13 +226,13 @@ b. Select *Actions* > *New VM from this template*
 . Select the datastore where you want to deploy the VM, then select *Next*. Be sure it meets host requirements.
 . Select the network to which you want to connect the VM, then select *Next*. The network must be IPv4 and have outbound internet access to the required endpoints.
 
-. On the Customize template window, complete the following fields:
+. in the *Customize template* window, complete the following fields:
 
 +
 * Proxy information: If you selected explicit proxy, enter the proxy server hostname or IP address and port number, as well as the username, password. If you selected transparent proxy, upload the respective certificate.
 * Virtual Machine Configuration
-** Skip config check: This is unchecked by default. Mark this checkbox if you want to install without running a configuration check.
-** Maintenance password: Set the password for the maint user that allows access to the agent maintenance console.
+** Skip config check: This is unchecked by default. Mark this checkbox if you want to install without running a configuration check. NetApp recommends leaving this box unchecked. The Configuration check validates that the agent has network access to the required endpoints. If it deployment fails because of connectivity issues, you can access the validation report and logs from the agent host.
+** Maintenance password: Set the password for the `maint` user that allows access to the agent maintenance console.
 ** NTP servers:
 ** Hostname:
 ** Primary DNS
@@ -256,7 +256,7 @@ If the installation fails, you can access the validation report in JSON format a
 
 include::_include/validate-agent-host.adoc[]
 
-include:_include/endpoints-config-check-note.adoc[]
+include::_include/endpoints-config-check-note.adoc[]
 
 
 == Register the Console agent with NetApp Console
