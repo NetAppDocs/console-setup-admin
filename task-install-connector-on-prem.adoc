@@ -130,7 +130,7 @@ include::_include/networking.adoc[tag=ports]
 include::_include/networking.adoc[tag=ntp]
 
 [[agent-permission-aws-azure]]
-== Create Console agent cloud permissions for AWS or Azure
+=== Create Console agent cloud permissions for AWS or Azure
 
 If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider and then you add the credentials to the Console agent after you install it.
 
@@ -213,13 +213,7 @@ include::_include/manual-install.adoc[tag=about]
 include::_include/manual-install.adoc[tag=main-steps]
 
 
-=== Access the report and logs from the Console agent host
 
-If the installation fails, you can access the validation report in JSON format and the configuration logs directly from the Console agent host in the following directories:
-
-include::_include/validate-agent-host.adoc[]
-
-include:_include/endpoints-config-check-note.adoc[]
 
 .What’s next?
 

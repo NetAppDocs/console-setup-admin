@@ -233,16 +233,21 @@ b. Select *Actions* > *New VM from this template*
 +
 * Proxy information: If you selected explicit proxy, enter the proxy server hostname or IP address and port number, as well as the username, password. If you selected transparent proxy, upload the respective certificate.
 * Virtual Machine Configuration
-** Skip config check: This is unchecked by default. Mark this checkbox if you want to install without running a configuration check. NetApp recommends leaving this box unchecked. The Configuration check validates that the agent has network access to the required endpoints. If it deployment fails because of connectivity issues, you can access the validation report and logs from the agent host.
-** Maintenance password: Set the password for the `maint` user that allows access to the agent maintenance console.
-** NTP servers:
-** Hostname:
-** Primary DNS
-** Secondary DNS
+** *Skip config check*: This check box is unchecked by default which means the agent runs a configuration check to validate network access. 
+*** NetApp recommends leaving this box unchecked so that the installation includes a configuration check of the agent. The Configuration check validates that the agent has network access to the required endpoints. If it deployment fails because of connectivity issues, you can access the validation report and logs from the agent host. In some cases, if you are confident that the agent has network access, you can choose to skip the check. For example, if you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, mark the check box to install without a validation check.  link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
+
+
+
+
+** *Maintenance password*: Set the password for the `maint` user that allows access to the agent maintenance console.
+** *NTP servers*
+** *Hostname*
+** *Primary DNS*
+** *Secondary DNS*
 ** Search domains: Specify the search domain name to use when resolving the hostname.
-** IPv4 address
-** IPv4 subnet mask
-** IPv4 gateway address
+** *IPv4 address*
+** *IPv4 subnet mask*
+** *IPv4 gateway address*
 
 . Select *Next*.
 
@@ -252,13 +257,7 @@ b. Select *Actions* > *New VM from this template*
 The vSphere task bar shows the progress as the Console agent is deployed.
 . Power on the VM if you didn't select the option to automatically power it on.
 
-==== Access the report and logs from the Console agent host
-
-If the installation fails, you can access the validation report(JSON format) and the configuration logs directly from the Console agent host in the following directories:
-
-include::_include/validate-agent-host.adoc[]
-
-include::_include/endpoints-config-check-note.adoc[]
+NOTE: If the deployment fails, you can access the validation report and logs from the agent host. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
 
 == Register the Console agent with NetApp Console

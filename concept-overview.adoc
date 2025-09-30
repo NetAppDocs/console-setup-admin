@@ -13,7 +13,9 @@ summary: The NetApp Console provides centralized management of NetApp storage an
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Console provides centralized management of NetApp storage and data services across on-premises and cloud environments at enterprise scale. It is available as a service (SaaS) platform includes services that provide storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
+The NetApp Console provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration, that is highly secure and compliant. 
+
+It is available as a service (SaaS) platform that provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
 
 == Features
 

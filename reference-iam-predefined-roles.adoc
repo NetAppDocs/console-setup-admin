@@ -39,8 +39,8 @@ This is the only access role that can create Console agents.
 Folder or project admins cannot create Console agents.
 | link:reference-iam-platform-roles.html#federation-roles[Federation admin]|	Allows a user to create and manage federations with the Console, which enables single-sign on (SSO). 
 | link:reference-iam-platform-roles.html#federation-roles[Federation viewer]|	Allows a user to view existing federations with the Console. Cannot create or manage federations.
-| link:reference-iam-platform-roles.html#partnership-roles[Partnership admin]|	Allows a user to create and manage organization partnerships.
-| link:reference-iam-platform-roles.html#partnership-roles[Partnership viewer]|	Allows a user to view existing organization partnerships. Cannot create or manage partnerships.
+| link:reference-iam-platform-roles.html#partnership-roles[Partnership admin]|	Allows a user to create and manage partnerships.
+| link:reference-iam-platform-roles.html#partnership-roles[Partnership viewer]|	Allows a user to view existing partnerships. Cannot create or manage partnerships.
 | link:reference-iam-platform-roles.html#super-admin-roles[Super admin]| Gives the user all available admin roles, as well as the System Health Specialist role and the Operations systems analyst role
 | link:reference-iam-platform-roles.html#super-admin-roles[Super viewer]|	Gives the user all available viewer roles, including Classification viewer.
 
