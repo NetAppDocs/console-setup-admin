@@ -25,7 +25,6 @@ Before you install, ensure your VM host meets requirements and ensure that the C
 
 Make sure your host machine meets installation requirements before installing the Console agent.
 
-include::_include/os-reqs.adoc[tag=manual-uid-range]
 
 include::_include/os-reqs.adoc[tag=vmhost]
 
