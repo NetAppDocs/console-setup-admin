@@ -279,7 +279,7 @@ include::_include/azure-provide-permissions-service-principal.adoc[]
 
 .Result
 
-THe Console agent now has the permissions that it needs to perform actions in Azure on your behalf. You can now go to the https://console.netapp.com[NetApp Console^] to start using the Console agent.
+The Console agent now has the permissions that it needs to perform actions in Azure on your behalf. You can now go to the https://console.netapp.com[NetApp Console^] to start using the Console agent.
 --
 
 ====
