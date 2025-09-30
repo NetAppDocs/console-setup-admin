@@ -114,9 +114,9 @@ The following tables indicate the actions that each Console platform role can pe
 [[super-admin-roles]]
 == Super admin and viewer roles 
 
-The Super admin role is for users needing full access to Console features, data services, and storage resources. These users can administer every aspect of the organization, including creating and managing organizations, folders, projects, and resources. They also have the ability to manage users and assign roles across the organization, ensuring proper governance and security. Super admins configure data services, adjust storage, and manage Console agents, maintaining operational efficiency and oversight.
+The *Super admin* role provides full access to manage Console features, storage, and data services. This role suits those overseeing administration and governance. In contrast, the *Super viewer* role offers read-only access, ideal for auditors or stakeholders who need visibility without making changes.
 
-The Super viewer role provides users read-only access to Console features and resources. These users can view organizations, folders, projects, storage resources, and data service configurations, but cannot make any changes. This role is ideal for auditors, compliance officers, or stakeholders who require visibility into the environment without administrative privileges.
+Organizations should use *Super admin* access sparingly to minimize security risks and align with the principle of least privilege. Most organizations should assign fine-grained roles with only the necessary permissions to reduce risk and improve auditability.
 
 
 .Example for super roles

@@ -256,7 +256,7 @@ b. Select *Actions* > *New VM from this template*
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 The vSphere task bar shows the progress as the Console agent is deployed.
-. Power on the VM if you didn't select the option to automatically power it on.
+. Power on the VM.
 
 NOTE: If the deployment fails, you can access the validation report and logs from the agent host. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
