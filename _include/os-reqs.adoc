@@ -14,7 +14,9 @@ Host can be of any architecture that meets the following size requirements:
 
 * CPU: 8 cores or 8 vCPUs
 * RAM: 32 GB
-* Disk space: 165 GB
+* Disk space: 165 GB (thick provisioned)
+* vSphere 7.0 or higher
+* ESXi host 7.03 or higher
 
 //end::vmhost[]
 

@@ -121,6 +121,8 @@ To re-enable the configuration check, use these steps and set the _skipConfigChe
 
 .Steps
 
+. Access the Console agent host as root or with sudo privileges.
+
 . Create a backup copy of the _/opt/application/netapp/service-manager-2/config.json_ file to ensure you can revert your changes. 
 
 . Stop the service manager 2 service by running the following command:

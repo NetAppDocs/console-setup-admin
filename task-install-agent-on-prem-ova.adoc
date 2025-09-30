@@ -230,8 +230,10 @@ b. Select *Actions* > *New VM from this template*
 . in the *Customize template* window, complete the following fields:
 
 +
-* Proxy information: If you selected explicit proxy, enter the proxy server hostname or IP address and port number, as well as the username, password. If you selected transparent proxy, upload the respective certificate.
-* Virtual Machine Configuration
+* *Proxy information* 
+** If you selected explicit proxy, enter the proxy server hostname or IP address and port number, as well as the username, password. 
+** If you selected transparent proxy, upload the respective certificate.
+* *Virtual Machine Configuration*
 ** *Skip config check*: This check box is unchecked by default which means the agent runs a configuration check to validate network access. 
 *** NetApp recommends leaving this box unchecked so that the installation includes a configuration check of the agent. The Configuration check validates that the agent has network access to the required endpoints. If it deployment fails because of connectivity issues, you can access the validation report and logs from the agent host. In some cases, if you are confident that the agent has network access, you can choose to skip the check. For example, if you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, mark the check box to install without a validation check.  link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
 
@@ -239,14 +241,14 @@ b. Select *Actions* > *New VM from this template*
 
 
 ** *Maintenance password*: Set the password for the `maint` user that allows access to the agent maintenance console.
-** *NTP servers*
-** *Hostname*
-** *Primary DNS*
-** *Secondary DNS*
-** Search domains: Specify the search domain name to use when resolving the hostname.
-** *IPv4 address*
-** *IPv4 subnet mask*
-** *IPv4 gateway address*
+** *NTP servers*: Specify one or more NTP servers for time synchronization.
+** *Hostname*: Define the hostname to use for this VM. It should should be a fully qualified domain name (FQDN) and *not* include the search domain. For example, an FQDN of console10.searchdomain.company.com should be entered as console10.
+** *Primary DNS*: Specify the primary DNS server to use for name resolution.
+** *Secondary DNS*: Specify the secondary DNS server to use for name resolution.
+** Search domains: Specify the search domain name to use when resolving the hostname. For example, if the FQDN is console10.searchdomain.company.com, then enter searchdomain.company.com.
+** *IPv4 address*: THe IP address that is mapped to the hostname.
+** *IPv4 subnet mask*: The subnet mask for the IPv4 address.
+** *IPv4 gateway address*: The gateway address for the IPv4 address.
 
 . Select *Next*.
 
