@@ -22,7 +22,9 @@ A partner organization must first add members to the partnership before you can 
 
 == Understand roles for partnership users
 
-You can manage roles for members of partner organizations in the same way that you do for your own. However, not all roles are available to partnership users.  You can assign following roles to partner users:
+You can manage roles for members of partner organizations in the same way that you do for your own. However, not all roles are available to partnership users. In particular, you can't grant partner users a role that allows software updates. Updating ONTAP software generally requires direct network access.
+
+You can assign following roles to partner users:
 
 * link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin]
 * link:reference-iam-platform-roles.html#organization-admin-roles[Folder or project admin]
