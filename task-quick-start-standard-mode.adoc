@@ -52,4 +52,4 @@ To use NetApp Intelligent Data Services for managing storage and data in Google 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] link:task-subscribe-standard-mode.html[Subscribe to NetApp Intelligent Services (optional)]
 
 [role="quick-margin-para"]
-ign up for NetApp Intelligent Services through your cloud provider to pay hourly (PAYGO) or through an annual contract. NetApp Intelligent Services include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience and NetApp Disaster Recovery. NetApp Data Classification is included with your subscription at no additional cost
+Sign up for NetApp Intelligent Services through your cloud provider to pay hourly (PAYGO) or through an annual contract. NetApp Intelligent Services include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience and NetApp Disaster Recovery. NetApp Data Classification is included with your subscription at no additional cost.

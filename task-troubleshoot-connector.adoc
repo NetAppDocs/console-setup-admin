@@ -41,7 +41,7 @@ a|
 * Verify that the agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access endpoints.]
 
 a|Unable to load agent settings
-a|This message displays when you try to access the Agent settings page.
+a|The Console displays this message when you try to access the Agent settings page..
 a|
 * Check if the OCCM container is running and working.
 * If the issue persists, contact support.
@@ -81,14 +81,14 @@ podman ps -a
 
 == View the Console agent version
 
-You can view the version of your Console agent to verify that the agent automatically upgraded to the latest release or because you need to share it with your NetApp representative.
+View the Console agent version to confirm the upgrade or share it with your NetApp representative.
 
 .Steps
 
 
 . Select *Administration > Support > Agents*.
 +
-The version displays at the top of the page.
+The Console displays the version at the top of the page.
 
 
 == Verify network access
@@ -98,12 +98,53 @@ Ensure that the Console agent has the network access it needs. link:reference-ne
 [[troubleshoot-installation]]
 == Console agent installation issues
 
-If the installation fails, you can view a report and logs to help you fix the issues.
+If the installation fails, view the report and logs to resolve the issues.
 
 
 include::_include/validate-agent-host.adoc[]
 
 include::_include/endpoints-config-check-note.adoc[]
+
+[[disable-config-check]]
+=== Disable configuration checks for manual installations
+There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example:
+
+* When manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fails.
+
+* You may also want to disable these checks if you are continuing to use the previous endpoint list for agent upgrades. 
+
+.Steps
+
+You disable the configuration check by setting the _skipConfigCheck_ flag in the _com/opt/application/netapp/service-manager-2/config.json_ file. By default, this flag is set to false and the configuration check verifies outbound access for the agent. Set this flag to true to disable the check. You should be familiar with JSON syntax before completing this step. 
+
+To re-enable the configuration check, use these steps and set the _skipConfigCheck_ flag to false.
+
+.Steps
+
+. Create a backup copy of the _/opt/application/netapp/service-manager-2/config.json_ file to ensure you can revert your changes. 
+
+. Stop the service manager 2 service by running the following command:
+
+[source,cli]
+systemctl stop netapp-service-manager.service
+
+. Edit the _/opt/application/netapp/service-manager-2/config.json_ file and change the value of the _skipConfigCheck_ flag to true.
++
+[source,json]
+
+  "skipConfigCheck": true,
+
+
+
+. Save your file.
+
+. Restart the service manager 2 service by running the following command:
+
++
+[source,cli]
+systemctl restart netapp-service-manager.service
+
+
 
 
 === Failed installation on the endpoints used for upgrades

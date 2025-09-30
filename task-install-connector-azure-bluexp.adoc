@@ -373,7 +373,7 @@ include::_include/agent-deploy-console-check.adoc[]
 
 . Select *Add*.
 +
-The Console prepares the instance in about 7 minutes. Stay on the page until the process completes.
+The Console prepares the instance in about 10 minutes. Stay on the page until the process completes.
 
 .Result
 

@@ -5,7 +5,7 @@ keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML
 summary: Creating partnerships between organizations in the NetApp Console lets organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
 ---
 
-= Prtnerships in NetApp Console
+= Partnerships in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

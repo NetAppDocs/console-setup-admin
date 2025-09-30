@@ -114,7 +114,7 @@ AWS launches the software with the specified settings. The Console agent instanc
 Set up the Console.
 --
 
-.Azure Marketplace
+.Azure Gov Marketplace
 --
 .Before you begin
 
@@ -157,7 +157,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 +
 link:reference-ports-azure.html[View security group rules for Azure].
 
-* Identity*: Under *Management*, select *Enable system assigned managed identity*.
+* *Identity*: Under *Management*, select *Enable system assigned managed identity*.
 +
 This setting is important because a managed identity allows the Console agent virtual machine to identify itself to Microsoft Entra ID without providing any credentials. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[Learn more about managed identities for Azure resources^].
 
@@ -176,9 +176,12 @@ Set up the NetApp Console.
 --
 include::_include/manual-install.adoc[tag=before]
 
+* You need to disable the configuration check that verifies outbound connectivity during installation. The manual install fails if this check is not disabled. link:task-troubleshoot-connector.html[Learn how to disable configuration checks for manual installations.]
+
 * Depending on your operating system, either Podman or Docker Engine is required before you install the Console agent.
 
 include::_include/manual-install.adoc[tag=about]
+
 
 include::_include/manual-install.adoc[tag=main-steps]
 

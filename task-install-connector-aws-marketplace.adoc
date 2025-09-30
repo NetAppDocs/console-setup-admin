@@ -112,7 +112,10 @@ You should have the following:
 include::_include/aws-marketplace.adoc[]
 
 +
-AWS launches the Console agent with the specified settings, and the Console agent runs in about five minutes.
+AWS launches the Console agent with the specified settings, and the Console agent runs in about ten minutes.
+
++
+NOTE: If the installation fails, you can view logs and a report to help you troubleshoot. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
 . Open a web browser from a host that has a connection to the Console agent virtual machine and URL of the Console agent.
 

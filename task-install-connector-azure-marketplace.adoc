@@ -188,7 +188,10 @@ This setting is important because a managed identity allows the Console agent vi
 
 . On the *Review + create* page, review your selections and select *Create* to start the deployment.
 +
-Azure deploys the virtual machine with the specified settings. You should see the virtual machine and Console agent software running in about five minutes.
+Azure deploys the virtual machine with the specified settings. You should see the virtual machine and Console agent software running in about ten minutes.
+
++
+NOTE: If the installation fails, you can view logs and a report to help you troubleshoot. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
 . Open a web browser from a host that has a connection to the Console agent virtual machine and enter the following URL:
 +
