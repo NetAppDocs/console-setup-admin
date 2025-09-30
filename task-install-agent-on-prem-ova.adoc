@@ -19,7 +19,7 @@ NOTE: When you install a Console agent with your VCenter tools, you can use the 
 
 
 == Prepare to install the Console agent
-Before you install, ensure your VM host meets requirements and ensure that the Console agent will have outbound access to the internet as well as targeted networks. To use NetApp data services or Cloud Volumes ONTAP, create cloud provider credentials for the Console agent to perform actions on your behalf.
+Before installation, ensure your VM host meets requirements and that the Console agent has outbound access to the internet and targeted networks. To use NetApp data services or Cloud Volumes ONTAP, create cloud provider credentials for the Console agent to perform actions on your behalf.
 
 === Review Console agent host requirements
 
@@ -121,7 +121,7 @@ include::_include/networking.adoc[tag=ntp]
 
 If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider so that you can add the credentials to the Console agent after you install it.
 
-NOTE: You can't manage resources in Google Cloud with an Console agent installed on your premises. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
+NOTE: You can't manage resources in Google Cloud with a Console agent installed on your premises. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
 
 // start tabbed area
 
@@ -132,7 +132,7 @@ NOTE: You can't manage resources in Google Cloud with an Console agent installed
 --
 For on-premises Console agents, provide AWS permissions by adding IAM user access keys.
 
-You must use IAM user access keys if the Console agent is installed on-premises. You can't use an IAM role.
+Use IAM user access keys for on-premises Console agents; IAM roles are not supported for on-premises Console agents.
 
 .Steps
 
@@ -202,7 +202,7 @@ Log into your VCenter environment to deploy the agent.
 
 .Steps
 
-. Upload the self-signed certificate to your trusted certificates if your environment requires it. You can replace this certificate after installation. link:task-installing-https-cert.html[Learn how to replace the self-signed certificate.]
+. Upload the self-signed certificate to your trusted certificates if your environment requires it. You replace this certificate after installation.link:task-installing-https-cert.html[Learn how to replace the self-signed certificate.]
 
 . Deploy the OVA from the content library or local system.
 +
@@ -225,7 +225,7 @@ b. Select *Actions* > *New VM from this template*
 . Accept the license agreement, then select *Next*.
 . Indicate what type of proxy configuration you want to use. Choose from explicit proxy, transparent proxy, or no proxy. 
 . Select the datastore where you want to deploy the VM, then select *Next*. Be sure it meets host requirements.
-. Select the network to which you want to connect the VM, then select *Next*. The network must be IPv4 and have outbound internet access to the required endpoints.
+. Select the network to which you want to connect the VM, then select *Next*. Ensure the network is IPv4 and has outbound internet access to the required endpoints.
 
 . in the *Customize template* window, complete the following fields:
 
@@ -242,11 +242,11 @@ b. Select *Actions* > *New VM from this template*
 
 ** *Maintenance password*: Set the password for the `maint` user that allows access to the agent maintenance console.
 ** *NTP servers*: Specify one or more NTP servers for time synchronization.
-** *Hostname*: Define the hostname to use for this VM. It should should be a fully qualified domain name (FQDN) and *not* include the search domain. For example, an FQDN of console10.searchdomain.company.com should be entered as console10.
+** *Hostname*: Set the hostname for this VM. It must not include the search domain. For example, an FQDN of console10.searchdomain.company.com should be entered as console10.
 ** *Primary DNS*: Specify the primary DNS server to use for name resolution.
 ** *Secondary DNS*: Specify the secondary DNS server to use for name resolution.
 ** Search domains: Specify the search domain name to use when resolving the hostname. For example, if the FQDN is console10.searchdomain.company.com, then enter searchdomain.company.com.
-** *IPv4 address*: THe IP address that is mapped to the hostname.
+** *IPv4 address*: The IP address that is mapped to the hostname.
 ** *IPv4 subnet mask*: The subnet mask for the IPv4 address.
 ** *IPv4 gateway address*: The gateway address for the IPv4 address.
 
