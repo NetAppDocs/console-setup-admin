@@ -127,7 +127,6 @@ If there are other errors, you'll need to resolve them before proceeding.
 == Work with NetApp Support
 If you haven't been able to resolve the issues with your Console agent, you may want to contact NetApp Support. NetApp support may ask for the Console agent ID or for you to send the Console agent logs to them if they don't have them already.
 
-include::_include/endpoints-config-check-note.adoc[]
 
 === Find the Console agent ID 
 
