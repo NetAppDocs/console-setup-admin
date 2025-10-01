@@ -13,7 +13,7 @@ summary: To create a Console agent in Google Cloud from the NetApp Consoel or by
 :imagesdir: ./media/
 
 [.lead]
-You can create a Console agent in Google Cloud from the Console . You need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
+You can create a Console agent in Google Cloud from the Console. You need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
 
 .Before you begin
 

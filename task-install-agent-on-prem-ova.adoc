@@ -19,7 +19,7 @@ NOTE: When you install a Console agent with your VCenter tools, you can use the 
 
 
 == Prepare to install the Console agent
-Before installation, ensure your VM host meets requirements and that the Console agent has outbound access to the internet and targeted networks. To use NetApp data services or Cloud Volumes ONTAP, create cloud provider credentials for the Console agent to perform actions on your behalf.
+Before installation, make sure your VM host meets the requirements and the Console agent can access the internet and targeted networks. To use NetApp data services or Cloud Volumes ONTAP, create cloud provider credentials for the Console agent to perform actions on your behalf.
 
 === Review Console agent host requirements
 
@@ -28,7 +28,7 @@ Make sure your host machine meets installation requirements before installing th
 
 include::_include/os-reqs.adoc[tag=vmhost]]
 
-NOTE: The agent must be installed in a vCenter environment rather than directly on an ESXi host. 
+NOTE: Install the agent in a vCenter environment rather than directly on an ESXi host. 
 
 
 
@@ -51,7 +51,7 @@ include::_include/endpoints-console.adoc[]
 //Endpoints contacted from the Console agent 
 include::_include/endpoints-connector.adoc[tag=intro]
 
-NOTE:  You can't manage resources in Google Cloud with an Console agent installed on your premises. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
+NOTE:  You can't manage resources in Google Cloud with an Console agent installed on your premises. To manage Google Cloud resources, install an agent in Google Cloud.
 
 [role="tabbed-block"]
 ====
@@ -148,12 +148,12 @@ include::_include/aws-permissions.adoc[tag=keys]
 
 .Result
 
-You should now have access keys for an IAM user who has the required permissions. After you install the Console agent, associate these credentials with the Console agent from the Console.
+You should now have IAM user access keys with the required permissions.After you install the Console agent, associate these credentials with the Console agent from the Console.
 --
 
 .Azure
 --
-When the Console agent is installed on-premises, you need to provide the Console agent with Azure permissions by setting up a service principal in Microsoft Entra ID and obtaining the Azure credentials that the Console agent needs.
+When the Console agent is installed on-premises, you need to give the Console agent Azure permissions by setting up a service principal in Microsoft Entra ID and getting the Azure credentials that the Console agent needs.
 
 .Create a Microsoft Entra application for role-based access control
 
@@ -225,7 +225,7 @@ b. Select *Actions* > *New VM from this template*
 . Select a compute resource, then select *Next*.
 . Review the details of the template, then select *Next*.
 . Accept the license agreement, then select *Next*.
-. Indicate what type of proxy configuration you want to use. Choose from explicit proxy, transparent proxy, or no proxy. 
+. Choose the type of proxy configuration you want to use: explicit proxy, transparent proxy, or no proxy. 
 . Select the datastore where you want to deploy the VM, then select *Next*. Be sure it meets host requirements.
 . Select the network to which you want to connect the VM, then select *Next*. Ensure the network is IPv4 and has outbound internet access to the required endpoints.
 

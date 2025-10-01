@@ -29,7 +29,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 
 
-[organization-admin-roles]
+[[organization-admin-roles]]
 == Organization administration roles 
 [cols="2,1,1",options="header"]
 |===
@@ -65,7 +65,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 |===
 
-[federation-roles]
+[[federation-roles]]
 == Federation roles
 [cols="2,1,1",options="header"]
 |===
@@ -89,7 +89,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 |===
 
-[partnership-roles]
+[[partnership-roles]]
 == Partnership roles
 
 [cols="2,1,1",options="header"]

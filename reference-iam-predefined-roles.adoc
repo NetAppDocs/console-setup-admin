@@ -16,7 +16,7 @@ summary: NetApp Console identity and access management includes predefined roles
 Identity and access management (IAM) in the NetApp Console provides predefined roles that you can assign to the members of your organization across different levels of your resource hierarchy. Before you assign these roles, you should understand the permissions that each role includes. Roles fall into the following categories: platform, application, and data service.
 
 
-[#platform-roles]
+[[platform-roles]]
 == Platform roles
 Platform roles grant NetApp Console administration permissions, including role assignment and user management. The Console has several platform roles. 
 
@@ -49,7 +49,7 @@ Folder or project admins cannot create Console agents.
 |===
 
 
-[#application-roles]
+[[application-roles]]
 == Application roles
 The following is a list of roles in the application category. Each role grants specific permissions within its designated scope. Users without the required application or platform role cannot access the respective application.
 
@@ -72,7 +72,7 @@ The following is a list of roles in the application category. Each role grants s
 
 
 
-[#data-service-roles]
+[[data-service-roles]]
 == Data service roles
 The following is a list of roles in the data service category. Each role grants specific permissions within its designated scope. Users who do not have the required data service role or a platform role will be unable to access the data service.
 
