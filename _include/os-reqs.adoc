@@ -1,13 +1,16 @@
 //tag::dedicated[]
 Dedicated host::
-The Console agent is not supported on a host that is shared with other applications. The host must be a dedicated host.
-
-+
-Host can be of any architecture that meets the following size requirements:
+The Console agent is not supported on a host that is shared with other applications. The host must be a dedicated host. Host can be of any architecture that meets the following size requirements:
 
 * CPU: 8 cores or 8 vCPUs
 * RAM: 32 GB
+* Disk space in /opt:: 100 GiB of space must be available
++
+The agent uses `/opt` to install the `/opt/application/netapp` directory and its contents.
 
+* Disk space in /var:: 20 GiB of space must be available
++
+The Console agent requires this space in `/var` because Docker or Podman are architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage` directory. External mounts or symlinks do not work for this space.
 //end::dedicated[]
 
 //tag::vmhost[]

@@ -92,7 +92,7 @@ The endpoints listed below are all CNAME entries.
 //tag::upgrade-endpoints[]
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io
 \https://bluexpinfraprod.azurecr.io 
-| To obtain images for Console agent upgrades. 
+a| To obtain images for Console agent upgrades. 
 
 
 * When you deploy a new agent, the validation check tests connectivity to current endpoints. If you use link:link:reference-networking-saas-console-previous.html[previous endpoints], the validation check fails. To avoid this failure, skip the validation check.

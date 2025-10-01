@@ -127,7 +127,7 @@ Console agent installation::
 You can install an agent from the Console, AWS or Azure Marketplace, the Google Cloud SDK, or manually using an installer on a Linux host in your data center or cloud, or using a provided OVA in your VCenter environment.
 
 Console agent upgrades::
-NetApp provides monthly automated agent upgrades.
+NetApp automatically upgrades your agent monthly.p.
 
 User interface access::
 The user interface is accessible from the web-based console that's provided through the SaaS layer.
@@ -140,7 +140,7 @@ Authentication::
 Authentication with auth0 or NetApp Support Site (NSS) logins. Identity federation is available.
 
 Supported data services::
-All NetApp data services are supported.
+All NetApp data services are supported. link:https://docs.netapp.com/us-en/data-services-family/index.html[Learn more about NetApp data services^].
 
 Supported licensing options::
 Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depends on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options.
