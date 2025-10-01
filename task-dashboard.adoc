@@ -33,7 +33,7 @@ Each pane in the Home page requires different user roles:
 If you do not have permissions to access a pane, the pane displays a message indicating you lack permissions to use it.
 
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[Learn about NetApp Console access roles for all services^]. 
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[Learn about NetApp Console access roles.]. 
 
 .Steps
 
