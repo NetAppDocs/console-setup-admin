@@ -99,6 +99,8 @@ sidebar:
       entries:
         - title: Log in to NetApp Console
           url: /task-logging-in.html
+        - title: View metrics on the NetApp Console Home page
+          url: /task-dashboard.html
         - title: Manage your NetApp Console user settings
           url: /task-user-settings.html
     - title: Administer NetApp Console
