@@ -126,8 +126,7 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 
 . Optional: Select an additional role or project. If you want to provide access to additional folders or projects within your organization or grant the user additional roles in the selected area, select *Add role*, specify another folder or project or a different role category and then choose a role.
 
-. If you didn't choose to use JWT authentication, download or copy the client ID and client secret.
-+
+. If you didn't choose to use JWT authentication, download or copy the client ID and client secret. +
 The Console shows the client secret only once. Copy it securely; you can recreate it later if needed.
 
 . If you choose JWT authentication, download or copy the client ID and JWT audience. This information is shown only once and cannot be retrieved later.
