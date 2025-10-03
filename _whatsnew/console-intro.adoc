@@ -8,7 +8,7 @@ The following lists the navigational and terminology changes in the NetApp Conso
 
 === Navigation menus
 
-The NetApp Console has moved most menu options to the left-navigation pane and reorganized menus for easier navigation.
+NetApp moved most menu options to the left-navigation pane and reorganized menus for easier navigation in the NetApp Console.
 
 ==== Canvas is replaced by the Storage menu
 
@@ -18,7 +18,7 @@ image:screenshot-storage-mgmt.png["A screenshot of the systems page."]
 
 ==== Expanded Storage menu
 
-The *Storage* menu includes the following: *Alerts* where you can view alerts from your on-premises ONTAP systems and *Lifecycle planning* (formerly *Economic efficiency*) where you can identify unused and underutilized resources.
+The *Storage* menu also includes *Alerts* to view ONTAP system alerts and *Lifecycle planning* (formerly *Economic efficiency*) to identify unused or underutilized resources.
 
 NetApp has also moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
@@ -51,7 +51,7 @@ New users with the Organization admin role can use the NetApp assistant to confi
 
 === More intuitive naming of elements, data services, and features
 
-NetApp has renamed several elements, data services, and features to better reflect their purpose. Here are some of the key changes:
+NetApp renamed several elements, data services, and features to clarify their purpose. Key changes include:
 
 * *Connectors* have been renamed *Console agents* to better reflect their role in both manageability and connectivity to data services. View, add, and manage your agents from the *Administration > Agents* menu.
 
