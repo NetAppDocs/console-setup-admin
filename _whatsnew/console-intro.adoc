@@ -10,7 +10,7 @@ The following lists the navigational and terminology changes in the NetApp Conso
 
 NetApp moved most menu options to the left-navigation pane and reorganized menus for easier navigation in the NetApp Console.
 
-==== Canvas is replaced by the Storage menu
+==== Canvas is replaced by the Systems page
 
 NetApp renamed the Canvas to the *Systems* page. Navigate to the *System* page from the *Storage > Management* menu. 
 
