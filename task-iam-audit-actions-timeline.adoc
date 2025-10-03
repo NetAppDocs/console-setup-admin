@@ -17,7 +17,7 @@ If you need to monitor or audit an action that was completed related to identity
 
 .Steps
 
-. Select *Administration > *Audit*.
+. Select *Administration > Audit*.
 
 . On the *Audit* page, use the filters to narrow the results. Select *Service* and then select *Tenancy*.
 

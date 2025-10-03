@@ -13,7 +13,7 @@ summary: If members of your organization need to use a Console agent in another 
 :imagesdir: ./media/
 
 [.lead]
- When an _Organization admin_ creates a Console agent, the Console agent is automatically associated with currently selected project within the organization. Although someone with the _Organization admin_ role can access to that Console agent from anywhere in the organization. Other members in your organization can only access that Console agent from the project in which it was created, unless you associate that Console agent with other projects.
+When an _Organization admin_ creates a Console agent, the Console agent is automatically associated with currently selected project within the organization. Although someone with the _Organization admin_ role can access to that Console agent from anywhere in the organization. Other members in your organization can only access that Console agent from the project in which it was created, unless you associate that Console agent with other projects.
 
 .Before you begin
 

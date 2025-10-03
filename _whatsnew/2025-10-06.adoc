@@ -20,9 +20,9 @@ NetApp has reduced the required network endpoints for the Console and Console ag
 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html[Learn more about required endpoints.]
 
 ==== Support for VCenter deployment of Console agents
-You can now deploy Console agents in VMware environments using an OVA file. The OVA file includes a pre-configured VM image with Console agent software and settings to connect to the NetApp Console. A file download or URL deployment is available directly from the NetApp Console. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html[Learn how to deploy a Console agent in VMware environments.]
+You can deploy Console agents in VMware environments using an OVA file. The OVA file includes a pre-configured VM image with Console agent software and settings to connect to the NetApp Console. A file download or URL deployment is available directly from the NetApp Console. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html[Learn how to deploy a Console agent in VMware environments.]
 
-The Console agent OVA for VMware provides a pre-configured virtual machine image for quick and reliable deployment, reducing setup time.
+The Console agent OVA for VMware offers a pre-configured VM image for quick deployment.
 
 ==== Validation reports for failed agent deployments
 When you deploy a Console agent from the NetApp Console, you now have the option to validate the agent configuration. If the Console fails to deploy the agent, it provides a downloadable report to help you troubleshoot. 
@@ -30,14 +30,22 @@ When you deploy a Console agent from the NetApp Console, you now have the option
 ==== Improved troubleshooting for Console agents
 The Console agent has improved error messages that help you better understand issues. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html[Learn how to troubleshoot Console agents.]
 
-=== NetApp Console administration
+=== NetApp Console
 
-NetApp Console administration includes the following new features.
+NetApp Console administration includes the following new features:
+
+==== Home page dashboard
+The NetApp Console's Home page dashboard provides real-time visibility into storage infrastructure with metrics for health, capacity, license status, and data services. link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html[Learn more about the Home page.]
+
+==== NetApp assistant
+The NetApp Console Assistant guides first-time administrative users through tasks like deploying agents, discovering clusters, and adding licenses. This onboarding assistant reduces setup time and reduces configuration errors, enabling you to quickly realize value from NetApp Console.
+link:https://docs.netapp.com/us-en/console-setup-admin/task-console-assistant.html[Learn about the NetApp assistant.]
+
 
 
 ==== Service account authentication
 
-The NetApp Console now supports service account authentication using either a system-generated client ID and secret or customer-managed JWTs, allowing organizations to select the approach that best fits their security requirements and integration workflows. Private Key JWT Client Authentication uses asymmetric cryptography, providing stronger security than traditional client ID and secret methods. WPrivate Key JWT Client Authentication uses asymmetric cryptography, keeping the private key secure in the customer’s environment, reducing credential theft risks, and improving the security of your automation stack and client applications. link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account[Learn how to add a service account.]
+The NetApp Console supports service account authentication using either a system-generated client ID and secret or customer-managed JWTs, allowing organizations to select the approach that best fits their security requirements and integration workflows. Private Key JWT Client Authentication uses asymmetric cryptography, providing stronger security than traditional client ID and secret methods. Private Key JWT Client Authentication uses asymmetric cryptography, keeping the private key secure in the customer’s environment, reducing credential theft risks, and improving the security of your automation stack and client applications. link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account[Learn how to add a service account.]
 
 ==== Session timeouts
 
@@ -46,10 +54,13 @@ The system logs out users after 24 hours or when they close their web browser.
 
 ==== Support for partnerships between organizations
 
-ou can now create partnerships in the NetApp Console that let partners securely manage NetApp resources across organizational boundaries, making collaboration easier and security stronger. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html[Learn how to manage partnerships].
+You can create partnerships in the NetApp Console that let partners securely manage NetApp resources across organizational boundaries, making collaboration easier and security stronger. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html[Learn how to manage partnerships].
 
 ==== Super admin and Super viewer roles
 Added the *Super admin* and *Super view* roles. *Super admin* grants full management access to Console features, storage, and data services. *Super viewer* provides read-only visibility for auditors and stakeholders. These roles are useful for smaller teams of senior members where broad access is common. For improved security and auditability, organizations are encouraged to use *Super admin* access sparingly and assign fine-grained roles where possible. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[Learn more about access roles.]
+
+==== Removed support chat
+NetApp has removed the support chat feature from the NetApp Console. Use the *Administration > Support* page to create and manage support cases.
 
 
 
