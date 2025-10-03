@@ -19,7 +19,7 @@ The NetApp Console offers multiple _deployment modes_ that enable you to meet yo
 *  _Restricted mode_ is available for organizations that have connectivity restrictions who want to install the NetApp Console in their own public cloud. Users access the Console through a web-based interface that's hosted on a Console agent in their cloud environment.
 
 +
-While NetApp Console inhibits the flow of traffic, communication, and data when using restricted mode, it's your responsibility to ensure that your environment (on-premises and in the cloud) is in compliance with the required regulations for your business.
+NetApp Console restricts traffic, communication, and data in restricted mode, and you must ensure your environment (on-premises and in the cloud) complies with required regulations.
 
 == Overview
 
@@ -124,7 +124,12 @@ Supported location for an agent::
 In standard mode, an agent is supported in the cloud or on your premises.
 
 Console agent installation::
-You can install an agent from the Console, AWS or Azure Marketplace, the Google Cloud SDK, or manually using an installer on a Linux host in your data center or cloud, or using a provided OVA in your VCenter environment.
+You can install an agent using one of the following methods:
+* From the Console
+* From the AWS or Azure Marketplace 
+* From the Google Cloud SDK
+* Manually using an installer on a Linux host in your data center or cloud
+* Use the provided OVA in your VCenter environment.
 
 Console agent upgrades::
 NetApp automatically upgrades your agent monthly.p.
@@ -172,7 +177,7 @@ Console agent installation::
 You can install from the AWS or Azure Marketplace or a manual installation on your own Linux host or us a downloadable OVA in your VCenter environment.
 
 Console agent upgrades::
-NetApp provides automated upgrades of an agent software with monthly updates.
+NetApp automatically upgrades your agent software with monthly updates.
 
 User interface access::
 The user interface is accessible from an agent virtual machine that's deployed in your cloud region.
@@ -228,15 +233,14 @@ Note the following:
 For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing are supported with BYOL.
 
 How to get started with restricted mode::
-You need to enable restricted mode when you create your NetApp COnsole account.
-+
-If you don't have an organization yet, you are prompted to create your organization and enable restricted mode when you log in to the Console for the first time from a Console agent that you manually installed or that you created from your cloud provider's marketplace.
-+
+You need to enable restricted mode when you create your NetApp Console organization.
 
-+
-Note that you can't change the restricted mode setting after you create the organization. You can't enable restricted mode later and you can't disable it later.
-+
-* link:task-quick-start-restricted-mode.html[Learn how to get started with restricted mode].
+If you don't have an organization yet, you are prompted to create your organization and enable restricted mode when you log in to the Console for the first time from a Console agent that you manually installed or that you created from your cloud provider's marketplace.
+
+
+NOTE: You cannot change the restricted mode setting after creating the organization.
+
+link:task-quick-start-restricted-mode.html[Learn how to get started with restricted mode].
 
 
 == Service and feature comparison

@@ -94,7 +94,7 @@ include::_include/networking.adoc[tag=ntp]
 You need to provide AWS permissions to the NetApp Console by using one of the following options:
 
 * Option 1: Create IAM policies and attach the policies to an IAM role that you can associate with the EC2 instance.
-* Option 2: Provode the COnsole with the AWS access key for an IAM user who has the required permissions.
+* Option 2: Provide the Console with the AWS access key for an IAM user who has the required permissions.
 
 Follow the steps to prepare permissions for the Console.
 

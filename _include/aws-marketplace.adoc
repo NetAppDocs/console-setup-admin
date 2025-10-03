@@ -1,10 +1,10 @@
 .Steps
 
-. Go to the https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui[NetApp Console Agent listing on the AWS Marketplace^]
+. Go to the https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui[NetApp Console agent listing on the AWS Marketplace^]
 
 . On the Marketplace page, select *Continue to Subscribe*.
 +
-image:screenshot-subscribe-aws-continue.png[A screenshot that shows the Continue to Subscribe and Continue to Configuration buttons on the AWS Marketplace.]
+//image:screenshot-subscribe-aws-continue.png[A screenshot that shows the Continue to Subscribe and Continue to Configuration buttons on the AWS Marketplace.]
 
 . To subscribe to the software, select *Accept Terms*.
 +
@@ -12,13 +12,13 @@ The subscription process can take a few minutes.
 
 . After the subscription process is complete, select *Continue to Configuration*.
 +
-image:screenshot-subscribe-aws-configuration.png[A screenshot that shows the Continue to Subscribe and Continue to Configuration buttons on the AWS Marketplace.]
+//image:screenshot-subscribe-aws-configuration.png[A screenshot that shows the Continue to Subscribe and Continue to Configuration buttons on the AWS Marketplace.]
 
 . On the *Configure this software* page, ensure that you've selected the correct region and then select *Continue to Launch*.
 
 . On the *Launch this software* page, under *Choose Action*, select *Launch through EC2* and then select *Launch*.
 +
-These steps describe how to launch the instance from the EC2 Console because the console enables you to attach an IAM role to the Console agent instance. This isn't possible using the *Launch from Website* action.
+Use the EC2 Console to launch the instance and attach an IAM role. This is not possible with the *Launch from Website* action.
 
 . Follow the prompts to configure and deploy the instance:
 

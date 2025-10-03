@@ -39,7 +39,7 @@ You should download the "online" agent installer that's meant for use in your ne
 . Assign permissions to run the script.
 +
 [source,cli]
-chmod +x Netapp-Console-Agent-<version>
+chmod +x NetApp-Console-Agent-<version>
 
 +
 Where <version> is the version of the Console agent that you downloaded.
@@ -47,14 +47,14 @@ Where <version> is the version of the Console agent that you downloaded.
 . Run the installation script.
 +
 [source,cli]
- ./BlueXP-Connector-Cloud-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+ ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 +
 You'll need to add proxy information if your network requires a proxy for internet access. You can add either a transparent or explicit proxy. The --proxy and --cacert parameters are optional and you won't be prompted to add them. If you have a proxy server, you will need to enter the parameters as shown. 
 +
 Here is an example configuring an explicit proxy server with a CA-signed certificate:
 +
 [source,cli]
- ./BlueXP-Connector-Cloud-v3.9.40--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+ ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 +
 --proxy configures the Console agent to use an HTTP or HTTPS proxy server using one of the following formats:
 +
@@ -84,7 +84,7 @@ Here is an example configuring a transparent proxy server. When you configure a 
 
 +
 [source,cli]
- ./BlueXP-Connector-Cloud-v3.9.40 --cacert /tmp/cacert/certificate.cer
+ ./NetApp-Console-Agent-v4.0.0 --cacert /tmp/cacert/certificate.cer
 
 . If you used Podman, you'll need to adjust the aardvark-dns port.
 .. SSH to the Console agent virtual machine.

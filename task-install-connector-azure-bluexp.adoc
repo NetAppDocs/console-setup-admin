@@ -250,7 +250,7 @@ include::_include/azure-set-up-service-principal.adoc[tag=app]
 
 . Click *Access control (IAM) > Add > Add role assignment*.
 
-. In the *Role* tab, select the *BlueXP Operator* role and click *Next*.
+. In the *Role* tab, select the *Console Operator* role and click *Next*.
 
 . In the *Members* tab, complete the following steps:
 

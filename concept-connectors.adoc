@@ -15,7 +15,7 @@ summary: A _Console agent_ is NetApp software running in your cloud network or o
 [.lead]
 A _Console agent_ runs in your cloud network or on-premises network. You use a Console agent to connect NetApp Console services to your storage environments.  
 
-== What you can do without a Console Agent
+== What you can do without a Console agent
 
 Some Console features and services are available if you don't deploy a Console agent:
 
@@ -29,7 +29,7 @@ Some actions require a Console agent or a NetApp Workloads link. https://docs.ne
 +
 You don't need a Console agent to manage Azure NetApp Files, but one is required to use NetApp Data Classification to scan Azure NetApp Files.
 
-* Google Cloud Netapp Volumes
+* Google Cloud NetApp Volumes
 
 * NetApp Copy and Sync
 
@@ -79,7 +79,7 @@ In standard mode, the Console requires a Console agent for:
 You always need a Console agent to use the Console in restricted mode.
 
 [[connectors-must-be-operational-at-all-times]]
-== Console Agents must be operational at all times
+== Console agents must be operational at all times
 
 Console agents are a fundamental part of the NetApp Console. It's your responsibility (the customer) to ensure that relevant agents are up, operational, and accessible at all times. The Console can handle short agent outages, but you must fix infrastructure failures quickly.
 

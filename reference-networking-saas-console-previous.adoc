@@ -99,7 +99,7 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 |===
 
 
-== Endpoints contacted by the Console Agent
+== Endpoints contacted by the Console agent
 You install the Console agent on-premises or in the cloud, and it contacts endpoints to complete Console-initiated actions.  
 
 Console agents need access to the same endpoints as the NetApp Console, plus additional endpoints if you deploy the agent in your cloud provider.

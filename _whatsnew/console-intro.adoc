@@ -8,13 +8,13 @@ The following lists the navigational and terminology changes in the NetApp Conso
 
 === Navigation menus
 
-The NetApp Console has moved most menu options to the left-navigation pane (instead of a top or tabbed approach) and reorganized some menus to help users more intuitively find what they need. Here are some of the key changes:
+The NetApp Console has moved most menu options to the left-navigation pane and reorganized menus for easier navigation.
 
 
 
 ==== Canvas is replaced by the Storage menu
 
-The Canvas has been intuitively renamed to the Systems page. View managed and discoverable systems from the *Storage > Management* menu. 
+NetApp renamed the Canvas to the Systems page. View managed and discoverable systems from the *Storage > Management* menu. 
 
 image:screenshot-storage-mgmt.png["A screenshot of the Management menu."]
 
@@ -22,7 +22,7 @@ image:screenshot-storage-mgmt.png["A screenshot of the Management menu."]
 
 The *Storage* menu includes the following: *Alerts* where you can view alerts from your on-premises ONTAP systems and *Lifecycle planning* (formerly *Economic efficiency*) where you can identify unused and underutilized resources.
 
-Keystone has also been moved to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
+NetApp has also moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
 
 ==== Administration menu
@@ -56,7 +56,7 @@ NetApp has renamed several elements, data services, and features to better refle
 
 * *Connectors* have been renamed *Console agents* to better reflect their role in both manageability and connectivity to data services. View, add, and manage your agents from the *Administration > Agents* menu.
 
-* The *Timeline* has been renamed to *Audit* to reflect its purpose of tracking user and system activities. View audit Console activity from the *Administration > Audit* menu.
+* NetApp has renamed the *Timeline* to *Audit* to reflect its purpose of tracking user and system activities. View audit Console activity from the *Administration > Audit* menu.
 
 * *Working environments* have been renamed to *Systems*. View, add, and manage your systems from the *Storage > Management* menu. 
 

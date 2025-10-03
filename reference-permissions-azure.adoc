@@ -38,7 +38,7 @@ You'll need to ensure that the role is up to date as new permissions are added i
 
 [source,json]
 {
-    "Name": "BlueXP Operator",
+    "Name": "Console Operator",
     "Actions": [
                     "Microsoft.Compute/disks/delete",
                     "Microsoft.Compute/disks/read",
@@ -169,7 +169,7 @@ You'll need to ensure that the role is up to date as new permissions are added i
     ],
     "NotActions": [],
     "AssignableScopes": [],
-    "Description": "BlueXP Permissions",
+    "Description": "Console Permissions",
     "IsCustom": "true"
 }
 

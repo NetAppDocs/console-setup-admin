@@ -36,7 +36,7 @@ You should download the "online" agent installer that's meant for use in your ne
 . Assign permissions to run the script.
 +
 [source,cli]
-chmod +x BlueXP-Connector-Cloud-<version>
+chmod +x NetApp-Console-Agent-<version>
 
 +
 Where <version> is the version of the agent that you downloaded.
@@ -44,14 +44,14 @@ Where <version> is the version of the agent that you downloaded.
 . Run the installation script.
 +
 [source,cli]
- ./BlueXP-Connector-Cloud-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+ ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 +
 The --proxy and --cacert parameters are optional. If you have a proxy server, you will need to enter the parameters as shown. The installer doesn't prompt you to provide information about a proxy.
 +
 Here's an example of the command using both optional parameters:
 +
 [source,cli]
- ./BlueXP-Connector-Cloud-v3.9.40--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+ ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 +
 --proxy configures the agent to use an HTTP or HTTPS proxy server using one of the following formats:
 +
