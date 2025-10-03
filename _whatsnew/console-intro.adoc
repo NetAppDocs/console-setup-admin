@@ -10,8 +10,6 @@ The following lists the navigational and terminology changes in the NetApp Conso
 
 The NetApp Console has moved most menu options to the left-navigation pane and reorganized menus for easier navigation.
 
-
-
 ==== Canvas is replaced by the Storage menu
 
 NetApp renamed the Canvas to the Systems page. View managed and discoverable systems from the *Storage > Management* menu. 
@@ -66,7 +64,7 @@ NetApp has renamed several elements, data services, and features to better refle
 
 * *BlueXP digital wallet* has been renamed to *Licenses and subscriptions* to reflect its purpose of managing your NetApp licenses and subscriptions.
 
-=== Select and manage Console agents
+==== Select and manage Console agents
 
 Access and manage your Console agents from the *Administration > Agents* menu. They way t-select a Console agent for the Systems page (formerly the Canvas) has also changed. An icon (image:icon-agent.png) has replaced the Connector menu name, allowing you to select the Console agent that you want to view systems for.
 
