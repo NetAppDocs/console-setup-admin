@@ -57,7 +57,10 @@ The system logs out users after 24 hours or when they close their web browser.
 You can create partnerships in the NetApp Console that let partners securely manage NetApp resources across organizational boundaries, making collaboration easier and security stronger. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html[Learn how to manage partnerships].
 
 === Super admin and Super viewer roles
-Added the *Super admin* and *Super view* roles. *Super admin* grants full management access to Console features, storage, and data services. *Super viewer* provides read-only visibility for auditors and stakeholders. These roles are useful for smaller teams of senior members where broad access is common. For improved security and auditability, organizations are encouraged to use *Super admin* access sparingly and assign fine-grained roles where possible. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[Learn more about access roles.]
+Added the *Super admin* and *Super viewer* roles. *Super admin* grants full management access to Console features, storage, and data services. *Super viewer* provides read-only visibility for auditors and stakeholders. These roles are useful for smaller teams of senior members where broad access is common. For improved security and auditability, organizations are encouraged to use *Super admin* access sparingly and assign fine-grained roles where possible. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[Learn more about access roles.]
+
+=== Additional role for Ransomware Resilience
+Added the  *Ransomware Resilience user behavior admin* role and the *Ransomware Resilience user behavior viewer* role. These roles allow users to configure and view user behavior and analytics data, respectively. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[Learn more about access roles.]
 
 === Removed support chat
 NetApp has removed the support chat feature from the NetApp Console. Use the *Administration > Support* page to create and manage support cases.
