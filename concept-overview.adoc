@@ -100,7 +100,7 @@ Extend your on-premises ONTAP storage to the cloud.
 NetApp Volume Caching::
 Create a writable cache volume to speed up access to data or offload traffic from heavily accessed volumes.
 
-Netapp Workloads::
+NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP.
 
 https://www.netapp.com/bluexp/[Learn more about the NetApp Console and the available data services^]
@@ -142,7 +142,7 @@ link:concept-connectors.html[Learn more about Console agents].
 
 === Deployment modes
 
-Netapp offers two deployment modes for the NetApp Console: _Standard mode_ uses a software as a service (SaaS) layer for full functionality, while _restricted mode_ limits outbound connectivity.
+NetApp offers two deployment modes for the NetApp Console: _Standard mode_ uses a software as a service (SaaS) layer for full functionality, while _restricted mode_ limits outbound connectivity.
 
 NetApp continues to offer BlueXP for sites that need no outbound connectivity. BlueXP is available in private mode only. link:task-quick-start-private-mode.html[Learn about BlueXP (private mode) for sites with no internet connectivity.]
 
