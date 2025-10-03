@@ -38,7 +38,7 @@ NetApp Console administration includes the following new features:
 The NetApp Console's Home page dashboard provides real-time visibility into storage infrastructure with metrics for health, capacity, license status, and data services. link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html[Learn more about the Home page.]
 
 === NetApp assistant
-The NetApp Console Assistant guides first-time administrative users through tasks like deploying agents, discovering clusters, and adding licenses. This onboarding assistant reduces setup time and reduces configuration errors, enabling you to quickly realize value from NetApp Console.
+New users with the Organization admin role can use the NetApp assistant to configure the Console, including adding an agent, linking a NetApp Support account, and adding a storage system.
 link:https://docs.netapp.com/us-en/console-setup-admin/task-console-assistant.html[Learn about the NetApp assistant.]
 
 

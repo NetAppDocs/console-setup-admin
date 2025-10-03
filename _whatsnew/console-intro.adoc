@@ -42,13 +42,6 @@ The *Governance* menu includes *Data Classification* where you can manage data c
 
 
 
-=== Home page dashboard
-
-The NetApp Console adds a home page that includes a dashboard view of your enterprise storage. link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html[Learn more about the NetApp Console home page.]
-
-=== NetApp assistant
-New users with the Organization admin role can use the NetApp assistant to configure the Console, including adding an agent, linking a NetApp Support account, and adding a storage system.
-
 === More intuitive naming of elements, data services, and features
 
 NetApp renamed several elements, data services, and features to clarify their purpose. Key changes include:
