@@ -12,9 +12,9 @@ The NetApp Console has moved most menu options to the left-navigation pane and r
 
 ==== Canvas is replaced by the Storage menu
 
-NetApp renamed the Canvas to the Systems page. View managed and discoverable systems from the *Storage > Management* menu. 
+NetApp renamed the Canvas to the *Systems* page. Navigate to the *System* page from the *Storage > Management* menu. 
 
-image:screenshot-storage-mgmt.png["A screenshot of the Management menu."]
+image:screenshot-storage-mgmt.png["A screenshot of the systems page."]
 
 ==== Expanded Storage menu
 
@@ -27,8 +27,7 @@ image:screenshot-storage-menu.png["A screenshot of the Storage menu."]
 
 ==== Administration menu
 
-
-Administer the NetApp Console from a centralized *Administration* menu where you can find features related to administrating the NetApp Console, managing support cases, as well as viewing licenses and subscriptions (formerly digital wallet). 
+Use the centralized *Administration* menu to manage the NetApp Console, support cases, licenses, and subscriptions (previously called digital wallet).
 
 image:screenshot-admin-menu.png["A screenshot of the Administration menu."]
 
@@ -48,7 +47,7 @@ The *Governance* menu includes *Data Classification* where you can manage data c
 The NetApp Console adds a home page that includes a dashboard view of your enterprise storage. link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html[Learn more about the NetApp Console home page.]
 
 === NetApp assistant
-Customers new to the NetApp Console can use the NetApp assistant to help them get started. The assistant guides users with the Org admin role through configuring the NetApp Console, including adding an agent, associating a NetApp Support account, adding a storage system, and more.
+New users with the Organization admin role can use the NetApp assistant to configure the Console, including adding an agent, linking a NetApp Support account, and adding a storage system.
 
 === More intuitive naming of elements, data services, and features
 
@@ -62,13 +61,13 @@ NetApp has renamed several elements, data services, and features to better refle
 
 * *BlueXP Ransomware protection* has been renamed to *NetApp Ransomware Resilience*. Ransomware Resilience helps you protect your data and recover quickly from a ransomware attack.
 
-* *BlueXP economic efficiency* has been renamed *Lifecycle planning*. Lifecycle planning helps you optimize your storage costs by identifying unused and underutilized resources.
+* **BlueXP Economic Efficiency* has been renamed *Lifecycle Planning*. Lifecycle Planning helps you optimize your storage costs by identifying unused and underutilized resources.
 
 * *BlueXP digital wallet* has been renamed to *Licenses and subscriptions* to reflect its purpose of managing your NetApp licenses and subscriptions.
 
 ==== Select and manage Console agents
 
-Access and manage your Console agents from the *Administration > Agents* menu. They way t-select a Console agent for the Systems page (formerly the Canvas) has also changed. An icon (image:icon-agent.png) has replaced the Connector menu name, allowing you to select the Console agent that you want to view systems for.
+Access and manage your Console agents from the *Administration > Agents* menu. NetApp has changed how to select a Console agent for the *Systems* page (formerly the Canvas). NetApp has replaced the Connector menu name with an icon image:icon-agent.png["agent icon"], allowing you to select the Console agent that you want to view systems for.
 
 image:screenshot-agent-icon-menu.png["A screenshot that shows the icon to select a Console agent."]
 
