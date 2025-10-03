@@ -22,6 +22,8 @@ The *Storage* menu includes the following: *Alerts* where you can view alerts fr
 
 NetApp has also moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
+image:screenshot-storage-menu.png["A screenshot of the Storage menu."]
+
 
 ==== Administration menu
 
