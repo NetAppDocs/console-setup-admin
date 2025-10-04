@@ -69,9 +69,11 @@ a| NetApp Ransomware Resilience.
 
 Ransomware Resilience helps you protect your data and recover quickly from a ransomware attack.
 | BlueXP Economic Efficiency 
-a| Lifecycle Planning. 
+a| Lifecycle planning. 
 
-Lifecycle Planning helps you optimize your storage costs by identifying unused and underutilized resources.
+Lifecycle planning helps you optimize your storage costs by identifying unused and underutilized resources.
+
+Access Lifecycle planning from the *Storage > Lifecycle planning* menu.
 | BlueXP digital wallet 
 a| Licenses and subscriptions 
 
