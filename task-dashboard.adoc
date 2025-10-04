@@ -15,9 +15,11 @@ summary: Within the NetApp Console, you can view metrics on the Home page.
 [.lead]
 Monitoring the health of your storage estate ensures that you are aware of issues with storage protection and can take steps to resolve them. Using the NetApp Console Home page, view a status of your backups and restores from NetApp Backup and Recovery and the number of workloads that are at risk for a ransomware attack or protected as indicated by NetApp Ransomware Resilience. You can review the storage capacity for individual clusters and Cloud Volumes ONTAP, ONTAP alerts, storage performance capacity per cluster or Cloud Volumes ONTAP system, the different types of licenses you have, and more.
 
-All panes on the Home page show data at the organization level. The Storage capacity and Storage performance panes show only those systems based on the projects the user can view based on the user's Identity and Management (IAM) permissions. 
+All panes on the Home page show data at the organization level. The Storage capacity and Storage performance panes show systems associated with projects that the user can access based on IAM permissions.
 
-The system refreshes the data on the Home page every five minutes. The data on this page may differ from real values for up to 15 minutes due to performance optimization caching.
+The system refreshes the data on the Home page every five minutes. Caching may cause the data on this page to differ from real values for up to 15 minutes.
+
+NOTE: Accurate metrics on the Home page require appropriately sized and configured Console agents.
 
 == Required NetApp Console roles
 
@@ -39,7 +41,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.
 
 . From the NetApp Console menu, select *Home*.
 +
-If you are have the Organization admin role and are accessing the Home page for the first time without an agent or discovered storage systems, the page displays getting started information. 
+If you have the Organization admin role and no agent or storage systems are set up, the Home page displays getting started information.
 +
 image:screenshot-home-greenfield.png[NetApp Console Home page welcoming new users]
 + 
@@ -61,7 +63,7 @@ You can see metrics on the Home page when the following conditions are met:
 To enable metrics to appear on the Home page, complete the following tasks: 
 
 * Enable at least one Console agent. 
-* Add at least one cluster or one Cloud Volumes ONTAP on that agent.  
+* Add at least one cluster or one Cloud Volumes ONTAP using that agent.  
 
 == View the overall storage capacity
 
@@ -73,7 +75,7 @@ The Storage capacity pane provides the following information across ONTAP cluste
 
 The order of the clusters or Cloud Volumes ONTAP systems is based on the amount of capacity used. The cluster or system with the highest capacity appears first for easy identification.
 
-The system displays warning indicators next to clusters that reach 80% capacity. The data updates every five minutes. 
+Warning indicators show for clusters at 80% capacity, with data updating every five minutes.
 
 
 
@@ -110,7 +112,7 @@ You can see ONTAP alerts for these impact areas:
 * Security
 
 
-TIP: The data on this pane may differ from actual values for up to 15 minutes because the cache optimizes performance.
+TIP: Caching optimizes performance, but may cause the data on this pane to differ from actual values for up to 15 minutes.
 
 *Systems supported*
 
@@ -138,9 +140,9 @@ For a list of alerts that you might see, refer to https://docs.netapp.com/us-en/
 
 Review the storage performance capacity used per cluster or Cloud Volumes ONTAP system to determine how performance capacity, latency, and IOPS are impacting your workloads. For example, you might find that you need to shift workloads to minimize latency and maximize IOPS and throughput for your critical workloads.
 
-The system orders the clusters and systems based on the amount of performance capacity used. The cluster or system with the highest capacity appears first for easy identification.
+The system arranges clusters and systems by performance capacity, listing the highest capacity first for easy identification.
 
-TIP: The data on this pane may differ from actual values for up to 15 minutes because the cache optimizes performance.
+TIP: Caching optimizes performance, but may cause the data on this pane to differ from actual values for up to 15 minutes.
 
 .Steps
 
@@ -163,7 +165,7 @@ Review the following information on the Licenses and subscriptions pane:
 
 The data refreshes every 5 minutes.
 
-TIP: The data on this pane may differ from actual values for up to 15 minutes because the cache optimizes performance.
+TIP: Caching optimizes performance, but may cause the data on this pane to differ from actual values for up to 15 minutes.
 
 .Steps
 
@@ -175,7 +177,7 @@ TIP: The data on this pane may differ from actual values for up to 15 minutes be
 
 == View Ransomware Resilience status
 
-Determine how workloads are at risk for a ransomware attack or protected using NetApp Ransomware Resilience data service. You can review the total amount of data that is protected, view the number of recommended actions, and view the number of alerts related to ransomware protection. 
+Find out if workloads are at risk of ransomware attacks or protected with the NetApp Ransomware Resilience data service. You can review the total amount of data that is protected, view the number of recommended actions, and view the number of alerts related to ransomware protection. 
 
 
 The data refreshes every 5 minutes and matches the data shown in the NetApp Ransomware Resilience Dashboard.
@@ -198,11 +200,11 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-pr
 
 == View Backup and Recovery status
 
-Review the overall status of your backups and restores from NetApp Backup and Recovery. You can see the number of protected and unprotected resources. You can also see the percentage of backups and restore operations for protection of your workloads. The higher the percentage, the better your data protection.
+Review the overall status of your backups and restores from NetApp Backup and Recovery. You can see the number of protected and unprotected resources. You can also see the percentage of backups and restore operations for protection of your workloads. A higher percentage indicates improved data protection.
 
 The data refreshes every 5 minutes.
 
-TIP: The data on this pane might differ from real values for a maximum of 15 minutes because the data is cached for that duration to optimize performance.
+TIP: Caching optimizes performance, but may cause the data on this pane to differ from actual values for up to 15 minutes.
 
 .Steps
 . From the NetApp Console menu, review the Backup and Recovery pane.
