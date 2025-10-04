@@ -96,13 +96,9 @@ The following is a list of roles in the data service category. Each role grants 
 
  Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. Classification does not have a viewer role.
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| View workload data, view alert data, download Recovery data, and download reports in Ransomware Resilience. 
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| Manage actions on the Protect, Alerts, Recover, Settings, and Reports.
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| View workload data, view alert data, download recovery data, and download reports.
-
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin]| Configure user behavior and analytics data.
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer]| View user behavior and analytics data.
-
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer] | View suspicious user behavior alerts and insights in Ransomware Resilience. 
 | SnapCenter admin | Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
 
 * Complete any action from Backup and Recovery > Applications
