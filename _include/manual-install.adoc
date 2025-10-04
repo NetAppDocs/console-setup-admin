@@ -39,22 +39,24 @@ You should download the "online" agent installer that's meant for use in your ne
 . Assign permissions to run the script.
 +
 [source,cli]
-chmod +x Netapp_Console_Agent_Cloud_<version>
+chmod +x NetApp_Console_Agent_Cloud_<version>
 
 +
 Where <version> is the version of the Console agent that you downloaded.
 
+. If installing in a Government Cloud environment, disable the configuration checks. link:task-troubleshoot-connector.html#disable-config-check[Learn how to disable configuration checks for manual installations.]
+
 . Run the installation script.
 +
 [source,cli]
- ./Netapp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+ ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 +
 You'll need to add proxy information if your network requires a proxy for internet access. You can add either a transparent or explicit proxy. The --proxy and --cacert parameters are optional and you won't be prompted to add them. If you have a proxy server, you will need to enter the parameters as shown. 
 +
 Here is an example configuring an explicit proxy server with a CA-signed certificate:
 +
 [source,cli]
- ./Netapp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+ ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 +
 `--proxy` configures the Console agent to use an HTTP or HTTPS proxy server using one of the following formats:
 +
@@ -84,7 +86,7 @@ Here is an example configuring a transparent proxy server. When you configure a 
 
 +
 [source,cli]
- ./Netapp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+ ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
 
 . If you used Podman, you'll need to adjust the aardvark-dns port.
 .. SSH to the Console agent virtual machine.
@@ -109,6 +111,8 @@ Esc:wq
 . Wait for the installation to complete.
 +
 At the end of the installation, the Console agent service (occm) restarts twice if you specified a proxy server.
+
+NOTE: If the installation fails, you can view the installation report and logs to help you fix the issues. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
 
 

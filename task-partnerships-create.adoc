@@ -5,7 +5,7 @@ keywords: partner organizations, create partnership, MSPs, service provider acce
 summary: Create partnerships to establish secure, managed connections between your organization and trusted partners for collaborative NetApp resource management.
 ---
 
-= Manage organization partnerships in NetApp Console
+= Manage partnerships in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,7 +15,7 @@ summary: Create partnerships to establish secure, managed connections between yo
 [.lead]
 Create partnerships to establish secure, managed connections between your organization and trusted partners for collaborative NetApp resource management.
 
-Organization partnerships let you securely manage NetApp resources across boundaries with role-driven relationships in the Console. The initiating organization grants access to its resources, while the accepting organization provides the users or service accounts to be granted access. Partnerships are established through a self-service workflow, giving the initiating organization full control over which resources are shared, what roles are assigned, and the ability to onboard, manage, or revoke partner access as needed.
+Partnerships let you securely manage NetApp resources across boundaries with role-driven relationships in the Console. The initiating organization grants access to its resources, while the accepting organization provides the users or service accounts to be granted access. Partnerships are established through a self-service workflow, giving the initiating organization full control over which resources are shared, what roles are assigned, and the ability to onboard, manage, or revoke partner access as needed.
 
 
 .Required roles

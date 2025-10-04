@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: concept-org-partnerships.html
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP
-summary: Creating organization partnerships in the NetApp Console lets organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
+summary: Creating partnerships between organizations in the NetApp Console lets organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
 ---
 
-= Organization partnerships in NetApp Console
+= Partnerships in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,12 +15,12 @@ summary: Creating organization partnerships in the NetApp Console lets organizat
 
 
 [.lead]
-Creating organization partnerships in the NetApp Console lets organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
+Creating partnerships between organizations the NetApp Console lets partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
 
 .Required roles
 Partnership admin link:reference-iam-predefined-roles.html[Learn more about access roles.]
 
-Organization partnerships allow secure management of NetApp resources across organizations using role-driven relationships in the Console. The initiating organization grants access to its resources, while the accepting organization provides the users or service accounts to be granted access. Partnerships are established through a self-service workflow, giving the initiating organization full control over which resources are shared, what roles are assigned, and the ability to onboard, manage, or revoke partner access as needed.
+Partnerships allow secure management of NetApp resources across organizations using role-driven relationships in the Console. The initiating organization grants access to its resources, while the accepting organization provides the users or service accounts to be granted access. Partnerships are established through a self-service workflow, giving the initiating organization full control over which resources are shared, what roles are assigned, and the ability to onboard, manage, or revoke partner access as needed.
 
 Customers can authorize MSPs or resellers to manage NetApp environments without requiring complicated setups. Customers can control which clusters partners can access and what roles they have, and can revoke access at any time to maintain security and compliance.
 

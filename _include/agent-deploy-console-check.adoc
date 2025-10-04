@@ -4,7 +4,6 @@
 +
 [NOTE:] 
 ====
- If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the check box. NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
+If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the check box to skip the validation check. 
 
- Be sure to verify that the only error is related to the previous endpoints. If there are other errors, you'll need to resolve them before proceeding.
 ====

@@ -4,15 +4,15 @@ Go to the Azure portal and assign the Azure custom role to the Console agent vir
 
 . From the Azure Portal, open the *Subscriptions* service and select your subscription.
 +
-It's important to assign the role from the *Subscriptions* service because this specifies the scope of the role assignment at the subscription level. The _scope_ defines the set of resources that the access applies to. If you specify a scope at a different level (for example, at the virtual machine level), your ability to complete actions from within BlueXP will be affected.
+It's important to assign the role from the *Subscriptions* service because this specifies the scope of the role assignment at the subscription level. The _scope_ defines the set of resources that the access applies to. If you specify a scope at a different level (for example, at the virtual machine level), your ability to complete actions from within the NetApp Console will be affected.
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview[Microsoft Azure documentation: Understand scope for Azure RBAC^]
 
 . Select *Access control (IAM)* > *Add* > *Add role assignment*.
 
-. In the *Role* tab, select the *BlueXP Operator* role and select *Next*.
+. In the *Role* tab, select the *Console Operator* role and select *Next*.
 +
-NOTE: BlueXP Operator is the default name provided in the policy. If you chose a different name for the role, then select that name instead.
+NOTE: Console Operator is the default name provided in the policy. If you chose a different name for the role, then select that name instead.
 
 . In the *Members* tab, complete the following steps:
 

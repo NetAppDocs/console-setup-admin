@@ -15,29 +15,27 @@ summary: A _Console agent_ is NetApp software running in your cloud network or o
 [.lead]
 A _Console agent_ runs in your cloud network or on-premises network. You use a Console agent to connect NetApp Console services to your storage environments.  
 
-== What you can do without a Console Agent
+== What you can do without a Console agent
 
-You can use the Console without creating a Console agent.
-
-The following Console features and services are available if you don't deploy a Console agent:
+Some Console features and services are available if you don't deploy a Console agent:
 
 * Amazon FSx for NetApp ONTAP
 +
 Some actions require a Console agent or a NetApp Workloads link. https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html[Learn which actions require a Console agent or link^]
 
-* Automation catalog
+* Automation hub
 
 * Azure NetApp Files
 +
 You don't need a Console agent to manage Azure NetApp Files, but one is required to use NetApp Data Classification to scan Azure NetApp Files.
 
-* Google Cloud Netapp Volumes
+* Google Cloud NetApp Volumes
 
 * NetApp Copy and Sync
 
 * Digital advisor
 
-* Digital wallet (licenses only, subscription monitoring requires a Console agent)
+* Monitor license usage, subscription monitoring requires a Console agent
 +
 You can usually add a license to the NetApp Console without a Console agent.
 +
@@ -45,7 +43,7 @@ An agent is required to add Cloud Volumes ONTAP _node-based_ licenses because th
 
 * Direct discovery of on-premises ONTAP clusters
 +
-You don't need a Console agent to discover an on-premises ONTAP cluster, but one is required for additional Console features and data services.
+You don't need a Console agent to add an on-premises ONTAP cluster to the Console, but one is required for additional Console features and data services.
 +
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html[Learn more about discovery and management options for on-premises ONTAP clusters^]
 
@@ -81,7 +79,7 @@ In standard mode, the Console requires a Console agent for:
 You always need a Console agent to use the Console in restricted mode.
 
 [[connectors-must-be-operational-at-all-times]]
-== Console Agents must be operational at all times
+== Console agents must be operational at all times
 
 Console agents are a fundamental part of the NetApp Console. It's your responsibility (the customer) to ensure that relevant agents are up, operational, and accessible at all times. The Console can handle short agent outages, but you must fix infrastructure failures quickly.
 
@@ -117,14 +115,14 @@ link:concept-modes.html[Learn about NetApp Console deployment modes].
 [[connector-installation]]
 == How to install a Console agent
 
-You can install a Console agent directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host. How you get started depends on whether you're using the Console in standard mode or restricted mode.
+You can install a Console agent directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host or in your VCenter environment. How you get started depends on whether you're using the Console in standard mode or restricted mode.
 
 * link:concept-modes.html[Learn about NetApp Console deployment modes]
 * link:task-quick-start-standard-mode.html[Get started with NetApp Console in standard mode]
 * link:task-quick-start-restricted-mode.html[Get started with NetApp Console in restricted mode]
 
 
-== Permissions
+== Cloud Permissions
 
 You need specific permissions to create the Console agent directly from the NetApp Console and another set of permissions for the Console agent instance itself. If you create the Console agent in AWS or Azure directly from the Console, then the Console creates the Console agent with the permissions that it needs.
 

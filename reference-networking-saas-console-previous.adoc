@@ -28,8 +28,18 @@ Review link:reference-networking-saas-console.html[supported endpoints for 4.0.0
 .Steps
 
 . Whitelist the endpoints in link:reference-networking-saas-console.html[Supported endpoints for 4.0.0 and higher].
-. Restart all Console agents so they can use the new endpoints. NetApp recommends doing this during a planned maintenance window.
-. Verifying that the Console agents are working properly. link:task-troubleshoot-connector.html#check-agent-status[Learn how to check agent status].
+. Restart the service manager 2 service on each agent by running the following command:
+
++
+[source,cli]
+systemctl restart netapp-service-manager.service
+
+. Run the following command and verify that the agent's status shows as _active(running)_:
+_
++
+[source,cli]
+systemctl status netapp-service-manager.service
+
 . Remove the old endpoints from your allow list.
 
 
@@ -89,7 +99,7 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 |===
 
 
-== Endpoints contacted by the Console Agent
+== Endpoints contacted by the Console agent
 You install the Console agent on-premises or in the cloud, and it contacts endpoints to complete Console-initiated actions.  
 
 Console agents need access to the same endpoints as the NetApp Console, plus additional endpoints if you deploy the agent in your cloud provider.

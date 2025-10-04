@@ -16,7 +16,7 @@ summary: NetApp Console identity and access management includes predefined roles
 Identity and access management (IAM) in the NetApp Console provides predefined roles that you can assign to the members of your organization across different levels of your resource hierarchy. Before you assign these roles, you should understand the permissions that each role includes. Roles fall into the following categories: platform, application, and data service.
 
 
-[#platform-roles]
+[[platform-roles]]
 == Platform roles
 Platform roles grant NetApp Console administration permissions, including role assignment and user management. The Console has several platform roles. 
 
@@ -27,29 +27,29 @@ Platform roles grant NetApp Console administration permissions, including role a
 | Responsibilities
 
 
-| link:reference-iam-platform-roles.html[Organization admin] | Allows a user unrestricted access to all projects and folders within an organization, add members to any project or folder, as well as perform any task and use any data service that does not have an explicit role associated with it. 
+| link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin] | Allows a user unrestricted access to all projects and folders within an organization, add members to any project or folder, as well as perform any task and use any data service that does not have an explicit role associated with it. 
 
 Users with this role manage your organization by creating folders and projects, assigning roles, adding users, and managing systems if they have the proper credentials.
 
 This is the only access role that can create Console agents.
 
 
-| link:reference-iam-platform-roles.html[Folder or project admin]|	Allows a user unrestricted access to assigned projects and folders. Can add members to folders or projects they manage, as well as perform any  task and use any data service or application on resources within the folder or project they are assigned. 
+| link:reference-iam-platform-roles.html#organization-admin-roles[Folder or project admin]|	Allows a user unrestricted access to assigned projects and folders. Can add members to folders or projects they manage, as well as perform any  task and use any data service or application on resources within the folder or project they are assigned. 
 
 Folder or project admins cannot create Console agents.
 | link:reference-iam-platform-roles.html#federation-roles[Federation admin]|	Allows a user to create and manage federations with the Console, which enables single-sign on (SSO). 
-| link:reference-iam-platform-roles.html#federation-roles[Federation viewer]|	Allows a user to view existing federations with the Console. Cannot create or manage federations
-| link:reference-iam-platform-roles.html[Partnership admin]|	Allows a user to create and manage organization partnerships.
-| link:reference-iam-platform-roles.html[Partnership viewer]|	Allows a user to view existing organization partnerships. Cannot create or manage partnerships.
-| link:reference-iam-platform-roles.html[Super admin]| 
-| link:reference-iam-platform-roles.html[Super viewer]|	
+| link:reference-iam-platform-roles.html#federation-roles[Federation viewer]|	Allows a user to view existing federations with the Console. Cannot create or manage federations.
+| link:reference-iam-platform-roles.html#partnership-roles[Partnership admin]|	Allows a user to create and manage partnerships.
+| link:reference-iam-platform-roles.html#partnership-roles[Partnership viewer]|	Allows a user to view existing partnerships. Cannot create or manage partnerships.
+| link:reference-iam-platform-roles.html#super-admin-roles[Super admin]| Gives the user a subset of admin roles. This role is designed for smaller organizations that may not need to distribute Console responsibilities across multiple users. 
+| link:reference-iam-platform-roles.html#super-admin-roles[Super viewer]|	Gives the user a subset viewer roles. This role is designed for smaller organizations that may not need to distribute Console responsibilities across multiple users.
 
 
 
 |===
 
 
-[#application-roles]
+[[application-roles]]
 == Application roles
 The following is a list of roles in the application category. Each role grants specific permissions within its designated scope. Users without the required application or platform role cannot access the respective application.
 
@@ -72,7 +72,7 @@ The following is a list of roles in the application category. Each role grants s
 
 
 
-[#data-service-roles]
+[[data-service-roles]]
 == Data service roles
 The following is a list of roles in the data service category. Each role grants specific permissions within its designated scope. Users who do not have the required data service role or a platform role will be unable to access the data service.
 
@@ -83,15 +83,15 @@ The following is a list of roles in the data service category. Each role grants 
 | Data service role
 | Responsibilities
 
-| link:reference-iam-backup-rec-roles.html[Backup and recovery super admin] | Perform any actions in NetApp Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery admin] | Perform backups to local snapshots, replicate to secondary storage, and back up to object storage.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery restore admin] | Restore workloads in the Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery clone admin] | Clone applications and data in the Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and recovery viewer] | View Backup and recovery information.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery admin] | Perform any actions in NetApp Disaster Recovery service.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery failover admin] | Perform failover and migrations.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery application admin] | Create replication plans, change replication plans, and start test failovers.
-| link:reference-iam-disaster-rec-roles.html[Disaster recovery viewer] | View information only.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery super admin] | Perform any actions in NetApp Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery admin] | Perform backups to local snapshots, replicate to secondary storage, and back up to object storage.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery restore admin] | Restore workloads in the Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery clone admin] | Clone applications and data in the Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery viewer] | View Backup and Recovery information.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery admin] | Perform any actions in NetApp Disaster Recovery service.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery failover admin] | Perform failover and migrations.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery application admin] | Create replication plans, change replication plans, and start test failovers.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery viewer] | View information only.
 | Classification viewer | Allows users to view NetApp Data Classification scan results.
 
  Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. Classification does not have a viewer role.

@@ -25,7 +25,7 @@ Before you install a Console agent, you should ensure you have a host machine th
 
 === Review Console agent host requirements
 
-Run the Console agent on a host that meets operating system, RAM, and port requirements. Ensure that your host meets these requirements before you install the Console agent.
+Run the Console agent on a x86 host that meets operating system, RAM, and port requirements. Ensure that your host meets these requirements before you install the Console agent.
 
 include::_include/os-reqs.adoc[tag=manual-uid-range]
 
@@ -36,7 +36,6 @@ include::_include/os-reqs.adoc[tag=hypervisor]
 include::_include/os-reqs.adoc[tag=os]
 
 
-include::_include/os-reqs.adoc[tag=disk-space]
 
 
 [[network-access-agent]]
@@ -130,7 +129,7 @@ include::_include/networking.adoc[tag=ports]
 include::_include/networking.adoc[tag=ntp]
 
 [[agent-permission-aws-azure]]
-== Create Console agent cloud permissions for AWS or Azure
+=== Create Console agent cloud permissions for AWS or Azure
 
 If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider and then you add the credentials to the Console agent after you install it.
 
@@ -213,13 +212,7 @@ include::_include/manual-install.adoc[tag=about]
 include::_include/manual-install.adoc[tag=main-steps]
 
 
-=== Access the report and logs from the Console agent host
 
-If the installation fails, you can access the validation report in JSON format and the configuration logs directly from the Console agent host in the following directories:
-
-include::_include/validate-agent-host.adoc[]
-
-include:_include/endpoints-config-check-note.adoc[]
 
 .What’s next?
 
@@ -285,7 +278,7 @@ include::_include/azure-provide-permissions-service-principal.adoc[]
 
 .Result
 
-THe Console agent now has the permissions that it needs to perform actions in Azure on your behalf. You can now go to the https://console.netapp.com[NetApp Console^] to start using the Console agent.
+The Console agent now has the permissions that it needs to perform actions in Azure on your behalf. You can now go to the https://console.netapp.com[NetApp Console^] to start using the Console agent.
 --
 
 ====

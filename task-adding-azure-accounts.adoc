@@ -30,7 +30,7 @@ The Console enables you to choose the Azure credentials and Azure subscription i
 
 .About this task
 
-A managed identity is link:concept-accounts-azure.html[the initial Azure account] when you deploy a Console agent from the Console. When you deploy the Console agent, the Console assigns the BlueXP Operator role to the Console agent virtual machine.
+A managed identity is link:concept-accounts-azure.html[the initial Azure account] when you deploy a Console agent from the Console. When you deploy the Console agent, the Console assigns the Console Operator role to the Console agent virtual machine.
 
 .Steps
 
@@ -42,9 +42,9 @@ A managed identity is link:concept-accounts-azure.html[the initial Azure account
 
 .. Select *Add* > *Add role assignment* and then add the permissions:
 
-* Select the *BlueXP Operator* role.
+* Select the *Console Operator* role.
 +
-NOTE: BlueXP Operator is the default name provided in a Console agent policy. If you chose a different name for the role, then select that name instead.
+NOTE: Console Operator is the default name provided in a Console agent policy. If you chose a different name for the role, then select that name instead.
 
 * Assign access to a *Virtual Machine*.
 
@@ -104,7 +104,7 @@ include::_include/azure-set-up-service-principal.adoc[tag=app]
 
 ==== Assign the application to a role
 
-You must bind the service principal to one or more Azure subscriptions and assign it the custom "BlueXP Operator" role so the Console has permissions in Azure.
+You must bind the service principal to one or more Azure subscriptions and assign it the custom "Console Operator" role so the Console has permissions in Azure.
 
 .Steps
 

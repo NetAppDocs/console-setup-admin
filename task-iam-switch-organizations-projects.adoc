@@ -46,8 +46,6 @@ NOTE: You can't switch to another project while you are viewing any of the *Iden
 .Steps
 
 . In the top header of the Console, select *Project*.
-+
-image:screenshot-iam-switch-projects.png[A screenshot of the top banner where you can select the Scope drop-down and then select another project.]
 
 . Browse through the folders and projects in your organization, select the project that you want, and then select *Switch*.
 +

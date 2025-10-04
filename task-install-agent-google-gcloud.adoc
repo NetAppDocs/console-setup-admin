@@ -5,7 +5,7 @@ keywords: install connector, google cloud connector installation, google cloud c
 summary: To create a Console agent in Google Cloud by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
 ---
 
-= Create a Console agent in Google Cloud from Google Cloud
+= Create a Console agent from Google Cloud
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,6 +14,7 @@ summary: To create a Console agent in Google Cloud by using Google Cloud, you ne
 
 [.lead]
 To create a Console agent in Google Cloud by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
+
 .Before you begin
 
 * You should have a link:concept-connectors.html[understanding of Console agents].

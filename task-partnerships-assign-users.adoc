@@ -16,12 +16,12 @@ summary: You can add users to a partnership by adding them to the partner organi
 You can add users to a partnership by adding them to the partner organization. After you add users, the partner organization is responsible for assigning them roles for particular resources in their organization.
 
 .Required roles
-The *Partnership admin* role is required to make create and manage partnerships. The *Partnership* viewer can view the Partnerships page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+The *Partnership admin* role is required to make create and manage partnerships. The *Partnership viewer* can view the Partnerships page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
 
 You can remove users from a partnership at any time. Removing a user from a partnership immediately revokes their access to any resources in partner organization.
 
 == Add members to a partnership
-When you add members to a partnership, the Partnership admin of the partner organization must assign them roles for particular resources in their organization before they can access those resources.
+When you add members to a partnership, the *Partnership admin*  of the partner organization must assign them roles for particular resources in their organization before they can access those resources.
 
 After you add members to a partnership, the members display as members in the partner organization where the partner can assign them to resources.
 

@@ -29,6 +29,10 @@ sidebar:
               url: /concept-connectors.html
             - title: Deployment modes
               url: /concept-modes.html
+        - title: Get started with the NetApp assistant
+          entries:
+            - title: Use the NetApp assistant
+              url: /task-console-assistant.html
         - title: Get started with standard mode
           entries:
             - title: Getting started workflow
@@ -99,6 +103,8 @@ sidebar:
       entries:
         - title: Log in to NetApp Console
           url: /task-logging-in.html
+        - title: View metrics on the NetApp Console Home page
+          url: /task-dashboard.html
         - title: Manage your NetApp Console user settings
           url: /task-user-settings.html
     - title: Administer NetApp Console
@@ -271,5 +277,5 @@ sidebar:
     - title: Legal notices
       url: /legal-notices.html
 product-family:
-  name: Netapp Console
-  repo: bluexp-family
+  name: NetApp Console
+  repo: console-family

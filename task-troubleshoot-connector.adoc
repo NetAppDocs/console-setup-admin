@@ -41,7 +41,7 @@ a|
 * Verify that the agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access endpoints.]
 
 a|Unable to load agent settings
-a|This message displays when you try to access the Agent settings page.
+a|The Console displays this message when you try to access the Agent settings page..
 a|
 * Check if the OCCM container is running and working.
 * If the issue persists, contact support.
@@ -73,10 +73,22 @@ Docker (for Ubuntu and VCenter deployments)::
 [source,cli]
 docker ps -a
 
-Podman:: 
+Podman (for RedHat Enterprise Linux deployments):: 
 +
 [source,cli]
 podman ps -a
+
+
+== View the Console agent version
+
+View the Console agent version to confirm the upgrade or share it with your NetApp representative.
+
+.Steps
+
+
+. Select *Administration > Support > Agents*.
++
+The Console displays the version at the top of the page.
 
 
 == Verify network access
@@ -86,33 +98,78 @@ Ensure that the Console agent has the network access it needs. link:reference-ne
 [[troubleshoot-installation]]
 == Console agent installation issues
 
-If the installation fails, you can view a report and logs to help you fix the issues.
+If the installation fails, view the report and logs to resolve the issues.
 
 
 include::_include/validate-agent-host.adoc[]
 
 include::_include/endpoints-config-check-note.adoc[]
 
+[[disable-config-check]]
+=== Disable configuration checks for manual installations
+There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example:
+
+* When manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fails.
+
+* You may also want to disable these checks if you are continuing to use the previous endpoint list for agent upgrades. 
+
+.Steps
+
+You disable the configuration check by setting the _skipConfigCheck_ flag in the _com/opt/application/netapp/service-manager-2/config.json_ file. By default, this flag is set to false and the configuration check verifies outbound access for the agent. Set this flag to true to disable the check. You should be familiar with JSON syntax before completing this step. 
+
+To re-enable the configuration check, use these steps and set the _skipConfigCheck_ flag to false.
+
+.Steps
+
+. Access the Console agent host as root or with sudo privileges.
+
+. Create a backup copy of the _/opt/application/netapp/service-manager-2/config.json_ file to ensure you can revert your changes. 
+
+. Stop the service manager 2 service by running the following command:
+
+[source,cli]
+systemctl stop netapp-service-manager.service
+
+. Edit the _/opt/application/netapp/service-manager-2/config.json_ file and change the value of the _skipConfigCheck_ flag to true.
++
+[source,json]
+
+  "skipConfigCheck": true,
+
+
+
+. Save your file.
+
+. Restart the service manager 2 service by running the following command:
+
++
+[source,cli]
+systemctl restart netapp-service-manager.service
+
+
+
 
 === Failed installation on the endpoints used for upgrades
-If the verification report includes ONLY a failure to contact the following endpoints:
+If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the *Validation agent configuration* check box or skip the configuration check when installing into a VCenter.
 
+NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoints].
+
+Be sure to verify that the only error is related to the previous endpoints:
+
+ 
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io 
 
-You can run the installer again and uncheck the *Validate agent configuration* check box on the *Review* page. The Console agent will install without validating the endpoints.
-
-* For new agent deployments, NetApp checks for the following endpoints, link:reference-networking-saas-console.html[listed here^]. This configuration check fails with an error if you are using the previous endpoints used for upgrades,  link:reference-networking-saas-console-previous.html[listed here^]. NetApp recommends updating your firewall rules to allow access to the current endpoints and block access to the previous endpoints at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your networking].
+If there are other errors, you'll need to resolve them before proceeding.
 
 
-include::_include/endpoints-config-check-note.adoc[]
+
 
 
 
 == Work with NetApp Support
 If you haven't been able to resolve the issues with your Console agent, you may want to contact NetApp Support. NetApp support may ask for the Console agent ID or for you to send the Console agent logs to them if they don't have them already.
 
-include::_include/endpoints-config-check-note.adoc[]
 
 === Find the Console agent ID 
 
@@ -130,17 +187,6 @@ You can find the system ID at the top of the page.
 image:screenshot-system-id.png[A screenshot that shows the System ID that appears in the Support Dashboard.]
 
 . Hover and click on the ID to copy it.
-
-=== View the Console agent version
-
-You can view the version of your Console agent to verify that the agent automatically upgraded to the latest release or because you need to share it with your NetApp representative.
-
-.Steps
-
-
-. Select *Administration > Support > Agents*.
-+
-The version displays at the top of the page.
 
 === Download or send an AutoSupport message
 

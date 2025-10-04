@@ -20,7 +20,29 @@ Partnership admin. link:reference-iam-predefined-roles.html[Learn more about acc
 
 A partner organization must first add members to the partnership before you can assign them roles for resources in your organization. link:task-partnerships-assign-users.html[Learn how to add members to a partnership.]
 
-You can manage roles for members of partner organizations in the same way that you do for your own. However, not all roles are available to partnership users. Specifically, you can only grant data services roles to partnership users. link:reference-iam-predefined-roles.html[Learn more about predefined roles and the roles that are available to partnership users.]
+== Understand roles for partnership users
+
+You can manage roles for members of partner organizations in the same way that you do for your own. However, not all roles are available to partnership users. In particular, you can't grant partner users a role that allows software updates. Updating ONTAP software generally requires direct network access.
+
+You can assign following roles to partner users:
+
+* link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin]
+* link:reference-iam-platform-roles.html#organization-admin-roles[Folder or project admin]
+* link:reference-iam-platform-roles.html#federation-roles[Federation admin]
+* link:reference-iam-platform-roles.html#federation-roles[Federation viewer]
+* link:reference-iam-backup-rec-roles.html[Backup and recovery admin]
+* link:reference-iam-backup-rec-roles.html[Backup viewer]
+* link:reference-iam-backup-rec-roles.html[Restore admin]
+* link:reference-iam-backup-rec-roles.html[Clone admin]   
+* link:reference-iam-disaster-rec-roles.html[Disaster recovery admin]
+* link:reference-iam-disaster-rec-roles.html[Disaster recovery failover admin]
+* link:reference-iam-disaster-rec-roles.html[Disaster recovery application admin]
+* link:reference-iam-disaster-rec-roles.html[Disaster recovery viewer]
+* link:reference-iam-storage-roles.html[Operations support analyst]
+* link:reference-iam-predefined-roles.html[Classification viewer]
+
+
+link:reference-iam-predefined-roles.html[Learn more about predefined roles]
 
 
 

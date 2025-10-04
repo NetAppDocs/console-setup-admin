@@ -27,7 +27,9 @@ Within the same organization, one user is assigned the *Federation admin* role t
 The following tables indicate the actions that each Console platform role can perform.
 
 
-[organization-admin-roles]
+
+
+[[organization-admin-roles]]
 == Organization administration roles 
 [cols="2,1,1",options="header"]
 |===
@@ -51,7 +53,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 | Associate agents with folders and projects  | Yes | No
 
-| Remove agents from a folders and projects  | Yes | No
+| Remove agents from folders and projects  | Yes | No
 
 | Manage agents (edit certificates, settings, and so on)  | Yes | No
 
@@ -59,11 +61,11 @@ The following tables indicate the actions that each Console platform role can pe
 | Create, manage, and view federations | Yes | No
 | Register for support and submit cases through the Console | Yes |	Yes 
 | Use data services that are not associated with an explicit access role | Yes | Yes 
-| View the the Audit page and notifications | Yes |	Yes 
+| View the Audit page and notifications | Yes |	Yes 
 
 |===
 
-[federation-roles]
+[[federation-roles]]
 == Federation roles
 [cols="2,1,1",options="header"]
 |===
@@ -87,7 +89,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 |===
 
-[partnership-roles]
+[[partnership-roles]]
 == Partnership roles
 
 [cols="2,1,1",options="header"]
@@ -99,7 +101,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 
 | Can create a partnership | Yes | No
-| Create add roles to partner members | Yes | No 
+| Assign roles to partner members | Yes | No 
 
 | Can add members to a partnership |	Yes | No
 
@@ -108,20 +110,46 @@ The following tables indicate the actions that each Console platform role can pe
 
 |===
 
-== Super roles
 
-[cols="2,1,1",options="header"]
+[[super-admin-roles]]
+== Super admin and viewer roles 
+
+The *Super admin* role provides full access to manage Console features, storage, and data services. This role suits those overseeing administration and governance. In contrast, the *Super viewer* role offers read-only access, ideal for auditors or stakeholders who need visibility without making changes.
+
+Organizations should use *Super admin* access sparingly to minimize security risks and align with the principle of least privilege. Most organizations should assign fine-grained roles with only the necessary permissions to reduce risk and improve auditability.
+
+
+.Example for super roles
+ABC Corporation has a small team of five that leverages the NetApp Console for data services and storage management. Instead of distributing multiple roles, they assign the *Super admin* role to two senior team members who handle all administrative tasks, including user management and resource configuration. The remaining three team members are assigned the *Super viewer* role, allowing them to monitor storage health and data service status without the ability to modify settings.
+
+
+
+[cols="2,1",options="header"]
 |===
+| Role | Inherited roles
 
-| Task
-| Super admin
-| Super viewer
+a| Super admin
+a| * Organization admin  
+* Folder or project admin 
+* Federation admin 
+* Partnership admin 
+* Ransomware Resilience admin 
+* Disaster recovery admin 
+* Backup super admin 
+* Storage admin 
+* Keystone admin 
+* Google Cloud NetApp Volumes admin
 
-
-| Can perform all admin role actions | Yes | No
-| Can perform all viewer role actions| Yes | Yes
-
-
+a| Super viewer
+a|
+* Organization viewer
+* Federation viewer
+* Partnership viewer
+* Ransomware Resilience viewer
+* Disaster recovery viewer
+* Backup viewer
+* Storage viewer
+* Keystone viewer
+* Google Cloud NetApp Volumes viewer
 
 |===
-

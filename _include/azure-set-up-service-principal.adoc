@@ -56,7 +56,7 @@ image:screenshot_azure_shell_upload.png[A screenshot of the Azure Cloud Shell wh
 [source,azurecli]
 az role definition create --role-definition Connector_Policy.json
 +
-You should now have a custom role called BlueXP Operator that you can assign to the Console agent virtual machine.
+You should now have a custom role called Console Operator that you can assign to the Console agent virtual machine.
 
 . Assign the application to the role:
 
@@ -66,7 +66,7 @@ You should now have a custom role called BlueXP Operator that you can assign to 
 
 .. Select *Access control (IAM) > Add > Add role assignment*.
 
-.. In the *Role* tab, select the *BlueXP Operator* role and select *Next*.
+.. In the *Role* tab, select the *Console Operator* role and select *Next*.
 
 .. In the *Members* tab, complete the following steps:
 

@@ -30,7 +30,7 @@ Console services and features:
 
 * Digital advisor
 * Software updates
-* Economic efficiency
+* Lifecycle planning
 * Sustainability
 
 
