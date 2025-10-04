@@ -19,9 +19,6 @@ Learn what's new with NetApp Console administration features: identity and acces
 
 // tag::whats-new[]
 
-== Introducing NetApp Console
-
-include::_whatsnew/console-intro.adoc[]
 
 == 6 October 2025
 
@@ -35,19 +32,21 @@ include::_whatsnew/2025-08-11.adoc[]
 
 include::_whatsnew/2025-07-31.adoc[]
 
+// end::whats-new[]
+
 == 21 July 2025
 include::_whatsnew/2025-07-21.adoc[]
 
 == 14 July 2025
 include::_whatsnew/2025-07-14.adoc[]
 
-// end::whats-new[]
+
 
 == 9 June 2025
 
 include::_whatsnew/2025-06-09.adoc[]
 
-// end::whats-new[]
+
 
 == 29 May 2025
 
