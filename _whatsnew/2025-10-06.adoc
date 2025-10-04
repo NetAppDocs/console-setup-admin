@@ -41,11 +41,15 @@ image:screenshot-admin-menu.png[A screenshot of the Administration menu.]
 
 ==== Health menu
 
-A reimagined *Health* menu includes *Software updates* where you can manage ONTAP software updates, *Sustainability* where you can monitor your environmental impact, and *Digital Advisor* where you can get proactive recommendations to optimize your storage environment.
+An efficient *Health* menu includes *Software updates* where you can manage ONTAP software updates, *Sustainability* where you can monitor your environmental impact, and *Digital Advisor* where you can get proactive recommendations to optimize your storage environment.
+
+image:screenshot-health-menu.png[A screenshot of the health menu.]
 
 ==== Governance menu
 
 The *Governance* menu includes *Data Classification* where you can manage data classification and compliance and the *Automation hub* where you can create and manage automation workflows.
+
+image:screenshot-governance-menu.png[A screenshot of the Governance menu.]
 
 
 
