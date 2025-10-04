@@ -22,7 +22,7 @@ NetApp moved most menu options to the left-navigation pane and reorganized menus
 
 NetApp renamed the Canvas to the *Systems* page. Navigate to the *System* page from the *Storage > Management* menu. 
 
-image:screenshot-storage-mgmt.png[A screenshot of the systems page.]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png[A screenshot of the systems page.]
 
 ==== Expanded Storage menu
 
@@ -30,7 +30,7 @@ The *Storage* menu also includes *Alerts* to view ONTAP system alerts and *Lifec
 
 NetApp has also moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
-image:screenshot-storage-menu.png[A screenshot of the Storage menu.]
+image:https://docs.netapp.com/us-en/console-setup-admin_console/screenshot-storage-menu.png[A screenshot of the Storage menu.]
 
 
 ==== Administration menu
