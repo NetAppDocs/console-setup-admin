@@ -1,3 +1,12 @@
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+
+
+
 
 BlueXP is now NetApp Console.
 
@@ -6,7 +15,7 @@ The NetApp Console, built on the enhanced and restructured BlueXP foundation, pr
 The following lists the navigational and terminology changes in the NetApp Console. For a complete list of features in this 6 October 2025 release, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#10-06-2025[What's new in NetApp Console].
 
 
-=== Navigation menus
+=== Navigation menus and pages
 
 NetApp moved most menu options to the left-navigation pane and reorganized menus for easier navigation in the NetApp Console.
 
@@ -14,7 +23,7 @@ NetApp moved most menu options to the left-navigation pane and reorganized menus
 
 NetApp renamed the Canvas to the *Systems* page. Navigate to the *System* page from the *Storage > Management* menu. 
 
-image:screenshot-storage-mgmt.png["A screenshot of the systems page."]
+image:screenshot-storage-mgmt.png[A screenshot of the systems page.]
 
 ==== Expanded Storage menu
 
@@ -22,14 +31,14 @@ The *Storage* menu also includes *Alerts* to view ONTAP system alerts and *Lifec
 
 NetApp has also moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
-image:screenshot-storage-menu.png["A screenshot of the Storage menu."]
+image:screenshot-storage-menu.png[A screenshot of the Storage menu.]
 
 
 ==== Administration menu
 
 Use the centralized *Administration* menu to manage the NetApp Console, support cases, licenses, and subscriptions (previously called digital wallet).
 
-image:screenshot-admin-menu.png["A screenshot of the Administration menu."]
+image:screenshot-admin-menu.png[A screenshot of the Administration menu.]
 
 ==== Health menu
 
@@ -90,7 +99,7 @@ Access your licenses and subscriptions from the *Administration > Licenses and s
 
 Access and manage your Console agents from the *Administration > Agents* menu. NetApp has changed how to select a Console agent for the *Systems* page (formerly the Canvas). NetApp has replaced the Connector menu name with an icon image:icon-agent.png["agent icon"], allowing you to select the Console agent that you want to view systems for.
 
-image:screenshot-agent-icon-menu.png["A screenshot that shows the icon to select a Console agent."]
+image:screenshot-agent-icon-menu.png[A screenshot that shows the icon to select a Console agent.]
 
 You can also manage your agents from the *Administration > Agents* menu.
 
