@@ -1,8 +1,4 @@
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ../media/
+
 
 
 == BlueXP is now NetApp Console
