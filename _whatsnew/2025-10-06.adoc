@@ -96,13 +96,15 @@ Access your licenses and subscriptions from the *Administration > Licenses and s
 
 |===
 
-
+https://review.docs.netapp.com/us-en/console-setup-admin_console-release/media/screenshot-storage-mgmt.png
 
 ==== Select and manage Console agents
 
 Access and manage your Console agents from the *Administration > Agents* menu. NetApp has changed how to select a Console agent for the *Systems* page (formerly the Canvas). NetApp has replaced the Connector menu name with an icon image:icon-agent.png["agent icon"], allowing you to select the Console agent that you want to view systems for.
 
-image:screenshot-agent-icon-menu.png[A screenshot that shows the icon to select a Console agent.]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png[A screenshot that shows the icon to select a Console agent.]
+
+
 
 You can also manage your agents from the *Administration > Agents* menu.
 
