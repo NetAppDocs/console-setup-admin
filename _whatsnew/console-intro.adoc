@@ -15,7 +15,7 @@ The NetApp Console, built on the enhanced and restructured BlueXP foundation, pr
 The following lists the navigational and terminology changes in the NetApp Console. For a complete list of features in this 6 October 2025 release, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#10-06-2025[What's new in NetApp Console].
 
 
-=== Navigation menus
+=== Navigation menus and pages
 
 NetApp moved most menu options to the left-navigation pane and reorganized menus for easier navigation in the NetApp Console.
 
