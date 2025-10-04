@@ -53,11 +53,11 @@ NetApp renamed several elements, data services, and features to clarify their pu
 | *NetApp Console name*
 
 | Connectors | Console agents. View, add, and manage your agents from the *Administration > Agents* menu.
-| *Timeline* page | *Audit* page  View audit Console activity from the *Administration > Audit* menu.
+| Timeline page | Audit page  View audit Console activity from the *Administration > Audit* menu.
 | Working environments| Systems  View, add, and manage your systems from the *Storage > Management* menu. 
-| *BlueXP Ransomware protection*| *NetApp Ransomware Resilience*. Ransomware Resilience helps you protect your data and recover quickly from a ransomware attack.
-| *BlueXP Economic Efficiency* | *Lifecycle Planning*. Lifecycle Planning helps you optimize your storage costs by identifying unused and underutilized resources.
-| *BlueXP digital wallet* | *Licenses and subscriptions* to reflect its purpose of managing your NetApp licenses and subscriptions. Access your licenses and subscriptions from the *Administration > Licenses and subscriptions* menu.
+| BlueXP Ransomware protection | NetApp Ransomware Resilience. Ransomware Resilience helps you protect your data and recover quickly from a ransomware attack.
+| BlueXP Economic Efficiency | Lifecycle Planning. Lifecycle Planning helps you optimize your storage costs by identifying unused and underutilized resources.
+| BlueXP digital wallet | Licenses and subscriptions to reflect its purpose of managing your NetApp licenses and subscriptions. Access your licenses and subscriptions from the *Administration > Licenses and subscriptions* menu.
 
 
 
