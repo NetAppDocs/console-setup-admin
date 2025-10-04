@@ -45,17 +45,25 @@ The *Governance* menu includes *Data Classification* where you can manage data c
 
 NetApp renamed several elements, data services, and features to clarify their purpose. Key changes include:
 
-* *Connectors* have been renamed *Console agents* to better reflect their role in both manageability and connectivity to data services. View, add, and manage your agents from the *Administration > Agents* menu.
 
-* NetApp has renamed the *Timeline* to *Audit* to reflect its purpose of tracking user and system activities. View audit Console activity from the *Administration > Audit* menu.
+[cols="1,2",options="header",cols="10,24"]
+|===
 
-* *Working environments* have been renamed to *Systems*. View, add, and manage your systems from the *Storage > Management* menu. 
+| *Previous name*
+| *NetApp Console name*
 
-* *BlueXP Ransomware protection* has been renamed to *NetApp Ransomware Resilience*. Ransomware Resilience helps you protect your data and recover quickly from a ransomware attack.
+| Connectors | Console agents. View, add, and manage your agents from the *Administration > Agents* menu.
+| *Timeline* page | *Audit* page  View audit Console activity from the *Administration > Audit* menu.
+| Working environments| Systems  View, add, and manage your systems from the *Storage > Management* menu. 
+| *BlueXP Ransomware protection*| *NetApp Ransomware Resilience*. Ransomware Resilience helps you protect your data and recover quickly from a ransomware attack.
+| *BlueXP Economic Efficiency* | *Lifecycle Planning*. Lifecycle Planning helps you optimize your storage costs by identifying unused and underutilized resources.
+| *BlueXP digital wallet* | *Licenses and subscriptions* to reflect its purpose of managing your NetApp licenses and subscriptions. Access your licenses and subscriptions from the *Administration > Licenses and subscriptions* menu.
 
-* **BlueXP Economic Efficiency* has been renamed *Lifecycle Planning*. Lifecycle Planning helps you optimize your storage costs by identifying unused and underutilized resources.
 
-* *BlueXP digital wallet* has been renamed to *Licenses and subscriptions* to reflect its purpose of managing your NetApp licenses and subscriptions.
+
+|===
+
+
 
 ==== Select and manage Console agents
 
