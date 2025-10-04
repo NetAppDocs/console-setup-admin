@@ -93,7 +93,7 @@ Access your licenses and subscriptions from the *Administration > Licenses and s
 |===
 
 
-==== Select and manage Console agents
+=== Console agents
 
 Access and manage your Console agents from the *Administration > Agents* menu. NetApp has changed how to select a Console agent for the *Systems* page (formerly the Canvas). NetApp has replaced the Connector menu name with an icon image:icon-agent.png["agent icon"], allowing you to select the Console agent that you want to view systems for.
 
