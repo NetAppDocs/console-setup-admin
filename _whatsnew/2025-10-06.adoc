@@ -5,13 +5,7 @@
 
 The NetApp Console, built on the enhanced and restructured BlueXP foundation, provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration, that is highly secure and compliant.
 
-For a complete list of the navigational and terminology changes in the new NetApp Console, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#console-intro[What's new in NetApp Console].
 
-BlueXP is now NetApp Console.
-
-The NetApp Console, built on the enhanced and restructured BlueXP foundation, provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration, that is highly secure and compliant.
-
-The following lists the navigational and terminology changes in the NetApp Console. For a complete list of features in this 6 October 2025 release, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#10-06-2025[What's new in NetApp Console].
 
 
 === Navigation menus and pages
@@ -30,26 +24,28 @@ The *Storage* menu also includes *Alerts* to view ONTAP system alerts and *Lifec
 
 NetApp has also moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
-image:https://docs.netapp.com/us-en/console-setup-admin_console/screenshot-storage-menu.png[A screenshot of the Storage menu.]
+image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png[A screenshot of the Storage menu.]
 
 
 ==== Administration menu
 
 Use the centralized *Administration* menu to manage the NetApp Console, support cases, licenses, and subscriptions (previously called digital wallet).
 
-image:screenshot-admin-menu.png[A screenshot of the Administration menu.]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-menu.png[A screenshot of the Administration menu.]
+
+
 
 ==== Health menu
 
 An efficient *Health* menu includes *Software updates* where you can manage ONTAP software updates, *Sustainability* where you can monitor your environmental impact, and *Digital Advisor* where you can get proactive recommendations to optimize your storage environment.
 
-image:screenshot-health-menu.png[A screenshot of the health menu.]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-health-menu.png[A screenshot of the health menu.]
 
 ==== Governance menu
 
 The *Governance* menu includes *Data Classification* where you can manage data classification and compliance and the *Automation hub* where you can create and manage automation workflows.
 
-image:screenshot-governance-menu.png[A screenshot of the Governance menu.]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-governance-menu.png[A screenshot of the Governance menu.]
 
 
 
@@ -96,13 +92,12 @@ Access your licenses and subscriptions from the *Administration > Licenses and s
 
 |===
 
-https://review.docs.netapp.com/us-en/console-setup-admin_console-release/media/screenshot-storage-mgmt.png
 
 ==== Select and manage Console agents
 
 Access and manage your Console agents from the *Administration > Agents* menu. NetApp has changed how to select a Console agent for the *Systems* page (formerly the Canvas). NetApp has replaced the Connector menu name with an icon image:icon-agent.png["agent icon"], allowing you to select the Console agent that you want to view systems for.
 
-image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png[A screenshot that shows the icon to select a Console agent.]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-icon-menu.png[A screenshot that shows the icon to select a Console agent.]
 
 
 
