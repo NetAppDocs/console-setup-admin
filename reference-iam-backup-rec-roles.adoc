@@ -17,11 +17,11 @@ You can assign the following roles to users to provide them access to NetApp Bac
 
 The service uses the following roles that are specific to NetApp Backup and Recovery. 
 
-* *Backup and recovery super admin*: Perform any actions in NetApp Backup and Recovery.
+* *Backup and Recovery super admin*: Perform any actions in NetApp Backup and Recovery.
 * *Backup and Recovery Backup admin*: Perform backups to local snapshots, replicate to secondary storage, and back up to object storage actions in NetApp Backup and Recovery. 
 * *Backup and Recovery Restore admin*: Restore workloads using NetApp Backup and Recovery. 
 * *Backup and Recovery Clone admin*: Clone applications and data using NetApp Backup and Recovery. 
-* *Backup and recovery viewer*: View information in NetApp Backup and Recovery, but not perform any actions.
+* *Backup and Recovery viewer*: View information in NetApp Backup and Recovery, but not perform any actions.
 
 For details about all NetApp Console access roles, see https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[the Console setup and administration documentation^].
 
@@ -32,7 +32,7 @@ The following table indicates the actions that each NetApp Backup and Recovery r
 [cols=6*,options="header",cols="20,20,15,15a,15a,15a",width="100%"]
 |===
 | Feature and action
-| Backup and recovery super admin
+| Backup and Recovery super admin
 | Backup and Recovery backup admin
 | Backup and Recovery restore admin
 | Backup and Recovery clone admin
@@ -84,16 +84,16 @@ The following table indicates the actions that each NetApp Backup and Recovery r
 |===
 
 == Roles used for workload-specific actions
-The following table indicates the actions that each NetApp backup and recovery role can perform for specific workloads.
+The following table indicates the actions that each NetApp Backup and Recovery role can perform for specific workloads.
 
 === Kubernetes workloads
-This table indicates the actions that each NetApp backup and recovery role can perform for actions specific to Kubernetes workloads.
+This table indicates the actions that each NetApp Backup and Recovery role can perform for actions specific to Kubernetes workloads.
 
 
 [cols=5*,options="header",cols="20,20,15,15a,15a",width="100%"]
 |===
 | Feature and action
-| Backup and recovery super admin
+| Backup and Recovery super admin
 | Backup and Recovery backup admin
 | Backup and Recovery restore admin
 // | Backup and Recovery clone admin
