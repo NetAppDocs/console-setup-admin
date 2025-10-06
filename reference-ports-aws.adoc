@@ -1,0 +1,76 @@
+---
+sidebar: sidebar
+permalink: reference-ports-aws.html
+keywords: ports, security group, http, https, inbound, outbound
+summary: The AWS security group for the Console agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. You need to set up this security group for all other installation options.
+---
+
+= Console agent security group rules in AWS
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The AWS security group for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. You need to set up this security group for all other installation options.
+
+== Inbound rules
+
+[cols="10,10,80",width=100%,options="header"]
+|===
+
+| Protocol
+| Port
+| Purpose
+
+| SSH | 22 | Provides SSH access to the agent host
+| HTTP | 80 a| 
+* Provides HTTP access from client web browsers to the local user interface
+* Used during the Cloud Volumes ONTAP upgrade process
+| HTTPS | 443 | Provides HTTPS access to the local user interface and connections from the NetApp Data Classification instance
+| TCP | 3128 | Provides Cloud Volumes ONTAP with internet access. You must manually open this port after deployment. 
+
+|===
+
+== Outbound rules
+
+The predefined security group for the agent opens all outbound traffic. If that is acceptable, follow the basic outbound rules. If you need more rigid rules, use the advanced outbound rules.
+
+=== Basic outbound rules
+
+The predefined security group for the agent includes the following outbound rules.
+
+[cols=3*,options="header",width=70%,cols="20,20,60"]
+|===
+
+| Protocol
+| Port
+| Purpose
+
+| All TCP | All | All outbound traffic
+| All UDP | All | All outbound traffic
+
+|===
+
+=== Advanced outbound rules
+
+If you need rigid rules for outbound traffic, you can use the following information to open only those ports that are required for outbound communication by the agent
+
+NOTE: The source IP address is the agent host.
+
+[cols=5*,options="header,autowidth"]
+|===
+
+| Service
+| Protocol
+| Port
+| Destination
+| Purpose
+
+| API calls and AutoSupport | HTTPS | 443 | Outbound internet and ONTAP cluster management LIF | API calls to AWS, to ONTAP, to NetApp Data Classification, and sending AutoSupport messages to NetApp
+.2+| API calls | TCP | 3000 | ONTAP HA mediator | Communication with the ONTAP HA mediator
+| TCP | 8080 | Data Classification | Probe to Data Classification instance during deployment
+| DNS | UDP	| 53 | DNS | Used for DNS resolve by the Console
+
+|===

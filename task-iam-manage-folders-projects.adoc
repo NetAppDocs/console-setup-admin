@@ -1,0 +1,153 @@
+---
+sidebar: sidebar
+permalink: task-iam-manage-folders-projects.html
+keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id
+summary: within the NetApp Console, use identity and access management enables you to represent a complete resource hierarchy using folders and projects.
+---
+
+= Organize your NetApp Console resources with folders and projects
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Within the NetApp Console, you organize your NetApp resources using projects and folders. A _project_ represents a workspace in the Console that organization members access to manage _resources_ (for example, a Cloud Volumes ONTAP system). A _folder_ groups related projects together. After you organize your resources into folders and projects, you can grant granular access to resources by providing organization members with permissions to specific folders and projects.
+
+== Add a folder or project
+
+When you create your organization, it includes a single project. Add projects to manage resources and folders to group related projects.
+
+Your organization's resource hierarchy can have up to seven levels, with folders nested six levels deep and projects at the seventh.
+
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Organization*.
+
+. From the *Organization* page, select *Add folder or project*.
+
+. Select *Folder* or *Project*.
+
+. Provide details about the folder or project:
++
+* *Name and location*: Enter a name and choose a location in the hierarchy for the folder or project. A folder or project can be directly under the organization or inside a folder.
+* *Resources*: Select the resources that you want to associate with this folder or project.
++
+You can select resources associated with the parent folder or project.
++
+link:concept-identity-and-access-management.html#associate-resource-folder[Learn when to associate a resource with a folder].
+* *Access*: View the members who will have access to the folder or project based on the existing permissions already defined in your resource hierarchy.
++
+Select *Add a member* to assign access and a role to additional members.A role defines the permissions that members have for the folder or project.
++
+link:reference-iam-predefined-roles.html[Learn about access roles].
+
+. Select *Add*.
+
+
+
+== Rename a folder or project
+
+If needed, you can change the name of your folders and projects.
+
+.Steps
+
+. From the *Organization* page, navigate to a project or folder in the table, select image:icon-action.png["An icon with three dots"] and then select *Edit folder* or *Edit project*.
+
+. On the *Edit* page, enter a new name and select *Apply*.
+
+
+== Delete a folder or project
+
+Delete folders and projects you no longer need.
+
+.Before you begin
+
+* Ensure the folder or project has no associated resources. <<modify-resources,Learn how to disassociate resources>>.
+
+* Make sure the folder or project has no associated resources.
+
+.Steps
+
+. From the *Organization* page, navigate to a project or folder in the table, select image:icon-action.png["An icon with three dots"] and then select *Delete*.
+
+. Confirm that you want to delete the folder or project.
+
+[#view-associated-resources-members]
+== View the resources associated with a folder or project
+View which resources and members are associated with a folder or project.
+
+.Steps
+
+. From the *Organization* page, navigate to a project or folder in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Edit folder* or *Edit project*.
++
+image:screenshot-iam-edit-project.png[A screenshot of the Organization page that shows the Edit project option when selecting the action menu for a project in the table.]
+
+. On the *Edit* page, you can view details about the selected folder or project by expanding the *Resources* or *Access* sections.
++
+* Select *Resources* to view the associated resources. In the table, the *Status* column identifies the resources that are associated with the folder or project. 
++
+image:screenshot-iam-allocated-resources.png[A screenshot of the Edit project page that shows the available resources that you can associate or disassociate with the project.]
+
+[#modify-resources]
+== Modify the resources associated with a folder or project
+
+Members with permissions for a folder or project can access its associated resources.
+
+.Before you begin
+
+link:concept-identity-and-access-management.html#associate-resource-folder[Learn when to associate a resource with a folder].
+
+.Steps
+
+. From the *Organization* page, navigate to a project or folder in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Edit folder* or *Edit project*.
+
+. On the *Edit* page, select *Resources*.
++
+In the table, the *Status* column identifies the resources that are associated with the folder or project.
+
+. Select the resources that you'd like to associate or disassociate.
+
+. Depending on the resources that you selected, select either *Associate with the project* or *Disassociate from the project*.
++
+image:screenshot-iam-associate-resources.png[A screenshot of the Edit project page that shows the Associate resources option that is available after you select resources that aren't currently associated.]
+
+. Select *Apply*
+
+== View members associated with a folder or project
+
+* Select *Access* to view the members who have access to the folder or project.
++
+image:screenshot-iam-member-access.png[A screenshot of the Edit project page that shows the members who have access to the project.]
+
+[#modify-members]
+== Modify member access to a folder or project
+
+Modify member access to ensure the right members can access the associated resources.
+
+Member access provided at a higher hierarchy level cannot be changed at lower levels. Update member permissions at the higher hierarchy level to change access. Alternatively, you can link:task-iam-manage-roles.html#manage-permissions[manage permissions from the Members page].
+
+link:concept-identity-and-access-management.html#role-inheritance[Learn more about role inheritance]. 
+
+.Steps
+
+. From the *Organization* page, navigate to a project or folder in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Edit folder* or *Edit project*.
+
+. On the *Edit* page, select *Access* to view the list of members who have access to the selected folder or project.
+
+. Modify member access:
+* *Add a member*: Select the member that you'd like to add to the folder or project and assign them a role.
+* *Change a member's role*: For any members with a role other than Organization Admin, select their existing role and then choose a new role.
+* *Remove member access*: For members who have a role defined at the folder or project for which you're viewing, you can remove their access.
+
+. Select *Apply*.
+
+== Related information
+
+* link:concept-identity-and-access-management.html[Learn about identity and access in NetApp Console]
+* link:task-iam-get-started.html[Get started with identity and access]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the identity and access API]

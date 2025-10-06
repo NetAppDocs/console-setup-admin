@@ -1,0 +1,230 @@
+---
+sidebar: sidebar
+permalink: task-troubleshoot-connector.html
+keywords: troubleshoot, system id, system ID, autosupport, asup, troubleshoot connector, download failure, cloud volumes ontap download failure, agent
+summary: To troubleshoot issues with a Console agent, you can work with NetApp Support who might ask for your system ID, agent version, or the latest AutoSupport messages. You can also view the NetApp Knowledge Base to troubleshoot issues yourself.
+---
+
+= Troubleshoot the Console agent
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+To troubleshoot issues with a Console agent, you can verify issues yourself or work with NetApp Support who might ask for your system ID, agent version, or the latest AutoSupport messages. 
+
+If you have a NetApp Support Site account, you can also view the link:https://kb.netapp.com/Cloud/BlueXP[NetApp Knowledge Base.]
+
+== Common error messages and resolutions
+
+The table lists common error messages and their resolution suggestions:
+
+[options="header",cols="19,27,27"]
+|===
+| Error message | Explanation | What to do
+
+a|Unable to load the Console agent UI
+a|Agent installation has failed
+a|
+* Verify that the Service Manager service is active.
+* Verify that all containers are running.
+* Ensure your firewall allows access to the service at port 8888.
+* If the issue persists, contact support.
+
+a|Cannot access the NetApp agent UI
+a|This message appears when trying to access the IP address of an agent. The agent can fail to initialize if it doesn't have the correct network access or if it is unstable.
+a|
+* Connect to the Console agent.
+* Verify that the Service Manager service
+* Verify that the agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access endpoints.]
+
+a|Unable to load agent settings
+a|The Console displays this message when you try to access the Agent settings page..
+a|
+* Check if the OCCM container is running and working.
+* If the issue persists, contact support.
+
+
+a|Unable to load support information for the agent.
+a|This message displays if the agent cannot access your support account.
+a|
+* 
+*.
+|===
+
+[[check-agent-status]]
+== Check the Console agent status
+
+Use one of the following commands to verify your Console agent. All services should have a status of _Running_. If this isn't the case, contact NetApp support.
+
+[NOTE]
+====
+
+For more detailed information about accessing the Console agent diagnostics, see the following topics:
+
+* link:task-maintain-connectors.html#connect-linux-host[Check the Console agent status (for Linux host deployments)]
+* link:task-agent-vm-config.html#connect-vcenter-host[Check the Console agent status (for VCenter deployments)]
+====
+
+Docker (for Ubuntu and VCenter deployments):: 
++
+[source,cli]
+docker ps -a
+
+Podman (for RedHat Enterprise Linux deployments):: 
++
+[source,cli]
+podman ps -a
+
+
+== View the Console agent version
+
+View the Console agent version to confirm the upgrade or share it with your NetApp representative.
+
+.Steps
+
+
+. Select *Administration > Support > Agents*.
++
+The Console displays the version at the top of the page.
+
+
+== Verify network access
+Ensure that the Console agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access points.]
+
+
+[[troubleshoot-installation]]
+== Console agent installation issues
+
+If the installation fails, view the report and logs to resolve the issues.
+
+
+include::_include/validate-agent-host.adoc[]
+
+include::_include/endpoints-config-check-note.adoc[]
+
+[[disable-config-check]]
+=== Disable configuration checks for manual installations
+There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example:
+
+* When manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fails.
+
+* You may also want to disable these checks if you are continuing to use the previous endpoint list for agent upgrades. 
+
+.Steps
+
+You disable the configuration check by setting the _skipConfigCheck_ flag in the _com/opt/application/netapp/service-manager-2/config.json_ file. By default, this flag is set to false and the configuration check verifies outbound access for the agent. Set this flag to true to disable the check. You should be familiar with JSON syntax before completing this step. 
+
+To re-enable the configuration check, use these steps and set the _skipConfigCheck_ flag to false.
+
+.Steps
+
+. Access the Console agent host as root or with sudo privileges.
+
+. Create a backup copy of the _/opt/application/netapp/service-manager-2/config.json_ file to ensure you can revert your changes. 
+
+. Stop the service manager 2 service by running the following command:
+
+[source,cli]
+systemctl stop netapp-service-manager.service
+
+. Edit the _/opt/application/netapp/service-manager-2/config.json_ file and change the value of the _skipConfigCheck_ flag to true.
++
+[source,json]
+
+  "skipConfigCheck": true,
+
+
+
+. Save your file.
+
+. Restart the service manager 2 service by running the following command:
+
++
+[source,cli]
+systemctl restart netapp-service-manager.service
+
+
+
+
+=== Failed installation on the endpoints used for upgrades
+If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the *Validation agent configuration* check box or skip the configuration check when installing into a VCenter.
+
+NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoints].
+
+Be sure to verify that the only error is related to the previous endpoints:
+
+ 
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io 
+
+If there are other errors, you'll need to resolve them before proceeding.
+
+
+
+
+
+
+== Work with NetApp Support
+If you haven't been able to resolve the issues with your Console agent, you may want to contact NetApp Support. NetApp support may ask for the Console agent ID or for you to send the Console agent logs to them if they don't have them already.
+
+
+=== Find the Console agent ID 
+
+To help you get started, you may need the system ID of your Console agent. The ID is typically used for licensing and troubleshooting purposes.
+
+.Steps
+
+
+. Select *Administration > Support > Agents*.
++
+You can find the system ID at the top of the page.
++
+*Example*
++
+image:screenshot-system-id.png[A screenshot that shows the System ID that appears in the Support Dashboard.]
+
+. Hover and click on the ID to copy it.
+
+=== Download or send an AutoSupport message
+
+If you're having problems, NetApp might ask you to send an AutoSupport message to NetApp support for troubleshooting purposes.
+
+NOTE: The NetApp Console takes up to five hours to send AutoSupport messages due to load balancing. For urgent communication, download the file and send it manually.
+
+.Steps
+
+. Select *Administration > Support > Agents*.
+
+. Depending on how you need to send the information to NetApp support, choose one of the following options:
+
+.. Select the option to download the AutoSupport message to your local machine. You can then send it to NetApp Support using a preferred method.
+
+.. Select *Send AutoSupport* to directly send the message to NetApp Support.
+
+
+
+== Fix download failures when using a Google Cloud NAT gateway
+
+The Console agent automatically downloads software updates for Cloud Volumes ONTAP. Your configuration can cause the download to fail if it uses a Google Cloud NAT gateway. You can correct this issue by limiting the number of parts that the software image is divided into. This step must be completed by using the API.
+
+.Step
+
+.	Submit a PUT request to /occm/config with the following JSON as body:
++
+[source.json]
+{
+  "maxDownloadSessions": 32
+}
++
+The value for _maxDownloadSessions_ can be 1 or any integer greater than 1. If the value is 1, then the downloaded image will not be divided.
++
+Note that 32 is an example value. The value depends on your NAT configuration and the number of simultaneous sessions.
+
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#occmconfig[Learn more about the /occm/config API call^]
+
+== Get help from the NetApp Knowledge Base
+
+https://kb.netapp.com/Special:Search?path=Cloud%2FBlueXP&query=connector&type=wiki[View troubleshooting information created by the NetApp Support team].

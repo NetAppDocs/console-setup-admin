@@ -1,0 +1,112 @@
+---
+sidebar: sidebar
+permalink: reference-connector-default-config.html
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration
+summary: Learn more about the Console agent before you deploy it..
+---
+
+= Default configuration for the Console agent
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Learn more about the Console agent's configuration before you deploy it.
+
+== Default configuration with internet access
+
+The following configuration details apply if you deployed a Console agent from the NetApp Console, from your cloud provider's marketplace, or if you manually installed a Console agent on an on-premises Linux host that has internet access.
+
+=== AWS details
+
+If you deployed a Console agent from the Console or from the cloud provider's marketplace, note the following:
+
+* The EC2 instance type is t3.2xlarge.
+* The operating system for the image is Ubuntu 22.04 LTS.
++
+The operating system does not include a GUI. You must use a terminal to access the system.
+* The installation includes Docker Engine, which is the required container orchestration tool.
+* The user name for the EC2 Linux instance is ubuntu (for agents created prior to May 2023, the user name was ec2-user).
+* The default system disk is a 100 GiB gp2 disk.
+
+=== Azure details
+
+If you deployed a Console agent from the Console or from the cloud provider's marketplace, note the following:
+
+* The VM type is Standard_D8s_v3.
+* The operating system for the image is Ubuntu 22.04 LTS.
++
+The operating system does not include a GUI. You must use a terminal to access the system.
+* The installation includes Docker Engine, which is the required container orchestration tool.
+* The default system disk is a 100 GiB premium SSD disk.
+
+=== Google Cloud details
+
+If you deployed a Console agent from the Console, note the following:
+
+* The VM instance is n2-standard-8.
+* The operating system for the image is Ubuntu 22.04 LTS.
++
+The operating system does not include a GUI. You must use a terminal to access the system.
+* The installation includes Docker Engine, which is the required container orchestration tool.
+* The default system disk is a 100 GiB SSD persistent disk.
+
+=== Installation folder
+
+The agent installation folder resides in the following location:
+
+/opt/application/netapp/cloudmanager
+
+=== Log files
+
+Log files are contained in the following folders:
+
+* /opt/application/netapp/cloudmanager/log
+or
+* /opt/application/netapp/service-manager-2/logs (starting with new 3.9.23 installations)
++
+The logs in these folders provide details about the Console agent.
+
+* /opt/application/netapp/cloudmanager/docker_occm/data/log
++
+The logs in this folder provide details about cloud services and the Console service that runs on the Console agent.
+
+=== Console agent service
+
+* The Console agent service is named occm.
+
+* The occm service is dependent on the MySQL service.
++
+If the MySQL service is down, then the occm service is down too.
+
+=== Ports
+
+The agent uses the following ports on the Linux host:
+
+* 80 for HTTP access
+* 443 for HTTPS access
+
+== Default configuration without internet access
+
+The following configuration applies if you manually installed the Console agent on an on-premises Linux host that doesn't have internet access. link:task-quick-start-private-mode.html[Learn more about this installation option].
+
+* The agent installation folder resides in the following location:
++
+/opt/application/netapp/ds
+
+* Log files are contained in the following folders:
++
+/var/lib/docker/volumes/ds_occmdata/_data/log
++
+The logs in this folder provide details about the Console agent and docker images.
+
+* All services are running inside docker containers
++
+The services are dependent on the docker runtime service running
+
+* The agent uses the following ports on the Linux host:
+
+** 80 for HTTP access
+** 443 for HTTPS access

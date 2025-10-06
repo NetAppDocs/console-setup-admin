@@ -1,0 +1,61 @@
+---
+sidebar: sidebar
+permalink: task-subscribe-restricted-mode.html
+keywords: subscribe, subscription, marketplace subscription, paygo, contract, annual contract
+summary: Subscribe to NetApp Intelligent Services from your cloud provider's marketplace to pay for NetApp data services at an hourly rate or through an annual contract. If you purchased a license from NetApp, you also need to subscribe to the marketplace offering. Your license is always charged first, but you'll be charged at the hourly rate if you exceed your licensed capacity or if the license's term expires.
+---
+
+= Subscribe to NetApp Intelligent Services (restricted mode)
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+include::_include/subscribe-intro.adoc[]
+
+A marketplace subscription enables charging for the following data services with restricted mode:
+
+* NetApp Backup and Recovery
+* Cloud Volumes ONTAP
+* NetApp Cloud Tiering
+* NetApp Ransomware Resilience
+* NetApp Disaster Recovery
+
+NetApp Data Classification is enabled through your subscription, but there is no charge for using classification.
+
+.Before you begin
+
+You must have already deployed a Console agent in order to subscribe to data services. You need to associate a marketplace subscription to the cloud credentials connected to a Console agent.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.AWS
+--
+include::_include/subscribe-aws.adoc[]
+--
+
+.Azure
+--
+include::_include/subscribe-azure.adoc[]
+--
+
+.Google Cloud
+--
+include::_include/subscribe-google.adoc[]
+--
+
+====
+// end tabbed area
+
+.Related information
+
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-capacity-licenses.html[Manage BYOL capacity-based licenses for Cloud Volumes ONTAP^]
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html[Manage BYOL licenses for data services^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html[Manage AWS credentials and subscriptions]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html[Manage Azure credentials and subscriptions]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html[Manage Google Cloud credentials and subscriptions]

@@ -1,0 +1,38 @@
+The following video shows the steps to subscribe to NetApp Intelligent Services from the AWS Marketplace:
+
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto, title="Subscribe to NetApp Intelligent Services from the AWS Marketplace"]
+
+.Steps
+
+. Select *Administration > *Credentials*.
+
+. Select *Organization credentials*.
+
+. Select the action menu for a set of credentials that are associated with a Console agent and then select *Configure Subscription*.
++
+You must select credentials that are associated with a Console agent. You can't associate a marketplace subscription with credentials that are associated with the NetApp Console.
++
+image:screenshot_aws_configure_subscription.png[A screenshot of the action menu for a set of existing credentials.]
+
+. To associate the credentials with an existing subscription, select the subscription from the down-down list and select *Configure*.
+
+. To associate the credentials with a new subscription, select *Add Subscription > Continue* and follow the steps in the AWS Marketplace:
+
+.. Select *View purchase options*.
+.. Select *Subscribe*.
+.. Select *Set up your account*.
++
+You'll be redirected to the NetApp Console.
+
+.. From the *Subscription Assignment* page:
++
+//tag::assignment[]
+* Select the Console organizations or accounts that you'd like to associate this subscription with.
+* In the *Replace existing subscription* field, choose whether you'd like to automatically replace the existing subscription for one organization or account with this new subscription.
++
+The Console replaces the existing subscription for all credentials in the organization or account with this new subscription. If a set of credentials wasn't ever associated with a subscription, then this new subscription won't be associated with those credentials.
++
+For all other organizations or accounts, you'll need to manually associate the subscription by repeating these steps.
+//end::assignment[]
+
+* Select *Save*.

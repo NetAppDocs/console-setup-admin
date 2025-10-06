@@ -1,0 +1,212 @@
+---
+sidebar: sidebar
+permalink: task-adding-azure-accounts.html
+keywords: permissions, microsoft, azure, permissions, custom role, role, json, active directory, ad, service principal, key, tenant id, application key, application id, operator role, managed identity, iam, operator, role, virtual machine, create custom role, create azure custom role, azure custom role
+summary: Add and manage Azure credentials so that the NetApp Console has the permissions that it needs to deploy and manage cloud resources in your Azure subscriptions. If you manage multiple Azure Marketplace subscriptions, you can assign each one of them to different Azure credentials from the Credentials page.
+---
+
+= Manage Azure credentials and marketplace subscriptions for NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Add and manage Azure credentials so that the NetApp Console has the permissions that it needs to deploy and manage cloud resources in your Azure subscriptions. If you manage multiple Azure Marketplace subscriptions, you can assign each one of them to different Azure credentials from the Credentials page.
+
+
+== Overview
+
+There are two ways to add additional Azure subscriptions and credentials in the Console.
+
+. Associate additional Azure subscriptions with the Azure managed identity.
+
+. To deploy Cloud Volumes ONTAP using different Azure credentials, grant Azure permissions using a service principal and add its credentials to the Console.
+
+== Associate additional Azure subscriptions with a managed identity
+
+The Console enables you to choose the Azure credentials and Azure subscription in which you want to deploy Cloud Volumes ONTAP. You can't select a different Azure subscription for the managed identity profile unless you associate the https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[managed identity^] with those subscriptions.
+
+.About this task
+
+A managed identity is link:concept-accounts-azure.html[the initial Azure account] when you deploy a Console agent from the Console. When you deploy the Console agent, the Console assigns the Console Operator role to the Console agent virtual machine.
+
+.Steps
+
+. Log in to the Azure portal.
+
+. Open the *Subscriptions* service and then select the subscription in which you want to deploy Cloud Volumes ONTAP.
+
+. Select *Access control (IAM)*.
+
+.. Select *Add* > *Add role assignment* and then add the permissions:
+
+* Select the *Console Operator* role.
++
+NOTE: Console Operator is the default name provided in a Console agent policy. If you chose a different name for the role, then select that name instead.
+
+* Assign access to a *Virtual Machine*.
+
+* Select the subscription in which a Console agent virtual machine was created.
+
+* Select a Console agent virtual machine.
+
+* Select *Save*.
+
+. Repeat these steps for additional subscriptions.
+
+.Result
+
+When creating a new system, you can now select from multiple Azure subscriptions for the managed identity profile.
+
+image:screenshot_accounts_switch_azure_subscription.gif[A screenshot that shows the ability to select multiple Azure subscriptions when selecting a Microsoft Azure Provider Account.]
+
+[[add-credentials-azure]]
+== Add additional Azure credentials to NetApp Console
+
+When you deploy a Console agent from the Console, the Console enables a system-assigned managed identity on the virtual machine that has the required permissions. The Console selects these Azure credentials by default when you create a new system for Cloud Volumes ONTAP.
+
+TIP: An initial set of credentials isn't added if you manually installed a Console agent software on an existing system. link:concept-accounts-azure.html[Learn about Azure credentials and permissions].
+
+If you want to deploy Cloud Volumes ONTAP using _different_ Azure credentials, then you must grant the required permissions by creating and setting up a service principal in Microsoft Entra ID for each Azure account. You can then add the new credentials to the Console.
+
+=== Grant Azure permissions using a service principal
+
+The Console needs permissions to perform actions in Azure. You can grant the required permissions to an Azure account by creating and setting up a service principal in Microsoft Entra ID and by obtaining the Azure credentials that the Console needs.
+
+.About this task
+
+The following image depicts how the Console obtains permissions to perform operations in Azure. A service principal object, which is tied to one or more Azure subscriptions, represents the Console in Microsoft Entra ID and is assigned to a custom role that allows the required permissions.
+
+image:diagram_azure_authentication.png["Conceptual image that shows the Console obtaining authentication and authorization from Microsoft Entra ID before it can make an API call. In Active Directory, the Console role defines permissions. It is tied to one or more Azure subscriptions and a service principal object that represents the Cloud Manger application."]
+
+.Steps
+
+. <<Create a Microsoft Entra application>>.
+
+. <<Assign the application to a role>>.
+
+. <<Add Windows Azure Service Management API permissions>>.
+
+. <<Get the application ID and directory ID>>.
+
+. <<Create a client secret>>.
+
+==== Create a Microsoft Entra application
+
+Create a Microsoft Entra application and service principal that the Console can use for role-based access control.
+
+.Steps
+
+include::_include/azure-set-up-service-principal.adoc[tag=app]
+
+
+==== Assign the application to a role
+
+You must bind the service principal to one or more Azure subscriptions and assign it the custom "Console Operator" role so the Console has permissions in Azure.
+
+.Steps
+
+include::_include/azure-set-up-service-principal.adoc[tag=role]
+
+==== Add Windows Azure Service Management API permissions
+
+You must assign "Windows Azure Service Management API" permissions to the service principal.
+
+.Steps
+
+include::_include/azure-set-up-service-principal.adoc[tag=api]
+
+[[ids]]
+==== Get the application ID and directory ID
+
+When you add the Azure account to the Console, you need to provide the application (client) ID and the directory (tenant) ID for the application. The Console uses the IDs to programmatically sign in.
+
+.Steps
+
+include::_include/azure-set-up-service-principal.adoc[tag=ids]
+
+==== Create a client secret
+
+Create a client secret and provide its value to the Console for authentication with Microsoft Entra ID.
+
+
+.Steps
+
+include::_include/azure-set-up-service-principal.adoc[tags=secret]
+
+.Result
+
+Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you add an Azure account.
+
+=== Add the credentials to the Console
+
+After you provide an Azure account with the required permissions, you can add the credentials for that account to the Console. Completing this step enables you to launch Cloud Volumes ONTAP using different Azure credentials.
+
+.Before you begin
+
+If you just created these credentials in your cloud provider, it might take a few minutes until they are available for use. Wait a few minutes before you add the credentials to the Console.
+
+.Before you begin
+
+You need to create a Console agent before you can change Console settings. link:concept-connectors.html#connector-installation[Learn how to create a Console agent].
+
+.Steps
+
+include::_include/azure-provide-permissions-service-principal.adoc[]
+
+.Result
+
+You can switch to a different set of credentials from the Details and Credentials page https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html[when adding a system to the Console^]
+
+image:screenshot_accounts_switch_azure.gif[A screenshot that shows selecting between credentials after selecting Edit Credentials in the Details & Credentials page.]
+
+== Manage existing credentials
+
+Manage the Azure credentials that you've already added to the Console by associating a Marketplace subscription, editing credentials, and deleting them.
+
+[[subscribe]]
+=== Associate an Azure Marketplace subscription to credentials
+
+After you add your Azure credentials to the Console, you can associate an Azure Marketplace subscription to those credentials. You can use the subscription to create a pay-as-you-go Cloud Volumes ONTAP system and access NetApp data services.
+
+There are two scenarios in which you might associate an Azure Marketplace subscription after you've already added the credentials to the Console:
+
+* You didn't associate a subscription when you initially added the credentials to the Console.
+* You want to change the Azure Marketplace subscription that is associated with Azure credentials. 
++
+Replacing the current marketplace subscription updates it for existing and new Cloud Volumes ONTAP systems.
+
+
+.Steps
+
+include::_include/subscribe-azure.adoc[]
+
+=== Edit credentials
+
+Edit your Azure credentials in the Console. For example, you can update the client secret if a new secret was created for the service principal application.
+
+.Steps
+
+. Select *Administration > Credentials*.
+
+. Select *Organization credentials*. 
+
+. Select the action menu for a set of credentials and then select *Edit Credentials*.
+
+. Make the required changes and then select *Apply*.
+
+=== Delete credentials
+
+If you no longer need a set of credentials, you can delete them. You can only delete credentials that aren't associated with a system.
+
+.Steps
+
+. Select *Administration > Credentials*.
+
+. Select *Organization credentials*.
+
+. On the *Organization credentials* page, select the action menu for a set of credentials and then select *Delete Credentials*.
+
+. Select *Delete* to confirm.

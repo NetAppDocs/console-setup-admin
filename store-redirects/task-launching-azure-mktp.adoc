@@ -1,0 +1,4 @@
+---
+permalink: task-launching-azure-mktp.html
+redirect: bluexp-setup-admin/task-install-connector-azure.html
+---

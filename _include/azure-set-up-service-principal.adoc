@@ -1,0 +1,132 @@
+//tag::app[] 
+. Ensure that you have permissions in Azure to create an Active Directory application and to assign the application to a role. 
++
+For details, refer to https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/[Microsoft Azure Documentation: Required permissions^]
+
+. From the Azure portal, open the *Microsoft Entra ID* service.
++
+image:screenshot_azure_ad.png[Shows the Active Directory service in Microsoft Azure.]
+
+. In the menu, select *App registrations*.
+
+. Select *New registration*.
+
+. Specify details about the application:
+
+* *Name*: Enter a name for the application.
+* *Account type*: Select an account type (any will work with the NetApp Console).
+* *Redirect URI*: You can leave this field blank.
+
+. Select *Register*.
++
+You've created the AD application and service principal.
+//end::app[]
+
+//tag::role[]
+. Create a custom role:
++
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+
+.. Copy the contents of the link:reference-permissions-azure.html[custom role permissions for the Console agent] and save them in a JSON file.
+
+.. Modify the JSON file by adding Azure subscription IDs to the assignable scope.
++
+You should add the ID for each Azure subscription from which users will create Cloud Volumes ONTAP systems.
++
+*Example*
++
+[source,json]
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+
+.. Use the JSON file to create a custom role in Azure.
++
+The following steps describe how to create the role by using Bash in Azure Cloud Shell.
++
+* Start https://docs.microsoft.com/en-us/azure/cloud-shell/overview[Azure Cloud Shell^] and choose the Bash environment.
+
+* Upload the JSON file.
++
+image:screenshot_azure_shell_upload.png[A screenshot of the Azure Cloud Shell where you can choose the option to upload a file.]
+
+* Use the Azure CLI to create the custom role:
++
+[source,azurecli]
+az role definition create --role-definition Connector_Policy.json
++
+You should now have a custom role called Console Operator that you can assign to the Console agent virtual machine.
+
+. Assign the application to the role:
+
+.. From the Azure portal, open the *Subscriptions* service.
+
+.. Select the subscription.
+
+.. Select *Access control (IAM) > Add > Add role assignment*.
+
+.. In the *Role* tab, select the *Console Operator* role and select *Next*.
+
+.. In the *Members* tab, complete the following steps:
+
+* Keep *User, group, or service principal* selected.
+* Select *Select members*.
++
+image:screenshot-azure-service-principal-role.png[A screenshot of the Azure portal that shows the Members page when adding a role to an application.]
+* Search for the name of the application.
++
+Here's an example:
++
+image:screenshot_azure_service_principal_role.png[A screenshot of the Azure portal that shows the Add role assignment form in the Azure portal.]
+
+* Select the application and select *Select*.
+* Select *Next*.
+
+.. Select *Review + assign*.
++
+The service principal now has the required Azure permissions to deploy the Console agent.
++
+If you want to deploy Cloud Volumes ONTAP from multiple Azure subscriptions, then you must bind the service principal to each of those subscriptions. In the NetApp Console, you can select the subscription that you want to use when deploying Cloud Volumes ONTAP.
+//end::role[]
+
+//tag::api[]
+. In the *Microsoft Entra ID* service, select *App registrations* and select the application.
+
+. Select *API permissions > Add a permission*.
+
+. Under *Microsoft APIs*, select *Azure Service Management*.
++
+image:screenshot_azure_service_mgmt_apis.gif[A screenshot of the Azure portal that shows the Azure Service Management API permissions.]
+
+. Select *Access Azure Service Management as organization users* and then select *Add permissions*.
++
+image:screenshot_azure_service_mgmt_apis_add.gif[A screenshot of the Azure portal that shows adding the Azure Service Management APIs.]
+//end::api[]
+
+//tag::ids[]
+. In the *Microsoft Entra ID* service, select *App registrations* and select the application.
+
+. Copy the *Application (client) ID* and the *Directory (tenant) ID*.
++
+image:screenshot_azure_app_ids.gif[A screenshot that shows the application (client) ID and directory (tenant) ID for an application in Microsoft Entra IDy.]
++
+When you add the Azure account to the Console, you need to provide the application (client) ID and the directory (tenant) ID for the application. The Console uses the IDs to programmatically sign in.
+//end::ids[]
+
+//tag::secret[]
+. Open the *Microsoft Entra ID* service.
+
+. Select *App registrations* and select your application.
+
+. Select *Certificates & secrets > New client secret*.
+
+. Provide a description of the secret and a duration.
+
+. Select *Add*.
+
+. Copy the value of the client secret.
++
+image:screenshot_azure_client_secret.gif[A screenshot of the Azure portal that shows a client secret for the Microsoft Entra service principal.]
+
+//end::secret[]

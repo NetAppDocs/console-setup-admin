@@ -1,0 +1,8 @@
+* Cloud Deployment Manager V2 API
+* Cloud Logging API
+* Cloud Resource Manager API
+* Compute Engine API
+* Identity and Access Management (IAM) API
+* Cloud Key Management Service (KMS) API
++
+(Required only if you are planning to use NetApp Backup and Recovery with customer-managed encryption keys (CMEK))

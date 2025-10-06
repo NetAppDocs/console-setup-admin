@@ -1,0 +1,399 @@
+---
+sidebar: sidebar
+permalink: whats-new.html
+keywords: what's new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases
+
+summary: "Learn what's new with NetApp Console administration features: IAM, Console agents, cloud provider credentials, and more."
+---
+= What's new
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Learn what's new with NetApp Console administration features: identity and access management (IAM), Console agents, cloud provider credentials, and more.
+
+//All links and images must use the absolute URL.
+
+// tag::whats-new[]
+
+
+== 6 October 2025
+
+include::_whatsnew/2025-10-06.adoc[]
+
+== 11 August 2025
+
+include::_whatsnew/2025-08-11.adoc[]
+
+== 31 July 2025
+
+include::_whatsnew/2025-07-31.adoc[]
+
+// end::whats-new[]
+
+== 21 July 2025
+include::_whatsnew/2025-07-21.adoc[]
+
+== 14 July 2025
+include::_whatsnew/2025-07-14.adoc[]
+
+
+
+== 9 June 2025
+
+include::_whatsnew/2025-06-09.adoc[]
+
+
+
+== 29 May 2025
+
+include::_whatsnew/2025-05-29.adoc[]
+
+
+
+== 12 May 2025
+
+include::_whatsnew/2025-05-12.adoc[]
+
+
+
+== 14 April 2025
+
+include::_whatsnew/2025-04-14.adoc[]
+
+
+== 28 March 2025
+
+include::_whatsnew/2025-03-28.adoc[]
+
+
+== 10 March 2025
+
+include::_whatsnew/2025-03-10.adoc[]
+
+
+
+== 6 March 2025
+
+include::_whatsnew/2025-03-06.adoc[]
+
+
+== 18 February 2025
+
+include::_whatsnew/2025-02-18.adoc[]
+
+== 10 February 2025
+
+include::_whatsnew/2025-02-10.adoc[]
+
+// end::whats-new[]
+
+== 13 January 2025
+
+include::_whatsnew/2025-01-13.adoc[]
+
+
+
+== 16 December 2024
+
+include::_whatsnew/2024-12-16.adoc[]
+
+
+
+
+
+== 9 December 2024
+
+include::_whatsnew/2024-12-09.adoc[]
+
+
+== 26 November 2024
+
+include::_whatsnew/2024-11-26.adoc[]
+
+== 11 November 2024
+
+include::_whatsnew/2024-11-11.adoc[]
+
+== 10 October 2024
+
+include::_whatsnew/2024-10-10.adoc[]
+
+== 7 October 2024
+[#iam]
+include::_whatsnew/2024-10-07.adoc[]
+
+== 30 September 2024
+
+include::_whatsnew/2024-09-30.adoc[]
+
+== 9 September 2024
+
+=== Connector 3.9.44
+This release includes support for Docker Engine 26, an enhancement to SSL certificates, and bug fixes.
+
+The 3.9.44 release is available for standard mode and restricted mode.
+
+.Support for Docker Engine 26 with new installations
+
+Starting with the 3.9.44 release of the Connector, Docker Engine 26 is now supported with _new_ Connector installations on Ubuntu hosts.
+
+If you have an existing Connector created prior to the 3.9.44 release, then Docker Engine 25.0.5 is still the maximum supported version on Ubuntu hosts.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements[Learn more about Docker Engine requirements].
+
+.Updated SSL certificate for local UI access
+
+When you use BlueXP in restricted mode or private mode, the user interface is accessible from the Connector virtual machine that's deployed in your cloud region or on-premises. By default, BlueXP uses a self-signed SSL certificate to provide secure HTTPS access to the web-based console running on the Connector.
+
+In this release, we made changes to the SSL certificate for new and existing Connectors:
+
+* The Common Name for the certificate now matches the short host name
+
+* The Certificate Subject Alternative Name is the Fully Qualified Domain Name (FQDN) of the host machine
+
+=== Support for RHEL 9.4
+
+BlueXP now supports installing the Connector on a Red Hat Enterprise Linux 9.4 host when using BlueXP in standard mode or restricted mode. 
+
+Support for RHEL 9.4 starts with the 3.9.40 release of the Connector.
+
+The updated list of supported RHEL versions for standard mode and restricted mode now includes the following:
+
+* 8.6 to 8.10
+* 9.1 to 9.4
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn about support for RHEL 8 and 9 with the Connector].
+
+=== Support for Podman 4.9.4 with all RHEL versions
+
+Podman 4.9.4 is now supported with all supported versions of Red Hat Enterprise Linux. Version 4.9.4 was previously supported with only RHEL 8.10.
+
+The updated list of supported Podman versions includes 4.6.1 and 4.9.4 with Red Hat Enterprise Linux hosts.
+
+Podman is required for RHEL hosts starting with the 3.9.40 release of the Connector.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn about support for RHEL 8 and 9 with the Connector].
+
+=== Updated AWS and Azure permissions
+
+We updated the AWS and Azure policies for the Connector to remove permissions that are no longer required. The permissions were related to BlueXP edge caching and discovery and management of Kubernetes clusters, which are no longer supported as of August, 2024.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html#change-log[Learn what changed in the AWS policy].
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#change-log[Learn what changed in the Azure policy].
+
+== 22 August 2024
+
+=== Connector 3.9.43 patch
+
+We updated the Connector to support the Cloud Volumes ONTAP 9.15.1 release. 
+
+Support for this release includes an update to the Connector policy for Azure. The policy now includes the following permissions:
+
+[source,json]
+"Microsoft.Compute/virtualMachineScaleSets/write",
+"Microsoft.Compute/virtualMachineScaleSets/read",
+"Microsoft.Compute/virtualMachineScaleSets/delete"
+
+These permissions are required for Cloud Volumes ONTAP support of Virtual Machine Scale Sets. If you have existing Connectors and you want to use this new feature, you'll need to add these permissions to the custom roles that are associated with your Azure credentials.
+
+* https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes[Learn about the Cloud Volumes ONTAP 9.15.1 release^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html[View Azure permissions for the Connector].
+
+== 8 August 2024
+
+=== Connector 3.9.43
+
+This release includes minor improvements and bug fixes.
+
+The 3.9.43 release is available for standard mode and restricted mode.
+
+=== Updated CPU and RAM requirements
+
+To provide higher reliability and to improve the performance of BlueXP and the Connector, we now require additional CPU and RAM for the Connector virtual machine:
+
+* CPU: 8 cores or 8 vCPUs (the previous requirement was 4)
+* RAM: 32 GB (the previous requirement was 14 GB)
+
+As a result of this change, the default VM instance type when deploying the Connector from BlueXP or from the cloud provider's marketplace is as follows:
+
+* AWS: t3.2xlarge
+* Azure: Standard_D8s_v3
+* Google Cloud: n2-standard-8
+
+The updated CPU and RAM requirements apply to all new Connectors. For existing Connectors, increasing the CPU and RAM is recommended to provide improved performance and reliability.
+
+=== Support for Podman 4.9.4 with RHEL 8.10
+
+Podman version 4.9.4 is now supported when installing the Connector on a Red Hat Enterprise Linux 8.10 host.
+
+=== User validation for identity federation
+
+If you use identity federation with BlueXP, each user who logs in to BlueXP for the first time will need to complete a quick form to validate their identity.
+
+== 31 July 2024
+
+=== Private mode release (3.9.42)
+
+A new private mode release is now available to download from the NetApp Support Site. 
+
+.Support for RHEL 8 and 9
+
+This release includes support for installing the Connector on a Red Hat Enterprise Linux 8 or 9 host when using BlueXP in private mode. The following versions of RHEL are supported:
+
+* 8.6 to 8.10
+* 9.1 to 9.3
+
+Podman is required as the container orchestration tool for these operating systems.
+
+You should be aware of Podman requirements, known limitations, a summary of operating system support, what to do if you have a RHEL 7 host, how to get started, and more.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn about support for RHEL 8 and 9 with the Connector].
+
+.Versions included in this release
+
+This release includes the following versions of the BlueXP services that are supported with private mode.
+
+[cols=2*,options="header,autowidth"]
+|===
+
+| Service
+| Version included
+
+| Connector | 3.9.42
+| Backup and recovery | 18 July 2024
+| Classification | 1 July 2024 (version 1.33)
+| Cloud Volumes ONTAP management | 10 June 2024
+| Digital wallet | 30 July 2023
+| On-premises ONTAP cluster management | 30 July 2023
+| Replication | 18 Sept 2022
+
+|===
+
+To learn more about what's included in the versions of these BlueXP services, refer to the release notes for each BlueXP service.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn about private mode]
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[Learn how to get started with BlueXP in private mode]
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[Learn how to upgrade the Connector when using private mode]
+
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html[Learn what's new with BlueXP backup and recovery^]
+
+* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html[Learn what's new with BlueXP classification^]
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html[Learn what's new with Cloud Volumes ONTAP management in BlueXP^]
+
+== 15 July 2024
+
+=== Support for RHEL 8.10
+
+BlueXP now supports installing the Connector on a Red Hat Enterprise Linux 8.10 host when using standard mode or restricted mode. 
+
+Support for RHEL 8.10 starts with the 3.9.40 release of the Connector.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn about support for RHEL 8 and 9 with the Connector].
+
+== 8 July 2024
+
+=== Connector 3.9.42
+
+This release includes minor improvements, bug fixes, and support for the Connector in the AWS Canada West (Calgary) region.
+
+The 3.9.42 release is available for standard mode and restricted mode.
+
+=== Updated Docker Engine requirements
+
+When the Connector is installed on an Ubuntu host, the minimum supported version of Docker Engine is now 23.0.6. It was previously 19.3.1.
+
+The maximum supported version is still 25.0.5.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements[View Connector host requirements].
+
+=== Email verification now required
+
+New users who sign up to BlueXP are now required to verify their email address before they can log in.
+
+== 12 June 2024
+
+=== Connector 3.9.41
+
+This release of the BlueXP Connector includes minor security improvements and bug fixes. 
+
+The 3.9.41 release is available for standard mode and restricted mode.
+
+== 4 June 2024
+
+=== Private mode release (3.9.40)
+
+A new private mode release is now available to download from the NetApp Support Site. This release includes the following versions of the BlueXP services that are supported with private mode.
+
+Note that this private mode release does _not_ include support for the Connector with Red Hat Enterprise Linux 8 and 9.
+
+[cols=2*,options="header,autowidth"]
+|===
+
+| Service
+| Version included
+
+| Connector | 3.9.40
+| Backup and recovery | 17 May 2024
+| Classification | 15 May 2024 (version 1.31)
+| Cloud Volumes ONTAP management | 17 May 2024
+| Digital wallet | 30 July 2023
+| On-premises ONTAP cluster management | 30 July 2023
+| Replication | 18 Sept 2022
+
+|===
+
+To learn more about what's included in the versions of these BlueXP services, refer to the release notes for each BlueXP service.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn about private mode]
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[Learn how to get started with BlueXP in private mode]
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[Learn how to upgrade the Connector when using private mode]
+
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html[Learn what's new with BlueXP backup and recovery^]
+
+* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html[Learn what's new with BlueXP classification^]
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html[Learn what's new with Cloud Volumes ONTAP management in BlueXP^]
+
+== 17 May 2024
+
+=== Connector 3.9.40
+
+This release of the BlueXP Connector includes support for additional operating systems, minor security improvements, and bug fixes.
+
+At this time, the 3.9.40 release is available for standard mode and restricted mode.
+
+.Support for RHEL 8 and 9
+
+The Connector is now supported on hosts running the following versions of Red Hat Enterprise Linux with _new_ Connector installations when using BlueXP in standard mode or restricted mode:
+
+* 8.6 to 8.9
+* 9.1 to 9.3
+
+Podman is required as the container orchestration tool for these operating systems.
+
+You should be aware of Podman requirements, known limitations, a summary of operating system support, what to do if you have a RHEL 7 host, how to get started, and more.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn about support for RHEL 8 and 9 with the Connector].
+
+.End of support for RHEL 7 and CentOS 7
+
+On June 30, 2024, RHEL 7 will reach end of maintenance (EOM), while CentOS 7 will reach end of life (EOL). NetApp will continue to support the Connector on these Linux distributions until June 30, 2024.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn what to do if you have an existing Connector running on RHEL 7 or CentOS 7].
+
+.AWS permissions update
+
+In the 3.9.38 release, we updated the Connector policy for AWS to include the "ec2:DescribeAvailabilityZones" permission. This permission is now required to support AWS Local Zones with Cloud Volumes ONTAP.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html[View AWS permissions for the Connector].
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html[Learn more about support for AWS Local Zones^]
+

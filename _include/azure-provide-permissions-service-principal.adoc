@@ -1,0 +1,15 @@
+. Select *Administration > Credentials*.
+
+. Select *Add Credentials* and follow the steps in the wizard.
+
+.. *Credentials Location*: Select *Microsoft Azure > Agent*.
+
+.. *Define Credentials*: Enter information about the Microsoft Entra service principal that grants the required permissions:
++
+* Application (client) ID
+* Directory (tenant) ID
+* Client Secret
+
+.. *Marketplace Subscription*: Associate a Marketplace subscription with these credentials by subscribing now or by selecting an existing subscription.
+
+.. *Review*: Confirm the details about the new credentials and select *Add*.

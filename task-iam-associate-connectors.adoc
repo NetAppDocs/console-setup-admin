@@ -1,0 +1,58 @@
+---
+sidebar: sidebar
+permalink: task-iam-associate-connectors.html
+keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector,
+summary: If members of your organization need to use a Console agent in another project, you need to associate that Console agent with the respective project.
+---
+
+= Associate a Console agent with other folders and projects
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When an _Organization admin_ creates a Console agent, the Console agent is automatically associated with currently selected project within the organization. Although someone with the _Organization admin_ role can access to that Console agent from anywhere in the organization. Other members in your organization can only access that Console agent from the project in which it was created, unless you associate that Console agent with other projects.
+
+.Before you begin
+
+Review how Console agent association works. link:concept-identity-and-access-management.html#associate-agents[Learn about using Console agent with Identity and Access].
+
+.About this task
+A _Folder or project admin_ can view all Console agents on the *Agent* page but can only associate Console agents with folders and projects they have permissions for. link:reference-iam-predefined-roles.html[Learn more about the actions that a _Folder or project admin_ can complete].
+
+.Steps
+
+. Select *Administration > Identity and access* > *Agents*.
+
+
+. From the table, find the Console agent that you want to associate.
++
+Use the search above the table to find a specific Console agent or filter the table by resource hierarchy.
+
+. To view the folders and projects linked to the Console agent, select image:icon-action.png["Three dot icon"] and then select *View details*.
++
+The page displays details about the folders and projects that are associated with the Console agent.
+
+. Select *Associate to folder or project*.
+
+. Select a folder or project and then select *Accept*.
+
+. To associate the Console agent with an additional folder or project, select *Add a folder or project* and then select the folder or project.
+
+. Select *Associate Agent*.
+
+
+.After you finish
+
+Associate the Console agent's resources with the same folders and projects from the *Resources* page.
+
+link:task-iam-manage-resources.html#associate-resource[Learn how to associate a resource with folders and projects].
+
+.Related information
+
+* link:concept-connectors.html[Learn about NetApp Console agents]
+* link:concept-identity-and-access-management.html[Learn about NetApp Console identity and access management]
+* link:task-iam-get-started.html[Get started with identity and access]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access management^]

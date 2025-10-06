@@ -1,0 +1,76 @@
+---
+sidebar: sidebar
+permalink: reference-ports-gcp.html
+keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent
+summary: The Google Cloud firewall rules for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. for other installation options, you need to set up this security group manually.
+
+---
+
+= Agent firewall rules in Google Cloud
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Google Cloud firewall rules for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. for other installation options, you need to set up this security group manually.
+
+== Inbound rules
+
+[cols="10,10,80",width=100%,options="header"]
+|===
+
+| Protocol
+| Port
+| Purpose
+
+| SSH | 22 | Provides SSH access to the agent host
+| HTTP | 80 a| 
+* Provides HTTP access from client web browsers to the local user interface
+* Used during the Cloud Volumes ONTAP upgrade process
+| HTTPS |443 | Provides HTTPS access from client web browsers to the local user interface
+| TCP | 3128 | Provides Cloud Volumes ONTAP with internet access. You must manually open this port after deployment. 
+
+|===
+
+== Outbound rules
+
+The agent's predefined firewall rules open all outbound traffic. Follow basic outbound rules if acceptable, or use advanced outbound rules for stricter requirements.
+
+=== Basic outbound rules
+
+The predefined firewall rules for the agent include the following outbound rules.
+
+[cols=3*,options="header",width=70%,cols="20,20,60"]
+|===
+
+| Protocol
+| Port
+| Purpose
+
+| All TCP | All | All outbound traffic
+| All UDP | All |	All outbound traffic
+
+|===
+
+=== Advanced outbound rules
+
+If you need rigid rules for outbound traffic, you can use the following information to open only those ports that are required for outbound communication by the agent.
+
+NOTE: The source IP address is the agent host.
+
+[cols=5*,options="header,autowidth"]
+|===
+
+| Service
+| Protocol
+| Port
+| Destination
+| Purpose
+
+| API calls and AutoSupport | HTTPS | 443 | Outbound internet and ONTAP cluster management LIF | API calls to Google Cloud, to ONTAP, to NetApp Data Classification, and sending AutoSupport messages to NetApp
+| API calls | TCP | 8080 | Data Classification | Probe to Data Classification instance during deployment
+| DNS | UDP	| 53 | DNS | Used for DNS resolve by Data Classification
+
+|===

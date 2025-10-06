@@ -1,0 +1,245 @@
+---
+sidebar: sidebar
+permalink: task-install-connector-google-bluexp-gcloud.html
+keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector
+summary: To create a Console agent in Google Cloud from the NetApp Consoel or by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
+---
+
+= Create a Console agent in Google Cloud from NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a Console agent in Google Cloud from the Console. You need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
+
+.Before you begin
+
+* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should review link:reference-limitations.html[Console agent limitations].
+
+[[networking-gcp-agent]]
+== Step 1: Set up networking
+
+Set up networking to ensure the Console agent can manage resources, with connections to target networks and outbound internet access.
+
+//VPC and subnet
+include::_include/networking.adoc[tag=vpc]
+
+//Connections to target networks
+include::_include/networking.adoc[tag=networks]
+
+//Outbound internet access
+include::_include/networking.adoc[tag=outbound]
+
+//Endpoints contacted from the Console agent 
+include::_include/endpoints-connector.adoc[tag=intro]
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+//Console endpoints
+include::_include/networking.adoc[tag=endpoints-console]
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
++
+Implement this networking requirement after creating the Console agent.
+
+[[agent-permissions-google]]
+== Step 2: Set up permissions to create the Console agent
+
+Before you can deploy a Console agent from the Console, you need to set up permissions for the Google Platform user who deploys the Console agent VM.
+
+.Steps
+
+. Create a custom role in Google Platform:
+
+.. Create a YAML file that includes the following permissions:
++
+[source,yaml]
+title: Console agent deployment policy
+description: Permissions for the user who deploys the Console agent
+stage: GA
+includedPermissions:
+- compute.disks.create
+- compute.disks.get
+- compute.disks.list
+- compute.disks.setLabels
+- compute.disks.use
+- compute.firewalls.create
+- compute.firewalls.delete
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.globalOperations.get
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instances.attachDisk
+- compute.instances.create
+- compute.instances.get
+- compute.instances.list
+- compute.instances.setDeletionProtection
+- compute.instances.setLabels
+- compute.instances.setMachineType
+- compute.instances.setMetadata
+- compute.instances.setTags
+- compute.instances.start
+- compute.instances.updateDisplayDevice
+- compute.machineTypes.get
+- compute.networks.get
+- compute.networks.list
+- compute.networks.updatePolicy
+- compute.projects.get
+- compute.regions.get
+- compute.regions.list
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.zoneOperations.get
+- compute.zones.get
+- compute.zones.list
+- deploymentmanager.compositeTypes.get
+- deploymentmanager.compositeTypes.list
+- deploymentmanager.deployments.create
+- deploymentmanager.deployments.delete
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- deploymentmanager.manifests.list
+- deploymentmanager.operations.get
+- deploymentmanager.operations.list
+- deploymentmanager.resources.get
+- deploymentmanager.resources.list
+- deploymentmanager.typeProviders.get
+- deploymentmanager.typeProviders.list
+- deploymentmanager.types.get
+- deploymentmanager.types.list
+- resourcemanager.projects.get
+- compute.instances.setServiceAccount
+- iam.serviceAccounts.list
+
+.. From Google Cloud, activate cloud shell.
+
+.. Upload the YAML file that includes the required permissions.
+
+.. Create a custom role by using the `gcloud iam roles create` command.
++
+The following example creates a role named "connectorDeployment" at the project level:
++
+gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud[Google Cloud docs: Creating and managing custom roles^]
+
+. Assign this custom role to the user who will deploy the Console agent from the Console or by using gcloud.
++
+https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role[Google Cloud docs: Grant a single role^]
+
+[[console-permissions-google]]
+== Step 3: Set up permissions for the Console agent operations
+
+include::_include/google-set-up-connector-permissions.adoc[]
+
+== Step 4: Set up shared VPC permissions
+
+include::_include/google-shared-vpc-permissions.adoc[]
+
+== Step 5: Enable Google Cloud APIs
+
+You must enable several Google Cloud APIs before deploying the Console agent and Cloud Volumes ONTAP.
+
+.Step
+
+. Enable the following Google Cloud APIs in your project:
++
+include::_include/google-cloud-apis.adoc[]
+
+https://cloud.google.com/apis/docs/getting-started#enabling_apis[Google Cloud documentation: Enabling APIs^]
+
+== Step 6: Create the Console agent
+
+Create a Console agent directly from the Console.
+
+.About this task
+
+Creating the Console agent deploys a virtual machine instance in Google Cloud using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+
+
+.Before you begin
+
+You should have the following:
+
+* The required Google Cloud permissions to create the Console agent and a service account for the Console agent VM.
+
+* A VPC and subnet that meets networking requirements.
+
+* Details about a proxy server, if a proxy is required for internet access from the Console agent.
+
+.Steps
+
+. Select *Administration > Agents*. 
+
+. On the *Overview* page, select *Deploy agent > Google Cloud*
+
+. On the *Deploying an agent* page, review the details about what you'll need. You have two options:
+
+.. Select *Continue* to prepare for deployment by using the in-product guide. Each step in the in-product guide includes the information that's contained on this page of the documentation.
+
+.. Select *Skip to Deployment* if you already prepared by following the steps on this page.
+
+. Follow the steps in the wizard to create the Console agent:
+
+* If you're prompted, log in to your Google account, which should have the required permissions to create the virtual machine instance.
++
+The form is owned and hosted by Google. Your credentials are not provided to NetApp.
+
+* *Details*: Enter a name for the virtual machine instance, specify tags, select a project, and then select the service account that has the required permissions (refer to the section above for details).
+
+* *Location*: Specify a region, zone, VPC, and subnet for the instance.
+
+* *Network*: Choose whether to enable a public IP address and optionally specify a proxy configuration.
+
+* *Network tags*: Add a network tag to the Console agent instance if using a transparent proxy.  Network tags must start with a lowercase letter and can contain lowercase letters, numbers, and hyphens. Tags must end with a lowercase letter or number. For example, you might use the tag "console-agent-proxy".
+
+* *Firewall Policy*: Choose whether to create a new firewall policy or whether to select an existing firewall policy that allows the required inbound and outbound rules.
++
+link:reference-ports-gcp.html[Firewall rules in Google Cloud]
+
+include::_include/agent-deploy-console-check.adoc[]
+
+. Select *Add*.
++
+The instance is ready in approximately 10 minutes; stay on the page until the process completes.
+
+
+
+.Result
+
+After the process completes, the Console agent is available for use.
+
+NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
+
+If you have Google Cloud Storage buckets in the same Google Cloud account where you created the Console agent, you'll see a Google Cloud Storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html[Learn how to manage Google Cloud Storage from the Console]
+
+
+

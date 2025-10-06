@@ -1,0 +1,136 @@
+---
+sidebar: sidebar
+permalink: task-install-connector-aws-marketplace.html
+keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector
+summary: To create a Console agent from the AWS Marketplace, you need to set up your networking, prepare AWS permissions, review instance requirements, and then create the Console agent.
+---
+
+= Create a Console agent from the AWS Marketplace
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You create a Console agent in AWS directly from the AWS Marketplace. To create a Console agent from the AWS Marketplace, you need to set up your networking, prepare AWS permissions, review instance requirements, and then create the Console agent.
+
+.Before you begin
+
+* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should review link:reference-limitations.html[Console agent limitations].
+
+== Step 1: Set up networking
+
+Ensure the network location for the Console agent meets the following requirements to manage hybrid cloud resources.
+
+//Connections to target networks
+include::_include/networking.adoc[tag=vpc]
+
+//Connections to target networks
+include::_include/networking.adoc[tag=networks]
+
+//Outbound internet access
+include::_include/networking.adoc[tag=outbound]
+
+//Endpoints contacted from the Console agent 
+include::_include/endpoints-connector.adoc[tag=intro]
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
++
+Implement this network access after you create the Console agent.
+
+== Step 2: Set up AWS permissions
+
+To prepare for a marketplace deployment, create IAM policies in AWS and attach them to an IAM role. When you create the Console agent from the AWS Marketplace, you are prompted to select that IAM role.
+
+.Steps
+
+include::_include/aws-permissions.adoc[tag=policy]
++
+You may need to create a second policy based on the NetApp data services you plan to use. For standard regions, the permissions are spread across two policies. Two policies are required due to a maximum character size limit for managed policies in AWS. link:reference-permissions-aws.html[Learn more about IAM policies for the Console agent].
+
+include::_include/aws-permissions.adoc[tag=role]
+
+.Result
+
+You now have an IAM role that you can associate with the EC2 instance during deployment from the AWS Marketplace.
+
+== Step 3: Review instance requirements
+
+When you create the Console agent, you need to choose an EC2 instance type that meets the following requirements.
+
+include::_include/os-reqs.adoc[tag=cpu-ram]
+
+include::_include/os-reqs.adoc[tag=aws-ec2]
+
+== Step 4: Create the Console agent
+
+Create the Console agent directly from the AWS Marketplace.
+
+.About this task
+
+Creating the Console agent from the AWS Marketplace deploys an EC2 instance in AWS using a default configuration. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+
+.Before you begin
+
+You should have the following:
+
+* A VPC and subnet that meets networking requirements.
+
+* An IAM role with an attached policy that includes the required permissions for the Console agent.
+
+* Permissions to subscribe and unsubscribe from the AWS Marketplace for your IAM user.
+
+* An understanding of CPU and RAM requirements for the instance.
+
+* A key pair for the EC2 instance.
+
+include::_include/aws-marketplace.adoc[]
+
++
+AWS launches the Console agent with the specified settings, and the Console agent runs in about ten minutes.
+
++
+NOTE: If the installation fails, you can view logs and a report to help you troubleshoot. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
+
+. Open a web browser from a host that has a connection to the Console agent virtual machine and URL of the Console agent.
+
+. After you log in, set up the Console agent:
+.. Specify the Console organization to associate with the Console agent.
+.. Enter a name for the system.
+.. Under *Are you running in a secured environment?* keep restricted mode disabled.
++
+Keep restricted mode disabled to use the Console in standard mode. You should enable restricted mode only if you have a secure environment and want to disconnect this account from the Console backend services. If that's the case, link:task-quick-start-restricted-mode.html[follow steps to get started with NetApp Console in restricted mode].
+.. Select *Let's start*.
+
+.Result
+
+The Console agent is now installed and set up with your Console organization.
+
+Open a web browser and go to the https://console.netapp.com[NetApp Console^] to start using the Console agent with the Console.
+
+If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 working environment appear on the *Systems*  page automatically. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]

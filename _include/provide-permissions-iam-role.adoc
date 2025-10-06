@@ -1,0 +1,12 @@
+.Steps
+
+. Go to the Amazon EC2 console.
+
+. Select *Instances*.
+
+. Select the Console agent instance.
+
+. Select *Actions > Security > Modify IAM role*.
+
+. Select the IAM role and select *Update IAM role*.
+

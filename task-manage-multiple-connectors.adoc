@@ -1,0 +1,53 @@
+---
+sidebar: sidebar
+permalink: task-manage-multiple-connectors.html
+keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors
+summary: If you use multiple Console agents, you can switch between those agents directly from the Console. You can also manage a single system with multiple Console agents.
+---
+
+= Work with multiple Console agents
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If you use multiple Console agents, you can switch between those Console agents directly from the Console to view the associated systems. 
+
+== Switch between Console agents
+
+If you have multiple Console agents, you can switch between them to see the systems that are associated with a specific agent.
+
+For example, in a multi-cloud environment, you might have one agent in AWS and another in Google Cloud. Switch between these agents to manage the Cloud Volumes ONTAP systems in the respective cloud environments.
+
+NOTE: This option is not available when viewing the NetApp Console from the agent's local UI
+
+.Step
+
+. Select the Console agents icon (image:icon-agent.png[agent icon]) in the top right to view the list of available agents.
++
+image:screenshot-connector-switch.png[A screenshot that shows the Agents icon in the header and the Switch action.]
+
+.Result
+
+The Console refreshes and shows the systems associated with the selected agent.
+
+== Set up a disaster recovery configuration
+
+You can manage a system with multiple Console agents at the same time for disaster recovery purposes. If one Console agent goes down, you can switch to the other agent to immediately manage the system.
+
+.Steps
+
+. Switch to the other Console agent that you want to manage with the Console agent.
+
+. Discover the existing system.
++
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-adding-systems.html[Add existing Cloud Volumes ONTAP systems to the Console^]
+* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[Discover ONTAP clusters^]
+
+. If you're managing a Cloud Volumes ONTAP system, adjust the Capacity Management Mode to *Manual Mode*.
++
+To avoid contention issues, only the main Console agent should be set to *Automatic Mode*.
++
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html[Learn more about the capacity management mode^]

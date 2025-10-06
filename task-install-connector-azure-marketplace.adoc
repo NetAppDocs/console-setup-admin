@@ -1,0 +1,241 @@
+---
+sidebar: sidebar
+permalink: task-install-connector-azure-marketplace.html
+keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector, marketplace, azure marketplace
+summary: To create a Console agent from the Azure Marketplace, you need to set up your networking, prepare Azure permissions, review instance requirements, and then create the Console agent.
+---
+
+= Create a Console agent from the Azure Marketplace
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a Console agent in Azure directly from the Azure Marketplace. To create a Console agent from the Azure Marketplace, you need to set up your networking, prepare Azure permissions, review instance requirements, and then create the Console agent.
+
+.Before you begin
+
+* You should have an link:concept-connectors.html[understanding of Console agents].
+* Review link:reference-limitations.html[Console agent limitations].
+
+== Step 1: Set up networking
+
+Ensure that the network location where you plan to install the Console agent supports the following requirements.These requirements enable the Console agent to manage resources in your hybrid cloud.
+
+//Azure regions
+include::_include/networking.adoc[tag=azure-region]
+
+//VNet and subnet
+include::_include/networking.adoc[tag=vnet]
+
+//Connections to target networks
+include::_include/networking.adoc[tag=networks]
+
+//Outbound internet access
+include::_include/networking.adoc[tag=outbound]
+
+//Endpoints contacted from the Console agent 
+include::_include/endpoints-connector.adoc[tag=intro]
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+
+|===
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
+
+//Ports
+include::_include/networking.adoc[tag=ports]
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
++
+Implement the networking requirements after creating the Console agent.
+
+== Step 2: Review VM requirements
+
+When you create the Console agent, choose a virtual machine type that meets the following requirements.
+
+include::_include/os-reqs.adoc[tag=cpu-ram]
+
+include::_include/os-reqs.adoc[tag=azure-vm]
+
+== Step 3: Set up permissions
+
+You can provide permissions in the following ways:
+
+* Option 1: Assign a custom role to the Azure VM using a system-assigned managed identity.
+
+* Option 2: Provide the Console with the credentials for an Azure service principal that has the required permissions.
+
+Follow these steps to set up permissions for the Console.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Custom role
+--
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+
+.Steps 
+
+. If you're planning to manually install the software on your own host, enable a system-assigned managed identity on the VM so that you can provide the required Azure permissions through a custom role. 
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm[Microsoft Azure documentation: Configure managed identities for Azure resources on a VM using the Azure portal^]
+
+include::_include/azure-set-up-role.adoc[]
+--
+
+.Service principal
+--
+Create and set up a service principal in Microsoft Entra ID and obtain the Azure credentials that the Console needs.
+
+.Create a Microsoft Entra application for role-based access control
+
+include::_include/azure-set-up-service-principal.adoc[tag=app]
+
+.Assign the application to a role
+ 
+include::_include/azure-set-up-service-principal.adoc[tag=role]
+
+.Add Windows Azure Service Management API permissions
+
+include::_include/azure-set-up-service-principal.adoc[tag=api]
+
+.Get the application ID and directory ID for the application
+
+include::_include/azure-set-up-service-principal.adoc[tag=ids]
+
+.Create a client secret
+
+include::_include/azure-set-up-service-principal.adoc[tags=secret]
+
+--
+
+====
+// end tabbed area
+
+== Step 4: Create the Console agent
+
+Launch the Console agent directly from the Azure Marketplace.
+
+.About this task
+
+Creating the Console agent from the Azure Marketplace sets up a virtual machine with a default configuration. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent]. 
+
+.Before you begin
+
+You should have the following:
+
+* An Azure subscription.
+
+* A VNet and subnet in your Azure region of choice.
+
+* Details about a proxy server, if your organization requires a proxy for all outgoing internet traffic:
+
+** IP address
+** Credentials
+** HTTPS certificate
+
+* An SSH public key, if you want to use that authentication method for the Console agent virtual machine. The other option for the authentication method is to use a password. 
++
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux[Learn about connecting to a Linux VM in Azure^]
+
+* If you don't want the Console to automatically create an Azure role for the Console agent, then you'll need to create your own link:reference-permissions-azure.html[using the policy on this page].
++
+These permissions are for the Console agent instance itself. It's a different set of permissions than what you previously set up to deploy the Console agent VM.
+
+.Steps
+
+. Go to the NetApp Console agent VM page in the Azure Marketplace.
++
+https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager[Azure Marketplace page for commercial regions^]
+
+. Select *Get it now* and then select *Continue*.
+
+. From the Azure portal, select *Create* and follow the steps to configure the virtual machine.
++
+Note the following as you configure the VM:
+
+* *VM size*: Choose a VM size that meets CPU and RAM requirements. We recommend Standard_D8s_v3.
+
+* *Disks*: The Console agent can perform optimally with either HDD or SSD disks.
+
+* *Network security group*: The Console agent requires inbound connections using SSH, HTTP, and HTTPS.
++
+link:reference-ports-azure.html[View security group rules for Azure].
+
+* Identity*: Under *Management*, select *Enable system assigned managed identity*.
++
+This setting is important because a managed identity allows the Console agent virtual machine to identify itself to Microsoft Entra ID without providing any credentials. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[Learn more about managed identities for Azure resources^].
+
+. On the *Review + create* page, review your selections and select *Create* to start the deployment.
++
+Azure deploys the virtual machine with the specified settings. You should see the virtual machine and Console agent software running in about ten minutes.
+
++
+NOTE: If the installation fails, you can view logs and a report to help you troubleshoot. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
+
+. Open a web browser from a host that has a connection to the Console agent virtual machine and enter the following URL:
++
+https://_ipaddress_
+
+. After you log in, set up the Console agent:
+.. Specify the the Console organization to associate with the Console agent.
+.. Enter a name for the system.
+.. Under *Are you running in a secured environment?* keep restricted mode disabled.
++
+Keep restricted mode disabled to use the Console in standard mode. You should enable restricted mode only if you have a secure environment and want to disconnect this account from the Console backend services. If that's the case, link:task-quick-start-restricted-mode.html[follow steps to get started with the Console in restricted mode].
+.. Select *Let's start*.
+
+.Result
+
+You have now installed the Console agent and set it up with your the Console organization.
+
+If you have Azure Blob storage in the same Azure subscription where you created the Console agent, you'll see an Azure Blob storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html[Learn how to manage Azure Blob storage from the Console^]
+
+== Step 5: Provide permissions to the Console agent
+
+Now that you've created the Console agent, you need to provide it with the permissions that you previously set up. Providing the permissions enables the Console agent to manage your data and storage infrastructure in Azure.
+
+[role="tabbed-block"]
+====
+
+.Custom role
+--
+include::_include/azure-provide-permissions-role.adoc[]
+
+.What's next?
+
+Go to the https://console.netapp.com[NetApp Console^] to start using the Console agent.
+--
+
+.Service principal
+--
+.Steps
+
+include::_include/azure-provide-permissions-service-principal.adoc[]
+
+.Result
+The Console now has the permissions that it needs to perform actions in Azure on your behalf.
+--
+
+====
+// end tabbed area

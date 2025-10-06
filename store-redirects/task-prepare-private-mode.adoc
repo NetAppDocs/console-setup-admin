@@ -1,0 +1,5 @@
+---
+sidebar: sidebar
+permalink: task-prepare-private-mode.html
+redirect: bluexp-setup-admin/task-quick-start-private-mode.html
+---

@@ -1,0 +1,17 @@
+If you selected the *Validate agent configuration* check box on the *Review* page, the Console verifies the configuration of the Console agent after it's created. If the Console fails to deploy the agent, it provides a downloadable report to help you troubleshoot.
+
+
+NOTE: If the Console successfully deploys the agent, it does not generate a report and a confirmation dialog appears that verifies a successful deployment.
+
+
+.Steps
+
+. On the *Agent deployment failed* dialog box, select *Download report* to download a PDF file that contains the validation report.
+
+. Alternatively, you can select *Start over* to return to the *Deploy agent* wizard and try again. 
+
++ 
+You must start the entire process over if you want to try deploying the agent again.
+
+
+Access the report and logs from the Console agent host

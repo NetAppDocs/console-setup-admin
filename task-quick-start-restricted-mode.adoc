@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: task-quick-start-restricted-mode.html
+keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov
+summary: Get started with the NetApp Console in restricted mode by preparing your environment and deploying the Console agent.
+
+---
+
+= Getting started workflow (restricted mode)
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Get started with the NetApp Console in restricted mode by preparing your environment and deploying the Console agent.
+
+Restricted mode is typically used by state and local governments and regulated companies, including deployments in AWS GovCloud and Azure Government regions. Before getting started, ensure you have an understanding of link:concept-connectors.html[Console agents] and link:concept-modes.html[deployment modes].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] link:task-prepare-restricted-mode.html[Prepare for deployment]
+
+https://raw.githubusercontent.com/NetAppDocs/console-setup-admin-internal/blob/main/media/screenshot-canvas.png
+
+[role="quick-margin-list"]
+.. Prepare a dedicated Linux host that meets requirements for CPU, RAM, disk space, container orchestration tool, and more.
+
+.. Set up networking that provides access to the target networks, outbound internet access for manual installations, and outbound internet for day-to-day access.
+
+.. Set up permissions in your cloud provider so that you can associate those permissions with the Console agent instance after you deploy it.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] link:task-install-restricted-mode.html[Deploy the Console agent]
+
+[role="quick-margin-list"]
+.. Install the Console agent from your cloud provider's marketplace or by manually installing the software on your own Linux host.
+
+.. Set up the NetApp Console by opening a web browser and entering the Linux host's IP address.
+
+.. Provide the Console agent with the permissions that you previously set up.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] link:task-subscribe-restricted-mode.html[Subscribe to NetApp Intelligent Services (optional)]
+
+[role="quick-margin-para"]
+Optional: Subscribe to NetApp Intelligent Services from your cloud provider's marketplace to pay for data services at an hourly rate (PAYGO) or through an annual contract. NetApp Intelligent Services include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience and NetApp Disaster Recovery. NetApp Data Classification is included with your subscription at no additional cost.

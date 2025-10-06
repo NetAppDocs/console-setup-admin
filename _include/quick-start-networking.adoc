@@ -1,0 +1,3 @@
+* A network connection to the networks where you're planning to create and manage systems
+* Outbound internet access to specific endpoints for day-to-day operations
+* The IP address, credentials, and HTTPS certificate of a proxy server, if a proxy server is required for outbound internet

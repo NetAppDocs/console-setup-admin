@@ -1,0 +1,62 @@
+If you are using a shared VPC to deploy resources into a service project, then you'll need to prepare your permissions. 
+
+This table is for reference and your environment should reflect the permissions table when IAM configuration is complete.
+
+// Start snippet: collapsible block (open on page load)
+.View shared VPC permissions
+[%collapsible]
+====
+
+[cols="10,10,10,18,18,34",options="header"]
+|===
+
+| Identity
+| Creator
+| Hosted in
+| Service project permissions
+| Host project permissions
+| Purpose
+
+| Google account to deploy the agent | Custom | Service Project
+a| link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google[Agent deployment policy]
+a| compute.networkUser
+| Deploying the agent in the service project
+
+| agent service account | Custom | Service project a|
+link:reference-permissions-gcp.html[Agent service account policy]
+|
+compute.networkUser
+
+deploymentmanager.editor
+| Deploying and maintaining Cloud Volumes ONTAP and services in the service project
+
+| Cloud Volumes ONTAP service account | Custom | Service project
+|
+storage.admin
+
+member: NetApp Console service account as serviceAccount.user
+| N/A | (Optional) For NetApp Cloud Tiering and NetApp Backup and Recovery
+
+| Google APIs service agent | Google Cloud | Service project a|
+(Default) Editor
+a|
+compute.networkUser
+| Interacts with Google Cloud APIs on behalf of deployment. Allows the Console to use the shared network.
+
+| Google Compute Engine default service account | Google Cloud | Service project a|
+(Default) Editor
+a|
+compute.networkUser
+| Deploys Google Cloud instances and compute infrastructure on behalf of deployment. Allows the Console to use the shared network.
+
+|===
+
+Notes:
+
+. deploymentmanager.editor is only required at the host project if you are not passing firewall rules to the deployment and are choosing to let the Console create them for you. The NetApp Console creates a deployment in the host project which contains the VPC0 firewall rule if no rule is specified.
+
+. firewall.create and firewall.delete are only required if you are not passing firewall rules to the deployment and are choosing to let the Console create them for you. These permissions reside in the Console account .yaml file. If you are deploying an HA pair using a shared VPC, these permissions will be used to create the firewall rules for VPC1, 2 and 3. For all other deployments, these permissions will also be used to create rules for VPC0.
+
+. For Cloud Tiering, the tiering service account must have the serviceAccount.user role on the service account, not just at the project level. Currently if you assign serviceAccount.user at the project level, the permissions don't show when you query the service account with getIAMPolicy.
+====
+// End collapsible block

@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: task-iam-rename-organization.html
+keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management
+summary: If needed, you can change the name of your NetApp Console organization.
+---
+
+= Organization and project IDs
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Your NetApp Console organization has a name and an ID. You can choose a name for your organization to help identify it. You may also need to retrieve the organization ID for certain integrations.
+
+== Rename your organization
+
+You can rename your organization. This is helpful if you support more than organization.
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Organization*.
+
+. From the *Organization* page, navigate to the first row in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Edit organization*.
++
+image:screenshot-iam-edit-organization.png[A screenshot of Overview page that shows the actions icon and the Edit organization option.]
+
+. Enter a new organization name and select *Apply*.
+
+
+== Get the organization ID
+
+The organization ID is used for certain integrations with the Console. 
+
+You can view the organization ID from the Organizations page and copy it to the clipboard for your needs.
+
+.Steps
+
+. Select *Administration > Identity and access* > *Organization*.
+
+. On the *Organization* page, look for your organization ID in the summary bar and copy it to the clipboard. You can save this for use later or copy it directly to where you need to use it. 
+
+[#project-id]
+== Obtain the ID for a project
+
+You'll need to obtain the ID for a project if you are using the API. For example, when creating a Cloud Volumes ONTAP system.
+
+.Steps
+
+. From the *Organization* page, navigate to a project in the table and select image:icon-action.png["An icon that is three side-by-side dots"]
++
+The project ID displays.
+
+. To copy the ID, select the copy button.
++
+image:screenshot-iam-project-id.png[A screenshot of the folders and projects table that shows the project ID after selecting the action menu for a project.]
+
+.Related information
+
+* link:concept-identity-and-access-management.html[Learn about identity and access management]
+* link:task-iam-get-started.html[Get started with identity and access]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

@@ -1,0 +1,4 @@
+---
+permalink: task-set-up-permissions-aws.html
+redirect: bluexp-setup-admin/task-install-connector-aws-bluexp.html
+---

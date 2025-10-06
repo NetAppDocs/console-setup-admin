@@ -1,0 +1,89 @@
+---
+sidebar: sidebar
+permalink: reference-iam-storage-roles.html
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin
+summary: You can assign the following roles to users to provide them access to the storage management features in the NetApp Console. You can assign users an administrative role to manage storage or a viewer role for monitoring.
+---
+
+= Storage access roles for NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+
+You can assign the following roles to users to provide them access to the storage management features in the NetApp Console. You can assign users an administrative role to manage storage or a viewer role for monitoring.
+
+NOTE: These roles are not available from the NetApp Console partnership API.
+
+Administrators can assign storage roles to users for the following storage resources and features:
+
+Storage resources: 
+
+* On-premises ONTAP clusters
+* StorageGRID
+* E-Series
+
+Console services and features:
+
+* Digital advisor
+* Software updates
+* Lifecycle planning
+* Sustainability
+
+
+.Example for storage roles in NetApp Console
+
+XYZ Corporation, a multinational company, has a large team of storage engineers and storage administrators. They allow this team to manage storage assets for their regions while limiting access to core Console tasks like user management, agent creation, and license management.
+ 
+Within a team of 12, two users are given the *Storage viewer* role which allows them to monitor the storage resources associated with the Console projects they are assigned to. The remaining nine are given the *Storage admin* role which includes the ability to manage software updates, access ONTAP System Manager through the Console, as well as discover storage resources (add systems). One person on the team is given the *System health specialist* role so they can manage the health of the storage resources in their region, but not modify or delete any systems. This person can also perform software updates on the storage resources for projects they are assigned.
+ 
+The organization has two additional users with the *Organization admin* role who can manage all aspects of the Console, including user management, agent creation, and license management, as well as several users with the *Folder or project admin* role who can perform Console administration tasks for the folders and projects they are assigned to.
+
+
+The following table shows the actions each storage role performs.
+
+[cols=4*,options="header",cols="40,20a,20a,20a", width="100%"]
+|===
+| Feature and action
+| Storage admin
+| System health specialist
+| Storage viewer
+
+
+4+| *Storage Management*:
+| Discover new resources (create systems) | Yes | Yes | No
+| View discovered systems | Yes | Yes | No
+| Delete systems from the Console| Yes | No | No
+| Modify systems| Yes | No | No
+| *Create agents* | No | No | No
+4+| *Digital advisor*
+| View all pages and functions | Yes | Yes| Yes
+4+| *Licenses and subscriptions*
+| View all pages and functions | No | No| No
+4+| *Software updates* 
+| View landing page and recommendations | Yes | Yes | Yes
+| Review potential version recommendations and key benefits | Yes | Yes | Yes
+| View update details for a cluster | Yes | Yes | Yes
+| Run pre-update checks and download upgrade plan | Yes | Yes | Yes
+| Install software updates | Yes | Yes | No
+4+| *Lifecycle planning*
+| Review capacity planning status | Yes | Yes | Yes
+| Choose next action (best practice, tier) | Yes | No | No
+| Tier cold data to cloud storage and free up storage| Yes | Yes | No
+| Set up reminders | Yes | Yes | Yes
+4+| *Sustainability*
+| View dashboard and recommendations | Yes | Yes | Yes
+| Download report data | Yes | Yes | Yes
+| Edit carbon mitigation percentage| Yes | Yes | No
+| Fix recommendations | Yes | Yes | No
+| Defer recommendations | Yes | Yes | No
+4+| *System manager access*
+| May enter credentials | Yes | Yes | No
+4+| *Credentials*
+| User credentials | Yes | Yes |  No
+
+|===
+

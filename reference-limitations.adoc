@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: reference-limitations.html
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations of NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+These limitations are specific to the set up for the NEtApp Console and administration: the agent, the software as a service (SaaS) platform, and more.
+
+== Console agent limitations
+
+
+=== Possible conflict with IP addresses in the 172 range
+
+The NetApp Console deploys an agent with two interfaces that have IP addresses in the 172.17.0.0/16 and 172.18.0.0/16 ranges.
+
+If your network has a subnet configured with either of these ranges, then you might experience connectivity failures from the Console. For example, discovering on-premises ONTAP clusters in the Console might fail.
+
+See Knowledge Base article link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Manager/Cloud_Manager_shows_inactive_as_Connector_IP_range_in_172.x.x.x_conflict_with_docker_network[Agent IP conflict with existing network] for instructions on how to change the IP address of the agent’s interfaces.
+
+//Reference link:https://jira.ngage.netapp.com/browse/KDA-1546[KDA JIRA-1546]
+
+=== SSL decryption isn't supported
+
+The Console doesn't support firewall configurations that have SSL decryption enabled. If SSL decryption is enabled, error messages appear in the Console and the agent instance displays as inactive.
+
+For enhanced security, you have the option to link:task-installing-https-cert.html[install an HTTPS certificate signed by a certificate authority (CA)].
+
+=== Blank page when loading the local UI
+
+If you load the web-based console that's running on an agent, the interface might fail to display sometimes, and you just get a blank page.
+
+This issue is related to a caching problem. The workaround is to use an incognito or private web browser session.
+
+=== Shared Linux hosts are not supported
+
+The agent isn't supported on a VM that is shared with other applications. The VM must be dedicated to the agent software.
+
+=== 3rd-party agents and extensions
+
+3rd-party agents or VM extensions are not supported on the agent VM.

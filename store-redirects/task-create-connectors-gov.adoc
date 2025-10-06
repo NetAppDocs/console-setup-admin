@@ -1,0 +1,4 @@
+---
+permalink: task-create-connectors-gov.html
+redirect: bluexp-setup-admin/task-quick-start-restricted-mode.html
+---

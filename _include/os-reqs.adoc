@@ -1,0 +1,175 @@
+//tag::dedicated[]
+Dedicated host::
+The Console agent is not supported on a host that is shared with other applications. The host must be a dedicated host. The host can be of any architecture that meets the following size requirements:
+
+* CPU: 8 cores or 8 vCPUs
+* RAM: 32 GB
+* Disk space: 165 GB is recommended for the host, with the following partition requirements:
+** `/opt`: 120 GiB of space must be available
++
+The agent uses `/opt` to install the `/opt/application/netapp` directory and its contents.
+** `/var`: 40 GiB of space must be available
++
+The Console agent requires this space in `/var` because Docker or Podman are architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage` directory. External mounts or symlinks do not work for this space.
+//end::dedicated[]
+
+//tag::vmhost[]
+
+* CPU: 8 cores or 8 vCPUs
+* RAM: 32 GB
+* Disk space: 165 GB (thick provisioned)
+* vSphere 7.0 or higher
+* ESXi host 7.03 or higher
+
+//end::vmhost[]
+
+//tag::manual-uid-range[]
+NOTE: The Console agent reserves the UID and GID range of 19000 to 19200. This range is fixed and cannot be modified. If any third-party software on your host is using UIDs or GIDs within this range, the agent installation will fail. NetApp recommends using a host that is free of third-party software to avoid conflicts. 
+
+//end::manual-uid-range[]
+
+//tag::hypervisor[]
+Hypervisor::
+A bare metal or hosted hypervisor that is certified to run a supported operating system is required.
+//end::hypervisor[]
+
+//tag::os[]
+[[podman-versions]]Operating system and container requirements::
+The Console agent is supported with the following operating systems when using the Console in standard mode or restricted mode. A container orchestration tool is required before you install the agent.
++
+[cols="2a,2a,2a,2a,2a",options="header"]
+|===
+
+| Operating system
+| Supported OS versions
+| Supported agent versions
+| Required container tool
+| SELinux
+
+a | Red Hat Enterprise Linux
+
+|
+9.1 to 9.4
+
+8.6 to 8.10
+
+* English language versions only.
+* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
+
+| 3.9.50 or later with the Console in standard mode or restricted mode
+
+| Podman version 4.6.1 or 4.9.4
+
+<<podman-configuration,View Podman configuration requirements>>.
+
+| Supported in enforcing mode or permissive mode 
+
+* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
+
+.2+| Ubuntu
+
+| 24.04 LTS
+| 3.9.45 or later with the NetApp Console in standard mode or restricted mode
+| Docker Engine 23.06 to 28.0.0.
+| Not supported
+
+| 22.04 LTS
+| 3.9.50 or later
+| Docker Engine 23.0.6 to 28.0.0.
+| Not supported
+
+|===
+//end::os[]
+
+//tag::os-private[]
+[[podman-versions]]Operating system and container requirements::
+The Console agent is supported with the following operating systems when using the Console in private mode. A container orchestration tool is required before you install the agent.
++
+[cols="2a,2a,2a,2a,2a",options="header"]
+|===
+
+| Operating system
+| Supported OS versions
+| Supported agent versions
+| Required container tool
+| SELinux
+
+| Red Hat Enterprise Linux
+
+|
+9.1 to 9.4
+
+8.6 to 8.10
+
+| 3.9.42 or later with the Console in private mode 
+
+| Podman version 4.6.1 or 4.9.4
+
+<<podman-configuration,View Podman configuration requirements>>.
+
+| Supported in enforcing mode or permissive mode ^1^
+
+| Ubuntu
+
+| 22.04 LTS
+| 3.9.29 or later
+| Docker Engine 23.0.6 to 26.0.0
+
+26.0.0 is supported with _new_ agent 3.9.44 or later installations
+
+| Not supported
+
+|===
++
+Notes:
+
+. Management of Cloud Volumes ONTAP systems is not supported by agents that have SELinux enabled on the operating system.
+. The Console agent is supported on English-language versions of these operating systems.
+. For RHEL, the host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
+//end::os-private[]
+
+//tag::cpu-ram[]
+CPU:: 8 cores or 8 vCPUs
+
+RAM:: 32 GB
+//end::cpu-ram[]
+
+//tag::aws-ec2[]
+AWS EC2 instance type::
+An instance type that meets the CPU and RAM requirements above. We recommend t3.2xlarge.
+//end::aws-ec2[]
+
+//tag::aws-key-pair[]
+Key pair::
+When you create the Console agent, you'll need to select an EC2 key pair to use with the instance.
+//end::aws-key-pair[]
+
+//tag::aws-imdsv2[]
+PUT response hop limit when using IMDSv2::
+If IMDSv2 is enabled on the EC2 instance (this is the default setting for new EC2 instances), you must change the PUT response hop limit on the instance to 3. If you don't change the limit on the EC2 instance, you'll receive a UI initialization error when you try to set up the agent.
++
+* link:task-require-imdsv2.html[Require the use of IMDSv2 on Amazon EC2 instances]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit[AWS documentation: Change the PUT response hop limit^]
+//end::aws-imdsv2[]
+
+//tag::azure-vm[]
+Azure VM size::
+An instance type that meets the CPU and RAM requirements above. We recommend Standard_D8s_v3.
+//end::azure-vm[]
+
+//tag::google-machine[]
+Google Cloud machine type::
+An instance type that meets the CPU and RAM requirements above. We recommend n2-standard-8.
++
+The Console agent is supported in Google Cloud on a VM instance with an OS that supports https://cloud.google.com/compute/shielded-vm/docs/shielded-vm[Shielded VM features^]
+//end::google-machine[]
+
+//tag::disk-space[]
+Disk space in /opt:: 100 GiB of space must be available
++
+The agent uses `/opt` to install the `/opt/application/netapp` directory and its contents.
+
+Disk space in /var:: 20 GiB of space must be available
++
+The Console agent requires this space in `/var` because Docker or Podman are architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage` directory. External mounts or symlinks do not work for this space.
+//end::disk-space[]

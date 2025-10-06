@@ -1,0 +1,7 @@
+Endpoints contacted from computers when using the web-based NetApp Console::
++
+Computers that access the Console from a web browser must have the ability to contact several endpoints. You'll need to use the Console to set up the Console agent and for day-to-day use of the Console.
+
++
+
+link:reference-networking-saas-console.html[Prepare networking for the NetApp console].

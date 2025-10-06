@@ -1,0 +1,120 @@
+---
+sidebar: sidebar
+permalink: concept-accounts-aws.html
+keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent
+summary: Learn how the NetApp Console uses AWS credentials to perform actions on your behalf and how those credentials are associated with marketplace subscriptions. Understanding these details can be helpful as you manage the credentials for one or more AWS accounts in the Console. For example, you might want to learn about when to add additional AWS credentials to the Console.
+---
+
+= Learn about AWS credentials and permissions in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Learn how the NetApp Console uses AWS credentials to perform actions on your behalf and how those credentials are associated with marketplace subscriptions. Understanding these details can be helpful as you manage the credentials for one or more AWS accounts in the NetApp Console. For example, you might want to learn about when to add additional AWS credentials.
+
+== Initial AWS credentials
+
+When you deploy an Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console in AWS. The required permissions are listed in the link:task-install-connector-aws-the Console.html#console-permissions-aws[Agent deployment policy for AWS].
+
+When the Console launches the Console agent instance in AWS, it creates an IAM role and an instance profile for the instance. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the Console uses the permissions].
+
+image:diagram_permissions_initial_aws.png["A conceptual image that shows the Console deploying the Console agent in an AWS account. An IAM policy is assigned to an IAM role, which is attached to the Console instance."]
+
+If you add a new Cloud Volumes ONTAP system, the Console selects these AWS credentials by default:
+
+image:screenshot_accounts_select_aws.gif[A screenshot that shows the Switch Account option in the Details & Credentials page.]
+
+Deploy all of your Cloud Volumes ONTAP systems using the initial AWS credentials, or you can add additional credentials.
+
+== Additional AWS credentials
+
+You might add additional AWS credentials to the Console in the following cases:
+
+* To use your existing the Console agent with an additional AWS account
+* To create a new agent in a specific AWS account
+* To create and manage FSx for ONTAP file systems
+
+Review the sections below for more details.
+
+=== Add AWS credentials to use a Console agent with another AWS account
+
+If you want to use the Console with additional AWS accounts, then you can either provide AWS keys for an IAM user or the ARN of a role in a trusted account. The following image shows two additional accounts, one providing permissions through an IAM role in a trusted account and another through the AWS keys of an IAM user:
+
+image:diagram_permissions_multiple_aws.png["A conceptual image that shows two additional accounts. Each has an IAM policy, one is attached to IAM user and the other is attached to an IAM role."]
+
+You would then add the account credentials to the Console by specifying the Amazon Resource Name (ARN) of the IAM role, or the AWS keys for the IAM user.
+
+For example, you can switch between credentials when creating a new Cloud Volumes ONTAP system:
+
+image:screenshot_accounts_switch_aws.png[A screenshot that shows selecting between cloud provider accounts after selecting Switch Account in the Details & Credentials page.]
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws[Learn how to add AWS credentials to an existing agent.]
+
+=== Add AWS credentials to create a Console agent
+
+Adding new AWS credentials to the Console provides the permissions needed to create a Console agent.
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws[Learn how to add AWS credentials to the Console for creating a Console agent]
+
+=== Add AWS credentials for FSx for ONTAP
+
+Add AWS credentials to the Console to provide the necessary permissions to create and manage an FSx for ONTAP system.
+
+https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to add AWS credentials to the Console for Amazon FSx for ONTAP^]
+
+== Credentials and marketplace subscriptions
+
+The credentials that you add to a Console agent must be associated with an AWS Marketplace subscription so that you can pay for Cloud Volumes ONTAP at an hourly rate (PAYGO) and other NetApp data services or through an annual contract.
+link:task-adding-aws-accounts.html#subscribe[Learn how to associate an AWS subscription].
+
+Note the following about AWS credentials and marketplace subscriptions:
+
+* You can associate only one AWS Marketplace subscription with a set of AWS credentials
+* You can replace an existing marketplace subscription with a new subscription
+
+== FAQ
+
+The following questions are related to credentials and subscriptions.
+
+=== How can I securely rotate my AWS credentials?
+
+As described in the sections above, the Console enables you to provide AWS credentials in a few ways: an IAM role associated with the Console agent instance, by assuming an IAM role in a trusted account, or by providing AWS access keys.
+
+With the first two options, the Console uses the AWS Security Token Service to obtain temporary credentials that rotate constantly. This process is the best practice--it's automatic and it's secure.
+
+If you provide the Console with AWS access keys, you should rotate the keys by updating them in the Console at a regular interval. This is a completely manual process.
+
+=== Can I change the AWS Marketplace subscription for Cloud Volumes ONTAP systems?
+
+Yes, you can. When you change the AWS Marketplace subscription that's associated with a set of credentials, all existing and new Cloud Volumes ONTAP systems are charged against the new subscription.
+
+link:task-adding-aws-accounts.html#subscribe[Learn how to associate an AWS subscription].
+
+=== Can I add multiple AWS credentials, each with different marketplace subscriptions?
+
+All AWS credentials that belong to the same AWS account will be associated with the same AWS Marketplace subscription.
+
+If you have multiple AWS credentials that belong to different AWS accounts, then those credentials can be associated with the same AWS Marketplace subscription or with different subscriptions.
+
+=== Can I move existing Cloud Volumes ONTAP systems to a different AWS account?
+
+No, it's not possible to move the AWS resources associated with your Cloud Volumes ONTAP system to a different AWS account.
+
+=== How do credentials work for marketplace deployments and on-premises deployments?
+
+The sections above describe the recommended deployment method for the Console agent, which is from the Console. You can also deploy an agent in AWS from the AWS Marketplace and you can manually install the Console agent software on your own Linux host.
+
+If you use the Marketplace, permissions are provided in the same way. You just need to manually create and set up the IAM role, and then provide permissions for any additional accounts.
+
+For on-premises deployments, you can't set up an IAM role for the Console, but you can provide permissions using AWS access keys.
+
+To learn how to set up permissions, refer to the following pages:
+
+* Standard mode
+** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions[Set up permissions for an AWS Marketplace deployment]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
+* Restricted mode
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]

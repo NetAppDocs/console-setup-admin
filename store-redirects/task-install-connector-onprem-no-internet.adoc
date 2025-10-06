@@ -1,0 +1,4 @@
+---
+permalink: task-install-connector-onprem-no-internet.html
+redirect: bluexp-setup-admin/task-quick-start-private-mode.html
+---

@@ -1,0 +1,30 @@
+Go to the Azure portal and assign the Azure custom role to the Console agent virtual machine for one or more subscriptions.
+
+.Steps
+
+. From the Azure Portal, open the *Subscriptions* service and select your subscription.
++
+It's important to assign the role from the *Subscriptions* service because this specifies the scope of the role assignment at the subscription level. The _scope_ defines the set of resources that the access applies to. If you specify a scope at a different level (for example, at the virtual machine level), your ability to complete actions from within the NetApp Console will be affected.
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview[Microsoft Azure documentation: Understand scope for Azure RBAC^]
+
+. Select *Access control (IAM)* > *Add* > *Add role assignment*.
+
+. In the *Role* tab, select the *Console Operator* role and select *Next*.
++
+NOTE: Console Operator is the default name provided in the policy. If you chose a different name for the role, then select that name instead.
+
+. In the *Members* tab, complete the following steps:
+
+.. Assign access to a *Managed identity*.
+
+.. Select *Select members*, select the subscription in which the Console agent virtual machine was created, under *Managed identity*, choose *Virtual machine*, and then select the Console agent virtual machine.
+
+.. Select *Select*.
+
+.. Select *Next*.
+
+.. Select *Review + assign*.
+
+.. If you want to manage resources in additional Azure subscriptions, switch to that subscription and then repeat these steps.
+

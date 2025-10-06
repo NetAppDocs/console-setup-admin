@@ -1,0 +1,4 @@
+---
+permalink: task-creating-connectors-gcp.html
+redirect: bluexp-setup-admin/concept-install-options-google.html
+---

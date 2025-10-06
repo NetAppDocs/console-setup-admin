@@ -1,0 +1,285 @@
+---
+sidebar: sidebar
+permalink: reference-permissions.html
+keywords: permissions, actions
+summary: To use NetApp Console features and services, you'll need to provide permissions so that the Console can perform operations in your cloud environment. Use the links on this page to quickly access the permissions that you need based on your goal.
+---
+
+= Permissions summary for NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+To use NetApp Console features and services, you'll need to provide permissions so that the Console can perform operations in your cloud environment. Use the links on this page to quickly access the permissions that you need based on your goal.
+
+== AWS permissions
+
+The NetApp Console requires AWS permissions for a Console agent and for individual services.
+
+=== Console agents
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Deploy a Console agent from the Console
+| The user who creates a Console agent from the Console needs specific permissions to deploy the instance in AWS.
+| link:task-install-connector-aws-bluexp.html#aws-permissions-agent[Set up AWS permissions]
+
+| Provide permissions for a Console agent
+| When the Console deploys a Console agent, it attaches a policy to the instance that provides the permissions required to manage resources and processes in your AWS account.
+
+You need to set up the policy yourself if you deploy a Console agent from the AWS Marketplace, if you manually install a Console agent, or if you link:task-adding-aws-accounts.html#add-credentials-agent-aws[add more AWS credentials to a Console agent].
+
+You also need to ensure that the policy is up to date as new permissions are added in subsequent releases.
+| link:reference-permissions-aws.html[AWS permissions for a Console agent]
+
+|===
+
+=== NetApp Backup and Recovery
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Back up on-premises ONTAP clusters to Amazon S3 with NetApp Backup and Recovery
+| When activating backups on your ONTAP volumes, NetApp Backup and Recovery prompts you to enter an access key and secret for an IAM user that has specific permissions.
+| https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-aws.html[Set up S3 permissions for backups^]
+
+|===
+
+=== Cloud Volumes ONTAP
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Provide permissions for Cloud Volumes ONTAP nodes
+| An IAM role must be attached to each Cloud Volumes ONTAP node in AWS. The same is true for the HA mediator. The default option is to let the Console create the IAM roles for you, but you can use your own when creating the system in the Console.
+| https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-iam-roles.html[Learn how to set up the IAM roles yourself^]
+
+|===
+	
+=== NetApp Copy and Sync
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Deploy the data broker in AWS
+| The AWS user account that you use to deploy the data broker must have specific permissions.
+| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws[Permissions required to deploy the data broker in AWS^]
+
+| Provide permissions for the data broker
+| When NetApp Copy and Sync deploys the data broker, it creates an IAM role for the data broker instance. You can deploy the data broker using your own IAM role, if you prefer.
+| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker[Requirements to use your own IAM role with the AWS data broker^]
+
+| Enable AWS access for a manually installed data broker
+| If you use the data broker with a sync relationship that includes an S3 bucket, then you should prepare the Linux host for AWS access. When you install the data broker, you'll need to provide AWS keys for an IAM user that has programmatic access and specific permissions.
+| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-aws[Enabling access to AWS^]
+
+|===
+
+=== FSx for ONTAP
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Create and manage FSx for ONTAP
+| To create or manage an Amazon FSx for NetApp ONTAP system, you need to add AWS credentials to the Console by providing the ARN of an IAM role that gives the Console the permissions needed.
+| https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to set up AWS credentials for FSx^]
+
+|===
+	
+=== NetApp Cloud Tiering
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Tier on-premises ONTAP clusters to Amazon S3
+| When you enable NetApp Cloud Tiering to AWS, the wizard prompts you to enter an access key and secret key. These credentials are passed to the ONTAP cluster so that ONTAP can tier data to the S3 bucket.
+| https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions[Set up S3 permissions for tiering^]
+
+|===
+
+== Azure permissions
+
+The Console requires Azure permissions for a Console agent and for individual services.
+
+=== Console agent
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Deploy a Console agent from the Console
+| When you deploy a Console agent from the Console, you need to use an Azure account or service principal that has permissions to deploy a Console agent VM in Azure.
+| link:task-install-connector-azure-bluexp.html#connector-custom-role[Set up Azure permissions]
+
+| Provide permissions for a Console agent
+a| When the Console deploys a Console agent VM in Azure, it creates a custom role that provides the permissions required to manage resources and processes within that Azure subscription.
+
+You need to set up the custom role yourself if you launch a Console agent from the marketplace, if you manually install a Console agent, or if you link:task-adding-azure-accounts.html#add-credentials-azure[add more Azure credentials to a Console agent].
+
+You also need to ensure that the policy is up to date as new permissions are added in subsequent releases.
+a| link:reference-permissions-azure.html[Azure permissions for a Console agent]
+
+|===
+
+
+=== NetApp Backup and Recovery
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Back up Cloud Volumes ONTAP to Azure blob storage
+a| When using NetApp Backup and Recovery to back up Cloud Volumes ONTAP, you need to add permissions to a Console agent in the following scenarios:
+
+* You want to use "Search & Restore" functionality
+* You want to use customer-managed encryption keys (CMEK)
+a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-azure.html[Back up Cloud Volumes ONTAP data to Azure Blob storage with Backup and Recovery^]
+
+
+| Back up on-premises ONTAP clusters to Azure blob storage
+| When using NetApp Backup and Recovery to back up on-premisesONTAP clusters, you need to add permissions to a Console agent in order to use the "Search & Restore" functionality. 
+|https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-azure.html[Back up on-premises ONTAP data to Azure Blob storage with Backup and Recovery^]
+
+
+|===
+
+	
+=== NetApp Copy and sync
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Deploy the data broker in Azure
+| The Azure user account that you use to deploy the data broker must have the required permissions.
+| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure[Permissions required to deploy the data broker in Azure^]
+
+|===
+	
+== Google Cloud permissions
+
+The Console requires Google Cloud permissions for a Console agent and for individual services.
+
+=== Console agents
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Deploy a Console agent from the Console
+| The Google Cloud user who deploys a Console agent from the Console needs specific permissions to deploy a Console agent in Google Cloud.
+| link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google[Set up permissions to create a Console agent]
+
+| Provide permissions for a Console agent 
+| The service account for a Console agent VM instance must have specific permissions for day-to-day operations. You need to associate the service account with a Console agent during deployment.
+
+You also need to ensure that the policy is up to date as new permissions are added in subsequent releases.
+| link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google[Set up permissions for a Console agent]
+
+|===
+	
+=== NetApp Backup and Recovery
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Back up Cloud Volumes ONTAP to Google Cloud
+a| When using NetApp Backup and Recovery to back up Cloud Volumes ONTAP, you need to add permissions to a Console agent in the following scenarios:
+
+* You want to use "Search & Restore" functionality
+* You want to use customer-managed encryption keys (CMEK)
+a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html[Back up Cloud Volumes ONTAP data to Google Cloud Storage with Backup and Recovery^]
+
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html[Permissions for CMEKs^]
+
+| Back up on-premises ONTAP clusters to Google Cloud
+| When using NetApp Backup and Recovery to back up on-premisesONTAP clusters, you need to add permissions to a Console agent in order to use the "Search & Restore" functionality. 
+| https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-gcp.html[Back up on-premises ONTAP data to Google Cloud Storage with Backup and Recovery^]
+
+|===
+
+
+=== NetApp Copy and Sync
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Deploy the data broker in Google Cloud
+| Ensure that the Google Cloud user who deploys the data broker has the required permissions.
+| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud[Permissions required to deploy the data broker in Google Cloud^]
+
+| Enable Google Cloud access for a manually installed data broker
+| If you plan to use the data broker with a sync relationship that includes a Google Cloud Storage bucket, then you should prepare the Linux host for Google Cloud access. When you install the data broker, you'll need to provide a key for a service account that has specific permissions.
+| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud[Enabling access to Google Cloud^]
+
+|===
+
+== StorageGRID permissions
+
+The Console requires StorageGRID permissions for two services.
+
+=== NetApp Backup and Recovery
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Back up on-premises ONTAP clusters to StorageGRID
+| When you prepare StorageGRID as a backup target for ONTAP clusters, NetApp Backup and Recovery prompts you to enter an access key and secret for an IAM user that has specific permissions.
+| https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html[Prepare StorageGRID as your backup target^]
+
+|===
+	
+=== NetApp Cloud Tiering
+
+[cols=3*,options="header",cols="20,60,20"]
+|===
+| Goal
+| Description
+| Link
+
+| Tier on-premises ONTAP clusters to StorageGRID
+| When you set up NetApp Cloud Tiering to StorageGRID, you need to provide Cloud Tiering with an S3 access key and secret key. Cloud tiering uses the keys to access your buckets.
+|https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html[Prepare tiering to StorageGRID^]
+
+|===

@@ -1,0 +1,56 @@
+.Steps
+
+. Select *Administration > *Credentials*.
+
+. Select *Organization credentials*.
+
+. Select the action menu for a set of credentials that are associated with a Console agent and then select *Configure Subscription*.
++new screenshot needed (TS)
+image:screenshot_gcp_add_subscription.png[A screenshot of the action menu for a set of existing credentials.]
+
+. To configure an existing subscription with the selected credentials, select a Google Cloud project and subscription from the drop-down list, and then select *Configure*.
++
+image:screenshot_gcp_associate.gif[A screenshot of a Google Cloud project and subscription selected for Google Cloud credentials.]
+
+. If you don't already have a subscription, select *Add Subscription > Continue* and follow the steps in the Google Cloud Marketplace.
++
+NOTE: Before you complete the following steps, ensure that you have both Billing Admin privileges in your Google Cloud account as well as a NetApp Console login.
+
+.. After you're redirected to the https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager[NetApp Intelligent Services page on the Google Cloud Marketplace^], ensure that the correct project is selected at the top navigation menu.
++
+image:screenshot_gcp_cvo_marketplace.png[A screenshot of the Cloud Volumes ONTAP marketplace page in Google Cloud.]
+
+.. Select *Subscribe*.
+
+.. Select the appropriate billing account and agree to the terms and conditions.
+
+.. Select *Subscribe*.
++
+This step sends your transfer request to NetApp.
+
+.. On the pop-up dialog box, select *Register with NetApp, Inc.*
++
+This step must be completed to link the Google Cloud subscription with your Console organization or account. The process of linking a subscription isn't complete until you are redirected from this page and then sign in to the Console.
++
+image:screenshot_gcp_marketplace_register.png[A screenshot of a registration pop-up.]
+ 
+.. Complete the steps on the *Subscription Assignment* page:
++
+NOTE: If someone from your organization has already has a marketplace subscription from your billing account, then you will be redirected to https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=[the Cloud Volumes ONTAP page within NetApp Console^] instead. If this is unexpected, contact your NetApp sales team. Google enables only one subscription per Google billing account.
++
+* Select the Console organizations or accounts that you'd like to associate this subscription with.
+* In the *Replace existing subscription* field, choose whether you'd like to automatically replace the existing subscription for one organization or account with this new subscription.
++
+The Console replaces the existing subscription for all credentials in the organization or account with this new subscription. If a set of credentials wasn't ever associated with a subscription, then this new subscription won't be associated with those credentials.
++
+For all other organizations or accounts, you'll need to manually associate the subscription by repeating these steps.
+
+* Select *Save*.
++
+The following video shows the steps to subscribe from the Google Cloud Marketplace:
++
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto, title="Subscribe from the Google Cloud Marketplace"]
+
+.. Once this process is complete, navigate back to the Credentials page in the Console and select this new subscription.
++
+image:screenshot_gcp_associate.gif[A screenshot of the subscription assignment page.]

@@ -1,0 +1,109 @@
+---
+sidebar: sidebar
+permalink: task-upgrade-connector.html
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade
+summary: When you use standard mode or restricted mode, the NetApp Console automatically upgrades your Console agent to the latest release, as long as the Console agent has outbound internet access to obtain the software update.
+---
+
+= Manage Console agent upgrades
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+
+When you use standard mode or restricted mode, the NetApp Console automatically upgrades your Console agent to the latest release, as long as the Console agent has outbound internet access to obtain the software update.
+
+If you need to manually manage when the Console agent is upgraded, you can disable automatic upgrades for standard mode or restricted mode.
+
+
+
+
+== Disable automatic upgrades
+
+
+Disabling auto-upgrade for your Console agent consists of two steps. First you need to ensure that your Console agent is healthy and up-to-date. Then you edit a configuration file to turn off automatic upgrades.
+
+
+NOTE: You can only disable automatic upgrades if you have a Console agent version 3.9.48 or higher. 
+
+=== Verify the health of your agent
+
+You should verify that your agent is stable and all containers running on your agent VM are healthy and running. After you disable automatic upgrades, your agent VM stops checking for new services or upgrade packages. 
+
+Use one of the following commands to verify your Console agent. All services should have a status of _Running_. If this isn't the case, contact NetApp support before disabling auto-upgrade.
+
+Docker (for Ubuntu and VCenter deployments):: 
++
+[source,cli]
+docker ps -a
+
+Podman:: 
++
+[source,cli]
+podman ps -a
+
+=== Disable auto-upgrade for the agent
+
+You disable automatic upgrades by setting the _isUpgradeDisabled_ flag in the _com/opt/application/netapp/service-manager-2/config.json_ file. By default, this flag is set to false and your agent is automatically upgraded. You can set this flag to true to disable automatic upgrades. You should be familiar with JSON syntax before completing this step. 
+
+To re-enable auto-upgrade, use these steps and set the _isUpgradeDisabled_ flag to false.
+
+.Steps
+
+. Ensure you have verified that your agent is up-to-date and healthy.
+
+. Create a backup copy of the _/opt/application/netapp/service-manager-2/config.json_ file to ensure you can revert your changes. 
+
+. Edit the _/opt/application/netapp/service-manager-2/config.json_ file and change the value of the _isUpgradeDisabled_ flag to true.
++
+[source,json]
+
+  "isUpgradeDisabled": true,
+
+
+
+. Save your file.
+
+. Restart the service manager 2 service by running the following command:
+
++
+[source,cli]
+systemctl restart netapp-service-manager.service
+
+. Run the following command and verify that the agent's status shows as _active(running)_:
+_
++
+[source,cli]
+systemctl status netapp-service-manager.service
+_
+
+
+
+== Upgrade the Console agent
+
+The Console agent needs to restart during the upgrade process so the NetApp Console will be unavailable during the upgrade.
+
+.Steps
+
+. Download the Console agent software from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^].
+
+. Copy the installer to the Linux host.
+
+. Assign permissions to run the script.
++
+[source,cli]
+chmod +x /path/NetApp-Console-Agent-Offline-<version>
++
+Where <version> is the version of the Console agent that you downloaded.
+
+. Run the installation script:
++
+[source,cli]
+sudo /path/NetApp-Console-Agent-Offline-<version>
++
+Where <version> is the version of the agent that you downloaded.
+
+. After the upgrade is complete, you can verify the agent's version by going to *Administration > Support > Agents*.

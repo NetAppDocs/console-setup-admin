@@ -1,0 +1,53 @@
+---
+sidebar: sidebar
+permalink: task-uninstall-connector.html
+keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent
+summary: Uninstall the a Console agent to troubleshoot issues or to permanently remove it from the host. The steps that you need to use depends on the deployment mode that you're using. Once you have removed a Console agent from your environment, you can remove it from the Console.
+---
+
+= Uninstall and remove a Console agent
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Uninstall the a Console agent to troubleshoot issues or to permanently remove it from the host. The steps that you need to use depends on the deployment mode that you're using. Once you have removed a Console agent from your environment, you can remove it from the Console.
+
+link:concept-modes.html[Learn about NetApp Console deployment modes].
+
+== Uninstall the agent when using standard or restricted mode
+
+If you're using standard mode or restricted mode (in other words, the agent host has outbound connectivity), then you should follow the steps below to uninstall the agent.
+
+.Steps
+
+. Connect to the Linux VM for the agent.
+
+. From the Linux host, run the uninstallation script:
++
+`/opt/application/netapp/service-manager-2/uninstall.sh [silent]`
++
+_silent_ runs the script without prompting you for confirmation.
+
+
+
+
+== Remove Console agents from the Console
+
+If a Console agent is inactive, you can remove it from the list of agents. You might do this if you delete the agent virtual machine or if you uninstall the agent software.
+
+Note the following about removing a Console agent:
+
+* This action doesn't delete the virtual machine.
+* This action can't be reverted--once you remove a Console agent, you can't add it back.
+
+.Steps
+
+. Select *Administration > Agents*.
+
+. On the *Overview* page , select the action menu for an inactive agent and select *Remove agent*.
+
+. Enter the name of the agent to confirm and then select *Remove*.
+

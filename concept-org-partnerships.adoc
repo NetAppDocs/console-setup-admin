@@ -1,0 +1,74 @@
+---
+sidebar: sidebar
+permalink: concept-org-partnerships.html
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP
+summary: Creating partnerships between organizations in the NetApp Console lets organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
+---
+
+= Partnerships in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+
+
+[.lead]
+Creating partnerships between organizations the NetApp Console lets partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
+
+.Required roles
+Partnership admin link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+Partnerships allow secure management of NetApp resources across organizations using role-driven relationships in the Console. The initiating organization grants access to its resources, while the accepting organization provides the users or service accounts to be granted access. Partnerships are established through a self-service workflow, giving the initiating organization full control over which resources are shared, what roles are assigned, and the ability to onboard, manage, or revoke partner access as needed.
+
+Customers can authorize MSPs or resellers to manage NetApp environments without requiring complicated setups. Customers can control which clusters partners can access and what roles they have, and can revoke access at any time to maintain security and compliance.
+
+As a partner, you gain centralized visibility and control across customer environments. You can easily switch to a customer's organization to manage resources, run data services, and monitor health within defined boundaries, reducing custom tooling and ensuring alignment with each customer’s policies.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Assign one or more users the Partnership admin role
+Assign ene or more users in both the initiating and receiving organizations  the Partnership admin role to create and manage partnerships. you can assign the Partnership viewer role to users who only need to view partnerships, and not manage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Share your organization ID with the initiating organization
+
+[role="quick-margin-para"]
+To initiate a partnership, the initiator must know the organization ID of the target organization. Only the respective organization can access this organization ID. Share it directly with the initiating organization outside the NetApp Console via email or another method. 
+
+The initiating organization is the organization granting access to its resources.
+
+image:diagram-partnership-org-id.png[diagram that shows initial organizations]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Initiate the partnership within NetApp Console
+
+[role="quick-margin-para"]
+The organization initiating the partnership does so from within the NetApp Console by sending a partnership request. 
+
+image:diagram-partnership-accept.png[diagram that shows partnership acceptance]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Approve the partnership
+
+[role="quick-margin-para"]
+The receiving organization must accept the request. 
+
+The receiving organization is the organization being granted access to resources.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Assign users to the partnership
+
+[role="quick-margin-para"]
+The receiving organization assigns specific users or service accounts from your organization to the partnership. The initiating organization assigns roles to these users.
+
+image:diagram-partnership-add-user.png[diagram that shows user assignments]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Grant assigned users access to resources
+
+[role="quick-margin-para"]
+If you are the initiating organization, you can grant access to specific resources to the users that were assigned to the partnership. You can revoke access at any time. 
+
+You do this by assigning roles for particular projects or folders within your organization.
+
+image:diagram-partnership-resources.png[diagram that shows resource sharing]
+
+
+

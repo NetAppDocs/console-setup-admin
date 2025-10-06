@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: concept-install-options-azure.html
+keywords: install connector azure, azure install connector, connector azure, azure connector, installation options, azure marketplace, manual install
+summary: There are a few different ways to create a Console agent in Azure. Directly from the NetApp Console is the most common way.
+---
+
+= Console agent installation options in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are a few different ways to create a Console agent in Azure. Directly from the NetApp Console is the most common way.
+
+The following installation options are available:
+
+* link:task-install-connector-azure-bluexp.html[Create a Console agent directly from the NetApp Console] (this is the standard option)
++
+This action launches a VM running Linux and the Console agent software in a VNet of your choice.
+
+* link:task-install-connector-azure-marketplace.html[Create a Console agent from the Azure Marketplace]
++
+This action also launches a VM running Linux and the Console agent software, but the deployment is initiated directly from the Azure Marketplace, rather than from the Console.
+
+* link:task-install-connector-azure-manual.html[Download and manually install the software on your own Linux host]
+
+The installation option that you choose impacts how you prepare for installation. This includes how you provide the Console agent with the required permissions that it needs to authenticate and manage resources in Azure.
