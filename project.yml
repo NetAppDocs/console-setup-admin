@@ -31,7 +31,7 @@ sidebar:
               url: /concept-modes.html
         - title: Get started with the NetApp assistant
           entries:
-            - title: Use the NetApp assistant
+            - title: Use the NetApp Console assistant
               url: /task-console-assistant.html
         - title: Get started with standard mode
           entries:
