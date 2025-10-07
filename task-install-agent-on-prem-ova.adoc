@@ -26,7 +26,7 @@ Before installation, make sure your VM host meets the requirements and the Conso
 Make sure your host machine meets installation requirements before installing the Console agent.
 
 
-include::_include/os-reqs.adoc[tag=vmhost]]
+include::_include/os-reqs.adoc[tag=vmhost]
 
 NOTE: Install the agent in a vCenter environment rather than directly on an ESXi host. 
 
