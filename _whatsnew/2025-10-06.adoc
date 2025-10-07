@@ -3,7 +3,7 @@
 
 == BlueXP is now NetApp Console
 
-The NetApp Console, built on the enhanced and restructured BlueXP foundation, provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration, that is highly secure and compliant.
+The NetApp Console, built on the enhanced and restructured BlueXP foundation, provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration that is highly secure and compliant.
 
 
 
@@ -20,9 +20,9 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== Expanded Storage menu
 
-The *Storage* menu also includes *Alerts* to view ONTAP system alerts and *Lifecycle planning* (formerly *Economic efficiency*) to identify unused or underutilized resources.
+The *Storage* menu includes *Alerts* to view ONTAP system alerts and *Lifecycle planning* (formerly *Economic efficiency*) to identify unused or underutilized resources.
 
-NetApp has also moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
+NetApp has moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png[A screenshot of the Storage menu.]
 
