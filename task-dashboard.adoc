@@ -29,7 +29,7 @@ Each pane in the Home page requires different user roles:
 * *ONTAP alerts pane*: Folder or project admin, Operations Support Analyst, Organization admin, Organization viewer, Super admin, Super viewer
 * *Storage performance capacity pane*: Ability to see the NetApp Console Systems page
 * *Licenses and subscriptions pane*: Folder or project admin, Organization admin, Organization viewer, Super admin, Super viewer
-* *Ransomware Resilience pane*: Folder or project admin, Organization admin, Ransomware protection admin, Ransomware protection viewer, Super admin, Super viewer
+* *Ransomware Resilience pane*: Folder or project admin, Organization admin, Ransomware Resilience admin, Ransomware Resilience viewer, Super admin, Super viewer
 * *Backup and Recovery pane*: Backup and recovery backup admin, Backup and recovery super admin, Backup and recovery backup viewer, Backup and recovery clone admin, Folder or project admin, Organization admin, Backup and recovery restore admin, Super admin, Super viewer
 
 If you do not have permissions to access a pane, the pane displays a message indicating you lack permissions to use it.
@@ -182,7 +182,7 @@ Find out if workloads are at risk of ransomware attacks or protected with the Ne
 
 The data refreshes every 5 minutes and matches the data shown in the NetApp Ransomware Resilience Dashboard.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html[Learn about NetApp Ransomware Resilience^].
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html[Learn about NetApp Ransomware Resilience^].
 
 
 .Steps
