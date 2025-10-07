@@ -15,24 +15,28 @@ summary: You can assign the following roles to users to provide them access to N
 [.lead]
 You can assign the following roles to users to provide them access to NetApp Backup and Recovery within the Console. Backup and Recovery roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization. How you assign roles depends on your own business and storage management practices.
 
-Backup and Recovery uses the following roles: 
+The service uses the following roles that are specific to NetApp Backup and Recovery. 
 
-* *Backup and recovery super admin*: Perform any actions.
-* *Backup and recovery admin*: Perform backups to local snapshots, replicate to secondary storage, and back up to object storage.
-* *Backup and recovery restore admin*: Restore workloads. 
-* *Backup and recovery clone admin*: Clone applications and data.
-* *Backup and recovery viewer*: View backup and recovery information.
+* *Backup and Recovery super admin*: Perform any actions in NetApp Backup and Recovery.
+* *Backup and Recovery Backup admin*: Perform backups to local snapshots, replicate to secondary storage, and back up to object storage actions in NetApp Backup and Recovery. 
+* *Backup and Recovery Restore admin*: Restore workloads using NetApp Backup and Recovery. 
+* *Backup and Recovery Clone admin*: Clone applications and data using NetApp Backup and Recovery. 
+* *Backup and Recovery viewer*: View information in NetApp Backup and Recovery, but not perform any actions.
 
-The following table indicates the actions that each role can perform. 
+For details about all NetApp Console access roles, see https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[the Console setup and administration documentation^].
+
+== Roles used for common actions
+
+The following table indicates the actions that each NetApp Backup and Recovery role can perform for all workloads. 
 
 [cols=6*,options="header",cols="20,20,15,15a,15a,15a",width="100%"]
 |===
 | Feature and action
-| Backup and recovery super admin
-| Backup admin
-| Restore admin
-| Clone admin
-| Viewer
+| Backup and Recovery super admin
+| Backup and Recovery backup admin
+| Backup and Recovery restore admin
+| Backup and Recovery clone admin
+| Backup and Recovery viewer
 
 |Add, edit, or delete hosts | Yes | No | No | No | No
 |Install plugins | Yes | No | No | No | No
@@ -52,7 +56,7 @@ The following table indicates the actions that each role can perform.
 
 6+| *Policies and protection*: 
 | View protection plans | Yes | Yes  |Yes |Yes | Yes
-| Create, modify, or delete protection plans | Yes | Yes  | No |No | No
+| Create, modify, or delete protection plans | Yes | Yes  |No |No | No
 | Restore workloads | Yes | No  |Yes |No | No
 | Create, split, or delete clones | Yes | No  |No |Yes | No
 | Create, modify, or delete policy | Yes | Yes  |No |No | No
@@ -74,8 +78,216 @@ The following table indicates the actions that each role can perform.
 | Associate or remove instance credentials| Yes | Yes |Yes |No | No
 
 6+| *Buckets*:
-| View storage buckets| Yes | Yes  |Yes |Yes | Yes
-| Create, edit, or delete storage buckets| Yes | Yes |No |No | No
+| View buckets| Yes | Yes  |Yes |Yes | Yes
+| Create, edit, or delete bucket| Yes | Yes |No |No | No
+
+|===
+
+== Roles used for workload-specific actions
+The following table indicates the actions that each NetApp Backup and Recovery role can perform for specific workloads.
+
+=== Kubernetes workloads
+This table indicates the actions that each NetApp Backup and Recovery role can perform for actions specific to Kubernetes workloads.
+
+
+[cols=5*,options="header",cols="20,20,15,15a,15a",width="100%"]
+|===
+| Feature and action
+| Backup and Recovery super admin
+| Backup and Recovery backup admin
+| Backup and Recovery restore admin
+// | Backup and Recovery clone admin
+| Backup and Recovery viewer
+
+
+| View clusters, namespaces, storage classes, and API resources
+| Yes 
+| Yes  
+|Yes 
+// |Yes 
+| Yes
+
+| Add new Kubernetes clusters
+| Yes 
+| Yes 
+|No 
+// |No 
+| No
+
+| Update cluster configurations
+| Yes 
+| No  
+|No 
+// |No 
+| No
+
+| Remove clusters from management
+| Yes 
+| No 
+|No 
+// |No 
+| No
+
+| View applications
+| Yes 
+| Yes  
+|Yes 
+// |Yes 
+| Yes
+
+| Create and define new applications
+| Yes 
+| Yes 
+|No 
+// |No 
+| No
+
+| Update application configurations
+| Yes 
+| Yes  
+|No 
+// |No 
+| No
+
+| Remove applications from management
+| Yes 
+| Yes  
+|No 
+// |No 
+| No
+
+| View protected resources and backup status
+| Yes 
+| Yes 
+|Yes 
+// |Yes 
+| Yes
+
+| Create backups and protect applications with policies
+| Yes 
+| Yes  
+|No 
+// |No 
+| No
+
+| Unprotect apps and delete backups
+| Yes 
+| Yes 
+|No 
+// |No 
+| No
+
+| View recovery points and resource viewer results
+| Yes 
+| Yes  
+|Yes 
+// |Yes 
+| Yes
+
+| Restore applications from recovery points
+| Yes 
+| No 
+|Yes 
+// |No 
+| No
+
+| View Kubernetes backup policies
+| Yes 
+| Yes  
+|Yes 
+// |Yes 
+| Yes
+
+| Create Kubernetes backup policies
+| Yes 
+| Yes 
+|Yes 
+// |No 
+| No
+
+| Update backup policies
+| Yes 
+| Yes  
+|Yes 
+// |No 
+| No
+
+| Delete backup policies
+| Yes 
+| Yes 
+|Yes 
+// |No 
+| No
+
+| View execution hooks and hook sources
+| Yes 
+| Yes  
+|Yes 
+// |Yes 
+| Yes
+
+| Create execution hooks and hook sources
+| Yes 
+| Yes 
+|Yes 
+// |No 
+| No
+
+| Update execution hooks and hook sources
+| Yes 
+| Yes  
+|Yes 
+// |No 
+| No
+
+| Delete execution hooks and hook sources
+| Yes 
+| Yes 
+|Yes 
+// |No 
+| No
+
+| View execution hook templates
+| Yes 
+| Yes  
+|Yes 
+// |Yes 
+| Yes
+
+| Create execution hook templates
+| Yes 
+| Yes 
+|Yes 
+// |No 
+| No
+
+| Update execution hook templates
+| Yes 
+| Yes  
+|Yes 
+// |No 
+| No
+
+| Delete execution hook templates
+| Yes 
+| Yes 
+|Yes 
+// |No 
+| No
+
+| View workload summary and analytics dashboards
+| Yes 
+| Yes  
+|Yes 
+// |Yes 
+| Yes
+
+| View StorageGRID buckets and storage targets
+| Yes 
+| Yes 
+|Yes 
+// |Yes 
+| Yes
 
 
 |===
