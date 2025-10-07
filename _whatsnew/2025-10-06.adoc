@@ -24,7 +24,7 @@ The *Storage* menu includes *Alerts* to view ONTAP system alerts and *Lifecycle 
 
 NetApp has moved Keystone to the *Storage* menu, where you can manage your NetApp Keystone subscriptions and view your usage.
 
-image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png[A screenshot of the Storage menu.]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png[A screenshot of the Storage menu.]
 
 
 ==== Administration menu
