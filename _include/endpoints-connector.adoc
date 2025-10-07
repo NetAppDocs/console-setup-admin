@@ -73,7 +73,9 @@ The endpoints listed below are all CNAME entries.
 //tag::nss-endpoints[]
 | 
 \https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
+| \https://support.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
 | \https://signin.b2c.netapp.com | To update NetApp Support Site (NSS) credentials or to add new NSS credentials to the NetApp Console.
+| \https:\\support.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
 //end::nss-endpoints[]
 
 //tag::saas-endpoints[]
