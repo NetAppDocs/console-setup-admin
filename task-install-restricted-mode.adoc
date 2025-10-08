@@ -176,7 +176,7 @@ Set up the NetApp Console.
 --
 include::_include/manual-install.adoc[tag=before]
 
-* You need to disable the configuration check that verifies outbound connectivity during installation. The manual install fails if this check is not disabled. link:task-troubleshoot-connector.html[Learn how to disable configuration checks for manual installations.]
+* You need to disable the configuration check that verifies outbound connectivity during installation. The manual install fails if this check is not disabled. link:task-troubleshoot-agent.html[Learn how to disable configuration checks for manual installations.]
 
 * Depending on your operating system, either Podman or Docker Engine is required before you install the Console agent.
 

@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-console-assistant.html
 keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard
-summary: If you are a first-time user of the NetApp Console, the Console Assistant guides you through the initial setup process. The Assistant helps you add a NetApp Support Site (NSS) account, add a Console agent, add a cluster, and add a license or subscription, making it easier to get started with managing your data.
+summary: If you are a first-time user of the NetApp Console, the Console assistant guides you through the initial setup process. The assistant helps you add a NetApp Support Site (NSS) account, add a Console agent, add a cluster, and add a license or subscription, making it easier to get started with managing your data.
 ---
  
-= Get started using the NetApp Console Assistant
+= Get started using the NetApp Console assistant
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,18 +13,18 @@ summary: If you are a first-time user of the NetApp Console, the Console Assista
 :imagesdir: ./media/
  
 [.lead]
-If you are a first-time user of the NetApp Console with the Organization admin role, you can use the Console Assistant to guide you through the initial setup process. The Assistant helps you add a NetApp Support Site (NSS) account, add a Console agent, add a cluster, and add a license or subscription, making it easier to get started with managing your data.
+If you are a first-time user of the NetApp Console with the Organization admin role, you can use the Console assistant to guide you through the initial setup process. The assistant helps you add a NetApp Support Site (NSS) account, add a Console agent, add a cluster, and add a license or subscription, making it easier to get started with managing your data.
  
-== Required roles to access the Console Assistant
-The Console Assistant is only available to users with the Organization admin role.
+== Required roles to access the Console assistant
+The Console assistant is only available to users with the Organization admin role.
  
-== When does the Console Assistant appear?
+== When does the Console assistant appear?
  
-The Console Assistant is available on the NetApp Console Home page until mandatory setup tasks are completed.
+The Console assistant is available on the NetApp Console Home page until mandatory setup tasks are completed.
  
-//image:screenshot-home-assistant.png[Console Assistant on the Home page]
+//image:screenshot-home-assistant.png[Console assistant on the Home page]
  
-Use the Assistant to complete these tasks, some of which are mandatory:
+Use the assistant to complete these tasks, some of which are mandatory:
  
 * Add a NetApp Support Site (NSS) account.
 * Connect to your storage estate by deploying a Console agent (mandatory step).
@@ -32,16 +32,16 @@ Use the Assistant to complete these tasks, some of which are mandatory:
 * Add a marketplace subscription or PAYGO license.
 * Open data services links.
  
-== Enable the Console Assistant
+== Enable the Console assistant
  
-By default, the NetApp Console displays the Console Assistant on the Home page for first-time users who have the Organization admin role.
+By default, the NetApp Console displays the Console assistant on the Home page for first-time users who have the Organization admin role.
  
-TIP: You can dismiss the Assistant for yourself only after you or someone else completes the mandatory items. After you complete the mandatory items, the Assistant is dismissed for all users in your organization and does not appear again.
+TIP: You can dismiss the assistant for yourself only after you or someone else completes the mandatory items. After you complete the mandatory items, the assistant is dismissed for all users in your organization and does not appear again.
  
  
-== Use the Console Assistant to get started
+== Use the Console assistant to get started
  
-The Console Assistant guides you through setting up your NetApp Console environment with these tasks:
+The Console assistant guides you through setting up your NetApp Console environment with these tasks:
  
  
 * Add a NetApp Support Site (NSS) account.
