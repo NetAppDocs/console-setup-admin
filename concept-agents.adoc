@@ -157,7 +157,7 @@ In standard or restricted mode, the Console agent updates automatically if it ha
 
 include::_include/vm-maintenance.adoc[]
 
-<<connectors-must-be-operational-at-all-times,The Console agent must be operational at all times>>.
+<<agents-must-be-operational-at-all-times,The Console agent must be operational at all times>>.
 
 == Multiple systems and agents
 
