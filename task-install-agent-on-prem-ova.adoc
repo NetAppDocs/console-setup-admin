@@ -260,7 +260,7 @@ b. Select *Actions* > *New VM from this template*
 The vSphere task bar shows the progress as the Console agent is deployed.
 . Power on the VM.
 
-NOTE: If the deployment fails, you can access the validation report and logs from the agent host. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
+NOTE: If the deployment fails, you can access the validation report and logs from the agent host. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
 
 == Register the Console agent with NetApp Console

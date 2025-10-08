@@ -207,7 +207,7 @@ sidebar:
             - title: Work with multiple Console agents
               url: /task-manage-multiple-connectors.html
             - title: Troubleshoot the Console agent
-              url: /task-troubleshoot-connector.html
+              url: /task-troubleshoot-agent.html
             - title: Uninstall and remove the Console agent
               url: /task-uninstall-connector.html
             - title: Default configuration
