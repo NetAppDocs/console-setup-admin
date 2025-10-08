@@ -202,7 +202,7 @@ sidebar:
               url: /task-configuring-proxy.html
             - title: Require the use of IMDSv2 on EC2 instances
               url: /task-require-imdsv2.html
-            - title: Manage connector upgrades
+            - title: Manage agent upgrades
               url: /task-upgrade-agent.html
             - title: Work with multiple Console agents
               url: /task-manage-multiple-agents.html
