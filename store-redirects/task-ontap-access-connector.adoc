@@ -1,0 +1,4 @@
+---
+permalink: task-ontap-access-connector.html
+redirect: console-setup-admin/task-ontap-access-agent.html
+---

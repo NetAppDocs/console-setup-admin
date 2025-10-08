@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-ontap-access-connector.html
+permalink: task-ontap-access-agent.html
 keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent
 summary: Administrators can configure the NetApp Console to prompt a user for their ONTAP credentials.
 ---

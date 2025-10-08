@@ -29,7 +29,7 @@ The NetApp Console requires AWS permissions for a Console agent and for individu
 
 | Deploy a Console agent from the Console
 | The user who creates a Console agent from the Console needs specific permissions to deploy the instance in AWS.
-| link:task-install-connector-aws-bluexp.html#aws-permissions-agent[Set up AWS permissions]
+| link:task-install-agent-aws-console.html#aws-permissions-agent[Set up AWS permissions]
 
 | Provide permissions for a Console agent
 | When the Console deploys a Console agent, it attaches a policy to the instance that provides the permissions required to manage resources and processes in your AWS account.
@@ -199,13 +199,13 @@ The Console requires Google Cloud permissions for a Console agent and for indivi
 
 | Deploy a Console agent from the Console
 | The Google Cloud user who deploys a Console agent from the Console needs specific permissions to deploy a Console agent in Google Cloud.
-| link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google[Set up permissions to create a Console agent]
+| link:task-install-agent-google-console-gcloud.html#console-permissions-google[Set up permissions to create a Console agent]
 
 | Provide permissions for a Console agent 
 | The service account for a Console agent VM instance must have specific permissions for day-to-day operations. You need to associate the service account with a Console agent during deployment.
 
 You also need to ensure that the policy is up to date as new permissions are added in subsequent releases.
-| link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google[Set up permissions for a Console agent]
+| link:task-install-agent-google-console-gcloud.html#console-permissions-google[Set up permissions for a Console agent]
 
 |===
 	

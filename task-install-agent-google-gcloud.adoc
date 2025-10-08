@@ -17,7 +17,7 @@ To create a Console agent in Google Cloud by using Google Cloud, you need to set
 
 .Before you begin
 
-* You should have a link:concept-connectors.html[understanding of Console agents].
+* You should have a link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Set up networking
@@ -179,7 +179,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis[Google Cloud do
 
 Create a Console agent by using Google Cloud.
 
-Creating the Console agent deploys a VM instance in Google Cloud with the default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after you create the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+Creating the Console agent deploys a VM instance in Google Cloud with the default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after you create the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
 
 .Before you begin

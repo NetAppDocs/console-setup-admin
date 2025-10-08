@@ -21,7 +21,7 @@ The custom role shown below provides the permissions that a Console agent needs 
 
 You'll need to apply this custom role to a service account that gets attached to the Console agent VM.
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google[Set up Google Cloud permissions for standard mode]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google[Set up Google Cloud permissions for standard mode]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
 
 

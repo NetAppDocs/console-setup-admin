@@ -179,7 +179,7 @@ Refer to link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-c
 * Create a policy that includes the permissions required to create a Console agent.
 +
 ** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[View the permissions needed for FSx for ONTAP^]
-** link:task-install-connector-aws-bluexp.html#aws-permissions-agent[View the agent deployment policy]
+** link:task-install-agent-aws-console.html#aws-permissions-agent[View the agent deployment policy]
 
 . Copy the Role ARN of the IAM role so that you can paste it in the Console in the next step.
 

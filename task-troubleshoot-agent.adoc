@@ -64,7 +64,7 @@ Use one of the following commands to verify your Console agent. All services sho
 
 For more detailed information about accessing the Console agent diagnostics, see the following topics:
 
-* link:task-maintain-connectors.html#connect-linux-host[Check the Console agent status (for Linux host deployments)]
+* link:task-maintain-agents.html#connect-linux-host[Check the Console agent status (for Linux host deployments)]
 * link:task-agent-vm-config.html#connect-vcenter-host[Check the Console agent status (for VCenter deployments)]
 ====
 
