@@ -29,7 +29,7 @@ sidebar:
               url: /concept-connectors.html
             - title: Deployment modes
               url: /concept-modes.html
-        - title: Get started with the NetApp assistant
+        - title: Get started with the NetApp Console assistant
           entries:
             - title: Use the NetApp Console assistant
               url: /task-console-assistant.html
