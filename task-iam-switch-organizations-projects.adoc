@@ -65,7 +65,7 @@ If you have multiple Console agents, you can switch between them to see the syst
 
 .Related information
 
-link:task-iam-associate-connectors.html[Associate agents with folders and projects].
+link:task-iam-associate-agents.html[Associate agents with folders and projects].
 
 == Related information
 

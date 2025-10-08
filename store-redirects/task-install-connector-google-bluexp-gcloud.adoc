@@ -1,0 +1,4 @@
+---
+permalink: task-install-connector-google-bluexp-gcloud.html
+redirect: console-setup-admin/task-install-agent-google-console-gcloud.html
+---

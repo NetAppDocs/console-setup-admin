@@ -40,11 +40,11 @@ The system contacts these endpoints in two scenarios:
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -56,10 +56,10 @@ Console agents must have access to the same endpoints as the NetApp Console, plu
 
 Set up network endpoint access before installing the Console agent.
 
-** link:task-install-connector-aws-bluexp.html#networking-aws-agent[Set up AWS network access for a Console agent]
-** link:task-install-connector-azure-bluexp.html#networking-azure-agent[Set up Azure network access for a Console agent]
-** link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent[Set up Google Cloud network access for a Console agent]
-** link:task-install-connector-on-prem.html#network-access-agent[Set up on-premises network access for a Console agent]
+** link:task-install-agent-aws-console.html#networking-aws-agent[Set up AWS network access for a Console agent]
+** link:task-install-agent-azure-console.html#networking-azure-agent[Set up Azure network access for a Console agent]
+** link:task-install-agent-google-console-gcloud.html#networking-gcp-agent[Set up Google Cloud network access for a Console agent]
+** link:task-install-agent-on-prem.html#network-access-agent[Set up on-premises network access for a Console agent]
 
 == Prepare networking for Cloud Volumes ONTAP
 

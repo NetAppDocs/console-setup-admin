@@ -17,7 +17,7 @@ To create a Console agent in Google Cloud by using Google Cloud, you need to set
 
 .Before you begin
 
-* You should have a link:concept-connectors.html[understanding of Console agents].
+* You should have a link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Set up networking
@@ -34,20 +34,20 @@ include::_include/networking.adoc[tag=networks]
 include::_include/networking.adoc[tag=outbound]
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+include::_include/endpoints-agent.adoc[tag=google-cloud-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -157,7 +157,7 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 [[console-permissions-google]]
 == Step 3: Set up permissions for the Console agent operations
 
-include::_include/google-set-up-connector-permissions.adoc[]
+include::_include/google-set-up-agent-permissions.adoc[]
 
 == Step 4: Set up shared VPC permissions
 
@@ -179,7 +179,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis[Google Cloud do
 
 Create a Console agent by using Google Cloud.
 
-Creating the Console agent deploys a VM instance in Google Cloud with the default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after you create the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+Creating the Console agent deploys a VM instance in Google Cloud with the default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after you create the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
 
 .Before you begin

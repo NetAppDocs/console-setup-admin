@@ -1,0 +1,4 @@
+---
+permalink: reference-connector-maint-console.html
+redirect: console-setup-admin/reference-agent-maint-console.html
+---

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-maintain-connectors.html
+permalink: task-maintain-agents.html
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health
 summary: Maintaining the operating system on the agent host is your responsibility. For example, you should apply security updates to the operating system on the Console agent host by following your company's standard procedures for operating system distribution.
 ---
@@ -15,7 +15,7 @@ summary: Maintaining the operating system on the agent host is your responsibili
 [.lead]
 Maintaining the operating system on the Console agent host is your (the customer's) responsibility. For example, you (the customer) should apply security updates to the operating system on the agent host by following your company's standard procedures for operating system distribution.
 
-TIP: If you have an existing agent, you should be aware of link:reference-connector-operating-system-changes.html[changes to supported Linux operating systems].
+TIP: If you have an existing agent, you should be aware of link:reference-agent-operating-system-changes.html[changes to supported Linux operating systems].
 
 == Operating system patches and the agent
 
@@ -29,7 +29,7 @@ The following table lists the CPU and RAM requirements:
 
 include::_include/os-reqs.adoc[tag=cpu-ram]
 
-link:reference-connector-default-config.html[Learn about the default configuration for the agent].
+link:reference-agent-default-config.html[Learn about the default configuration for the agent].
 
 [[monitor-disk-space]]
 == Monitor the agent
@@ -64,7 +64,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations
 
 If you need to, stop and start the agent VM using your cloud provider's console or standard on-premises procedures. 
 
-link:concept-connectors.html#connectors-must-be-operational-at-all-times[Be aware that the Console agent must be operational at all times].
+link:concept-agents.html#agents-must-be-operational-at-all-times[Be aware that the Console agent must be operational at all times].
 
 
 [[connect-linux-host]]

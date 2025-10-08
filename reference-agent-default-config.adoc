@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: reference-connector-default-config.html
+permalink: reference-agent-default-config.html
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration
 summary: Learn more about the Console agent before you deploy it..
 ---
@@ -28,7 +28,7 @@ If you deployed a Console agent from the Console or from the cloud provider's ma
 +
 The operating system does not include a GUI. You must use a terminal to access the system.
 * The installation includes Docker Engine, which is the required container orchestration tool.
-* The user name for the EC2 Linux instance is ubuntu (for agents created prior to May 2023, the user name was ec2-user).
+* The user name for the EC2 Linux instance is ubuntu (for agents created prior to May 2023, the user name is ec2-user).
 * The default system disk is a 100 GiB gp2 disk.
 
 === Azure details

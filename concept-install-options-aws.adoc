@@ -17,14 +17,14 @@ There are a few different ways to create a Console agent in AWS. Directly from t
 
 The following installation options are available:
 
-* link:task-install-connector-aws-bluexp.html[Create the Console agent directly from the Console] (this is the standard option)
+* link:task-install-agent-aws-console.html[Create the Console agent directly from the Console] (this is the standard option)
 +
 This action launches an EC2 instance running Linux and the Console agent software in a VPC of your choice.
 
-* link:task-install-connector-aws-marketplace.html[Create a Console agent from the AWS Marketplace]
+* link:task-install-agent-aws-marketplace.html[Create a Console agent from the AWS Marketplace]
 +
 This action also launches an EC2 instance running Linux and the Console agent software, but the deployment is initiated directly from the AWS Marketplace, rather than from the Console.
 
-* link:task-install-connector-aws-manual.html[Download and manually install the software on your own Linux host]
+* link:task-install-agent-aws-manual.html[Download and manually install the software on your own Linux host]
 
 The installation option that you choose impacts how you prepare for installation. This includes how you provide the Console with the required permissions that it needs to authenticate and manage resources in AWS.

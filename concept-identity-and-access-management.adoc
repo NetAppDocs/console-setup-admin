@@ -196,7 +196,7 @@ The following examples describe how you might use IAM to manage your Console org
 * link:task-iam-manage-folders-projects.html[Organize your resources in NetApp Console with folders and projects]
 * link:task-iam-manage-members-permissions.html[Manage NetApp Console members and their permissions]
 * link:task-iam-manage-resources.html[Manage the resource hierarchy in your NetApp Console organization]
-* link:task-iam-associate-connectors.html[Associate agents with folders and projects]
+* link:task-iam-associate-agents.html[Associate agents with folders and projects]
 * link:task-iam-switch-organizations-projects.html[Switch between NetApp Console projects and organizations]
 * link:task-iam-rename-organization.html[Rename your NetApp Console organization]
 * link:task-iam-audit-actions-timeline.html[Monitor or audit IAM activity]

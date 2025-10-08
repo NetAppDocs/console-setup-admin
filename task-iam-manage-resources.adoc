@@ -68,7 +68,7 @@ Note that you can only select from the folders and projects for which you have a
 
 If you discover a resource using a Console agent, associate the Console agent with the project to grant access. Otherwise, the Console agent and its associated resource are not accessible by members without the _Organization admin_ role.
 
-link:task-iam-associate-connectors.html[Learn how to associate a Console agent with a folder or project].
+link:task-iam-associate-agents.html[Learn how to associate a Console agent with a folder or project].
 
 [#view-folders-and-projects]
 == View the folders and projects associated with a resource

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-azure-marketplace.html
+permalink: task-install-agent-azure-marketplace.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector, marketplace, azure marketplace
 summary: To create a Console agent from the Azure Marketplace, you need to set up your networking, prepare Azure permissions, review instance requirements, and then create the Console agent.
 ---
@@ -17,7 +17,7 @@ You can create a Console agent in Azure directly from the Azure Marketplace. To 
 
 .Before you begin
 
-* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should have an link:concept-agents.html[understanding of Console agents].
 * Review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Set up networking
@@ -37,22 +37,22 @@ include::_include/networking.adoc[tag=networks]
 include::_include/networking.adoc[tag=outbound]
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -138,7 +138,7 @@ Launch the Console agent directly from the Azure Marketplace.
 
 .About this task
 
-Creating the Console agent from the Azure Marketplace sets up a virtual machine with a default configuration. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent]. 
+Creating the Console agent from the Azure Marketplace sets up a virtual machine with a default configuration. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent]. 
 
 .Before you begin
 

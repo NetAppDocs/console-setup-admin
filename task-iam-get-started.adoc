@@ -58,7 +58,7 @@ Adding or discovering a system in the Console automatically associates the resou
 
 [role="quick-margin-list"]
 * link:task-iam-manage-resources.html[Learn how to manage your organization's resource hierarchy].
-* link:task-iam-associate-connectors.html[Learn how to associate a Console agent with a folder or project].
+* link:task-iam-associate-agents.html[Learn how to associate a Console agent with a folder or project].
 
 .Related information
 

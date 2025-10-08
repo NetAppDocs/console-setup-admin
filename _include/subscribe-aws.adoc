@@ -4,7 +4,7 @@ video::096e1740-d115-44cf-8c27-b051011611eb[panopto, title="Subscribe to NetApp 
 
 .Steps
 
-. Select *Administration > *Credentials*.
+. Select *Administration > Credentials*.
 
 . Select *Organization credentials*.
 

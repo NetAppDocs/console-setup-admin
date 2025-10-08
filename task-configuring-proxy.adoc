@@ -110,7 +110,7 @@ Ensure that the certificate file is in PEM format and resides in the same direct
 
 === Modify the transparent proxy for the Console agent
 
-You can update a Console agent's existing transparent proxy server by using the `proxy update` command or remove the transparent proxy server by using the `proxy remove` command. For more information, review the documentation for link:reference-connector-maint-console.html[Agent maintenance console].
+You can update a Console agent's existing transparent proxy server by using the `proxy update` command or remove the transparent proxy server by using the `proxy remove` command. For more information, review the documentation for link:reference-agent-maint-console.html[Agent maintenance console].
 
 IMPORTANT: Once you have configured a proxy, you cannot change the proxy type. If you need to change the proxy type, you remove the Console agent and add a new agent with the new proxy type.
 

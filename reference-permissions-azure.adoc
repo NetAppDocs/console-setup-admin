@@ -31,8 +31,8 @@ You'll need to ensure that the role is up to date as new permissions are added i
 
 * To view step-by-step instructions for using these policies, refer to the following pages:
 
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions[Set up permissions for an Azure Marketplace deployment]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions[Set up permissions for an Azure Marketplace deployment]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
 
 
