@@ -15,7 +15,7 @@ summary: You might belong to multiple Console organizations or have permissions 
 [.lead]
 You might belong to multiple Console organizations or have permissions to access multiple projects or agents within an organization. When needed, you can easily switch between organizations, projects, and Console agents to access the resources associated with that organization, project, or agent.
 
-TIP: You might belong to multiple organizations if another organization invites you to join or if you create one yourself. You can create an additional organization by using the API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html[Learn how to create a new organization^]
+TIP: You might belong to multiple organizations if another organization invites you to join or if you create one yourself. You can create an additional organization by using the API. https://docs.netapp.com/us-en/netapp-automation/tenancyv4/post-organizations.html[Learn how to create a new organization^]
 
 == Switch between organizations
 
@@ -71,4 +71,4 @@ link:task-iam-associate-agents.html[Associate agents with folders and projects].
 
 * link:concept-identity-and-access-management.html[Learn about identity and access in NetApp Console]
 * link:task-iam-get-started.html[Get started with identity and access]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]
+* https://docs.netapp.com/us-en/netapp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

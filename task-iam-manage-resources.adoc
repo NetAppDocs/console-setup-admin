@@ -109,4 +109,4 @@ NOTE: To remove a discovered resource from the entire organization, remove the s
 
 * link:concept-identity-and-access-management.html[Learn about identity and access in NetApp Console]
 * link:task-iam-get-started.html[Get started with identity and access in NetApp Console]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]
+* https://docs.netapp.com/us-en/netapp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

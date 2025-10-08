@@ -38,7 +38,7 @@ Note the following:
 
 .API for BlueXP IAM
 
-This change introduces a new API for BlueXP IAM, but it is backwards compatible with the previous tenancy API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for BlueXP IAM^]
+This change introduces a new API for BlueXP IAM, but it is backwards compatible with the previous tenancy API. https://docs.netapp.com/us-en/netapp-automation/tenancyv4/overview.html[Learn about the API for BlueXP IAM^]
 
 .Supported deployment modes
 

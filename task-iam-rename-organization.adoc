@@ -63,4 +63,4 @@ image:screenshot-iam-project-id.png[A screenshot of the folders and projects tab
 
 * link:concept-identity-and-access-management.html[Learn about identity and access management]
 * link:task-iam-get-started.html[Get started with identity and access]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]
+* https://docs.netapp.com/us-en/netapp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

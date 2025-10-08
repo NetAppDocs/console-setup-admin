@@ -47,9 +47,9 @@ Learn how to create or discover resources:
 * https://docs.netapp.com/us-en/storage-management-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP^]
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html[Azure NetApp Files^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html[Cloud Volumes ONTAP^]
-* https://docs.netapp.com/us-en/bluexp-e-series/index.html[E-Series systems^]
-* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html[On-premises ONTAP clusters^]
-* https://docs.netapp.com/us-en/bluexp-storagegrid/index.html[StorageGRID^]
+* https://docs.netapp.com/us-en/storage-management-e-series/index.html[E-Series systems^]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html[On-premises ONTAP clusters^]
+* https://docs.netapp.com/us-en/storage-management-storagegrid/index.html[StorageGRID^]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Associate resources with additional projects
 
@@ -63,4 +63,4 @@ Adding or discovering a system in the Console automatically associates the resou
 .Related information
 
 * link:concept-identity-and-access-management.html[Learn about identity and access management in NetApp Console]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]
+* https://docs.netapp.com/us-en/netapp-automation/tenancyv4/overview.html[Learn about the API for identity and access^]

@@ -123,9 +123,9 @@ TIP: Caching optimizes performance, but may cause the data on this pane to diffe
 
 View alerts regarding certain events that occur in ONTAP. They are a combination of EMS and metric-based alerts.
 
-For details about ONTAP alerts, refer to https://docs.netapp.com/us-en/bluexp-alerts/index.html[About ONTAP alerts^].
+For details about ONTAP alerts, refer to https://docs.netapp.com/us-en/console-alerts/index.html[About ONTAP alerts^].
 
-For a list of alerts that you might see, refer to https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html[View potential risks in ONTAP storage^].
+For a list of alerts that you might see, refer to https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html[View potential risks in ONTAP storage^].
 
 
 .Steps
@@ -191,11 +191,11 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 
 . Do one of the following in the Ransomware Resilience pane: 
 
-* Select *View* to go to the NetApp Ransomware Resilience Dashboard. For details, refer to https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html[Monitor workload health using the NetApp Ransomware Resilience Dashboard^].
+* Select *View* to go to the NetApp Ransomware Resilience Dashboard. For details, refer to https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html[Monitor workload health using the NetApp Ransomware Resilience Dashboard^].
 
-* Review "Recommended actions" in the NetApp Ransomware Resilience Dashboard. For details, refer to https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html[Review protection recommendations on the NetApp Ransomware Resilience Dashboard^].
+* Review "Recommended actions" in the NetApp Ransomware Resilience Dashboard. For details, refer to https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html[Review protection recommendations on the NetApp Ransomware Resilience Dashboard^].
 
-* Select the alerts link to review alerts in NetApp Ransomware Resilience Alerts page. For details, refer https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html[Handle detected ransomware alerts with NetApp Ransomware Resilience^].
+* Select the alerts link to review alerts in NetApp Ransomware Resilience Alerts page. For details, refer https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html[Handle detected ransomware alerts with NetApp Ransomware Resilience^].
 
 
 == View Backup and Recovery status

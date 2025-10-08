@@ -275,7 +275,7 @@ After the process is complete, the Console agent is available for use from the C
 NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
 
-If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 working environment appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]
+If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 working environment appear on the *Systems* page automatically. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]
 
 
 

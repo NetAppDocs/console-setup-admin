@@ -45,7 +45,7 @@ An agent is required to add Cloud Volumes ONTAP _node-based_ licenses because th
 +
 You don't need a Console agent to add an on-premises ONTAP cluster to the Console, but one is required for additional Console features and data services.
 +
-https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html[Learn more about discovery and management options for on-premises ONTAP clusters^]
+https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html[Learn more about discovery and management options for on-premises ONTAP clusters^]
 
 * Software updates
 
