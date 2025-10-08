@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-aws-bluexp.html
+permalink: task-install-agent-aws-console.html
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector
 summary: You can create a Console agent in AWS directly from the NetApp Console. Before creating a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
 ---
@@ -17,7 +17,7 @@ You can create a Console agent in AWS directly from the NetApp Console. Before c
 
 .Before you begin
 
-* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should have an link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 
@@ -36,20 +36,20 @@ include::_include/networking.adoc[tag=networks]
 include::_include/networking.adoc[tag=outbound]
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+include::_include/endpoints-agent.adoc[tag=aws-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -211,7 +211,7 @@ Create the Console agent directly from the the Console web-based console.
 
 .About this task
 
-* Creating the Console agent from the Console deploys an EC2 instance in AWS using a default configuration. Do not switch to a smaller EC2 instance with fewer CPUs or less RAM after creating the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+* Creating the Console agent from the Console deploys an EC2 instance in AWS using a default configuration. Do not switch to a smaller EC2 instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
 * When the Console creates the Console agent, it creates an IAM role and an instance profile for the instance. This role includes permissions that enables the Console agent to manage AWS resources. Ensure the role is updated as new permissions are added in future releases.
  link:reference-permissions-aws.html[Learn more about the IAM policy for the Console agent].

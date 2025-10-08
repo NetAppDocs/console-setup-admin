@@ -1,6 +1,6 @@
 .Steps
 
-. Select *Administration > *Credentials*.
+. Select *Administration > Credentials*.
 
 . Select *Organization credentials*.
 

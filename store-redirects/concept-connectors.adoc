@@ -1,0 +1,4 @@
+---
+permalink: concept-connectors.html
+redirect: console-setup-admin/concept-agents.html
+---

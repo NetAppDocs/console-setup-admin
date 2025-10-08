@@ -1,5 +1,4 @@
 ---
-
 permalink: task-troubleshoot-connector.html
 redirect: console-setup-admin/task-troubleshoot-agent.html
 ---

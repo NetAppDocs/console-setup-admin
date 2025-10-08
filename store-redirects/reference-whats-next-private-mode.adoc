@@ -1,6 +1,4 @@
 ---
-sidebar: sidebar
 permalink: reference-whats-next-private-mode.html
-redirect: bluexp-setup-admin/task-quick-start-private-mode.html
+redirect: console-setup-admin/reference-whats-next-restricted-mode.html
 ---
-

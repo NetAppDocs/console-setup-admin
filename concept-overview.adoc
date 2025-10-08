@@ -138,7 +138,7 @@ The Console provides identity and access management (IAM) for resource and acces
 
 A Console agent is needed for some additional features and data services. It enables you to manage resources and processes across your on-premises and cloud environments. You need it to manage some systems (for example, Cloud Volumes ONTAP) and to use some NetApp data services.
 
-link:concept-connectors.html[Learn more about Console agents].
+link:concept-agents.html[Learn more about Console agents].
 
 === Deployment modes
 

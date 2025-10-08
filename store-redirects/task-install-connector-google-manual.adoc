@@ -1,0 +1,4 @@
+---
+permalink: task-install-connector-google-manual.html
+redirect: console-setup-admin/task-install-agent-google-manual.html
+---

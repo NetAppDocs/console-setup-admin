@@ -116,9 +116,9 @@ The Console works as follows in standard mode:
 Outbound communication::
 Connectivity is required from a Console agent to the Console SaaS layer, to your cloud provider's publicly available resources, and to other essential components for day-to-day operations.
 +
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent[Endpoints that an agent contacts in AWS]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent[Endpoints that an agent contacts in Azure]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent[Endpoints that an agent contacts in Google Cloud]
+* link:task-install-agent-aws-console.html#networking-aws-agent[Endpoints that an agent contacts in AWS]
+* link:task-install-agent-azure-console.html#networking-azure-agent[Endpoints that an agent contacts in Azure]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent[Endpoints that an agent contacts in Google Cloud]
 
 Supported location for an agent::
 In standard mode, an agent is supported in the cloud or on your premises.

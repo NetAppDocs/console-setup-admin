@@ -81,7 +81,7 @@ NOTE: Console agents previous to version 4.0.0 need additional endpoints. If you
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
 |\https://cdn.auth0.com
 
@@ -100,27 +100,27 @@ The Console agent's network location must have outbound internet access. It need
 | Endpoints
 | Purpose
 2+| *AWS environments*
-include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+include::_include/endpoints-agent.adoc[tag=aws-endpoints]
 
 2+| *Azure environments*
 
-include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=azure-gov-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-gov-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
 
 2+| *Google Cloud environments*
 
-include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+include::_include/endpoints-agent.adoc[tag=google-cloud-endpoints]
 
 2+| *NetApp Console endpoints*
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-iam-associate-connectors.html
+permalink: task-iam-associate-agents.html
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector,
 summary: If members of your organization need to use a Console agent in another project, you need to associate that Console agent with the respective project.
 ---
@@ -52,7 +52,7 @@ link:task-iam-manage-resources.html#associate-resource[Learn how to associate a 
 
 .Related information
 
-* link:concept-connectors.html[Learn about NetApp Console agents]
+* link:concept-agents.html[Learn about NetApp Console agents]
 * link:concept-identity-and-access-management.html[Learn about NetApp Console identity and access management]
 * link:task-iam-get-started.html[Get started with identity and access]
 * https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for identity and access management^]

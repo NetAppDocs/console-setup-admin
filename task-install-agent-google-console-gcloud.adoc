@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-google-bluexp-gcloud.html
+permalink: task-install-agent-google-console-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector
 summary: To create a Console agent in Google Cloud from the NetApp Consoel or by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
 ---
@@ -17,7 +17,7 @@ You can create a Console agent in Google Cloud from the Console. You need to set
 
 .Before you begin
 
-* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should have an link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 [[networking-gcp-agent]]
@@ -35,20 +35,20 @@ include::_include/networking.adoc[tag=networks]
 include::_include/networking.adoc[tag=outbound]
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+include::_include/endpoints-agent.adoc[tag=google-cloud-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -158,7 +158,7 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 [[console-permissions-google]]
 == Step 3: Set up permissions for the Console agent operations
 
-include::_include/google-set-up-connector-permissions.adoc[]
+include::_include/google-set-up-agent-permissions.adoc[]
 
 == Step 4: Set up shared VPC permissions
 
@@ -182,7 +182,7 @@ Create a Console agent directly from the Console.
 
 .About this task
 
-Creating the Console agent deploys a virtual machine instance in Google Cloud using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+Creating the Console agent deploys a virtual machine instance in Google Cloud using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
 
 .Before you begin

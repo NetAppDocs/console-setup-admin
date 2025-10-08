@@ -1,0 +1,4 @@
+---
+permalink: task-install-agent-aws-bluexp.html
+redirect: console-setup-admin/task-install-agent-aws-console.html
+---

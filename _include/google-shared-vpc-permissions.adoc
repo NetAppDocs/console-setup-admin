@@ -18,7 +18,7 @@ This table is for reference and your environment should reflect the permissions 
 | Purpose
 
 | Google account to deploy the agent | Custom | Service Project
-a| link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google[Agent deployment policy]
+a| link:task-install-agent-google-console-gcloud.html#agent-permissions-google[Agent deployment policy]
 a| compute.networkUser
 | Deploying the agent in the service project
 
