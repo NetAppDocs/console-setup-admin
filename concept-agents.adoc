@@ -21,7 +21,7 @@ Some Console features and services are available if you don't deploy a Console a
 
 * Amazon FSx for NetApp ONTAP
 +
-Some actions require a Console agent or a NetApp Workloads link. https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html[Learn which actions require a Console agent or link^]
+Some actions require a Console agent or a NetApp Workloads link. https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html[Learn which actions require a Console agent or link^]
 
 * Automation hub
 
@@ -94,7 +94,7 @@ You can install agents in the following locations:
 
 * Microsoft Azure
 +
-Deploy a Console agent in Azure in the same region as the Cloud Volumes ONTAP systems it manages. Alternatively, deploy it in the https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies[Azure region pair^]. This ensures that an Azure Private Link connection is used between Cloud Volumes ONTAP and its associated storage accounts. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html[Learn how Cloud Volumes ONTAP uses an Azure Private Link^]
+Deploy a Console agent in Azure in the same region as the Cloud Volumes ONTAP systems it manages. Alternatively, deploy it in the https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies[Azure region pair^]. This ensures that an Azure Private Link connection is used between Cloud Volumes ONTAP and its associated storage accounts. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html[Learn how Cloud Volumes ONTAP uses an Azure Private Link^]
 
 * Google Cloud
 +

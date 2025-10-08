@@ -72,7 +72,7 @@ Some NetApp data services as well as Cloud Volumes ONTAP require the agent to ha
 
 ** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html[Endpoints for Cloud Volumes ONTAP in Azure]
 
-** link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access[Endpoints for Cloud Volumes ONTAP in Google Cloud]
+** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access[Endpoints for Cloud Volumes ONTAP in Google Cloud]
 
 
 https://docs.netapp.com/us-en/data-services-family/[Refer to the respective NetApp data services documentation.^]

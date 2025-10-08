@@ -44,9 +44,9 @@ Add or discover resources (systems) to the Console. Organization members manage 
 Learn how to create or discover resources:
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/bluexp-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP^]
-* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html[Azure NetApp Files^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html[Cloud Volumes ONTAP^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP^]
+* https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html[Azure NetApp Files^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html[Cloud Volumes ONTAP^]
 * https://docs.netapp.com/us-en/bluexp-e-series/index.html[E-Series systems^]
 * https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html[On-premises ONTAP clusters^]
 * https://docs.netapp.com/us-en/bluexp-storagegrid/index.html[StorageGRID^]

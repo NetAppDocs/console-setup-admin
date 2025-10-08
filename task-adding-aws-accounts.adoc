@@ -29,7 +29,7 @@ Adding new AWS credentials to the Console provides the permissions needed to cre
 
 * Add AWS credentials to the Console for FSx for ONTAP
 +
-Add new AWS credentials to the Console to create and manage FSx for ONTAP. https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to set up permissions for FSx for ONTAP^]
+Add new AWS credentials to the Console to create and manage FSx for ONTAP. https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to set up permissions for FSx for ONTAP^]
 
 == How to rotate credentials
 
@@ -178,7 +178,7 @@ For example, the policy should look like this:
 Refer to link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html[AWS Identity and Access Management  (IAM) documentation^] for more information on cross account resource access in IAM.
 * Create a policy that includes the permissions required to create a Console agent.
 +
-** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[View the permissions needed for FSx for ONTAP^]
+** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[View the permissions needed for FSx for ONTAP^]
 ** link:task-install-agent-aws-console.html#aws-permissions-agent[View the agent deployment policy]
 
 . Copy the Role ARN of the IAM role so that you can paste it in the Console in the next step.
@@ -212,7 +212,7 @@ image:screenshot-settings-icon-organization.png[A screenshot that shows the Sett
 
 == Add credentials to the Console for Amazon FSx for ONTAP
 
-For details, refer to the https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[the Console documentation for Amazon FSx for ONTAP^]
+For details, refer to the https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[the Console documentation for Amazon FSx for ONTAP^]
 
 [[subscribe]]
 == Configure an AWS subscription

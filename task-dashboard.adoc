@@ -208,7 +208,7 @@ TIP: Caching optimizes performance, but may cause the data on this pane to diffe
 
 .Steps
 . From the NetApp Console menu, review the Backup and Recovery pane.
-. Select *View* to go to the NetApp Backup and Recovery Dashboard. For details, refer to https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html[NetApp Backup and Recovery documentation^].
+. Select *View* to go to the NetApp Backup and Recovery Dashboard. For details, refer to https://docs.netapp.com/us-en/data-services-backup-recovery/index.html[NetApp Backup and Recovery documentation^].
 
 
 

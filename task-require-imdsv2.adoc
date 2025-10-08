@@ -90,7 +90,7 @@ NOTE: The `http-tokens` parameter sets IMDSv2 to required. When `http-tokens` is
 
 .. Repeat these steps for other Cloud Volumes ONTAP instances, including the HA mediator.
 
-.. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-state.html[Stop and start the Cloud Volumes ONTAP instances^]
+.. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-managing-state.html[Stop and start the Cloud Volumes ONTAP instances^]
 
 .Result
 
