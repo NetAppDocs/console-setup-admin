@@ -31,7 +31,7 @@ sidebar:
               url: /concept-modes.html
         - title: Get started with the NetApp assistant
           entries:
-            - title: Use the NetApp assistant
+            - title: Use the NetApp Console assistant
               url: /task-console-assistant.html
         - title: Get started with standard mode
           entries:
@@ -207,7 +207,7 @@ sidebar:
             - title: Work with multiple Console agents
               url: /task-manage-multiple-connectors.html
             - title: Troubleshoot the Console agent
-              url: /task-troubleshoot-connector.html
+              url: /task-troubleshoot-agent.html
             - title: Uninstall and remove the Console agent
               url: /task-uninstall-connector.html
             - title: Default configuration

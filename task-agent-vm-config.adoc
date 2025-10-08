@@ -129,7 +129,7 @@ Access diagnostic tools to troubleshoot issues with the Console agent. NetApp Su
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
 . Enter `3` to view the Support and Diagnostics menu.
 . Enter `1` to access the diagnostic tools and follow the on-screen prompts.
-+ For example, you can verify that all agent services are running. link:task-troubleshoot-connector.html#check-agent-status[Check the Console agent status^].
++ For example, you can verify that all agent services are running. link:task-troubleshoot-agent.html#check-agent-status[Check the Console agent status^].
 
 === Access the agent diagnostic tools remotely
 You can access diagnostic tools remotely with a tool such as Putty. Enable SSH access to the agent VM by assigning a one-time password.

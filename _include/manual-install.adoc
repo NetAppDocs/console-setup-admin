@@ -44,7 +44,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 Where <version> is the version of the Console agent that you downloaded.
 
-. If installing in a Government Cloud environment, disable the configuration checks. link:task-troubleshoot-connector.html#disable-config-check[Learn how to disable configuration checks for manual installations.]
+. If installing in a Government Cloud environment, disable the configuration checks. link:task-troubleshoot-agent.html#disable-config-check[Learn how to disable configuration checks for manual installations.]
 
 . Run the installation script.
 +
@@ -112,7 +112,7 @@ Esc:wq
 +
 At the end of the installation, the Console agent service (occm) restarts twice if you specified a proxy server.
 
-NOTE: If the installation fails, you can view the installation report and logs to help you fix the issues. link:task-troubleshoot-connector.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
+NOTE: If the installation fails, you can view the installation report and logs to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
 
 

@@ -124,7 +124,7 @@ The Console agent OVA for VMware offers a pre-configured VM image for quick depl
 When you deploy a Console agent from the NetApp Console, you now have the option to validate the agent configuration. If the Console fails to deploy the agent, it provides a downloadable report to help you troubleshoot. 
 
 === Improved troubleshooting for Console agents
-The Console agent has improved error messages that help you better understand issues. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html[Learn how to troubleshoot Console agents.]
+The Console agent has improved error messages that help you better understand issues. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html[Learn how to troubleshoot Console agents.]
 
 == NetApp Console
 
