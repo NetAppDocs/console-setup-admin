@@ -17,7 +17,7 @@ To manually install the Console agent on your own Linux host, you need to review
 
 .Before you begin
 
-* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should have an link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Review host requirements
@@ -57,20 +57,20 @@ include::_include/endpoints-console.adoc[]
 
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+include::_include/endpoints-agent.adoc[tag=google-cloud-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -88,7 +88,7 @@ include::_include/networking.adoc[tag=ntp]
 [[agent-permissions-google]]
 == Step 4: Set up permissions for the Console agent
 
-include::_include/google-set-up-connector-permissions.adoc[]
+include::_include/google-set-up-agent-permissions.adoc[]
 
 == Step 5: Set up shared VPC permissions
 

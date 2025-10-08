@@ -56,7 +56,7 @@ include::_include/endpoints-console.adoc[]
 // start tabbed area
 //Endpoints contacted from the Console agent
 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 
 NOTE: A Console agent installed on your premises cannot manage resources in Google Cloud. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
 
@@ -68,20 +68,20 @@ NOTE: A Console agent installed on your premises cannot manage resources in Goog
 --
 When the Console agent is installed on-premises, it needs network access to the following AWS endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in AWS.
 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+include::_include/endpoints-agent.adoc[tag=aws-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 --
@@ -96,15 +96,15 @@ When the Console agent is installed on-premises, it needs network access to the 
 | Purpose
 
 
-include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 

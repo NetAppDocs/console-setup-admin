@@ -150,7 +150,7 @@ If you just created these credentials in your cloud provider, it might take a fe
 
 .Before you begin
 
-You need to create a Console agent before you can change Console settings. link:concept-connectors.html#connector-installation[Learn how to create a Console agent].
+You need to create a Console agent before you can change Console settings. link:concept-agents.html#agent-installation[Learn how to create a Console agent].
 
 .Steps
 

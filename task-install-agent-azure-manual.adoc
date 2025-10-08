@@ -17,7 +17,7 @@ To manually install the Console agent on your own Linux host, you need to review
 
 .Before you begin
 
-* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should have an link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Review host requirements
@@ -60,22 +60,22 @@ include::_include/endpoints-console.adoc[]
 
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 

@@ -17,7 +17,7 @@ Learn how the NetApp Console uses Azure credentials to perform actions on your b
 
 == Initial Azure credentials
 
-When you deploy a Console agent from the Console, you need to use an Azure account or service principal that has permissions to deploy the Console agent virtual machine. The required permissions are listed in the link:task-install-connector-azure-bluexp.html#connector-custom-role[Agent deployment policy for Azure].
+When you deploy a Console agent from the Console, you need to use an Azure account or service principal that has permissions to deploy the Console agent virtual machine. The required permissions are listed in the link:task-install-agent-azure-console.html#agent-custom-role[Agent deployment policy for Azure].
 
 When the Console deploys the Console agent virtual machine in Azure, it enables a https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[system-assigned managed identity^] on the virtual machine, creates a custom role, and assigns it to the virtual machine. The role provides the Console with the permissions required to manage resources and processes within that Azure subscription. link:reference-permissions-azure.html[Review how the Console uses the permissions].
 

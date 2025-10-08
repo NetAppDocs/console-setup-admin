@@ -115,7 +115,7 @@ BlueXP supports several access roles that you can assign to the members of your 
 
 link:reference-iam-predefined-roles.html[Learn about access roles].
 
-[#associate-connectors]
+[#associate-agents]
 === Connectors
 
 When an _Organization admin_ creates a Connector, BlueXP automatically associates that Connector with the organization and the currently selected project. The _Organization admin_ automatically has access to that Connector from anywhere in the organization. But if you have other members in your organization with different roles, those members can only access that Connector from the project in which it was created, unless you associate that Connector with other projects.

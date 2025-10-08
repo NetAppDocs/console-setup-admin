@@ -17,7 +17,7 @@ You create a Console agent in AWS directly from the AWS Marketplace. To create a
 
 .Before you begin
 
-* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should have an link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Set up networking
@@ -34,20 +34,20 @@ include::_include/networking.adoc[tag=networks]
 include::_include/networking.adoc[tag=outbound]
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+include::_include/endpoints-agent.adoc[tag=aws-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -93,7 +93,7 @@ Create the Console agent directly from the AWS Marketplace.
 
 .About this task
 
-Creating the Console agent from the AWS Marketplace deploys an EC2 instance in AWS using a default configuration. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+Creating the Console agent from the AWS Marketplace deploys an EC2 instance in AWS using a default configuration. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
 .Before you begin
 

@@ -18,7 +18,7 @@ To create a Console agent in Azure from the NetApp Console, you need to set up y
 
 .Before you begin
 
-* You should have an link:concept-connectors.html[understanding of Console agents].
+* You should have an link:concept-agents.html[understanding of Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 
@@ -40,22 +40,22 @@ include::_include/networking.adoc[tag=networks]
 include::_include/networking.adoc[tag=outbound]
 
 //Endpoints contacted from the Console agent 
-include::_include/endpoints-connector.adoc[tag=intro]
+include::_include/endpoints-agent.adoc[tag=intro]
 +
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
 
-include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=nss-endpoints]
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=saas-endpoints]
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-connector.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
@@ -74,7 +74,7 @@ include::_include/networking.adoc[tag=ntp]
 +
 You need to implement this networking requirement after you create the Console agent.
 
-[[connector-custom-role]]
+[[agent-custom-role]]
 == Step 2: Create a Console agent deployment policy (custom role)
 
 You need to create a custom role that has permissions to deploy the Console agent in Azure. 
@@ -300,7 +300,7 @@ Create the Console agent directly from the NetApp Console.
 
 .About this task
 
-* Creating the Console agent from the Console deploys a virtual machine in Azure using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-connector-default-config.html[Learn about the default configuration for the Console agent].
+* Creating the Console agent from the Console deploys a virtual machine in Azure using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
 * When the Console deploys the Console agent, it creates a custom role and assigns it to the Console agent VM. This role includes permissions that enables the Console agent to manage Azure resources. You need to ensure that the role is kept up to date as new permissions are added in subsequent releases. link:reference-permissions-azure.html[Learn more about the custom role for the Console agent].
 

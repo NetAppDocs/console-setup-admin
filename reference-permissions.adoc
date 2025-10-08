@@ -133,7 +133,7 @@ The Console requires Azure permissions for a Console agent and for individual se
 
 | Deploy a Console agent from the Console
 | When you deploy a Console agent from the Console, you need to use an Azure account or service principal that has permissions to deploy a Console agent VM in Azure.
-| link:task-install-connector-azure-bluexp.html#connector-custom-role[Set up Azure permissions]
+| link:task-install-agent-azure-console.html#agent-custom-role[Set up Azure permissions]
 
 | Provide permissions for a Console agent
 a| When the Console deploys a Console agent VM in Azure, it creates a custom role that provides the permissions required to manage resources and processes within that Azure subscription.

@@ -228,7 +228,7 @@ Replacing the current marketplace subscription with a new subscription changes t
 
 .Before you begin
 
-You need to create a Console agent before you can configure a subscription. link:concept-connectors.html#connector-installation[Learn how to create a Console agent].
+You need to create a Console agent before you can configure a subscription. link:concept-agents.html#agent-installation[Learn how to create a Console agent].
 
 include::_include/subscribe-aws.adoc[]
 

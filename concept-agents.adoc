@@ -78,7 +78,7 @@ In standard mode, the Console requires a Console agent for:
 
 You always need a Console agent to use the Console in restricted mode.
 
-[[connectors-must-be-operational-at-all-times]]
+[[agents-must-be-operational-at-all-times]]
 == Console agents must be operational at all times
 
 Console agents are a fundamental part of the NetApp Console. It's your responsibility (the customer) to ensure that relevant agents are up, operational, and accessible at all times. The Console can handle short agent outages, but you must fix infrastructure failures quickly.
@@ -112,7 +112,7 @@ To use the Console in restricted mode, you install a Console agent and access th
 
 link:concept-modes.html[Learn about NetApp Console deployment modes].
 
-[[connector-installation]]
+[[agent-installation]]
 == How to install a Console agent
 
 You can install a Console agent directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host or in your VCenter environment. How you get started depends on whether you're using the Console in standard mode or restricted mode.
@@ -134,7 +134,7 @@ To learn how to set up permissions, refer to the following:
 ** link:concept-install-options-aws.html[Agent installation options in AWS]
 ** link:concept-install-options-azure.html[Agent installation options in Azure]
 ** link:concept-install-options-google.html[Agent installation options in Google Cloud]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure[Set up cloud permissions for on-premises deployments]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure[Set up cloud permissions for on-premises deployments]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
 
 

@@ -17,7 +17,7 @@ Learn how the NetApp Console uses AWS credentials to perform actions on your beh
 
 == Initial AWS credentials
 
-When you deploy an Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console in AWS. The required permissions are listed in the link:task-install-connector-aws-the Console.html#console-permissions-aws[Agent deployment policy for AWS].
+When you deploy an Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console in AWS. The required permissions are listed in the link:task-install-agent-aws-the Console.html#console-permissions-aws[Agent deployment policy for AWS].
 
 When the Console launches the Console agent instance in AWS, it creates an IAM role and an instance profile for the instance. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the Console uses the permissions].
 
@@ -114,7 +114,7 @@ For on-premises deployments, you can't set up an IAM role for the Console, but y
 To learn how to set up permissions, refer to the following pages:
 
 * Standard mode
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions[Set up permissions for an AWS Marketplace deployment]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions[Set up permissions for an AWS Marketplace deployment]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
 * Restricted mode
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
