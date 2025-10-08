@@ -1,4 +1,4 @@
 ---
 permalink: task-viewing-gcp-storage.html
-redirect: storage-google-cloud-storage/task-viewing-gcp-storage.html
+redirect: storage-management-google-cloud-storage/task-viewing-gcp-storage.html
 ---
