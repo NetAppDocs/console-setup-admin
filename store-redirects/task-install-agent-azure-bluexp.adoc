@@ -1,0 +1,4 @@
+---
+permalink: task-install-agent-azure-bluexp.html
+redirect: console-setup-admin/task-install-agent-azure-console.html
+---

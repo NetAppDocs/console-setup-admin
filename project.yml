@@ -18,7 +18,7 @@ sidebar:
         - title: Known limitations
           url: /reference-limitations.html
         - title: Changes to supported Linux operating systems
-          url: /reference-connector-operating-system-changes.html
+          url: /reference-agent-operating-system-changes.html
     - title: Get started
       entries:
         - title: Learn the basics
@@ -26,7 +26,7 @@ sidebar:
             - title: NetApp Console
               url: /concept-overview.html
             - title: Console agents
-              url: /concept-connectors.html
+              url: /concept-agents.html
             - title: Deployment modes
               url: /concept-modes.html
         - title: Get started with the NetApp Console assistant
@@ -48,35 +48,35 @@ sidebar:
                     - title: Console agent installation options
                       url: /concept-install-options-aws.html
                     - title: Create a Console agent from NetApp Console
-                      url: /task-install-connector-aws-bluexp.html
+                      url: /task-install-agent-aws-console.html
                     - title: Create a Console agent from the marketplace
-                      url: /task-install-connector-aws-marketplace.html
+                      url: /task-install-agent-aws-marketplace.html
                     - title: Manually install the Console agent
-                      url: /task-install-connector-aws-manual.html
+                      url: /task-install-agent-aws-manual.html
                 - title: Azure
                   entries:
                     - title: Console agent installation options
                       url: /concept-install-options-azure.html
                     - title: Create a Console agent from NetApp Console
-                      url: /task-install-connector-azure-bluexp.html
+                      url: /task-install-agent-azure-console.html
                     - title: Create a Console agent from the marketplace
-                      url: /task-install-connector-azure-marketplace.html
+                      url: /task-install-agent-azure-marketplace.html
                     - title: Manually install the Console agent
-                      url: /task-install-connector-azure-manual.html
+                      url: /task-install-agent-azure-manual.html
                 - title: Google Cloud
                   entries:
                     - title: Console agent installation options
                       url: /concept-install-options-google.html
                     - title: Create a Console agent from NetApp Console
-                      url: /task-install-connector-google-bluexp-gcloud.html
+                      url: /task-install-agent-google-console-gcloud.html
                     - title: Create a Console agent from Google Cloud
                       url: /task-install-agent-google-gcloud.html
                     - title: Manually install the Console agent
-                      url: /task-install-connector-google-manual.html
+                      url: /task-install-agent-google-manual.html
                 - title: Install an agent on-premises
                   entries:
                     - title: Manually install an agent on-premises
-                      url: /task-install-connector-on-prem.html
+                      url: /task-install-agent-on-prem.html
                     - title: Install an on-premises agent in VCenter
                       url: /task-install-agent-on-prem-ova.html
             - title: Subscribe to NetApp Intelligent Services
@@ -124,7 +124,7 @@ sidebar:
             - title: Manage your resource hierarchy
               url: /task-iam-manage-resources.html
             - title: Associate a Console agent with other folders and projects
-              url: /task-iam-associate-connectors.html
+              url: /task-iam-associate-agents.html
             - title: Switch between organizations, projects, and Console agents
               url: /task-iam-switch-organizations-projects.html
             - title: Organization and project IDs
@@ -193,7 +193,7 @@ sidebar:
         - title: Console agents
           entries:
             - title: Maintain the VM and OS
-              url: /task-maintain-connectors.html
+              url: /task-maintain-agents.html
             - title: Maintain a VCenter-installed agent
               url: /task-agent-vm-config.html
             - title: Install a CA-signed certificate for web-console access
@@ -203,17 +203,17 @@ sidebar:
             - title: Require the use of IMDSv2 on EC2 instances
               url: /task-require-imdsv2.html
             - title: Manage connector upgrades
-              url: /task-upgrade-connector.html
+              url: /task-upgrade-agent.html
             - title: Work with multiple Console agents
-              url: /task-manage-multiple-connectors.html
+              url: /task-manage-multiple-agents.html
             - title: Troubleshoot the Console agent
               url: /task-troubleshoot-agent.html
             - title: Uninstall and remove the Console agent
-              url: /task-uninstall-connector.html
+              url: /task-uninstall-agent.html
             - title: Default configuration
-              url: /reference-connector-default-config.html
+              url: /reference-agent-default-config.html
             - title: Enforce ONTAP permissions in NetApp Console
-              url: /task-ontap-access-connector.html
+              url: /task-ontap-access-agent.html
         - title: Credentials and subscriptions
           entries:
             - title: AWS
@@ -245,7 +245,7 @@ sidebar:
         - title: Agent maintenance console
           entries:
             - title: Agent maintenance console
-              url: /reference-connector-maint-console.html
+              url: /reference-agent-maint-console.html
         - title: Permissions
           entries:
             - title: Permissions summary

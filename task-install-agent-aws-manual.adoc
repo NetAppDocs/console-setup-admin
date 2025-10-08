@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-aws-manual.html
+permalink: task-install-agent-aws-manual.html
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector
 summary: You can manually install a Console agent on a Linux host running in AWS. To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare AWS permissions, install the Console agent, and then provide the permissions that you prepared.
 ---

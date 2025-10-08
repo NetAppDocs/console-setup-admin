@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-google-bluexp-gcloud.html
+permalink: task-install-agent-google-console-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector
 summary: To create a Console agent in Google Cloud from the NetApp Consoel or by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
 ---

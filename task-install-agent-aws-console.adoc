@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-aws-bluexp.html
+permalink: task-install-agent-aws-console.html
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector
 summary: You can create a Console agent in AWS directly from the NetApp Console. Before creating a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
 ---

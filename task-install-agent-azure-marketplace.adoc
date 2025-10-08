@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-azure-marketplace.html
+permalink: task-install-agent-azure-marketplace.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector, marketplace, azure marketplace
 summary: To create a Console agent from the Azure Marketplace, you need to set up your networking, prepare Azure permissions, review instance requirements, and then create the Console agent.
 ---

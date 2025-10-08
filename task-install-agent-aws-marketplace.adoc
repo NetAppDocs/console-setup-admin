@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-aws-marketplace.html
+permalink: task-install-agent-aws-marketplace.html
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector
 summary: To create a Console agent from the AWS Marketplace, you need to set up your networking, prepare AWS permissions, review instance requirements, and then create the Console agent.
 ---

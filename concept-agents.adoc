@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: concept-connectors.html
+permalink: concept-agents.html
 keywords: concept, connectors, learn about connectors, what are connectors, what is a connector, what's a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent
 summary: A _Console agent_ is NetApp software running in your cloud network or on-premises network. You use a Console agent to connect NetApp Console services to your storage environments.  
 ---

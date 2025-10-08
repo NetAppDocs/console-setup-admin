@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-maintain-connectors.html
+permalink: task-maintain-agents.html
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health
 summary: Maintaining the operating system on the agent host is your responsibility. For example, you should apply security updates to the operating system on the Console agent host by following your company's standard procedures for operating system distribution.
 ---

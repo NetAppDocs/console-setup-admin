@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: reference-connector-default-config.html
+permalink: reference-agent-default-config.html
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration
 summary: Learn more about the Console agent before you deploy it..
 ---

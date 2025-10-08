@@ -1,0 +1,4 @@
+---
+permalink: task-upgrading-connector.html
+redirect: console-setup-admin/task-upgrading-agent.html
+---

@@ -1,0 +1,4 @@
+---
+permalink: task-manage-multiple-connectors.html
+redirect: console-setup-admin/task-manage-multiple-agents.html
+---

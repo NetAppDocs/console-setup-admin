@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-iam-associate-connectors.html
+permalink: task-iam-associate-agents.html
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector,
 summary: If members of your organization need to use a Console agent in another project, you need to associate that Console agent with the respective project.
 ---

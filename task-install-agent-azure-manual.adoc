@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-install-connector-azure-manual.html
+permalink: task-install-agent-azure-manual.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install
 summary: To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Azure permissions, install the Console agent, and then provide the permissions that you prepared.
 ---
