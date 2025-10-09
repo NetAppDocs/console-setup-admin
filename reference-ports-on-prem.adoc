@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-ports-on-prem.html
-keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp
+keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp, console agent, console
 summary: The Console agent uses _inbound_ ports when installed manually on an on-premises Linux host. Refer to these ports for planning purposes.
 ---
 
