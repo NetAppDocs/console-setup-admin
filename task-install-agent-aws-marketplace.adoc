@@ -133,4 +133,4 @@ The Console agent is now installed and set up with your Console organization.
 
 Open a web browser and go to the https://console.netapp.com[NetApp Console^] to start using the Console agent with the Console.
 
-If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 working environment appear on the *Systems*  page automatically. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]
+If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 working environment appear on the *Systems*  page automatically. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]

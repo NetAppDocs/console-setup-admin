@@ -200,7 +200,7 @@ The following storage and data services with restricted mode:
 
 | Backup and recovery | Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
 
-In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
+In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
 
 Back up and restore of application data and virtual machine data is not supported.
 
@@ -275,7 +275,7 @@ This portion of the table lists support for storage systems management from the 
 | NetApp Backup and recovery 
 | Yes
 
-https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP volume data^]
+https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP volume data^]
 
 | NetApp Data Classification | Yes 
 | NetApp Copy and Sync | No

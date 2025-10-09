@@ -61,9 +61,9 @@ NOTE: NetApp uses Microsoft Entra ID as the identity provider for authentication
 
 Upon successful login, NetApp will store the NSS user name. 
 +
-This is a system-generated ID that maps to your email. On the *NSS Management* page, you can display your email from the image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png[An icon of three horizontal dots] menu.
+This is a system-generated ID that maps to your email. On the *NSS Management* page, you can display your email from the image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png[An icon of three horizontal dots] menu.
 
-* If you ever need to refresh your login credential tokens, there is also an *Update Credentials* option in the image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png[An icon of three horizontal dots] menu. 
+* If you ever need to refresh your login credential tokens, there is also an *Update Credentials* option in the image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png[An icon of three horizontal dots] menu. 
 +
 Using this option prompts you to log in again. Note that the token for these accounts expire after 90 days. A notification will be posted to alert you of this.
 
@@ -71,10 +71,10 @@ Using this option prompts you to log in again. Note that the token for these acc
 
 Users can now select the account when creating new Cloud Volumes ONTAP systems and when registering existing Cloud Volumes ONTAP systems.
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html[Launching Cloud Volumes ONTAP in AWS^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching Cloud Volumes ONTAP in Azure^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html[Launching Cloud Volumes ONTAP in Google Cloud^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html[Registering pay-as-you-go systems^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-aws.html[Launching Cloud Volumes ONTAP in AWS^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching Cloud Volumes ONTAP in Azure^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html[Launching Cloud Volumes ONTAP in Google Cloud^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-registering.html[Registering pay-as-you-go systems^]
 
 == Update NSS credentials
 

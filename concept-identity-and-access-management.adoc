@@ -201,4 +201,4 @@ The following examples describe how you might use IAM to manage your Console org
 * link:task-iam-rename-organization.html[Rename your NetApp Console organization]
 * link:task-iam-audit-actions-timeline.html[Monitor or audit IAM activity]
 * link:reference-iam-predefined-roles.html[NetApp Console access roles]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the API for NetApp Console IAM^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html[Learn about the API for NetApp Console IAM^]

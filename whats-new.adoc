@@ -281,11 +281,11 @@ To learn more about what's included in the versions of these BlueXP services, re
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[Learn how to upgrade the Connector when using private mode]
 
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html[Learn what's new with BlueXP backup and recovery^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html[Learn what's new with BlueXP backup and recovery^]
 
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html[Learn what's new with BlueXP classification^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[Learn what's new with BlueXP classification^]
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html[Learn what's new with Cloud Volumes ONTAP management in BlueXP^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html[Learn what's new with Cloud Volumes ONTAP management in BlueXP^]
 
 == 15 July 2024
 
@@ -357,11 +357,11 @@ To learn more about what's included in the versions of these BlueXP services, re
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[Learn how to upgrade the Connector when using private mode]
 
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html[Learn what's new with BlueXP backup and recovery^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html[Learn what's new with BlueXP backup and recovery^]
 
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html[Learn what's new with BlueXP classification^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[Learn what's new with BlueXP classification^]
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html[Learn what's new with Cloud Volumes ONTAP management in BlueXP^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html[Learn what's new with Cloud Volumes ONTAP management in BlueXP^]
 
 == 17 May 2024
 
@@ -395,5 +395,5 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 In the 3.9.38 release, we updated the Connector policy for AWS to include the "ec2:DescribeAvailabilityZones" permission. This permission is now required to support AWS Local Zones with Cloud Volumes ONTAP.
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html[View AWS permissions for the Connector].
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html[Learn more about support for AWS Local Zones^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html[Learn more about support for AWS Local Zones^]
 

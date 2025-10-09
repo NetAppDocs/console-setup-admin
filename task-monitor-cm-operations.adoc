@@ -66,7 +66,7 @@ You can also configure the Console to send certain types of notifications by ema
 
 The Notification Center enables you to view the status of operations you've initiated and set up alert notifications for certain types of system activities. Meanwhile, alerts enable you to view issues or potential risks in your ONTAP storage environment related to capacity, availability, performance, protection, and security.
 
-https://docs.netapp.com/us-en/bluexp-alerts/index.html[Learn more about NetApp Console alerts^]
+https://docs.netapp.com/us-en/console-alerts/index.html[Learn more about NetApp Console alerts^]
 
 === Notification types
 

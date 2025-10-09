@@ -150,4 +150,4 @@ link:concept-identity-and-access-management.html#role-inheritance[Learn more abo
 
 * link:concept-identity-and-access-management.html[Learn about identity and access in NetApp Console]
 * link:task-iam-get-started.html[Get started with identity and access]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html[Learn about the identity and access API]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html[Learn about the identity and access API]
