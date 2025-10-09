@@ -51,7 +51,7 @@ You also need to ensure that the policy is up to date as new permissions are add
 
 | Back up on-premises ONTAP clusters to Amazon S3 with NetApp Backup and Recovery
 | When activating backups on your ONTAP volumes, NetApp Backup and Recovery prompts you to enter an access key and secret for an IAM user that has specific permissions.
-| https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-aws.html[Set up S3 permissions for backups^]
+| https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-aws.html[Set up S3 permissions for backups^]
 
 |===
 
@@ -65,7 +65,7 @@ You also need to ensure that the policy is up to date as new permissions are add
 
 | Provide permissions for Cloud Volumes ONTAP nodes
 | An IAM role must be attached to each Cloud Volumes ONTAP node in AWS. The same is true for the HA mediator. The default option is to let the Console create the IAM roles for you, but you can use your own when creating the system in the Console.
-| https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-iam-roles.html[Learn how to set up the IAM roles yourself^]
+| https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-iam-roles.html[Learn how to set up the IAM roles yourself^]
 
 |===
 	
@@ -79,15 +79,15 @@ You also need to ensure that the policy is up to date as new permissions are add
 
 | Deploy the data broker in AWS
 | The AWS user account that you use to deploy the data broker must have specific permissions.
-| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws[Permissions required to deploy the data broker in AWS^]
+| https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws[Permissions required to deploy the data broker in AWS^]
 
 | Provide permissions for the data broker
 | When NetApp Copy and Sync deploys the data broker, it creates an IAM role for the data broker instance. You can deploy the data broker using your own IAM role, if you prefer.
-| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker[Requirements to use your own IAM role with the AWS data broker^]
+| https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker[Requirements to use your own IAM role with the AWS data broker^]
 
 | Enable AWS access for a manually installed data broker
 | If you use the data broker with a sync relationship that includes an S3 bucket, then you should prepare the Linux host for AWS access. When you install the data broker, you'll need to provide AWS keys for an IAM user that has programmatic access and specific permissions.
-| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-aws[Enabling access to AWS^]
+| https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-aws[Enabling access to AWS^]
 
 |===
 
@@ -101,7 +101,7 @@ You also need to ensure that the policy is up to date as new permissions are add
 
 | Create and manage FSx for ONTAP
 | To create or manage an Amazon FSx for NetApp ONTAP system, you need to add AWS credentials to the Console by providing the ARN of an IAM role that gives the Console the permissions needed.
-| https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to set up AWS credentials for FSx^]
+| https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Learn how to set up AWS credentials for FSx^]
 
 |===
 	
@@ -160,12 +160,12 @@ a| When using NetApp Backup and Recovery to back up Cloud Volumes ONTAP, you nee
 * You want to use "Search & Restore" functionality
 * You want to use customer-managed encryption keys (CMEK)
 a| 
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-azure.html[Back up Cloud Volumes ONTAP data to Azure Blob storage with Backup and Recovery^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-cvo-azure.html[Back up Cloud Volumes ONTAP data to Azure Blob storage with Backup and Recovery^]
 
 
 | Back up on-premises ONTAP clusters to Azure blob storage
 | When using NetApp Backup and Recovery to back up on-premisesONTAP clusters, you need to add permissions to a Console agent in order to use the "Search & Restore" functionality. 
-|https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-azure.html[Back up on-premises ONTAP data to Azure Blob storage with Backup and Recovery^]
+|https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html[Back up on-premises ONTAP data to Azure Blob storage with Backup and Recovery^]
 
 
 |===
@@ -181,7 +181,7 @@ a|
 
 | Deploy the data broker in Azure
 | The Azure user account that you use to deploy the data broker must have the required permissions.
-| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure[Permissions required to deploy the data broker in Azure^]
+| https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure[Permissions required to deploy the data broker in Azure^]
 
 |===
 	
@@ -223,13 +223,13 @@ a| When using NetApp Backup and Recovery to back up Cloud Volumes ONTAP, you nee
 * You want to use "Search & Restore" functionality
 * You want to use customer-managed encryption keys (CMEK)
 a| 
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html[Back up Cloud Volumes ONTAP data to Google Cloud Storage with Backup and Recovery^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-cvo-gcp.html[Back up Cloud Volumes ONTAP data to Google Cloud Storage with Backup and Recovery^]
 
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html[Permissions for CMEKs^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-cvo-gcp.html[Permissions for CMEKs^]
 
 | Back up on-premises ONTAP clusters to Google Cloud
 | When using NetApp Backup and Recovery to back up on-premisesONTAP clusters, you need to add permissions to a Console agent in order to use the "Search & Restore" functionality. 
-| https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-gcp.html[Back up on-premises ONTAP data to Google Cloud Storage with Backup and Recovery^]
+| https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html[Back up on-premises ONTAP data to Google Cloud Storage with Backup and Recovery^]
 
 |===
 
@@ -244,11 +244,11 @@ a|
 
 | Deploy the data broker in Google Cloud
 | Ensure that the Google Cloud user who deploys the data broker has the required permissions.
-| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud[Permissions required to deploy the data broker in Google Cloud^]
+| https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud[Permissions required to deploy the data broker in Google Cloud^]
 
 | Enable Google Cloud access for a manually installed data broker
 | If you plan to use the data broker with a sync relationship that includes a Google Cloud Storage bucket, then you should prepare the Linux host for Google Cloud access. When you install the data broker, you'll need to provide a key for a service account that has specific permissions.
-| https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud[Enabling access to Google Cloud^]
+| https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud[Enabling access to Google Cloud^]
 
 |===
 
@@ -266,7 +266,7 @@ The Console requires StorageGRID permissions for two services.
 
 | Back up on-premises ONTAP clusters to StorageGRID
 | When you prepare StorageGRID as a backup target for ONTAP clusters, NetApp Backup and Recovery prompts you to enter an access key and secret for an IAM user that has specific permissions.
-| https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html[Prepare StorageGRID as your backup target^]
+| https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html[Prepare StorageGRID as your backup target^]
 
 |===
 	
@@ -280,6 +280,6 @@ The Console requires StorageGRID permissions for two services.
 
 | Tier on-premises ONTAP clusters to StorageGRID
 | When you set up NetApp Cloud Tiering to StorageGRID, you need to provide Cloud Tiering with an S3 access key and secret key. Cloud tiering uses the keys to access your buckets.
-|https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html[Prepare tiering to StorageGRID^]
+|https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html[Prepare tiering to StorageGRID^]
 
 |===

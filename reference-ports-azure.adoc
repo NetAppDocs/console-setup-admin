@@ -29,7 +29,7 @@ The Azure security group for the agent requires both inbound and outbound rules.
 * Provides HTTP access from client web browsers to the local user interface
 * Used during the Cloud Volumes ONTAP upgrade process
 | HTTPS | 443 | Provides HTTPS access from client web browsers to the local user interface, and connections from the NetApp Data Classification instance
-| TCP | 3128 | Provides Cloud Volumes ONTAP with internet access to send AutoSupport messages to NetApp Support. You must manually open this port after deployment. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-verify-autosupport.html[Learn how the agent is used as a proxy for AutoSupport messages^]
+| TCP | 3128 | Provides Cloud Volumes ONTAP with internet access to send AutoSupport messages to NetApp Support. You must manually open this port after deployment. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html[Learn how the agent is used as a proxy for AutoSupport messages^]
 
 |===
 

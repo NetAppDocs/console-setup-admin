@@ -152,7 +152,7 @@ include::_include/manual-install.adoc[tag=main-steps]
 
 include::_include/manual-install.adoc[tag=standard-mode-steps-for-cloud]
 
-If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html[Learn how to manage S3 buckets from NetApp ConsoleP^]
+If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html[Learn how to manage S3 buckets from NetApp ConsoleP^]
 
 == Step 6: Provide permissions to NetApp Console
 

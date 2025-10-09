@@ -50,4 +50,4 @@ You can manage a system with multiple Console agents at the same time for disast
 +
 To avoid contention issues, only the main Console agent should be set to *Automatic Mode*.
 +
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html[Learn more about the capacity management mode^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-capacity-settings.html[Learn more about the capacity management mode^]

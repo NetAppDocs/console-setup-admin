@@ -12,10 +12,10 @@ The 3.9.46 release includes updates to the following BlueXP components and servi
 | Changes since the previous private mode release
 
 | Connector | 3.9.46 | Minor security improvements and bug fixes
-| Backup and recovery | 22 November 2024 | Go to the https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html[what's new in BlueXP backup and recovery page^] and refer to the changes included in the November 2024 release
-| Classification | 4 November 2024 (version 1.37) | Go to the https://docs.netapp.com/us-en/bluexp-classification/whats-new.html[what's new in BlueXP classification page^] and refer to the changes included in the 1.32 to 1.37 releases
-| Cloud Volumes ONTAP management | 11 November 2024 | Go to the https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html[what's new with Cloud Volumes ONTAP management page^] and refer to the changes included in the October 2024 and November 2024 releases
-| On-premises ONTAP cluster management | 26 November 2024 | Go to the https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html[what's new with on-premises ONTAP cluster management page^] and refer to the changes included in the November 2024 release
+| Backup and recovery | 22 November 2024 | Go to the https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html[what's new in BlueXP backup and recovery page^] and refer to the changes included in the November 2024 release
+| Classification | 4 November 2024 (version 1.37) | Go to the https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[what's new in BlueXP classification page^] and refer to the changes included in the 1.32 to 1.37 releases
+| Cloud Volumes ONTAP management | 11 November 2024 | Go to the https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html[what's new with Cloud Volumes ONTAP management page^] and refer to the changes included in the October 2024 and November 2024 releases
+| On-premises ONTAP cluster management | 26 November 2024 | Go to the https://docs.netapp.com/us-en/storage-management-ontap-onprem/whats-new.html[what's new with on-premises ONTAP cluster management page^] and refer to the changes included in the November 2024 release
 
 |===
 

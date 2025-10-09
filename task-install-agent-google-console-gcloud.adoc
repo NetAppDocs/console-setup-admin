@@ -239,7 +239,7 @@ After the process completes, the Console agent is available for use.
 
 NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
-If you have Google Cloud Storage buckets in the same Google Cloud account where you created the Console agent, you'll see a Google Cloud Storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html[Learn how to manage Google Cloud Storage from the Console]
+If you have Google Cloud Storage buckets in the same Google Cloud account where you created the Console agent, you'll see a Google Cloud Storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html[Learn how to manage Google Cloud Storage from the Console]
 
 
 
