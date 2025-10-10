@@ -37,7 +37,7 @@ The following table indicates the actions that each Keystone role can perform.
 | View assets  | Yes | Yes 
 | Manage assets | Yes | No
 3+| *Keystone alerts page*: 
-| View alerts | Yes | No 
+| View alerts | Yes | Yes 
 | Manage alerts | Yes | No 
 | Create alerts for self | Yes | Yes
 3+| *Licenses and subscriptions*:
