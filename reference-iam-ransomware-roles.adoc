@@ -13,8 +13,14 @@ summary: within NetApp Console, you can grant roles to provide users access to N
 :imagesdir: ./media/
 
 [.lead]
-Ransomware Resilience roles provide users access to NetApp Ransomware Resilience. The two roles are Ransomware protection admin and Ransomware protection viewer. The main difference between the two roles is the actions they can take in Ransomware Resilience.
+Ransomware Resilience roles provide users access to NetApp Ransomware Resilience. Ransomware Resilience supports the following roles:
 
+* Ransomware Resilience admin
+* Ransomware Resilience viewer
+* Ransomware Resilience user behavior admin
+* Ransomware Resilience user behavior viewer
+
+The roles confer different access to settings and actions. To configure or view suspicious user behavior activity, you must use one of the user behavior roles. 
 
 The following table shows the actions each role can perform.
 
