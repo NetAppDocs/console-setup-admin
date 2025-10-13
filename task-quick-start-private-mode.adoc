@@ -58,7 +58,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Digital wallet  | Yes
 | Disaster recovery  | No
 | Economic efficiency  | No
-| Ransomware protection  | No
+| Ransomware Resilience  | No
 | Replication  | Yes
 | Software updates | No
 | Sustainability | No
