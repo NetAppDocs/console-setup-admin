@@ -69,7 +69,7 @@ In standard mode, the Console requires a Console agent for:
 * Economic efficiency ^1^
 * Google Cloud Storage buckets
 * On-premises ONTAP cluster integration with NetApp data services
-* NetApp Ransomware resilience
+* NetApp Ransomware Resilience
 * StorageGRID systems
 * NetApp Cloud Tiering
 * NetApp Volume Caching
