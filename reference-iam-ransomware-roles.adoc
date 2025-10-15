@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-iam-ransomware-roles.html
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin,
-summary: within NetApp Console, you can grant roles to provide users access to NetApp Ransomware Resilience.
+summary: Ransomware Resilience offers different user roles to manage access to privileges actions and reports. 
 ---
 
 = Ransomware Resilience access roles for NetApp Console
@@ -20,64 +20,64 @@ Ransomware Resilience roles provide users access to NetApp Ransomware Resilience
 * Ransomware Resilience user behavior admin
 * Ransomware Resilience user behavior viewer
 
-The roles confer different access to settings and actions. To configure or view suspicious user behavior activity, you must use one of the user behavior roles. 
+The roles confer different levels of access to settings and actions.
 
-The following table shows the actions each role can perform.
+The actions available to the Ransomware Resilience user behavior admin and user behavior viewer roles are limited to link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[suspicious user behavior^]. These roles are designed to be added to Ransomware Resilience admin or viewer roles. To configure suspicious user behavior settings and respond to alerts, a user must have the Ransomware Resilience user behavior admin role. To only view suspicious user behavior alerts, a user should have the Ransomware Resilience user behavior viewer role.
 
-[cols=5*,options="header",cols="40,20a,20a,20a,20a",width="100%"]
+The following table differentiates the actions available to the Ransomware Resilience admin and Ransomware Resilience viewer roles. 
+
+[cols=3*,options="header",cols="40,20a,20a",width="100%"]
 |===
 | Feature and action
 | Ransomware Resilience admin
 | Ransomware Resilience viewer
-| Ransomware Resilience user behavior admin
-| Ransomware Resilience user behavior viewer
 
-| View dashboard and all tabs | Yes | Yes | No | No
-| On dashboard, update recommendation status | Yes | No | No | No
-| Start free trial | Yes | No | No | No
-| Initiate discovery of workloads | Yes | No | No | No
-| Initiate rediscovery of workloads | Yes | No | No | No
+| View dashboard and all tabs | Yes | Yes 
+| On dashboard, update recommendation status | Yes | No 
+| Start free trial | Yes | No 
+| Initiate discovery of workloads | Yes | No
+| Initiate rediscovery of workloads | Yes | No
 
-5+| *On the Protect tab*: 
-| Add, modify, or delete protection plans | Yes | No | No | No
-| Protect workloads | Yes | No | No | No
-| Identify exposure to sensitive data| Yes | No | No | No
-| List protection plans and details | Yes | Yes | No | No
-| List protection groups    | Yes | Yes | No | No
-| View protection group details | Yes | Yes | No | No
-| Create, edit or delete protection group | Yes | No  | No | No
-| Download data| Yes | Yes | No | No
-5+| *On the Alerts tab*: 
-| View alerts and alert details | Yes | Yes | No | No
-| Edit incident status | Yes | No | No | No
-| Mark alert for recovery | Yes | No | No | No
-| View incident details | Yes | Yes | No | No
-| Dismiss or resolve incidents | Yes | No | No | No
-| Block user | Yes | No | No | No
-| Get full list of impacted files| Yes | No | No | No
-| Download alerts data | Yes | Yes  | No | No
-| View suspicious user activity | No | No | Yes | Yes
-5+| *On the Recover tab*: 
-| Download impacted files| Yes | No | No | No
-| Restore workload | Yes | No  | No | No
-| Download recovery data | Yes | Yes | No | No
-| Download reports | Yes | Yes | No | No
-5+| *On the Settings tab*:
-| Add or modify backup destinations| Yes | No | No | No
-| List backup destinations| Yes | Yes | No | No
-| View connected SIEM targets | Yes | Yes | No | No
-| Add or modify SIEM targets | Yes | No | No | No
-| Configure readiness drill | Yes | No | No | No
-| Start readiness drill | Yes | No | No | No
-| Reset readiness drill | Yes | No | No | No
-| Edit readiness drill  | Yes | No | No | No
-| Review readiness drill status | Yes | Yes | No | No
-| Update discovery configuration | Yes | No | No | No
-| View discovery configuration | Yes | Yes | No | No
-| Configure suspicious user behavior settings | No | No | Yes | No
+3+| *On the Protect tab*: 
+| Add, modify, or delete protection plans | Yes | No
+| Protect workloads | Yes | No 
+| Identify exposure to sensitive data| Yes | No 
+| List protection plans and details | Yes | Yes 
+| List protection groups    | Yes | Yes 
+| View protection group details | Yes | Yes 
+| Create, edit, or delete protection group | Yes | No  
+| Download data| Yes | Yes 
+3+| *On the Alerts tab*: 
+| View alerts and alert details | Yes | Yes 
+| Edit incident status | Yes | No 
+| Mark alert for recovery | Yes | No 
+| View incident details | Yes | Yes 
+| Dismiss or resolve incidents | Yes | No 
+| Block user | Yes | No 
+| Get full list of impacted files| Yes | No 
+| Download alerts data | Yes | Yes 
+| View suspicious user activity | No | No 
+3+| *On the Recover tab*: 
+| Download impacted files| Yes | No 
+| Restore workload | Yes | No  
+| Download recovery data | Yes | Yes 
+| Download reports | Yes | Yes 
+3+| *On the Settings tab*:
+| Add or modify backup destinations| Yes | No 
+| List backup destinations| Yes | Yes 
+| View connected SIEM targets | Yes | Yes 
+| Add or modify SIEM targets | Yes | No 
+| Configure readiness drill | Yes | No 
+| Start readiness drill | Yes | No 
+| Reset readiness drill | Yes | No 
+| Edit readiness drill  | Yes | No 
+| Review readiness drill status | Yes | Yes 
+| Update discovery configuration | Yes | No 
+| View discovery configuration | Yes | Yes 
+| Configure suspicious user behavior settings | No | No 
 
-5+| *On the Reports tab*:
-| Download reports | Yes | Yes | No | No
+3+| *On the Reports tab*:
+| Download reports | Yes | Yes 
 
 |===
 
