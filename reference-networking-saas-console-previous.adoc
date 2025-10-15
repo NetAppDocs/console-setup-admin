@@ -260,4 +260,47 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 
 == On-premises agent endpoints
 
+|===
+| Endpoints
+| Purpose
+
+| 
+\https://support.netapp.com
+\https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
+
+| \https://\*.api.bluexp.netapp.com
+\https://api.bluexp.netapp.com
+\https://*.cloudmanager.cloud.netapp.com
+\https://cloudmanager.cloud.netapp.com
+\https://netapp-cloud-account.auth0.com
+\https://netapp-cloud-account.us.auth0.com
+
+| To provide features and services within the NetApp Console.
+
+
+a| 
+Choose between two sets of endpoints:
+
+* Option 1 (recommended)
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io
+\https://bluexpinfraprod.azurecr.io
+
+* Option 2
++
+\https://*.blob.core.windows.net
+\https://cloudmanagerinfraprod.azurecr.io
+
+a| To obtain images for Console agent upgrades.
+
+NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints, unless you are using Ransomware Resilience or Backup and Recovery. Note the following about these endpoints:
+
+
+* Option 1 endpoints are supported in 3.9.47 and higher. Releases previous to 3.9.47 do not support backwards compatibility.
+* The Console agent initiates contact with the endpoints in option 2 first. If those endpoints are not accessible, it automatically contacts the endpoints in option 1.
+* If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
+
+|===
+
+
 
