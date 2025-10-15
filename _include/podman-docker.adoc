@@ -26,7 +26,7 @@ Follow these steps to install and configure Podman:
 * Install python3 
 * Install the podman-compose package version 1.0.6 
 * Add podman-compose to the PATH environment variable
-* If using Red Hat Enterprise Linux 8, verify that your Podman version is using Aardvark DNS instead of CNI
+* If using Red Hat Enterprise Linux, verify that your Podman version is using Netavark Aardvark DNS instead of CNI
 
 NOTE: Adjust the aardvark-dns port (default: 53) after installing the agent to avoid DNS port conflicts. Follow the instructions to configure the port.
 

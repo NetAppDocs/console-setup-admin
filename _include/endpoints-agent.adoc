@@ -73,7 +73,6 @@ The endpoints listed below are all CNAME entries.
 //tag::nss-endpoints[]
 | 
 \https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
-| \https://support.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
 | \https://signin.b2c.netapp.com | To update NetApp Support Site (NSS) credentials or to add new NSS credentials to the NetApp Console.
 | \https://support.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support as well as to receive software updates for Cloud Volumes ONTAP.
 //end::nss-endpoints[]
@@ -97,7 +96,7 @@ a| \https://bluexpinfraprod.eastus2.data.azurecr.io
 a| To obtain images for Console agent upgrades. 
 
 
-* When you deploy a new agent, the validation check tests connectivity to current endpoints. If you use link:link:reference-networking-saas-console-previous.html[previous endpoints], the validation check fails. To avoid this failure, skip the validation check.
+* When you deploy a new agent, the validation check tests connectivity to current endpoints. If you use link:reference-networking-saas-console-previous.html[previous endpoints], the validation check fails. To avoid this failure, skip the validation check.
 +
 
 Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to the current endpoints as soon as possible. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
