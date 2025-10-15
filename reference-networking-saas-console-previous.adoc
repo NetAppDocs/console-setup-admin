@@ -260,6 +260,8 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 
 == On-premises agent endpoints
 
+[cols=2*,options="header,autowidth"]
+
 |===
 | Endpoints
 | Purpose
