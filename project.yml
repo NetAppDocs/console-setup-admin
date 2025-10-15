@@ -149,9 +149,9 @@ sidebar:
                      url: /reference-iam-storage-roles.html
                 - title: Data services roles
                   entries:
-                    - title: Backup and recovery roles
+                    - title: Backup and Recovery roles
                       url: /reference-iam-backup-rec-roles.html
-                    - title: Disaster recovery roles
+                    - title: Disaster Recovery roles
                       url: /reference-iam-disaster-rec-roles.html
                     - title: Ransomware Resilience roles
                       url: /reference-iam-ransomware-roles.html
