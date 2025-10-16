@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-iam-ransomware-roles.html
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin,
-summary: Ransomware Resilience offers different user roles to manage access to privileges actions and reports. 
+summary: Ransomware Resilience offers different user roles to manage access to settings, actions, and reports. 
 ---
 
 = Ransomware Resilience access roles for NetApp Console
@@ -20,69 +20,97 @@ Ransomware Resilience roles provide users access to NetApp Ransomware Resilience
 * Ransomware Resilience user behavior admin
 * Ransomware Resilience user behavior viewer
 
-The roles confer different levels of access to settings and actions.
+Each role confers different levels of access to settings and actions.
 
-The actions available to the Ransomware Resilience user behavior admin and user behavior viewer roles are limited to link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[suspicious user activity^]. User behavior roles are not standalone roles; they are designed to be added to Ransomware Resilience admin or viewer roles. For example, a user with the Ransomware Resilience admin role should receive the Ransomware Resilience uesr behavior admin role to configure user activity agents and block or unblock users. The Ransomware Resilience uesr behavior admin role should not be conferred onto a Ransomware Resilience viewer.
+The actions available to the Ransomware Resilience user behavior admin and user behavior viewer roles are limited to link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[suspicious user activity^]. User behavior roles are not standalone roles; they are designed to be added to Ransomware Resilience admin or viewer roles. For more information, see <<user behavior roles>>.
 
-To configure suspicious user behavior settings and respond to alerts, a user must have the Ransomware Resilience user behavior admin role. To only view suspicious user behavior alerts, a user should have the Ransomware Resilience user behavior viewer role.
+== Baseline roles
 
-The following table describes the actions available to each role.  
+The following table describes the actions available to the Ransomware Resilience admin and viewer roles.  
 
 [cols=3*,options="header",cols="40,20a,20a",width="100%"]
 |===
 | Feature and action
 | Ransomware Resilience admin
 | Ransomware Resilience viewer
-| Ransomware Resilience user behavior admin
-| Ransomware Resilience user behavior viewer
 
-| View dashboard and all tabs | Yes | Yes | No | No
-| On dashboard, update recommendation status | Yes | No | No | No
-| Start free trial | Yes | No | No | No
-| Initiate discovery of workloads | Yes | No | No | No
-| Initiate rediscovery of workloads | Yes | No | No | No
+| View dashboard and all tabs | Yes | Yes 
+| On dashboard, update recommendation status | Yes | No 
+| Start free trial | Yes | No 
+| Initiate discovery of workloads | Yes | No 
+| Initiate rediscovery of workloads | Yes | No 
 
-5+| *On the Protect tab*: 
-| Add, modify, or delete protection plans | Yes | No | No | No
-| Protect workloads | Yes | No | No | No
-| Identify exposure to sensitive data| Yes | No  | No | No
-| List protection plans and details | Yes | Yes | No | No
-| List protection groups | Yes | Yes  | No | No
-| View protection group details | Yes | Yes  | No | No
-| Create, edit, or delete protection group | Yes | No | No | No
-| Download data| Yes | Yes | No | No
-5+| *On the Alerts tab*: 
-| View alerts and alert details | Yes | Yes | No | No
-| Edit incident status | Yes | No | No | No
-| Mark alert for recovery | Yes | No | No | No
-| View incident details | Yes | Yes | No | No
-| Dismiss or resolve incidents | Yes | No | No | No
-| Get full list of impacted files| Yes | No | No | No
-| Download alerts data | Yes | Yes | No | No
-| Block user | No | No | Yes | No
-| Unblock user | No | No | Yes | No
-5+| *On the Recover tab*: 
-| Download impacted files| Yes | No | No | No
-| Restore workload | Yes | No  | No | No
-| Download recovery data | Yes | Yes | No | No
-| Download reports | Yes | Yes | No | No
-5+| *On the Settings tab*:
-| Add or modify backup destinations| Yes | No | No | No
-| List backup destinations| Yes | Yes | No | No
-| View connected SIEM targets | Yes | Yes | No | No
-| Add or modify SIEM targets | Yes | No | No | No
-| Configure readiness drill | Yes | No | No | No
-| Start readiness drill | Yes | No | No | No
-| Reset readiness drill | Yes | No | No | No
-| Edit readiness drill  | Yes | No | No | No
-| Review readiness drill status | Yes | Yes | No | No
-| Update discovery configuration | Yes | No | No | No
-| View discovery configuration | Yes | Yes | No | No
-| Configure suspicious user behavior settings | No | No | No | No
+3+| *On the Protect tab*: 
+| Add, modify, or delete protection plans | Yes | No 
+| Protect workloads | Yes | No
+| Identify exposure to sensitive data| Yes | No 
+| List protection plans and details | Yes | Yes 
+| List protection groups | Yes | Yes
+| View protection group details | Yes | Yes
+| Create, edit, or delete protection groups | Yes | No 
+| Download data| Yes | Yes 
+3+| *On the Alerts tab*: 
+| View encryption alerts and alert details | Yes | Yes 
+| Edit encryption incident status | Yes | No 
+| Mark encryption alert for recovery | Yes | No 
+| View encryption incident details | Yes | Yes 
+| Dismiss or resolve encryption incidents | Yes | No 
+| Get full list of impacted files in encryption event | Yes | No 
+| Download encryption event alerts data | Yes | Yes 
+3+| *On the Recover tab*: 
+| Download impacted files from encryption event| Yes | No 
+| Restore workload from encryption event | Yes | No  
+| Download recovery data from encryption event | Yes | Yes 
+| Download reports from encryption event | Yes | Yes 
+3+| *On the Settings tab*:
+| Add or modify backup destinations| Yes | No 
+| List backup destinations | Yes | Yes 
+| View connected SIEM targets | Yes | Yes 
+| Add or modify SIEM targets | Yes | No 
+| Configure readiness drill | Yes | No 
+| Start, reset, or edit readiness drill | Yes | No 
+| Review readiness drill status | Yes | Yes
+| Update discovery configuration | Yes | No 
+| View discovery configuration | Yes | Yes
 
-5+| *On the Reports tab*:
-| Download reports | Yes | Yes | No | No
+3+| *On the Reports tab*:
+| Download reports | Yes | Yes 
 
 |===
 
+== User behavior roles
 
+To configure suspicious user behavior settings and respond to alerts, a user must have the Ransomware Resilience user behavior admin role. To only view suspicious user behavior alerts, a user should have the Ransomware Resilience user behavior viewer role.
+
+User behavior roles should be conferred to users with existing Ransomware Resilience admin or viewer privilieges who need access to link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[suspicious user activity settings and alerts^]. A user with the Ransomware Resilience admin role, for example, should receive the Ransomware Resilience user behavior admin role to configure user activity agents and block or unblock users. The Ransomware Resilience user behavior admin role should not be conferred onto a Ransomware Resilience viewer.
+
+The following table describes the actions available to the Ransomware Resilience user behavior admin and viewer roles.  
+
+[cols=3*,options="header",cols="40,20a,20a",width="100%"]
+|===
+| Feature and action
+| Ransomware Resilience user behavior admin
+| Ransomware Resilience user behavior viewer
+3+| *On the Settings tab*: 
+
+| Add, edit, or delete user activity agent | Yes | No
+| Add, modify, or delete data collector | Yes | No
+| Run data breach readiness drill | Yes | No 
+
+3+| *On the Alerts tab*: 
+
+| View user activity alerts and alert details | Yes | Yes 
+| Edit user activity incident status | Yes | No 
+| Mark user activity alert for recovery | Yes | No 
+| View user activity incident details | Yes | Yes 
+| Dismiss or resolve user activity incidents | Yes | No 
+| Get full list of impacted files in user activity event | Yes | No 
+| Download user activity event alerts data | Yes | Yes 
+| Block or unblock user | Yes | No 
+
+3+| *On the Recover tab*: 
+| Download impacted files for user activity event | Yes | No 
+| Restore workload from user activity event | Yes | No  
+| Download recovery data from user activity event | Yes | Yes 
+| Download reports from user activity event | Yes | Yes 
+|===
