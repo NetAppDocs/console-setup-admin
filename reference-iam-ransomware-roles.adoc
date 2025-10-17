@@ -48,7 +48,7 @@ The following table describes the actions available to the Ransomware Resilience
 | Initiate rediscovery of workloads | Yes | No 
 
 3+| *On the Protect tab*: 
-| Add, modify, or delete protection plans | Yes | No 
+| Add, modify, or delete protection plans for _encryption_ policies | Yes | No 
 | Protect workloads | Yes | No
 | Identify exposure to sensitive data| Yes | No 
 | List protection plans and details | Yes | Yes 
@@ -104,6 +104,9 @@ The following table describes the actions available to the Ransomware Resilience
 | Create or delete user directory connector | Yes | No
 | Pause or resume data collector | Yes | No
 | Run data breach readiness drill | Yes | No 
+
+3+| *On the Protect tab*: 
+| Add, modify, or delete protection plans for _suspicious user behavior_ policies | Yes | No 
 
 3+| *On the Alerts tab*: 
 
