@@ -17,11 +17,11 @@ Learn how the NetApp Console uses AWS credentials to perform actions on your beh
 
 == Initial AWS credentials
 
-When you deploy an Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console in AWS. The required permissions are listed in the link:task-install-agent-aws-the Console.html#console-permissions-aws[Agent deployment policy for AWS].
+When you deploy an Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console in AWS. The required permissions are listed in the link:task-install-agent-aws-the Console.html#aws-permissions-agent[Agent deployment policy for AWS].
 
-When the Console launches the Console agent instance in AWS, it creates an IAM role and an instance profile for the instance. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the Console uses the permissions].
+When the Console launches the Console agent  in AWS, it creates an IAM role and a profile for the agent. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the Agent uses the permissions].
 
-image:diagram_permissions_initial_aws.png["A conceptual image that shows the Console deploying the Console agent in an AWS account. An IAM policy is assigned to an IAM role, which is attached to the Console instance."]
+image:diagram_permissions_initial_aws.png["A conceptual image that shows the Console deploying the Console agent in an AWS account. An IAM policy is assigned to an IAM role, which is attached to the Console."]
 
 If you add a new Cloud Volumes ONTAP system, the Console selects these AWS credentials by default:
 
@@ -81,7 +81,7 @@ The following questions are related to credentials and subscriptions.
 
 === How can I securely rotate my AWS credentials?
 
-As described in the sections above, the Console enables you to provide AWS credentials in a few ways: an IAM role associated with the Console agent instance, by assuming an IAM role in a trusted account, or by providing AWS access keys.
+As described in the sections above, the Console enables you to provide AWS credentials in a few ways: an IAM role associated with the Console agent, by assuming an IAM role in a trusted account, or by providing AWS access keys.
 
 With the first two options, the Console uses the AWS Security Token Service to obtain temporary credentials that rotate constantly. This process is the best practice--it's automatic and it's secure.
 
