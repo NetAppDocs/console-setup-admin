@@ -21,7 +21,7 @@ Ransomware Resilience roles provide users access to NetApp Ransomware Resilience
 * Ransomware Resilience viewer - View encryption incidents, reports, and discovery settings
 
 **User behavior activity roles**
-link::https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[Suspicious user activity detection^] alerts provide visibility into data such as file activity events that contain file names and file actions (such as Read, Write, Delete, Rename) performed by the user. To limit the visibility of this data, only users with these roles can manage or view these alerts.
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[Suspicious user activity detection^] alerts provide visibility into data such as file activity events; these alerts include file names and file actions (such as Read, Write, Delete, Rename) performed by the user. To limit the visibility of this data, only users with these roles can manage or view these alerts.
 
 * Ransomware Resilience user behavior admin - Activate suspicious user activity detection, investigate and respond to suspicious user activity alerts 
 * Ransomware Resilience user behavior viewer - View suspicious user activity alerts
