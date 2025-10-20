@@ -27,7 +27,7 @@ link::https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicio
 * Ransomware Resilience user behavior viewer - View suspicious user activity alerts
 
 [NOTE]
-User behavior roles are not standalone roles; they are designed to be added to Ransomware Resilience admin or viewer roles. For more information, see <<user behavior roles>>.
+User behavior roles are not standalone roles; they are designed to be added to Ransomware Resilience admin or viewer roles. For more information, see <<User behavior roles>>.
 
 Consult the following tables for detailed descriptions of each role.
 
