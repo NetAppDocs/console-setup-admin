@@ -1,11 +1,11 @@
 .Steps
 
-. Select *Administration > *Credentials*.
+. Select *Administration > Credentials*.
 
 . Select *Organization credentials*.
 
 . Select the action menu for a set of credentials that are associated with a Console agent and then select *Configure Subscription*.
-+new screenshot needed (TS)
+
 image:screenshot_gcp_add_subscription.png[A screenshot of the action menu for a set of existing credentials.]
 
 . To configure an existing subscription with the selected credentials, select a Google Cloud project and subscription from the drop-down list, and then select *Configure*.
@@ -38,10 +38,10 @@ image:screenshot_gcp_marketplace_register.png[A screenshot of a registration pop
 +
 NOTE: If someone from your organization has already has a marketplace subscription from your billing account, then you will be redirected to https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=[the Cloud Volumes ONTAP page within NetApp Console^] instead. If this is unexpected, contact your NetApp sales team. Google enables only one subscription per Google billing account.
 +
-* Select the Console organizations or accounts that you'd like to associate this subscription with.
-* In the *Replace existing subscription* field, choose whether you'd like to automatically replace the existing subscription for one organization or account with this new subscription.
+* Select the Console organization that you'd like to associate this subscription with.
+* In the *Replace existing subscription* field, choose whether you'd like to automatically replace the existing subscription for one organization with this new subscription.
 +
-The Console replaces the existing subscription for all credentials in the organization or account with this new subscription. If a set of credentials wasn't ever associated with a subscription, then this new subscription won't be associated with those credentials.
+The Console replaces the existing subscription for all credentials in the organization with this new subscription. If a set of credentials wasn't ever associated with a subscription, then this new subscription won't be associated with those credentials.
 +
 For all other organizations or accounts, you'll need to manually associate the subscription by repeating these steps.
 

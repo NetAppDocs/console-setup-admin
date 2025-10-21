@@ -72,12 +72,12 @@ You'll need to implement this networking requirement after you create the Consol
 [[aws-permissions-agent]]
 == Step 2: Set up AWS permissions for the Console agent
 
-The Console needs to authenticate with AWS before it can deploy the Console agent instance in your VPC. You can choose one of these authentication methods:
+The Console needs to authenticate with AWS before it can deploy the Console agent in your VPC. You can choose one of these authentication methods:
 
 * Let the Console assume an IAM role that has the required permissions
 * Provide an AWS access key and secret key for an IAM user who has the required permissions
 
-With either option, the first step is to create an IAM policy. This policy contains only the permissions needed to launch the Console agent instance in AWS from the Console.
+With either option, the first step is to create an IAM policy. This policy contains only the permissions needed to launch the Console agent in AWS from the Console.
 
 If needed, you can restrict the IAM policy by using the IAM `Condition` element. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html[AWS documentation: Condition element^]
 
@@ -91,7 +91,7 @@ If needed, you can restrict the IAM policy by using the IAM `Condition` element.
 
 . Copy and paste the following policy:
 +
-This policy contains only the permissions needed to launch the Console agent instance in AWS from the Console. When the Console creates the Console agent, it applies a new set of permissions to the Console agent instance that enables the Console agent to manage AWS resources. link:reference-permissions-aws.html[View permissions required for the Console agent instance itself].
+This policy contains only the permissions needed to launch the Console agent in AWS from the Console. When the Console creates the Console agent, it applies a new set of permissions to the Console agent that enables the Console agent to manage AWS resources. link:reference-permissions-aws.html[View permissions required for the Console agent itself].
 +
 [source,json]
 {
@@ -213,7 +213,7 @@ Create the Console agent directly from the the Console web-based console.
 
 * Creating the Console agent from the Console deploys an EC2 instance in AWS using a default configuration. Do not switch to a smaller EC2 instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
-* When the Console creates the Console agent, it creates an IAM role and an instance profile for the instance. This role includes permissions that enables the Console agent to manage AWS resources. Ensure the role is updated as new permissions are added in future releases.
+* When the Console creates the Console agent, it creates an IAM role and a profile for the agent. This role includes permissions that enables the Console agent to manage AWS resources. Ensure the role is updated as new permissions are added in future releases.
  link:reference-permissions-aws.html[Learn more about the IAM policy for the Console agent].
 
 .Before you begin
@@ -249,12 +249,12 @@ TIP: If you choose *Assume Role*, you can create the first set of credentials fr
 
 . On the *Details* page, provide details about the Console agent.
 +
-** Enter a name for the instance.
-** Add custom tags (metadata) to the instance.
+** Enter a name.
+** Add custom tags (metadata).
 ** Choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-aws.html[the required permissions].
 ** Choose whether you want to encrypt the Console agent's EBS disks. You have the option to use the default encryption key or to use a custom key.
 
-. On the *Network* page, Specify a VPC, subnet, and key pair for the instance, choose whether to enable a public IP address, and optionally specify a proxy configuration.
+. On the *Network* page, Specify a VPC, subnet, and key pair for the agent, choose whether to enable a public IP address, and optionally specify a proxy configuration.
 +
 Ensure you have the correct key pair to access the Console agent virtual machine. Without a key pair, you cannot access it.
 
@@ -266,7 +266,7 @@ include::_include/agent-deploy-console-check.adoc[]
 
 . Select *Add*.
 +
-The Console prepares the instance in about 10 minutes. Stay on the page until the process completes.
+The Console deploys the agent in about 10 minutes. Stay on the page until the process completes.
 
 .Result
 

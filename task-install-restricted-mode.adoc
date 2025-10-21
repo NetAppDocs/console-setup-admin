@@ -41,9 +41,9 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn ho
 
 * Permissions to subscribe and unsubscribe from the AWS Marketplace for your IAM user.
 
-* An understanding of CPU and RAM requirements for the instance.
+* An understanding of CPU and RAM requirements for the agent.
 +
-link:task-prepare-restricted-mode.html#step-3-review-host-requirements[Review instance requirements].
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements[Review agent requirements].
 
 * A key pair for the EC2 instance.
 
@@ -51,7 +51,7 @@ include::_include/aws-marketplace.adoc[]
 
 .Result
 
-AWS launches the software with the specified settings. The Console agent instance and software run in approximately five minutes.
+AWS launches the software with the specified settings. The Console agent deploys in approximately five minutes.
 
 .What's next?
 
@@ -107,7 +107,7 @@ image:screenshot_aws_iam_role.gif[A screenshot that shows fields on the Configur
 
 .Result
 
-AWS launches the software with the specified settings. The Console agent instance and software run in approximately five minutes.
+AWS launches the software with the specified settings. The Console agent deploys in approximately five minutes.
 
 .What's next?
 
@@ -149,7 +149,7 @@ Note the following as you configure the VM:
 +
 image:screenshot-azure-sku.png[A screenshot of the create new IP address in Azure that enables you to choose Basic under in the SKU field.]
 +
-If you use a Standard SKU IP address instead, then the Console uses the _private_ IP address of the Console agent, instead of the public IP. If the machine that you're using to access the Console doesn't have access to that private IP address, then actions from the Console will fail.
+If you use a Standard SKU IP address instead, then the Console uses the _private_ IP address of the Console agent, instead of the public IP. If the machine that you're using to access the Console doesn't have access to that private IP address, then actions from the Console fail.
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku[Azure documentation: Public IP SKU^]
 

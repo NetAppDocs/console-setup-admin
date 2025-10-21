@@ -79,7 +79,7 @@ You need to implement this networking requirement after you create the Console a
 
 You need to create a custom role that has permissions to deploy the Console agent in Azure. 
 
-Create an Azure custom role that you can assign to your Azure account or to a Microsoft Entra service principal. The Console authenticates with Azure and uses these permissions to create the Console agent instance on your behalf.
+Create an Azure custom role that you can assign to your Azure account or to a Microsoft Entra service principal. The Console authenticates with Azure and uses these permissions to create the Console agent on your behalf.
 
 The Console deploys the Console agent VM in Azure, enables a https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[system-assigned managed identity^], creates the required role, and assigns it to the VM. link:reference-permissions-azure.html[Review how the Console uses the permissions].
 
@@ -324,7 +324,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 * If you don't want the Console to automatically create an Azure role for the Console agent, then you'll need to create your own link:reference-permissions-azure.html[using the policy on this page].
 +
-These permissions are for the Console agent instance itself. It's a different set of permissions than what you previously set up to deploy the Console agent VM.
+These permissions are for the Console agent itself. It's a different set of permissions than what you previously set up to deploy the Console agent VM.
 
 .Steps
 
@@ -359,7 +359,7 @@ The authentication method for the virtual machine can be a password or an SSH pu
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux[Learn about connecting to a Linux VM in Azure^]
 
-. On the  *Details* page, enter a name for the instance, specify tags, and choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-azure.html[the required permissions].
+. On the  *Details* page, enter a name for the agent, specify tags, and choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-azure.html[the required permissions].
 +
 Note that you can choose the Azure subscriptions associated with this role. Each subscription that you choose provides the Console agent permissions to manage resources in that subscription (for example, Cloud Volumes ONTAP).
 
@@ -373,7 +373,7 @@ include::_include/agent-deploy-console-check.adoc[]
 
 . Select *Add*.
 +
-The Console prepares the instance in about 10 minutes. Stay on the page until the process completes.
+The Console prepares the agent in about 10 minutes. Stay on the page until the process completes.
 
 .Result
 
@@ -381,5 +381,5 @@ After the process is complete, the Console agent is available for use from the C
 
 NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
-If you have Azure Blob storage in the same Azure subscription where you created the Console agent, you'll see an Azure Blob storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html[Learn how to manage Azure Blob storage from NetApp Console^]
+If you have Azure Blob storage in the same Azure account where you created the Console agent, you'll see Azure Blob storage appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html[Learn how to manage Azure Blob storage from NetApp Console^]
 

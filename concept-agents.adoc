@@ -124,7 +124,7 @@ You can install a Console agent directly from the Console, from your cloud provi
 
 == Cloud Permissions
 
-You need specific permissions to create the Console agent directly from the NetApp Console and another set of permissions for the Console agent instance itself. If you create the Console agent in AWS or Azure directly from the Console, then the Console creates the Console agent with the permissions that it needs.
+You need specific permissions to create the Console agent directly from the NetApp Console and another set of permissions for the Console agent itself. If you create the Console agent in AWS or Azure directly from the Console, then the Console creates the Console agent with the permissions that it needs.
 
 When using the Console in standard mode, how you provide permissions depends on how you plan to create the Console agent.
 
