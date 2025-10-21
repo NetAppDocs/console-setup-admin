@@ -5,7 +5,7 @@ keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp mar
 summary: You can manage the Google Cloud credentials that are associated with the Console agent VM instance by associating a marketplace subscription and by troubleshooting the subscription process. Both of these tasks ensure that you can use your marketplace subscription to pay for data services.
 ---
 
-= Manage Google Cloud credentials and subscriptions for NetApp Console
+= Associate Console agent credentials with your Google Cloud subscription
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,13 +13,16 @@ summary: You can manage the Google Cloud credentials that are associated with th
 :imagesdir: ./media/
 
 [.lead]
+When you create a Console agent in Google Cloud, you can use the associated credentials to subscribe to NetApp Intelligent Services, which include Cloud Volumes ONTAP, and NetApp data services. You must associate the subscription with the agent whose credentials you want to use to pay for the services.
+
+
 You can manage the Google Cloud credentials that are associated with a Console agent VM instance by associating a marketplace subscription and by troubleshooting the subscription process. Both of these tasks ensure that you can use your marketplace subscription to pay for data services.
 
 == Associate a Marketplace subscription with Google Cloud credentials
 
 When you deploy a Console agent in Google Cloud, the Console creates a default set of credentials that are associated with a Console agent VM instance. At any time, you can change the Google Cloud Marketplace subscription that is associated with these credentials. The subscription enables you to create a pay-as-you-go Cloud Volumes ONTAP system, and to use other data services.
 
-Replacing the current marketplace subscription with a new subscription changes the marketplace subscription for any existing Cloud Volumes ONTAP systems and all new systems.
+Replacing the current marketplace subscription with a new one updates the subscription for existing and new Cloud Volumes ONTAP systems.
 
 .Steps
 
@@ -27,7 +30,7 @@ include::_include/subscribe-google.adoc[]
 
 == Troubleshoot the Marketplace subscription process
 
-Sometimes subscribing to NetApp data services through the Google Cloud Marketplace can become fragmented due to incorrect permissions or accidentally not following the redirection to the Console. If this happens, use the following steps to complete the subscription process.
+Subscribing to NetApp data services through the Google Cloud Marketplace may fail due to incorrect permissions or missed redirection to the Console. If this happens, use the following steps to complete the subscription process.
 
 .Steps
 

@@ -229,7 +229,7 @@ include::_include/agent-deploy-console-check.adoc[]
 
 . Select *Add*.
 +
-The instance is ready in approximately 10 minutes; stay on the page until the process completes.
+The agent is ready in approximately 10 minutes; stay on the page until the process completes.
 
 
 

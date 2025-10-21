@@ -45,13 +45,13 @@ Manually rotate AWS access keys by updating them in the Console.
 
 Add additional AWS credentials to a Console agent so that it has the permissions needed to manage resources and processes within your public cloud environment. You can either provide the ARN of an IAM role in another account or provide AWS access keys.
 
-If you're just getting started with the Console, link:concept-accounts-aws.html[Learn how the NetApp Console uses AWS credentials and permissions].
+link:concept-accounts-aws.html[Learn how the NetApp Console uses AWS credentials and permissions].
 
 === Grant permissions
 
 Grant permissions before adding AWS credentials to a Console agent. The permissions allow a Console agent to manage resources and processes within that AWS account. You can provide the permissions with the ARN of a role in a trusted account or AWS keys.
 
-NOTE: If you deployed a Console agent from the Console, it automatically added AWS credentials for the account in which you deployed a Console agent. This ensures the necessary permissions are in place for managing resources. link:concept-accounts-aws.html[Learn about AWS credentials and permissions].
+NOTE: If you deployed a Console agent from the Console, it automatically added AWS credentials for the account in which you deployed a Console agent. This ensures the necessary permissions are in place for managing resources. 
 
 *Choices*
 
@@ -60,7 +60,7 @@ NOTE: If you deployed a Console agent from the Console, it automatically added A
 
 ==== Grant permissions by assuming an IAM role in another account
 
-You can set up a trust relationship between the source AWS account in which you deployed a Console agent instance and other AWS accounts by using IAM roles. You would then provide the Console with the ARN of the IAM roles from the trusted accounts.
+You can set up a trust relationship between the source AWS account in which you deployed a Console agent and other AWS accounts by using IAM roles. You would then provide the Console with the ARN of the IAM roles from the trusted accounts.
 
 If a Console agent is installed on-premises, you can't use this authentication method. You must use AWS keys.
 
@@ -99,17 +99,15 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html[AWS
 * https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html[AWS Documentation: Creating IAM Roles^]
 * https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html[AWS Documentation: Adding and Removing IAM Policies^]
 
-.Result
 
-The account has the required permissions. <<add-the-credentials,You can now add the credentials to a Console agent>>.
 
-=== Add the credentials
+=== Add the credentials to an existing agent
 
 After you provide an AWS account with the required permissions, you can add the credentials for that account to an existing agent. This enables you to launch Cloud Volumes ONTAP systems in that account using the same agent.
 
-.Before you begin
 
- New credentials in your cloud provider may take a few minutes to become available. Then, add the credentials.
+
+NOTE: New credentials in your cloud provider may take a few minutes to become available.
 
 .Steps
 
@@ -131,7 +129,7 @@ To pay for services at an hourly rate (PAYGO) or with an annual contract, you mu
 
 .Result
 
-You can now switch to a different set of credentials from the Details and Credentials page when adding a system to the Console
+You can now switch to a different set of credentials from the Details and Credentials page when adding a subscription to the Console.
 
 image:screenshot_accounts_switch_aws.png[A screenshot that shows selecting between cloud provider accounts after selecting Switch Account in the Details & Credentials page.]
 
@@ -185,7 +183,7 @@ Refer to link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-c
 
 .Result
 
-The IAM role now has the required permissions. <<add-the-credentials-2,You can now add it to the Console>>.
+The IAM role now has the required permissions. <<add-the-credentials,You can now add it to the Console>>.
 
 === Add the credentials
 
@@ -201,9 +199,9 @@ If you just created the IAM role, it might take a few minutes until they are ava
 +
 image:screenshot-settings-icon-organization.png[A screenshot that shows the Settings icon in the upper right of the Console.]
 
-. On the *Organization credentials* or *Account credentials* page, select *Add Credentials* and follow the steps in the wizard.
+. On the *Organization credentials* page, select *Add Credentials* and follow the steps in the wizard.
 
-.. *Credentials Location*: Select *Amazon Web Services > NetApp Console*.
+.. *Credentials Location*: Select *Amazon Web Services > Console*.
 
 .. *Define Credentials*: Provide the ARN (Amazon Resource Name) of the IAM role.
 
@@ -217,7 +215,7 @@ For details, refer to the https://docs.netapp.com/us-en/storage-management-fsx-o
 [[subscribe]]
 == Configure an AWS subscription
 
-After you add your AWS credentials, you can configure an AWS Marketplace subscription with those credentials. The subscription enables you to pay for Cloud Volumes ONTAP at an hourly rate (PAYGO) or using an annual contract, and to pay for other data services.
+After you add your AWS credentials, you can configure an AWS Marketplace subscription with those credentials. The subscription enables you to pay for NetApp data services and Cloud Volumes ONTAP at an hourly rate (PAYGO) or using an annual contract.
 
 There are two scenarios in which you might configure an AWS Marketplace subscription after you've already added the credentials:
 
@@ -232,19 +230,19 @@ You need to create a Console agent before you can configure a subscription. link
 
 include::_include/subscribe-aws.adoc[]
 
-== Associate an existing subscription with your organization or account
+== Associate an existing subscription with your organization 
 
-When you subscribe to from the AWS Marketplace, the last step in the process is to associate the subscription with your organization. If you didn't complete this step, then you can't use the subscription with your organization or account.
+When you subscribe to from the AWS Marketplace, the last step in the process is to associate the subscription with your organization. If you didn't complete this step, then you can't use the subscription with your organization.
 
 
 * link:concept-modes.html[Learn about the Console deployment modes]
 * link:concept-identity-and-access-management.html[Learn about the Console identity and access management]
 
-Follow the steps below if you subscribed to NetApp intelligent data services from the AWS Marketplace, but you missed the step to associate the subscription with your account.
+Follow the steps below if you subscribed to NetApp Intelligent Services from the AWS Marketplace, but you missed the step to associate the subscription with your account.
 
 .Steps
 
-. Confirm that you didn't associate your subscription with your Console organization or account.
+. Confirm that you didn't associate your subscription with your Console organization.
 
 .. From the navigation menu, select *Administration > Licenses and subscriptions*.
 .. Select *Subscriptions*.
@@ -276,7 +274,7 @@ include::_include/subscribe-aws.adoc[tag=assignment]
 +
 image:screenshot-subscription-assignment.png[A screenshot of the Subscription Assignment page that enables you to choose the organizations to associate with this subscription.]
 
-. Confirm that the subscription is associated with your organization or account.
+. Confirm that the subscription is associated with your organization.
 
 .. From the navigation menu, select *Administration > License and subscriptions*.
 .. Select *Subscriptions*.
@@ -284,7 +282,7 @@ image:screenshot-subscription-assignment.png[A screenshot of the Subscription As
 
 . Confirm that the subscription is associated with your AWS credentials.
 
-.. In the upper right of the console, select the Settings icon, and select *Credentials*.
+.. Select *Administration > Credentials*.
 .. On the *Organization credentials* page, verify that the subscription is associated with your AWS credentials.
 +
 Here's an example.
@@ -295,14 +293,14 @@ image:screenshot-credentials-with-subscription.png[A screenshot of the Console A
 
 Edit your AWS credentials by changing the account type (AWS keys or assume role), by editing the name, or by updating the credentials themselves (the keys or the role ARN).
 
-NOTE: You can't edit the credentials for an instance profile that is associated with a Console agent instance or an Amazon FSx for ONTAP instance. You can only rename the credentials for an FSx for ONTAP instance.
+NOTE: You can't edit the credentials for an instance profile that are associated with a Console agent instance or an Amazon FSx for ONTAP instance. You can only rename the credentials for an FSx for ONTAP instance.
 
 
 .Steps
 
 . Select *Administration > Credentials*.
 
-. On the *Organization credentials* or *Account credentials* page, select the action menu for a set of credentials and then select *Edit Credentials*.
+. On the *Organization credentials* page, select the action menu for a set of credentials and then select *Edit Credentials*.
 
 . Make the required changes and then select *Apply*.
 
@@ -310,7 +308,7 @@ NOTE: You can't edit the credentials for an instance profile that is associated 
 
 If you no longer need a set of credentials, you can delete them. You can only delete credentials that aren't associated with a system.
 
-TIP: You can't delete the credentials for an instance profile that is associated with a Console agent instance.
+TIP: You can't delete the credentials for an instance profile that is associated with a Console agent.
 
 .Steps
 

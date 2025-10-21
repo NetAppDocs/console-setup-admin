@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-permissions-aws.html
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions
-summary: When the NetApp Console launches the agent instance in AWS, it attaches a policy to the instance that provides the agent with permissions to manage resources and processes within that AWS account. The agent uses the permissions to make API calls to several AWS services, including EC2, S3, CloudFormation, IAM, the Key Management Service, and more.
+summary: When the NetApp Console launches the agent in AWS, it attaches a policy to the agent that provides the agent with permissions to manage resources and processes within that AWS account. The agent uses the permissions to make API calls to several AWS services, including EC2, S3, CloudFormation, IAM, the Key Management Service, and more.
 ---
 
 = AWS permissions for the Console agent
@@ -13,7 +13,7 @@ summary: When the NetApp Console launches the agent instance in AWS, it attaches
 :imagesdir: ./media/
 
 [.lead]
-When the NetApp Console launches a Console agent instance in AWS, it attaches a policy to the instance that provides the agent with permissions to manage resources and processes within that AWS account. The agent uses the permissions to make API calls to several AWS services, including EC2, S3, CloudFormation, IAM, the Key Management Service (KMS), and more.
+When the NetApp Console launches a Console agent in AWS, it attaches a policy to the agent that provides the agent with permissions to manage resources and processes within that AWS account. The agent uses the permissions to make API calls to several AWS services, including EC2, S3, CloudFormation, IAM, the Key Management Service (KMS), and more.
 
 == IAM policies
 
@@ -992,7 +992,7 @@ The agent makes the following API requests to deploy and manage Cloud Volumes ON
 | Tag resources with the "WorkingEnvironment" and "WorkingEnvironmentId" tags which are used for maintenance and cost allocation
 | ec2:CreateTags | Yes | Yes | No
 
-.6+| Manage EBS volumes that Cloud Volumes ONTAP uses as back-end storage
+.6+| Manage EBS volumes that Cloud Volumes ONTAP uses as backend storage
 | ec2:CreateVolume | Yes | Yes | No
 | ec2:DescribeVolumes | Yes | Yes | Yes
 | ec2:ModifyVolumeAttribute | No | Yes | Yes

@@ -13,7 +13,7 @@ summary: The Console agent requires permissions to perform actions in your cloud
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Console requires permissions to perform actions in Google Cloud. These permissions are included in a custom role provided by NetApp. You should understand what the agent does with these permissions.
+The Console agent requires permissions to perform actions in Google Cloud. These permissions are included in a custom role provided by NetApp. You should understand what the agent does with these permissions.
 
 == Service account permissions
 
@@ -29,7 +29,7 @@ You also need to ensure that the role is up to date as new permissions are added
 
 [source,yaml]
 title: NetApp Console agent
-description: Permissions for the service account associated with the Console agent instance.
+description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
 - iam.serviceAccounts.actAs
