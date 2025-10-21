@@ -99,9 +99,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html[AWS
 * https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html[AWS Documentation: Creating IAM Roles^]
 * https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html[AWS Documentation: Adding and Removing IAM Policies^]
 
-.Result
 
-The account has the required permissions. <<add-the-credentials,You can now add the credentials to a Console agent>>.
 
 === Add the credentials to an existing agent
 
@@ -185,7 +183,7 @@ Refer to link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-c
 
 .Result
 
-The IAM role now has the required permissions. <<add-the-credentials-2,You can now add it to the Console>>.
+The IAM role now has the required permissions. <<add-the-credentials,You can now add it to the Console>>.
 
 === Add the credentials
 
