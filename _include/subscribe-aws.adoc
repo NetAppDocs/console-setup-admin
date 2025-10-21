@@ -1,6 +1,8 @@
+////
 The following video shows the steps to subscribe to NetApp Intelligent Services from the AWS Marketplace:
 
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto, title="Subscribe to NetApp Intelligent Services from the AWS Marketplace"]
+////
 
 .Steps
 
