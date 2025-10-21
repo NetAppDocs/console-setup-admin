@@ -93,7 +93,7 @@ To configure suspicious user behavior settings and respond to alerts, a user mus
 User behavior roles should be conferred on users with existing Ransomware Resilience admin or viewer priviliges who need access to link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[suspicious user activity settings and alerts^]. A user with the Ransomware Resilience admin role, for example, should receive the Ransomware Resilience user behavior admin role to configure user activity agents and block or unblock users. The Ransomware Resilience user behavior admin role should not be conferred on a Ransomware Resilience viewer.
 
 [NOTE]
-To activate suspicious user activity detection, you must be Console Organization admin. 
+To activate suspicious user activity detection, you must have the Console Organization admin role. 
 
 The following table describes the actions available to the Ransomware Resilience user behavior admin and viewer roles.  
 
