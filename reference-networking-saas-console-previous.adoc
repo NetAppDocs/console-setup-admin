@@ -13,15 +13,16 @@ summary: When you log in and use the web-based console, it contacts several endp
 :imagesdir: ./media/
 
 [.lead]
-This topic details the network access required for versions of the NetApp Console standard mode previous to the 4.0.0. release of the NetApp Console, the NetApp Console agent, and NetApp data services outbound internet access and the ability to contact the necessary endpoints. You need to ensure that the Console and any agents you install have the right network access to function property.
+You need to ensure that the Console and any agents you install have the right network access to function properly. This topic details the network access required for versions of the NetApp Console standard mode 3.9.55 and below, the NetApp Console agent, and NetApp data services outbound internet access and the ability to contact the necessary endpoints.
 
-You'll need to set up network access for computers that access the NetApp Console as software as a service (SaaS) and for any Console agents you install on-premises or in the cloud. You may also need additional endpoints for certain NetApp data services, including Cloud Volumes ONTAP.
+
+Set up network access for computers accessing the NetApp Console as Software as a Service (SaaS) and for Console agents installed on-premises or in the cloud. You may also need additional endpoints for certain NetApp data services, including Cloud Volumes ONTAP.
 
 [[update-endpoint-list]]
 == Update your endpoint list to the revised list for 4.0.0 and higher
 Starting with version 4.0.0, Console agents require fewer endpoints. Existing deployments before 4.0.0 remain supported. After upgrading to 4.0.0 or later, you may remove the old endpoints from your allow list when convenient.
 
-NetApp recommends that you update your firewall rules to use the revised endpoint list. The revised list is smaller, thus more secure and easier to manage. 
+NetApp recommends updating firewall rules to use the revised endpoint list. The revised list is smaller, more secure and easier to manage. NetApp removes the need for wildcard entries, and endpoints for agent upgrades support all data services.
 
 include::_include/endpoints-agent.adoc[tag=endpoints-comparison]
 
@@ -43,157 +44,39 @@ _
 [source,cli]
 systemctl status netapp-service-manager.service
 
-. Remove the old endpoints from your allow list.
+. Remove the old endpoints from your firewall allow list.
 
 
 
-== Endpoints contacted by the NetApp Console
-Each computer that accesses the NetApp Console must have connections to the endpoints listed below.
+== NetApp endpoints contacted by NetApp Console and Console agents for 3.9.55 and below
 
-The system contacts these endpoints in two scenarios:
+Access to the following endpoints is necessary for each computer that accesses the NetApp Console as well as each agent, regardless of where it is deployed.
 
-* From a computer accessing the https://console.netapp.com[NetApp Console^] as software as a service (SaaS).
-
-* From a computer directly accessing an agent host, either to log in and set it up or access the Console from the agent host.
-
-
-[cols=2*,options="header,autowidth"]
-
-|===
-| Endpoints
-| Purpose
-
-| 
-\https://support.netapp.com
-\https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
-
-| \https://\*.api.bluexp.netapp.com
-\https://api.bluexp.netapp.com
-\https://*.cloudmanager.cloud.netapp.com
-\https://cloudmanager.cloud.netapp.com
-\https://netapp-cloud-account.auth0.com
-\https://netapp-cloud-account.us.auth0.com
-
-| To provide features and services within the NetApp Console.
-
-
-a| 
-Choose between two sets of endpoints:
-
-* Option 1 (recommended)
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io
-\https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net
-\https://cloudmanagerinfraprod.azurecr.io
-
-a| To obtain images for Console agent upgrades.
-
-NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints, unless you are using Ransomware Resilience or Backup and Recovery. Note the following about these endpoints:
-
-
-* Option 1 endpoints are supported in 3.9.47 and higher. Releases previous to 3.9.47 do not support backwards compatibility.
-* The Console agent initiates contact with the endpoints in option 2 first. If those endpoints are not accessible, it automatically contacts the endpoints in option 1.
-* If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
-
-|===
-
-
-== Endpoints contacted by the Console agent
-You install the Console agent on-premises or in the cloud, and it contacts endpoints to complete Console-initiated actions.  
-
-Console agents need access to the same endpoints as the NetApp Console, plus additional endpoints if you deploy the agent in your cloud provider.
-
-=== Agent endpoints for AWS
-These endpoints are applicable for Console agents previous to 4.0.0.
-
-[cols=2*,options="header,autowidth"]
-
-|===
-| Endpoints
-| Purpose
-
-| AWS services (amazonaws.com):
-
-CloudFormation
-
-Elastic Compute Cloud (EC2)
-
-Identity and Access Management (IAM)
-
-Key Management Service (KMS)
-
-Security Token Service (STS)
-
-Simple Storage Service (S3) |  To manage resources in AWS. The exact endpoint depends on the AWS region that you're using. Refer to AWS documentation for details
-To obtain licensing information and to send AutoSupport messages to NetApp support.
+Additional cloud provider endpoints are needed for Console agents deployed in your respective cloud provider. Cloud provider endpoints are the same for all agent versions.
 
 include::_include/endpoints-agent.adoc[tag=previous-endpoints]
 
-|===
-
-=== Agent endpoints For Azure
-
-These endpoints apply to Console agents previous to 4.0.0.
-
-[cols=2*,options="header,autowidth"]
-
-|===
-| Endpoints
-| Purpose
-
-| \https://management.azure.com
-\https://login.microsoftonline.com
-\https://blob.core.windows.net
-\https://core.windows.net |  To manage resources in Azure public regions.
-| \https://management.chinacloudapi.cn
-\https://login.chinacloudapi.cn
-\https://blob.core.chinacloudapi.cn
-\https://core.chinacloudapi.cn |  To manage resources in Azure China regions.
-
-include::_include/endpoints-agent.adoc[tag=previous-endpoints]
-
-|===
-
-=== Agent endpoints for Google Cloud
-
-These endpoints apply to Console agents previous to 4.0.0.
-
-[cols=2*,options="header,autowidth"]
-
-|===
-| Endpoints
-| Purpose
-
-|\https://www.googleapis.com/compute/v1/
-\https://compute.googleapis.com/compute/v1
-\https://cloudresourcemanager.googleapis.com/v1/projects
-\https://www.googleapis.com/compute/beta
-\https://storage.googleapis.com/storage/v1
-\https://www.googleapis.com/storage/v1
-\https://iam.googleapis.com/v1
-\https://cloudkms.googleapis.com/v1
-\https://www.googleapis.com/deploymentmanager/v2/project| To manage resources in Google Cloud.
-
-include::_include/endpoints-agent.adoc[tag=previous-endpoints]
-
-|===
 
 
-== On-premises agent endpoints
+== Cloud provider endpoints contacted by the Console agent 
 
-[cols=2*,options="header,autowidth"]
+Cloud provider endpoints are the same for all versions. Review complete list of link:reference-networking-saas-console.html[required endpoints for 4.0.0 and higher]
 
-|===
-| Endpoints
-| Purpose
+== Data services endpoints contacted by the Console agent
 
-include::_include/endpoints-agent.adoc[tag=previous-endpoints]
+Some NetApp data services as well as Cloud Volumes ONTAP require the agent to have additional outbound internet access.
 
-|===
+
+=== Endpoints for Cloud Volumes ONTAP
+
+** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes[Endpoints for Cloud Volumes ONTAP in AWS]
+
+** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html[Endpoints for Cloud Volumes ONTAP in Azure]
+
+** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access[Endpoints for Cloud Volumes ONTAP in Google Cloud]
+
+
+
 
 
 
