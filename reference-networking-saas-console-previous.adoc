@@ -13,12 +13,11 @@ summary: You need to ensure that the Console and any agents you install have the
 :imagesdir: ./media/
 
 [.lead]
-You need to ensure that the Console and any agents you install have the right network access to function properly. 
-
-NOTE: This topic documents the network access required for versions of the NetApp Console standard mode 3.9.55 and below. For required endpoints for 4.0.0 and above, review link:reference-networking-saas-console.html[the required endpoints for 4.0.0 and higher]
 
 
 NetApp Console, the NetApp Console agent, and NetApp data services require outbound internet access and the ability to contact the necessary endpoints. 
+
+NOTE: This topic documents the network access required for versions of the NetApp Console standard mode 3.9.55 and below. For required endpoints for 4.0.0 and above, review link:reference-networking-saas-console.html[the required endpoints for 4.0.0 and higher].
 
 You'll need to set up network access for the following:
 
@@ -37,6 +36,8 @@ include::_include/endpoints-agent.adoc[tag=endpoints-comparison]
 
 
 .Steps
+
+. Verify that your agent is version 4.0.0 or higher. link:task-troubleshoot-agent.html#view-the-console-agent-version[View agent version.]
 
 . Whitelist the endpoints in link:reference-networking-saas-console.html[Supported endpoints for 4.0.0 and higher].
 . Restart the service manager 2 service on each agent by running the following command:
