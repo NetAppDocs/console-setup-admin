@@ -23,7 +23,10 @@ Starting with version 4.0.0, Console agents require fewer endpoints. Existing de
 
 NetApp recommends that you update your firewall rules to use the revised endpoint list. The revised list is smaller, thus more secure and easier to manage. 
 
-Review link:reference-networking-saas-console.html[supported endpoints for 4.0.0 and higher]
+include::_include/endpoints-agent.adoc[tag=endpoints-comparison]
+
+
+Review complete list of link:reference-networking-saas-console.html[required endpoints for 4.0.0 and higher]
 
 .Steps
 

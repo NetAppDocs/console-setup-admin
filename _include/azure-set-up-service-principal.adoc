@@ -54,7 +54,7 @@ image:screenshot_azure_shell_upload.png[A screenshot of the Azure Cloud Shell wh
 * Use the Azure CLI to create the custom role:
 +
 [source,azurecli]
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 +
 You should now have a custom role called Console Operator that you can assign to the Console agent virtual machine.
 

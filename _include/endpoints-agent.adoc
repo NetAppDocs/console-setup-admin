@@ -94,6 +94,7 @@ The endpoints listed below are all CNAME entries.
 | \https://support.netapp.com
 \https://mysupport.netapp.com
 
+
 | To obtain licensing information and to send AutoSupport messages to NetApp support.
 
 | \https://\*.api.bluexp.netapp.com
@@ -189,3 +190,52 @@ If the Console agent is in a commercial region or sovereign region, you can choo
 
 | To obtain images for Console agent upgrades when the Console agent is installed in a commercial region or sovereign region.
 //end::upgrade-endpoints-restricted-mode[]
+
+
+//tag::endpoints-comparison[]
+
+[cols=3*,options="header,autowidth"]
+
+|===
+
+
+|*Previous endpoints*
+| *Endpoints for 4.0.0 and above*
+| *Purpose*
+
+a| 
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+a| 
+* \https://mysupport.netapp.com 
+* \https://signin.b2c.netapp.com 
+* \https://support.netapp.com 
+a| For licensing and contacting NetApp Support.
+a| 
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+a| For day-to-day operations.
+|
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+|
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+| For upgrades.
+|===
+
+
+//end::endpoints-comparison[]
