@@ -228,13 +228,13 @@ a|
 * \https://components.console.bluexp.netapp.com
 * \https://cdn.auth0.com
 a| For day-to-day operations.
-|
+a|
 * \https://*.blob.core.windows.net
 * \https://cloudmanagerinfraprod.azurecr.io
-|
+a|
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
-| For upgrades.
+| To obtain images for Console agent upgrades.
 |===
 
 
