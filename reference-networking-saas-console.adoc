@@ -19,8 +19,8 @@ NetApp Console, the NetApp Console agent, and NetApp data services require outbo
 You'll need to set up network access for the following:
 
 * Computers that access the NetApp Console as software as a service (SaaS) 
-* Console agents you install on-premises or in the cloud. 
-* Some data services require additional network access,including Cloud Volumes ONTAP.
+* Console agents you install on-premises or in the cloud. Console agents.
+
 
 NOTE: With 4.0.0, NetApp has reduced the required network endpoints for the Console and Console agents, enhancing security and simplifying deployment. Importantly, all deployments prior to version 4.0.0 continue to be fully supported. While previous endpoints remain available for existing agents, NetApp strongly recommends updating firewall rules to the current endpoints after confirming successful agent upgrades.link:reference-networking-saas-console-previous.html[Learn how to update your endpoint list.]
 
@@ -47,7 +47,7 @@ include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 
 == Cloud provider endpoints contacted the Console agent
-Console agents must have access to additional endpoints depending which cloud provider the agent is installed.
+Console agents must have access to additional endpoints if they are deployed in your cloud provider.
 
 Set up cloud provider network endpoint access before installing the Console agent.
 

@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: reference-networking-saas-console-previous.html
-keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp
-summary: When you log in and use the web-based console, it contacts several endpoints to complete the actions that you initiate. Computers that access the NetApp Console must have connections to these endpoints.
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console
+summary: You need to ensure that the Console and any agents you install have the right network access to function properly. 
 ---
 
-= Required network access points for 3.9.55 and below
+= Required network access  for 3.9.55 and below
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,10 +13,19 @@ summary: When you log in and use the web-based console, it contacts several endp
 :imagesdir: ./media/
 
 [.lead]
-You need to ensure that the Console and any agents you install have the right network access to function properly. This topic details the network access required for versions of the NetApp Console standard mode 3.9.55 and below, the NetApp Console agent, and NetApp data services outbound internet access and the ability to contact the necessary endpoints.
+You need to ensure that the Console and any agents you install have the right network access to function properly. 
+
+NOTE: This topic documents the network access required for versions of the NetApp Console standard mode 3.9.55 and below. For required endpoints for 4.0.0 and above, review link:reference-networking-saas-console.html[the required endpoints for 4.0.0 and higher]
 
 
-Set up network access for computers accessing the NetApp Console as Software as a Service (SaaS) and for Console agents installed on-premises or in the cloud. You may also need additional endpoints for certain NetApp data services, including Cloud Volumes ONTAP.
+NetApp Console, the NetApp Console agent, and NetApp data services require outbound internet access and the ability to contact the necessary endpoints. 
+
+You'll need to set up network access for the following:
+
+* Computers that access the NetApp Console as software as a service (SaaS) 
+* Console agents you install on-premises or in the cloud. Console agents.
+
+
 
 [[update-endpoint-list]]
 == Update your endpoint list to the revised list for 4.0.0 and higher
@@ -59,6 +68,10 @@ include::_include/endpoints-agent.adoc[tag=previous-endpoints]
 
 
 == Cloud provider endpoints contacted by the Console agent 
+
+Console agents must have access to additional endpoints if they are deployed in your cloud provider.
+
+Set up cloud provider network endpoint access before installing the Console agent.
 
 Cloud provider endpoints are the same for all versions. Review complete list of link:reference-networking-saas-console.html[required endpoints for 4.0.0 and higher]
 
