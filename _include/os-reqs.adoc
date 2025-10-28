@@ -136,7 +136,7 @@ RAM:: 32 GB
 
 //tag::aws-ec2[]
 AWS EC2 instance type::
-An instance type that meets the CPU and RAM requirements above. We recommend t3.2xlarge.
+An instance type that meets CPU and RAM requirements. NetApp recommends t3.2xlarge.
 //end::aws-ec2[]
 
 //tag::aws-key-pair[]
@@ -154,12 +154,12 @@ If IMDSv2 is enabled on the EC2 instance (this is the default setting for new EC
 
 //tag::azure-vm[]
 Azure VM size::
-An instance type that meets the CPU and RAM requirements above. We recommend Standard_D8s_v3.
+An instance type that meets CPU and RAM requirements. NetApp recommends Standard_D8s_v3.
 //end::azure-vm[]
 
 //tag::google-machine[]
 Google Cloud machine type::
-An instance type that meets the CPU and RAM requirements above. We recommend n2-standard-8.
+An instance type that meets CPU and RAM requirements. NetApp recommend n2-standard-8.
 +
 The Console agent is supported in Google Cloud on a VM instance with an OS that supports https://cloud.google.com/compute/shielded-vm/docs/shielded-vm[Shielded VM features^]
 //end::google-machine[]

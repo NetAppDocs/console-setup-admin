@@ -123,15 +123,15 @@ Refer to the following pages for details about host requirements, Podman require
 
 .Standard mode
 --
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html[Install and set up a Console agent on-premises]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-manual.html[Manually install the Console agent in AWS]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-manual.html[Manually install the Console agent in Azure]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-manual.html[Manually install the Console agent in Google Cloud]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[Install and set up a Console agent on-premises]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-manual.html[Manually install the Console agent in AWS]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-manual.html[Manually install the Console agent in Azure]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-google-manual.html[Manually install the Console agent in Google Cloud]
 --
 
 .Restricted mode
 --
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html[Prepare for deployment in restricted mode]
+https://docs.netapp.com/us-en/console-setup-admin/task-prepare-restricted-mode.html[Prepare for deployment in restricted mode]
 --
 
 
@@ -143,7 +143,7 @@ Refer to the following pages to rediscover your systems after you deploy a new C
 
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html[Add existing Cloud Volumes ONTAP systems^]
 * https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html[Discover on-premises ONTAP clusters^]
-* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-creating-fsx-working-environment.html[Create or discover an FSx for ONTAP system^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html[Create or discover an FSx for ONTAP system^]
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html[Create an Azure NetApp Files systems^]
 * https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html[Discover E-Series systems^]
 * https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html[Discover StorageGRID systems^]
