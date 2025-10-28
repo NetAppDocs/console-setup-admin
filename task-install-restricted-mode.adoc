@@ -237,7 +237,7 @@ The Console agent is now installed and set up with your Console organization. Al
 
 Provide the Console with the permissions that you previously set up.
 
-== Step 3: Provide permissions to NetApp Console
+== Step 3: Provide permissions to the Console agent
 
 If you deployed the Console agent from the Azure Marketplace or if you manually installed the Console agent software, you need to provide the permissions that you previously set up.
 

@@ -90,6 +90,58 @@ The endpoints listed below are all CNAME entries.
 
 //end::saas-endpoints[]
 
+//tag::previous-endpoints[]
+
+[cols=2*,options="header,autowidth"]
+
+|===
+| Endpoints
+| Purpose
+
+
+a| \https://support.netapp.com
+\https://mysupport.netapp.com
+
+
+a| To obtain licensing information and to send AutoSupport messages to NetApp support.
+
+a| \https://\*.api.bluexp.netapp.com
+\https://api.bluexp.netapp.com
+\https://*.cloudmanager.cloud.netapp.com
+\https://cloudmanager.cloud.netapp.com
+\https://netapp-cloud-account.auth0.com
+\https://netapp-cloud-account.us.auth0.com
+
+| To provide features and services within the NetApp Console.
+
+
+a| 
+Choose between two sets of endpoints:
+
+* Option 1 (recommended)
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io
+\https://bluexpinfraprod.azurecr.io
+
+* Option 2
++
+\https://*.blob.core.windows.net
+\https://cloudmanagerinfraprod.azurecr.io
+
+a| To obtain images for Console agent upgrades.
+
+NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints, unless you are using Ransomware Resilience or Backup and Recovery. Note the following about these endpoints:
+
+
+* Option 1 endpoints are supported in 3.9.47 and higher. Releases previous to 3.9.47 do not support backwards compatibility.
+* The Console agent initiates contact with the endpoints in option 2 first. If those endpoints are not accessible, it automatically contacts the endpoints in option 1.
+* If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
+
+|===
+
+//end::previous-endpoints[]
+
+
 //tag::upgrade-endpoints[]
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io
 \https://bluexpinfraprod.azurecr.io 
@@ -110,6 +162,7 @@ Although the previous endpoints are still supported, NetApp recommends updating 
 //end::upgrade-endpoints[]
 
 //tag::upgrade-endpoints-explanation[]
+
 //Same text is also in endpoints-manual-install
 ^1^ NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints. Note the following about these endpoints:
 +
@@ -148,3 +201,52 @@ If the Console agent is in a commercial region or sovereign region, you can choo
 
 | To obtain images for Console agent upgrades when the Console agent is installed in a commercial region or sovereign region.
 //end::upgrade-endpoints-restricted-mode[]
+
+
+//tag::endpoints-comparison[]
+
+[cols=3*,options="header,autowidth"]
+
+|===
+
+|*Previous endpoints*
+| *Endpoints for 4.0.0 and above*
+| *Purpose*
+
+a| 
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+a| 
+* \https://mysupport.netapp.com 
+* \https://signin.b2c.netapp.com 
+* \https://support.netapp.com 
+a| For licensing and contacting NetApp Support.
+a| 
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+a| For day-to-day operations.
+a|
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+a|
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+| To obtain images for Console agent upgrades.
+
+|===
+
+
+//end::endpoints-comparison[]
