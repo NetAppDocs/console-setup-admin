@@ -32,7 +32,7 @@ See Knowledge Base article link:https://kb.netapp.com/Advice_and_Troubleshooting
 
 === SSL decryption isn't supported
 
-The Console doesn't support firewall configurations that have SSL decryption enabled. If SSL decryption is enabled, error messages appear in the Console and the agent instance displays as inactive.
+The Console doesn't support firewall configurations that have SSL decryption enabled. If SSL decryption is enabled, error messages appear in the Console and the agent instance displays as *Disconnected*.
 
 For enhanced security, you have the option to link:task-installing-https-cert.html[install an HTTPS certificate signed by a certificate authority (CA)].
 
@@ -46,6 +46,6 @@ This issue is related to a caching problem. The workaround is to use an incognit
 
 The agent isn't supported on a VM that is shared with other applications. The VM must be dedicated to the agent software.
 
-=== 3rd-party agents and extensions
+=== Third-party agents and extensions
 
-3rd-party agents or VM extensions are not supported on the agent VM.
+Third-party agents or VM extensions are not supported on the agent VM.
