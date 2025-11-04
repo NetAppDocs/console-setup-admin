@@ -209,7 +209,7 @@ If the Console agent is in a commercial region or sovereign region, you can choo
 
 |===
 
-|*Previous endpoints*
+|*Endpoints for 3.9.55 and below*
 | *Endpoints for 4.0.0 and above*
 | *Purpose*
 
