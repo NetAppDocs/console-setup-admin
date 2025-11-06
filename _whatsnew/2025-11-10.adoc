@@ -1,0 +1,14 @@
+
+
+
+== Console agent 4.1.0
+
+This release of the BlueXP Connector includes security improvements, bug fixes and the following changes:
+
+* Renamed the status indicators for the Console agent from *Active* and *Inactive* to *Connected* and *Disconnected* to better reflect current function.
+
+The 4.1.0 release is available for standard mode and restricted mode.
+
+
+
+
