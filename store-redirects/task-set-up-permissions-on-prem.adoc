@@ -1,4 +1,3 @@
 ---
 permalink: task-set-up-permissions-on-prem.html
-redirect: bluexp-setup-admin/task-install-connector-on-prem.html
----
+reredirect: console-setup-admin/task-install-connector-on-prem.html
