@@ -14,4 +14,4 @@ The 4.1.0 release is available for standard mode and restricted mode.
 
 
 == New email address for NetApp Console notifications
-The email address that sends NetApp Console notifications has changed to service@console.netapp.com from service@console.bluexp.netapp.com. NetApp recommends updating any email rules to the new address to ensure you continue to receive NetApp Console notifications.
+The email address that sends NetApp Console notifications has changed to *service@console.netapp.com* from *service@console.bluexp.netapp.com*. NetApp recommends updating any email rules to the allow *service@console.netapp.com* to ensure you continue to receive NetApp Console email notifications.
