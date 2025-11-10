@@ -3,15 +3,20 @@
 
 == Console agent 4.1.0
 
-This release of the BlueXP Connector includes security improvements, bug fixes and the following changes:
-
-* Renamed the status indicators for the Console agent from *Active* and *Inactive* to *Connected* and *Disconnected* to ,ale their purpose more clear.
+This release of the BlueXP Connector includes security improvements, bug fixes, and the following features:
 
 The 4.1.0 release is available for standard mode and restricted mode.
 
 
+.Renamed Agent status indicators
+Renamed the status indicators for the Console agent from *Active* and *Inactive* to *Connected* and *Disconnected* to make their purpose more clear.
 
 
 
-== New email address for NetApp Console notifications
+
+== NetApp Console administration
+This release includes the following changes:
+
+
+.New email address for NetApp Console notifications
 The email address that sends NetApp Console notifications has changed to *service@console.netapp.com* from *service@console.bluexp.netapp.com*. NetApp recommends updating any email rules to the allow *service@console.netapp.com* to ensure you continue to receive NetApp Console email notifications.
