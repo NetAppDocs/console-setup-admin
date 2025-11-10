@@ -13,8 +13,6 @@ summary: You need to ensure that the Console and any agents you install have the
 :imagesdir: ./media/
 
 [.lead]
-
-
 NetApp Console, the NetApp Console agent, and NetApp data services require outbound internet access to contact necessary endpoints. 
 
 NOTE: This topic documents the network access required for versions of the NetApp Console standard mode 3.9.55 and below. For required endpoints for 4.0.0 and above, review link:reference-networking-saas-console.html[the required endpoints for 4.0.0 and higher].
