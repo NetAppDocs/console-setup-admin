@@ -1,4 +1,4 @@
 ---
 permalink: task-set-up-permissions-on-prem.html
-reredirect: console-setup-admin/task-install-connector-on-prem.html
+redirect: console-setup-admin/task-install-connector-on-prem.html
 ---
