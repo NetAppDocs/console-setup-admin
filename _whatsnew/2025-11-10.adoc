@@ -3,7 +3,7 @@
 
 == Console agent 4.1.0
 
-This release of the BlueXP Connector includes security improvements, bug fixes, and the following features:
+This release of the Console agent includes security improvements, bug fixes, and the following features:
 
 The 4.1.0 release is available for standard mode and restricted mode.
 
@@ -18,7 +18,7 @@ The Console agent now supports RHEL 9.6 and Podman 5.4.0. In addition, when usin
 
 
 == NetApp Console administration
-This release includes the following changes:
+This release includes the following:
 
 
 .New email address for NetApp Console notifications
