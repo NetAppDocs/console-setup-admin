@@ -1,4 +1,4 @@
-* Cloud Deployment Manager V2 API
+* Cloud Infrastructure Manager V1 API
 * Cloud Logging API
 * Cloud Resource Manager API
 * Compute Engine API

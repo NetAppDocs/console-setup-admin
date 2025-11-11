@@ -139,6 +139,16 @@ includedPermissions:
 - compute.instances.setServiceAccount
 - iam.serviceAccounts.list
 
+// new permissions
+- iam.serviceAccount.actAs
+- storage.buckets.create   
+- storage.buckets.get
+- storage.objects.create
+- storage.folders.create
+- storage.objects.list
+- config.deployments.create
+- config.operations.get
+
 .. From Google Cloud, activate cloud shell.
 
 .. Upload the YAML file that includes the required permissions.
