@@ -17,10 +17,12 @@ Learn what's new with NetApp Console administration features: identity and acces
 
 //All links and images must use the absolute URL.
 
-// tag::whats-new[]
 
+== 10 November 2025
 
-== 6 October 2025
+include::_whatsnew/2025-11-10.adoc[]
+
+== 06 October 2025
 
 include::_whatsnew/2025-10-06.adoc[]
 
@@ -32,7 +34,7 @@ include::_whatsnew/2025-08-11.adoc[]
 
 include::_whatsnew/2025-07-31.adoc[]
 
-// end::whats-new[]
+
 
 == 21 July 2025
 include::_whatsnew/2025-07-21.adoc[]
@@ -42,7 +44,7 @@ include::_whatsnew/2025-07-14.adoc[]
 
 
 
-== 9 June 2025
+== 09 June 2025
 
 include::_whatsnew/2025-06-09.adoc[]
 
@@ -76,7 +78,7 @@ include::_whatsnew/2025-03-10.adoc[]
 
 
 
-== 6 March 2025
+== 06 March 2025
 
 include::_whatsnew/2025-03-06.adoc[]
 
@@ -89,7 +91,6 @@ include::_whatsnew/2025-02-18.adoc[]
 
 include::_whatsnew/2025-02-10.adoc[]
 
-// end::whats-new[]
 
 == 13 January 2025
 
@@ -105,7 +106,7 @@ include::_whatsnew/2024-12-16.adoc[]
 
 
 
-== 9 December 2024
+== 09 December 2024
 
 include::_whatsnew/2024-12-09.adoc[]
 
@@ -122,7 +123,7 @@ include::_whatsnew/2024-11-11.adoc[]
 
 include::_whatsnew/2024-10-10.adoc[]
 
-== 7 October 2024
+== 07 October 2024
 [#iam]
 include::_whatsnew/2024-10-07.adoc[]
 
@@ -130,7 +131,7 @@ include::_whatsnew/2024-10-07.adoc[]
 
 include::_whatsnew/2024-09-30.adoc[]
 
-== 9 September 2024
+== 09 September 2024
 
 === Connector 3.9.44
 This release includes support for Docker Engine 26, an enhancement to SSL certificates, and bug fixes.
