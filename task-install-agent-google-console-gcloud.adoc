@@ -77,77 +77,7 @@ Before you can deploy a Console agent from the Console, you need to set up permi
 
 .. Create a YAML file that includes the following permissions:
 +
-[source,yaml]
-title: Console agent deployment policy
-description: Permissions for the user who deploys the Console agent
-stage: GA
-includedPermissions:
-- compute.disks.create
-- compute.disks.get
-- compute.disks.list
-- compute.disks.setLabels
-- compute.disks.use
-- compute.firewalls.create
-- compute.firewalls.delete
-- compute.firewalls.get
-- compute.firewalls.list
-- compute.globalOperations.get
-- compute.images.get
-- compute.images.getFromFamily
-- compute.images.list
-- compute.images.useReadOnly
-- compute.instances.attachDisk
-- compute.instances.create
-- compute.instances.get
-- compute.instances.list
-- compute.instances.setDeletionProtection
-- compute.instances.setLabels
-- compute.instances.setMachineType
-- compute.instances.setMetadata
-- compute.instances.setTags
-- compute.instances.start
-- compute.instances.updateDisplayDevice
-- compute.machineTypes.get
-- compute.networks.get
-- compute.networks.list
-- compute.networks.updatePolicy
-- compute.projects.get
-- compute.regions.get
-- compute.regions.list
-- compute.subnetworks.get
-- compute.subnetworks.list
-- compute.zoneOperations.get
-- compute.zones.get
-- compute.zones.list
-- deploymentmanager.compositeTypes.get
-- deploymentmanager.compositeTypes.list
-- deploymentmanager.deployments.create
-- deploymentmanager.deployments.delete
-- deploymentmanager.deployments.get
-- deploymentmanager.deployments.list
-- deploymentmanager.manifests.get
-- deploymentmanager.manifests.list
-- deploymentmanager.operations.get
-- deploymentmanager.operations.list
-- deploymentmanager.resources.get
-- deploymentmanager.resources.list
-- deploymentmanager.typeProviders.get
-- deploymentmanager.typeProviders.list
-- deploymentmanager.types.get
-- deploymentmanager.types.list
-- resourcemanager.projects.get
-- compute.instances.setServiceAccount
-- iam.serviceAccounts.list
-
-// new permissions
-- iam.serviceAccount.actAs
-- storage.buckets.create   
-- storage.buckets.get
-- storage.objects.create
-- storage.folders.create
-- storage.objects.list
-- config.deployments.create
-- config.operations.get
+include::_include/google-cloud-deployment-permissions.adoc[]
 
 .. From Google Cloud, activate cloud shell.
 
@@ -155,9 +85,9 @@ includedPermissions:
 
 .. Create a custom role by using the `gcloud iam roles create` command.
 +
-The following example creates a role named "connectorDeployment" at the project level:
+The following example creates a role named "agentDeployment" at the project level:
 +
-gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
+gcloud iam roles create connectorDeployment --project=myproject --file=agent-deployment.yaml
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud[Google Cloud docs: Creating and managing custom roles^]
 
@@ -190,9 +120,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis[Google Cloud do
 
 Create a Console agent directly from the Console.
 
-.About this task
-
-Creating the Console agent deploys a virtual machine instance in Google Cloud using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
+Creating the Console agent deploys a virtual machine instance in Google Cloud using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent]. When you deploy an agent in Google Cloud, the agent creates a bucket to store deployment files.
 
 
 .Before you begin

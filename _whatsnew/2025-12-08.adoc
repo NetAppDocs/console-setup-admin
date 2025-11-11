@@ -8,8 +8,12 @@ This release of the Console agent includes security improvements, bug fixes, and
 The 4.2.0 release supports both standard mode and restricted mode.
 
 
-.New permissions for agents deployed in Google Cloud
-NetApp switched from using Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to manage agents in Google Cloud.Additional permissions are required to deploy and manage agents in Google Cloud. link:https://docs.netapp.com/us-en/console/setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
+.Support for Google Cloud Infrastructure Manager
+NetApp switched from using Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to manage agents in Google Cloud. This change impacts agents deployed in Google Cloud.
+
+* Additional permissions are required to deploy and manage agents in Google Cloud. link:https://docs.netapp.com/us-en/console/setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
+
+* Deploying an agent requires deploying a Google Cloud bucket to store deployment files.
 
 
 
