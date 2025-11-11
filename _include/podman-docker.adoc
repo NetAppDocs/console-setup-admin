@@ -68,16 +68,19 @@ sudo dnf install python3
 
 . Install the EPEL repository package if it's not already available on your system.
 
-. If using Red Hat Enterprise:
-+
 This step is required because podman-compose is available from the Extra Packages for Enterprise Linux (EPEL) repository.
-+
-For Red Hat Enterprise Linux 9:
+
+.. If using Red Hat Enterprise 9:
 +
 [source,cli]
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+
+. Install podman-compose package 1.5.0. 
 +
-For Red Hat Enterprise Linux 8:
+[source,cli]
+sudo dnf install podman-compose-1.5.0
++
+.. If using Red Hat Enterprise Linux 8:
 +
 [source,cli]
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
