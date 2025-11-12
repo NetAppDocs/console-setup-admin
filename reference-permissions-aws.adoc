@@ -876,6 +876,7 @@ The agent makes the following API requests if you use a different AWS account fo
 ==== Legacy permissions for Backup and Recovery
 
 You only need the following permissions if you enabled legacy indexing features before the release of indexing v2:
+
 //tag::legacy-permissions[]
 * kms:List*
 * kms:Describe*
@@ -1092,6 +1093,20 @@ The agent makes the following API requests to deploy and manage Cloud Volumes ON
 
 As permissions are added and removed, we'll note them in the sections below.
 
+=== 11 November 2025
+
+The following permissions are no longer required for NetApp Backup and Recovery unless you use legacy indexing. These permissions have been removed from the policies on this page:
+
+* kms:List*
+* kms:Describe*
+* athena:StartQueryExecution
+* athena:GetQueryResults
+* athena:GetQueryExecution
+* athena:StopQueryExecution
+* glue:CreateDatabase
+* glue:CreateTable
+* glue:BatchDeletePartition
+
 === 9 September 2024
 
 Permissions were removed from policy #2 for standard regions because the NetApp Console no longer supports NetApp edge caching and discovery and management of Kubernetes clusters.
@@ -1144,20 +1159,6 @@ Permissions were removed from policy #2 for standard regions because the NetApp 
 
 ====
 // End snippet
-
-=== 11 November 2025
-
-The following permissions are no longer required for NetApp Backup and Recovery unless you use legacy indexing. These permissions have been removed from the policies on this page:
-
-* kms:List*
-* kms:Describe*
-* athena:StartQueryExecution
-* athena:GetQueryResults
-* athena:GetQueryExecution
-* athena:StopQueryExecution
-* glue:CreateDatabase
-* glue:CreateTable
-* glue:BatchDeletePartition
 
 === 9 May 2024
 
