@@ -95,6 +95,7 @@ Note that you can create an Azure custom role using the Azure portal, Azure Powe
 NOTE: This custom role contains only the permissions needed to launch the Console agent VM in Azure from the Console. Don't use this policy for other situations. When the Console creates the Console agent, it applies a new set of permissions to the Console agent VM that enables the Console agent to manage Azure resources.
 +
 [source,json]
+----
 {
     "Name": "Azure SetupAsService",
     "Actions": [
@@ -161,15 +162,18 @@ NOTE: This custom role contains only the permissions needed to launch the Consol
     "Description": "Azure SetupAsService",
     "IsCustom": "true"
 }
+----
 
 . Modify the JSON by adding your Azure subscription ID to the assignable scope.
 +
 *Example*
 +
 [source,json]
+----
 "AssignableScopes": [
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz"
-],
+]
+----
 
 . Use the JSON file to create a custom role in Azure.
 +
@@ -184,7 +188,9 @@ image:screenshot_azure_shell_upload.png[A screenshot of the Azure Cloud Shell wh
 .. Enter the following Azure CLI command:
 +
 [source,azurecli]
+----
 az role definition create --role-definition Policy_for_Setup_As_Service_Azure.json
+----
 
 +
 You now have a custom role called _Azure SetupAsService_. You can apply this custom role to your user account or to a service principal.

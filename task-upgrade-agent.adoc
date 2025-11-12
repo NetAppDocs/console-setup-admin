@@ -60,27 +60,25 @@ To re-enable auto-upgrade, use these steps and set the _isUpgradeDisabled_ flag 
 . Edit the _/opt/application/netapp/service-manager-2/config.json_ file and change the value of the _isUpgradeDisabled_ flag to true.
 +
 [source,json]
-
-  "isUpgradeDisabled": true,
-
-
-
+----
+  "isUpgradeDisabled": true
+----
 . Save your file.
 
 . Restart the service manager 2 service by running the following command:
 
 +
 [source,cli]
+----
 systemctl restart netapp-service-manager.service
-
+----
 . Run the following command and verify that the agent's status shows as _active(running)_:
-_
+
 +
 [source,cli]
+----
 systemctl status netapp-service-manager.service
-_
-
-
+----
 
 == Upgrade the Console agent
 
@@ -95,14 +93,18 @@ The Console agent needs to restart during the upgrade process so the NetApp Cons
 . Assign permissions to run the script.
 +
 [source,cli]
+----
 chmod +x /path/NetApp-Console-Agent-Offline-<version>
+----
 +
 Where <version> is the version of the Console agent that you downloaded.
 
 . Run the installation script:
 +
 [source,cli]
+----
 sudo /path/NetApp-Console-Agent-Offline-<version>
+----
 +
 Where <version> is the version of the agent that you downloaded.
 

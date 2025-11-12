@@ -21,7 +21,7 @@ The IAM policies available below provide the permissions that a Console agent ne
 
 Note the following:
 
-* If you create a Console agent in a standard AWS region directly from The Console, The Console automatically applies policies to the agent.
+* If you create a Console agent in a standard AWS region directly from the Console, the Console automatically applies policies to the agent.
 
 * You need to set up the policies yourself if you deploy the agent from the AWS Marketplace, if you manually install the agent on a Linux host, or if you want to add additional AWS credentials to the Console.
 
@@ -142,9 +142,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "s3:ListAllMyBuckets",
         "s3:GetObject",
         "s3:GetEncryptionConfiguration",
-        "kms:List*",
         "kms:ReEncrypt*",
-        "kms:Describe*",
         "kms:CreateGrant",
         "fsx:Describe*",
         "fsx:List*",
@@ -173,20 +171,11 @@ For standard regions, the permissions are spread across two policies. Two polici
         "cloudformation:CreateStack",
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
-        "kms:List*",
-        "kms:Describe*",
         "ec2:DescribeVpcEndpoints",
         "kms:ListAliases",
-        "athena:StartQueryExecution",
-        "athena:GetQueryResults",
-        "athena:GetQueryExecution",
         "glue:GetDatabase",
         "glue:GetTable",
-        "glue:CreateTable",
-        "glue:CreateDatabase",
-        "glue:GetPartitions",
-        "glue:BatchCreatePartition",
-        "glue:BatchDeletePartition"
+        "glue:GetPartitions"
       ],
       "Resource": "*",
       "Effect": "Allow",
@@ -433,9 +422,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "s3:GetBucketPublicAccessBlock",
         "s3:GetBucketAcl",
         "s3:GetBucketPolicy",
-        "kms:List*",
         "kms:ReEncrypt*",
-        "kms:Describe*",
         "kms:CreateGrant",
         "ec2:AssociateIamInstanceProfile",
         "ec2:DescribeIamInstanceProfileAssociations",
@@ -586,8 +573,6 @@ For standard regions, the permissions are spread across two policies. Two polici
         "s3:GetBucketTagging",
         "s3:GetBucketLocation",
         "s3:ListAllMyBuckets",
-        "kms:List*",
-        "kms:Describe*",
         "ec2:AssociateIamInstanceProfile",
         "ec2:DescribeIamInstanceProfileAssociations",
         "ec2:DisassociateIamInstanceProfile",
@@ -710,8 +695,6 @@ For standard regions, the permissions are spread across two policies. Two polici
         "s3:GetBucketTagging",
         "s3:GetBucketLocation",
         "s3:ListAllMyBuckets",
-        "kms:List*",
-        "kms:Describe*",
         "ec2:AssociateIamInstanceProfile",
         "ec2:DescribeIamInstanceProfileAssociations",
         "ec2:DisassociateIamInstanceProfile",
@@ -801,8 +784,6 @@ The Console agent makes the following API requests to manage an Amazon FSx for O
 * ec2:DescribeVpcs
 * ec2:DescribeVolumesModifications
 * ec2:DescribePlacementGroups
-* kms:List*
-* kms:Describe*
 * kms:CreateGrant
 * kms:ListAliases
 * fsx:Describe*
@@ -829,8 +810,6 @@ The agent makes the following API requests to manage backups in Amazon S3:
 * s3:ListBucketVersions
 * s3:GetBucketAcl
 * s3:PutBucketPublicAccessBlock
-* kms:List*
-* kms:Describe*
 * s3:GetObject
 * ec2:DescribeVpcEndpoints
 * kms:ListAliases
@@ -853,13 +832,6 @@ The agent makes the following API requests when you use the Search & Restore met
 * s3:PutBucketPublicAccessBlock
 * s3:AbortMultipartUpload
 * s3:ListMultipartUploadParts
-* athena:StartQueryExecution
-* athena:GetQueryResults
-* athena:GetQueryExecution
-* athena:StopQueryExecution
-* glue:CreateDatabase
-* glue:CreateTable
-* glue:BatchDeletePartition
 //end::backup-permissions-search-restore[]
 
 The agent makes the following API requests when you use DataLock and NetApp Ransomware Resilience for your volume backups:
@@ -900,6 +872,21 @@ The agent makes the following API requests if you use a different AWS account fo
 * s3:PutBucketPolicy
 * s3:PutBucketOwnershipControls
 //end::backup-permissions-cross-account[]
+
+==== Legacy permissions for Backup and Recovery
+
+You only need the following permissions if you enabled legacy indexing features before the release of indexing v2:
+//tag::legacy-permissions[]
+* kms:List*
+* kms:Describe*
+* athena:StartQueryExecution
+* athena:GetQueryResults
+* athena:GetQueryExecution
+* athena:StopQueryExecution
+* glue:CreateDatabase
+* glue:CreateTable
+* glue:BatchDeletePartition
+//eng::additional-permissions[]
 
 === Classification
 
@@ -1077,10 +1064,10 @@ The agent makes the following API requests to deploy and manage Cloud Volumes ON
 | s3:ListAllMyBuckets | No | No | No
 | s3:ListBucket | No | Yes | No
 
-.5+| Enable data encryption of Cloud Volumes ONTAP using the AWS Key Management Service (KMS)
-| kms:List* | Yes | Yes | No
+.3+| Enable data encryption of Cloud Volumes ONTAP using the AWS Key Management Service (KMS)
+//| kms:List* | Yes | Yes | No
 | kms:ReEncrypt* | Yes | No | No
-| kms:Describe* | Yes | Yes | No
+//| kms:Describe* | Yes | Yes | No
 | kms:CreateGrant | Yes | Yes | No
 | kms:GenerateDataKeyWithoutPlaintext | Yes | Yes | No
 
@@ -1158,9 +1145,23 @@ Permissions were removed from policy #2 for standard regions because the NetApp 
 ====
 // End snippet
 
+=== 11 November 2025
+
+The following permissions are no longer required for NetApp Backup and Recovery unless you use legacy indexing. These permissions have been removed from the policies on this page:
+
+* kms:List*
+* kms:Describe*
+* athena:StartQueryExecution
+* athena:GetQueryResults
+* athena:GetQueryExecution
+* athena:StopQueryExecution
+* glue:CreateDatabase
+* glue:CreateTable
+* glue:BatchDeletePartition
+
 === 9 May 2024
 
-The following permissions is now required for Cloud Volumes ONTAP:
+The following permission is now required for Cloud Volumes ONTAP:
 
 ec2:DescribeAvailabilityZones
 

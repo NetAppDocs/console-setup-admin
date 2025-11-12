@@ -35,7 +35,7 @@ You'll need to ensure that the role is up to date as new permissions are added i
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
 
-The following JSON example demonstrates a custom role for Backup and Recovery that uses the fewest possible permissions and the narrowest possible scope:
+The following is a custom policy for Backup and Recovery that uses the fewest possible permissions and the narrowest possible scope:
 
 [source,json]
 ----
@@ -128,9 +128,9 @@ The console agent makes the following API requests for advanced Backup and Recov
 * Microsoft.Resources/deployments/delete
 //end::additional-permissions[]
 
-=== Legacy indexing permissions
+=== Legacy permissions for Backup and Recovery
 
-The agent makes the following API requests when you use the Search & Restore functionality. You only need these lpermissions if you enabled legacy indexing features before the release of indexing v2:
+The agent makes the following API requests when you use the Search & Restore functionality. You only need these permissions if you enabled legacy indexing features before the release of indexing v2:
 
 //tag::backup-search-restore-permissions[]
 * Microsoft.Synapse/workspaces/write

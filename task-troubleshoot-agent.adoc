@@ -133,18 +133,18 @@ systemctl stop netapp-service-manager.service
 . Edit the _/opt/application/netapp/service-manager-2/config.json_ file and change the value of the _skipConfigCheck_ flag to true.
 +
 [source,json]
-
-  "skipConfigCheck": true,
-
-
-
+----
+  "skipConfigCheck": true
+----
 . Save your file.
 
 . Restart the service manager 2 service by running the following command:
 
 +
 [source,cli]
+----
 systemctl restart netapp-service-manager.service
+----
 
 
 
