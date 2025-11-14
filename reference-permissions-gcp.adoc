@@ -514,6 +514,10 @@ The following added permissions are required for the service account used for da
 - config.deployments.lock
 - config.operations.get
 
+The following permissions can be removed:
+
+??
+
 
 
 === 06 February, 2023
