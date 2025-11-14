@@ -96,7 +96,7 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role[Google Cloud docs: Grant a single role^]
 
 [[console-permissions-google]]
-== Step 3: Set up permissions for the Console agent operations
+== Step 3: Create a Google Cloud service account to use with the agent
 
 include::_include/google-set-up-agent-permissions.adoc[]
 
@@ -120,7 +120,9 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis[Google Cloud do
 
 Create a Console agent directly from the Console.
 
-Creating the Console agent deploys a virtual machine instance in Google Cloud using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent]. When you deploy an agent in Google Cloud, the agent creates a bucket to store deployment files.
+Creating the Console agent deploys a virtual machine instance in Google Cloud using a default configuration. Do not switch to a smaller VM instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent]. 
+
+NOTE: When you deploy an agent in Google Cloud, the agent creates a bucket to store deployment files.
 
 
 .Before you begin

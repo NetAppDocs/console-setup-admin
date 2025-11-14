@@ -40,6 +40,9 @@ includedPermissions:
 - compute.zoneOperations.get
 - compute.zones.get
 - compute.zones.list
+- *config.deployments.create*
+- *config.operations.get*
+- *CAN THESE BE DELETED?*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -57,15 +60,12 @@ includedPermissions:
 - deploymentmanager.types.get
 - deploymentmanager.types.list
 - resourcemanager.projects.get
+- *CAN THE ABOVE PERMISSIONS BE DELETED?*
 - compute.instances.setServiceAccount
+- *iam.serviceAccount.actAs*
 - iam.serviceAccounts.list
-
-// new permissions
-- iam.serviceAccount.actAs
-- storage.buckets.create   
-- storage.buckets.get
-- storage.objects.create
-- storage.folders.create
-- storage.objects.list
-- config.deployments.create
-- config.operations.get
+- *storage.buckets.create*   
+- *storage.buckets.get*
+- *storage.objects.create*
+- *storage.folders.create*
+- *storage.objects.list*

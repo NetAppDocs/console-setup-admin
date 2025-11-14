@@ -15,9 +15,14 @@ summary: The Console agent requires permissions to perform actions in your cloud
 [.lead]
 The Console agent requires permissions to perform actions in Google Cloud. These permissions are included in a custom role provided by NetApp. You should understand what the agent does with these permissions.
 
+== Google Cloud user permissions
+The custom role below gives a Google Cloud user the permissions needed to deploy an agent. Apply this custom role to the user who will deploying the agent.
+
+include::_include/google-cloud-deployment-permissions.adoc[]
+
 == Service account permissions
 
-The custom role below gives a Console agent the permissions needed to manage resources and processes in your Google Cloud network.
+The custom role below gives the Google Cloud service account attached to the Console agent the permissions needed to manage resources and processes in your Google Cloud network.
 
 Apply this custom role to a service account attached to the Console agent VM.
 
@@ -25,14 +30,34 @@ Apply this custom role to a service account attached to the Console agent VM.
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
 
 
-Ensure the role is up to date as new permissions are added in subsequent releases. The release notes list any required new permissions.
+Ensure the role is up to date as new permissions are added or removed in subsequent releases. The release notes list any required new permissions. link:task-adding-gcp-accounts.html[Manage Google Cloud service accounts]
 
 [source,yaml]
 title: NetApp Console agent
 description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
-- iam.serviceAccounts.actAs
+- *cloudbuild.builds.get*
+- *cloudbuild.connections.list*
+- *cloudbuild.repositories.accessReadToken*
+- *cloudbuild.repositories.list*
+- *cloudquotas.quotas.get*
+- cloudkms.cryptoKeys.getIamPolicy
+- cloudkms.cryptoKeys.setIamPolicy
+- cloudkms.keyRings.get
+- cloudkms.keyRings.getIamPolicy
+- cloudkms.keyRings.setIamPolicy
+- *config.artifacts.import*
+- *config.deployments.deleteState*
+- *config.deployments.getLock*
+- *config.deployments.getState*
+- *config.deployments.updateState*
+- *config.previews.upload*
+- *config.revisions.getState*
+- *config.deployments.list*
+- *config.previews.get*
+- *config.previews.list*
+- *config.resources.list*
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
@@ -93,28 +118,29 @@ includedPermissions:
 - compute.zones.get
 - compute.zones.list
 - compute.instances.setServiceAccount
-- compute.addresses.createInternal
-- compute.addresses.deleteInternal
-- compute.addresses.useInternal
-- compute.forwardingRules.create
-- compute.forwardingRules.delete
-- compute.forwardingRules.get
-- compute.forwardingRules.setLabels
-- compute.healthChecks.create
-- compute.healthChecks.delete
-- compute.healthChecks.get
-- compute.healthChecks.useReadOnly
-- compute.instanceGroups.create
-- compute.instanceGroups.delete
-- compute.instanceGroups.update
-- compute.instanceGroups.use
-- compute.instances.use
-- compute.regionBackendServices.delete
-- compute.regionBackendServices.use
-- compute.resourcePolicies.create
-- compute.resourcePolicies.delete
-- compute.resourcePolicies.get
-- logging.logEntries.route
+- *compute.addresses.createInternal*
+- *compute.addresses.deleteInternal*
+- *compute.addresses.useInternal*
+- *compute.forwardingRules.create*
+- *compute.forwardingRules.delete*
+- *compute.forwardingRules.get*
+- *compute.forwardingRules.setLabels*
+- *compute.healthChecks.create*
+- *compute.healthChecks.delete*
+- *compute.healthChecks.get*
+- *compute.healthChecks.useReadOnly*
+- *compute.instanceGroups.create*
+- *compute.instanceGroups.delete*
+- *compute.instanceGroups.update*
+- *compute.instanceGroups.use*
+- *compute.instances.use*
+- *compute.regionBackendServices.delete*
+- *compute.regionBackendServices.use*
+- *compute.resourcePolicies.create*
+- *compute.resourcePolicies.delete*
+- *compute.resourcePolicies.get*
+- *logging.logEntries.create*
+- *logging.logEntries.route*
 - config.deployments.create
 - config.deployments.delete
 - config.deployments.get
@@ -122,6 +148,8 @@ includedPermissions:
 - config.revisions.get
 - config.deployments.lock
 - config.operations.get
+
+- *CAN THE BELOW PERMISSIONS BE DELETED?*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -138,53 +166,58 @@ includedPermissions:
 - deploymentmanager.typeProviders.list
 - deploymentmanager.types.get
 - deploymentmanager.types.list
+- *CAN THE ABOVE PERMISSIONS BE DELETED?*
+
 - logging.logEntries.list
 - logging.privateLogEntries.list
+- *logging.logEntries.create*
+- monitoring.timeSeries.list
 - resourcemanager.projects.get
 - storage.buckets.create
 - storage.buckets.delete
 - storage.buckets.get
 - storage.buckets.list
+- *storage.objects.create*
+- *storage.objects.delete*
+- *storage.objects.update*
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
 - cloudkms.cryptoKeys.list
 - cloudkms.keyRings.list
 - storage.buckets.update
+- iam.serviceAccounts.actAs
+- *iam.serviceAccounts.create*
+- *iam.serviceAccounts.get*
 - iam.serviceAccounts.getIamPolicy
 - iam.serviceAccounts.list
-- iam.serviceAccount.actAs
+- *iam.serviceAccountKeys.create*
 - storage.buckets.create   
 - storage.buckets.get
 - storage.objects.get
+- storage.buckets.getIamPolicy
 - storage.objects.create
 - storage.folders.create
 - storage.objects.list
+- *config.artifacts.import*
 - config.deployments.create
+- *config.deployments.deleteState*
+- *config.deployments.list*
+- *config.deployments.getLock*
+- *config.deployments.getState*
+- *config.deployments.updateState*
 - config.operations.get
-- storage.objects.get
-- monitoring.timeSeries.list
-- storage.buckets.getIamPolicy
-- cloudkms.cryptoKeys.getIamPolicy
-- cloudkms.cryptoKeys.setIamPolicy
-- cloudkms.keyRings.get
-- cloudkms.keyRings.getIamPolicy
-- cloudkms.keyRings.setIamPolicy
-- cloudbuild.connections.list
-- cloudbuild.repositories.accessReadToken
-- cloudbuild.repositories.list
-- cloudquotas.quotas.get
-- config.artifacts.import
-- config.deployments.deleteState
-- config.deployments.getLock
-- config.deployments.getState
-- config.deployments.updateState
-- config.previews.upload
-- config.revisions.getState
-- logging.logEntries.create
-- storage.objects.create
-- storage.objects.delete
-- storage.objects.update
-- iam.serviceAccounts.get
+- *config.previews.get*
+- *config.previews.list*
+- *config.previews.upload*
+- *config.resources.list*
+- *config.revisions.getState*
+
+
+
+
+
+
+
 
 == How Google Cloud permissions are used
 
@@ -283,6 +316,7 @@ includedPermissions:
 - compute.instances.start
 - compute.instances.stop
 - compute.instances.updateDisplayDevice
+- *compute.instances.use*
 
 | To start and stop Cloud Volumes ONTAP.
 
@@ -319,6 +353,7 @@ includedPermissions:
 | To get the networking information needed to create a new Cloud Volumes ONTAP virtual machine instance.
 
 |
+- *SHOULD THIS SECTION BE DELETED?*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -336,11 +371,23 @@ includedPermissions:
 - deploymentmanager.types.get
 - deploymentmanager.types.list
 
-| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Deployment Manager.
+| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Deployment Manager. *SHOULD THE ABOVE SECTION BE REMOVED?*
 
 |
--	logging.logEntries.list
--	logging.privateLogEntries.list
+- *config.deployments.create*
+- *config.deployments.delete*
+- *config.deployments.get*
+- *config.deployments.update*
+- *config.deployments.lock*
+- *config.operations.get*
+- *config.revisions.get*
+
+| *To deploy and manage Cloud Volumes ONTAP virtual machine instances using Google Cloud Infrastructure Manager.*
+
+|
+- logging.logEntries.list
+- logging.privateLogEntries.list
+- *logging.logEntries.route* 
 
 | To get stack log drives.
 
@@ -378,6 +425,9 @@ includedPermissions:
 
 |
 - compute.addresses.list
+- *compute.addresses.createInternal*
+- *compute.addresses.deleteInternal*
+- *compute.addresses.useInternal*
 
 | To retrieve the addresses in a region when deploying an HA pair.
 
@@ -386,8 +436,26 @@ includedPermissions:
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
+- *compute.regionBackendServices.delete*
+- *compute.regionBackendServices.use*
 
 | To configure a backend service for distributing traffic in an HA pair.
+
+|
+- *compute.forwardingRules.create*
+- *compute.forwardingRules.delete*
+- *compute.forwardingRules.get*
+- *compute.forwardingRules.setLabels*
+
+| *To create and manage load balancing forwarding rules for Cloud Volumes ONTAP HA pairs.*
+
+|
+- *compute.healthChecks.create*
+- *compute.healthChecks.delete*
+- *compute.healthChecks.get*
+- *compute.healthChecks.useReadOnly*
+
+| *To create and manage health checks for Cloud Volumes ONTAP HA pairs.*
 
 |
 - compute.networks.updatePolicy
@@ -433,7 +501,7 @@ includedPermissions:
 Added and removed permissions are noted below.
 
 === 09 December 2025
-NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM), and as such deploying and running an agent in Google Cloud requires additional permissions.
+NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM), and as such deploying and running an agent in Google Cloud requires different permissions. You must add some permissions for IM. 
 
 The following added permissions are required for the Google Cloud user who deploys the agent:
 

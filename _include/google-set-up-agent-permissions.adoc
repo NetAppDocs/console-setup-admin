@@ -5,7 +5,7 @@ It's your responsibility to update the custom role as new permissions are added 
 .Steps
 
 . Create a custom role in Google Cloud:
-rhel-
+
 .. Create a YAML file that includes the contents of the link:reference-permissions-gcp.html[service account permissions for the Console agent].
 
 .. From Google Cloud, activate cloud shell.
