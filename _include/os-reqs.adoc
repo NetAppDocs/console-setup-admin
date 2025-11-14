@@ -36,49 +36,65 @@ A bare metal or hosted hypervisor that is certified to run a supported operating
 //tag::os[]
 [[podman-versions]]Operating system and container requirements::
 The Console agent is supported with the following operating systems when using the Console in standard mode or restricted mode. A container orchestration tool is required before you install the agent.
-+
+
 [cols="2a,2a,2a,2a,2a",options="header"]
 |===
-
 | Operating system
 | Supported OS versions
 | Supported agent versions
 | Required container tool
 | SELinux
 
-a | Red Hat Enterprise Linux
+5+| Red Hat Enterprise Linux
 
 |
-9.1 to 9.4
-
-8.6 to 8.10
+a| 9.1 to 9.4
 
 * English language versions only.
 * The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
-
 | 3.9.50 or later with the Console in standard mode or restricted mode
-
-| Podman version 4.6.1 or 4.9.4
+a|
+Podman version 5.4.0 with podman-compose 1.5.0.
 
 <<podman-configuration,View Podman configuration requirements>>.
-
-| Supported in enforcing mode or permissive mode 
+a|
+Supported in enforcing mode or permissive mode
 
 * Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
 
-.2+| Ubuntu
+|
+a| 8.6 to 8.10
 
+* English language versions only.
+* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
+| 3.9.50 or later with the Console in standard mode or restricted mode
+a|
+Podman version 4.6.1 or 4.9.4
+
+<<podman-configuration,View Podman configuration requirements>>.
+a|
+Supported in enforcing mode or permissive mode
+
+* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
+
+5+| Ubuntu
+
+| 
 | 24.04 LTS
 | 3.9.45 or later with the NetApp Console in standard mode or restricted mode
 | Docker Engine 23.06 to 28.0.0.
 | Not supported
 
+| 
 | 22.04 LTS
 | 3.9.50 or later
 | Docker Engine 23.0.6 to 28.0.0.
 | Not supported
 
 |===
+
+
+
 //end::os[]
 
 //tag::os-private[]
