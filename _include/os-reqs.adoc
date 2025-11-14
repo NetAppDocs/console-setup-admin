@@ -46,6 +46,7 @@ The Console agent is supported with the following operating systems when using t
 | SELinux
 
 5+| Red Hat Enterprise Linux
+
 * English language versions only.
 * The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 
