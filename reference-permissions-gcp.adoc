@@ -48,13 +48,20 @@ includedPermissions:
 - cloudkms.keyRings.getIamPolicy
 - cloudkms.keyRings.setIamPolicy
 - *config.artifacts.import*
+- *config.deployments.create*
+- *config.deployments.delete*
 - *config.deployments.deleteState*
+- *config.deployments.get*
 - *config.deployments.getLock*
 - *config.deployments.getState*
+- *config.deployments.update*
 - *config.deployments.updateState*
 - *config.previews.upload*
+- *config.revisions.get*
 - *config.revisions.getState*
 - *config.deployments.list*
+- *config.deployments.lock*
+- *config.operations.get*
 - *config.previews.get*
 - *config.previews.list*
 - *config.resources.list*
@@ -141,14 +148,6 @@ includedPermissions:
 - *compute.resourcePolicies.get*
 - *logging.logEntries.create*
 - *logging.logEntries.route*
-- config.deployments.create
-- config.deployments.delete
-- config.deployments.get
-- config.deployments.update
-- config.revisions.get
-- config.deployments.lock
-- config.operations.get
-
 - *CAN THE BELOW PERMISSIONS BE DELETED?*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
@@ -167,7 +166,6 @@ includedPermissions:
 - deploymentmanager.types.get
 - deploymentmanager.types.list
 - *CAN THE ABOVE PERMISSIONS BE DELETED?*
-
 - logging.logEntries.list
 - logging.privateLogEntries.list
 - *logging.logEntries.create*
