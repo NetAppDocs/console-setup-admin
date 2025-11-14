@@ -326,7 +326,7 @@ This release of the BlueXP Connector includes minor security improvements and bu
 
 The 3.9.41 release is available for standard mode and restricted mode.
 
-.End of support for RHEL 7 and CentOS 7
+=== End of support for RHEL 7 and CentOS 7
 
 On June 30, 2024, RHEL 7 reached end of maintenance (EOM), while CentOS 7 reached end of life (EOL). NetApp discontinued support for agents on these Linux distributions on June 30, 2024.
 
