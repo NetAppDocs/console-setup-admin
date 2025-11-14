@@ -41,12 +41,13 @@ include::_include/federation-verify-domain-steps.adoc[]
 
 .. Ensure that your IdP has the attribute `email` set to the user's email address. This is required for the Console to identify users correctly:
 [source, xml]
+----
 <saml:AttributeStatement xmlns:x500="urn:oasis:names:tc:SAML:2.0:profiles:attribute:X500" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName">
         <saml:AttributeValue xsi:type="xs:string">email@domain.com</saml:AttributeValue>
     </saml:Attribute>
 </saml:AttributeStatement>
-
+----
 
 
 .. Use the following values when registering your SAML application with the Console:

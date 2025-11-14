@@ -71,13 +71,15 @@ For more detailed information about accessing the Console agent diagnostics, see
 Docker (for Ubuntu and VCenter deployments):: 
 +
 [source,cli]
+----
 docker ps -a
-
+----
 Podman (for RedHat Enterprise Linux deployments):: 
 +
 [source,cli]
+----
 podman ps -a
-
+----
 
 == View the Console agent version
 
@@ -128,8 +130,9 @@ To re-enable the configuration check, use these steps and set the _skipConfigChe
 . Stop the service manager 2 service by running the following command:
 
 [source,cli]
+----
 systemctl stop netapp-service-manager.service
-
+----
 . Edit the _/opt/application/netapp/service-manager-2/config.json_ file and change the value of the _skipConfigCheck_ flag to true.
 +
 [source,json]

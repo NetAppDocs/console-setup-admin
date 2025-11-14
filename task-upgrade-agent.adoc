@@ -38,12 +38,16 @@ Use one of the following commands to verify your Console agent. All services sho
 Docker (for Ubuntu and VCenter deployments):: 
 +
 [source,cli]
+----
 docker ps -a
+----
 
 Podman:: 
 +
 [source,cli]
+----
 podman ps -a
+----
 
 === Disable auto-upgrade for the agent
 
