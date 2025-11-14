@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-adding-gcp-accounts.html
 keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp
-summary: You can manage the Google Cloud credentials that are associated with the Console agent VM instance by associating a marketplace subscription and by troubleshooting the subscription process. Both of these tasks ensure that you can use your marketplace subscription to pay for data services.
+summary: Occasionally, NetApp updates the permissions required for the service account used for the Console agent when it is deployed in Google Cloud. 
 ---
 
 = Manage Console agent permissions for Google Cloud deployments
@@ -15,7 +15,7 @@ summary: You can manage the Google Cloud credentials that are associated with th
 [.lead]
 Occasionally, NetApp updates the permissions required for the service account used for the Console agent when it is deployed in Google Cloud. 
 
-link:reference-permissions-gcp.html[Google permissions list].
+link:reference-permissions-gcp.html[Verify the required Google permissions list].
 
 Use Google Cloud Console to update the IAM role assigned to the service account to match the new set of permissions.
 
