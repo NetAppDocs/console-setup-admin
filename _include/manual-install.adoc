@@ -32,9 +32,11 @@ unset https_proxy
 +
 If you don't remove these system variables, the installation fails.
 
-. Download the Console agent software from the from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^], and then copy it to the Linux host.
+. Download the Console agent software and then copy it to the Linux host. You can download it either from the NetApp Console or the NetApp Support site.
 +
-You should download the "online" agent installer that's meant for use in your network or in the cloud. 
+* NetApp Console: Go to *Agents > Management> Deploy agent > On-prem > Manual install.
+
++ NetApp Support Site (needed if you don't already have access to the Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab[NetApp Support Site^], 
 
 . Assign permissions to run the script.
 +
