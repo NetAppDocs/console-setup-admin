@@ -1,0 +1,16 @@
+
+
+
+=== Console agent 4.1.0
+
+This release of the Console agent includes security improvements, bug fixes, and the following features:
+
+The 4.1.0 release is available for standard mode and restricted mode.
+
+
+.Download Console agent installer directly from NetApp Console
+When in standard mode, when you want to install a Console agent on your premises, you can download the Console agent installer directly from NetApp Console. link:
+
+
+
+
