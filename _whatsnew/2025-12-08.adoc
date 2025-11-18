@@ -1,0 +1,19 @@
+
+
+
+=== Console agent 4.2.0
+
+This release of the Console agent includes security improvements, bug fixes, and the following features:
+
+The 4.2.0 release is available for standard mode and restricted mode.
+
+
+
+
+=== NetApp Console administration
+This release includes the following:
+
+
+.Ability to set notifications for expiring federation credentials
+
+You can set up notifications to be sent when a federation credential (certificate or client secret) is about to expire.
