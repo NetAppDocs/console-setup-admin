@@ -50,8 +50,7 @@ a|
 a|Unable to load support information for the agent.
 a|This message displays if the agent cannot access your support account.
 a|
-* 
-*.
+* Verify that the agent has outbound access to the required endpoints. link:reference-networking-saas-console.html[Learn more about required network access endpoints.]
 |===
 
 [[check-agent-status]]
@@ -107,11 +106,7 @@ include::_include/endpoints-config-check-note.adoc[]
 
 [[disable-config-check]]
 === Disable configuration checks for manual installations
-There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example:
-
-* When manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fails.
-
-* You may also want to disable these checks if you are continuing to use the previous endpoint list for agent upgrades. 
+There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example, when manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fail. 
 
 .Steps
 
