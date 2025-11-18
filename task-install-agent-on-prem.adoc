@@ -23,6 +23,7 @@ Before you install, you'll need to ensure your host (VM or Linux host) meets req
 == Prepare to install the Console agent
 Before you install a Console agent, you should ensure you have a host machine that meets installation requirements. You'll also need to work with your network administrator to ensure that the Console agent has outbound access to required endpoints and connections to targeted networks.  
 
+[[os-req-agent]]
 === Review Console agent host requirements
 
 Run the Console agent on a x86 host that meets operating system, RAM, and port requirements. Ensure that your host meets these requirements before you install the Console agent.
