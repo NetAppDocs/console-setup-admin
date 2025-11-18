@@ -47,11 +47,11 @@ The Console agent is supported with the following operating systems when using t
 
 5+| Red Hat Enterprise Linux
 
-* English language versions only.
-* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
-
 |
 a| 9.6
+
+* English language versions only.
+* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 
 
 | 4.0.0 or later with the Console in standard mode or restricted mode
@@ -66,6 +66,9 @@ Supported in enforcing mode or permissive mode
 
 |
 a| 9.1 to 9.4
+
+* English language versions only.
+* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 | 3.9.50 or later with the Console in standard mode or restricted mode
 a|
 Podman version 4.9.4 with podman-compose 1.5.0.
