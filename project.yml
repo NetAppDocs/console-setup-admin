@@ -19,8 +19,6 @@ sidebar:
           url: /whats-new.html
         - title: Known limitations
           url: /reference-limitations.html
-        - title: Changes to supported Linux operating systems
-          url: /reference-agent-operating-system-changes.html
     - title: Get started
       entries:
         - title: Learn the basics

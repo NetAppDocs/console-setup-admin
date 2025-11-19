@@ -1,4 +1,4 @@
 ---
 permalink: task-quick-start-connector-aws.html
-redirect: bluexp-setup-admin/concept-install-options-aws.html
+redirect: console-setup-adminconcept-install-options-aws.html
 ---

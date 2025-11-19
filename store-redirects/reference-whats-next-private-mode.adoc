@@ -1,4 +1,4 @@
 ---
 permalink: reference-whats-next-private-mode.html
-redirect: console-setup-admin/reference-whats-next-restricted-mode.html
+redirect: console-setup-admin/task-quick-start-private-mode.html
 ---
