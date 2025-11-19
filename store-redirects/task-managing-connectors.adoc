@@ -1,4 +1,4 @@
 ---
 permalink: task-managing-connectors.html
-redirect: console-setup-admintask-maintain-connectors.html
+redirect: console-setup-admin/task-maintain-connectors.html
 ---
