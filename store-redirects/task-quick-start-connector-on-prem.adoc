@@ -1,4 +1,4 @@
 ---
 permalink: task-quick-start-connector-on-prem.html
-redirect: console-setup-admintask-install-connector-on-prem.html
+redirect: console-setup-admin/task-install-connector-on-prem.html
 ---
