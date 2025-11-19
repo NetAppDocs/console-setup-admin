@@ -103,16 +103,19 @@ Update the backup location for each Cloud Volumes ONTAP system.
 
 .. From the Cloud Volumes ONTAP CLI, set the privilege level to advanced:
 [source,cli]
+----
 set -privilege advanced
-
+----
 .. Run the following command to display the current backup target:
 [source,cli]
+----
 system configuration backup settings show
-
+----
 .. Run the following command to update the IP address for the backup target:
 [source,cli]
+----
 system configuration backup settings modify -destination <target-location>
-
+----
 == Edit an agent's URIs
 
 You can add and remove the Uniform Resource Identifier (URI) for an agent.

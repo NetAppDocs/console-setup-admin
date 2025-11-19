@@ -52,9 +52,10 @@ include::_include/federation-verify-domain-steps.adoc[]
 
 +
 [source, powershell]
+----
 (new-object Net.WebClient -property @{Encoding = [Text.Encoding]::UTF8}).DownloadString("https://raw.github.com/auth0/AD FS-auth0/master/AD FS.ps1") | iex
 AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.auth0.com/login/callback"
-
+----
 .. Alternatively, you can create the trust manually in the AD FS management console. Use the following NetApp Console values when creating the trust:
 
 +

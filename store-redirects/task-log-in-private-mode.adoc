@@ -1,4 +1,4 @@
 ---
 permalink: task-log-in-private-mode.html
-redirect: bluexp-setup-admin/task-logging-in.html
+redirect: console-setup-admintask-logging-in.html
 ---
