@@ -1,4 +1,4 @@
 ---
 permalink: task-provide-permissions-google.html
-redirect: console-setup-admintask-install-connector-google-manual.html
+redirect: console-setup-admin/task-install-connector-google-manual.html
 ---
