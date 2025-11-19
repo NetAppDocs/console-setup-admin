@@ -1,4 +1,4 @@
 ---
 permalink: task-provide-permissions-aws.html
-redirect: console-setup-admintask-install-connector-aws-manual.html
+redirect: console-setup-admin/task-install-connector-aws-manual.html
 ---

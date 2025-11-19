@@ -1,4 +1,4 @@
 ---
 permalink: task-set-up-permissions-aws.html
-redirect: console-setup-admintask-install-connector-aws-bluexp.html
+redirect: console-setup-admin/task-install-cagent-aws-console.html
 ---

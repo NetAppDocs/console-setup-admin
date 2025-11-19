@@ -1,4 +1,4 @@
 ---
 permalink: task-set-up-permissions-azure.html
-redirect: console-setup-admintask-install-connector-azure-bluexp.html
+redirect: console-setup-admin/task-install-agent-azure-console.html
 ---
