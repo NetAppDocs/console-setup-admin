@@ -1,4 +1,4 @@
 ---
 permalink: task-managing-connectors.html
-redirect: bluexp-setup-admin/task-maintain-connectors.html
+redirect: console-setup-admintask-maintain-connectors.html
 ---

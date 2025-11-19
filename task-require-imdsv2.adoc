@@ -63,12 +63,13 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html[AW
 *Example*
 +
 [source,awscli]
+----
 aws ec2 modify-instance-metadata-options \
     --instance-id <instance-id> \
     --http-put-response-hop-limit 3 \
     --http-tokens required \
     --http-endpoint enabled
-
+----
 +
 NOTE: The `http-tokens` parameter sets IMDSv2 to required. When `http-tokens` is required, you must also set `http-endpoint` to enabled.
 
