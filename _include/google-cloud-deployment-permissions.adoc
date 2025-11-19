@@ -1,8 +1,11 @@
 [source,yaml]
+----
 title: Console agent deployment policy
 description: Permissions for the user who deploys the Console agent
 stage: GA
 includedPermissions:
+
+- cloudbuild.builds.get
 - compute.disks.create
 - compute.disks.get
 - compute.disks.list
@@ -42,7 +45,17 @@ includedPermissions:
 - compute.zones.list
 - *config.deployments.create*
 - *config.operations.get*
-- *CAN THESE BE DELETED?*
+- *config.deployments.delete*
+- *config.deployments.deleteState*
+- *config.deployments.get*
+- *config.deployments.getState*
+- *config.deployments.list*
+- *config.deployments.update*
+- *config.deployments.updateState*
+- *config.previews.get*
+- *config.previews.list*
+- *config.revisions.get*
+- *config.resources.list*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -60,12 +73,15 @@ includedPermissions:
 - deploymentmanager.types.get
 - deploymentmanager.types.list
 - resourcemanager.projects.get
-- *CAN THE ABOVE PERMISSIONS BE DELETED?*
 - compute.instances.setServiceAccount
 - *iam.serviceAccount.actAs*
+- *iam.serviceAccounts.create*
 - iam.serviceAccounts.list
+- *iam.serviceAccountKeys.create*
 - *storage.buckets.create*   
 - *storage.buckets.get*
 - *storage.objects.create*
 - *storage.folders.create*
 - *storage.objects.list*
+
+----

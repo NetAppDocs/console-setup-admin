@@ -69,9 +69,13 @@ includedPermissions:
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
+- *compute.regionBackendServices.update*
 - compute.networks.updatePolicy
+- *compute.addresses.createInternal*
+- *compute.addresses.deleteInternal*
+- *compute.addresses.list*
+- *compute.addresses.useInternal*
 - compute.backendServices.create
-- compute.addresses.list
 - compute.disks.create
 - compute.disks.createSnapshot
 - compute.disks.delete
@@ -83,7 +87,15 @@ includedPermissions:
 - compute.firewalls.delete
 - compute.firewalls.get
 - compute.firewalls.list
+- *compute.forwardingRules.create*
+- *compute.forwardingRules.delete*
+- *compute.forwardingRules.get*
+- *compute.forwardingRules.setLabels*
 - compute.globalOperations.get
+- *compute.healthChecks.create*
+- *compute.healthChecks.delete*
+- *compute.healthChecks.get*
+- *compute.healthChecks.useReadOnly*
 - compute.images.get
 - compute.images.getFromFamily
 - compute.images.list
@@ -104,7 +116,12 @@ includedPermissions:
 - compute.instances.start
 - compute.instances.stop
 - compute.instances.updateDisplayDevice
+- *compute.instances.use*
+- *compute.instanceGroups.create*
+- *compute.instanceGroups.delete*
 - compute.instanceGroups.get
+- *compute.instanceGroups.update*
+- *compute.instanceGroups.use*
 - compute.addresses.get
 - compute.instances.updateNetworkInterface
 - compute.machineTypes.get
@@ -113,6 +130,11 @@ includedPermissions:
 - compute.projects.get
 - compute.regions.get
 - compute.regions.list
+- *compute.regionBackendServices.delete*
+- *compute.regionBackendServices.use*
+- *compute.resourcePolicies.create*
+- *compute.resourcePolicies.delete*
+- *compute.resourcePolicies.get*
 - compute.snapshots.create
 - compute.snapshots.delete
 - compute.snapshots.get
@@ -126,30 +148,6 @@ includedPermissions:
 - compute.zones.get
 - compute.zones.list
 - compute.instances.setServiceAccount
-- *compute.addresses.createInternal*
-- *compute.addresses.deleteInternal*
-- *compute.addresses.useInternal*
-- *compute.forwardingRules.create*
-- *compute.forwardingRules.delete*
-- *compute.forwardingRules.get*
-- *compute.forwardingRules.setLabels*
-- *compute.healthChecks.create*
-- *compute.healthChecks.delete*
-- *compute.healthChecks.get*
-- *compute.healthChecks.useReadOnly*
-- *compute.instanceGroups.create*
-- *compute.instanceGroups.delete*
-- *compute.instanceGroups.update*
-- *compute.instanceGroups.use*
-- *compute.instances.use*
-- *compute.regionBackendServices.delete*
-- *compute.regionBackendServices.use*
-- *compute.resourcePolicies.create*
-- *compute.resourcePolicies.delete*
-- *compute.resourcePolicies.get*
-- *logging.logEntries.create*
-- *logging.logEntries.route*
-- *CAN THE BELOW PERMISSIONS BE DELETED?*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -166,10 +164,10 @@ includedPermissions:
 - deploymentmanager.typeProviders.list
 - deploymentmanager.types.get
 - deploymentmanager.types.list
-- *CAN THE ABOVE PERMISSIONS BE DELETED?*
 - logging.logEntries.list
 - logging.privateLogEntries.list
 - *logging.logEntries.create*
+- *logging.logEntries.route*
 - monitoring.timeSeries.list
 - resourcemanager.projects.get
 - storage.buckets.create
@@ -348,7 +346,6 @@ includedPermissions:
 | To get the networking information needed to create a new Cloud Volumes ONTAP virtual machine instance.
 
 |
-- *SHOULD THIS SECTION BE DELETED?*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
