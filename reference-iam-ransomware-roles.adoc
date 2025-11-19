@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-iam-ransomware-roles.html
-keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin,
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, ransomware, ransomware resilience
 summary: Ransomware Resilience offers different user roles to manage access to settings, actions, and reports. 
 ---
 

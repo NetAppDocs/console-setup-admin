@@ -888,7 +888,7 @@ The agent makes the following API requests if you use a different AWS account fo
 * s3:PutBucketOwnershipControls
 //end::backup-permissions-cross-account[]
 
-=== Classification
+=== Data Classification
 
 The agent makes the following API requests to deploy NetApp Data Classification:
 

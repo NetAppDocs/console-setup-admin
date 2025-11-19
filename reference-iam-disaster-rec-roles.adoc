@@ -15,10 +15,10 @@ You can assign the following roles to users to provide them access to NetApp Dis
 
 Disaster Recovery uses the following roles:
 
-* *Disaster recovery admin*: Perform any actions.
-* *Disaster recovery failover admin*: Perform failover and migrations. 
-* *Disaster recovery application admin*: Create replication plans. Modify replication plans. Start test failovers.
-* *Disaster recovery viewer*: View information only.
+* *Disaster Recovery admin*: Perform any actions.
+* *Disaster Recovery failover admin*: Perform failover and migrations. 
+* *Disaster Recovery application admin*: Create replication plans. Modify replication plans. Start test failovers.
+* *Disaster Recovery viewer*: View information only.
     
 
 The following table indicates the actions that each role can perform. 
@@ -26,10 +26,10 @@ The following table indicates the actions that each role can perform.
 [cols=5*,options="header",cols="30,20a,20a,20a,20a",width="100%"]
 |===
 | Feature and action
-| Disaster recovery admin
-| Disaster recovery failover admin
-| Disaster recovery application admin
-| Disaster recovery viewer
+| Disaster Recovery admin
+| Disaster Recovery failover admin
+| Disaster Recovery application admin
+| Disaster Recovery viewer
 
 | View dashboard and all tabs | Yes | Yes |Yes |Yes
 | Start free trial | Yes | No  |No |No
