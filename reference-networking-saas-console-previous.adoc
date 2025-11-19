@@ -42,14 +42,16 @@ include::_include/endpoints-agent.adoc[tag=endpoints-comparison]
 
 +
 [source,cli]
+----
 systemctl restart netapp-service-manager.service
-
+----
 . Run the following command and verify that the agent's status shows as _active(running)_:
 _
 +
 [source,cli]
+----
 systemctl status netapp-service-manager.service
-
+----
 . Remove the old endpoints from your firewall allow list.
 
 
