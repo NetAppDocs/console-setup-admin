@@ -12,7 +12,7 @@ The 4.1.0 release is available for standard mode and restricted mode.
 Renamed the status indicators for the Console agent from *Active* and *Inactive* to *Connected* and *Disconnected* to make their purpose more clear.
 
 .Support for Redhat Enterprise Linux (RHEL) 9.6 and Podman 5.4.0
-The Console agent now supports RHEL 9.6 and Podman 5.4.0. In addition, when using RHEL 9 and higher, NetApp supports podman-compose 1.5.0.
+When manually installing a Console agent, the agent now supports RHEL 9.6 with Podman 5.4.0. In addition, when using RHEL 9 and higher, NetApp supports podman-compose 1.5.0. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html[View operating system requirements].
 
 
 

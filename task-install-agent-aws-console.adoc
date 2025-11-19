@@ -94,6 +94,7 @@ If needed, you can restrict the IAM policy by using the IAM `Condition` element.
 This policy contains only the permissions needed to launch the Console agent in AWS from the Console. When the Console creates the Console agent, it applies a new set of permissions to the Console agent that enables the Console agent to manage AWS resources. link:reference-permissions-aws.html[View permissions required for the Console agent itself].
 +
 [source,json]
+----
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -166,6 +167,7 @@ This policy contains only the permissions needed to launch the Console agent in 
     }
   ]
 }
+----
 
 . Select *Next* and add tags, if needed.
 

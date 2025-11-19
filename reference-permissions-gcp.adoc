@@ -33,6 +33,7 @@ Apply this custom role to a service account attached to the Console agent VM.
 Ensure the role is up to date as new permissions are added or removed in subsequent releases. The release notes list any required new permissions. link:task-adding-gcp-accounts.html[Manage Google Cloud service accounts]
 
 [source,yaml]
+----
 title: NetApp Console agent
 description: Permissions for the service account associated with the Console agent.
 stage: GA
@@ -211,11 +212,7 @@ includedPermissions:
 - *config.revisions.getState*
 
 
-
-
-
-
-
+----
 
 == How Google Cloud permissions are used
 
