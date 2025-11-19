@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases
+keywords: what's new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console
 
 summary: "Learn what's new with NetApp Console administration features: IAM, Console agents, cloud provider credentials, and more."
 ---
@@ -17,10 +17,12 @@ Learn what's new with NetApp Console administration features: identity and acces
 
 //All links and images must use the absolute URL.
 
-// tag::whats-new[]
 
+== 10 November 2025
 
-== 6 October 2025
+include::_whatsnew/2025-11-10.adoc[]
+
+== 06 October 2025
 
 include::_whatsnew/2025-10-06.adoc[]
 
@@ -32,7 +34,7 @@ include::_whatsnew/2025-08-11.adoc[]
 
 include::_whatsnew/2025-07-31.adoc[]
 
-// end::whats-new[]
+
 
 == 21 July 2025
 include::_whatsnew/2025-07-21.adoc[]
@@ -42,7 +44,7 @@ include::_whatsnew/2025-07-14.adoc[]
 
 
 
-== 9 June 2025
+== 09 June 2025
 
 include::_whatsnew/2025-06-09.adoc[]
 
@@ -76,7 +78,7 @@ include::_whatsnew/2025-03-10.adoc[]
 
 
 
-== 6 March 2025
+== 06 March 2025
 
 include::_whatsnew/2025-03-06.adoc[]
 
@@ -89,7 +91,6 @@ include::_whatsnew/2025-02-18.adoc[]
 
 include::_whatsnew/2025-02-10.adoc[]
 
-// end::whats-new[]
 
 == 13 January 2025
 
@@ -105,7 +106,7 @@ include::_whatsnew/2024-12-16.adoc[]
 
 
 
-== 9 December 2024
+== 09 December 2024
 
 include::_whatsnew/2024-12-09.adoc[]
 
@@ -122,7 +123,7 @@ include::_whatsnew/2024-11-11.adoc[]
 
 include::_whatsnew/2024-10-10.adoc[]
 
-== 7 October 2024
+== 07 October 2024
 [#iam]
 include::_whatsnew/2024-10-07.adoc[]
 
@@ -130,7 +131,7 @@ include::_whatsnew/2024-10-07.adoc[]
 
 include::_whatsnew/2024-09-30.adoc[]
 
-== 9 September 2024
+== 09 September 2024
 
 === Connector 3.9.44
 This release includes support for Docker Engine 26, an enhancement to SSL certificates, and bug fixes.
@@ -194,9 +195,11 @@ We updated the Connector to support the Cloud Volumes ONTAP 9.15.1 release.
 Support for this release includes an update to the Connector policy for Azure. The policy now includes the following permissions:
 
 [source,json]
+----
 "Microsoft.Compute/virtualMachineScaleSets/write",
 "Microsoft.Compute/virtualMachineScaleSets/read",
 "Microsoft.Compute/virtualMachineScaleSets/delete"
+----
 
 These permissions are required for Cloud Volumes ONTAP support of Virtual Machine Scale Sets. If you have existing Connectors and you want to use this new feature, you'll need to add these permissions to the custom roles that are associated with your Azure credentials.
 
@@ -324,6 +327,32 @@ New users who sign up to BlueXP are now required to verify their email address b
 This release of the BlueXP Connector includes minor security improvements and bug fixes. 
 
 The 3.9.41 release is available for standard mode and restricted mode.
+
+=== End of support for RHEL 7 and CentOS 7
+
+On June 30, 2024, RHEL 7 reached end of maintenance (EOM), while CentOS 7 reached end of life (EOL). NetApp discontinued support for agents on these Linux distributions on June 30, 2024.
+
+https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance[Red Hat: What to know about Red Hat Enterprise Linux 7 End of Maintenance^]
+
+If you have an existing agent running on RHEL 7 or CentOS 7, NetApp does not support upgrading or converting the operating system to RHEL 8 or 9. You need to create a new agent on a supported operating system.
+
+. Set up a RHEL 8 or 9 host.
+. Install Podman.
+. Install a _new_ agent.
+. Configure the agent to discover the systems that the previous agent was managing.
+. Rediscover the systems.
+
++
+Refer to the following pages to rediscover your systems after you deploy a new Console agent.
+
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html[Add existing Cloud Volumes ONTAP systems^]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html[Discover on-premises ONTAP clusters^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html[Create or discover an FSx for ONTAP system^]
+* https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html[Create an Azure NetApp Files systems^]
+* https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html[Discover E-Series systems^]
+* https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html[Discover StorageGRID systems^]
+
+
 
 == 4 June 2024
 

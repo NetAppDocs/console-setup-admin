@@ -28,6 +28,7 @@ You'll need to apply this custom role to a service account that gets attached to
 You also need to ensure that the role is up to date as new permissions are added in subsequent releases. If new permissions are required, they will be listed in the release notes.
 
 [source,yaml]
+----
 title: NetApp Console agent
 description: Permissions for the service account associated with the Console agent.
 stage: GA
@@ -132,6 +133,7 @@ includedPermissions:
 - cloudkms.keyRings.get
 - cloudkms.keyRings.getIamPolicy
 - cloudkms.keyRings.setIamPolicy
+----
 
 == How Google Cloud permissions are used
 

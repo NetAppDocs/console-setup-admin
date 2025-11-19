@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-agent-default-config.html
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration
-summary: Learn more about the Console agent before you deploy it..
+summary: Learn about Console agent default configurations for standard deployments (with internet access) across AWS, Azure, and Google Cloud, as well as restricted deployments (without internet access) for on-premises environments.
 ---
 
 = Default configuration for the Console agent
@@ -13,13 +13,13 @@ summary: Learn more about the Console agent before you deploy it..
 :imagesdir: ./media/
 
 [.lead]
-Learn more about the Console agent's configuration before you deploy it.
+Learn about Console agent default configurations for standard deployments (with internet access) across AWS, Azure, and Google Cloud, as well as restricted deployments (without internet access) for on-premises environments.
 
 == Default configuration with internet access
 
 The following configuration details apply if you deployed a Console agent from the NetApp Console, from your cloud provider's marketplace, or if you manually installed a Console agent on an on-premises Linux host that has internet access.
 
-=== AWS details
+=== Console agent VM details for AWS 
 
 If you deployed a Console agent from the Console or from the cloud provider's marketplace, note the following:
 
@@ -31,7 +31,7 @@ The operating system does not include a GUI. You must use a terminal to access t
 * The user name for the EC2 Linux instance is ubuntu (for agents created prior to May 2023, the user name is ec2-user).
 * The default system disk is a 100 GiB gp2 disk.
 
-=== Azure details
+=== Console agent VM details for Azure
 
 If you deployed a Console agent from the Console or from the cloud provider's marketplace, note the following:
 
@@ -42,7 +42,7 @@ The operating system does not include a GUI. You must use a terminal to access t
 * The installation includes Docker Engine, which is the required container orchestration tool.
 * The default system disk is a 100 GiB premium SSD disk.
 
-=== Google Cloud details
+=== Console agent VM details for Google Cloud
 
 If you deployed a Console agent from the Console, note the following:
 
@@ -55,21 +55,21 @@ The operating system does not include a GUI. You must use a terminal to access t
 
 === Installation folder
 
-The agent installation folder resides in the following location:
+The agent installation folder is in the following location:
 
-/opt/application/netapp/cloudmanager
+`/opt/application/netapp/cloudmanager`
 
 === Log files
 
 Log files are contained in the following folders:
 
-* /opt/application/netapp/cloudmanager/log
+* `/opt/application/netapp/cloudmanager/log`
 or
-* /opt/application/netapp/service-manager-2/logs (starting with new 3.9.23 installations)
+* `/opt/application/netapp/service-manager-2/logs` (starting with new 3.9.23 installations)
 +
 The logs in these folders provide details about the Console agent.
 
-* /opt/application/netapp/cloudmanager/docker_occm/data/log
+* `/opt/application/netapp/cloudmanager/docker_occm/data/log`
 +
 The logs in this folder provide details about cloud services and the Console service that runs on the Console agent.
 
@@ -92,13 +92,13 @@ The agent uses the following ports on the Linux host:
 
 The following configuration applies if you manually installed the Console agent on an on-premises Linux host that doesn't have internet access. link:task-quick-start-private-mode.html[Learn more about this installation option].
 
-* The agent installation folder resides in the following location:
+* The agent installation folder is in the following location:
 +
-/opt/application/netapp/ds
+`/opt/application/netapp/ds`
 
 * Log files are contained in the following folders:
 +
-/var/lib/docker/volumes/ds_occmdata/_data/log
+`/var/lib/docker/volumes/ds_occmdata/_data/log`
 +
 The logs in this folder provide details about the Console agent and docker images.
 

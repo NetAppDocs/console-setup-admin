@@ -27,8 +27,10 @@ The installer that is available on the NetApp Support Site might be an earlier v
 . If the _http_proxy_ or _https_proxy_ system variables are set on the host, remove them:
 +
 [source,cli]
+----
 unset http_proxy
 unset https_proxy
+----
 +
 If you don't remove these system variables, the installation fails.
 
@@ -39,8 +41,9 @@ You should download the "online" agent installer that's meant for use in your ne
 . Assign permissions to run the script.
 +
 [source,cli]
+----
 chmod +x NetApp_Console_Agent_Cloud_<version>
-
+----
 +
 Where <version> is the version of the Console agent that you downloaded.
 
@@ -49,14 +52,18 @@ Where <version> is the version of the Console agent that you downloaded.
 . Run the installation script.
 +
 [source,cli]
- ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
 +
-You'll need to add proxy information if your network requires a proxy for internet access. You can add either a transparent or explicit proxy. The --proxy and --cacert parameters are optional and you won't be prompted to add them. If you have a proxy server, you will need to enter the parameters as shown. 
+You'll need to add proxy information if your network requires a proxy for internet access. You can add either an explicit proxy during installation. The --proxy and --cacert parameters are optional and you won't be prompted to add them. If you have an explicit proxy server, you will need to enter the parameters as shown. 
 +
 Here is an example configuring an explicit proxy server with a CA-signed certificate:
 +
 [source,cli]
- ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
+./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
 +
 `--proxy` configures the Console agent to use an HTTP or HTTPS proxy server using one of the following formats:
 +
@@ -79,31 +86,29 @@ For example:
 \http://bxpproxyuser:netapp1\!@address:3128
 
 
-`--cacert` specifies a CA-signed certificate to use for HTTPS access between Console agent and the proxy server. This parameter is required for HTTPS proxy servers, intercepting proxy servers, and transparent proxy servers.
-
-+
-Here is an example configuring a transparent proxy server. When you configure a transparent proxy, you don't need to define the proxy server. You only add a CA-signed certificate to your Console agent host:
-
-+
-[source,cli]
- ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+NOTE: If you want to configure a transparent proxy, you can do so after you've installed. link:reference-agent-maint-console.html[Learn about the agent maintenance console]
 
 . If you used Podman, you'll need to adjust the aardvark-dns port.
 .. SSH to the Console agent virtual machine.
 .. Open podman _/usr/share/containers/containers.conf_ file and modify the chosen port for Aardvark DNS service. For example, change it to 54.
 +
 [source, cli]
+----
 vi /usr/share/containers/containers.conf
-...
+----
++
+For example:
++
+[source,text]
+----
 # Port to use for dns forwarding daemon with netavark in rootful bridge
 # mode and dns enabled.
 # Using an alternate port might be useful if other DNS services should
 # run on the machine.
 #
 dns_bind_port = 54
-...
-Esc:wq
-+
+----
+
 .. Reboot the Console agent virtual machine.
 //end::main-steps[]
 
@@ -113,8 +118,6 @@ Esc:wq
 At the end of the installation, the Console agent service (occm) restarts twice if you specified a proxy server.
 
 NOTE: If the installation fails, you can view the installation report and logs to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
-
-
 
 . Open a web browser from a host that has a connection to the Console agent virtual machine and enter the following URL:
 +

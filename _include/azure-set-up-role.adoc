@@ -7,10 +7,13 @@ You should add the ID for each Azure subscription that you want to use with the 
 *Example*
 +
 [source,json]
+----
 "AssignableScopes": [
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
+----
 
 . Use the JSON file to create a custom role in Azure.
 +
@@ -25,5 +28,7 @@ image:screenshot_azure_shell_upload.png[A screenshot of the Azure Cloud Shell wh
 .. Use the Azure CLI to create the custom role:
 +
 [source,azurecli]
-az role definition create --role-definition Connector_Policy.json
+----
+az role definition create --role-definition agent_Policy.json
+----
 

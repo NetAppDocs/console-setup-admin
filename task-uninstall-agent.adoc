@@ -36,7 +36,7 @@ _silent_ runs the script without prompting you for confirmation.
 
 == Remove Console agents from the Console
 
-If a Console agent is inactive, you can remove it from the list of agents. You might do this if you delete the agent virtual machine or if you uninstall the agent software.
+If you have deleted an agent VM or uninstalled the agent, you should remove it from the list of agents in the Console. After you delete an agent VM or uninstall the agent software, the agent shows a status of *Disconnected* in the Console.
 
 Note the following about removing a Console agent:
 
@@ -47,7 +47,7 @@ Note the following about removing a Console agent:
 
 . Select *Administration > Agents*.
 
-. On the *Overview* page , select the action menu for an inactive agent and select *Remove agent*.
+. On the *Overview* page , select the action menu for a disconnected agent and select *Remove agent*.
 
 . Enter the name of the agent to confirm and then select *Remove*.
 

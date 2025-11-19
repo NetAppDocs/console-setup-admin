@@ -41,18 +41,19 @@ When you deploy the Console agent from the AWS or Azure Marketplace, the image i
 
 include::_include/os-reqs.adoc[tag=dedicated]
 
-include::_include/os-reqs.adoc[tag=hypervisor]
-
-include::_include/os-reqs.adoc[tag=os]
-
-
 include::_include/os-reqs.adoc[tag=aws-ec2]
 
 include::_include/os-reqs.adoc[tag=azure-vm]
 
 include::_include/os-reqs.adoc[tag=google-machine]
 
-include::_include/os-reqs.adoc[tag=disk-space]
+include::_include/os-reqs.adoc[tag=hypervisor]
+
+include::_include/os-reqs.adoc[tag=os]
+
+
+
+
 
 [[podman-configuration]]
 == Step 4: Install Podman or Docker Engine

@@ -60,6 +60,8 @@ The following is a list of roles in the application category. Each role grants s
 
 | link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes admin] | Users with the Google Cloud NetApp Volumes role can discover and manage Google Cloud NetApp Volumes.
 
+| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes viewer] | Users with the Google Cloud NetApp Volumes user role can view Google Cloud NetApp Volumes.
+
 | link:reference-iam-keystone-roles.html[Keystone admin] | Users with the Keystone admin role can create service requests. Allows users to monitor and view usage, resources, and admin details within the Keystone tenant they are accessing.
 | link:reference-iam-keystone-roles.html[Keystone viewer] | Users with the Keystone viewer role CANNOT create service requests. Allows users to monitor and view consumption, assets, and administrative information within the Keystone tenant they are accessing.
 | ONTAP Mediator setup role | Service accounts with the ONTAP Mediator setup role can create service requests. This role is required in a service account to configure an instance of the link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html[ONTAP Cloud Mediator^]. 
@@ -94,7 +96,7 @@ The following is a list of roles in the data service category. Each role grants 
 | link:reference-iam-disaster-rec-roles.html[Disaster Recovery viewer] | View information only.
 | Classification viewer | Allows users to view NetApp Data Classification scan results.
 
- Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. Classification does not have a viewer role.
+ Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. Classification does not have an admin role.
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 

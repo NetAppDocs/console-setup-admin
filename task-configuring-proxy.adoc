@@ -121,7 +121,7 @@ If the proxy configuration for your network changes, your agent might lose acces
 
 == Enable direct API traffic
 
-If you configured a Console agent to use a proxy server, you can enable direct API traffic on the Console agent in order to send API calls directly to cloud provider services without going through the proxy. agents running in AWS, Azure, or Google Cloud support this option.
+If you configured a Console agent to use a proxy server, you can enable direct API traffic on the Console agent in order to send API calls directly to cloud provider services without going through the proxy. Agents running in AWS, Azure, or Google Cloud support this option.
 
 If you disable Azure Private Links with Cloud Volumes ONTAP and use service endpoints, enable direct API traffic. Otherwise, the traffic won't be routed properly.
 

@@ -1,4 +1,4 @@
 ---
 permalink: task-installing-linux.html
-redirect: bluexp-setup-admin/task-install-connector-on-prem.html
+redirect: console-setup-admintask-install-connector-on-prem.html
 ---

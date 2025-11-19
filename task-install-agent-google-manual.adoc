@@ -28,6 +28,8 @@ include::_include/os-reqs.adoc[tag=manual-uid-range]
 
 include::_include/os-reqs.adoc[tag=dedicated]
 
+include::_include/os-reqs.adoc[tag=google-machine]
+
 include::_include/os-reqs.adoc[tag=hypervisor]
 
 include::_include/os-reqs.adoc[tag=os]
@@ -35,7 +37,6 @@ include::_include/os-reqs.adoc[tag=os]
 
 include::_include/os-reqs.adoc[tag=google-machine]
 
-include::_include/os-reqs.adoc[tag=disk-space]
 
 [[podman-configuration]]
 == Step 2: Install Podman or Docker Engine

@@ -78,6 +78,7 @@ Before you can deploy a Console agent from the Console, you need to set up permi
 .. Create a YAML file that includes the following permissions:
 +
 [source,yaml]
+----
 title: Console agent deployment policy
 description: Permissions for the user who deploys the Console agent
 stage: GA
@@ -138,6 +139,7 @@ includedPermissions:
 - resourcemanager.projects.get
 - compute.instances.setServiceAccount
 - iam.serviceAccounts.list
+----
 
 .. From Google Cloud, activate cloud shell.
 
