@@ -212,6 +212,7 @@ includedPermissions:
 
 ----
 
+
 == How Google Cloud permissions are used
 
 [cols=2*,options="header",cols="50,50"]
@@ -309,7 +310,6 @@ includedPermissions:
 - compute.instances.start
 - compute.instances.stop
 - compute.instances.updateDisplayDevice
-- *compute.instances.use*
 
 | To start and stop Cloud Volumes ONTAP.
 
@@ -363,23 +363,11 @@ includedPermissions:
 - deploymentmanager.types.get
 - deploymentmanager.types.list
 
-| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Deployment Manager. *SHOULD THE ABOVE SECTION BE REMOVED?*
+| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Deployment Manager.
 
 |
-- *config.deployments.create*
-- *config.deployments.delete*
-- *config.deployments.get*
-- *config.deployments.update*
-- *config.deployments.lock*
-- *config.operations.get*
-- *config.revisions.get*
-
-| *To deploy and manage Cloud Volumes ONTAP virtual machine instances using Google Cloud Infrastructure Manager.*
-
-|
-- logging.logEntries.list
-- logging.privateLogEntries.list
-- *logging.logEntries.route* 
+-	logging.logEntries.list
+-	logging.privateLogEntries.list
 
 | To get stack log drives.
 
@@ -417,9 +405,6 @@ includedPermissions:
 
 |
 - compute.addresses.list
-- *compute.addresses.createInternal*
-- *compute.addresses.deleteInternal*
-- *compute.addresses.useInternal*
 
 | To retrieve the addresses in a region when deploying an HA pair.
 
@@ -428,26 +413,8 @@ includedPermissions:
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
-- *compute.regionBackendServices.delete*
-- *compute.regionBackendServices.use*
 
 | To configure a backend service for distributing traffic in an HA pair.
-
-|
-- *compute.forwardingRules.create*
-- *compute.forwardingRules.delete*
-- *compute.forwardingRules.get*
-- *compute.forwardingRules.setLabels*
-
-| *To create and manage load balancing forwarding rules for Cloud Volumes ONTAP HA pairs.*
-
-|
-- *compute.healthChecks.create*
-- *compute.healthChecks.delete*
-- *compute.healthChecks.get*
-- *compute.healthChecks.useReadOnly*
-
-| *To create and manage health checks for Cloud Volumes ONTAP HA pairs.*
 
 |
 - compute.networks.updatePolicy
@@ -487,6 +454,7 @@ includedPermissions:
 | To select your own customer-managed keys in the NetApp Backup and Recovery activation wizard instead of using the default Google-managed encryption keys.
 
 |===
+
 [[gcp-permissions-change-log]]
 == Change log
 
