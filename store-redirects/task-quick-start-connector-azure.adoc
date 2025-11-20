@@ -1,4 +1,4 @@
 ---
 permalink: task-quick-start-connector-azure.html
-redirect: console-setup-adminconcept-install-options-azure.html
+redirect: console-setup-admin/concept-install-options-azure.html
 ---

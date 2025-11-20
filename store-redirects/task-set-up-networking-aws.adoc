@@ -1,4 +1,4 @@
 ---
 permalink: task-set-up-networking-aws.html
-redirect: console-setup-admin/task-install-connector-aws-bluexp.html
+redirect: console-setup-admin/task-install-agent-aws-console.html
 ---
