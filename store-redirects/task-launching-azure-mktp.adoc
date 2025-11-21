@@ -1,4 +1,4 @@
 ---
 permalink: task-launching-azure-mktp.html
-redirect: console-setup-admintask-install-connector-azure.html
+redirect: console-setup-admin/task-install-connector-azure.html
 ---

@@ -1,5 +1,5 @@
 ---
 sidebar: sidebar
 permalink: task-prepare-private-mode.html
-redirect: console-setup-admintask-quick-start-private-mode.html
+redirect: console-setup-admin/task-quick-start-private-mode.html
 ---
