@@ -215,250 +215,138 @@ includedPermissions:
 
 == How Google Cloud permissions are used
 
-[cols=2*,options="header",cols="50,50"]
+[cols="5*"]
 |===
-
-| Actions
-| Purpose
-
-|
-- compute.disks.create
-- compute.disks.createSnapshot
-- compute.disks.delete
-- compute.disks.get
-- compute.disks.list
-- compute.disks.setLabels
-- compute.disks.use
-
-| To create and manage disks for Cloud Volumes ONTAP.
-
-|
-- compute.firewalls.create
-- compute.firewalls.delete
-- compute.firewalls.get
-- compute.firewalls.list
-
-| To create firewall rules for Cloud Volumes ONTAP.
-
-|
-- compute.globalOperations.get
-
-| To get the status of operations.
-
-|
-- compute.images.get
-- compute.images.getFromFamily
-- compute.images.list
-- compute.images.useReadOnly
-
-| To get images for VM instances.
-
-|
-- compute.instances.attachDisk
-- compute.instances.detachDisk
-
-| To attach and detach disks to Cloud Volumes ONTAP.
-
-|
-- compute.instances.create
-- compute.instances.delete
-
-| To create and delete Cloud Volumes ONTAP VM instances.
-
-|
-- compute.instances.get
-
-| To list VM instances.
-
-|
-- compute.instances.getSerialPortOutput
-
-| To get console logs.
-
-|
-- compute.instances.list
-
-| To retrieve the list of instances in a zone.
-
-|
-- compute.instances.setDeletionProtection
-
-| To set deletion protection on the instance.
-
-|
-- compute.instances.setLabels
-
-| To add labels.
-
-|
-- compute.instances.setMachineType
-- compute.instances.setMinCpuPlatform
-
-| To change the machine type for Cloud Volumes ONTAP.
-
-|
-- compute.instances.setMetadata
-
-| To add metadata.
-
-|
-- compute.instances.setTags
-
-| To add tags for firewall rules.
-
-|
-- compute.instances.start
-- compute.instances.stop
-- compute.instances.updateDisplayDevice
-
-| To start and stop Cloud Volumes ONTAP.
-
-|
-- compute.machineTypes.get
-
-| To get the numbers of cores to check qoutas.
-
-|
-- compute.projects.get
-
-| To support multi-projects.
-
-|
-- compute.snapshots.create
-- compute.snapshots.delete
-- compute.snapshots.get
-- compute.snapshots.list
-- compute.snapshots.setLabels
-
-| To create and manage persistent disk snapshots.
-
-|
-- compute.networks.get
-- compute.networks.list
-- compute.regions.get
-- compute.regions.list
-- compute.subnetworks.get
-- compute.subnetworks.list
-- compute.zoneOperations.get
-- compute.zones.get
-- compute.zones.list
-
-| To get the networking information needed to create a new Cloud Volumes ONTAP virtual machine instance.
-
-|
-- deploymentmanager.compositeTypes.get
-- deploymentmanager.compositeTypes.list
-- deploymentmanager.deployments.create
-- deploymentmanager.deployments.delete
-- deploymentmanager.deployments.get
-- deploymentmanager.deployments.list
-- deploymentmanager.manifests.get
-- deploymentmanager.manifests.list
-- deploymentmanager.operations.get
-- deploymentmanager.operations.list
-- deploymentmanager.resources.get
-- deploymentmanager.resources.list
-- deploymentmanager.typeProviders.get
-- deploymentmanager.typeProviders.list
-- deploymentmanager.types.get
-- deploymentmanager.types.list
-
-| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Deployment Manager.
-
-|
--	logging.logEntries.list
--	logging.privateLogEntries.list
-
-| To get stack log drives.
-
-|
-- resourcemanager.projects.get
-
-| To support multi-projects.
-
-|
-- storage.buckets.create
-- storage.buckets.delete
-- storage.buckets.get
-- storage.buckets.list
-- storage.buckets.update
-
-| To create and manage a Google Cloud Storage bucket for data tiering.
-
-|
-- cloudkms.cryptoKeyVersions.useToEncrypt
-- cloudkms.cryptoKeys.get
-- cloudkms.cryptoKeys.list
-- cloudkms.keyRings.list
-
-| To use customer-managed encryption keys from the Cloud Key Management Service with Cloud Volumes ONTAP.
-
-|
-- compute.instances.setServiceAccount
-- iam.serviceAccounts.actAs
-- iam.serviceAccounts.getIamPolicy
-- iam.serviceAccounts.list
-- storage.objects.get
-- storage.objects.list
-
-| To set a service account on the Cloud Volumes ONTAP instance. This service account provides permissions for data tiering to a Google Cloud Storage bucket.
-
-|
-- compute.addresses.list
-
-| To retrieve the addresses in a region when deploying an HA pair.
-
-|
-- compute.backendServices.create
-- compute.regionBackendServices.create
-- compute.regionBackendServices.get
-- compute.regionBackendServices.list
-
-| To configure a backend service for distributing traffic in an HA pair.
-
-|
-- compute.networks.updatePolicy
-
-| To apply firewall rules on the VPCs and subnets for an HA pair.
-
-|
-- compute.subnetworks.use
-- compute.subnetworks.useExternalIp
-- compute.instances.addAccessConfig
-
-| To enable NetApp Data Classification.
-
-|
-- compute.instanceGroups.get
-- compute.addresses.get
-- compute.instances.updateNetworkInterface
-
-| To create and manage storage VMs on Cloud Volumes ONTAP HA pairs.
-
-|
-- monitoring.timeSeries.list
-- storage.buckets.getIamPolicy
-
-| To discover information about Google Cloud Storage buckets.
-
-| 
-- cloudkms.cryptoKeys.get
-- cloudkms.cryptoKeys.getIamPolicy
-- cloudkms.cryptoKeys.list
-- cloudkms.cryptoKeys.setIamPolicy
-- cloudkms.keyRings.get
-- cloudkms.keyRings.getIamPolicy
-- cloudkms.keyRings.list
-- cloudkms.keyRings.setIamPolicy
-
-| To select your own customer-managed keys in the NetApp Backup and Recovery activation wizard instead of using the default Google-managed encryption keys.
-
+| Actions | Purpose | Used for deployment? | Used for daily operations? | Used for deletion?
+
+| compute.disks.create .7+|To create and manage disks for Cloud Volumes ONTAP. | Yes | Yes | No
+| compute.disks.createSnapshot | No | Yes | No
+| compute.disks.delete | No | Yes | Yes
+| compute.disks.get | No | Yes | No
+| compute.disks.list  | Yes | Yes | No
+| compute.disks.setLabels | Yes | Yes | No
+| compute.disks.use | No | Yes | No
+| compute.firewalls.create .4+| To create firewall rules for Cloud Volumes ONTAP. | Yes | No | No
+| compute.firewalls.delete |  No | Yes | Yes
+| compute.firewalls.get  | Yes | Yes | No
+| compute.firewalls.list  | Yes | Yes | No
+| compute.globalOperations.get .| To get the status of operations. | Yes | Yes | No
+| compute.images.get .4+| To get images for VM instances. | Yes | No | No
+| compute.images.getFromFamily |  Yes | No | No
+| compute.images.list |  Yes | No | No
+| compute.images.useReadOnly |  Yes | No | No
+| compute.instances.attachDisk .2+| To attach and detach disks to Cloud Volumes ONTAP. | Yes | Yes | No
+| compute.instances.detachDisk | No | Yes | Yes
+| compute.instances.create .2+| To create and delete Cloud Volumes ONTAP VM instances. | Yes | No | No
+| compute.instances.delete  | No | No | Yes
+| compute.instances.get | To list VM instances. | Yes | Yes | No
+| compute.instances.getSerialPortOutput | To get console logs. | Yes | Yes | No
+| compute.instances.list | To retrieve the list of instances in a zone. | Yes | Yes | No
+| compute.instances.setDeletionProtection | To set deletion protection on the instance. | Yes | No | No
+| compute.instances.setLabels | To add labels. | Yes | No | No
+| compute.instances.setMachineType .2+| To change the machine type for Cloud Volumes ONTAP. | Yes | Yes | No
+| compute.instances.setMinCpuPlatform | Yes | Yes | No
+| compute.instances.setMetadata | To add metadata. | Yes | Yes | No
+| compute.instances.setTags | To add tags for firewall rules. | Yes | Yes | No
+| compute.instances.start .3+| To start and stop Cloud Volumes ONTAP. | Yes | Yes | No
+| compute.instances.stop |  Yes | Yes | No
+| compute.instances.updateDisplayDevice | Yes | Yes | No
+| compute.machineTypes.get | To get the numbers of cores to check quotas. | Yes | No | No
+| compute.projects.get | To support multi-projects. | Yes | No | No
+| compute.snapshots.create .5+| To create and manage persistent disk snapshots. | Yes | Yes | No
+| compute.snapshots.delete | No | Yes | Yes
+| compute.snapshots.get | No | Yes | No
+| compute.snapshots.list  | No | Yes | No
+| compute.snapshots.setLabels  | Yes | Yes | No
+| compute.networks.get .9+| To get the networking information needed to create a new Cloud Volumes ONTAP virtual machine instance. | Yes | Yes | No
+| compute.networks.list  | Yes | Yes | No
+| compute.regions.get  | Yes | Yes | No
+| compute.regions.list | Yes | Yes | No
+| compute.subnetworks.get  | Yes | Yes | No
+| compute.subnetworks.list   | Yes | Yes | No
+| compute.zoneOperations.get   | Yes | Yes | No
+| compute.zones.get |   Yes | Yes | No
+| compute.zones.list |  Yes | Yes | No
+| deploymentmanager.compositeTypes.get .16+| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Deployment Manager. | Yes | No | No
+| deploymentmanager.compositeTypes.list   | Yes | No | No
+| deploymentmanager.deployments.create   | Yes | No | No
+| deploymentmanager.deployments.delete   | Yes | No | No
+| deploymentmanager.deployments.get   | Yes | No | No
+| deploymentmanager.deployments.list   | Yes | No | No
+| deploymentmanager.manifests.get   | Yes | No | No
+| deploymentmanager.manifests.list   | Yes | No | No
+| deploymentmanager.operations.get   | Yes | No | No
+| deploymentmanager.operations.list   | Yes | No | No
+| deploymentmanager.resources.get |   Yes | No | No
+| deploymentmanager.resources.list |  Yes | No | No
+| deploymentmanager.typeProviders.get  | Yes | No | No
+| deploymentmanager.typeProviders.list   | Yes | No | No
+| deploymentmanager.types.get |   Yes | No | No
+| deploymentmanager.types.list |  Yes | No | No
+| logging.logEntries.list .2+| To get stack log drives. | Yes | Yes | No
+| logging.privateLogEntries.list  | Yes | Yes | No
+| resourcemanager.projects.get | To support multi-projects. | Yes | Yes | No
+| storage.buckets.create .5+| To create and manage a Google Cloud Storage bucket for data tiering. | Yes | Yes | No
+| storage.buckets.delete |  No | Yes | Yes
+| storage.buckets.get |   No | Yes | No
+| storage.buckets.list |   No | Yes | No
+| storage.buckets.update |  No | Yes | No
+| cloudkms.cryptoKeyVersions.useToEncrypt .4+| To use customer-managed encryption keys from the Cloud Key Management Service with Cloud Volumes ONTAP. | Yes | Yes | No
+| cloudkms.cryptoKeys.get |   Yes | Yes | No
+| cloudkms.cryptoKeys.list |   Yes | Yes | No
+| cloudkms.keyRings.list |   Yes | Yes | No
+| compute.instances.setServiceAccount .6+| To set a service account on the Cloud Volumes ONTAP instance. This service account provides permissions for data tiering to a Google Cloud Storage bucket. | Yes | Yes | No
+| iam.serviceAccounts.actAs   | Yes | No | No
+| iam.serviceAccounts.getIamPolicy |  Yes | Yes | No
+| iam.serviceAccounts.list   | Yes | Yes | No
+| storage.objects.get |   Yes | Yes | No
+| storage.objects.list |   Yes | Yes | No
+| compute.addresses.list | To retrieve the addresses in a region when deploying an HA pair. | Yes | No | No
+| compute.backendServices.create .4+| To configure a backend service for distributing traffic in an HA pair. | Yes | No | No
+| compute.regionBackendServices.create |   Yes | No | No
+| compute.regionBackendServices.get |   Yes | No | No
+| compute.regionBackendServices.list |   Yes | No | No
+| compute.networks.updatePolicy | To apply firewall rules on the VPCs and subnets for an HA pair. | Yes | No | No
+| compute.instanceGroups.get .3+| To create and manage storage VMs on Cloud Volumes ONTAP HA pairs. | Yes | Yes | No
+| compute.addresses.get |   Yes | Yes | No
+| compute.instances.updateNetworkInterface |   Yes | Yes | No
+| monitoring.timeSeries.list .2+| To discover information about Google Cloud Storage buckets. | Yes | Yes | No
+| storage.buckets.getIamPolicy |   Yes | Yes | No
+
+=== Permissions used for NetApp Backup and Recovery
+
+[cols="5*"]
 |===
+| Actions | Purpose | Used for deployment? | Used for daily operations? | Used for deletion?
+a| * cloudkms.cryptoKeys.get
+* cloudkms.cryptoKeys.getIamPolicy
+* cloudkms.cryptoKeys.list
+* cloudkms.cryptoKeys.setIamPolicy
+* cloudkms.keyRings.get
+* cloudkms.keyRings.getIamPolicy
+* cloudkms.keyRings.list
+* cloudkms.keyRings.setIamPolicy
+|To select your own customer-managed keys in the NetApp Backup and Recovery activation wizard instead of using the default Google-managed encryption keys.
+| Yes | Yes | No
+
+=== Permissions used for NetApp Data Classification
+[cols="5*"]
+|===
+| Actions | Purpose | Used for deployment? | Used for daily operations? | Used for deletion?
+a|* compute.subnetworks.use
+* compute.subnetworks.useExternalIp
+* compute.instances.addAccessConfig
+|To enable NetApp Data Classification.
+| Yes | No | No
+
 
 [[gcp-permissions-change-log]]
 == Change log
 
 Added and removed permissions are noted below.
+
+=== 26 November, 2025
+The permissions are updated to add clarity about their usage, but no permissions were added or removed. Three columns are added to indicate whether each permission is used for deployment, daily operations, or deletion. Apart from this, a few permissions are segregated based on their use for NetApp Data Classification and NetApp Backup and Recovery.
 
 === 09 December 2025
 NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM), and as such deploying and running an agent in Google Cloud requires different permissions. You must add some permissions for IM. 
@@ -542,9 +430,9 @@ The following added permissions are required for the service account used for da
 - config.deployments.lock
 - config.operations.get
 
-The following permissions can be removed:
 
-??
+=== 26 November, 2025
+The permissions are updated to add clarity about their usage, but no permissions were added or removed. Three columns are added to indicate whether each permission is used for deployment, daily operations, or deletion. Apart from this, a few permissions are segregated based on their use for NetApp Data Classification and NetApp Backup and Recovery.
 
 
 
