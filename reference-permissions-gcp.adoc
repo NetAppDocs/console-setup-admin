@@ -331,7 +331,9 @@ a| * cloudkms.cryptoKeys.get
 
 === Permissions used for NetApp Data Classification
 [cols="5*"]
+
 |===
+
 | Actions | Purpose | Used for deployment? | Used for daily operations? | Used for deletion?
 a|* compute.subnetworks.use
 * compute.subnetworks.useExternalIp
@@ -339,13 +341,15 @@ a|* compute.subnetworks.use
 |To enable NetApp Data Classification.
 | Yes | No | No
 
+|===
+
 
 [[gcp-permissions-change-log]]
 == Change log
 
 Added and removed permissions are noted below.
 
-=== 26 November, 2025
+=== 26 November 2025
 The permissions are updated to add clarity about their usage, but no permissions were added or removed. Three columns are added to indicate whether each permission is used for deployment, daily operations, or deletion. Apart from this, a few permissions are segregated based on their use for NetApp Data Classification and NetApp Backup and Recovery.
 
 === 09 December 2025
@@ -436,7 +440,7 @@ The permissions are updated to add clarity about their usage, but no permissions
 
 
 
-=== 06 February, 2023
+=== 06 February 2023
 
 The following permission was added to this policy:
 
