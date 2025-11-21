@@ -268,49 +268,6 @@ a|* compute.subnetworks.use
 
 |===
 
-=== Disaster Recovery 
-
-The Console agent makes the following API requests for NetApp Disaster Recovery for Google Cloud NetApp Volumes:
-
-//tag::disaster-recovery-permissions-gcnv[]
-* netapp.volumes.create
-* netapp.volumes.get
-* netapp.volumes.revert
-* netapp.volumes.list
-* netapp.storagePools.get
-* netapp.storagePools.list
-* netapp.operations.get
-* netapp.operations.list
-* netapp.replications.get
-* netapp.replications.list
-* netapp.replications.create
-* netapp.replications.establishPeering
-* netapp.replications.resume
-* netapp.replications.reverse
-* netapp.replications.stop
-* netapp.replications.sync
-* netapp.snapshots.create
-* netapp.snapshots.get
-* netapp.snapshots.list
-* netapp.locations.list
-* netapp.locations.get
-//end::disaster-recovery-permissions-gcnv[]
-
-The Console agent makes the following API requests for NetApp Disaster Recovery for VMware Engine Service:
-
-//tag::disaster-recovery-permissions-vmes[]
-* vmwareengine.privateClouds.list
-* vmwareengine.privateClouds.get
-* vmwareengine.subnets.get
-* vmwareengine.subnets.list
-* vmwareengine.clusters.get
-* vmwareengine.clusters.list
-* vmwareengine.locations.get
-* vmwareengine.locations.list
-* vmwareengine.operations.get
-//end::disaster-recovery-permissions-vmes[]
-
-
 == Change log
 
 As permissions are added and removed, we'll note them in the sections below.
