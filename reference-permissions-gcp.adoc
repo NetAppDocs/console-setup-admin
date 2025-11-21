@@ -25,9 +25,6 @@ include::_include/google-cloud-deployment-permissions.adoc[]
 ====
 
 == Service account permissions
-[%collapsible]
-
-====
 
 The custom role below gives the Google Cloud service account attached to the Console agent the permissions needed to manage resources and processes in your Google Cloud network.
 
@@ -36,7 +33,8 @@ Apply this custom role to a service account attached to the Console agent VM.
 * link:task-install-agent-google-console-gcloud.html#agent-permissions-google[Set up Google Cloud permissions for standard mode]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
 
-
+[%collapsible]
+====
 Ensure the role is up to date as new permissions are added or removed in subsequent releases. The release notes list any required new permissions. link:task-adding-gcp-accounts.html[Manage Google Cloud service accounts]
 
 [source,yaml]
@@ -222,8 +220,13 @@ includedPermissions:
 ====
 
 
-== How Google Cloud permissions are used for CLoud Volumes ONTAP
+== How Google Cloud permissions are used for Cloud Volumes ONTAP
+The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
+
+
 [%collapsible]
+
+====
 
 [cols="5*"]
 |===
@@ -325,8 +328,12 @@ includedPermissions:
 
 |===
 
+====
+
 === Permissions used for NetApp Backup and Recovery
+The Console agent uses the permissions in the custom role to manage NetApp Backup and Recovery resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
 [%collapsible]
+====
 [cols="5*"]
 |===
 | Actions | Purpose | Used for deployment? | Used for daily operations? | Used for deletion?
@@ -343,9 +350,13 @@ a| * cloudkms.cryptoKeys.get
 
 |===
 
+====
+
 === Permissions used for NetApp Data Classification
+The Console agent uses the permissions in the custom role to manage NetApp Data Classification resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
 [%collapsible]
 
+====
 [cols="5*"]
 
 |===
@@ -358,7 +369,7 @@ a|* compute.subnetworks.use
 | Yes | No | No
 
 |===
-
+====
 
 [[gcp-permissions-change-log]]
 == Change log
