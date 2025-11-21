@@ -17,12 +17,17 @@ The Console agent requires permissions to perform actions in Google Cloud. These
 
 == Google Cloud user permissions
 [%collapsible]
+====
 The custom role below gives a Google Cloud user the permissions needed to deploy an agent. Apply this custom role to the user who will deploying the agent.
 
 include::_include/google-cloud-deployment-permissions.adoc[]
 
+====
+
 == Service account permissions
 [%collapsible]
+
+====
 
 The custom role below gives the Google Cloud service account attached to the Console agent the permissions needed to manage resources and processes in your Google Cloud network.
 
@@ -213,6 +218,8 @@ includedPermissions:
 
 
 ----
+
+====
 
 
 == How Google Cloud permissions are used for CLoud Volumes ONTAP
