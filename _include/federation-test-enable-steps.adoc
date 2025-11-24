@@ -8,7 +8,7 @@
 
 . Set up notifications. 
 +
-Choose between seven days or 30 days. The system emails expiry notifications and shows them in the Console to any user with the following roles: Org admin, Federation admin, and Federation viewer.
+Choose between seven days or 30 days. The system emails expiry notifications and shows them in the Console to any user with the following roles: Super admin, Org admin, Federation admin, and Federation viewer.
 
 . Review the federation details and then select *Enable federation*.
 
