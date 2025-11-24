@@ -14,6 +14,6 @@ The 4.2.0 release is available for standard mode and restricted mode.
 This release includes the following:
 
 
-.Ability to set notifications for expiring federation credentials
+.Ability to set notifications for expiring credentials
 
-You can set up notifications to be sent when a federation credential (certificate or client secret) is about to expire.
+You can set notifications on expiring credentials for both service accounts and federations.Choose between seven days or 30 days. The Console shows notifications and emails them to users with the appropriate role. Org admins receive notifications for service accounts. Org admins, Federation admins, and Federation viewers receive notifications for federations.

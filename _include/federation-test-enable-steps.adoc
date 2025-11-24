@@ -1,15 +1,17 @@
 
 . Select *Next*. 
 
-. Select *Test connection* to test your connection. You are directed to a login page for your IdP server. Log in with your IdP credentials to complete the test and return to the Console to enable the connection.
+. . Select *Test connection* to test your connection. You are directed to a login page for your IdP server. Log in with your IdP credentials. After you log in, go back to the Console to enable the connection.
 
-. Select *Next* to review the summary page.
+. In the Console, select *Next* to review the summary page.
 
 
-. On the *Enable federation* page, configure the timeframe for which you'll receive expiry notifications for certificates or client secrets. Expiry notifications are sent to users with permissions to view or manage federations. Notifications are emailed and also display in NetApp Console
+. Set up notifications. 
++
+Choose between seven days or 30 days. The system emails expiry notifications and shows them in the Console to any user with the following roles: Org admin, Federation admin, and Federation viewer.
 
 . Review the federation details and then select *Enable federation*.
 
 . Select *Finish* to complete the process.
 
-After you enable the federation, users can log in to the NetApp Console using their corporate credentials.
+After you enable the federation, users log in to the NetApp Console using their corporate credentials.
