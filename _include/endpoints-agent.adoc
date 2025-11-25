@@ -16,6 +16,12 @@ The endpoints listed below are all CNAME entries.
 * Simple Storage Service (S3)
 
 | To manage AWS resources. The endpoint depends on your AWS region. https://docs.aws.amazon.com/general/latest/gr/rande.html[Refer to AWS documentation for details^]
+
+| Amazon FsX for NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP based workloads.
 //end::aws-endpoints[]
 
 //tag::azure-public-endpoints[]
