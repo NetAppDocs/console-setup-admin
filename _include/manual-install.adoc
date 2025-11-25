@@ -18,7 +18,7 @@ NOTE: You cannot set a certificate for a transparent proxy server when manually 
 //tag::about[]
 .About this task
 
-The installer that is available on the NetApp Support Site might be an earlier version. After installation, the Console agent automatically updates itself if a new version is available.
+After installation, the Console agent automatically updates itself if a new version is available.
 //end::about[]
 
 //tag::main-steps[]
@@ -34,9 +34,13 @@ unset https_proxy
 +
 If you don't remove these system variables, the installation fails.
 
-. Download the Console agent software from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^], and then copy it to the Linux host.
+. Download the Console agent software and then copy it to the Linux host. You can download it either from the NetApp Console or the NetApp Support site.
 +
-You should download the "online" agent installer that's meant for use in your network or in the cloud. 
+* NetApp Console: Go to *Agents > Management> Deploy agent > On-prem > Manual install.
++
+Choose download the agent installer files or a URL to the files.
+
+* NetApp Support Site (needed if you don't already have access to the Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab[NetApp Support Site^], 
 
 . Assign permissions to run the script.
 +

@@ -1,0 +1,18 @@
+
+
+
+=== Console agent 4.12.0
+
+This release of the Console agent includes security improvements, bug fixes, and the following features:
+
+The 4.2.0 release is available for standard mode and restricted mode.
+
+
+.Download Console agent installer directly from NetApp Console
+In standard mode, download the Console agent installer directly from NetApp Console to install it at your site. link:task-install-agent-on-prem.html[Learn how to install the Console agent manually on your own Linux host].
+
+
+
+
+
+
