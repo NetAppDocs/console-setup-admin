@@ -19,7 +19,7 @@ For help, refer to the documentation for these services:
 
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html[Azure NetApp Files docs^]
 * https://docs.netapp.com/us-en/data-services-backup-recovery/index.html[Backup and recovery docs^]
-* https://docs.netapp.com/us-en/data-services-data-classification/index.html[Classification docs^]
+* https://docs.netapp.com/us-en/data-services-data-classification/index.html[Data Classification docs^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html[Cloud Volumes ONTAP docs^]
 * https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html[Digital wallet docs^]
 * https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html[On-premises ONTAP cluster docs^]
