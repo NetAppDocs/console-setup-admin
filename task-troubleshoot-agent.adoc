@@ -50,8 +50,7 @@ a|
 a|Unable to load support information for the agent.
 a|This message displays if the agent cannot access your support account.
 a|
-* 
-*.
+* Verify that the agent has outbound access to the required endpoints. link:reference-networking-saas-console.html[Learn more about required network access endpoints.]
 |===
 
 [[check-agent-status]]
@@ -96,6 +95,21 @@ The Console displays the version at the top of the page.
 == Verify network access
 Ensure that the Console agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access points.]
 
+=== Run configuration checks on the Console agent
+
+You can run configuration checks on installed Console agents from the Console or command line interface to verify connectivity and troubleshoot issues. 
+
+NOTE: You can only validate agents that have a status of *Connected*.
+
+.Steps from the Console
+. Select *Administration > Agents*.
+. Select the action menu for a Console agent that you want to check and choose *Validate*.
+
++
+image:screenshot-agent-validate.png[A screenshot that shows the Validate option in the Actions menu for an agent.]
++
+The validation process takes up to 15 minutes and results display when it is finished. 
+
 
 [[troubleshoot-installation]]
 == Console agent installation issues
@@ -109,11 +123,7 @@ include::_include/endpoints-config-check-note.adoc[]
 
 [[disable-config-check]]
 === Disable configuration checks for manual installations
-There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example:
-
-* When manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fails.
-
-* You may also want to disable these checks if you are continuing to use the previous endpoint list for agent upgrades. 
+There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example, when manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fail. 
 
 .Steps
 
