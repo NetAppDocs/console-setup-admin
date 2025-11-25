@@ -95,11 +95,13 @@ Ensure that the Console agent has the network access it needs. link:reference-ne
 
 === Run configuration checks on the Console agent
 
-You can run configuration checks on installed Console agents from the Console or command line interface to verify connectivity and troubleshoot issues.
+You can run configuration checks on installed Console agents from the Console or command line interface to verify connectivity and troubleshoot issues. 
+
+NOTE: You can only validate agents that have a status of *Connected*.
 
 .Steps from the Console
 . Select *Administration > Agents*.
-. Select the *Validate* menu on the agent that you want to check.
+. Select the action menu for a Console agent that you want to check and choose *Validate*.
 
 +
 image:screenshot-agent-validate.png[A screenshot that shows the Validate option in the Actions menu for an agent.]
