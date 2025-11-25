@@ -102,7 +102,7 @@ You can run configuration checks on installed Console agents from the Console or
 . Select the *Validate* menu on the agent that you want to check.
 
 +
-image:screenshot-validate-agent.png[A screenshot that shows the Validate option in the Actions menu for an agent.]
+image:screenshot-agent-validate.png[A screenshot that shows the Validate option in the Actions menu for an agent.]
 +
 The validation process takes up to 15 minutes and results display when it is finished. 
 
