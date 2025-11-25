@@ -21,3 +21,9 @@ This release includes the following:
 .Ability to set notifications for expiring credentials
 
 You can set notifications on expiring credentials for both service accounts and federations.Choose between seven days or 30 days. The Console shows notifications and emails them to users with the appropriate role. Org admins receive notifications for service accounts. Org admins, Federation admins, and Federation viewers receive notifications for federations.
+
+
+.Local logins are not available after enabling federation
+After you enable federation for a Console organization, users can no longer use local logins and instead are directed to federation logins.
+
+
