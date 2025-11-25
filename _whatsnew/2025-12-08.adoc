@@ -1,0 +1,12 @@
+
+
+
+
+
+=== NetApp Console administration
+This release includes the following changes and updates:
+
+.Local logins are not available after enabling federation
+After you enable federation for a Console organization, users can no longer use local logins and instead are directed to federation logins.
+
+
