@@ -2,9 +2,8 @@
 
 === Console agent 4.2.0
 
-This release of the Console agent includes security improvements, bug fixes, and the following features:
-
 The 4.2.0 release is available for standard mode and restricted mode.
+This release of the Console agent includes security improvements, bug fixes, and the following features:
 
 .Improved configuration checks for Console agents
 
