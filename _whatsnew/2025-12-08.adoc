@@ -8,9 +8,9 @@ The 4.2.0 release is available for standard mode and restricted mode.
 
 .Improved configuration checks for Console agents
 
-* The Console agent now checks for deprecated endpoints when performing a configuration check. If you have not updated to the new endpoint list for 4.0.0 or higher, installations succeed if the system can reach the previous endpoint list. link:reference-endpoints.html[Learn more about the required endpoints for Console agents.^]
+* The Console agent now checks for deprecated endpoints when performing a configuration check. If you have not updated to the new endpoint list for 4.0.0 or higher, installations succeed if the system can reach the previous endpoint list. link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list[Learn more about the required endpoints for Console agents.^]
 
-* Run configuration checks on installed Console agents from the Console or command line interface to verify connectivity and troubleshoot issues.
+* Run configuration checks on installed Console agents from the Console or command line interface to verify connectivity and troubleshoot issues. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access[Learn how to run configuration checks on Console agents.^]
 
 
 
