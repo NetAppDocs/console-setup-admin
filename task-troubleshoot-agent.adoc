@@ -93,6 +93,19 @@ The Console displays the version at the top of the page.
 == Verify network access
 Ensure that the Console agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access points.]
 
+=== Run configuration checks on the Console agent
+
+You can run configuration checks on installed Console agents from the Console or command line interface to verify connectivity and troubleshoot issues.
+
+.Steps from the Console
+. Select *Administration > Agents*.
+. Select the *Validate* menu on the agent that you want to check.
+
++
+image:screenshot-validate-agent.png[A screenshot that shows the Validate option in the Actions menu for an agent.]
++
+The validation process takes up to 15 minutes and results display when it is finished. 
+
 
 [[troubleshoot-installation]]
 == Console agent installation issues
