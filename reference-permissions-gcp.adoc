@@ -135,7 +135,7 @@ includedPermissions:
 - cloudkms.keyRings.setIamPolicy
 ----
 
-== How Google Cloud permissions are used
+== How Google Cloud permissions are used for Cloud Volumes ONTAP
 
 [cols="5*"]
 |===
