@@ -13,7 +13,7 @@ summary: You can use the Console agent maintenance console to configure a Consol
 :imagesdir: ./media/
 
 [.lead]
-You can use the Console agent maintenance console to validate the installation and configuration of a Console agent.
+You can use the Console agent maintenance console to validate the configuration of a Console agent.
 
 == Access the agent maintenance console
 You can access the maintenance Console from the Console agent host. Navigate to the following directory:
@@ -22,6 +22,12 @@ You can access the maintenance Console from the Console agent host. Navigate to 
 /opt/application/netapp/service-manager-2/agent-maint-console
 ----
 
+== View help for any command
+To view help for any command, append `--help` to the command. For example, to view help for the `proxy add` command, use the following command: 
+[source,cli]
+----    
+./agent-maint-console config-checker --help
+----
 
 == config-checker validate
 
@@ -45,6 +51,18 @@ Specifies the proxy server URL to use for the validation. Required if your agent
 `--certs <paths>` --*OPTIONAL*--
 [role="quick-margin-para"]  
 Specifies the path to one or more certificate files to use for the validation. The certificate files must be in PEM format. Separate multiple paths with commas. This parameter is required if your agent uses a custom certificate.
+
+== config-checker status
+
+The `config-checker status` command allows you to view the status of the last configuration check that was run on the Console agent.
+
+=== Parameters
+`--v ` or '--verbose' --*OPTIONAL*--
+
+[role="quick-margin-para"]
+Provides detailed information about the last configuration check.
+
+
 
 
 === Config-checker validate examples
@@ -70,11 +88,28 @@ Specifies the path to one or more certificate files to use for the validation. T
 ./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
-
-=== View help for any command
-To view help for any command, append `--help` to the command. For example, to view help for the `proxy add` command, use the following command: 
+.View the status of the last configuration check
+[role="quick-margin-para"]
 [source,cli]
-----    
-./agent-maint-console proxy add --help
 ----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypeS NETWORK --proxy http://proxy.company.com:8080
+----
+
+== config-checker status
+
+The `config-checker status` command allows you to view the status of the last configuration check that was run on the Console agent.
+
+=== Parameters
+`--v ` or '--verbose' --*OPTIONAL*--
+
+[role="quick-margin-para"]
+Provides detailed information about the last configuration check.
+
+
+=== Config-checker status example
+[source,cli]
+----
+./agent-maint-console config-checker status --v
+----
+
 
