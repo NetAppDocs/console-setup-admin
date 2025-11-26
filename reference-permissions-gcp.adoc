@@ -16,9 +16,11 @@ summary: The Console agent requires permissions to perform actions in your cloud
 The Console agent requires permissions to perform actions in Google Cloud. These permissions are included in a custom role provided by NetApp. You should understand what the agent does with these permissions.
 
 == Google Cloud user permissions
+The custom role below gives a Google Cloud user the permissions needed to deploy an agent. Apply this custom role to the user who will deploying the agent.
+
 [%collapsible]
 ====
-The custom role below gives a Google Cloud user the permissions needed to deploy an agent. Apply this custom role to the user who will deploying the agent.
+
 
 include::_include/google-cloud-deployment-permissions.adoc[]
 
