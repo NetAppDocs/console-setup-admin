@@ -80,12 +80,6 @@ Specifies the path to one or more certificate files to use for the validation. T
 ./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
-.View the status of the last configuration check
-[role="quick-margin-para"]
-[source,cli]
-----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypeS NETWORK --proxy http://proxy.company.com:8080
-----
 
 == config-checker status
 
