@@ -245,7 +245,11 @@ sidebar:
         - title: Agent maintenance console
           entries:
             - title: Configuration checks
+<<<<<<< HEAD
               url: /reference-agent-maint-console-config-checker.html
+=======
+              url: /reference-agent-maint-console.html
+>>>>>>> e3b2c86 (bluexpdoc-1026)
             - title: Transparent proxy 
               url: /reference-agent-maint-console-proxy.html
         - title: Permissions
