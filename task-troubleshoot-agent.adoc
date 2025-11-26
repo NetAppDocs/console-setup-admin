@@ -97,7 +97,10 @@ Ensure that the Console agent has the network access it needs. link:reference-ne
 
 === Run configuration checks on the Console agent
 
-Run configuration checks on Console agents from the Console or command line to make sure they are connected.
+Run configuration checks on Console agents from the Console or or the Agent maintenance console to make sure they are connected.
+
+To run configuration checks from the Agent maintenance console, link:reference-agent-maint-console-config-checker.html[learn more about using the config-checker validate command.]
+
 
 NOTE: You can only validate agents that have a status of *Connected*.
 
@@ -109,10 +112,6 @@ NOTE: You can only validate agents that have a status of *Connected*.
 image:screenshot-agent-validate.png[A screenshot that shows the Validate option in the Actions menu for an agent.]
 +
 Validation can take up to 15 minutes. Results show when it is done.
-
-.Steps from the command line
-
-<TBD>
 
 
 
