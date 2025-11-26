@@ -16,7 +16,7 @@ summary: The Console agent requires permissions to perform actions in your cloud
 The Console agent requires permissions to perform actions in Google Cloud. These permissions are included in a custom role provided by NetApp. You should understand what the agent does with these permissions.
 
 == Google Cloud user permissions
-The custom role below gives a Google Cloud user the permissions needed to deploy an agent. Apply this custom role to the user who will deploying the agent.
+The custom role below gives a Google Cloud user the permissions needed to deploy an agent. Apply this custom role to the user who will deploy the agent.
 
 [%collapsible]
 
@@ -38,7 +38,7 @@ Apply this custom role to a service account attached to the Console agent VM.
 
 Ensure the role is up to date as new permissions are added or removed in subsequent releases. The release notes list any required new permissions. link:task-adding-gcp-accounts.html[Manage Google Cloud service accounts]
 
-----
+
 [source,yaml]
 ----
 title: NetApp Console agent
@@ -203,6 +203,7 @@ includedPermissions:
 - cloudkms.keyRings.get
 - cloudkms.keyRings.getIamPolicy
 - cloudkms.keyRings.setIamPolicy
+
 ----
 
 == How Google Cloud permissions are used for Cloud Volumes ONTAP
@@ -222,7 +223,7 @@ includedPermissions:
 | compute.firewalls.delete |  No | Yes | Yes
 | compute.firewalls.get  | Yes | Yes | No
 | compute.firewalls.list  | Yes | Yes | No
-| compute.globalOperations.get .| To get the status of operations. | Yes | Yes | No
+| compute.globalOperations.get | To get the status of operations. | Yes | Yes | No
 | compute.images.get .4+| To get images for VM instances. | Yes | No | No
 | compute.images.getFromFamily |  Yes | No | No
 | compute.images.list |  Yes | No | No
@@ -355,7 +356,7 @@ This permission is required for Cloud Volumes ONTAP.
 
 === 27 January, 2023
 
-The following permission was added to this policy:
+The following permissions were added to this policy:
 
 * cloudkms.cryptoKeys.getIamPolicy
 * cloudkms.cryptoKeys.setIamPolicy
