@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference-agent-maint-console.html
+permalink: reference-agent-maint-console-config-checker.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy
 summary: You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
 ---
 
-= Console agent maintenance console
+= Agent validation with the maintenance console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: You can use the Console agent maintenance console to configure a Consol
 :imagesdir: ./media/
 
 [.lead]
-You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
+You can use the Console agent maintenance console to validate the installation and configuration of a Console agent.
 
 == Access the agent maintenance console
 You can access the maintenance Console from the Console agent host. Navigate to the following directory:

@@ -244,9 +244,9 @@ sidebar:
       entries:
         - title: Agent maintenance console
           entries:
-            - title: CValidate agent configuration
+            - title: Configuration checks
               url: /reference-agent-maint-console.html
-            - title: Transparent proxy configuration
+            - title: Transparent proxy 
               url: /reference-agent-maint-console-proxy.html
         - title: Permissions
           entries:
