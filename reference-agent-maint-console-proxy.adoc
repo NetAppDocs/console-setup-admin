@@ -13,7 +13,7 @@ summary: You can use the Console agent maintenance console to configure a Consol
 :imagesdir: ./media/
 
 [.lead]
-You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server
+You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
 
 
 == Access the agent maintenance console
