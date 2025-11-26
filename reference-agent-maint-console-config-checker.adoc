@@ -38,10 +38,13 @@ The `config-checker validate` command allows you to validate the configuration o
 `--services <comma-separated list of services to validate>` --*REQUIRED*--
 [role="quick-margin-para"]
 Choose one or more services to validate. Valid service names are: 
-*`PLATFORM` which validates network connectivity to required Console endpoints.
 
-`--validationTypes<comma-separated list validation types to run>` --*REQUIRED*--
+* `PLATFORM` which validates network connectivity to required Console endpoints.
+
+`--validationTypes <comma-separated list validation types to run>` --*REQUIRED*--
+[role="quick-margin-para"]
 Choose from one or more validation types to run. Valid validation types are:
+
 * `NETWORK` which validates network connectivity to required Console endpoints.
 
 `--proxy <url>` --*OPTIONAL*--
@@ -51,16 +54,6 @@ Specifies the proxy server URL to use for the validation. Required if your agent
 `--certs <paths>` --*OPTIONAL*--
 [role="quick-margin-para"]  
 Specifies the path to one or more certificate files to use for the validation. The certificate files must be in PEM format. Separate multiple paths with commas. This parameter is required if your agent uses a custom certificate.
-
-== config-checker status
-
-The `config-checker status` command allows you to view the status of the last configuration check that was run on the Console agent.
-
-=== Parameters
-`--v ` or '--verbose' --*OPTIONAL*--
-
-[role="quick-margin-para"]
-Provides detailed information about the last configuration check.
 
 
 
