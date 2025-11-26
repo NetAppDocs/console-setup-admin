@@ -23,6 +23,13 @@ You can access the maintenance Console from the Console agent host. Navigate to 
 /opt/application/netapp/service-manager-2/agent-maint-console
 ----
 
+=== View help for any command
+To view help for any command, append `--help` to the command. For example, to view help for the `proxy add` command, use the following command: 
+[source,cli]
+----    
+./agent-maint-console proxy add --help
+----
+
 
 
 
@@ -84,10 +91,5 @@ To remove transparent proxy server, use the following command:
 ./agent-maint-console proxy remove
 ----
 
-=== View help for any command
-To view help for any command, append `--help` to the command. For example, to view help for the `proxy add` command, use the following command: 
-[source,cli]
-----    
-./agent-maint-console proxy add --help
-----
+
 
