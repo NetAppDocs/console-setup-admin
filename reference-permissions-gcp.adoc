@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-permissions-gcp.html
-keywords: permissions, gcp, gcp permissions, bluexp
+keywords: permissions, gcp, gcp permissions, bluexp, console agent
 summary: The Console agent requires permissions to perform actions in your cloud provider. These permissions are included in the policies provided by NetApp. You should understand what the agent does with these permissions.
 ---
 
@@ -81,6 +81,7 @@ includedPermissions:
 - *compute.addresses.createInternal*
 - *compute.addresses.deleteInternal*
 - *compute.addresses.list*
+- *compute.addresses.setLabels*
 - *compute.addresses.useInternal*
 - compute.backendServices.create
 - compute.disks.create
@@ -206,7 +207,10 @@ includedPermissions:
 
 ----
 
-== How Google Cloud permissions are used for Cloud Volumes ONTAP
+== How Google Cloud permissions are used for Cloud Volumes ONTAP and data services
+The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and data services processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
+
+=== Permissions used for Cloud Volumes ONTAP
 The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
 
 [%collapsible]
@@ -330,11 +334,13 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | compute.addresses.list | To retrieve the addresses in a region when deploying an HA pair. | Yes | No | No
 | *compute.addresses.createInternal* |  | No | Yes | No
 | *compute.addresses.deleteInternal* |  | No | Yes | No
+| *compute.addresses.setLabels*  |  | No | Yes | No
 | *compute.addresses.useInternal* |  | No | Yes | No
 | compute.backendServices.create .6+| To configure a backend service for distributing traffic in an HA pair. | Yes | No | No
 | compute.regionBackendServices.create   | Yes | No | No
 | *compute.regionBackendServices.delete*   | No | Yes | No
 | compute.regionBackendServices.get   | Yes | No | No
+| *compute.regionBackendServices.update*  | Yes | Yes | No
 | compute.regionBackendServices.list   | Yes | No | No
 | *compute.regionBackendServices.use*   | No | Yes | No
 | compute.networks.updatePolicy | To apply firewall rules on the VPCs and subnets for an HA pair. | Yes | No | No
@@ -454,6 +460,7 @@ The following added permissions are required for the service account used for da
 
 - compute.addresses.createInternal
 - compute.addresses.deleteInternal
+- compute.addresses.setLabels
 - compute.addresses.useInternal
 - compute.forwardingRules.create
 - compute.forwardingRules.delete
@@ -469,6 +476,7 @@ The following added permissions are required for the service account used for da
 - compute.instanceGroups.use
 - compute.instances.use
 - compute.regionBackendServices.delete
+- compute.regionBackendServices.update 
 - compute.regionBackendServices.use
 - compute.resourcePolicies.create
 - compute.resourcePolicies.delete
