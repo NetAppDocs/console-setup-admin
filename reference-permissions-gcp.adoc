@@ -20,10 +20,10 @@ The custom role below gives a Google Cloud user the permissions needed to deploy
 
 [%collapsible]
 
-
+====
 include::_include/google-cloud-deployment-permissions.adoc[]
 
-
+====
 
 == Service account permissions
 
@@ -36,6 +36,7 @@ Apply this custom role to a service account attached to the Console agent VM.
 
 [%collapsible]
 
+====
 Ensure the role is up to date as new permissions are added or removed in subsequent releases. The release notes list any required new permissions. link:task-adding-gcp-accounts.html[Manage Google Cloud service accounts]
 
 
@@ -206,6 +207,8 @@ includedPermissions:
 - cloudkms.keyRings.setIamPolicy
 
 ----
+
+====
 
 == How Google Cloud permissions are used for Cloud Volumes ONTAP and data services
 The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and data services processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
