@@ -423,22 +423,6 @@ The following added permissions are required for the Google Cloud user who deplo
 - config.deployments.create
 - config.operations.get
 
-The following added permissions are required to deploy Cloud Volumes ONTAP:
-
-- cloudbuild.builds.get
-- config.deployments.delete
-- config.deployments.deleteState
-- config.deployments.get
-- config.deployments.getState
-- config.deployments.list
-- config.deployments.update
-- config.deployments.updateState
-- config.previews.get
-- config.previews.list
-- config.revisions.get
-- config.resources.list
-- iam.serviceAccountKeys.create
-- iam.serviceAccounts.create
 
 The following additional permissions are required for the service account in Google Cloud used for day-to-day operations:
 
@@ -458,6 +442,23 @@ The following additional permissions are required for the service account in Goo
 - storage.objects.delete
 - storage.objects.update
 - iam.serviceAccounts.get
+
+The following added permissions are required to deploy Cloud Volumes ONTAP:
+
+- cloudbuild.builds.get
+- config.deployments.delete
+- config.deployments.deleteState
+- config.deployments.get
+- config.deployments.getState
+- config.deployments.list
+- config.deployments.update
+- config.deployments.updateState
+- config.previews.get
+- config.previews.list
+- config.revisions.get
+- config.resources.list
+- iam.serviceAccountKeys.create
+- iam.serviceAccounts.create
 
 The following added permissions are required for the service account used for day-to-day operations of Cloud Volumes ONTAP.
 
