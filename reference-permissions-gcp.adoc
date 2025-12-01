@@ -401,7 +401,7 @@ Added and removed permissions are noted below.
 
 
 === 08 December 2025
-NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM), and as such deploying and running an agent in Google Cloud requires different permissions. You must add some permissions for IM. 
+NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to deploy and run the Console agent in Google Cloud. The following permissions were added to support this change.
 
 The following added permissions are required for the Google Cloud user who deploys the agent:
 
