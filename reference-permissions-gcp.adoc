@@ -210,8 +210,8 @@ includedPermissions:
 
 ====
 
-== How Google Cloud permissions are used for Cloud Volumes ONTAP and data services
-The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and data services processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
+== How Google Cloud permissions are used 
+The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and NetApp data services processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
 
 === Permissions used for Cloud Volumes ONTAP
 The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
