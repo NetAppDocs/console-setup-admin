@@ -15,7 +15,7 @@ summary: Within the NetApp Console, you can assign roles to users based on what 
 [.lead]
 Within the Console, you can assign roles to users based on what they need to do and where. 
 
-Users with the *Organization admin* or *Folder or project admin* role have the responsibility of assigning roles to other users. You can assign access roles on a project or folder basis. For example, you can assign a user the Ransomware Resilience admin role for one project and the SnapCenter admin role for a different project. Alternatively, if a user needs the Ransomware Resilience admin role for all projects within a specific folder, you can give them this role at the folder level.
+Users with the *Organization admin* or *Folder or project admin* role have the responsibility of assigning roles to other users. You can assign access roles on a project or folder basis. For example, you can assign a user the Ransomware Resilience admin role for one project and the SnapCenter admin role for a different project. Alternatively, if a user needs the Classification admin role for all projects within a specific folder, you can give them this role at the folder level.
 
 Use access roles to assign access to storage resources based on the specific tasks that users need to perform. For example, if a user needs to interact with Ransomware Resilience, they must be given an access role that includes either viewing or administrative permissions for Ransomware Resilience for the project for which the access role is granted.
 
