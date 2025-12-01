@@ -15,7 +15,6 @@ NetApp switched from using Google Cloud Deployment Manager to Google Cloud Infra
 
 * Deploying an agent requires deploying a Google Cloud bucket to store deployment files.
 
-The 4.2.0 release is available for standard mode and restricted mode.
 
 
 .Improved configuration checks for Console agents
@@ -23,6 +22,10 @@ The 4.2.0 release is available for standard mode and restricted mode.
 * The Console agent now checks for deprecated endpoints when performing a configuration check. If you have not updated to the new endpoint list for 4.0.0 or higher, installations succeed if the system can reach the previous endpoint list. link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list[Learn more about the required endpoints for Console agents.^]
 
 * Run configuration checks on installed Console agents from the Console or Agent maintenance console to verify connectivity and troubleshoot issues. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access[Learn how to run configuration checks on Console agents.^]
+
+
+.Directly download agent software from NetApp Console
+When you need to manually install an agent, you can access agent software directly from the NetApp Console in addition to the NetApp Support site. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html#install-the-console-agent-manually[Learn how to download the Console agent software directly from the NetApp Console.^]
 
 
 
