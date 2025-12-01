@@ -3,9 +3,9 @@
 
 === Console agent 4.2.0
 
-This release of the Console agent includes security improvements, bug fixes, and the following features:
-
 The 4.2.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements, bug fixes, and the following features:
 
 
 .Support for Google Cloud Infrastructure Manager
@@ -13,7 +13,7 @@ NetApp switched from using Google Cloud Deployment Manager to Google Cloud Infra
 
 * Additional permissions are required to deploy and manage agents in Google Cloud. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
 
-* Deploying an agent requires deploying a Google Cloud bucket to store deployment files.
+* Deploying an agent also deploys a Google Cloud bucket to store deployment files.
 
 
 
@@ -39,6 +39,6 @@ You can set notifications on expiring credentials for both service accounts and 
 
 
 .Local logins are not available after enabling federation
-After you enable federation for a Console organization, users can no longer use local logins and instead are directed to federation logins.
+After you turn on federation for a Console organization, users cannot use local logins and are sent to federation logins.
 
 
