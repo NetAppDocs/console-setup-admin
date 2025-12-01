@@ -36,7 +36,7 @@ If you don't remove these system variables, the installation fails.
 
 . Download the Console agent software and then copy it to the Linux host. You can download it either from the NetApp Console or the NetApp Support site.
 +
-* NetApp Console: Go to *Agents > Management> Deploy agent > On-prem > Manual install.
+* NetApp Console: Go to *Agents > Management> Deploy agent > On-prem > Manual install*.
 +
 Choose download the agent installer files or a URL to the files.
 
