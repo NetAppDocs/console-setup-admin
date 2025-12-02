@@ -9,11 +9,12 @@ This release of the Console agent includes security improvements, bug fixes, and
 
 
 .Support for Google Cloud Infrastructure Manager
-NetApp updated to  use Google Cloud Deployment Manager to deploy agents instead of Google Cloud Infrastructure Manager (IM) to manage agents in Google Cloud. This change impacts agents deployed in Google Cloud. This change was made becuase Google Cloud is deprecating Infrastructure Manager.
+NetApp now uses Google Cloud Infrastructure Manager (IM) instead of Google Cloud Deployment Manager to deploy agents and manage agents in Google Cloud. This change was made because Google Cloud will no longer support Deployment Manager after March 31, 2026.
 
-* Additional permissions are required to deploy and manage agents in Google Cloud. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
+* Any new agents 4.2.0 and higher use Infrastructure Manager and show be updated to incorporate the new required permissions. YOu should update service accounts for these agents to include the new permissions. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
 
-* Deploying an agent also deploys a Google Cloud bucket to store deployment files.
+* When you deploy an agent, the system also deploys a Google Cloud bucket to store deployment files.
+
 
 
 
@@ -35,7 +36,7 @@ This release includes the following:
 
 .Ability to set notifications for expiring credentials
 
-You can set notifications on expiring credentials for both service accounts and federations.Choose between seven days or 30 days. The Console shows notifications and emails them to users with the appropriate role. Org admins receive notifications for service accounts. Org admins, Federation admins, and Federation viewers receive notifications for federations.
+Set notifications for expiring credentials on service accounts and federations. Choose seven or 30 days. The Console displays notifications and emails users with the appropriate role. Org admins receive service account notifications. Org admins, Federation admins, and Federation viewers receive federation notifications.
 
 
 .Local logins are not available after enabling federation
