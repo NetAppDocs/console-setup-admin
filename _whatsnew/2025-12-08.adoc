@@ -9,7 +9,7 @@ This release of the Console agent includes security improvements, bug fixes, and
 
 
 .Support for Google Cloud Infrastructure Manager
-NetApp switched from using Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to manage agents in Google Cloud. This change impacts agents deployed in Google Cloud.
+NetApp updated to  use Google Cloud Deployment Manager to deploy agents instead of Google Cloud Infrastructure Manager (IM) to manage agents in Google Cloud. This change impacts agents deployed in Google Cloud. This change was made becuase Google Cloud is deprecating Infrastructure Manager.
 
 * Additional permissions are required to deploy and manage agents in Google Cloud. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
 
