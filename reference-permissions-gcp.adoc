@@ -15,9 +15,10 @@ summary: The Console agent requires permissions to perform actions in your cloud
 [.lead]
 The Console agent requires permissions to perform actions in Google Cloud. These permissions are included in a custom role provided by NetApp. You should understand what the agent does with these permissions.
 
-== Google Cloud user permissions
+== Google Cloud user account permissions
 The custom role below gives a Google Cloud user the permissions needed to deploy an agent. Apply this custom role to the user who will deploy the agent.
 
+.View Google Cloud user account permissions
 [%collapsible]
 
 ====
@@ -363,6 +364,8 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 
 === Permissions used for NetApp Backup and Recovery
 The Console agent uses the permissions in the custom role to manage NetApp Backup and Recovery resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
+
+.View permissions for NetApp Backup and Recovery
 [%collapsible]
 ====
 [cols="5*"]
@@ -385,6 +388,8 @@ a| * cloudkms.cryptoKeys.get
 
 === Permissions used for NetApp Data Classification
 The Console agent uses the permissions in the custom role to manage NetApp Data Classification resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
+
+.View permissions for NetApp Data Classification
 [%collapsible]
 
 ====
