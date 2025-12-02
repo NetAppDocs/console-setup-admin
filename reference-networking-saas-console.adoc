@@ -68,3 +68,7 @@ Some NetApp data services as well as Cloud Volumes ONTAP require the agent to ha
 
 ** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access[Endpoints for Cloud Volumes ONTAP in Google Cloud]
 
+=== Endpoints for Workloads
+
+The Console agent or AWS Lambda link must be able to access the following endpoint: \https://docs.netapp.com/us-en/bluexp-setup-admin/reference-networking-saas-console.html. The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP workloads. 
+
