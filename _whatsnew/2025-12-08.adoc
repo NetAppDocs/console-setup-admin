@@ -13,7 +13,7 @@ NetApp now uses Google Cloud Infrastructure Manager (IM) instead of Google Cloud
 
 * Any new agents 4.2.0 and higher use Infrastructure Manager and should incorporate the new required permissions for both the user account and service account used for deployment. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
 
-* When you deploy an agent, the system also deploys a Google Cloud bucket to store deployment files.
+* When you deploy an agent, the system also creates a Google Cloud bucket to store deployment files.
 
 
 

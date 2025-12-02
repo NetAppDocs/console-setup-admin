@@ -74,7 +74,7 @@ includedPermissions:
 - deploymentmanager.types.list
 - resourcemanager.projects.get
 - compute.instances.setServiceAccount
-- *iam.serviceAccount.actAs*
+- *iam.serviceAccounts.actAs*
 - *iam.serviceAccounts.create*
 - iam.serviceAccounts.list
 - *iam.serviceAccountKeys.create*

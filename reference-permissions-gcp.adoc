@@ -34,10 +34,10 @@ Apply this custom role to a service account attached to the Console agent VM.
 * link:task-install-agent-google-console-gcloud.html#agent-permissions-google[Set up Google Cloud permissions for standard mode]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
 
+.View Google service account permissions
 [%collapsible]
-
 ====
-Ensure the role is up to date as new permissions are added or removed in subsequent releases. The release notes list any required new permissions. link:task-adding-gcp-accounts.html[Manage Google Cloud service accounts]
+Ensure the role is up to date as new permissions are added or removed in subsequent releases. The change log lists any required new permissions. link:reference-permissions-gcp.html#gcp-permissions-change-log[Review the Google permissions change log] link:task-adding-gcp-accounts.html[Review how to add Google Cloud service accounts]
 
 
 [source,yaml]
@@ -200,11 +200,8 @@ includedPermissions:
 - *iam.serviceAccountKeys.create*
 - storage.objects.get
 - storage.buckets.getIamPolicy
-- cloudkms.cryptoKeys.getIamPolicy
-- cloudkms.cryptoKeys.setIamPolicy
-- cloudkms.keyRings.get
-- cloudkms.keyRings.getIamPolicy
-- cloudkms.keyRings.setIamPolicy
+
+
 
 ----
 
@@ -216,6 +213,7 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 === Permissions used for Cloud Volumes ONTAP
 The Console agent uses the permissions in the custom role to manage Cloud Volumes ONTAP resources and processes in your Google Cloud network. The following sections describe how the agent uses these permissions.
 
+.Permissions for Cloud Volumes ONTAP
 [%collapsible]
 ====
 [cols="5*"]
