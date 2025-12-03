@@ -42,4 +42,11 @@ Set notifications for expiring credentials on service accounts and federations. 
 .Local logins are not available after enabling federation
 After you turn on federation for a Console organization, users cannot use local logins and are sent to federation logins.
 
+.Usability enhancements for the Storage management pages
 
+* The *Discoverable systems* page separates the summary information from the tabbed display of available systems, making it easier to view comprehensive information about discoverable systems. 
+* When viewing the *Overview* page for an on-premises ONTAP system from the *Systems* page, the cluster size is shown instead of the volume size. This change applies ONTAP clusters that meet the following requirements:
++
+* ONTAP version 9.5 or higher
+* Viewed on using the NetApp Console in standard mode
+* discovered with a Console agent
