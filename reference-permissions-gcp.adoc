@@ -69,6 +69,7 @@ includedPermissions:
 - *config.previews.upload*
 - *config.revisions.get*
 - *config.revisions.getState*
+- *config.deployments.getLock*
 - *config.deployments.list*
 - *config.deployments.lock*
 - *config.operations.get*
@@ -221,10 +222,11 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 |===
 | Actions | Purpose | Used for deployment? | Used for daily operations? | Used for deletion?
 
-| *config.deployments.create* .14+| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Infrastructure Manager. | Yes | No | No
+| *config.deployments.create* .15+| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Infrastructure Manager. | Yes | No | No
 | *config.deployments.delete*  | No | No | Yes
 | *config.deployments.deleteState*  | No | No | Yes
 | *config.deployments.get*   |No | Yes| No
+| *config.deployments.getLock* |No | Yes| No
 | *config.deployments.getState* | No | Yes | No
 | *config.deployments.list*  |No | Yes | No
 | *config.deployments.lock*  |No | Yes | No
