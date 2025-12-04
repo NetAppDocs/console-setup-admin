@@ -51,4 +51,4 @@ Detailed information about your ONTAP on-premises systems (and FSx for ONTAP) is
 
 ** ONTAP version 9.5 or higher
 ** Viewed on using the NetApp Console in standard mode
-** discovered with a Console agent
+** Discovered with a Console agent
