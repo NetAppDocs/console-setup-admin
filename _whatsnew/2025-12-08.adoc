@@ -47,8 +47,8 @@ After you turn on federation for a Console organization, users cannot use local 
 Detailed information about your ONTAP on-premises systems (and FSx for ONTAP) is now easier to view and manage from the Storage management pages.
 
 * The *Discoverable systems* page separates the summary information from the tabbed display of available systems, making it easier to view comprehensive information about discoverable systems. 
-* When viewing the *Overview* page for an on-premises ONTAP system from the *Systems* page, the cluster size is shown instead of the volume size. This change applies ONTAP clusters that meet the following requirements:
-+
-* ONTAP version 9.5 or higher
-* Viewed on using the NetApp Console in standard mode
-* discovered with a Console agent
+* When viewing ONTAP systems from the *Systems* page, you can view cluster size instead of volume size. This change applies to ONTAP clusters that meet the following requirements:
+
+** ONTAP version 9.5 or higher
+** Viewed on using the NetApp Console in standard mode
+** discovered with a Console agent
