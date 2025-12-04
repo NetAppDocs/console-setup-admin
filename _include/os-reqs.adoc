@@ -156,7 +156,6 @@ The Console agent is supported with the following operating systems when using t
 +
 Notes:
 
-. Management of Cloud Volumes ONTAP systems is not supported by agents that have SELinux enabled on the operating system.
 . The Console agent is supported on English-language versions of these operating systems.
 . For RHEL, the host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 //end::os-private[]
