@@ -82,3 +82,5 @@ The Console agent must be able to access the following endpoint for NetApp Workl
 a| \https://api.workloads.netapp.com
 
 a| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
+
+|===
