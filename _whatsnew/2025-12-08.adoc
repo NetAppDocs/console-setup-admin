@@ -11,7 +11,7 @@ This release of the Console agent includes security improvements, bug fixes, and
 .Support for Google Cloud Infrastructure Manager
 NetApp now uses Google Cloud Infrastructure Manager (IM) instead of Google Cloud Deployment Manager to deploy agents and manage agents in Google Cloud. This change was made because Google will be deprecating link:https://docs.cloud.google.com/deployment-manager/docs/deprecations[Cloud Deployment Manager].
 
-* Any new agents 4.2.0 and higher use Infrastructure Manager and you should update both the user account and service account used for deployment with the new permissions. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
+* Any new agents 4.2.0 and higher use Infrastructure Manager and you should update both the user account and service account permissions used for deployment. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
 
 * When you deploy an agent, the system also creates a Google Cloud bucket to store deployment files.
 
@@ -36,7 +36,7 @@ This release includes the following:
 
 .Ability to set notifications for expiring credentials
 
-Set notifications for expiring credentials on service accounts and federations. Choose seven or 30 days. The Console displays notifications and emails users with the appropriate role. Org admins receive service account notifications. Org admins, Federation admins, and Federation viewers receive federation notifications.
+Set notifications for expiring credentials on service accounts and federations. Choose between seven or 30 days. The Console displays notifications and emails users with the appropriate role. Org admins receive service account notifications. Org admins, Federation admins, and Federation viewers receive federation notifications.
 
 
 .Local logins are not available after enabling federation
