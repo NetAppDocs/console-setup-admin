@@ -70,5 +70,15 @@ Some NetApp data services as well as Cloud Volumes ONTAP require the agent to ha
 
 === Endpoints for Workloads
 
-The Console agent must be able to access the following endpoint: \https://docs.netapp.com/us-en/bluexp-setup-admin/reference-networking-saas-console.html. The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP workloads. 
+The Console agent must be able to access the following endpoint for NetApp Workloads. 
 
+[cols=2*,options="header,autowidth"]
+
+|===
+| Endpoints
+| Purpose
+
+
+a| \https://api.workloads.netapp.com
+
+a| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
