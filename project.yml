@@ -190,6 +190,8 @@ sidebar:
               url: /task-federation-manage.html
             - title: Import your existing federated connection
               url: /task-federation-import.html
+            - title: Group-based access control
+              url: /task-federation-federated-groups.html
         - title: Console agents
           entries:
             - title: Maintain the VM and OS
