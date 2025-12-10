@@ -17,9 +17,9 @@ Within the NetApp Console, you organize your NetApp resources using projects and
 
 == Add a folder or project
 
-When you create your organization, it includes a single project. Add projects to manage resources and folders to group related projects.
+When you create your organization, it includes a single project. Add projects to manage resources and folders to group related projects together.
 
-Your organization's resource hierarchy can have up to seven levels, with folders nested six levels deep and projects at the seventh.
+You can create up to seven levels of folders and projects in your organization's resource structure. Create folders within folders to build a nested structure for your organization.
 
 
 .Steps
@@ -32,9 +32,10 @@ Your organization's resource hierarchy can have up to seven levels, with folders
 
 . Select *Folder* or *Project*.
 
-. Provide details about the folder or project:
+. Enter folder or project details:
 +
-* *Name and location*: Enter a name and choose a location in the hierarchy for the folder or project. A folder or project can be directly under the organization or inside a folder.
+* *Name and location*: Enter a name and choose a location in the hierarchy for the folder or project. Place a folder or project under the organization or inside another folder.
+
 * *Resources*: Select the resources that you want to associate with this folder or project.
 +
 You can select resources associated with the parent folder or project.
@@ -42,7 +43,7 @@ You can select resources associated with the parent folder or project.
 link:concept-identity-and-access-management.html#associate-resource-folder[Learn when to associate a resource with a folder].
 * *Access*: View the members who will have access to the folder or project based on the existing permissions already defined in your resource hierarchy.
 +
-Select *Add a member* to assign access and a role to additional members.A role defines the permissions that members have for the folder or project.
+Select *Add a member* to assign access and a role.
 +
 link:reference-iam-predefined-roles.html[Learn about access roles].
 
@@ -65,11 +66,9 @@ If needed, you can change the name of your folders and projects.
 
 Delete folders and projects you no longer need.
 
-.Before you begin
+Before you delete a folder or project, make sure it does not contain any resources. <<modify-resources,Learn how to remove resources>>.
 
-* Ensure the folder or project has no associated resources. <<modify-resources,Learn how to disassociate resources>>.
 
-* Make sure the folder or project has no associated resources.
 
 .Steps
 
@@ -94,7 +93,7 @@ image:screenshot-iam-edit-project.png[A screenshot of the Organization page that
 image:screenshot-iam-allocated-resources.png[A screenshot of the Edit project page that shows the available resources that you can associate or disassociate with the project.]
 
 [#modify-resources]
-== Modify the resources associated with a folder or project
+== Change the resources associated with a folder or project
 
 Members with permissions for a folder or project can access its associated resources.
 
@@ -116,7 +115,7 @@ In the table, the *Status* column identifies the resources that are associated w
 +
 image:screenshot-iam-associate-resources.png[A screenshot of the Edit project page that shows the Associate resources option that is available after you select resources that aren't currently associated.]
 
-. Select *Apply*
+. Select *Apply*.
 
 == View members associated with a folder or project
 
@@ -127,9 +126,9 @@ image:screenshot-iam-member-access.png[A screenshot of the Edit project page tha
 [#modify-members]
 == Modify member access to a folder or project
 
-Modify member access to ensure the right members can access the associated resources.
+Modify member access to control resource access.
 
-Member access provided at a higher hierarchy level cannot be changed at lower levels. Update member permissions at the higher hierarchy level to change access. Alternatively, you can link:task-iam-manage-roles.html#manage-permissions[manage permissions from the Members page].
+You cannot change member access at lower levels if it is inherited from a higher hierarchy level. Update member permissions at the higher hierarchy level to change access. Alternatively, you can link:task-iam-manage-roles.html#manage-permissions[manage permissions from the Members page].
 
 link:concept-identity-and-access-management.html#role-inheritance[Learn more about role inheritance]. 
 

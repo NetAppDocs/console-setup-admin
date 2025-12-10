@@ -29,7 +29,7 @@ Install the Console agent from your cloud provider's marketplace or manually on 
 
 .Before you begin
 
-You should have the following:
+Have the following:
 
 * A VPC and subnet that meets networking requirements.
 +
@@ -63,7 +63,7 @@ Set up the NetApp Console.
 
 .Before you begin
 
-You should have the following:
+Have the following:
 
 * A VPC and subnet that meets networking requirements.
 +
@@ -87,7 +87,7 @@ image:screenshot-gov-cloud-mktp.png[A screenshot that shows the NetApp Console o
 
 .. Select *Continue*.
 
-. Follow the prompts to configure and deploy the instance:
+. Follow the prompts to set up and start the instance:
 
 * *Choose an Instance Type*: Depending on region availability, choose one of the supported instance types (t3.2xlarge is recommended).
 +
@@ -145,11 +145,11 @@ Note the following as you configure the VM:
 
 * *Disks*: The Console agent can perform optimally with either HDD or SSD disks.
 
-* *Public IP*: If you want to use a public IP address with the Console agent VM, the IP address must use a Basic SKU to ensure that the Console uses this public IP address.
+* *Public IP*: To use a public IP address with the Console agent VM, select a Basic SKU.
 +
 image:screenshot-azure-sku.png[A screenshot of the create new IP address in Azure that enables you to choose Basic under in the SKU field.]
 +
-If you use a Standard SKU IP address instead, then the Console uses the _private_ IP address of the Console agent, instead of the public IP. If the machine that you're using to access the Console doesn't have access to that private IP address, then actions from the Console fail.
+If you use a Standard SKU IP address instead, then the Console uses the _private_ IP address of the Console agent, instead of the public IP. If the machine you use to access the Console cannot reach the private IP address, the Console does not work.
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku[Azure documentation: Public IP SKU^]
 
@@ -159,7 +159,7 @@ link:reference-ports-azure.html[View security group rules for Azure].
 
 * *Identity*: Under *Management*, select *Enable system assigned managed identity*.
 +
-This setting is important because a managed identity allows the Console agent virtual machine to identify itself to Microsoft Entra ID without providing any credentials. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[Learn more about managed identities for Azure resources^].
+A managed identity lets the Console agent VM identify itself to Microsoft Entra ID without credentials. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[Learn more about managed identities for Azure resources^].
 
 . On the *Review + create* page, review your selections and select *Create* to start the deployment.
 
@@ -205,7 +205,7 @@ When you access the console for the first time, you are prompted to choose an or
 
 The person who sets up the Console agent must log in to the Console using a login that doesn't already belong to a Console organization.
  
-If your login is associated with another organization, you'll need to sign up with a new login. Otherwise, you won't see the option to enable restricted mode on the setup screen.
+If your login is associated with another organization, you need to sign up with a new login. Otherwise, you do not see the option to enable restricted mode on the setup screen.
 
 .Steps
 
@@ -239,7 +239,7 @@ Provide the Console with the permissions that you previously set up.
 
 == Step 3: Provide permissions to the Console agent
 
-If you deployed the Console agent from the Azure Marketplace or if you manually installed the Console agent software, you need to provide the permissions that you previously set up.
+If you installed the Console agent from the Azure Marketplace or manually, you need to give the permissions you set up earlier.
 
 These steps don't apply if you deployed the Console agent from the AWS Marketplace because you chose the required IAM role during deployment. 
 

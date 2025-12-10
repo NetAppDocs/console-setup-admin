@@ -1,0 +1,49 @@
+
+
+
+=== Console agent 4.2.0
+
+The 4.2.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements, bug fixes, and the following features:
+
+
+.Support for Google Cloud Infrastructure Manager
+NetApp now uses Google Cloud Infrastructure Manager (IM) instead of Google Cloud Deployment Manager to deploy agents and manage agents in Google Cloud. This change was made because Google will be deprecating link:https://docs.cloud.google.com/deployment-manager/docs/deprecations[Cloud Deployment Manager].
+
+* Any new agents 4.2.0 and higher use Infrastructure Manager and you should update both the user account and service account permissions used for deployment. link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.^]
+
+* When you deploy an agent, the system also creates a Google Cloud bucket to store deployment files.
+
+
+
+
+.Improved configuration checks for Console agents
+
+* The Console agent now checks for deprecated endpoints when performing a configuration check. If you have not updated to the new endpoint list for 4.0.0 or higher, installations succeed if the system can reach the previous endpoint list. link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list[Learn more about the required endpoints for Console agents.^]
+
+* Run configuration checks on installed Console agents from the Console or Agent maintenance console to verify connectivity and troubleshoot issues. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access[Learn how to run configuration checks on Console agents.^]
+
+
+.Directly download agent software from NetApp Console
+When you need to manually install an agent, you can access agent software directly from the NetApp Console in addition to the NetApp Support site. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html#install-the-console-agent-manually[Learn how to download the Console agent software directly from the NetApp Console.^]
+
+
+
+=== NetApp Console administration
+This release includes the following:
+
+
+.Ability to set notifications for expiring credentials
+
+Set notifications for expiring credentials on service accounts and federations. Choose between seven or 30 days. The Console displays notifications and emails users with the appropriate role. Org admins receive service account notifications. Org admins, Federation admins, and Federation viewers receive federation notifications.
+
+
+.Local logins are not available after enabling federation
+After you turn on federation for a Console organization, users cannot use local logins and are sent to federation logins.
+
+.Usability enhancements for the Storage management pages
+
+Detailed information about your ONTAP on-premises systems (and FSx for ONTAP) is now easier to view and manage from the Storage management pages.
+
+* The *Discoverable systems* page separates the summary information from the tabbed display of available systems, making it easier to view comprehensive information about discoverable systems. 

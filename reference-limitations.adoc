@@ -15,7 +15,7 @@ summary: Known limitations identify platforms, devices, or functions that are no
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
-These limitations are specific to the set up for the NEtApp Console and administration: the agent, the software as a service (SaaS) platform, and more.
+These limitations are specific to the set up for the NetApp Console and administration: the agent, the software as a service (SaaS) platform, and more.
 
 == Console agent limitations
 
