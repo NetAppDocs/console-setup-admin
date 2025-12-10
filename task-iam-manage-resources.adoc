@@ -17,9 +17,9 @@ When you use associate a member with your organization, you provide permissions 
 
 == View the resources in your organization
 
-You can view both discovered and undiscovered resources associated with your organization. Undiscovered resources are storage resources identified but not yet added to the Console.
+You can view both discovered and undiscovered resources associated with your organization. The system finds storage resources and marks them as undiscovered until you add them to the Console.
 
-NOTE: NOTE: The Resources page excludes Amazon FSx for NetApp ONTAP resources because users cannot associate them with a role. View them on the Systems page or from Workloads.
+NOTE: The Resources page excludes Amazon FSx for NetApp ONTAP resources because users cannot associate them with a role. View them on the *Systems* page or from Workloads.
 
 .Steps
 
@@ -29,7 +29,7 @@ NOTE: NOTE: The Resources page excludes Amazon FSx for NetApp ONTAP resources be
 
 . Select *Advanced Search & Filtering*.
 
-. Use any of the available options to find the resource that you're looking for:
+. Use the available options to find a resource:
 +
 * *Search by resource name*: Enter a text string and select *Add*.
 * *Platform*: Select one or more platforms, such as Amazon Web Services.
@@ -86,7 +86,7 @@ The following example shows a resource that is associated with one project.
 image:screenshot-iam-resource-details.png[A screenshot of the resource details page that shows a resource associated with a project that's directly underneath the organization.]
 
 
-NOTE: If you need to determine which organization members have access to the resource, you can link:task-iam-manage-folders-projects.html#view-associated-resources-members[view the members who have access to the folders and projects that are associated with the resource].
+NOTE: To see which organization members have access to the resource, link:task-iam-manage-folders-projects.html#view-associated-resources-members[view members with access to associated folders and projects].
 
 [#remove-resource]
 == Remove a resource from a folder or project
@@ -94,7 +94,7 @@ NOTE: If you need to determine which organization members have access to the res
 To remove a resource from a folder or project, you need to remove the association between the folder or project and the resource. When you remove the association, it prevents members from managing the resource in the folder or project.
 
 
-NOTE: To remove a discovered resource from the entire organization, remove the system from the *Systems* page.
+NOTE: To remove a discovered resource from the entire organization, go to the *Systems* page and remove the system.
 
 .Steps
 

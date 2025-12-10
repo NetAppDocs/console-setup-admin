@@ -1,6 +1,6 @@
 //tag::dedicated[]
 Dedicated host::
-The Console agent is not supported on a host that is shared with other applications. The host must be a dedicated host. The host can be of any architecture that meets the following size requirements:
+The Console agent requires a dedicated host. Any architecture is supported if it meets these size requirements:
 
 * CPU: 8 cores or 8 vCPUs
 * RAM: 32 GB
@@ -10,7 +10,7 @@ The Console agent is not supported on a host that is shared with other applicati
 The agent uses `/opt` to install the `/opt/application/netapp` directory and its contents.
 ** `/var`: 40 GiB of space must be available
 +
-The Console agent requires this space in `/var` because Docker or Podman are architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage` directory. External mounts or symlinks do not work for this space.
+The Console agent requires this space in `/var` because Podman or Docker are architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage`  directory and `/var/lib/docker` for Docker. External mounts or symlinks do not work for this space.
 //end::dedicated[]
 
 //tag::vmhost[]
@@ -62,7 +62,6 @@ Podman version 5.4.0 with podman-compose 1.5.0.
 a|
 Supported in enforcing mode or permissive mode
 
-* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
 
 |
 a| 9.1 to 9.4
@@ -77,7 +76,6 @@ Podman version 4.9.4 with podman-compose 1.5.0.
 a|
 Supported in enforcing mode or permissive mode
 
-* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
 
 |
 a| 8.6 to 8.10
@@ -92,7 +90,6 @@ Podman version 4.6.1 or 4.9.4 with podman-compose 1.0.6.
 a|
 Supported in enforcing mode or permissive mode
 
-* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
 
 5+| Ubuntu
 
@@ -156,7 +153,6 @@ The Console agent is supported with the following operating systems when using t
 +
 Notes:
 
-. Management of Cloud Volumes ONTAP systems is not supported by agents that have SELinux enabled on the operating system.
 . The Console agent is supported on English-language versions of these operating systems.
 . For RHEL, the host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 //end::os-private[]
@@ -179,7 +175,7 @@ When you create the Console agent, you'll need to select an EC2 key pair to use 
 
 //tag::aws-imdsv2[]
 PUT response hop limit when using IMDSv2::
-If IMDSv2 is enabled on the EC2 instance (this is the default setting for new EC2 instances), you must change the PUT response hop limit on the instance to 3. If you don't change the limit on the EC2 instance, you'll receive a UI initialization error when you try to set up the agent.
+If IMDSv2 is enabled (the default for new EC2 instances), set the PUT response hop limit to 3. If you do not, the system displays a UI initialization error during agent setup.
 +
 * link:task-require-imdsv2.html[Require the use of IMDSv2 on Amazon EC2 instances]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit[AWS documentation: Change the PUT response hop limit^]
@@ -192,7 +188,7 @@ An instance type that meets CPU and RAM requirements. NetApp recommends Standard
 
 //tag::google-machine[]
 Google Cloud machine type::
-An instance type that meets CPU and RAM requirements. NetApp recommend n2-standard-8.
+An instance type that meets CPU and RAM requirements. NetApp recommends n2-standard-8.
 +
 The Console agent is supported in Google Cloud on a VM instance with an OS that supports https://cloud.google.com/compute/shielded-vm/docs/shielded-vm[Shielded VM features^]
 //end::google-machine[]

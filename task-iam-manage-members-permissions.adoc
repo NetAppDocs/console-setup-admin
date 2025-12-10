@@ -33,7 +33,7 @@ _Folder or project admin_ can view all members on the *Members* page but manage 
 [#add-members]
 == Add members to your organization
 
-You can add two types of members to your organization: a user account and a service account. Applications use service accounts to perform API tasks without human intervention. A person typically uses a user account to log in and manage resources.
+You can add two types of members to your organization: a user account and a service account. Applications use service accounts to do API tasks automatically. People use user accounts to log in and manage resources.
 
 Users must sign up for the NetApp Console before you can add them to an organization or assign them a role. You create service accounts directly from the Console.
 
@@ -108,7 +108,10 @@ If you want to use JWT authentication, have your public key or certificate ready
 . If you want to use JWT authentication, select *Use private key JWT authentication* and upload your public RSA key or certificate. Skip this step if you want to use a client ID and secret instead.
 
 +  
-Your X.509 certitificate. It must be in  PEM, CRT, or CER format.
+Your X.509 certificate. It must be in  PEM, CRT, or CER format.
+
++
+.. Set up expiry notifications for your certificate. Choose between seven days or 30 days. Expiry notifications are emailed and shown in the Console to users with the Super admin or Org admin role.
 
 
 . Use the *Select an organization, folder, or project* section to choose the level of your resource hierarchy that the member should have permissions for.
@@ -158,7 +161,7 @@ The *Members* table lists the members of your organization.
 
 You might need to remove a member from your organization--for example, if they leave your company.
 
-The system removes the member's permissions but keeps their Console and NetApp Support Site accounts.
+When you remove a member, the system revokes their permissions but retains their Console and NetApp Support Site accounts.
 
 .Steps
 
@@ -183,13 +186,13 @@ When you recreate the credentials, you delete the existing credentials for the s
 . Select *Recreate*.
 
 . Download or copy the client ID and client secret. +
-The client secret displays only once. Copy or download it and store it securely.
+The Console displays the client secret only once. Copy or download it and store it securely.
 
 [[manage-mfa]]
 == Manage a user's multi-factor authentication (MFA)
 If a user loses access to their MFA device, you can either remove or disable their MFA configuration. 
 
-Users must reconfigure MFA at login after removal. If the user has only lost access to their MFA device temporarily, they can use the recovery code that they saved when they set up MFA to log in. 
+Users must set up MFA again when they log in after removal. If the user has only lost access to their MFA device temporarily, they can use the recovery code that they saved when they set up MFA to log in. 
 
 If they do not have their recovery code, temporarily disable MFA to allow login. When you disable MFA for a user, it is disabled for only eight hours and then re-enabled automatically. The user is allowed one login during that time without MFA. After the eight hours, the user must use MFA to log in.
 
