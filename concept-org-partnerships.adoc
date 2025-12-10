@@ -15,7 +15,7 @@ summary: Creating partnerships between organizations in the NetApp Console lets 
 
 
 [.lead]
-Creating partnerships between organizations the NetApp Console lets partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
+Creating partnerships between organizations in the NetApp Console lets partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
 
 .Required roles
 Partnership admin link:reference-iam-predefined-roles.html[Learn more about access roles.]

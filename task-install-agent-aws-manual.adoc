@@ -22,7 +22,7 @@ You can manually install a Console agent on a Linux host running in AWS. To manu
 
 == Step 1: Review host requirements
 
-The Console agent software must run on a host that meets specific operating system requirements, RAM requirements, port requirements, and so on.
+Ensure the host running the Console agent software meets operating system, RAM, and port requirements.
 
 include::_include/os-reqs.adoc[tag=manual-uid-range]
 
@@ -46,7 +46,7 @@ include::_include/podman-docker.adoc[]
 
 == Step 3: Set up networking
 
-Ensure that the network location where you plan to install the Console agent supports the following requirements. Meeting these requirements enables the Console agent to manage resources and processes within your hybrid cloud environment.
+Ensure the network location supports the following requirements so the Console agent can manage resources in your hybrid cloud.
 
 //Connections to target networks
 include::_include/networking.adoc[tag=networks]
@@ -90,7 +90,7 @@ include::_include/networking.adoc[tag=ntp]
 [[console-permissions-aws]]
 == Step 4: Set up AWS permissions for the Console
 
-You need to provide AWS permissions to the NetApp Console by using one of the following options:
+Provide AWS permissions to the NetApp Console using one of these options:
 
 * Option 1: Create IAM policies and attach the policies to an IAM role that you can associate with the EC2 instance.
 * Option 2: Provide the Console with the AWS access key for an IAM user who has the required permissions.
@@ -125,7 +125,7 @@ You now have an IAM role that you can associate with the EC2 instance after you 
 
 include::_include/aws-permissions.adoc[tag=policy]
 +
-Depending on the NetApp data services that you're planning to use, you might need to create a second policy.
+Depending on the NetApp data services that you plan to use, you might need to create a second policy.
 +
 For standard regions, the permissions are spread across two policies. Two policies are required due to a maximum character size limit for managed policies in AWS. link:reference-permissions-aws.html[Learn more about IAM policies for the Console agent].
 
@@ -141,7 +141,7 @@ You now have an IAM user that has the required permissions and an access key tha
 
 == Step 5: Install the Console agent
 
-After the pre-requisites are complete, you can manually install the software on your own Linux host.
+After you complete the prerequisites, manually install the software on your Linux host.
 
 include::_include/manual-install.adoc[tag=before]
 
@@ -155,7 +155,7 @@ If you have Amazon S3 buckets in the same AWS account where you created the Cons
 
 == Step 6: Provide permissions to NetApp Console
 
-Now that you've installed the Console agent, you need to provide the Console with the AWS permissions that you previously set up. Providing the permissions enables the Console agent to manage your data and storage infrastructure in AWS.
+After you install the Console agent, provide the AWS permissions you set up so the Console agent can manage your data and storage infrastructure in AWS.
 
 // start tabbed area
 
@@ -164,7 +164,7 @@ Now that you've installed the Console agent, you need to provide the Console wit
 
 .IAM role
 --
-Attach the IAM role that you previously created to the Console agent EC2 instance.
+Attach the IAM role you create to the Console agent EC2 instance.
 
 include::_include/provide-permissions-iam-role.adoc[]
 

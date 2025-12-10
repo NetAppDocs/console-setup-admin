@@ -20,13 +20,13 @@ Depending on your operating system, either Podman or Docker Engine is required b
 
 --
 
-Install and configure Podman:
+Follow these steps to install and configure Podman:
 
 * Enable and start the podman.socket service 
 * Install python3 
-* Install the respective podman-compose package
+* Install the podman-compose package version 1.0.6 
 * Add podman-compose to the PATH environment variable
-* Verify that your Podman version is using Netavark Aardvark DNS instead of CNI
+* If using Red Hat Enterprise Linux, verify that your Podman version is using Netavark Aardvark DNS instead of CNI
 
 NOTE: Adjust the aardvark-dns port (default: 53) after installing the agent to avoid DNS port conflicts. Follow the instructions to configure the port.
 
@@ -41,7 +41,7 @@ rm /var/run/docker.sock
 ----
 . Install Podman.
 +
-Get Podman from Red Hat Enterprise Linux repositories.
+You can obtain Podman from official Red Hat Enterprise Linux repositories.
 +
 For Red Hat Enterprise Linux 9:
 +
@@ -73,10 +73,11 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. Install EPEL to get podman-compose.
+. Install the EPEL repository package if it's not already available on your system.
 
+This step is required because podman-compose is available from the Extra Packages for Enterprise Linux (EPEL) repository.
 
-.. If using Red Hat Enterprise 9.1 to 9.6:
+.. If using Red Hat Enterprise 9:
 +
 [source,cli]
 ----
@@ -88,8 +89,6 @@ sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noa
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-
-
 +
 .. If using Red Hat Enterprise Linux 8:
 +
@@ -145,7 +144,7 @@ Follow the documentation from Docker to install Docker Engine.
 
 . https://docs.docker.com/engine/install/[View installation instructions from Docker^]
 +
-Install a supported Docker Engine version by following the steps. Do not install the latest version, as the Console does not support it.
+Follow the steps to install a supported Docker Engine version. Do not install the latest version, as it is unsupported by the Console.
 
 . Verify that Docker is enabled and running.
 +

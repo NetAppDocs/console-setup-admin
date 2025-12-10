@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: reference-agent-maint-console.html
+permalink: reference-agent-maint-console-proxy.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy
 summary: You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
 ---
 
-= Console agent maintenance console
+= Transparent proxy commands 
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,52 +15,75 @@ summary: You can use the Console agent maintenance console to configure a Consol
 [.lead]
 You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
 
+
 == Access the agent maintenance console
 You can access the maintenance Console from the Console agent host. Navigate to the following directory:
+
 [source,cli]
 ----
 /opt/application/netapp/service-manager-2/agent-maint-console
 ----
 
-== Transparent proxy commands
-The agent maintenance console provides commands to configure the agent to use a transparent proxy server. 
+=== View help for any command
+To view help for any command, append `--help` to the command. For example, to view help for the `proxy add` command, use the following command: 
 
-=== View the current transparent proxy configuration
-To view the current transparent proxy configuration, use the following command: 
+[source,cli]
+----
+./agent-maint-console proxy add --help
+----
+
+== proxy get
+
+The `proxy get` command displays information about the current transparent proxy server configuration. To view the current transparent proxy server configuration, use the following command:
+
+=== Proxy get example
+
+To view the current transparent proxy server configuration, use the following command:
 [source,cli]
 ----
 ./agent-maint-console proxy get
 ----
 
-=== Add a transparent proxy server
+== proxy add
+The `proxy add` command configures the agent to use a transparent proxy server.
+
+
+=== Parameters
+`-c <certificate file>`
+[role="quick-margin-para"]
+Specifies the path to the certificate file for the proxy server. The certificate file must be in PEM format. Ensure that the certificate file is in the same directory as the command or specify the full path to the certificate file. 
+
+=== Proxy add example
+
 To add a transparent proxy server, use the following command, where `/home/ubuntu/myCA1.pem` is the path to the certificate file for the proxy server. The certificate file must be in PEM format:
 [source,cli]
 ----
 ./agent-maint-console proxy add -c /home/ubuntu/myCA1.pem
 ----
 
+== proxy update
+The `proxy update` command allows you to update the certificate of a transparent proxy.
+
+=== Parameters
+
+`-c <certificate file>` specifies the path to the certificate file for the proxy server. The certificate file must be in PEM format.
+
 Ensure that the certificate file is in the same directory as the command or specify the full path to the certificate file. 
 
-=== Update the certificate for a transparent proxy server
+=== Proxy update example
+
 To update the certificate for a transparent proxy server, use the following command, where `/home/ubuntu/myCA1.pem` is the path to the new certificate file for the proxy server. The certificate file must be in PEM format: 
 [source,cli]
 ----
 ./agent-maint-console proxy update -c /home/ubuntu/myCA1.pem
 ----
 
-Ensure that the certificate file is in the same directory as the command or specify the full path to the certificate file. 
+== proxy remove
+The `proxy remove` command removes the transparent proxy server configuration from the agent.
 
-=== Remove a transparent proxy server
+=== Proxy remove example
 To remove transparent proxy server, use the following command:
 [source,cli]
 ----
 ./agent-maint-console proxy remove
 ----
-
-=== View help for any command
-To view help for any command, append `--help` to the command. For example, to view help for the `proxy add` command, use the following command: 
-[source,cli]
-----    
-./agent-maint-console proxy add --help
-----
-
