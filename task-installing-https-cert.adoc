@@ -40,7 +40,7 @@ With this option, the CSR is not generated through the Console. You generate the
 
 . On the *Overview* page, select the action menu for a Console agent and select *HTTPS Setup*.
 +
-The Console agent must be active to edit it.
+The Console agent must be connected to edit it.
 
 . In the HTTPS Setup page, install a certificate by generating a certificate signing request (CSR) or by installing your own CA-signed certificate:
 +

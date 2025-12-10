@@ -97,7 +97,7 @@ include::_include/google-shared-vpc-permissions.adoc[]
 
 == Step 6: Enable Google Cloud APIs
 
-Several Google Cloud APIs must be enabled before you can deploy Cloud Volumes ONTAP systems in Google Cloud.
+Several Google Cloud APIs must be enabled before you can deploy a Console agent in Google Cloud.
 
 .Step
 
@@ -110,6 +110,8 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis[Google Cloud do
 == Step 7: Install the Console agent
 
 After the pre-requisites are complete, you can manually install the software on your own Linux host.
+
+When you deploy an agent, the system also creates a Google Cloud bucket to store deployment files.
 
 include::_include/manual-install.adoc[tag=before]
 

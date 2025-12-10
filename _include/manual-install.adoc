@@ -12,13 +12,13 @@ You have the option to configure a proxy server after installation but doing so 
 
 * A CA-signed certificate, if the proxy server uses HTTPS or if the proxy is an intercepting proxy.
 
-NOTE: You cannot set a certificate for a transparent proxy server when manually installing the Console agent. If you need to set a certificate for a transparent proxy server, you must use the Maintenance Console after installation. Learn more about the link:reference-agent-maint-console.html[Agent Maintenance Console].
+NOTE: You cannot set a certificate for a transparent proxy server when manually installing the Console agent. If you need to set a certificate for a transparent proxy server, you must use the Maintenance Console after installation. Learn more about the link:reference-agent-maint-console-proxy.html[Agent Maintenance Console].
 //end::before[]
 
 //tag::about[]
 .About this task
 
-The installer that is available on the NetApp Support Site might be an earlier version. After installation, the Console agent automatically updates itself if a new version is available.
+After installation, the Console agent automatically updates itself if a new version is available.
 //end::about[]
 
 //tag::main-steps[]
@@ -34,9 +34,13 @@ unset https_proxy
 +
 If you don't remove these system variables, the installation fails.
 
-. Download the Console agent software from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^], and then copy it to the Linux host.
+. Download the Console agent software and then copy it to the Linux host. You can download it either from the NetApp Console or the NetApp Support site.
 +
-You should download the "online" agent installer that's meant for use in your network or in the cloud. 
+* NetApp Console: Go to *Agents > Management> Deploy agent > On-prem > Manual install*.
++
+Choose download the agent installer files or a URL to the files.
+
+* NetApp Support Site (needed if you don't already have access to the Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab[NetApp Support Site^], 
 
 . Assign permissions to run the script.
 +
@@ -86,7 +90,7 @@ For example:
 \http://bxpproxyuser:netapp1\!@address:3128
 
 
-NOTE: If you want to configure a transparent proxy, you can do so after you've installed. link:reference-agent-maint-console.html[Learn about the agent maintenance console]
+NOTE: If you want to configure a transparent proxy, you can do so after you've installed. link:reference-agent-maint-console-proxy.html[Learn about the agent maintenance console]
 
 . If you used Podman, you'll need to adjust the aardvark-dns port.
 .. SSH to the Console agent virtual machine.

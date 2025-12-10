@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-agent-default-config.html
-keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, agent folder, connector log, ubuntu, agent, agent installation folder, agent configuration
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration
 summary: Learn about Console agent default configurations for standard deployments (with internet access) across AWS, Azure, and Google Cloud, as well as restricted deployments (without internet access) for on-premises environments.
 ---
 
