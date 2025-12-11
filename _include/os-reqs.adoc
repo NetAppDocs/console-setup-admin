@@ -62,7 +62,6 @@ Podman version 5.4.0 with podman-compose 1.5.0.
 a|
 Supported in enforcing mode or permissive mode
 
-* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
 
 |
 a| 9.1 to 9.4
@@ -77,7 +76,6 @@ Podman version 4.9.4 with podman-compose 1.5.0.
 a|
 Supported in enforcing mode or permissive mode
 
-* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
 
 |
 a| 8.6 to 8.10
@@ -92,7 +90,6 @@ Podman version 4.6.1 or 4.9.4 with podman-compose 1.0.6.
 a|
 Supported in enforcing mode or permissive mode
 
-* Management of Cloud Volumes ONTAP systems is NOT supported by agents that have SELinux enabled on the operating system.
 
 5+| Ubuntu
 
