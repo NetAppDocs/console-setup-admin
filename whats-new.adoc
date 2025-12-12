@@ -23,7 +23,6 @@ include::_whatsnew/2025-12-10.adoc[]
 
 
 
-
 == 10 November 2025
 
 include::_whatsnew/2025-11-10.adoc[]
