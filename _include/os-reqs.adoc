@@ -137,7 +137,7 @@ The Console agent is supported with the following operating systems when using t
 
 <<podman-configuration,View Podman configuration requirements>>.
 
-| Supported in enforcing mode or permissive mode ^1^
+| Supported in enforcing mode or permissive mode 
 
 | Ubuntu
 
