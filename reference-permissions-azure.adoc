@@ -188,7 +188,10 @@ The agent makes the following API requests when you use NetApp Data Classificati
 * Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read
 * Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete
 
-=== Minimal NetApp Backup and Recovery permissions
+=== NetApp Backup and Recovery
+The following sections describe how permissions are used for NetApp Backup and Recovery.
+
+==== Minimal NetApp Backup and Recovery permissions
 
 The Console agent makes the following API requests for basic NetApp Backup and Recovery functionality:
 
@@ -248,7 +251,7 @@ The following is a custom policy for Backup and Recovery that uses the fewest po
 }
 ----
 
-=== Additional Backup and Recovery permissions
+==== Advanced Backup and Recovery permissions
 
 The console agent makes the following API requests for advanced Backup and Recovery operations and Search & Restore features. These permissions enable management of networking, key vaults, and managed identities:
 
@@ -267,9 +270,9 @@ The console agent makes the following API requests for advanced Backup and Recov
 * Microsoft.Resources/deployments/delete
 //end::additional-permissions[]
 
-=== Legacy permissions for Backup and Recovery
+==== Legacy permissions for Backup and Recovery
 
-The agent makes the following API requests when you use the Search & Restore functionality. You only need these permissions if you enabled legacy indexing features before the release of indexing v2:
+The agent makes the following API requests when you use the Search & Restore functionality. You only need these permissions if you enabled legacy indexing features before the release of indexing v2 in February 2025:
 
 //tag::backup-search-restore-permissions[]
 * Microsoft.Synapse/workspaces/write
