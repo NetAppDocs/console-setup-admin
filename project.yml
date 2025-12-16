@@ -98,7 +98,7 @@ sidebar:
         - title: Get started with BlueXP legacy interface (private mode)
           entries:
             - title: Getting started with BlueXP legacy interface (private mode)
-              url: /task-quick-start-private-mode.html   
+              url: /task-quick-start-private-mode.html
     - title: Use NetApp Console
       entries:
         - title: Log in to NetApp Console
@@ -116,7 +116,7 @@ sidebar:
             - title: Get started with identity and access
               url: /task-iam-get-started.html
             - title: Organize your resources with folders and projects
-              entities:
+              entries:
                 - title: Create folders and projects
                   url: /task-iam-create-folders-projects.html
                 - title: Add resources to folders and projects
@@ -124,7 +124,7 @@ sidebar:
                 - title: Associate a Console agent with other folders and projects
                   url: /task-iam-associate-agents.html
             - title: Add users and roles
-              entities:
+              entries:
                 - title: Manage members and service accounts
                   url: /task-iam-manage-members-permissions.html
                 - title: Use roles to control member access to resources
