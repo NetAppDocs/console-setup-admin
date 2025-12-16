@@ -77,7 +77,7 @@ NOTE: If you are unable to access your authentication app or recovery code, you 
 
 
 
-
+[[contact-admin]]
 == Contact your Organization administrator
 If you need to contact your organization administrator, you can send an email to them directly from the Console. The administrator manages user accounts and permissions within your organization.
 

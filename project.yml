@@ -116,45 +116,50 @@ sidebar:
             - title: Get started with identity and access
               url: /task-iam-get-started.html
             - title: Organize your resources with folders and projects
-              url: /task-iam-manage-folders-projects.html
-            - title: Manage members and service accounts
-              url: /task-iam-manage-members-permissions.html
-            - title: Use roles to control member access to resources
-              url: /task-iam-manage-roles.html
-            - title: Manage your resource hierarchy
-              url: /task-iam-manage-resources.html
-            - title: Associate a Console agent with other folders and projects
-              url: /task-iam-associate-agents.html
+              entities:
+                - title: Create folders and projects
+                  url: /task-iam-create-folders-projects.html
+                - title: Add resources to folders and projects
+                  url: /task-iam-manage-resources.html
+                - title: Associate a Console agent with other folders and projects
+                  url: /task-iam-associate-agents.html
+            - title: Add users and roles
+              entities:
+                - title: Manage members and service accounts
+                  url: /task-iam-manage-members-permissions.html
+                - title: Use roles to control member access to resources
+                  url: /task-iam-manage-roles.html
+                - title: NetApp Console access roles
+                  entries:
+                  - title: Learn about NetApp Console access roles
+                    url: /reference-iam-predefined-roles.html
+                  - title: Platform roles
+                    url: /reference-iam-platform-roles.html
+                  - title: Application roles
+                    entries:
+                      - title: Google Cloud NetApp Volumes roles 
+                        url: /reference-iam-gcnv-roles.html
+                      - title: Keystone roles 
+                        url: /reference-iam-keystone-roles.html
+                      - title: Operations support analyst
+                        url: /reference-iam-analyst-roles.html
+                      - title: Storage roles
+                        url: /reference-iam-storage-roles.html
+                  - title: Data services roles
+                    entries:
+                      - title: Backup and Recovery roles
+                        url: /reference-iam-backup-rec-roles.html
+                      - title: Disaster Recovery roles
+                        url: /reference-iam-disaster-rec-roles.html
+                      - title: Ransomware Resilience roles
+                        url: /reference-iam-ransomware-roles.html
             - title: Switch between organizations, projects, and Console agents
               url: /task-iam-switch-organizations-projects.html
             - title: Organization and project IDs
               url: /task-iam-rename-organization.html
             - title: Monitor or audit IAM activity
               url: /task-iam-audit-actions-timeline.html
-            - title: NetApp Console access roles
-              entries:
-                - title: Learn about NetApp Console access roles
-                  url: /reference-iam-predefined-roles.html
-                - title: Platform roles
-                  url: /reference-iam-platform-roles.html
-                - title: Application roles
-                  entries:
-                   - title: Google Cloud NetApp Volumes roles 
-                     url: /reference-iam-gcnv-roles.html
-                   - title: Keystone roles 
-                     url: /reference-iam-keystone-roles.html
-                   - title: Operations support analyst
-                     url: /reference-iam-analyst-roles.html
-                   - title: Storage roles
-                     url: /reference-iam-storage-roles.html
-                - title: Data services roles
-                  entries:
-                    - title: Backup and Recovery roles
-                      url: /reference-iam-backup-rec-roles.html
-                    - title: Disaster Recovery roles
-                      url: /reference-iam-disaster-rec-roles.html
-                    - title: Ransomware Resilience roles
-                      url: /reference-iam-ransomware-roles.html
+
         - title: Partner organizations
           entries:
             - title: Learn about organization partnerships
