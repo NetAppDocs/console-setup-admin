@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-federation-group-based-access.html
+permalink: task-federation-group.html
 keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity
 summary: After you've added a federated connection, you can manage it in the NetApp Console. You can view the status of the connection, enable or disable it as needed.
 ---
