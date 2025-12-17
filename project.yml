@@ -118,7 +118,7 @@ sidebar:
             - title: Organize your resources with folders and projects
               entries:
                 - title: Create folders and projects
-                  url: /task-iam-create-folders-projects.html
+                  url: /task-iam-manage-folders-projects.html
                 - title: Add resources to folders and projects
                   url: /task-iam-manage-resources.html
                 - title: Associate a Console agent with other folders and projects

@@ -20,12 +20,12 @@ In standard mode, you access a web-based console that is hosted as a Software-as
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] link:reference-networking-saas-console.html[Prepare networking for using the NetApp console]
 
 [role="quick-margin-para"]
-Computers that access the NetApp console should have connections to specific endpoints. If your network restricts outbound access, you should ensure that these endpoints are allowed.
+Ensure computers accessing the NetApp console have network access to the required endpoints. If your network restricts outbound access, allow these endpoints.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] link:task-sign-up-saas.html[Sign up and create an organization]
 
 [role="quick-margin-para"]
-Go to the https://console.netapp.com[NetApp console^] and sign up. You'll be given the option to create an organization, but you should skip that step if your company already has an existing organization.
+Go to the https://console.netapp.com[NetApp console^] and sign up. If prompted to create an organization, close the dialog box and tell your organization administrator. If there isn't currently an Organization administrator for your company, you can claim this role. link:task-user-settings.html#contact-admin[Learn how to contact an organization administrator.^]
 
 [role="quick-margin-para"]
 At this point, you're logged in and can start managing storage and using services like Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files, and more. link:concept-agents.html[Learn what you can do without a Console agent].
@@ -52,4 +52,4 @@ To use NetApp Intelligent Data Services for managing storage and data in Google 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] link:task-subscribe-standard-mode.html[Subscribe to NetApp Intelligent Services (optional)]
 
 [role="quick-margin-para"]
-Sign up for NetApp Intelligent Services through your cloud provider to pay hourly (PAYGO) or through an annual contract. NetApp Intelligent Services include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience and NetApp Disaster Recovery. NetApp Data Classification is included with your subscription at no additional cost.
+Sign up for NetApp Intelligent Services through your cloud provider for hourly (PAYGO) or annual billing. A subscription includes NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience, NetApp Disaster Recovery, and Data Classification.

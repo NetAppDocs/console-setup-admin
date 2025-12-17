@@ -15,8 +15,7 @@ summary: After you've added a federated connection, you can manage it in the Net
 [.lead]
 Assign NetApp Console roles to specific IdP groups directly from NetApp Console, granting each Console user in the group the same roles.
 
-With group-based access control, you can use IdP-defined user groups to assign permissions to your NetApp Console users to automatically assign or revoke roles based on their group membership in your identity provider (IdP).
-
+With group-based access control, you can use IdP-defined user groups to assign permissions in NetApp Console. Roles are automatically assigned or revoked based on group membership in your identity provider (IdP).
 View and manage group-based access control from the *Federation* page in the NetApp Console.
 
 NOTE: You must have already link:concept-federation.html[added a federated connection] to use group-based access control.
