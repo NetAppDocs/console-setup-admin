@@ -138,7 +138,7 @@ You can add a federated group from your identity provider (IdP) to your organiza
 
 .Before you begin:
 Ensure the following before adding a federated group:
-* You must have already set up federation between your IdP and the Console. link:task-iam-set-up-federation.html[Learn how to set up federation.^]
+* You must have already set up federation between your IdP and the Console. link:concept-federation.html[Learn how to set up federation.^]
 * The group must already exist in your IdP.
 * You must know the exact name of the group in your IdP.
 * Users belonging to the group must have already signed up for the NetApp Console and been explicitly assigned a role in the Console.

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task-iam-manage-access.html
+permalink: task-iam-user-security.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management
 summary: Manage your organization's members to provide permissions across different levels of your organization's resource hierarchy.
 ---
