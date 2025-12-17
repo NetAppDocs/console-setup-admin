@@ -150,6 +150,7 @@ sidebar:
                     - title: Remove service account access
                       url: /task-iam-manage-roles.html
                     - title: Remove federated group access
+                      url: /task-iam-manage-roles.html
                 - title: Member security
                   entries:
                     - title: Reset user passwords (local users only)
@@ -160,7 +161,6 @@ sidebar:
                       url: /task-iam-manage-roles.html
             - title: Organization and project IDs
               url: /task-iam-rename-organization.html
-
         - title: Partner organizations
           entries:
             - title: Learn about organization partnerships
@@ -173,7 +173,6 @@ sidebar:
               url: /task-partnerships-resource-access.html
             - title: Work in a partner organization
               url: /task-partnerships-work.html
-       
         - title: Identity federation
           entries:
             - title: Learn about identity federation
