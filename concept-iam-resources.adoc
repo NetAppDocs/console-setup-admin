@@ -22,14 +22,14 @@ When you associate a resource with a folder or project, you make that resource a
 There are several types of resources in your NetApp Console organization:
 
 .Storage resources
-Storage resources are the most common type of resource in your organization. When you add a storage system to the Console, the Console discovers the resource. However, until you add the storage system, the Console considers it an undiscovered resource.
+Storage resources are the most common type of resource in your organization represent both on-premises and cloud storage systems. When you add a storage system to the Console, you can add it to a folder or project. However, until you add the storage system, the Console considers it an undiscovered resource, marks it as such and it doesn't display on the *Resources* page until you add it.
 
 
 .Console agents
-If you used a Console agent to discover storage systems, associate the agent with the same folder or project as the discovered storage systems. This ensures users can perform functions enabled by the agent, such as data services or Console-native storage management.
+If you used a Console agent to discover storage systems, add the agent to the same folder or project as the discovered storage systems. This ensures users can perform functions enabled by the agent, such as data services or Console-native storage management.
 
 .Backup and Recovery workloads
-Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and Recovery workloads by associating the workloads with specific folders or projects. For example, you can assign a user access to a Backup and Recovery workload by associating the workload with a folder or project that the user has access to and granting the user the appropriate Backup and Recovery role.
+Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and Recovery workloads by associating the workloads with specific folders or projects. For example, assign a user access to a Backup and Recovery workload by associating it with a folder or project the user can access and granting the appropriate Backup and Recovery role.
 
 .Subscriptions
 When you subscribe to a NetApp data service, such as Cloud Volumes ONTAP, the subscription is considered a resource. You can associate the subscription with specific folders or projects to ensure that users have access to the subscription for billing purposes. Users should also be granted a Licenses and subscriptions role on the subscription to view and manage subscriptions.
