@@ -107,6 +107,8 @@ sidebar:
           url: /task-dashboard.html
         - title: Manage your NetApp Console user settings
           url: /task-user-settings.html
+        - title: Switch between organizations, projects, and Console agents
+          url: /task-iam-switch-organizations-projects.html
     - title: Administer NetApp Console
       entries:
         - title: Identity and access management
@@ -115,50 +117,49 @@ sidebar:
               url: /concept-identity-and-access-management.html
             - title: Get started with identity and access
               url: /task-iam-get-started.html
-            - title: Organize your resources with folders and projects
+            - title: Organize your Console resources
               entries:
+                - title: Understand Console resources
+                  url: /concept-iam-resources.html
                 - title: Create folders and projects
                   url: /task-iam-manage-folders-projects.html
-                - title: Add resources to folders and projects
+                - title: Associate resources to folders and projects
                   url: /task-iam-manage-resources.html
                 - title: Associate a Console agent with other folders and projects
                   url: /task-iam-associate-agents.html
-            - title: Add users and roles
+            - title: Grant access to your Console organization
               entries:
-                - title: Manage members and service accounts
-                  url: /task-iam-manage-members-permissions.html
-                - title: Use roles to control member access to resources
+                - title: Understand role-based access control (RBAC)
+                  url: /concept-iam-rbac.html
+                - title: Grant access to users, service accounts, and federated groups
                   url: /task-iam-manage-roles.html
-                - title: NetApp Console access roles
+                - title: Grant access to service accounts
+                  url: /task-iam-manage-roles.html
+                - title: Grant access to federated groups
+                  url: /task-iam-manage-roles.html
+            - title: Manage user access
+              entries:
+                - title: View roles assigned to a member
+                  url: /task-iam-manage-roles.html
+                - title: Change member access
+                  url: /task-iam-manage-roles.html
+                - title: Remove member access
+                  entries: 
+                    - title: Remove user access
+                      url: /task-iam-manage-roles.html
+                    - title: Remove service account access
+                      url: /task-iam-manage-roles.html
+                    - title: Remove federated group access
+                - title: Member security
                   entries:
-                  - title: Learn about NetApp Console access roles
-                    url: /reference-iam-predefined-roles.html
-                  - title: Platform roles
-                    url: /reference-iam-platform-roles.html
-                  - title: Application roles
-                    entries:
-                      - title: Google Cloud NetApp Volumes roles 
-                        url: /reference-iam-gcnv-roles.html
-                      - title: Keystone roles 
-                        url: /reference-iam-keystone-roles.html
-                      - title: Operations support analyst
-                        url: /reference-iam-analyst-roles.html
-                      - title: Storage roles
-                        url: /reference-iam-storage-roles.html
-                  - title: Data services roles
-                    entries:
-                      - title: Backup and Recovery roles
-                        url: /reference-iam-backup-rec-roles.html
-                      - title: Disaster Recovery roles
-                        url: /reference-iam-disaster-rec-roles.html
-                      - title: Ransomware Resilience roles
-                        url: /reference-iam-ransomware-roles.html
-            - title: Switch between organizations, projects, and Console agents
-              url: /task-iam-switch-organizations-projects.html
+                    - title: Reset user passwords (local users only)
+                      url: /task-iam-manage-roles.html
+                    - title: Update service account credentials   
+                      url: /task-iam-manage-roles.html
+                    - title: Manage user MFA settings 
+                      url: /task-iam-manage-roles.html
             - title: Organization and project IDs
               url: /task-iam-rename-organization.html
-            - title: Monitor or audit IAM activity
-              url: /task-iam-audit-actions-timeline.html
 
         - title: Partner organizations
           entries:
@@ -247,12 +248,14 @@ sidebar:
               url: /task-manage-user-credentials.html
         - title: Monitor NetApp Console operations
           url: /task-monitor-cm-operations.html
+        - title: Monitor or audit IAM activity
+          url: /task-iam-audit-actions-timeline.html
     - title: Reference
       entries:
         - title: Agent maintenance console
           entries:
             - title: Configuration checks
-              url: /reference-agent-maint-console.html
+              url: /reference-agent-maint-console-config-checker.html
             - title: Transparent proxy 
               url: /reference-agent-maint-console-proxy.html
         - title: Permissions

@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: concept-iam-resources.html
+keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent
+summary: You use NetApp Console to manage AWS credentials and marketplace subscriptions for secure, cost-effective deployment of Cloud Volumes ONTAP and other data services by providing appropriate IAM credentials during Console agent deployment and associating them with AWS Marketplace subscriptions for billing across single or multiple AWS accounts.
+---
+
+= Learn about NetApp Console IAM resources
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Within NetApp Console, you control which users have access to particular resources. A _resource_ is any entity that the Console is aware of, such as a storage resource, a Console agent, a Backup and Recovery workload, or subscription. 
+
+== Granting access to resources in Console
+When you associate a resource with a folder or project, you make that resource available to users who have access to that folder or project. You can control which users have access to specific resources by managing the resource hierarchy of your organization. You can view and manage resources from the *Resources* page in the Console. link:task-iam-manage-resources.html[Learn how to manage the resource hierarchy in your organization].
+
+== Console resource types
+There are several types of resources in your NetApp Console organization:
+
+.Storage resources
+Storage resources are the most common type of resource in your organization. When you add a storage system to the Console, the Console discovers the resource. However, until you add the storage system, the Console considers it an undiscovered resource.
+
+
+.Console agents
+If you used a Console agent to discover storage systems, associate the agent with the same folder or project as the discovered storage systems. This ensures users can perform functions enabled by the agent, such as data services or Console-native storage management.
+
+.Backup and Recovery workloads
+Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and Recovery workloads by associating the workloads with specific folders or projects. For example, you can assign a user access to a Backup and Recovery workload by associating the workload with a folder or project that the user has access to and granting the user the appropriate Backup and Recovery role.
+
+.Subscriptions
+When you subscribe to a NetApp data service, such as Cloud Volumes ONTAP, the subscription is considered a resource. You can associate the subscription with specific folders or projects to ensure that users have access to the subscription for billing purposes. Users should also be granted a Licenses and subscriptions role on the subscription to view and manage subscriptions.
+

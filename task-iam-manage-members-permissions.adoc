@@ -21,22 +21,22 @@ Super admin, Org admin, or Folder or project admin (for folders and projects tha
 == Understand how access is granted in NetApp Console           
 NetApp Console uses a role-based access control (RBAC) model to manage user permissions. You can assign predefined roles to members individually or through federated groups. You can add and assign roles to service accounts. Each role defines what actions a member can perform at the associated resources.
 
-Note the following important points about granting access in NetApp Console:
+Note the following about granting access in NetApp Console:
 
-* All users regardless of how they are added to the organization must first sign up for the NetApp Console before they can be granted access to resources. 
-* Users must have at least one explicitly assigned role in the Console before they can access resources, even if they are members of a federated group that has been assigned a role.   
+* All users must first sign up for the NetApp Console before they can be granted access to resources
+* You must explicitly assign a role to each user in the Console before they can access resources, even if they are members of a federated group that has been assigned a role.   
+* You can add service accounts directly from the Console and assign them roles.
 
 
 
 [#add-members]
 == Add members to your organization
 
-You can add two types of members to your organization: a user account and a service account. Applications use service accounts to do API tasks automatically. People use user accounts to log in and manage resources.
+NetApp Console supports three types of members: user accounts, service accounts, and federated groups. Applications use service accounts to do API tasks automatically. People use user accounts to log in and manage resources.
 
 Users must sign up for the NetApp Console before you can add them to an organization or assign them a role. You create service accounts directly from the Console.
 
-To manage users and their permissions, you must have the *Organization admin* role or the *Folder or project admin* role. Remember that users with the *Folder or project admin* role can only manage members for the folder or projects of which they have admin permissions. 
-
+All members must have at least one role explicitly assigned to them in order to access resources.
 
 
 
@@ -44,13 +44,10 @@ To manage users and their permissions, you must have the *Organization admin* ro
 
 Users sign up for the NetApp Console, but an Org admin or Folder or project admin must add them to an organization, folder, or project so they can access resources.
 
-.Steps
+.Prerequisite
+The user must have already signed up for the NetApp Console. If they haven't signed up yet, direct them to link:task-sign-up-saas.html[sign up for the NetApp Console.^
 
-. Direct the user to visit https://console.netapp.com/[NetApp Console^] to sign up.
-+
-Once users sign up, they complete the *Sign up* page, check their email, and log in. If prompted to create an organization, users should close it and notify an Org admin. link:task-user-settings.html#contact-admin[Learn how to contact an organization administrator.^]
-+
-link:task-sign-up-saas.html[Learn how to sign up for the NetApp Console].
+.Steps
 
 . Select *Administration > Identity and access*.
 
@@ -59,7 +56,7 @@ link:task-sign-up-saas.html[Learn how to sign up for the NetApp Console].
 . Select *Add a member*.
 
 . For *Member Type*, keep *User* selected.
-. For *User's email*,  enter the user's email address that is associated with the login that they created.
+. For *User's email*, enter the user's email address that is associated with the login that they created.
 . Use the *Select an organization, folder, or project* section to choose the level of your resource hierarchy that the member should have permissions for.
 
 + 
@@ -74,20 +71,20 @@ Note the following:
 +
 link:reference-iam-predefined-roles.html[Learn about access roles].
 
-. Optional: Select an additional role or project. To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
+. To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
 
 . Select *Add*. 
 +
-The Console sends the user an email with instructions.
+The Console emails instructions to the user.
 
 
 
 [[service-account]]
 === Add a service account 
+Service accounts let you do tasks automatically and connect with Console APIs safely. Choose client ID and secret for simple setups, or JWT (JSON Web Token) for stronger security in automated or cloud-native environments. Pick the method that fits your security needs.
 
-You can automate tasks and integrate with Console APIs securely with service accounts. When you create a service account, choose between two authentication methods: using a client ID and secret, or using JWT (JSON Web Token) authentication. The client ID and secret method suits simple setups, while JWT authentication offers stronger security for automated or cloud-native environments. Choose the option that best fits your security needs and how you plan to use the Console.
-
-If you want to use JWT authentication, have your public key or certificate ready to use.
+.Prerequisite:
+For JWT authentication, prepare your public key or certificate.
 
 
 .Steps
@@ -120,12 +117,13 @@ Note the following:
 ** Selecting an organization or folder grants the member permissions to all its contents.
 ** You can only assign the *Organization admin* role at the organization level.
 
-. elect a *Category* then select a *Role* that gives the member permissions for the resources in the organization, folder, or project you selected.
+. Select a *Category* then select a *Role* that gives the member permissions for the resources in the organization, folder, or project you selected.
 
 +
 link:reference-iam-predefined-roles.html[Learn about access roles].
 
-. Optional: Select an additional role or project. If you want to provide access to additional folders or projects within your organization or grant the user additional roles in the selected area, select *Add role*, specify another folder or project or a different role category and then choose a role.
+. To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
+
 
 . If you didn't choose to use JWT authentication, download or copy the client ID and client secret. +
 The Console shows the client secret only once. Copy it securely; you can recreate it later if needed.
@@ -133,6 +131,38 @@ The Console shows the client secret only once. Copy it securely; you can recreat
 . If you chose JWT authentication, download or copy the client ID and JWT audience. This information is shown only once and cannot be retrieved later.
 
 . Select *Close*.
+
+== Add a federated group to your organization
+You can add a federated group from your identity provider (IdP) to your organization. Members of the federated group inherit the roles that you assign to the group in the Console.
+
+.Prerequisites
+* You must have already set up federation between your IdP and the Console. link:task-iam-set-up-federation.html[Learn how to set up federation.^]
+* The group must already exist in your IdP.
+* You must know the exact name of the group in your IdP.
+* Users belonging to the group must have already signed up for the NetApp Console and been explicitly assigned a role in the Console.
+
+.Steps
+. Select *Administration > Identity and access*.
+. Select *Members*.
+. Select *Add a member*.
+. For *Member Type*, select *Federated Group*.
+. Select the federation of which the group is a member
+. For *Group name*, enter the exact name of the group in your IdP.
+. Use the *Select an organization, folder, or project* section to choose the level of your resource hierarchy that the member should have permissions for.
++
+Note the following:
++
+** You can only select from the folders and projects for which you have permissions.
+** Selecting an organization or folder grants the member permissions to all its contents.
+** You can only assign the *Organization admin* role at the organization level.
+
+. Select a *Category* then select a *Role* that gives the member permissions for the resources in the organization, folder, or project you selected.
+
++
+link:reference-iam-predefined-roles.html[Learn about access roles].
+
+. To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
+
 
 
 
