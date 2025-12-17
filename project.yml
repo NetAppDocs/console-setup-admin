@@ -132,11 +132,7 @@ sidebar:
                 - title: Understand role-based access control (RBAC)
                   url: /concept-iam-rbac.html
                 - title: Grant access to users, service accounts, and federated groups
-                  url: /task-iam-manage-roles.html
-                - title: Grant access to service accounts
-                  url: /task-iam-manage-roles.html
-                - title: Grant access to federated groups
-                  url: /task-iam-manage-roles.html
+                  url: /task-iam-manage-members-permissions.html
             - title: Manage user access
               entries:
                 - title: View roles assigned to a member

@@ -44,7 +44,7 @@ All members must have at least one role explicitly assigned to them in order to 
 
 Users sign up for the NetApp Console, but an Org admin or Folder or project admin must add them to an organization, folder, or project so they can access resources.
 
-.Prerequisite
+.Before you begin:
 The user must have already signed up for the NetApp Console. If they haven't signed up yet, direct them to link:task-sign-up-saas.html[sign up for the NetApp Console.^
 
 .Steps
@@ -83,7 +83,7 @@ The Console emails instructions to the user.
 === Add a service account 
 Service accounts let you do tasks automatically and connect with Console APIs safely. Choose client ID and secret for simple setups, or JWT (JSON Web Token) for stronger security in automated or cloud-native environments. Pick the method that fits your security needs.
 
-.Prerequisite:
+.Before you begin:
 For JWT authentication, prepare your public key or certificate.
 
 
@@ -133,9 +133,11 @@ The Console shows the client secret only once. Copy it securely; you can recreat
 . Select *Close*.
 
 == Add a federated group to your organization
+
 You can add a federated group from your identity provider (IdP) to your organization. Members of the federated group inherit the roles that you assign to the group in the Console.
 
-.Prerequisites
+.Before you begin:
+Ensure the following before adding a federated group:
 * You must have already set up federation between your IdP and the Console. link:task-iam-set-up-federation.html[Learn how to set up federation.^]
 * The group must already exist in your IdP.
 * You must know the exact name of the group in your IdP.
@@ -166,77 +168,8 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 
 
 
-== View organization members
-
-To understand which resources and permissions are available to a member, you can view the roles assigned to the member at different levels of your organization's resource hierarchy. link:task-iam-manage-roles.html[Learn how to use roles to control access to Console resources.^]
-
-You can view both user accounts and service accounts from the *Members* page.
-
-NOTE: You can also view all of the members associated with a specific folder or project. link:task-iam-manage-folders-projects.html#view-associated-resources-members[Learn more].
-
-.Steps
-
-. Select *Administration > Identity and access*.
-
-. Select *Members*.
-
-+
-The *Members* table lists the members of your organization.
-
-. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
-
-== Remove a member from your organization
-
-You might need to remove a member from your organization--for example, if they leave your company.
-
-When you remove a member, the system revokes their permissions but retains their Console and NetApp Support Site accounts.
-
-.Steps
-
-. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] then select *Delete user*.
-
-. Confirm that you want to remove the member from your organization.
-
-== Recreate the credentials for a service account
-
-Create new credentials if you lose them or need to update them.
-
-Making new credentials deletes the old ones and creates new ones. You cannot use the old credentials.
-
-.Steps
-. Select *Administration > Identity and access*.
-
-. Select *Members*.
 
 
-. In the *Members* table, navigate to a service account, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Recreate secrets*.
-
-. Select *Recreate*.
-
-. Download or copy the client ID and client secret. +
-The Console displays the client secret only once. Copy or download it and store it securely.
-
-[[manage-mfa]]
-== Manage a user's multi-factor authentication (MFA)
-If a user loses access to their MFA device, you can either remove or disable their MFA configuration. 
-
-Users must set up MFA again when they log in after removal. If the user has only lost access to their MFA device temporarily, they can use the recovery code that they saved when they set up MFA to log in. 
-
-If they do not have their recovery code, temporarily disable MFA to allow login. When you disable MFA for a user, it is disabled for only eight hours and then re-enabled automatically. The user is allowed one login during that time without MFA. After the eight hours, the user must use MFA to log in.
-
-NOTE: To manage a user's multi-factor authentication, you must have an email address in the same domain as the affected user.
-
-.Steps
-
-. Select *Administration > Identity and access*.
-
-. Select *Members*.
-+
-The *Members* table lists the members of your organization.
-
-. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Manage multi-factor authentication*.
-
-. Choose whether to remove or to disable the user's MFA configuration.
 
 
 

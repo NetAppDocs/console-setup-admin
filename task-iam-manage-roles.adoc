@@ -5,7 +5,7 @@ keywords:  projects, access, resources, user roles, iam, identity and access man
 summary: Within the NetApp Console, you can assign roles to users based on what they need to do and where. 
 ---
 
-= Use roles to manage user access to NetApp Console resources
+= Manage organization members
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,9 @@ summary: Within the NetApp Console, you can assign roles to users based on what 
 :imagesdir: ./media/
 
 [.lead]
-Within the Console, you can assign roles to users based on what they need to do and where. 
+You can manage your organization's members by adjusting their access to resources by updating their assigned roles. You can also remove a member (local only) from your organization when they no longer need access.
+
+NOTE: Users who are part of a federated group automatically lose access to the NetApp Console when they are removed your IdP.
 
 Users with the *Organization admin* or *Folder or project admin* role have the responsibility of assigning roles to other users. You can assign access roles on a project or folder basis. Assign access roles by project or folder. For example, assign the Ransomware Resilience admin role to a user for one project and the SnapCenter admin role for another. To give a user the Ransomware Resilience admin role for all projects in a folder, assign the role at the folder level.
 
@@ -22,6 +24,45 @@ Use access roles to assign access to storage resources based on the specific tas
 Assign roles according to your IAM strategy to improve security. IAM roles limit user access to only what is needed.
 
 NOTE: Remember that you can't directly grant access to resources. Assign resources to projects first. Consider setting up your resource hierarchy before assigning users access. link:task-iam-manage-folders-projects.html[Learn how to organize your resources with folders and projects.]
+
+== View organization members
+
+To understand which resources and permissions are available to a member, you can view the roles assigned to the member at different levels of your organization's resource hierarchy. link:task-iam-manage-roles.html[Learn how to use roles to control access to Console resources.^]
+
+You can view both user accounts and service accounts from the *Members* page.
+
+NOTE: You can also view all of the members associated with a specific folder or project. link:task-iam-manage-folders-projects.html#view-associated-resources-members[Learn more].
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. Select *Members*.
+
++
+The *Members* table lists the members of your organization.
+
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
+
+== Remove a member from your organization
+
+You might need to remove a member from your organization--for example, if they leave your company.
+
+When you remove a member, the system revokes their Console permissions but retains their Console and NetApp Support Site accounts.
+
+[NOTE] 
+====
+.For federated users
+* Federated users automatically lose access to the NetApp Console when they are removed your IdP. But you should still remove them from your Console organization to keep your member list up to date.
+* If you a user from a federated group in your IdP, they lose the Console access associated with that group. However, they still retain any access associated with an  explicit role assigned to them in the Console.
+
+====
+
+.Steps
+
+. From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] then select *Delete user*.
+
+. Confirm that you want to remove the member from your organization.
 
 [#manage-permissions]
 == View roles(s) assigned to a member

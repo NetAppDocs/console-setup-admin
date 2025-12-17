@@ -22,7 +22,7 @@ Verifying your domain involves adding a TXT record to your domain's DNS settings
 
 .Steps
 
-include::_include/federation-navigation-steps.adoc[]
+include::_include/federation-steps-notes.adoc[tag=intro-steps]
 
 . Select *Verify domain ownership*.
 . Enter the domain that you want to verify and select *Continue*.
