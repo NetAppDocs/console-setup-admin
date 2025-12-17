@@ -127,34 +127,18 @@ sidebar:
                   url: /task-iam-manage-resources.html
                 - title: Associate a Console agent with other folders and projects
                   url: /task-iam-associate-agents.html
-            - title: Grant access to your Console organization
+            - title: Add users to your Console organization
               entries:
                 - title: Understand role-based access control (RBAC)
                   url: /concept-iam-rbac.html
                 - title: Grant access to users, service accounts, and federated groups
                   url: /task-iam-manage-members-permissions.html
-            - title: Manage user access
+            - title: Manage user access and security
               entries:
-                - title: View roles assigned to a member
+                - title: Manage user access
                   url: /task-iam-manage-roles.html
-                - title: Change member access
-                  url: /task-iam-manage-roles.html
-                - title: Remove member access
-                  entries: 
-                    - title: Remove user access
-                      url: /task-iam-manage-roles.html
-                    - title: Remove service account access
-                      url: /task-iam-manage-roles.html
-                    - title: Remove federated group access
-                      url: /task-iam-manage-roles.html
-                - title: Member security
-                  entries:
-                    - title: Reset user passwords (local users only)
-                      url: /task-iam-manage-roles.html
-                    - title: Update service account credentials   
-                      url: /task-iam-manage-roles.html
-                    - title: Manage user MFA settings 
-                      url: /task-iam-manage-roles.html
+                - title: Manage member security
+                  url: /task-iam-user-security.html
             - title: Organization and project IDs
               url: /task-iam-rename-organization.html
         - title: Partner organizations
