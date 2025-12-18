@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-iam-manage-members-permissions.html
-keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management
+keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management, federated groups, SSO, access roles, add members, grant permissions
 summary: Manage your organization's members to provide permissions across different levels of your organization's resource hierarchy.
 ---
 
@@ -164,25 +164,6 @@ Note the following:
 link:reference-iam-predefined-roles.html[Learn about access roles].
 
 . To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
