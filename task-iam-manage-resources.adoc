@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-iam-manage-resources.html
 keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management
-summary: Manage the resource hierarchy of your organization by associating resources with specific projects and folders.
+summary: Within NetApp Console, you control which users have access to particular resources. A _resource_ is any entity that the Console is aware of, such as a storage resource, a Console agent, or a Backup and Recovery workload. 
 ---
 
-= Manage the resource hierarchy in your NetApp Console organization
+= Add resources to your NetApp Console organization
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,23 @@ summary: Manage the resource hierarchy of your organization by associating resou
 :imagesdir: ./media/
 
 [.lead]
-When you use associate a member with your organization, you provide permissions at the organization, folder, or project level. To ensure that those members have permissions to access the right resources, you'll need to manage the resource hierarchy of your organization by associating resources with specific projects and folders. A _resource_ is a storage system or Console agent that the Console already manages or is aware of.
+Within NetApp Console, you control which users have access to particular resources. A _resource_ is any entity that the Console is aware of, such as a storage resource, a Console agent, or a Backup and Recovery workload. 
+
+When you associate a resource with a folder or project, you make that resource available to users who have access to that folder or project. You can control which users have access to specific resources by adding resources to projects and folders within your Console organization. You can view and manage resources from the *Resources* page in the Console.
+
+== Console resource types
+There are several types of resources in your NetApp Console organization:
+
+.Storage resources
+Storage resources are the most common type of resource in your organization represent both on-premises and cloud storage systems. When you add a storage system to the Console, you can add it to a folder or project. However, until you add the storage system, the Console considers it an undiscovered resource, marks it as such and it doesn't display on the *Resources* page until you add it.
+
+
+.Console agents
+If you used a Console agent to discover storage systems, add the agent to the same folder or project as the discovered storage systems. This ensures users can perform functions enabled by the agent, such as data services or Console-native storage management.
+
+.Backup and Recovery workloads
+Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and Recovery workloads by associating the workloads with specific folders or projects. For example, assign a user access to a Backup and Recovery workload by associating it with a folder or project the user can access and granting the appropriate Backup and Recovery role.
+
 
 == View the resources in your organization
 
@@ -35,7 +51,6 @@ NOTE: The Resources page excludes Amazon FSx for NetApp ONTAP resources because 
 * *Platform*: Select one or more platforms, such as Amazon Web Services.
 * *Resources*: Select one or more resources, such as Cloud Volumes ONTAP.
 * *Organization, folder, or project*: Select the entire organization, a specific folder, or a specific project.
-+
 
 . Select *Search*.
 

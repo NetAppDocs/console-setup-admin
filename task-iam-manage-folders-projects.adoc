@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-iam-manage-folders-projects.html
 keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id
-summary: within the NetApp Console, use identity and access management enables you to represent a complete resource hierarchy using folders and projects.
+summary: Set up folders and projects to organize your storage infrastructure. Then, add resources to projects and give users access to what they need.
 ---
 
-= Organize your NetApp Console resources with folders and projects
+= Set up folders and projects in your NetApp Console organization
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,13 +13,29 @@ summary: within the NetApp Console, use identity and access management enables y
 :imagesdir: ./media/
 
 [.lead]
-Within the NetApp Console, you organize your NetApp resources using projects and folders. A _project_ represents a workspace in the Console that organization members access to manage _resources_ (for example, a Cloud Volumes ONTAP system). A _folder_ groups related projects together. After you organize your resources into folders and projects, you can grant granular access to resources by providing organization members with permissions to specific folders and projects.
+Set up folders and projects to organize your storage infrastructure. Then, add resources to projects and give users access to what they need.
+
+The Console automatically creates one project for you when you create a new organization. You can add additional folders and projects to represent your organization's resource hierarchy, which is typically based on your business structure. After you create folders and projects, you can associate resources with them and manage member access to those projects.
+
+
+
+Review how NetApp Console uses folders and projects to organize resources in your organization. link:concept-identity-and-access-management.html#resource-hierarchy[Learn about the resource hierarchy in   NetApp Console.]
+
+== Understand folders
+Folders help you organize related projects. You can create nested folders to represent different levels of your organization's structure. For example, you might create a top-level folder for each business unit and then create subfolders for different teams within that business unit. Projects are created within folders.
+
+Folders are useful to delineate administrative boundaries. You can assign Folder or project admin roles to members at the folder level, allowing them to manage all projects within that folder without granting them access to the entire organization. 
+
+You can also assign members roles for an entire folder which grants them access to all projects within that folder.
+
+== Understand projects
+Organization members use a _project_ as a workspace in the Console to manage _resources_ (for example, a Cloud Volumes ONTAP system). You associate resources with projects so that members with access to those projects can manage the resources.
+
+An organization can have one or many projects. A project can be directly under the organization or inside a folder.
 
 == Add a folder or project
-
-When you create your organization, it includes a single project. Add projects to manage resources and folders to group related projects together.
-
-You can create up to seven levels of folders and projects in your organization's resource structure. Create folders within folders to build a nested structure for your organization.
+Add projects to manage resources and folders to group related projects.
+A new organization includes one project. You can create up to seven levels of folders and projects in your organization's resource structure. Create nested folders to organize your resources as needed.
 
 
 .Steps
@@ -34,13 +50,13 @@ You can create up to seven levels of folders and projects in your organization's
 
 . Enter folder or project details:
 +
-* *Name and location*: Enter a name and choose a location in the hierarchy for the folder or project. Place a folder or project under the organization or inside another folder.
+* *Name and location*: Enter a name and choose a location for the folder or project. You can place folders or projects under the organization or inside another folder.
 
 * *Resources*: Select the resources that you want to associate with this folder or project.
+
 +
-You can select resources associated with the parent folder or project.
-+
-link:concept-identity-and-access-management.html#associate-resource-folder[Learn when to associate a resource with a folder].
+NOTE: Resources associated with a folder cannot be accessed until they are associated with a project. Typically, this approach allows the Org admin to organize resources at the folder level and then assign a Folder or project admin to associate those resources. For example, someone in the Org admin may know that a certain number of storage resources are allocated to a particular business unit (folder). However, the Folder or project admin for a specific project within that business unit is responsible for associating the resources with that project so that members with access to the project can use them.
+
 * *Access*: View the members who will have access to the folder or project based on the existing permissions already defined in your resource hierarchy.
 +
 Select *Add a member* to assign access and a role.
@@ -53,7 +69,7 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 
 == Rename a folder or project
 
-If needed, you can change the name of your folders and projects.
+Rename a folder or project if needed. Renaming a folder or project does not affect its associated resources or member access. 
 
 .Steps
 
@@ -64,10 +80,9 @@ If needed, you can change the name of your folders and projects.
 
 == Delete a folder or project
 
-Delete folders and projects you no longer need.
+Delete folders and projects you no longer need. This can happen when teams are restructured or projects are completed.
 
 Before you delete a folder or project, make sure it does not contain any resources. <<modify-resources,Learn how to remove resources>>.
-
 
 
 .Steps
@@ -111,7 +126,7 @@ In the table, the *Status* column identifies the resources that are associated w
 
 . Select the resources that you'd like to associate or disassociate.
 
-. Depending on the resources that you selected, select either *Associate with the project* or *Disassociate from the project*.
+. Based the resources that you selected, select either *Associate with the project* or *Disassociate from the project*.
 +
 image:screenshot-iam-associate-resources.png[A screenshot of the Edit project page that shows the Associate resources option that is available after you select resources that aren't currently associated.]
 

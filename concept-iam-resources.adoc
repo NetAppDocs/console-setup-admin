@@ -31,6 +31,5 @@ If you used a Console agent to discover storage systems, add the agent to the sa
 .Backup and Recovery workloads
 Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and Recovery workloads by associating the workloads with specific folders or projects. For example, assign a user access to a Backup and Recovery workload by associating it with a folder or project the user can access and granting the appropriate Backup and Recovery role.
 
-.Subscriptions
-When you subscribe to a NetApp data service, such as Cloud Volumes ONTAP, the subscription is considered a resource. You can associate the subscription with specific folders or projects to ensure that users have access to the subscription for billing purposes. Users should also be granted a Licenses and subscriptions role on the subscription to view and manage subscriptions.
+
 

@@ -13,14 +13,13 @@ summary: Identity and access management (IAM) in the NetApp Console enables you 
 :imagesdir: ./media/
 
 [.lead]
-Identity and access management (IAM) within the NetApp Console enables you to organize and control access to your NetApp resources. You can organize your resources according to your organization's hierarchy. For example, you can organize resources by geographical location, site, or business unit. You can then assign IAM roles to members at specific parts of the hierarchy, which prevents access to resources in other parts of the hierarchy.
- 
+Identity and access management (IAM) within the NetApp Console enables you to organize and control access to your NetApp resources. You can organize your resources according to your organization's hierarchy. 
 
-* link:concept-modes.html[Learn about Console deployment modes]
+For example, you can organize resources by geographical location, site, or business unit. You can then assign IAM roles to members at specific parts of the hierarchy, which prevents access to resources in other parts of the hierarchy.
 
 == How IAM works
 
-IAM lets you grant resource access by assigning users access roles to specific parts of the hierarchy. For example, a member can be assigned the Folder or project admin role for a project with five resources. 
+IAM lets you grant resource access by assigning users access roles to specific resources and applications in NetApp Console. For example, a user can be granted access to manage Cloud Volumes ONTAP systems in one project but not in another project. Another use can be assigned access to Backup and Recovery workloads but not be able to manage subscriptions and licenses.
 
 When using IAM, you manage the following components:
 
@@ -32,7 +31,7 @@ When using IAM, you manage the following components:
 * Roles and permissions
 * Console agents
 
-Resources are organized hierarchically:
+You organize resources hierarchically:
 
 * The organization is the top of the hierarchy.
 * Folders are children of the organization or of another folder.
@@ -50,31 +49,31 @@ An _organization_ is the top level of the Console IAM system and typically repre
 
 === Folders
 
-A _folder_ enables you to group related projects together and separate them from other projects in your organization. For example, a folder might represent a geographical location (EU or US East), a site (London or Toronto), or a business unit (engineering or marketing). 
+A _folder_ groups related projects in your organization, such as by location, site, or business unit.
 
-You can organize folders to contain projects, other folders, or both. They are optional.
+Folders can contain projects, other folders, or a combination of both. 
 
 
 === Projects
 
-A _project_ represents a workspace in the Console that organization members access from the *Systems* page in order to manage resources. For example, a project can include a Cloud Volumes ONTAP system, an on-premises ONTAP cluster, or an FSx for ONTAP file system.
+Organization members use a _project_ as a workspace in the Console to manage _resources_ (for example, a Cloud Volumes ONTAP system). A _folder_ groups related projects.
 
-An organization can have one or many projects. A project can reside directly underneath the organization or within a folder.
+An organization can have one or many projects. A project can be directly under the organization or inside a folder.
 
 === Resources
 
-A _resource_ is a system that you created or discovered in the Console.
+A _resource_ is a storage system, an agent, or a Backup and Recovery workload in the Console. You can associate resources with as many projects as needed. 
+For example, multiple teams may share the same Cloud Volumes ONTAP system for their workloads. You can associate that Cloud Volumes ONTAP system with each team's project so that members in each project can access it.
 
-When you create or discover a resource, the resource is associated with the currently selected project. That might be the only project that you want to associate this resource with. But you can choose to associate the resource with additional projects in your organization.
+When you create or discover a storage resource, it is associated with the currently selected project. You can also associate it with other projects in your organization.
 
 For example, you might associate a Cloud Volumes ONTAP system with one additional project or with all projects in your organization. How you associate a resource depends on your organization's needs.
 
-TIP: Agents can also be associated with more than one project. <<associate-agents,Learn more about using agents with IAM>>.
 
 [#associate-resource-folder]
 ==== When to associate a resource with a folder
 
-You also have the option to associate a resource with a folder, but this is optional and meets the needs of a specific use case.
+An Org admin can associate resources directly with folders as a way of delegating resource management to Folder or project admins. Although members can't access resources associated with a folder, the Folder or project admin can then associate those resources with the appropriate projects that reside in the folder. This approach provides separation of responsibility for resource management.
 
 An _Organization administrator_ can associate a resource with a folder so a _Folder or project administrator_ can link it to the appropriate projects in the folder.
 
@@ -86,7 +85,7 @@ The _Organization admin_ can associate a resource with the folder:
 
 image:diagram-iam-resource-association-folder-2.png["A diagram that shows a folder, a resource that is associated with the folder, and two projects that reside in the folder: project A and project B."]
 
-Associating a resource with a folder does not make it accessible to all projects; only the _folder or project admin_ can see it. The _Folder or project admin_ decides which projects can access it and associates the resource with the appropriate projects.
+ Only the _folder or project admin_ can see a resource associated with a folder. The Folder or project admin is responsible for associating the resource with a project and then deciding which users have access to the project.
 
 In this example, the admin associates the resource with Project A:
 
@@ -98,13 +97,12 @@ Members who have permissions for project A can now access the resource.
 
 Members of your organization are user accounts or service accounts. A service account is typically used by an application to complete specified tasks without human intervention.
 
-Each organization includes at least one user with the _Organization admin_ role (the Console automatically assigns this role to the user who creates the organization). You can add other members to the organization and assign different permissions across different levels of the resource hierarchy.
+Initially, each organization has at least one user with the _Organization admin_ role, which the Console assigns to the user who created the organization. Users with this permission are responsible for adding members to the organization, resources to projects, and assigning access to projects.
 
 === Roles and permissions
 
-You don't grant permissions directly to organization members. Instead, you grant each member a role. A role contains a set of permissions that enables a member to perform specific actions at a specific level of the resource hierarchy.
+You use roles to grant users permission to different projects within your organization or to allow them to use data services or other applications in NetApp Console.
 
-Granting roles at a hierarchy level restricts access to the resources and services a member needs.
 
 ==== Where you can assign roles in the hierarchy
 
@@ -186,19 +184,7 @@ The following examples describe how you might use IAM to manage your Console org
 * Modify member permissions because they moved departments or because they have additional responsibilities.
 * Remove a user who left the company.
 * Add folders or projects to your hierarchy because a new business unit has added NetApp storage.
-* Associate a resource with another project because that resource has capacity that another team can utilize.
+* Associate a resource with another project because that resource has space that another team can use.
 * View the resources that a member can access.
 * View the members and resources associated with a specific project.
 
-== Where to go next
-
-* link:task-iam-get-started.html[Get started with IAM in NetApp Console]
-* link:task-iam-manage-folders-projects.html[Organize your resources in NetApp Console with folders and projects]
-* link:task-iam-manage-members-permissions.html[Manage NetApp Console members and their permissions]
-* link:task-iam-manage-resources.html[Manage the resource hierarchy in your NetApp Console organization]
-* link:task-iam-associate-agents.html[Associate agents with folders and projects]
-* link:task-iam-switch-organizations-projects.html[Switch between NetApp Console projects and organizations]
-* link:task-iam-rename-organization.html[Rename your NetApp Console organization]
-* link:task-iam-audit-actions-timeline.html[Monitor or audit IAM activity]
-* link:reference-iam-predefined-roles.html[NetApp Console access roles]
-* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html[Learn about the API for NetApp Console IAM^]

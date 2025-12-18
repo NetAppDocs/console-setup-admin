@@ -5,7 +5,7 @@ keywords: user, service account, member, role, permissions, organization, projec
 summary: Manage your organization's members to provide permissions across different levels of your organization's resource hierarchy.
 ---
 
-= Grant users access to NetApp Console resources
+= Add users to a NetApp Console organization
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Manage your organization's members to provide permissions across differ
 :imagesdir: ./media/
 
 [.lead]
-Within the Console, you can add users and service accounts to your organization and assign them one or more roles across your resource hierarchy. A _role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at a specific level of the resource hierarchy. 
+Within the Console, you grant users access to projects or folders to allow them to a A _role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at a specific level of the resource hierarchy. 
 
 .Required access roles
 Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). Link:reference-iam-predefined-roles.html[Learn about access roles].
