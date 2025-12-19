@@ -13,25 +13,34 @@ summary: Set up folders and projects to organize your storage infrastructure. Th
 :imagesdir: ./media/
 
 [.lead]
-Set up folders and projects to organize your storage infrastructure. Then, add resources to projects and give users access to what they need.
+Set up folders and projects to organize your storage infrastructure.
 
-The Console automatically creates one project for you when you create a new organization. You can add additional folders and projects to represent your organization's resource hierarchy, which is typically based on your business structure. After you create folders and projects, you can associate resources with them and manage member access to those projects.
+The Console automatically creates one project for you when you create a new organization. Add folders and projects to match your business structure. After you create folders and projects, you can associate resources with them and manage member access to those projects.
+
+Review how NetApp Console uses folders and projects to organize resources in your organization. link:concept-identity-and-access-management.html#resource-hierarchy[Learn about the resource hierarchy in the NetApp Console.]
+
+== Using folders and projects to organize resources
+In NetApp Console, an organization contains folders and projects that help you organize your resources. Folders help you group related projects, and projects help you manage resources and member access.
+
+.Folders
+Folders help you organize related projects. You can create nested folders to represent different levels of your organization's structure. For example, you might create a top-level folder for each business unit and then create subfolders for different teams within that business unit. You then create projects within folders.
+
+NOTE: Folders are an organizational tool and not visible to members who do not have IAM permissions such as the Org admin, Folder or project admin, or Super admin roles. Members access projects, not folders.
+
+Org admins can delegate administrative responsibilities by creating folders. After creating a folder, an Org admin can assign Folder or project admin roles to members at the folder level. These members can then manage all projects within that folder without having access to the entire organization.
+
+Folders also enable you to manage member access more efficiently. You can assign roles to members at the folder level, and those roles are inherited by all child projects and folders. This inheritance model simplifies access management, especially in large organizations with many resources and members.
+
+Folders can have other folders or projects as children, but they cannot have resources directly associated with them. Resources must be associated with a project.
 
 
+.Projects
+You associate resources with projects so that members with access to those projects can manage the resources. A resource in your organization must be associated with a project to be managed in the Console and to assign user access.
 
-Review how NetApp Console uses folders and projects to organize resources in your organization. link:concept-identity-and-access-management.html#resource-hierarchy[Learn about the resource hierarchy in   NetApp Console.]
+An organization can have one or many projects. A project can be directly under the organization or inside a folder. If an agent is used to discover resources within a project, you must also associate the agent with that project. 
 
-== Understand folders
-Folders help you organize related projects. You can create nested folders to represent different levels of your organization's structure. For example, you might create a top-level folder for each business unit and then create subfolders for different teams within that business unit. Projects are created within folders.
+Users navigate between assigned projects on the *Systems* page to manage the resources associated with each project. 
 
-Folders are useful to delineate administrative boundaries. You can assign Folder or project admin roles to members at the folder level, allowing them to manage all projects within that folder without granting them access to the entire organization. 
-
-You can also assign members roles for an entire folder which grants them access to all projects within that folder.
-
-== Understand projects
-Organization members use a _project_ as a workspace in the Console to manage _resources_ (for example, a Cloud Volumes ONTAP system). You associate resources with projects so that members with access to those projects can manage the resources.
-
-An organization can have one or many projects. A project can be directly under the organization or inside a folder.
 
 == Add a folder or project
 Add projects to manage resources and folders to group related projects.
@@ -52,14 +61,13 @@ A new organization includes one project. You can create up to seven levels of fo
 +
 * *Name and location*: Enter a name and choose a location for the folder or project. You can place folders or projects under the organization or inside another folder.
 
-* *Resources*: Select the resources that you want to associate with this folder or project.
+
+* *Resources*: Select the resources that you want to associate with this folder or project. If you haven't added storage systems to the Console yet, you can do this step later.
 
 +
-NOTE: Resources associated with a folder cannot be accessed until they are associated with a project. Typically, this approach allows the Org admin to organize resources at the folder level and then assign a Folder or project admin to associate those resources. For example, someone in the Org admin may know that a certain number of storage resources are allocated to a particular business unit (folder). However, the Folder or project admin for a specific project within that business unit is responsible for associating the resources with that project so that members with access to the project can use them.
+NOTE: Members cannot access resources associated with a folder until you associate those resources with a project. Assign resources to folders as a temporary measure until you create the projects needed within the folder. This approach also allows the Org admin to delegate the folder resource allocation to someone with the Folder or project admin role. The Folder or project admin for a specific folder associates the resources with that projects within the folder.
 
-* *Access*: View the members who will have access to the folder or project based on the existing permissions already defined in your resource hierarchy.
-+
-Select *Add a member* to assign access and a role.
+* *Access*: Select *Add a member* to assign access and a role. You can add or remove members from the project or folder at any time.
 +
 link:reference-iam-predefined-roles.html[Learn about access roles].
 
@@ -80,7 +88,7 @@ Rename a folder or project if needed. Renaming a folder or project does not affe
 
 == Delete a folder or project
 
-Delete folders and projects you no longer need. This can happen when teams are restructured or projects are completed.
+Delete folders and projects you no longer need, such as after team restructuring or project completion.
 
 Before you delete a folder or project, make sure it does not contain any resources. <<modify-resources,Learn how to remove resources>>.
 
@@ -110,11 +118,7 @@ image:screenshot-iam-allocated-resources.png[A screenshot of the Edit project pa
 [#modify-resources]
 == Change the resources associated with a folder or project
 
-Members with permissions for a folder or project can access its associated resources.
-
-.Before you begin
-
-link:concept-identity-and-access-management.html#associate-resource-folder[Learn when to associate a resource with a folder].
+You can modify the resources associated with a folder or project as your organization's needs change.
 
 .Steps
 
@@ -133,6 +137,14 @@ image:screenshot-iam-associate-resources.png[A screenshot of the Edit project pa
 . Select *Apply*.
 
 == View members associated with a folder or project
+
+You can view the members associated with a folder or project from the *Organization* page.
+
+.Steps
+
+. From the *Organization* page, navigate to a project or folder in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Edit folder* or *Edit project*.
+
+. On the *Edit* page, select *Access* to view the list of members who have access to the selected folder or project.
 
 * Select *Access* to view the members who have access to the folder or project.
 +
