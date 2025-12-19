@@ -139,7 +139,9 @@ sidebar:
                   url: /task-iam-user-security.html
             - title: NetApp Console access roles
               entries:
-                - title: Learn about NetApp Console access roles
+                - title: Learn about NetApp Console role-based access control (RBAC)
+                  url: /concept-iam-rbac.html
+                - title: NetApp Console access roles
                   url: /reference-iam-predefined-roles.html
                 - title: Platform roles
                   url: /reference-iam-platform-roles.html
