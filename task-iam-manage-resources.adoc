@@ -5,7 +5,7 @@ keywords: resource, hierarchy, association, access, resource permissions, resour
 summary: Control user access to resources by adding them to projects and folders in your NetApp Console organization. Grant access to users at the project level. 
 ---
 
-= Add resources to your NetApp Console organization
+= Add resources to folders and projects in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
