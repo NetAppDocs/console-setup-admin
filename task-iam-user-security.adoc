@@ -21,9 +21,11 @@ Super admin, Org admin, or Folder or project admin (for folders and projects tha
 
 == Reset user passwords (local users only)
 
-If a user forgets their password, they can request a password reset. Only users can reset their own passwords. This option is not available for users in a federated organization.
+Org admins cannot reset user passwords for local users. However, they can instruct users to reset their own passwords.
 
 Instruct a user to reset their password from the Console login page by selecting *Forgot password?*.
+
+NOTE: This option is not available for users in a federated organization.
 
 [[manage-mfa]]
 == Manage a user's multi-factor authentication (MFA)
