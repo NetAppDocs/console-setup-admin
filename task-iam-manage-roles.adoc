@@ -5,7 +5,7 @@ keywords:  projects, access, resources, user roles, iam, identity and access man
 summary: Within the NetApp Console, you can assign roles to users based on what they need to do and where. 
 ---
 
-= Manage NetApp Console members access
+= Manage member access in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Within the NetApp Console, you can assign roles to users based on what 
 :imagesdir: ./media/
 
 [.lead]
-Manage the access of members in your Console organization. You can update their access permissions by assigning roles based on what they need to do and where. Remove members when they leave your organization.
+Manage member access in your Console organization. Assign roles to set permissions. Remove members when they leave.
 
 .Required access roles
 Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). Link:reference-iam-predefined-roles.html[Learn about access roles].
@@ -30,6 +30,34 @@ Note the following about granting access in NetApp Console:
 * All users must first sign up for the NetApp Console before they can be granted access to resources
 * You must explicitly assign a role to each user in the Console before they can access resources, even if they are members of a federated group that has been assigned a role.   
 * You can add service accounts directly from the Console and assign them roles.
+
+=== Role assignment best practices
+
+* **Start with minimal permissions:** Assign the least privileged role necessary for job functions
+* **Plan for growth:** Design role structure to accommodate new team members and organizational changes
+* **Consider role inheritance:** Remember that folder-level roles automatically apply to contained projects
+* **Review regularly:** Audit role assignments quarterly to ensure they align with current responsibilities
+
+[#role-inheritance]
+=== Using role inheritance
+
+When you assign a role, the role is inherited down the organization hierarchy:
+
+Organization::
+Granting a member an access role at the organization level gives them permissions to all folders, projects, and resources.
+
+
+Folders::
+When you grant an access role at the folder level, all folders, projects, and resources in the folder inherit that role.
++
+For example, if you assign a role at the folder level and that folder has three projects, the member will have permissions to those three projects and any associated resources.
+
+Projects::
+When you grant an access role at the project level, all resources associated with that project inherit that role.
+
+
+
+
 
 == View organization members
 
@@ -48,7 +76,7 @@ The *Members* table lists the members of your organization.
 . From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
 
 [#manage-permissions]
-=== View roles(s) assigned to a member
+== View roles(s) assigned to a member
 
 You can verify which roles they are currently assigned.
 
@@ -56,7 +84,7 @@ If you have the _Folder or project admin_ role, the page displays all members in
 
 include::_include/tasks-role.adoc[tag=view-role]
 
-=== View members associated with a folder or project
+== View members associated with a folder or project
 
 You can view members who have access to a specific folder or project.
 
@@ -80,7 +108,7 @@ After a user signs up for NetApp Console, you can add them to your organization 
 You can adjust a member's access by adding or removing roles as needed.
 
 
-=== Add an access role to a member
+==  Add an access role to a member
 
 You typically assign a role when adding a member to your organization, but you can update it at any time by removing or adding roles.
 
@@ -102,7 +130,7 @@ TIP: A member who is assigned the Organization admin role can't be assigned any 
 
 include::_include/tasks-role.adoc[tag=add-role]
 
-=== Change a member's assigned role
+== Change a member's assigned role
 
 Change a member's roles to update their access.
 

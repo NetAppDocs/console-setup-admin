@@ -13,13 +13,13 @@ summary: Manage your organization's members to provide permissions across differ
 :imagesdir: ./media/
 
 [.lead]
-Within the Console, you grant users access to projects or folders to allow them to a A _role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at a specific level of the resource hierarchy. 
+Within the Console, you grant users access to projects or folders to according to a role. A _role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at a specific level of the resource hierarchy. 
 
 .Required access roles
-Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). Link:reference-iam-predefined-roles.html[Learn about access roles].
+Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). link:reference-iam-predefined-roles.html[Learn about access roles].
 
 == Understand how access is granted in NetApp Console           
-NetApp Console uses a role-based access control (RBAC) model to manage user permissions. You can assign predefined roles to members individually or through federated groups. You can add and assign roles to service accounts. Each role defines what actions a member can perform at the associated resources.
+NetApp Console uses role-based access control (RBAC) to manage permissions. Assign roles to users individually or through federated groups. Each role defines allowed actions for specific resources.
 
 Note the following about granting access in NetApp Console:
 
@@ -32,20 +32,24 @@ Note the following about granting access in NetApp Console:
 [#add-members]
 == Add members to your organization
 
-NetApp Console supports three types of members: user accounts, service accounts, and federated groups. Applications use service accounts to do API tasks automatically. People use user accounts to log in and manage resources.
+NetApp Console supports three types of members: user accounts, service accounts, and federated groups. 
 
-Users must sign up for the NetApp Console before you can add them to an organization or assign them a role. You create service accounts directly from the Console.
+Users must sign up for NetApp Console before you can add them and assign a role, even if they are in a federated group. Create service accounts directly in the Console.
 
 All members must have at least one role explicitly assigned to them in order to access resources.
 
+When adding a member, choose the resource level (organization, folder, or project) and assign a role or roles with the needed permissions.
 
 
-=== Add a user account
+
+=== Add a user
 
 Users sign up for the NetApp Console, but an Org admin or Folder or project admin must add them to an organization, folder, or project so they can access resources.
 
 .Before you begin:
-The user must have already signed up for the NetApp Console. If they haven't signed up yet, direct them to link:task-sign-up-saas.html[sign up for the NetApp Console.^
+The user must have already signed up for the NetApp Console. If they haven't signed up yet, direct them to link:task-sign-up-saas.html[sign up for the NetApp Console.]
+
+NOTE: If you are adding a user that is part of a federated group, ensure that the user has already signed up for the NetApp Console and been explicitly assigned a role in the Console. NetApp recommends assigning minimum access role such as Organization viewer.
 
 .Steps
 
@@ -62,8 +66,8 @@ The user must have already signed up for the NetApp Console. If they haven't sig
 + 
 Note the following:
 
-** You can only select from the folders and projects for which you have permissions.
-** Selecting an organization or folder grants the member permissions to all its contents.
+** You can select only the folders and projects for which you have permissions.
+** When you select an organization or folder, you grant the member permissions to all its contents.
 ** You can only assign the *Organization admin* role at the organization level.
 
 . *Select a category* then select a *Role* that provides the member with permissions for the resources that are associated with the organization, folder, or project that you selected.
@@ -81,7 +85,7 @@ The Console emails instructions to the user.
 
 [[service-account]]
 === Add a service account 
-Service accounts let you do tasks automatically and connect with Console APIs safely. Choose client ID and secret for simple setups, or JWT (JSON Web Token) for stronger security in automated or cloud-native environments. Pick the method that fits your security needs.
+Service accounts allow you to automate tasks and securely connect with Console APIs. Choose a client ID and secret for simple setups, or JWT (JSON Web Token) for stronger security in automated or cloud-native environments. Select the method that meets your security requirements.
 
 .Before you begin:
 For JWT authentication, prepare your public key or certificate.
@@ -100,7 +104,7 @@ For JWT authentication, prepare your public key or certificate.
 . Enter a name for the service account.
 
 
-. If you want to use JWT authentication, select *Use private key JWT authentication* and upload your public RSA key or certificate. Skip this step if you want to use a client ID and secret instead.
+. To use JWT authentication, select *Use private key JWT authentication* and upload your public RSA key or certificate. Skip if using client ID and secret.
 
 +  
 Your X.509 certificate. It must be in  PEM, CRT, or CER format.
@@ -125,10 +129,11 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 . To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
 
 
-. If you didn't choose to use JWT authentication, download or copy the client ID and client secret. +
-The Console shows the client secret only once. Copy it securely; you can recreate it later if needed.
+. If you didn't choose to use JWT authentication, download or copy the client ID and client secret. 
++
+The Console shows the client secret only once. Copy it securely; you can recreate it later if you lose it.
 
-. If you chose JWT authentication, download or copy the client ID and JWT audience. This information is shown only once and cannot be retrieved later.
+. If you chose JWT authentication, download or copy the client ID and JWT audience. The Console displays this information only once and does not allow you to retrieve it later.
 
 . Select *Close*.
 
@@ -138,10 +143,10 @@ You can add a federated group from your identity provider (IdP) to your organiza
 
 .Before you begin:
 Ensure the following before adding a federated group:
-* You must have already set up federation between your IdP and the Console. link:concept-federation.html[Learn how to set up federation.^]
+* You must have already set up federation between your IdP and the Console. link:concept-federation.html[Learn how to set up federation.]
 * The group must already exist in your IdP.
 * You must know the exact name of the group in your IdP.
-* Users belonging to the group must have already signed up for the NetApp Console and been explicitly assigned a role in the Console.
+* Users belonging to the group must have already signed up for the NetApp Console and been explicitly assigned a role in the Console. 
 
 .Steps
 . Select *Administration > Identity and access*.
