@@ -167,48 +167,46 @@ sidebar:
                   url: /task-iam-rename-organization.html
         - title: Security and compliance
           entries:
-          - title: Identity federation
-            entries:
-            - title: Learn about identity federation
-              url: /concept-federation.html
-            - title: Domain verification
+            - title: Identity federation
               entries:
-                - title: Verify your domain 
-                  url: /task-federation-verify-domain.html
-            - title: Configure federations
-              entries:
-                - title: Federate with an Active Directory Federation Services (AD FS) provider
-                  url: /task-federation-adfs.html
-                - title: Federate with Microsoft Entra ID provider
-                  url: /task-federation-entra-id.html
-                - title: Federate with PingFederate
-                  url: /task-federation-ping.html
-                - title: Federate with a SAML identity provider
-                  url: /task-federation-saml.html
-            - title: Manage federations
-              entries:
-                - title: Manage your federated connections
-                  url: /task-federation-manage.html
-                - title: Import your existing federated connection
-                  url: /task-federation-import.html
-            - title: Group-based access control
-              url: /task-federation-federated-groups.html
-          - title: Enable read-only mode for an organization
-            url: /task-enable-read-only-mode.html
-          - title: SOC-2 compliance for NetApp Console
-            url: /reference-compliance.html
+                - title: Learn about identity federation
+                  url: /concept-federation.html
+                - title: Domain verification
+                  entries:
+                    - title: Verify your domain 
+                      url: /task-federation-verify-domain.html
+                - title: Configure federations
+                  entries:
+                    - title: Federate with an Active Directory Federation Services (AD FS) provider
+                      url: /task-federation-adfs.html
+                    - title: Federate with Microsoft Entra ID provider
+                      url: /task-federation-entra-id.html
+                    - title: Federate with PingFederate
+                      url: /task-federation-ping.html
+                    - title: Federate with a SAML identity provider
+                      url: /task-federation-saml.html
+                - title: Manage federations
+                  entries:
+                    - title: Manage your federated connections
+                      url: /task-federation-manage.html
+                    - title: Import your existing federated connection
+                      url: /task-federation-import.html
+            - title: Enable read-only mode for an organization
+              url: /task-enable-read-only-mode.html
+            - title: SOC-2 compliance for NetApp Console
+              url: /reference-compliance.html
         - title: Manage organization partnerships
           entries:
-          - title: Learn about organization partnerships
-            url: /concept-org-partnerships.html
-          - title: Create an organization partnership
-            url: /task-partnerships-create.html
-          - title: Manage members for a partnership organization
-            url: /task-partnerships-assign-users.html
-          - title: Manage resource access for a partnership organization
-            url: /task-partnerships-resource-access.html
-          - title: Work in a partner organization
-            url: /task-partnerships-work.html
+            - title: Learn about organization partnerships
+              url: /concept-org-partnerships.html
+            - title: Create an organization partnership
+              url: /task-partnerships-create.html
+            - title: Manage members for a partnership organization
+              url: /task-partnerships-assign-users.html
+            - title: Manage resource access for a partnership organization
+              url: /task-partnerships-resource-access.html
+            - title: Work in organization partnership
+              url: /task-partnerships-work.html
         - title: Console agents
           entries:
             - title: Maintain the VM and OS
