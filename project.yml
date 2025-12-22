@@ -201,16 +201,16 @@ sidebar:
           url: https://www.netapp.com/responsibility/trust-center/compliance/soc-2/
         - title: Manage organization partnerships
           entries:
-            - title: Learn about organization partnerships
-              url: /concept-org-partnerships.html
-            - title: Create an organization partnership
-              url: /task-partnerships-create.html
-            - title: Manage members for a partnership organization
-              url: /task-partnerships-assign-users.html
-            - title: Manage resource access for a partnership organization
-              url: /task-partnerships-resource-access.html
-            - title: Work in a partner organization
-              url: /task-partnerships-work.html
+          - title: Learn about organization partnerships
+            url: /concept-org-partnerships.html
+          - title: Create an organization partnership
+            url: /task-partnerships-create.html
+          - title: Manage members for a partnership organization
+            url: /task-partnerships-assign-users.html
+          - title: Manage resource access for a partnership organization
+            url: /task-partnerships-resource-access.html
+          - title: Work in a partner organization
+            url: /task-partnerships-work.html
         - title: Console agents
           entries:
             - title: Maintain the VM and OS
