@@ -3,7 +3,7 @@ settings:
   internal:
     pdf_enabled: true
   prod:
-    pdf_enabled: true
+    pdf_enabled: false
     harmony_enabled: true
   release_notes_autogen:
     release_notes_repo: console-relnotes
