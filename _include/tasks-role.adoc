@@ -30,7 +30,7 @@ If you select the organization or a folder, the member will have permissions to 
 
 .. To change a member's role, select *Change* next to the role you want to change. You can only change a role to a role within the same role category. For example, you can change from one data service role to another. Confirm the change.
 
-.. To unassign a member's role, select image:icon-delete.png["An icon that resembles a trash can"] next to the role to unassign the member the respective role. You'll be asked to confirm the removal.
+.. To unassign a member's role, select image:icon-delete.png["An icon that resembles a trash can"] next to the role to remove the respective role from the member.. You'll be asked to confirm the removal.
 
 //end::remove-role[]
 

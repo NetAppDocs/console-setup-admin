@@ -1,7 +1,10 @@
 
 . Select *Next*. 
 
-. . Select *Test connection* to test your connection. You are directed to a login page for your IdP server. Log in with your IdP credentials. After you log in, go back to the Console to enable the connection.
+. Select *Test connection* to test your connection. You are directed to a login page for your IdP server. Log in with your IdP credentials. After you log in, go back to the Console to enable the connection.
+
++
+NOTE: When using the Console in restricted mode, copy the URL to either an incognito browser window or a separate browser to log in to your IdP.
 
 . In the Console, select *Next* to review the summary page.
 

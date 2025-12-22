@@ -1,0 +1,53 @@
+//tag::intro-steps[]
+.Steps
+
+. Select *Administration > Identity and access*. 
+. Select *Federation* to view the *Federations* page.
+
+. Select *Configure new federation*.
+
+//end::intro-steps[]
+
+
+
+//tag::federation-test-steps[]
+. Select *Next*. 
+
+. Select *Test connection* to test your connection. You are directed to a login page for your IdP server. Log in with your IdP credentials. After you log in, go back to the Console to enable the connection.
+
++
+NOTE: When using the Console in restricted mode, copy the URL to either an incognito browser window or a separate browser to log in to your IdP.
+
+. In the Console, select *Next* to review the summary page.
+
+
+. Set up notifications. 
++
+Choose between seven days or 30 days. The system emails expiry notifications and shows them in the Console to any user with the following roles: Super admin, Org admin, Federation admin, and Federation viewer.
+
+. Review the federation details and then select *Enable federation*.
+
+. Select *Finish* to complete the process.
+
+After you enable the federation, users log in to the NetApp Console using their corporate credentials.
+//end::federation-test-steps[]
+
+
+
+//tag::federation-verify-domain[]
+. Enter your domain details:
+.. Choose whether you want to use a verified domain or your email domain. The email domain is the domain associated with the account you are logged in with.
+.. Enter the name of the federation you are configuring.
+.. If you choose a verified domain, select the domain from the list.    
+
+. Select *Next*.
+//end::federation-verify-domain[]
+
+
+
+//tag::federation--prereq[]
+.Before you begin
+* An IdP account with administrative privileges is required. Coordinate with your IdP administrator to complete the steps.
+* Identify the domain you want to use for federation. You can use your email domain or a different domain that you own. If you want to use a domain other than your email domain, you must first verify the domain in the Console. You can do this by following the steps in the link:task-federation-verify-domain.html[Verify your domain in NetApp Console] topic.
+//end::federation--prereq[]
+

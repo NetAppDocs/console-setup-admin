@@ -98,7 +98,7 @@ sidebar:
         - title: Get started with BlueXP legacy interface (private mode)
           entries:
             - title: Getting started with BlueXP legacy interface (private mode)
-              url: /task-quick-start-private-mode.html   
+              url: /task-quick-start-private-mode.html
     - title: Use NetApp Console
       entries:
         - title: Log in to NetApp Console
@@ -107,6 +107,8 @@ sidebar:
           url: /task-dashboard.html
         - title: Manage your NetApp Console user settings
           url: /task-user-settings.html
+        - title: Switch between organizations, projects, and Console agents
+          url: /task-iam-switch-organizations-projects.html
     - title: Administer NetApp Console
       entries:
         - title: Identity and access management
@@ -115,38 +117,44 @@ sidebar:
               url: /concept-identity-and-access-management.html
             - title: Get started with identity and access
               url: /task-iam-get-started.html
-            - title: Organize your resources with folders and projects
-              url: /task-iam-manage-folders-projects.html
-            - title: Manage members and service accounts
-              url: /task-iam-manage-members-permissions.html
-            - title: Use roles to control member access to resources
-              url: /task-iam-manage-roles.html
-            - title: Manage your resource hierarchy
-              url: /task-iam-manage-resources.html
-            - title: Associate a Console agent with other folders and projects
-              url: /task-iam-associate-agents.html
-            - title: Switch between organizations, projects, and Console agents
-              url: /task-iam-switch-organizations-projects.html
-            - title: Organization and project IDs
-              url: /task-iam-rename-organization.html
-            - title: Monitor or audit IAM activity
-              url: /task-iam-audit-actions-timeline.html
+            - title: Set up your Console organization
+              entries:
+                - title: Create folders and projects
+                  url: /task-iam-manage-folders-projects.html
+                - title: Associate resources to folders and projects
+                  url: /task-iam-manage-resources.html
+                - title: Associate a Console agent with other folders and projects
+                  url: /task-iam-associate-agents.html
+            - title: Add users to your Console organization
+              entries:
+                - title: Add users, service accounts, and federated groups
+                  url: /task-iam-manage-members-permissions.html
+            - title: Manage user access and security
+              entries:
+                - title: Understand role-based access control (RBAC)
+                  url: /concept-iam-rbac.html
+                - title: Manage user access
+                  url: /task-iam-manage-roles.html
+                - title: Manage member security
+                  url: /task-iam-user-security.html
             - title: NetApp Console access roles
               entries:
-                - title: Learn about NetApp Console access roles
+                - title: Learn about NetApp Console role-based access control (RBAC)
+                  url: /concept-iam-rbac.html
+                - title: NetApp Console access roles
                   url: /reference-iam-predefined-roles.html
                 - title: Platform roles
                   url: /reference-iam-platform-roles.html
                 - title: Application roles
                   entries:
-                   - title: Google Cloud NetApp Volumes roles 
-                     url: /reference-iam-gcnv-roles.html
-                   - title: Keystone roles 
-                     url: /reference-iam-keystone-roles.html
-                   - title: Operations support analyst
-                     url: /reference-iam-analyst-roles.html
-                   - title: Storage roles
-                     url: /reference-iam-storage-roles.html
+                    - title: Google Cloud NetApp Volumes roles 
+                      url: /reference-iam-gcnv-roles.html
+                    - title: Keystone roles 
+                      url: /reference-iam-keystone-roles.html
+                    - title: Operations support analyst
+                      url: /reference-iam-analyst-roles.html
+                - title: Storage roles
+                  url: /reference-iam-storage-roles.html
                 - title: Data services roles
                   entries:
                     - title: Backup and Recovery roles
@@ -155,6 +163,12 @@ sidebar:
                       url: /reference-iam-disaster-rec-roles.html
                     - title: Ransomware Resilience roles
                       url: /reference-iam-ransomware-roles.html
+            - title: Identity and access API
+              entries:
+                - title: Organization and project IDs
+                  url: /task-iam-rename-organization.html
+                - title: Manage identity and access with the API
+                  url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
         - title: Partner organizations
           entries:
             - title: Learn about organization partnerships
@@ -167,7 +181,6 @@ sidebar:
               url: /task-partnerships-resource-access.html
             - title: Work in a partner organization
               url: /task-partnerships-work.html
-       
         - title: Identity federation
           entries:
             - title: Learn about identity federation
@@ -190,6 +203,8 @@ sidebar:
               url: /task-federation-manage.html
             - title: Import your existing federated connection
               url: /task-federation-import.html
+            - title: Group-based access control
+              url: /task-federation-federated-groups.html
         - title: Console agents
           entries:
             - title: Maintain the VM and OS
@@ -238,12 +253,14 @@ sidebar:
               url: /task-manage-user-credentials.html
         - title: Monitor NetApp Console operations
           url: /task-monitor-cm-operations.html
+        - title: Monitor or audit IAM activity
+          url: /task-iam-audit-actions-timeline.html
     - title: Reference
       entries:
         - title: Agent maintenance console
           entries:
             - title: Configuration checks
-              url: /reference-agent-maint-console.html
+              url: /reference-agent-maint-console-config-checker.html
             - title: Transparent proxy 
               url: /reference-agent-maint-console-proxy.html
         - title: Permissions
