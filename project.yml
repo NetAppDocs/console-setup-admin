@@ -186,9 +186,11 @@ sidebar:
                 - title: Federate with a SAML identity provider
                   url: /task-federation-saml.html
             - title: Manage federations
-              url: /task-federation-manage.html
-            - title: Import your existing federated connection
-              url: /task-federation-import.html
+              entries:
+              - title: Manage your federated connections
+                url: /task-federation-manage.html
+              - title: Import your existing federated connection
+                url: /task-federation-import.html
             - title: Group-based access control
               url: /task-federation-federated-groups.html
         - title: Enable read-only mode for an organization
