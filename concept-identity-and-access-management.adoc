@@ -30,6 +30,9 @@ image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the res
 Within NetApp Console, identity and access management (IAM) consists of three main components: organizational components, resource components, and user access components.
 
 === Organizational components
+
+Organizational components define the structure of your NetApp Console IAM system. The three main organizational components are organizations, projects, and folders.
+
 Organization::
 
 An _organization_ is the top level of the Console IAM system and typically represents your company. Your organization consists of folders, projects, members, roles, and resources. Agents are associated with specific projects in the organization.
