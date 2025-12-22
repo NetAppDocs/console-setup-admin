@@ -33,12 +33,12 @@ Within NetApp Console, identity and access management (IAM) consists of three ma
 
 Organizational components define the structure of your NetApp Console IAM system. The three main organizational components are organizations, projects, and folders.
 
-Organization::
+.Organization
 
 An _organization_ is the top level of the Console IAM system and typically represents your company. Your organization consists of folders, projects, members, roles, and resources. Agents are associated with specific projects in the organization.
 
 
-Projects::
+.Projects
 
 A resource is usually a storage system added to NetApp Console and assigned to a project; other resources include Backup and Recovery workloads. You must assign resources to projects before anyone can access them.
 
@@ -46,7 +46,7 @@ For example, you can associate a Cloud Volumes ONTAP system with a single projec
 
 
 
-Folders::
+.Folders
 
 Group related projects with folders to organize them by location, site, or business unit. You can't associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
 
@@ -64,7 +64,7 @@ For example, you might associate a Cloud Volumes ONTAP system with one project o
 link:task-iam-manage-resources.html[Learn how to manage resources in your organization.]
 
 
-Storage systems and Keystone subscriptions::
+.Storage systems and Keystone subscriptions
 Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. You must add a storage system to a project before anyone can access it.
 
 Storage systems are automatically associated with the project where they are added, but you can also associate them with other projects or folders from the *Resources* page.
@@ -76,7 +76,7 @@ link:task-iam-manage-resources.html[Learn how to manage storage systems in your 
 
 
 [#associate-agents]
-Console agents::
+.Console agents
 
 Organization admins create Console agents to manage storage systems and enable NetApp data services. Agents are initially tied to the project where they are created, but admins can add them to other projects or folders from the Agents page. 
 
@@ -87,7 +87,7 @@ link:task-iam-associate-agents.html[Learn how to associate agents with folders a
 
 === User access components
 
-Members::
+.Members
 
 Members of your organization are user accounts or service accounts. A service account is typically used by an application to complete specified tasks without human intervention.
 
@@ -97,7 +97,7 @@ link:task-iam-manage-members-permissions.html#add-members[Learn how to add membe
 
 
 
-Access roles::
+.Access roles
 
 The Console provides access roles that you can assign to the members of your organization.
 
@@ -111,6 +111,8 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 
 
 == IAM strategy examples
+
+You can implement different IAM strategies in NetApp Console depending on your organization's size, structure, and access requirements. The following examples illustrate various approaches to organizing your IAM system.
 
 === Small organization strategy
 
