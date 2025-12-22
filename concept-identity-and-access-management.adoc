@@ -48,7 +48,7 @@ For example, you can associate a Cloud Volumes ONTAP system with a single projec
 
 Folders::
 
-Group related projects with folders to organize them by location, site, or business unit. You can’t associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
+Group related projects with folders to organize them by location, site, or business unit. You can't associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
 
 
 === Resource components
@@ -103,7 +103,7 @@ The Console provides access roles that you can assign to the members of your org
 
 When you associate a member with a role, you can grant that role for the entire organization, a specific folder, or a specific project. The role that you select gives a member permissions to the resources in the selected part of the hierarchy.
 
-NetApp Console provides granular roles that adhere to the principles of "least privilege" which means access roles are designed to give users access to only that that they need
+NetApp Console provides granular roles that adhere to the principles of "least privilege" which means access roles are designed to give users access to only that they need
 
 This means users may have multiple roles assigned to them as their duties expand.
 
