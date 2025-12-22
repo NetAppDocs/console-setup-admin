@@ -24,13 +24,13 @@ You can assign the Operational support analyst role to users to provide them acc
 | Task
 | Can perform
 
-| Manage own user credentials from Settings > Credentials  | Yes 
+| Manage own user credentials from Settings > Credentials | Yes 
 
 | View discovered resources | Yes
 
-| Register for support and submit cases through the Console | Yes |	Yes  
+| Register for support and submit cases through the Console |	Yes  
 
-| View the Audit page and notifications | Yes
+| View the Audit page and notifications |Yes
 | View, download, and configure alerts | Yes
 
 
