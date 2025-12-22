@@ -13,7 +13,7 @@ summary: Manage your organization's members to provide permissions across differ
 :imagesdir: ./media/
 
 [.lead]
-Within the Console, you grant users access to projects or folders to according to a role. A _role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at a specific level of the resource hierarchy. 
+Within the Console, you grant users access to projects or folders to according to a access role. A _access role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at the assigned level of the resource hierarchy. 
 
 .Required access roles
 Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). link:reference-iam-predefined-roles.html[Learn about access roles].

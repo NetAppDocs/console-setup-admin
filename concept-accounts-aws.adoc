@@ -21,7 +21,7 @@ When you deploy an Console agent from the Console, you need to provide the ARN o
 
 When the Console launches the Console agent in AWS, it creates an IAM role and a profile for the agent. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the Agent uses the permissions].
 
-image:diagram_permissions_initial_aws.png["A conceptual image that shows the Console deploying the Console agent in an AWS account. An IAM policy is assigned to an IAM role, which is attached to the Console."]
+image:diagram_permissions_initial_aws.png[A conceptual image that shows the Console deploying the Console agent in an AWS account. An IAM policy is assigned to an IAM role, which is attached to the Console.]
 
 If you add a new Cloud Volumes ONTAP system, the Console selects these AWS credentials by default:
 

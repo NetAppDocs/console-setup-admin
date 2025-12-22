@@ -18,44 +18,24 @@ Manage member access in your Console organization. Assign roles to set permissio
 .Required access roles
 Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). Link:reference-iam-predefined-roles.html[Learn about access roles].
 
-You can assign access roles on a project or folder basis. For example, assign the Ransomware Resilience admin role to a user for one project and the SnapCenter admin role for another. To give a user the Ransomware Resilience admin role for all projects in a folder, assign the role at the folder level.
+You can assign access roles on a project or folder basis. For example, assign a role to a user for two specific projects or assign the role at the folder level to give a user the Ransomware Resilience admin role for all projects in a folder
 
-NOTE: Set up your resource hierarchy before assigning users access. link:task-iam-manage-folders-projects.html[Learn how to organize your resources with folders and projects.]
+NOTE: Add your folders and projects before assigning users access. link:task-iam-manage-folders-projects.html[Learn how to folders and projects.]
 
 == Understand how access is granted in NetApp Console           
-NetApp Console uses a role-based access control (RBAC) model to manage user permissions. You can assign predefined roles to members individually or through federated groups. You can add and assign roles to service accounts. Each role defines what actions a member can perform at the associated resources.
+NetApp Console uses a role-based access control (RBAC) model to manage user permissions. You can assign predefined roles to members individually or through federated groups. You can add and assign roles to service accounts, as well as federated groups. Each role defines what actions a member can perform at the associated resources.
 
 Note the following about granting access in NetApp Console:
 
-* All users must first sign up for the NetApp Console before they can be granted access to resources
+* All users must first sign up for the NetApp Console before they can be granted access to resources.
 * You must explicitly assign a role to each user in the Console before they can access resources, even if they are members of a federated group that has been assigned a role.   
 * You can add service accounts directly from the Console and assign them roles.
 
-=== Role assignment best practices
 
-* **Start with minimal permissions:** Assign the least privileged role necessary for job functions
-* **Plan for growth:** Design role structure to accommodate new team members and organizational changes
-* **Consider role inheritance:** Remember that folder-level roles automatically apply to contained projects
-* **Review regularly:** Audit role assignments quarterly to ensure they align with current responsibilities
 
 [#role-inheritance]
 === Using role inheritance
-
-When you assign a role, the role is inherited down the organization hierarchy:
-
-Organization::
-Granting a member an access role at the organization level gives them permissions to all folders, projects, and resources.
-
-
-Folders::
-When you grant an access role at the folder level, all folders, projects, and resources in the folder inherit that role.
-+
-For example, if you assign a role at the folder level and that folder has three projects, the member will have permissions to those three projects and any associated resources.
-
-Projects::
-When you grant an access role at the project level, all resources associated with that project inherit that role.
-
-
+When you assign a role at the organization, folder, or project level in NetApp Console, that role is automatically inherited by all resources within the selected scope. For example, folder-level roles apply to all contained projects, while project-level roles apply to all resources within that project.
 
 
 
@@ -114,11 +94,11 @@ You typically assign a role when adding a member to your organization, but you c
 
 You can assign a user an access role for your organization, folder, or project. 
 
-Members can have multiple roles within the same project and in different projects. For example, smaller organizations may assign all available access roles to the same user, while larger organizations may have users do more specialized tasks. Alternatively, you could also assign one user the Ransomware Resilience admin role for an organization. In that example, the user would be able to perform Ransomware Resilience tasks on all projects within your organization. 
+Members can have multiple roles within the same project and in different projects. For example, smaller organizations may assign all available access roles to the same user, while larger organizations may have users do more specialized tasks. Alternatively, you could also assign one user the Ransomware Resilience admin role at the organization level. In that example, the user would be able to perform Ransomware Resilience tasks on all projects within your organization. 
 
 Your access role strategy should align with the way you have organized your NetApp resources. 
 
-TIP: A member who is assigned the Organization admin role can't be assigned any additional roles. They already have permissions across the entire organization. A member with the Folder or project role can't be assigned any other roles within the folder or project where they have that role already. Both of these roles provide access to all services within the scope that they are assigned.
+TIP: A member who is assigned the Organization admin role can't be assigned any additional roles. They already have permissions across the entire organization. A member with the Folder or project admin role can't be assigned any other roles within the folder or project where they have that role already. Both of these roles provide access to all services within the scope that they are assigned.
 
 .Steps
 
