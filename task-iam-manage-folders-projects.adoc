@@ -157,7 +157,7 @@ In the table, the *Status* column identifies the resources that are associated w
 
 . Select the resources that you'd like to associate or disassociate.
 
-. Based the resources that you selected, select either *Associate with the project* or *Disassociate from the project*.
+. Based on the resources that you selected, select either *Associate with the project* or *Disassociate from the project*.
 +
 image:screenshot-iam-associate-resources.png[A screenshot of the Edit project page that shows the Associate resources option that is available after you select resources that aren't currently associated.]
 

@@ -13,7 +13,6 @@ summary: You can assign the Operational support analyst role to users to provide
 :imagesdir: ./media/
 
 [.lead]
-
 You can assign the Operational support analyst role to users to provide them access to alerts and monitoring. Users with this role can also open support cases.
 
 == Operational support analyst 
@@ -28,7 +27,7 @@ You can assign the Operational support analyst role to users to provide them acc
 
 | View discovered resources | Yes
 
-| Register for support and submit cases through the Console |	Yes  
+| Register for support and submit cases through the Console |Yes  
 
 | View the Audit page and notifications |Yes
 | View, download, and configure alerts | Yes

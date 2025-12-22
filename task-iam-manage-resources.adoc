@@ -23,7 +23,7 @@ You can view and manage resources from the *Resources* page in the Console.
 You can associate several types of resources to projects in your NetApp Console organization:
 
 Storage resources::
-Storage resources are the most common type of resource in your organization represent both on-premises and cloud storage systems. When you add a storage system to the Console, you can add it to a folder or project. Until then, the Console marks it as undiscovered and does not display it on the *Resources* page.
+Storage resources are the most common type of resource in your organization and represent both on-premises and cloud storage systems. When you add a storage system to the Console, you can add it to a folder or project. Until then, the Console marks it as undiscovered and does not display it on the *Resources* page.
 
 Console agents::
 If you used a Console agent to discover storage systems, add the agent to the same folder or project. This allows users to perform agent-enabled functions, such as data services or Console-native storage management. You can add agents to folders or projects from the *Agents* page in the Console. link:task-iam-associate-agents.html[Learn how to associate a Console agent with a folder or project].
