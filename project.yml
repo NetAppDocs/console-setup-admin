@@ -196,7 +196,7 @@ sidebar:
         - title: Enable read-only mode for an organization
           url: /task-enable-read-only-mode.html
         - title: SOC-2 compliance for NetApp Console
-          url: https://www.netapp.com/responsibility/trust-center/compliance/soc-2/
+          url: /reference-compliance.html
         - title: Manage organization partnerships
           entries:
           - title: Learn about organization partnerships
