@@ -21,7 +21,7 @@ Within the Console, each user has a profile that contains information about the 
 
 == Change your display name
 
-You can change your Console display name that is used to identify you and is visible to other users. Your display name is not the same as your username or email address, which cannot be changed.
+You can change your Console display name, which identifies you to other users. You cannot change your username or email address.
 
 .Steps
 
@@ -31,12 +31,27 @@ You can change your Console display name that is used to identify you and is vis
 
 . Enter your new display name in the *Name* field.
 
+== Elevate your role in read-only mode
+In read-only mode, if you have an admin role, you must elevate permissions to make changes. This ensures changes are intentional and authorized.
+
+After elevating your role, you can make changes in the Console until your current session expires. 
+
+When you're finished, either log out of the Console or move the slider back to return to read-only mode. The system removes your elevated permissions when your session expires.
+
+.Steps
+. Select the profile icon in the upper right corner of the Console to view the User settings panel.
+
+. For *Read-only mode status*, move the slider to the *Elevated* position and confirm the changes.
++
+image:screenshot-user-elevated.png["A screenshot that shows the Read-only mode slider in the Elevated position."]
+
+
 [[task-user-mfa]]
 == Configure multi-factor authentication
 
 Configure multi-factor authentication (MFA) to improve security by requiring a second verification method.
 
-Users who use single sign-on with an external identity provider or the NetApp Support Site cannot enable MFA. If either of these are true for you, you won't see the option to enable MFA in your profile settings.
+Users who use single sign-on with an external identity provider or the NetApp Support Site cannot enable MFA. If either of these are true for you, you don't see the option to enable MFA in your profile settings.
 
 Do not enable MFA if your user account is used for API access. Multi-factor authentication stops API access when enabled for a user account. Use service accounts for all API access.
 
@@ -66,7 +81,7 @@ You can only use recovery codes once. If you use or lose yours, create a new one
 . Copy the generated recovery code and save it in a secure location.
 
 == Delete your MFA configuration
-To stop using multi-factor authentication (MFA) for your login, delete your MFA configuration. This removes the need to enter a one-time code from your authentication app when you log in.
+When you're finished, either log out of the Console or move the slider back to return to read-only mode. The system removes your elevated permissions when your session expires.
 
 NOTE: If you are unable to access your authentication app or recovery code, you will need to contact your Organization administrator to reset your MFA configuration.
 
