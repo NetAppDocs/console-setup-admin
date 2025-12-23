@@ -9,7 +9,7 @@ settings:
     release_notes_repo: console-relnotes
   rss_page: "whats-new.html"
 
-sidebar:
+idebar:
   entries:
     - title: NetApp Console administration 
       url: /index.html
@@ -246,7 +246,7 @@ sidebar:
             - title: Enable read-only mode for an organization
               url: /task-enable-read-only-mode.html
             - title: SOC-2 compliance for NetApp Console
-              url: /reference-compliance.html
+              url: https://www.netapp.com/company/trust-center/compliance/soc-2/
         - title: Manage organization partnerships
           entries:
             - title: Learn about organization partnerships
