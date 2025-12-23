@@ -9,7 +9,7 @@ settings:
     release_notes_repo: console-relnotes
   rss_page: "whats-new.html"
 
-idebar:
+sidebar:
   entries:
     - title: NetApp Console administration 
       url: /index.html
