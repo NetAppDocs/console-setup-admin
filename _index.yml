@@ -8,8 +8,6 @@ indexpage:
       links:
         - title: Learn about NetApp Console
           url: concept-overview.html
-        - title: Learn about NetApp Support accounts
-          url: /concept-netapp-support-accounts.html
         - title: Learn about Console agents
           url: concept-agents.html
         - title: Learn about identity
@@ -33,15 +31,13 @@ indexpage:
     - title: Implement identity and access management (IAM)
       links:
         - title: Plan your IAM strategy
-          url: concept-plan-identity-and-access-management.html
+          url: concept-identity-and-access-management.html
         - title: Add folders and projects
           url: task-iam-manage-folders-projects.html
         - title: Understand how access roles work
           url: task-iam-manage-roles.html
-        - title: Add members and service accounts
+        - title: Add members, service accounts, and federated groups
           url: task-iam-manage-members-permissions.html
-
-   
     - title: Deploy Console agents
       links:
         - title: Learn about Console agents
@@ -54,7 +50,6 @@ indexpage:
           url: concept-deploy-agents.html
         - title: Maintain Console agents
           url: task-maintain-agents.html
-
     - title: Security and compliance
       links:
         - title: Federate with your identity provider
@@ -73,9 +68,6 @@ indexpage:
           url: /concept-org-partnerships.html
         - title: Create an organization partnership
           url: /task-partnerships-create.html
-    
-    
-  
     - title: Manage storage infrastructure
       links:
         - title: Associate NetApp support accounts
@@ -83,14 +75,12 @@ indexpage:
         - title: Discovering systems
           url: task-quick-start-standard-mode.html
       
-    - title: Enable Data services
+    - title: Enable data services
       links:
         - title: Understand the role of the Console agent
-          url: /task-monitor-cm-operations.html
+          url: /concept-agents.html
         - title: Subscribe to NetApp Intelligent Services
           url: /task-subscribe-standard-mode.html
-        - title: Data services dashboards
-          url: /task-monitor-cm-operations.html
         - title: License and subscription management
           url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
     - title: Blogs & community
