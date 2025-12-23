@@ -29,7 +29,7 @@ There are three types of members in a NetApp Console organization:
 * _Service accounts_: Non-human accounts used by applications or services to interact with the NetApp Console via APIs. You can add service accounts directly to your Console organization.
 * _Federated groups_: Groups synchronized from your identity provider (IdP) that allow you to manage access for multiple users collectively. Each user within a federated group must have signed up for the NetApp Console and been added to your organization with an access role before they can access resources granted to the group.
 
-link:task-iam-manage-members-permissions.html#add-members[Learn how to add members to your organization.^]
+link:task-iam-manage-members-permissions.html#add-members[Learn how to add members to your organization.]
 
 
 == Predefined roles in NetApp Console
