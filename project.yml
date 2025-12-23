@@ -87,7 +87,7 @@ sidebar:
               url: /concept-networking-best-practices.html
             - title: Deploy a Console agent
               entries:
-                - title: Deploy an agent in AWS
+                - title: AWS
                   entries:
                     - title: Console agent installation options
                       url: /concept-install-options-aws.html
@@ -97,7 +97,7 @@ sidebar:
                       url: /task-install-agent-aws-marketplace.html
                     - title: Manually install the Console agent
                       url: /task-install-agent-aws-manual.html
-                - title: Deploy an agent in Azure
+                - title: Azure
                   entries:
                     - title: Console agent installation options
                       url: /concept-install-options-azure.html
@@ -107,7 +107,7 @@ sidebar:
                       url: /task-install-agent-azure-marketplace.html
                     - title: Manually install the Console agent
                       url: /task-install-agent-azure-manual.html
-                - title: Deploy an agent in Google Cloud
+                - title: Google Cloud
                   entries:
                     - title: Console agent installation options
                       url: /concept-install-options-google.html
@@ -117,7 +117,7 @@ sidebar:
                       url: /task-install-agent-google-gcloud.html
                     - title: Manually install the Console agent
                       url: /task-install-agent-google-manual.html
-                - title: Deploy an agent on-premises
+                - title: Install an agent on-premises
                   entries:
                     - title: Manually install an agent on-premises
                       url: /task-install-agent-on-prem.html
@@ -147,21 +147,21 @@ sidebar:
               entries:
                 - title: AWS
                   entries:
-                    - title: Learn about AWS credentials and permissions
+                    - title: Learn about credentials and permissions
                       url: /concept-accounts-aws.html
-                    - title: Manage AWS credentials and subscriptions
+                    - title: Manage credentials and subscriptions
                       url: /task-adding-aws-accounts.html
                 - title: Azure
                   entries:
-                    - title: Learn about Azure credentials and permissions
+                    - title: Learn about credentials and permissions
                       url: /concept-accounts-azure.html
-                    - title: Manage Azure credentials and subscriptions
+                    - title: Manage credentials and subscriptions
                       url: /task-adding-azure-accounts.html
                 - title: Google Cloud
                   entries:
                     - title: Learn about projects and permissions
                       url: /concept-accounts-gcp.html
-                    - title: Manage Google Cloud credentials and subscriptions
+                    - title: Manage credentials and subscriptions
                       url: /task-adding-gcp-accounts.html
         - title: Identity and access management
           entries:
@@ -273,7 +273,7 @@ sidebar:
               url: /reference-agent-maint-console-proxy.html
         - title: Cloud Provider agent permissions and network requirements
           entries:
-            - title: Cloud provider Permissions summary
+            - title: Permissions summary
               url: /reference-permissions.html
             - title: AWS agent permissions and security rules
               entries:
