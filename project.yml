@@ -1,7 +1,7 @@
 settings:
   name: NetApp Console setup and administration
   internal:
-    pdf_enabled: false
+    pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
