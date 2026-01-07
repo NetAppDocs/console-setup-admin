@@ -109,7 +109,7 @@ Read through the following sections to learn more about these modes, including w
 
 The following image is an example of a standard mode deployment.
 
-image:diagram-standard-mode.png["A conceptual image that shows the public internet where the web-based console, SaaS layer, and auth0 authentication are available, a virtual network in the cloud where a Console agent is running and managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
+image:diagram-standard-mode.png["A conceptual image that shows the architecture of standard mode with the public internet where the SaaS layer and auth0 authentication are available."]
 
 The Console works as follows in standard mode:
 
@@ -159,7 +159,7 @@ link:task-quick-start-standard-mode.html[Learn how to get started with standard 
 
 The following image is an example of a restricted mode deployment.
 
-image:diagram-restricted-mode.png["A conceptual image that shows the public internet where the SaaS layer and auth0 authentication are available, a virtual network in the cloud where a Console agent is running and providing access to the web-based console, and is managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
+image:diagram-restricted-mode.png["A conceptual image of restricted mode."]
 
 The Console works as follows in restricted mode:
 

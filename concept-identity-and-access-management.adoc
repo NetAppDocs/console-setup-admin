@@ -24,7 +24,7 @@ NOTE: You must have the _Super admin_, _Organization admin_ , or _Folder or proj
 
 The following image illustrates this hierarchy at a basic level.
 
-image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the resource hierarchy for access management: an organization, folders, projects, and resources.]
+image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the components of resource management]]
 
 == Identity and access management components
 Within NetApp Console, identity and access management (IAM) consists of three main components: organizational components, resource components, and user access components.

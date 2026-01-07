@@ -49,7 +49,7 @@ Cloud object storage::
 
 Within the Console, _systems_ represent discovered or deployed storage. You can select a _system_ to integrate it with NetApp data services or manage storage, such as adding volumes.
 
-image:screenshot-canvas.png["A screenshot of the Console that shows several systems, one of which is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
+image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
 
 === Integrated data services and storage management to protect, secure, and optimize data
 

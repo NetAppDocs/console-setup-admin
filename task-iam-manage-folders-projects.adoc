@@ -47,13 +47,13 @@ image:diagram-iam-resource-association-folder-1.png["A diagram that shows a fold
 
 The _Organization admin_ can associate a resource with the folder:
 
-image:diagram-iam-resource-association-folder-2.png["A diagram that shows a folder, a resource that is associated with the folder, and two projects that reside in the folder: project A and project B."]
+image:diagram-iam-resource-association-folder-2.png["A diagram that shows a folder with a resource that is associated with the folder. Two projects that reside in the folder: project A and project B."]
 
 Associating a resource with a folder does not make it accessible to all projects; only the _folder or project admin_ can see it. The _Folder or project admin_ decides which projects can access it and associates the resource with the appropriate projects.
 
 In this example, the admin associates the resource with Project A:
 
-image:diagram-iam-resource-association-folder-3.png["A diagram that shows a folder, two projects that reside in the folder: project A and project B, and a resource that is associated with project A."]
+image:diagram-iam-resource-association-folder-3.png["A diagram that shows a folder with two projects that reside in the folder: project A and project B. A resource that is associated with project A."]
 
 Members who have permissions for project A can now access the resource.
 ====
