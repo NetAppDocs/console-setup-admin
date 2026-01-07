@@ -217,6 +217,8 @@ sidebar:
               entries:
                 - title: Organization and project IDs
                   url: /task-iam-rename-organization.html
+                - title: Identity and access management API reference
+                  url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
         - title: Security and compliance
           entries:
             - title: Identity federation
