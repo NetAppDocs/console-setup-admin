@@ -74,7 +74,6 @@ indexpage:
           url: concept-connectors.html
         - title: Discovering systems
           url: task-quick-start-standard-mode.html
-      
     - title: Enable data services
       links:
         - title: Understand the role of the Console agent
