@@ -82,7 +82,7 @@ Note that you can only select from the folders and projects for which you have a
 
 
 * If you associated the resource with projects, members who have permissions for those projects now have the ability to access the resource from the Console.
-* If you associated the resource with a folder, a _Folder or project admin_ can now access the resource and associate it with a project within the folder. link:concept-identity-and-access-management.html#resources[Learn about associating a resource with a folder].
+* If you associated the resource with a folder, a _Folder or project admin_ can now access the resource and associate it with a project within the folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
 
 .After you finish
 
