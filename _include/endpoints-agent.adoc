@@ -71,7 +71,7 @@ The endpoints listed below are all CNAME entries.
 \https://www.googleapis.com/storage/v1
 \https://iam.googleapis.com/v1
 \https://cloudkms.googleapis.com/v1
-\//https://config.googleapis.com/v1/projects
+\https://config.googleapis.com/v1/projects
 
 | To manage resources in Google Cloud.
 //end::google-cloud-endpoints[]

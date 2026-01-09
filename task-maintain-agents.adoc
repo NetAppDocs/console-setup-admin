@@ -15,7 +15,6 @@ summary: Maintaining the operating system on the agent host is your responsibili
 [.lead]
 Maintaining the operating system on the Console agent host is your (the customer's) responsibility. For example, you (the customer) should apply security updates to the operating system on the agent host by following your company's standard procedures for operating system distribution.
 
-TIP: If you have an existing agent, you should be aware of link:reference-agent-operating-system-changes.html[changes to supported Linux operating systems].
 
 == Operating system patches and the agent
 
