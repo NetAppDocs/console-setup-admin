@@ -26,15 +26,11 @@ sidebar:
             - title: NetApp Console
               url: /concept-overview.html
             - title: NetApp support accounts
-              url: /concept-netapp-support-accounts.html
+              url: /task-adding-nss-accounts.html
             - title: Console agents
               url: /concept-agents.html
             - title: Identity and access management
               url: /concept-identity-and-access-management.html
-            - title: Storage management
-              url: /concept-storage-management.html
-            - title: Data services
-              url: /concept-data-services.html
         - title: Get started with NetApp Console
           entries:
             - title: Getting started workflow
@@ -55,22 +51,6 @@ sidebar:
           url: /task-dashboard.html
         - title: Manage your NetApp Console user settings
           url: /task-user-settings.html
-        - title: Manage storage
-          entries:
-            - title: Discover storage systems
-              url: /task-monitor-cm-operations.html
-            - title: Software updates
-              url: /task-monitor-cm-operations.html
-            - title: Storage health
-              url: /task-monitor-cm-operations.html
-        - title: Use data services
-          entries:
-            - title: Understand the role of the Console agent
-              url: /task-monitor-cm-operations.html
-            - title: Subscribe to NetApp Intelligent Services
-              url: /task-subscribe-standard-mode.html
-            - title: Data services dashboards
-              url: /task-monitor-cm-operations.html
     - title: Administer and monitor
       entries:
         - title: Associate NetApp Support accounts 
@@ -81,10 +61,8 @@ sidebar:
               url: /task-manage-user-credentials.html
         - title: Console agents
           entries:
-            - title: Console agent deployment strategies
-              url: /concept-agent-deployment-strategy.html
-            - title: Console agent networking guidelines
-              url: /concept-networking-best-practices.html
+            - title: Learn about Console agents
+              url: /concept-agents.html            
             - title: Deploy a Console agent
               entries:
                 - title: AWS

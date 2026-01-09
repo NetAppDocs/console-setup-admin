@@ -10,12 +10,10 @@ indexpage:
           url: concept-overview.html
         - title: Learn about Console agents
           url: concept-agents.html
-        - title: Learn about identity
+        - title: Learn about identity and access management
           url: concept-identity-and-access-management.html
-        - title: Learn about storage management
-          url: concept-storage-management.html
-        - title: Learn about data services
-          url: concept-data-services.html
+        - title: Learn about deployment modes 
+          url: concept-modes.html
     - title: Get started 
       links:
         - title: Getting started workflow
@@ -42,10 +40,6 @@ indexpage:
       links:
         - title: Learn about Console agents
           url: concept-agents.html
-        - title: Console agent deployment strategies
-          url: concept-agent-deployment-strategy.html
-        - title: Console agent networking guidelines
-          url: concept-agent-networking-guidelines.html
         - title: Deploy Console agents
           url: concept-deploy-agents.html
         - title: Maintain Console agents
@@ -55,10 +49,10 @@ indexpage:
         - title: Federate with your identity provider
           url: task-iam-get-started.html
         - title: Enable read-only mode
-          url: task-adding-gcp-accounts.html
+          url: task-enable-read-only-mode.html
         - title: Monitor Console activity
-          url: reference-permissions-aws.html
-        - title: Deploy restricted mode
+          url: /task-monitor-cm-operations.html
+        - title: Deploy restricted mode (Sovereign cloud deployments)
           url: /task-quick-start-restricted-mode.html
         - title: SOC-2 Compliance
           urls: https://www.netapp.com/company/trust-center/compliance/soc-2/
@@ -68,20 +62,6 @@ indexpage:
           url: /concept-org-partnerships.html
         - title: Create an organization partnership
           url: /task-partnerships-create.html
-    - title: Manage storage infrastructure
-      links:
-        - title: Associate NetApp support accounts
-          url: concept-connectors.html
-        - title: Discovering systems
-          url: task-quick-start-standard-mode.html
-    - title: Enable data services
-      links:
-        - title: Understand the role of the Console agent
-          url: /concept-agents.html
-        - title: Subscribe to NetApp Intelligent Services
-          url: /task-subscribe-standard-mode.html
-        - title: License and subscription management
-          url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
     - title: Blogs & community
       links:
         - title: NetApp Console
