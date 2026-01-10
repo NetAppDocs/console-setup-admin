@@ -13,7 +13,7 @@ summary: Get started with the NetApp Console (SaaS) by preparing networking for 
 :imagesdir: ./media/
 
 [.lead]
-Get started with the NetApp Console (SaaS) by preparing networking for the Console, signing up and creating an account, and using the NetApp assistant to set up initial functionality.
+Get started with the NetApp Console (SaaS) by preparing networking for the Console, signing up and creating an account, and using the Console assistant to set up initial functionality.
 
 You access a web-based console that is hosted as a Software-as-a-service (SaaS) product from NetApp. You can use the Console to manage your hybrid cloud storage environment and use NetApp data services.
 
