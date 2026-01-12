@@ -53,7 +53,7 @@ indexpage:
         - title: Deploy restricted mode (Sovereign cloud deployments)
           url: /task-quick-start-restricted-mode.html
         - title: SOC-2 Compliance
-          urls: https://www.netapp.com/company/trust-center/compliance/soc-2/
+          url: https://www.netapp.com/company/trust-center/compliance/soc-2/
     - title: Console partnerships
       links:
         - title: Learn about organization partnerships
