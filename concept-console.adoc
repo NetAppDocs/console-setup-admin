@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: concept-modes.html
+permalink: concept-console.html
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private
 summary: NetApp Console offers a SaaS experience for full feature access or a self-hosted option for organizations with connectivity restrictions.
 ---
