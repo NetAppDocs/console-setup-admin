@@ -16,7 +16,7 @@ indexpage:
           url: concept-modes.html
     - title: Get started 
       links:
-        - title: Getting started workflow
+        - title: Getting started with NetAop Console (SaaS)
           url: task-quick-start-standard-mode.html
         - title: Prepare network access for NetApp Console
           url: reference-networking-saas-console.html
@@ -39,7 +39,7 @@ indexpage:
         - title: Learn about Console agents
           url: concept-agents.html
         - title: Deploy an agent on-premises 
-          url: /task-install-agent-on-prem.html.html
+          url: /task-install-agent-on-prem.html
         - title: Deploy an agent in AWS 
           url: /task-install-agent-aws-console.html
         - title: Deploy an agent in Azure 
@@ -56,7 +56,7 @@ indexpage:
           url: task-enable-read-only-mode.html
         - title: Monitor Console activity
           url: /task-monitor-cm-operations.html
-        - title: Deploy restricted mode (Sovereign cloud deployments)
+        - title: Deploy NetApp Console in Restricted mode (Sovereign cloud deployments)
           url: /task-quick-start-restricted-mode.html
         - title: SOC-2 Compliance
           url: https://www.netapp.com/company/trust-center/compliance/soc-2/
