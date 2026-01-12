@@ -38,8 +38,14 @@ indexpage:
       links:
         - title: Learn about Console agents
           url: concept-agents.html
-        - title: Deploy Console agents
-          url: concept-deploy-agents.html
+        - title: Deploy an agent on-premises 
+          url: /task-install-agent-on-prem.html.html
+        - title: Deploy an agent in AWS 
+          url: /task-install-agent-aws-console.html
+        - title: Deploy an agent in Azure 
+          url: /task-install-agent-azure-console.html
+        - title: Deploy an agent in Google Cloud
+          url: /task-install-agent-google-console-gcloud.html
         - title: Maintain Console agents
           url: task-maintain-agents.html
     - title: Security and compliance
