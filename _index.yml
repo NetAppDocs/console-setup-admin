@@ -18,11 +18,11 @@ indexpage:
       links:
         - title: Getting started with NetApp Console (SaaS)
           url: task-quick-start-standard-mode.html
-        - title: Prepare network access for NetApp Console
+        - title: Prepare network access for NetApp Console 
           url: reference-networking-saas-console.html
-        - title: Sign up to NetApp Console
+        - title: Sign up to NetApp Console 
           url: task-sign-up-saas.html
-        - title: Use the NetApp Console assistant
+        - title: Use the NetApp Console assistant (SaaS)
           url: task-console-assistant.html
         - title: Deploy NetApp Console in restricted mode (Sovereign cloud deployments)
           url: /task-quick-start-restricted-mode.html
