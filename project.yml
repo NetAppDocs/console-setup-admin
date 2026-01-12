@@ -25,6 +25,8 @@ sidebar:
           entries: 
             - title: NetApp Console
               url: /concept-overview.html
+            - title: SaaS versus self-hosted deployment modes
+              url: /concept-modes.html
             - title: NetApp support accounts
               url: /task-adding-nss-accounts.html
             - title: Console agents
@@ -40,9 +42,7 @@ sidebar:
             - title: Sign up to NetApp Console
               url: /task-sign-up-saas.html
             - title: Use the NetApp Console assistant
-              url: /task-console-assistant.html
-            - title: What you can do next
-              url: /reference-whats-next.html    
+              url: /task-console-assistant.html  
     - title: Use NetApp Console
       entries:
         - title: Log in to NetApp Console

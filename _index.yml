@@ -24,8 +24,6 @@ indexpage:
           url: task-sign-up-saas.html
         - title: Use the NetApp Console assistant
           url: task-console-assistant.html
-        - title: What you can do next
-          url: reference-whats-next.html
     - title: Implement identity and access management (IAM)
       links:
         - title: Plan your IAM strategy

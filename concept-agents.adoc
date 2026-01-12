@@ -29,7 +29,7 @@ The following table shows which features and services you can use with and witho
 
 [cols=3*,options="header",cols="40,20a,20a",width="100%"]
 |===
-| Feature/Service | Available with agent| Available without agent
+|  | Available with agent| Available without agent
 3+| *Supported Storage systems*:
 
 
@@ -42,7 +42,7 @@ The following table shows which features and services you can use with and witho
 | Google Cloud NetApp Volumes| Yes | Yes
 | Google Cloud storage buckets | Yes | No
 | StorageGRID systems | Yes | No
-| On-premises ONTAP cluster  (advanced management and discovery) | Yes | No (basic discovery only)
+| On-premises ONTAP cluster  (advanced management and discovery) | Yes (advanced management and discovery) | No (basic discovery only)
 3+| *Available storage management services*:
 | Alerts | Yes | No
 | Automation hub | Yes| Yes

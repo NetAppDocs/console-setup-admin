@@ -25,9 +25,17 @@ By default, the NetApp Console displays the Console assistant on the Home page f
 Use the assistant to complete these tasks, which provide the minimal set up for your NetApp Console environment:
  
 * Add a NetApp Support Site (NSS) account.
++
+link:task-adding-nss-accounts.html[Learn how to add an NSS account].
 * Connect to your storage estate by deploying a Console agent.
++
+link:task-install-agent-on-prem.html[Learn how to install a Console agent on-premises.]
 * Manage a storage system by adding or discovering a cluster
+
 * Add a marketplace subscription or PAYGO license.
++
+link:https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html[Learn how to add licenses and subscriptions^].
+
 * Review data services information.
  
 

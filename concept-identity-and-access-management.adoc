@@ -27,11 +27,11 @@ The following image illustrates this hierarchy at a basic level.
 image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the components of resource management]]
 
 == Identity and access management components
-Within NetApp Console, identity and access management (IAM) consists of three main components: organizational components, resource components, and user access components.
+Within NetApp Console, you organize your storage resources using three main components: organizational components, resource components, and user access components.
 
-=== Organizational components
+=== Projects and folders within your organization
 
-Organizational components define the structure of your NetApp Console IAM system. The three main organizational components are organizations, projects, and folders.
+Within your IAM structure, you work with three organizational components are organizations, projects, and folders. You can grant users access by assigning them roles at any of these levels.
 
 Organization::
 
@@ -40,18 +40,17 @@ An _organization_ is the top level of the Console IAM system and typically repre
 
 Projects::
 
-A resource is usually a storage system added to NetApp Console and assigned to a project; other resources include Backup and Recovery workloads. You must assign resources to projects before anyone can access them.
+A project is used to provide access to a storage resource. You must assign a resources to project before anyone can access them. You can assign multiple resources to a single project and you can also have multiple projects. You then assign users permissions to the project to give them access to the resources within it. 
 
-For example, you can associate a Cloud Volumes ONTAP system with a single project or with all projects in your organization, depending on your needs.
-
+For example, you can associate an on-premises ONTAP system with a single project or with all projects in your organization, depending on your needs. 
 
 
 Folders::
 
-Group related projects with folders to organize them by location, site, or business unit. You cant associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
+Group related projects with folders to organize them by location, site, or business unit. You can't associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
 
 
-=== Resource components
+=== Resources
 
 Resources within the NetApp Console include storage systems, Keystone subscriptions Backup and Recovery workloads, and Console agents.
 
@@ -85,7 +84,7 @@ Associating an agent with a project enables management of resources in that proj
 link:task-iam-associate-agents.html[Learn how to associate agents with folders and projects.]
 
 
-=== User access components
+=== Members and roles
 
 Members::
 
@@ -144,6 +143,7 @@ For large organizations with regional operations and specialized teams, implemen
 ** *Backup and Recovery admin*: Per-project based on backup responsibilities
 ** *Ransomware Resilience admin*: Security team monitoring across projects
 * **Agent strategy:** Regional agents associated with appropriate geographical projects
+* **Benefits:** Enhanced security through role segregation, regional autonomy, and compliance with local regulations
 
 === Departmental specialization strategy
 
@@ -157,7 +157,8 @@ For organizations with specialized teams requiring specific data service access,
 ** Backup team: *Backup and Recovery super admin* for comprehensive backup operations
 ** Development team: *Storage admin* for test environment management
 ** Compliance team: *Operation support analyst* for monitoring and support case management
-* **Agent associations:** Agents linked to departmental projects based on resource ownership
+* **Agent strategy:** Agents linked to departmental projects based on resource ownership
+* **Benefits:** Tailored access control, improved operational efficiency, and clear accountability for specialized tasks
 
 
 == Next steps with IAM in NetApp Console
