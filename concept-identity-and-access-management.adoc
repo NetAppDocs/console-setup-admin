@@ -58,7 +58,7 @@ You must associate a resource with a project before anyone can access it.
 
 For example, you might associate a Cloud Volumes ONTAP system with one project or with all projects in your organization. How you associate a resource depends on your organization's needs.
 
-link:task-iam-manage-resources.html[Learn how to manage resources in your organization.]
+link:task-iam-manage-resources.html[Learn how to associate resources to projects.]
 
 
 Storage systems and Keystone subscriptions::
@@ -69,8 +69,6 @@ Storage systems are automatically associated with the project where they are add
 Keystone subscriptions are also resources that you can associate with projects in order to grant users access to the subscription in NetApp Console. 
 
 
-link:task-iam-manage-resources.html[Learn how to manage storage systems in your organization.]
-
 
 [#associate-agents]
 Console agents::
@@ -79,7 +77,7 @@ Organization admins create Console agents to manage storage systems and enable N
 
 Associating an agent with a project enables management of resources in that project, while associating an agent with a folder lets folder or project admins decide which projects should use the agent. Agents must be linked to specific projects to provide management capabilities.
 
-link:task-iam-associate-agents.html[Learn how to associate agents with folders and projects.]
+link:task-iam-associate-agents.html[Learn how to associate agents with projects.]
 
 
 === Members and roles
