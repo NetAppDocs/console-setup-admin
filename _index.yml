@@ -45,7 +45,7 @@ indexpage:
     - title: Security and compliance
       links:
         - title: Federate with your identity provider
-          url: task-iam-get-started.html
+          url: /concept-federation.html
         - title: Enable read-only mode
           url: task-enable-read-only-mode.html
         - title: Monitor Console activity

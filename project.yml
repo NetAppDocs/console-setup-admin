@@ -25,7 +25,7 @@ sidebar:
           entries: 
             - title: NetApp Console
               url: /concept-overview.html
-            - title: SaaS versus self-hosted deployment modes
+            - title: SaaS versus restricted deployment modes
               url: /concept-modes.html
             - title: NetApp support accounts
               url: /task-adding-nss-accounts.html
@@ -33,7 +33,7 @@ sidebar:
               url: /concept-agents.html
             - title: Identity and access management
               url: /concept-identity-and-access-management.html
-        - title: Get started with NetApp Console
+        - title: Get started with NetApp Console (Saas)
           entries:
             - title: Getting started workflow
               url: /task-quick-start-standard-mode.html
@@ -43,6 +43,18 @@ sidebar:
               url: /task-sign-up-saas.html
             - title: Use the NetApp Console assistant
               url: /task-console-assistant.html  
+        - title: Get started with NetApp Console (restricted mode)
+          entries:
+            - title: Getting started workflow
+              url: /task-quick-start-restricted-mode.html
+            - title: Prepare for restricted NetApp Console deployment
+              url: /task-prepare-restricted-mode.html
+            - title: Deploy NetApp Console in restricted mode
+              url: /task-install-restricted-mode.html
+            - title: Subscribe to NetApp Intelligent Services
+              url: /task-subscribe-restricted-mode.html
+            - title: What you can do next  
+              url: /reference-whats-next-restricted-mode.html
     - title: Use NetApp Console
       entries:
         - title: Log in to NetApp Console
