@@ -14,7 +14,7 @@ summary: There are a few different ways to create a Console agent in Google Clou
 
 [.lead]
 There are a few different ways to create a Console agent in Google Cloud. Directly from the NetApp Console is the most common way.
----
+
 
 The following installation options are available:
 
