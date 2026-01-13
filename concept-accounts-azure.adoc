@@ -37,7 +37,7 @@ The system-assigned managed identity assigned to the Console agent VM is associa
 
 If you want to use different Azure credentials with the Console, then you must grant the required permissions by link:task-adding-azure-accounts.html[creating and setting up a service principal in Microsoft Entra ID] for each Azure account. The following image shows two additional accounts, each set up with a service principal and custom role that provides permissions:
 
-image:diagram_permissions_multiple_azure.png["A conceptual image that shows the initial Azure account, which receives permissions through a custom role and managed identity, and two additional accounts that receive permissions through a custom role and service principal."]
+image:diagram_permissions_multiple_azure.png["A conceptual image that shows the initial Azure account that receives permissions through a custom role and managed identity andtwo additional accounts that receive permissions through a custom role and service principal."]
 
 You would then link:task-adding-azure-accounts.html#add-credentials-azure[add the account credentials to the Console] by providing details about the AD service principal.
 

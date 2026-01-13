@@ -26,14 +26,14 @@ NetApp supports service provider-initiated (SP-initiated) SSO only. First, confi
 
 You can set up federation with your AD FS  server to enable single sign-on (SSO) for NetApp Console. The process involves configuring your AD FS to trust the Console as a service provider and then creating the connection in the NetApp Console.
 
-include::_include/federation-prereqs.adoc[]
+include::_include/federation-steps-notes.adoc[tag=federation-prereq]
 
-include::_include/federation-navigation-steps.adoc[]
-
-
+include::_include/federation-steps-notes.adoc[tag=intro-steps]
 
 
-include::_include/federation-verify-domain-steps.adoc[]
+
+
+include::_include/federation-steps-notes.adoc[tag=federation-verify-domain]
 
 
 
@@ -80,7 +80,7 @@ NetApp recommends using the metadata URL to let the NetApp Console automatically
 
 
 
-include::_include/federation-test-enable-steps.adoc[]
+include::_include/federation-steps-notes.adoc[tag=federation-test-steps]
 
 
 

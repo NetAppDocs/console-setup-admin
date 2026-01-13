@@ -14,7 +14,7 @@ NetApp moved most menu options to the left-navigation pane and reorganized menus
 
 ==== Canvas is replaced by the Systems page
 
-NetApp renamed the Canvas to the *Systems* page. Navigate to the *System* page from the *Storage > Management* menu. 
+NetApp renamed the Canvas to the *Systems* page. Navigate to the *Systems* page from the *Storage > Management* menu. 
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png[A screenshot of the systems page.]
 

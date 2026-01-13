@@ -34,9 +34,13 @@ The table highlights the features of the Audit page and Notification Center by c
 
 == Audit user activity from the Audit page
 
+Use the Audit page to identify who performed an action or its status.
+
 The Audit page shows the actions that users completed to manage your organization or account. This includes management actions such as associating users, creating systems, creating agents, and more.
 
-Use the Audit page to identify who performed an action or its status.
+You can also verify who added a member to an organization or that a project was deleted successfully.
+
+
 
 .Steps
 
