@@ -1,0 +1,210 @@
+---
+sidebar: sidebar
+permalink: task-prepare-private-mode.html
+keywords: private mode requirements, requirements, install options, private mode networking, dark site, private mode permissions, permissions for private mode, networking for private mode
+summary: Prepare your environment before you deploy BlueXP in private mode. For example, you need to review host requirements, prepare networking, set up permissions, and more.
+---
+
+= Prepare for deployment in private mode
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Prepare your environment before you deploy BlueXP in private mode. For example, you need to review host requirements, prepare networking, set up permissions, and more.
+
+NOTE: To use BlueXP in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], follow the specific instructions for those environments. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
+
+== Step 1: Understand how private mode works
+
+Before you get started, you should understand private mode. 
+
+For example, you need to use the browser-based interface that is available locally from the  Connector that you  install. You can't access BlueXP from the web-based console that's provided through the SaaS layer.
+
+In addition, not all features and services are available.
+
+link:concept-modes.html[Learn how private mode works].
+
+== Step 2: Review installation options
+
+In private mode, you can install the Connector on-premises or in the cloud by manually installing the Connector on your own Linux host.
+
+Where you install the Connector determines which BlueXP services and features are available when using private mode. For example, the Connector must be installed in the cloud if you want to deploy and manage Cloud Volumes ONTAP. link:concept-modes.html#private-mode[Learn more about private mode].
+
+== Step 3: Review host requirements
+
+The host must meet specific operating system requirements, RAM requirements, port requirements, and so on to run the Connector software.
+
+include::_include/os-reqs.adoc[tag=dedicated]
+
+include::_include/os-reqs.adoc[tag=os-private]
+
+include::_include/os-reqs.adoc[tag=hypervisor]
+
+include::_include/os-reqs.adoc[tag=cpu-ram]
+
+include::_include/os-reqs.adoc[tag=aws-ec2]
+
+include::_include/os-reqs.adoc[tag=azure-vm]
+
+include::_include/os-reqs.adoc[tag=google-machine]
+
+include::_include/os-reqs.adoc[tag=disk-space]
+
+[[podman-configuration]]
+== Step 4: Install Podman or Docker Engine
+
+You need to prepare the host for the Connector by installing Podman or Docker Engine.
+
+include::_include/podman-docker.adoc[]
+
+== Step 5: Prepare networking
+
+Set up networking for the Connector to manage resources in your public cloud. Other than having a virtual network and subnet for the Connector, ensure that the following requirements are met.
+Connections to target networks::
+The Connector must have a network connection to the location where you plan to manage storage. For example, the VPC or VNet where you plan to deploy Cloud Volumes ONTAP, or the data center where your on-premises ONTAP clusters reside.
+
+Endpoints for day-to-day operations::
+If you are planning to create Cloud Volumes ONTAP systems, the Connector needs connectivity to endpoints in your cloud provider's publicly available resources.
++
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::_include/endpoints-connector.adoc[tag=aws-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-public-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-il6-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=azure-china-endpoints]
+
+include::_include/endpoints-connector.adoc[tag=google-cloud-endpoints]
+
+|===
+
+//Azure public IP
+include::_include/networking.adoc[tag=azure-public-ip]
+
+//Proxy server
+include::_include/networking.adoc[tag=proxy]
++
+With private mode, the only time that BlueXP sends outbound traffic is to your cloud provider in order to create a Cloud Volumes ONTAP system.
+
+Ports::
+There's no incoming traffic to the Connector, unless you initiate it.
++
+HTTP (80) and HTTPS (443) provide access to the BlueXP console. SSH (22) is only needed if you need to connect to the host for troubleshooting.
+
+//NTP
+include::_include/networking.adoc[tag=ntp]
+
+== Step 6: Prepare cloud permissions
+
+If the Connector is installed in the cloud and you plan to create Cloud Volumes ONTAP systems, BlueXP requires cloud provider permissions. You need to set up permissions in your cloud provider and then associate those permission with the Connector instance after you install it.
+
+To view the required steps, select the authentication option that you'd like to use for your cloud provider. 
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.AWS IAM role
+--
+Use an IAM role to provide the Connector with permissions. You'll need to manually attach the role to the EC2 instance for the Connector.
+
+.Steps
+
+include::_include/aws-permissions.adoc[tag=policy]
+
+include::_include/aws-permissions.adoc[tag=role]
+
+.Result
+
+You now have an IAM role for the Connector EC2 instance.
+--
+
+.AWS access key
+--
+Set up permissions and an access key for an IAM user. Provide BlueXP with the AWS access key after you install the Connector and set up BlueXP.
+
+.Steps
+
+include::_include/aws-permissions.adoc[tag=policy]
++
+Depending on the BlueXP services that you're planning to use, you might need to create a second policy.
++
+For standard regions, the permissions are spread across two policies. Two policies are required due to a maximum character size limit for managed policies in AWS. link:reference-permissions-aws.html[Learn more about IAM policies for the Connector].
+
+include::_include/aws-permissions.adoc[tag=keys]
+
+.Result
+
+The account now has the required permissions.
+--
+
+.Azure role
+--
+Create an Azure custom role with the required permissions. Assign this role to the Connector VM.
+
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+
+.Steps
+
+. Enable a system-assigned managed identity on the VM where you plan to install the Connector so that you can provide the required Azure permissions through a custom role.
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm[Microsoft Azure documentation: Configure managed identities for Azure resources on a VM using the Azure portal^]
+
+include::_include/azure-set-up-role.adoc[]
+--
+
+.Azure service principal
+--
+Create and set up a service principal in Microsoft Entra ID and obtain the Azure credentials that BlueXP needs. You'll need to provide BlueXP with these credentials after you install the Connector and set up BlueXP.
+
+.Create a Microsoft Entra application for role-based access control
+
+include::_include/azure-set-up-service-principal.adoc[tag=app]
+
+.Assign the application to a role
+ 
+include::_include/azure-set-up-service-principal.adoc[tag=role]
+
+.Add Windows Azure Service Management API permissions
+
+include::_include/azure-set-up-service-principal.adoc[tag=api]
+
+.Get the application ID and directory ID for the application
+
+include::_include/azure-set-up-service-principal.adoc[tag=ids]
+
+.Create a client secret
+
+include::_include/azure-set-up-service-principal.adoc[tags=secret]
+
+.Result
+
+Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. Enter this information in BlueXP when you add an Azure account.
+--
+
+.Google Cloud service account
+--
+include::_include/google-set-up-service-account.adoc[]
+--
+
+====
+// end tabbed area
+
+== Step 7: Enable Google Cloud APIs
+
+You need to enable several APIs to deploy Cloud Volumes ONTAP in Google Cloud.
+
+.Step
+
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis[Enable the following Google Cloud APIs in your project^]
++
+include::_include/google-cloud-apis.adoc[]
