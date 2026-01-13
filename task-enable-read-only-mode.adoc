@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: task-sign-up-saas.html
+permalink: task-enable-read-only-mode.html
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login
 summary: To get started with the Console your first step is signing up or logging in using your NetApp Support Site credentials or creating a NetApp Console login. If you are the first user from your company to sign up, you create a new organization in the Console as the organization administrator. If your company already has an organization, you can sign up or log in to access it.
 ---
 
-= Sign up or log in to NetApp Console
+= Enable read-only mode for a NetApp Console organization
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,13 +13,34 @@ summary: To get started with the Console your first step is signing up or loggin
 :imagesdir: ./media/ 
 
 [.lead]
-To use the Console, sign up or log in with your NetApp Support Site credentials, or create a NetApp Console login. If you are the first from your company to sign up, you create a new organization as the administrator. If your company already has an organization, sign up or log in with your existing NetApp Support Site credentials or company single-sign-on (SSO).
+As a security precaution, you can enable read-only mode for your NetApp Console organization. In read-only mode, users can view resources and settings but cannot make any changes.
 
+In read-only mode, users with admin roles must manually elevate their permissions to make changes, which ensures that changes are intentional.
+
+.Required access roles
+Super admin or Org admin.
+
+
+== Enable read-only mode for your Console organization
+Enable read-only mode to restrict changes to your Console organization. All users can still view resources. Users with admin roles cannot perform any actions in the Console without manually elevating their permissions.
+
+When read-only mode is enabled, users see a banner that notifies them that the organization is in read-only mode. Users must go to User settings to elevate their role.
+
+
+.Steps
+
+. Select *Administration > Identity and access*.
+
+. From the *Organizations* tab, select *Edit organization settings* for the organization that you want to set to read-only mode.
+
+. In the *Read-only mode* section, enable read-only mode by moving the toggle to the *On* position and then select *Save*.
++
+image:screenshot-read-only-slider.png["A screenshot that shows the Read-only mode toggle in the On position."]
 
 
 == Sign up for NetApp Console as the initial organization administrator
 
-If your company doesn't have a NetApp Console organization, sign up to create one. The first user becomes the organization administrator and manages user accounts and permissions. You can update roles and add more administrators later.
+If your company doesn't have a NetApp Console organization, sign up to create one. The first user is the administrator and manages accounts and permissions. You can update roles and add administrators later.
 
 .Steps
 
@@ -45,10 +66,10 @@ Verify your email address to complete sign up.
 
 . Select *Let's Start*.
 
-+ As a first-time user and organization administrator, you follow a guided process to add storage resources, create a Console agent, and more. link:task-console-assistant.html[Learn about using the Console Assistant.^]
++ As a first-time administrator, follow the guided process to add storage, create a Console agent, and more. link:task-console-assistant.html[Learn about using the Console Assistant.]
 
 .Next steps
-As an administrator, after you complete the steps included in the Console Assistant, you should plan your identity and access strategy, add users to your organization, and assign roles. link:task-iam-get-started.html[Learn about identity and access management for NetApp Console^]
+As an administrator, after you complete the steps included in the Console Assistant, you should plan your identity and access strategy, add users to your organization, and assign roles. link:task-iam-get-started.html[Learn about identity and access management for NetApp Console]
 
 
 == Sign up or login to NetApp Console when an organization already exists
@@ -75,7 +96,7 @@ Verify your email address to complete sign up.
 
 . After you log in, review and accept the End User License Agreement.
 
-. If the system prompts you to create an organization, close the dialog box and tell a Console admin so they can add you to your Console organization and give you access. link:task-user-settings.html#contact-admin[Learn how to contact an organization administrator.^] 
+. If the system prompts you to create an organization, close the dialog box and tell a Console admin so they can add you to your Console organization and give you access. link:task-user-settings.html#contact-admin[Learn how to contact an organization administrator.] 
 
 .Next steps
 After you are given access to your organization, you can start managing storage and using the data services that you are assigned. 

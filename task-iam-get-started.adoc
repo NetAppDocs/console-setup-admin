@@ -15,7 +15,7 @@ summary: "To get started with identity and access management in NetApp Console, 
 [.lead]
 When you sign up for the NetApp Console, you're prompted to create a new organization. The organization includes one member (an Organization admin) and one default project. To set up identity and access management (IAM) to meet your business needs, you'll need to customize your organization's hierarchy, add additional members, add or discover resources, and associate those resources across your hierarchy.
 
-You must have *Organization admin* permissions to administer identity and access for your entire organization. If you have *Folder or project admin* permissions, you can only administer the folders and projects for which you have permissions.
+You need the  *Org admin* or *Super admin* permissions to manage identity and access for your organization. With *Folder or project admin* permissions, you can manage only the folders and projects you have access to.
 
 Follow these steps to set up a new organization. The order may vary based on your organization's needs.
 
@@ -30,7 +30,7 @@ link:task-iam-manage-folders-projects.html[Learn how to organize your resources 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Associate members with your organization
 
 [role="quick-margin-para"]
-Link user accounts to your organization and assign permissions. You also have the option to add service accounts to your organization.
+After users sign up for NetApp Console, you must explicitly add them to your Console organization. You also have the option to add service accounts to your organization.
 
 [role="quick-margin-para"]
 link:task-iam-manage-members-permissions.html[Learn how to manage members and their permissions].

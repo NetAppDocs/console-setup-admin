@@ -13,7 +13,7 @@ summary: To use NetApp Console features and services, you'll need to provide per
 :imagesdir: ./media/
 
 [.lead]
-To use NetApp Console features and services, you'll need to provide permissions so that the Console agent can perform operations in your cloud environment. Use the links on this page to quickly access the permissions that you need based on your goal.
+You'll need to provide the Console agent appropriate permissions so that it can perform operations in your cloud environment. Use the links on this page to quickly access the permissions that you need based on your goal.
 
 == AWS permissions
 
@@ -28,15 +28,16 @@ The NetApp Console requires AWS permissions for a Console agent and for individu
 | Link
 
 | Deploy a Console agent from the Console
-| The user who creates a Console agent from the Console needs specific permissions to deploy the agent in AWS.
+To deploy a Console agent in AWS, the user needs specific permissions.
 | link:task-install-agent-aws-console.html#aws-permissions-agent[Set up AWS permissions]
 
 | Provide permissions for a Console agent
-| When the Console deploys a Console agent, it attaches a policy to the agent that provides the permissions required to manage resources and processes in your AWS account.
+| When the Console deploys a Console agent, it attaches a policy to the agent that gives the permissions needed to manage resources and processes in your AWS account.
 
-You need to set up the policy yourself if you deploy a Console agent from the AWS Marketplace, if you manually install a Console agent, or if you link:task-adding-aws-accounts.html#add-credentials-agent-aws[add more AWS credentials to a Console agent].
 
-You also need to ensure that the policy is up to date as new permissions are added in subsequent releases.
+You need to set up the policy yourself when you deploy a Console agent from the AWS Marketplace, if you manually install a Console agent, or if you link:task-adding-aws-accounts.html#add-credentials-agent-aws[add more AWS credentials to a Console agent].
+
+Keep the policy up to date as new permissions are added in later releases.
 | link:reference-permissions-aws.html[AWS permissions for a Console agent]
 
 |===
@@ -78,7 +79,7 @@ You also need to ensure that the policy is up to date as new permissions are add
 | Link
 
 | Deploy the data broker in AWS
-| The AWS user account that you use to deploy the data broker must have specific permissions.
+| The AWS user account you use to deploy the data broker must have the needed permissions.
 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws[Permissions required to deploy the data broker in AWS^]
 
 | Provide permissions for the data broker
@@ -114,7 +115,7 @@ You also need to ensure that the policy is up to date as new permissions are add
 | Link
 
 | Tier on-premises ONTAP clusters to Amazon S3
-| When you enable NetApp Cloud Tiering to AWS, the wizard prompts you to enter an access key and secret key. These credentials are passed to the ONTAP cluster so that ONTAP can tier data to the S3 bucket.
+| When you enable NetApp Cloud Tiering to AWS, you enter an access key and secret key. These credentials are passed to the ONTAP cluster so that ONTAP can tier data to the S3 bucket.
 | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions[Set up S3 permissions for tiering^]
 
 |===
@@ -140,7 +141,7 @@ a| When the Console deploys a Console agent VM in Azure, it creates a custom rol
 
 You need to set up the custom role yourself if you launch a Console agent from the marketplace, if you manually install a Console agent, or if you link:task-adding-azure-accounts.html#add-credentials-azure[add more Azure credentials to a Console agent].
 
-You also need to ensure that the policy is up to date as new permissions are added in subsequent releases.
+Keep the policy up to date as new permissions are added in later releases.
 a| link:reference-permissions-azure.html[Azure permissions for a Console agent]
 
 |===
@@ -164,7 +165,7 @@ a|
 
 
 | Back up on-premises ONTAP clusters to Azure blob storage
-| When using NetApp Backup and Recovery to back up on-premisesONTAP clusters, you need to add permissions to a Console agent in order to use the "Search & Restore" functionality. 
+| When using NetApp Backup and Recovery to back up on-premises ONTAP clusters, you need to add permissions to a Console agent to use the "Search & Restore" functionality. 
 |https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html[Back up on-premises ONTAP data to Azure Blob storage with Backup and Recovery^]
 
 
@@ -204,7 +205,7 @@ The Console requires Google Cloud permissions for a Console agent and for indivi
 | Provide permissions for a Console agent 
 | The service account for a Console agent must have specific permissions for day-to-day operations. You need to associate the service account with a Console agent during deployment.
 
-You also need to ensure that the policy is up to date as new permissions are added in subsequent releases.
+Keep the policy up to date as new permissions are added in later releases.
 | link:task-install-agent-google-console-gcloud.html#console-permissions-google[Set up permissions for a Console agent]
 
 |===
@@ -228,7 +229,7 @@ a|
 * https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-cvo-gcp.html[Permissions for CMEKs^]
 
 | Back up on-premises ONTAP clusters to Google Cloud
-| When using NetApp Backup and Recovery to back up on-premisesONTAP clusters, you need to add permissions to a Console agent in order to use the "Search & Restore" functionality. 
+| When using NetApp Backup and Recovery to back up on-premises ONTAP clusters, you need to add permissions to a Console agent to use the "Search & Restore" functionality. 
 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html[Back up on-premises ONTAP data to Google Cloud Storage with Backup and Recovery^]
 
 |===

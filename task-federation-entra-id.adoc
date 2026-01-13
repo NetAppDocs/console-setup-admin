@@ -25,18 +25,18 @@ NetApp supports service provider-initiated (SP-initiated) SSO only. You need to 
 
 You can set up a federated connection with Microsoft Entra ID to enable single sign-on (SSO) for the Console . The process involves configuring your Microsoft Entra ID to trust the Console as a service provider and then creating the connection in the Console.
 
-include::_include/federation-prereqs.adoc[]
+include::_include/federation-steps-notes.adoc[tag=federation-prereq]
 
 
 
-include::_include/federation-navigation-steps.adoc[]
+include::_include/federation-steps-notes.adoc[tag=intro-steps]
 
 [discrete]
 ====== Domain details
 
 [start=4]
 
-include::_include/federation-verify-domain-steps.adoc[]
+include::_include/federation-steps-notes.adoc[tag=federation-verify-domain]
 
 [discrete]
 ====== Connection method
@@ -82,5 +82,5 @@ include::_include/federation-verify-domain-steps.adoc[]
 [discrete]
 ====== Test and enable the connection
 
-include::_include/federation-test-enable-steps.adoc[]
+include::_include/federation-steps-notes.adoc[tag=federation-test-steps]
 
