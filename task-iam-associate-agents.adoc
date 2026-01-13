@@ -13,14 +13,11 @@ summary: If members of your organization need to use a Console agent in another 
 :imagesdir: ./media/
 
 [.lead]
-When an _Organization admin_ creates a Console agent, the Console agent is automatically associated with currently selected project within the organization. Although someone with the _Organization admin_ role can access to that Console agent from anywhere in the organization. Other members in your organization can only access that Console agent from the project in which it was created, unless you associate that Console agent with other projects.
+Associate Console agents with specific projects to enable resource management and data service access. Resources discovered through a Console agent require both the resource and agent to be associated with the same respective projects for team access.
 
-.Before you begin
+Super admins and Org admins can create agents and associate any agent with any project or folder. Folder or project admins can only associate existing agents with folders and projects that they have permissions for.
+link:reference-iam-predefined-roles.html[Learn more about the actions that a _Folder or project admin_ can complete].
 
-Review how Console agent association works. link:concept-identity-and-access-management.html#associate-agents[Learn about using Console agent with Identity and Access].
-
-.About this task
-A _Folder or project admin_ can view all Console agents on the *Agent* page but can only associate Console agents with folders and projects they have permissions for. link:reference-iam-predefined-roles.html[Learn more about the actions that a _Folder or project admin_ can complete].
 
 .Steps
 
