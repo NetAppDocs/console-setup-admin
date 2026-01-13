@@ -13,6 +13,11 @@ You can now validate network connections of connected Console agents directly fr
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access[Learn how to run configuration checks on Console agents.]
 
+.Additional Google Cloud permissions for Cloud Volumes ONTAP
+To support Cloud Volumes ONTAP management in Google Cloud, the Console agent now requires an additional permission. The following permission has been added to the service account used by the Console agent: compute.forwardingRules.update
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log[View the permissions change log.]
+
 
 
 
