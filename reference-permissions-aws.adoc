@@ -29,11 +29,13 @@ Note the following:
 
 * If needed, you can restrict the IAM policies by using the IAM `Condition` element. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html[AWS documentation: Condition element^]
 
+
 * To view step-by-step instructions for using these policies, refer to the following pages:
 
 ** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions[Set up permissions for an AWS Marketplace deployment]
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure[Set up permissions for on-premises deployments]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
+** link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions[Set up permissions for private mode]
 
 
 Select your region to view the required policies:

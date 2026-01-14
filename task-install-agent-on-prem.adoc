@@ -223,7 +223,7 @@ You'll need to register the Console agent within the NetApp Console.
 [[register-agent]]
 == Register the Console agent with NetApp Console
 
-Log into the Console and associate the Console agent with your organization. How you log in depends on the mode in which you are using Console. If you are using the Console in standard mode, you log in through the SaaS website. If you are using the Console in restricted mode, you log in locally from the Console agent host.
+Log into the Console and associate the Console agent with your organization. How you log in depends on the mode in which you are using Console. If you are using the Console in standard mode, you log in through the SaaS website. If you are using the Console in restricted mode or private mode, you log in locally from the Console agent host.
 
 .Steps
 

@@ -40,6 +40,10 @@ If you don't remove these system variables, the installation fails.
 +
 Choose download the agent installer files or a URL to the files.
 
++
+
+NOTE: Download the "online" agent installer that's meant for use in your network or in the cloud. A separate "offline" installer is available for the Console agent, but it's only supported with private mode deployments.
+
 * NetApp Support Site (needed if you don't already have access to the Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab[NetApp Support Site^], 
 
 . Assign permissions to run the script.

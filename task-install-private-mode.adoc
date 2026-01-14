@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: task-install-private-mode.html
-keywords: install dark site, deploy dark site, install private mode, deploy private mode, install connector dark site, connector dark site, dark site, private mode, no internet
-summary: Deploy the Connector in private mode so that you can use BlueXP with no outbound connectivity to the BlueXP SaaS layer. To get started, install the Connector, set up BlueXP by accessing the user interface that's running on the Connector, and then provide the cloud permissions that you previously set up.
+keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet
+summary: Deploy the NetApp Console in private mode so that you can use it with no outbound connectivity. To get started, install a Console agent, set up the NetApp Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
 ---
 
-= Deploy the agent in private mode 
+= Deploy the Console agent in private mode 
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,25 +13,24 @@ summary: Deploy the Connector in private mode so that you can use BlueXP with no
 :imagesdir: ./media/
 
 [.lead]
-Deploy the agent in private mode so that you can use NetApp Console with no outbound connectivity to the BlueXP software as a service (SaaS) layer. To get started, install the Connector, set up BlueXP by accessing the user interface that's running on the Connector, and then provide the cloud permissions that you previously set up.
+Deploy the NetApp Console in private mode so that you can use it with no outbound connectivity. To get started, install a Console agent, set up the NetApp Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
 
-IMPORTANT: Private mode is only supported with BlueXP (legacy). Use the BlueXP documentation to install private mode.  Private mode is not yet available with the NetApp Console.
 
-== Step 1: Install the Connector
+== Step 1: Install the Console agent
 
-Download the product installer from the NetApp Support Site and then manually install the Connector on your own Linux host.
+Download the product installer from the NetApp Support Site and then manually install the Console on your own Linux host.
 
-If you want to use BlueXP in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], then you should follow separate instructions to get started in those environments. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
+If you want to use the NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], then you should follow separate instructions to get started in those environments. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
 
 .Before you begin
 
-* Root privileges are required to install the Connector.
+* Root privileges are required to install the Console agent.
 
-* Depending on your operating system, either Podman or Docker Engine is required before you install the Connector.
+* Depending on your operating system, either Podman or Docker Engine is required before you install the Console agent.
 
 .Steps
 
-. Download the Connector software from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^]
+. Download the Console agent software from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^]
 +
 Be sure to download the offline installer for private networks without internet access.
 
@@ -42,58 +41,55 @@ Be sure to download the offline installer for private networks without internet 
 [source,cli]
 chmod +x /path/BlueXP-Connector-offline-<version>
 +
-Where <version> is the version of the Connector that you downloaded.
+Where <version> is the version of the Console agent that you downloaded.
 
 . Run the installation script:
 +
 [source,cli]
 sudo /path/BlueXP-Connector-offline-<version>
 +
-Where <version> is the version of the Connector that you downloaded.
+Where <version> is the version of the Console agent that you downloaded.
 
 .Result
 
-The Connector software is installed. You can now set up BlueXP.
+The Console agent is installed. You can now set up the NetApp Console.
 
-== Step 2: Set up BlueXP
+== Step 2: Set up NetApp Console
 
-When you access the BlueXP console for the first time, you'll be prompted to set up BlueXP.
+When you access the NetApp Console for the first time, you'll be prompted to set up NetApp Console.
 
 .Steps
 
-. Open a web browser and enter https://_ipaddress_ where _ipaddress_ is the IP address of the Linux host where you installed the Connector.
+. Open a web browser and enter the IP address of the Linux host where you installed the Console agent.
 +
 You should see the following screen.
 +
-image:screenshot-onprem-darksite-welcome.png[A screenshot of the Welcome page that appears after you enter the IP address of the Connector into your web browser.]
+image:screenshot-onprem-darksite-welcome.png[A screenshot of the Welcome page that appears after you enter the IP address of the Console agent into your web browser.]
 
-. Select *Set Up New BlueXP Connector* and follow the prompts to set up the system.
+. Select *Set Up New Console agent* and follow the prompts to set up the system.
 
-* *System Details*: Enter a name for the Connector and your company name.
+* *System Details*: Enter a name for the Console agent and your company name.
 +
-image:screenshot-onprem-darksite-details.png[A screenshot of the System Details page that prompts you to enter the BlueXP name and Company name.]
-
+image:screenshot-onprem-darksite-details.png[A screenshot of the System Details page that prompts you to enter the Console agent name and Company name.]
 * *Create an Admin User*: Create the admin user for the system.
-+
-This user account runs locally on the system. There's no connection to the auth0 service available through BlueXP.
 
 * *Review*: Review the details, accept the license agreement, and then select *Set Up*.
 
-. Log in to BlueXP using the admin user that you just created.
+. Log in to NetApp Console using the admin user that you just created.
 
 .Result
 
-The Connector is now installed and set up.
+The Console agent is now installed and set up and you can use it to access the NetApp Console in private mode.
 
-When new versions of the Connector software are available, they'll be posted to the NetApp Support Site. link:task-upgrade-connector.html[Learn how to upgrade the Connector].
+When new versions of the Console software are available, they'll be posted to the NetApp Support Site. link:task-upgrade-agent.html[Learn how to upgrade the Console agent].
 
 .What's next?
 
-Provide BlueXP with the permissions that you previously set up.
+Provide the Console agent with the cloud provider permissions that you previously set up.
 
-== Step 3: Provide permissions to BlueXP
+== Step 3: Provide permissions to Console agent
 
-If you want to create Cloud Volumes ONTAP working environments, you'll need to provide BlueXP with the cloud permissions that you previously set up.
+If you want to create Cloud Volumes ONTAP working environments, you'll need to provide the Console agent with the cloud provider permissions that you previously set up.
 
 link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions[Learn how to prepare cloud permissions].
 
@@ -104,14 +100,14 @@ link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions[Learn how t
 
 .AWS IAM role
 --
-Attach the IAM role that you previously created to the Connector EC2 instance.
+Attach the IAM role that you previously created to the Console agent EC2 instance.
 
 include::_include/provide-permissions-iam-role.adoc[]
 --
 
 .AWS access key
 --
-Provide BlueXP with the AWS access key for an IAM user that has the required permissions.
+Provide the Console agent with the AWS access key for an IAM user that has the required permissions.
 
 .Steps
 
@@ -125,15 +121,12 @@ include::_include/azure-provide-permissions-role.adoc[]
 
 .Azure service principal
 --
-Provide BlueXP with the credentials for the Azure service principal that you previously setup.
+Provide the Console agent with the credentials for the Azure service principal that you previously setup.
 
 .Steps
 
 include::_include/azure-provide-permissions-service-principal.adoc[]
 
-.Result
-
-BlueXP now has the permissions that it needs to perform actions in Azure on your behalf.
 --
 
 .Google Cloud service account

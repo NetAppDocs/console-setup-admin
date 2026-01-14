@@ -138,9 +138,9 @@ A Console agent is needed for some additional features and data services. It ena
 
 link:concept-agents.html[Learn more about Console agents].
 
-=== SaaS versus sovereign cloud deployment 
+=== SaaS versus self-hosted
 
-You can start using NetApp Console by signing up for the SaaS offering or deploying it in your sovereign cloud. When you deploy NetApp Console in a sovereign cloud, NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when the Console is deployed in a sovereign cloud.
+You can start using NetApp Console by signing up for the SaaS offering or deploying it in your sovereign cloud (restricted mode) or on your premises (private mode). When you deploy NetApp Console in a sovereign cloud, NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when the Console is deployed in a sovereign cloud.
 
 NetApp continues to offer BlueXP for sites that want no outbound connectivity. BlueXP can be installed on your network with no outbound connectivity. link:task-quick-start-private-mode.html[Learn about BlueXP (private mode) for sites with no internet connectivity.]
 
