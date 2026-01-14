@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-iam-manage-resources.html
 keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management
-summary: Manage the resource hierarchy of your organization by associating resources with specific projects and folders.
+summary: Control user access to resources by adding them to projects and folders in your NetApp Console organization. Grant access to users at the project level. 
 ---
 
-= Manage the resource hierarchy in your NetApp Console organization
+= Add resources to folders and projects in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,13 +13,37 @@ summary: Manage the resource hierarchy of your organization by associating resou
 :imagesdir: ./media/
 
 [.lead]
-When you use associate a member with your organization, you provide permissions at the organization, folder, or project level. To ensure that those members have permissions to access the right resources, you'll need to manage the resource hierarchy of your organization by associating resources with specific projects and folders. A _resource_ is a storage system or Console agent that the Console already manages or is aware of.
+Control user access to resources by adding them to projects and folders in your NetApp Console organization. Grant access to users at the project level.
+
+A _resource_ is an entity that the Console is aware of, such as a storage resource, a Console agent, or a Backup and Recovery workload. 
+
+You can view and manage resources from the *Resources* page in the Console.
+
+== Console resource types
+You can associate several types of resources to projects in your NetApp Console organization:
+
+Storage resources::
+Storage resources are the most common type of resource in your organization and represent both on-premises and cloud storage systems. When you add a storage system to the Console, you can add it to a folder or project. Until then, the Console marks it as undiscovered and does not display it on the *Resources* page.
+
+Console agents::
+If you used a Console agent to discover storage systems, add the agent to the same folder or project. This allows users to perform agent-enabled functions, such as data services or Console-native storage management. You can add agents to folders or projects from the *Agents* page in the Console. link:task-iam-associate-agents.html[Learn how to associate a Console agent with a folder or project].
+
+Keystone subscriptions::
+If you have Keystone subscriptions in your organization, you can view them on the *Resources* page. You can associate Keystone subscriptions with folders or projects to provide access to members who have permissions for those folders or projects.
+
+////
+
+.Backup and Recovery workloads
+Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and Recovery workloads by associating the workloads with specific folders or projects. For example, assign a user access to a Backup and Recovery workload by associating it with a folder or project the user can access and granting the appropriate Backup and Recovery role.
+
+////
+
 
 == View the resources in your organization
 
 You can view both discovered and undiscovered resources associated with your organization. The system finds storage resources and marks them as undiscovered until you add them to the Console.
 
-NOTE: The Resources page excludes Amazon FSx for NetApp ONTAP resources because users cannot associate them with a role. View them on the *Systems* page or from Workloads.
+NOTE: The Console excludes Amazon FSx for NetApp ONTAP resources from the Resources page because users cannot associate them with a role. You can view these resources on the *Systems* page or from Workloads.
 
 .Steps
 
@@ -35,18 +59,14 @@ NOTE: The Resources page excludes Amazon FSx for NetApp ONTAP resources because 
 * *Platform*: Select one or more platforms, such as Amazon Web Services.
 * *Resources*: Select one or more resources, such as Cloud Volumes ONTAP.
 * *Organization, folder, or project*: Select the entire organization, a specific folder, or a specific project.
-+
 
 . Select *Search*.
 
 [#associate-resource]
 == Associate a resource with folders and projects
 
-Associate a resource to a folder or project to make it available.
+Associate a resource to a folder or project to make it available to members who have permissions for that folder or project.
 
-.Before you begin
-
-You should understand how resource association works. link:concept-identity-and-access-management.html#resources[Learn about resources, including when to associate a resource with a folder].
 
 .Steps
 
@@ -62,13 +82,16 @@ Note that you can only select from the folders and projects for which you have a
 
 
 * If you associated the resource with projects, members who have permissions for those projects now have the ability to access the resource from the Console.
-* If you associated the resource with a folder, a _Folder or project admin_ can now access the resource and associate it with a project within the folder. link:concept-identity-and-access-management.html#resources[Learn about associating a resource with a folder].
+* If you associated the resource with a folder, a _Folder or project admin_ can now access the resource and associate it with a project within the folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
 
 .After you finish
 
 If you discover a resource using a Console agent, associate the Console agent with the project to grant access. Otherwise, the Console agent and its associated resource are not accessible by members without the _Organization admin_ role.
 
 link:task-iam-associate-connectors.html[Learn how to associate a Console agent with a folder or project].
+
+
+
 
 [#view-folders-and-projects]
 == View the folders and projects associated with a resource
@@ -91,7 +114,7 @@ NOTE: To see which organization members have access to the resource, link:task-i
 [#remove-resource]
 == Remove a resource from a folder or project
 
-To remove a resource from a folder or project, you need to remove the association between the folder or project and the resource. When you remove the association, it prevents members from managing the resource in the folder or project.
+To remove a resource from a folder or project, remove its association. This prevents members from managing the resource in that folder or project.
 
 
 NOTE: To remove a discovered resource from the entire organization, go to the *Systems* page and remove the system.
@@ -100,9 +123,9 @@ NOTE: To remove a discovered resource from the entire organization, go to the *S
 
 . From the *Resources* page, navigate to a resource in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
 
-. For the folder or project for which you want to remove the resource, select image:icon-delete.png[An icon of a garbage can]
+. To remove a resource from a folder or project, select image:icon-delete.png[An icon of a garbage can] next to the folder or project.
 
-. Confirm that you want to remove the association by selecting *Delete*.
+. Select *Delete* to remove the association.
 
 
 == Related information

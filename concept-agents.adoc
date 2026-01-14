@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept-agents.html
-keywords: concept, Console agents, learn about agents, what are connectors, what is a connector, what's a connector, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent
-summary: A _Console agent_ is NetApp software running in your cloud network or on-premises network. You use a Console agent to connect NetApp Console services to your storage environments.  
+keywords: concept, connectors, learn about connectors, what are connectors, what is a connector, what's a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent
+summary: You use a Console agent to connect NetApp Console to your infrastructure and securely orchestrate storage solutions across AWS, Azure, Google Cloud, or on-premises environments, as well as use data protection servicers.   
 ---
 
 = Learn about NetApp Console agents
@@ -13,70 +13,66 @@ summary: A _Console agent_ is NetApp software running in your cloud network or o
 :imagesdir: ./media/
 
 [.lead]
-A _Console agent_ runs in your cloud network or on-premises network. You use a Console agent to connect NetApp Console services to your storage environments.  
+You use a Console agent to connect NetApp Console to your infrastructure and securely orchestrate storage solutions across AWS, Azure, Google Cloud, or on-premises environments, as well as use data protection services.  
 
-== What you can do without a Console agent
+A Console agent enables you to:
 
-Some Console features and services are available if you don't deploy a Console agent:
+* Orchestrate storage management tasks from the NetApp Console such as provisioning Cloud Volumes ONTAP, setting up storage volumes, using data classification, and more.
+* Authenticate using your cloud provider's IAM roles for subscription billing integration
+* Use advanced data services (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, and NetApp Cloud Tiering)
+* Use the Console in restricted mode.
 
-* Amazon FSx for NetApp ONTAP
-+
-Some actions require a Console agent or a NetApp Workloads link. https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html[Learn which actions require a Console agent or link^]
+If you don't need advanced orchestration or data protection, you can centrally manage on-premises ONTAP clusters and cloud-native storage services without deploying an agent. Monitoring and data mobility tools are also available.
 
-* Automation hub
+The following table shows which features and services you can use with and without a Console agent.
 
-* Azure NetApp Files
-+
-You don't need a Console agent to manage Azure NetApp Files, but one is required to use NetApp Data Classification to scan Azure NetApp Files.
 
-* Google Cloud NetApp Volumes
+[cols=3*,options="header",cols="40,20a,20a",width="100%"]
+|===
+|  | Available with agent| Available without agent
+3+| *Supported Storage systems*:
 
-* NetApp Copy and Sync
 
-* Digital advisor
+| Amazon FSx for ONTAP| Yes (discovery and management features) | Yes (discovery only)
+| Amazon S3 storage | Yes | No
+| Azure Blob storage | Yes | Yes
+| Azure NetApp Files | Yes | Yes
+| Cloud Volumes ONTAP | Yes | No
+| E-Series systems | Yes | No
+| Google Cloud NetApp Volumes| Yes | Yes
+| Google Cloud storage buckets | Yes | No
+| StorageGRID systems | Yes | No
+| On-premises ONTAP cluster  (advanced management and discovery) | Yes (advanced management and discovery) | No (basic discovery only)
+3+| *Available storage management services*:
+| Alerts | Yes | No
+| Automation hub | Yes| Yes
+| Digital Advisor (Active IQ) | Yes | No
+| License and subscription management  | Yes | No
+| Economic efficiency | Yes | No
+| Home page dashboard metrics | Yes^2^ | No
+| Lifecycle planning | Yes | No^1^
+| Sustainability | Yes | No
+| Software updates | Yes  | Yes
+| NetApp Workloads | Yes | Yes
 
-* Monitor license usage, subscription monitoring requires a Console agent
-+
-You can usually add a license to the NetApp Console without a Console agent.
-+
-An agent is required to add Cloud Volumes ONTAP _node-based_ licenses because the data comes from the licenses installed on Cloud Volumes ONTAP systems.
+3+| *Available data services*:
+| NetApp Backup and Recovery | Yes | No
+| Data Classification | Yes | No
+| NetApp Cloud Tiering | Yes | No
+| NetApp Copy and Sync | Yes | No
+| NetApp Disaster Recovery | Yes | No
+| NetApp Ransomware Resilience | Yes | No
+| NetApp Volume Caching | Yes | No
 
-* Direct discovery of on-premises ONTAP clusters
-+
-You don't need a Console agent to add an on-premises ONTAP cluster to the Console, but one is required for additional Console features and data services.
-+
-https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html[Learn more about discovery and management options for on-premises ONTAP clusters^]
 
-* Software updates
 
-* Sustainability
+|===
 
-* NetApp Workloads
+^1^ You can view Lifecycle planning without a Console agent, but a Console agent is required to initiate actions.
 
-== When a Console agent is required
+^2^ Accurate metrics on the Home page require appropriately sized and configured Console agents.
 
-In standard mode, the Console requires a Console agent for:
 
-* Alerts
-* Amazon FSx for ONTAP management features
-* Amazon S3 storage
-* Azure Blob storage
-* NetApp Backup and Recovery
-* Data Classification
-* Cloud Volumes ONTAP
-* NetApp Disaster Recovery
-* E-Series systems
-* Economic efficiency ^1^
-* Google Cloud Storage buckets
-* On-premises ONTAP cluster integration with NetApp data services
-* NetApp Ransomware Resilience
-* StorageGRID systems
-* NetApp Cloud Tiering
-* NetApp Volume Caching
-
-^1^ You can access these services without a Console agent, but a Console agent is required to initiate actions.
-
-You always need a Console agent to use the Console in restricted mode.
 
 [[agents-must-be-operational-at-all-times]]
 == Console agents must be operational at all times
@@ -115,14 +111,14 @@ link:concept-modes.html[Learn about NetApp Console deployment modes].
 [[agent-installation]]
 == How to install a Console agent
 
-You can install a Console agent directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host or in your VCenter environment. How you get started depends on whether you're using the Console in standard mode or restricted mode.
+You can install a Console agent directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host or in your VCenter environment.
 
 * link:concept-modes.html[Learn about NetApp Console deployment modes]
 * link:task-quick-start-standard-mode.html[Get started with NetApp Console in standard mode]
 * link:task-quick-start-restricted-mode.html[Get started with NetApp Console in restricted mode]
 
 
-== Cloud Permissions
+== Cloud provider permissions
 
 You need specific permissions to create the Console agent directly from the NetApp Console and another set of permissions for the Console agent itself. If you create the Console agent in AWS or Azure directly from the Console, then the Console creates the Console agent with the permissions that it needs.
 
@@ -150,7 +146,7 @@ It's your responsibility to update the Console agent policies as new permissions
 
 NetApp updates agent software monthly to add features and improve stability. Some Console features, like Cloud Volumes ONTAP and on-premises ONTAP cluster management, rely on the Console agent version and settings.
 
-In standard or restricted mode, the Console agent updates automatically if it has internet access. 
+When you install your agent in the cloud, the Console agent updates automatically if it has internet access. 
 
 
 == Operating system and VM maintenance

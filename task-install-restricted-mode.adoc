@@ -19,6 +19,8 @@ Deploy the Console agent in restricted mode so that you can use the NetApp Conso
 
 Install the Console agent from your cloud provider's marketplace or manually on a Linux host.
 
+You need to have prepared your environment before you install the Console agent. You can install from the AWS Marketplace, from the Azure Marketplace, or manually on your own Linux host running in AWS, Azure, or Google Cloud.
+
 // start tabbed area
 
 [role="tabbed-block"]
@@ -172,8 +174,11 @@ Azure deploys the virtual machine with the specified settings. The virtual machi
 Set up the NetApp Console.
 --
 
-.Manual install
+.Manual install (must use for Google Cloud)
 --
+
+You can install the Console agent manually on your own Linux host running in AWS, Azure, or Google Cloud.
+
 include::_include/manual-install.adoc[tag=before]
 
 * You need to disable the configuration check that verifies outbound connectivity during installation. The manual install fails if this check is not disabled. link:task-troubleshoot-agent.html[Learn how to disable configuration checks for manual installations.]
