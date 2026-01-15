@@ -19,9 +19,15 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 === NetApp Console administration
 This release includes the following:
 
+.Role-Based Access for Federated Groups in NetApp Console
+NetApp Console supports assigning roles to federated groups (for example, Active Directory groups), allowing administrators to automate user onboarding and offboarding based on group membership in the organization's identity provider (IdP). This feature reduces administrative overhead, and ensures secure, consistent access by instantly updating Console access as group memberships change.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-federated-group-to-your-organization[Learn how to provide access to a federated group to your organization.]
 
 .Support for federation when NetApp Console is in restricted mode
 You can now enable federation for a NetApp Console organization that is in restricted mode. This allows users to log in to the Console using their corporate credentials while maintaining the security benefits of restricted mode.
+
+
 
 .Read-only mode 
 You can set a NetApp Console organization to read-only mode. In read-only mode, users can view resources and settings but cannot make any changes. An Org admin or Super admin can enable read-only mode for an organization. When read-only mode is enabled, users with administrative roles must manually elevate their permissions to make changes as needed.

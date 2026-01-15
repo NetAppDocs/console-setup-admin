@@ -188,6 +188,7 @@ includedPermissions:
 - storage.buckets.list
 - storage.objects.create
 - storage.objects.delete
+- storage.objects.list
 - storage.objects.update
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
