@@ -17,6 +17,15 @@ Learn what's new with NetApp Console administration features: identity and acces
 
 //All links and images must use the absolute URL.
 
+== 13 January 2026
+
+include::_whatsnew/2026-01-12.adoc[]
+
+== 10 December 2025
+
+include::_whatsnew/2025-12-10.adoc[]
+
+
 
 == 10 November 2025
 

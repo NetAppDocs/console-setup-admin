@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: concept-overview.html
 keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works
-summary: The NetApp Console provides centralized management of NetApp storage and data services across on-premises and cloud environments at enterprise scale.  
+summary: The Console unifies storage management and protection across hybrid multi-cloud with integrated data services to protect and optimize data.
 ---
 
 = Learn about NetApp Console
@@ -13,19 +13,17 @@ summary: The NetApp Console provides centralized management of NetApp storage an
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Console provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration, that is highly secure and compliant. 
-
-It is available as a service (SaaS) platform that provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
-
-== Features
-
 The Console unifies storage management and protection across hybrid multi-cloud with integrated data services to protect and optimize data.
 
-=== Centralized storage management
+It is available as a service (SaaS) platform or a self-hosted option that you can install in your sovereign cloud. It provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
+
+
+
+== Centralized storage management
 
 Discover, deploy, and manage cloud and on-premises storage with the Console.
 
-==== Supported cloud and on-premises storage
+=== Supported cloud and on-premises storage
 
 You can manage the following types of storage from the Console:
 
@@ -45,13 +43,13 @@ Cloud object storage::
 * Azure Blob storage
 * Google Cloud Storage
 
-==== Storage management 
+=== Storage management 
 
 Within the Console, _systems_ represent discovered or deployed storage. You can select a _system_ to integrate it with NetApp data services or manage storage, such as adding volumes.
 
-image:screenshot-canvas.png["A screenshot of the Console that shows several systems, one of which is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
+image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
 
-=== Integrated data services and storage management to protect, secure, and optimize data
+== Integrated data services and storage management to protect, secure, and optimize data
 
 The Console provides data services to secure and maintain storage availability.
 
@@ -140,11 +138,11 @@ A Console agent is needed for some additional features and data services. It ena
 
 link:concept-agents.html[Learn more about Console agents].
 
-=== Deployment modes
+=== SaaS versus sovereign cloud deployment 
 
-NetApp offers two deployment modes for the NetApp Console: _Standard mode_ uses a software as a service (SaaS) layer for full functionality, while _restricted mode_ limits outbound connectivity.
+You can start using NetApp Console by signing up for the SaaS offering or deploying it in your sovereign cloud. When you deploy NetApp Console in a sovereign cloud, NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when the Console is deployed in a sovereign cloud.
 
-NetApp continues to offer BlueXP for sites that need no outbound connectivity. BlueXP is available in private mode only. link:task-quick-start-private-mode.html[Learn about BlueXP (private mode) for sites with no internet connectivity.]
+NetApp continues to offer BlueXP for sites that want no outbound connectivity. BlueXP can be installed on your network with no outbound connectivity. link:task-quick-start-private-mode.html[Learn about BlueXP (private mode) for sites with no internet connectivity.]
 
 link:concept-modes.html[Learn more about deployment modes].
 

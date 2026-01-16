@@ -19,7 +19,7 @@ If you have a NetApp Support Site account, you can also view the link:https://kb
 
 == Common error messages and resolutions
 
-The table lists common error messages and their resolution suggestions:
+This table lists common error messages and shows how to fix them:
 
 [options="header",cols="19,27,27"]
 |===
@@ -31,7 +31,7 @@ a|
 * Verify that the Service Manager service is active.
 * Verify that all containers are running.
 * Ensure your firewall allows access to the service at port 8888.
-* If the issue persists, contact support.
+* If you still have problems, contact support.
 
 a|Cannot access the NetApp agent UI
 a|This message appears when trying to access the IP address of an agent. The agent can fail to initialize if it doesn't have the correct network access or if it is unstable.
@@ -50,8 +50,7 @@ a|
 a|Unable to load support information for the agent.
 a|This message displays if the agent cannot access your support account.
 a|
-* 
-*.
+* Verify that the agent has outbound access to the required endpoints. link:reference-networking-saas-console.html[Learn more about required network access endpoints.]
 |===
 
 [[check-agent-status]]
@@ -96,6 +95,25 @@ The Console displays the version at the top of the page.
 == Verify network access
 Ensure that the Console agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access points.]
 
+=== Run configuration checks on the Console agent
+
+Run configuration checks on Console agents from the Console or or the Agent maintenance console to make sure they are connected.
+
+You can also run configuration checks using the agent maintenance console. link:reference-agent-maint-console-config-checker.html[Learn more about using the config-checker validate command.]
+
+
+NOTE: You can only validate agents that have a status of *Connected*.
+
+.Steps from the Console
+. Select *Administration > Agents*.
+. Select the action menu for a Console agent that you want to check and choose *Validate*.
+
++
+image:screenshot-agent-validate.png[A screenshot that shows the Validate option in the Actions menu for an agent.]
++
+Validation can take up to 15 minutes. Results show when it is done.
+
+
 
 [[troubleshoot-installation]]
 == Console agent installation issues
@@ -109,15 +127,11 @@ include::_include/endpoints-config-check-note.adoc[]
 
 [[disable-config-check]]
 === Disable configuration checks for manual installations
-There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example:
-
-* When manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fails.
-
-* You may also want to disable these checks if you are continuing to use the previous endpoint list for agent upgrades. 
+There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example, when manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fail. 
 
 .Steps
 
-You disable the configuration check by setting the _skipConfigCheck_ flag in the _com/opt/application/netapp/service-manager-2/config.json_ file. By default, this flag is set to false and the configuration check verifies outbound access for the agent. Set this flag to true to disable the check. You should be familiar with JSON syntax before completing this step. 
+You disable the configuration check by setting the _skipConfigCheck_ flag in the _com/opt/application/netapp/service-manager-2/config.json_ file. By default, this flag is set to false and the configuration check verifies outbound access for the agent. Set this flag to true to disable the check. Be familiar with JSON syntax before completing this step.
 
 To re-enable the configuration check, use these steps and set the _skipConfigCheck_ flag to false.
 
@@ -148,23 +162,6 @@ systemctl stop netapp-service-manager.service
 ----
 systemctl restart netapp-service-manager.service
 ----
-
-
-
-
-=== Failed installation on the endpoints used for upgrades
-If you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, unmark the *Validation agent configuration* check box or skip the configuration check when installing into a VCenter.
-
-NetApp recommends updating your firewall rules to allow access to the link:reference-networking-saas-console.html[current endpoints] at your earliest convenience. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoints].
-
-Be sure to verify that the only error is related to the previous endpoints:
-
- 
-* \https://bluexpinfraprod.eastus2.data.azurecr.io
-* \https://bluexpinfraprod.azurecr.io 
-
-If there are other errors, you'll need to resolve them before proceeding.
-
 
 
 

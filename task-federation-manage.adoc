@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-federation-manage.html
-keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity
+keywords: federation, NetApp Console, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity
 summary: After you've added a federated connection, you can manage it in the NetApp Console. You can view the status of the connection, enable or disable it as needed.
 ---
 
@@ -15,14 +15,22 @@ summary: After you've added a federated connection, you can manage it in the Net
 [.lead]
 You can manage your federation in the NetApp Console. You can disable it, update expired credentials, as well as disable it if you no longer need it.
 
-NOTE: If you configured federation using NetApp Cloud Central, import it via the *Federation* page to manage it in the Console. link:task-federation-import.html[Learn how to import your federation]
-
-You can also add a verified domain to an existing federation, which allows you to use multiple domains for your federated connection.
-
-NOTE: Federation management events such as enabling, disabling, and updating federations display in the Timeline. link:task-monitor-cm-operations.html[Learn more about monitoring operations in the NetApp Console.]
-
 .Required roles
 The Federation admin role is required to make create and manage federations. Federation viewer can view the Federation page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+
+You can also add an additional verified domain to an existing federation, which allows you to use multiple domains for your federated connection.
+
+[NOTE] 
+====
+* If you configured federation using NetApp Cloud Central, import it via the *Federation* page to manage it in the Console. link:task-federation-import.html[Learn how to import your federation]
+
+* You can view Federation management events such as enabling, disabling, and updating federations on the Audit page. link:task-monitor-cm-operations.html[Learn more about monitoring operations in the NetApp Console.]
+====
+
+
+
+
+
 
 
 == Enable a federation

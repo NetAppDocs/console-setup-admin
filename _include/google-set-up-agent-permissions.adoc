@@ -14,9 +14,9 @@ It's your responsibility to update the custom role as new permissions are added 
 
 .. Create a custom role by using the `gcloud iam roles create` command.
 +
-The following example creates a role named "connector" at the project level:
+The following example creates a role named "agent" at the project level:
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud[Google Cloud docs: Creating and managing custom roles^]
 
