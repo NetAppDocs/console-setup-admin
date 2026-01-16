@@ -34,7 +34,7 @@ You can set a NetApp Console organization to read-only mode. In read-only mode, 
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html[Learn how to enable read-only mode for a Console organization.]
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings[Learn how to elevate your role when your organization is in read-only mode.]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings.html[Learn how to elevate your role when your organization is in read-only mode.]
 
 
 
