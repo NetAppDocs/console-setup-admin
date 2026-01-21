@@ -9,9 +9,9 @@ This release of the Console agent includes security improvements, bug fixes, and
 
 
 .Ability to validate network connections of Console agents
-You can now validate network connections of connected Console agents directly from the NetApp Console. This feature helps verify connectivity and troubleshoot issues with Console agents. 
+You can now validate network connections of connected Console agents directly from the NetApp Console. This feature helps verify connectivity and troubleshoot issues with Console agents. This is in addition to the existing ability to run network diagnostics from the Console agent maintenance console command line interface (CLI).
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access[Learn how to run configuration checks on Console agents.]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access[Learn how to run configuration from NetApp Console.]
 
 
 
