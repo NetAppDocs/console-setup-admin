@@ -68,3 +68,19 @@ Some NetApp data services as well as Cloud Volumes ONTAP require the agent to ha
 
 ** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access[Endpoints for Cloud Volumes ONTAP in Google Cloud]
 
+=== Endpoints for Workloads
+
+The Console agent must be able to access the following endpoint for NetApp Workloads. 
+
+[cols=2*,options="header,autowidth"]
+
+|===
+| Endpoints
+| Purpose
+
+
+a| \https://api.workloads.netapp.com
+
+a| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
+
+|===
