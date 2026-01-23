@@ -29,7 +29,7 @@ sidebar:
               url: /concept-modes.html
             - title: NetApp support accounts
               url: /task-adding-nss-accounts.html
-            - title: UnderstandConsole agents
+            - title: Understand Console agents
               url: /concept-agents.html
             - title: Identity and access management
               url: /concept-identity-and-access-management.html
