@@ -260,7 +260,7 @@ sidebar:
         - title: Agent maintenance console
           entries:
             - title: Configuration checks
-              url: /reference-agent-maint-console.html
+              url: /reference-agent-maint-console-config-checker.html
             - title: Transparent proxy 
               url: /reference-agent-maint-console-proxy.html
         - title: Cloud Provider agent permissions and network requirements
