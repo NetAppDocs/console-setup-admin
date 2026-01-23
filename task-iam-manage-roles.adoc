@@ -98,7 +98,6 @@ Members can have multiple roles within the same project and in different project
 
 Your access role strategy should align with the way you have organized your NetApp resources. 
 
-TIP: A member who is assigned the Organization admin role can't be assigned any additional roles. They already have permissions across the entire organization. A member with the Folder or project admin role can't be assigned any other roles within the folder or project where they have that role already. Both of these roles provide access to all services within the scope that they are assigned.
 
 .Steps
 
