@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-quick-start-private-mode.html
-keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp
-summary: Private mode is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes AWS Secret Cloud, AWS Top Secret Cloud, and Azure IL6. Private mode is not yet available with the NetApp Console. NetApp continues to support these environments with the BlueXP legacy interface. link:<doc link to PDF>
+keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp, netapp console private mode
+summary: Private mode is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes AWS Secret Cloud, AWS Top Secret Cloud, and Azure IL6. Private mode is not yet available with the NetApp Console. 
 ---
 
 = Getting started workflow (private mode)
@@ -14,13 +14,13 @@ summary: Private mode is typically used with on-premises environments that have 
 
 [.lead]
 
-You can install NetApp Console on-premises or in a secure cloud environment. Private mode is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes AWS Secret Cloud, AWS Top Secret Cloud, and Azure IL6. NetApp continues to support these environments with the legacy BlueXP interface. 
+You can install NetApp Console on-premises or in a secure cloud environment. Private mode is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes AWS Secret Cloud, AWS Top Secret Cloud, and Azure IL6.
 
 
 
 == Features and data services supported with private mode
 
-The following table can help you quickly identify which BlueXP services and features are supported when you install NetApp Console  on-premises or in a secure cloud environment.
+The following table can help you quickly identify which services and features are supported when you install NetApp Console on-premises or in a secure cloud environment.
 
 Note that some services might be supported with limitations. 
 

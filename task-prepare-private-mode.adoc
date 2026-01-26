@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-prepare-private-mode.html
 keywords: private mode requirements, requirements, install options, private mode networking, dark site, private mode permissions, permissions for private mode, networking for private mode
-summary: Prepare your environment before you deploy BlueXP in private mode. You need to review host requirements, prepare networking, set up permissions, and more.
+summary: Prepare your environment before you deploy NetApp Console in private mode. You need to review host requirements, prepare networking, set up permissions, and more.
 ---
 
 = Prepare for deployment in private mode
@@ -13,9 +13,9 @@ summary: Prepare your environment before you deploy BlueXP in private mode. You 
 :imagesdir: ./media/
 
 [.lead]
-Prepare your environment before you deploy BlueXP in private mode. You need to review host requirements, prepare networking, set up permissions, and more.
+Prepare your environment before you deploy NetApp Console in private mode. You need to review host requirements, prepare networking, set up permissions, and more.
 
-NOTE: To use BlueXP in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], follow the specific instructions for those environments. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
+NOTE: To use NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], follow the specific instructions for those environments. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
 
 == Step 1: Understand how private mode works
 Private mode allows you to use the NetApp Console with no outbound connectivity. This mode is designed for environments that require heightened security and isolation.
@@ -93,7 +93,7 @@ include::_include/networking.adoc[tag=azure-public-ip]
 //Proxy server
 include::_include/networking.adoc[tag=proxy]
 +
-With private mode, the only time that BlueXP sends outbound traffic is to your cloud provider in order to create a Cloud Volumes ONTAP system.
+With private mode, the only time that NetApp Console sends outbound traffic is to your cloud provider in order to create a Cloud Volumes ONTAP system.
 
 Ports::
 There's no incoming traffic to the Console agent, unless you initiate it.
@@ -189,7 +189,7 @@ include::_include/azure-set-up-service-principal.adoc[tags=secret]
 
 .Result
 
-Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. Enter this information in BlueXP when you add an Azure account.
+Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. Enter this information in NetApp Console when you add an Azure credential.
 --
 
 .Google Cloud service account
