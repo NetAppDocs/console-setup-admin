@@ -60,10 +60,15 @@ Where <version> is the version of the Console agent that you downloaded.
 ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
-You'll need to add proxy information if your network requires a proxy for internet access. You can add either an explicit proxy during installation. The --proxy and --cacert parameters are optional and you won't be prompted to add them. If you have an explicit proxy server, you will need to enter the parameters as shown. 
+You'll need to add proxy information if your network requires a proxy for internet access. You can add an explicit proxy during installation. The `--proxy` and `--cacert` parameters are optional and you won't be prompted to add them. If you have an explicit proxy server, you will need to enter the parameters as shown. 
+
+NOTE: If you want to configure a transparent proxy, you can do so after you've installed. link:reference-agent-maint-console-proxy.html[Learn about the agent maintenance console]
+
 +
+
 Here is an example configuring an explicit proxy server with a CA-signed certificate:
 +
+
 [source,cli]
 ----
 ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
@@ -89,8 +94,6 @@ For example:
 +
 \http://bxpproxyuser:netapp1\!@address:3128
 
-
-NOTE: If you want to configure a transparent proxy, you can do so after you've installed. link:reference-agent-maint-console-proxy.html[Learn about the agent maintenance console]
 
 . If you used Podman, you'll need to adjust the aardvark-dns port.
 .. SSH to the Console agent virtual machine.
