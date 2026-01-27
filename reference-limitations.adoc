@@ -32,7 +32,7 @@ See Knowledge Base article link:https://kb.netapp.com/Advice_and_Troubleshooting
 
 === SSL decryption supported only for Cloud Volumes ONTAP 
 
-If you use NetApp data services with Cloud Volumes ONTAP, create a dedicated agent for Cloud Volumes ONTAP where you can use a transparent proxy server. Transparent proxy servers are supported for agents associated with Cloud Volumes ONTAP. You cannot use a transparent proxy for an agent if it is used with other NetApp data services.
+Transparent proxy servers are supported for agents associated with Cloud Volumes ONTAP only. You cannot use a transparent proxy for an agent if it is used with other NetApp data services. If you use NetApp data services with Cloud Volumes ONTAP, create a dedicated agent for Cloud Volumes ONTAP where you can use a transparent proxy server.
 
 For enhanced security, you have the option to link:task-installing-https-cert.html[install an HTTPS certificate signed by a certificate authority (CA)].
 
