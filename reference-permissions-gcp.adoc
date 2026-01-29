@@ -100,7 +100,6 @@ includedPermissions:
 - compute.firewalls.list
 - compute.forwardingRules.create
 - compute.forwardingRules.delete
-- compute.forwardingRules.update
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
 - compute.globalOperations.get
@@ -189,6 +188,7 @@ includedPermissions:
 - storage.buckets.list
 - storage.objects.create
 - storage.objects.delete
+- storage.objects.list
 - storage.objects.update
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
@@ -202,6 +202,7 @@ includedPermissions:
 - iam.serviceAccounts.list
 - iam.serviceAccountKeys.create
 - storage.objects.get
+- storage.objects.list
 - storage.buckets.getIamPolicy
 
 
@@ -252,7 +253,6 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | compute.forwardingRules.create| Create forwarding rules for traffic routing to backend services.  | No | Yes | No
 | compute.forwardingRules.delete | Delete existing forwarding rules. | No | Yes | No
 | compute.forwardingRules.get | Retrieve details about existing forwarding rules. | No | Yes | No
-| compute.forwardingRules.update | Update existing forwarding rules for traffic management. | No | Yes | No
 | compute.forwardingRules.setLabels | Set or update labels on forwarding rules for organization. | No | Yes | No
 | compute.globalOperations.get | To get the status of operations. | Yes | Yes | No
 | compute.healthChecks.create .4+| Create and manage health checks to monitor backend service health. | No | Yes | No
@@ -319,7 +319,6 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | logging.privateLogEntries.list  | Yes | Yes | No
 | logging.logEntries.create .2+| Create and route log entires for monitoring, debugging, and auditing. | Yes | Yes | No
 | logging.logEntries.route |  Yes | Yes | No
-
 | resourcemanager.projects.get | To support multi-projects. | Yes | Yes | No
 | storage.buckets.create .5+| To create and manage a Google Cloud Storage bucket for data tiering. | Yes | Yes | No
 | storage.buckets.delete  | No | Yes | Yes
