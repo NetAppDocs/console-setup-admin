@@ -1,0 +1,22 @@
+//All links and images must use the absolute URL.
+
+
+=== Console agent 4.4.0
+
+The 4.4.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes
+
+
+
+
+
+=== NetApp Console administration
+This release includes the following:
+
+.Access NetApp Data Infrastructure Insights from NetApp Console
+NetApp Data Infrastructure Insights is now accessible from within NetApp Console. This integration allows users to navigate seamlessly between the two platforms, enhancing their ability to monitor and manage their data infrastructure. Access Data Infrastructure Insights directly from the left navigation pane in NetApp Console. Go to *Governance* > *Data Infrastructure Insights* to explore insights and analytics about your data environment.
+
+
+
+
