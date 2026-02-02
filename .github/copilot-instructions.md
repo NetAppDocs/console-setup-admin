@@ -142,7 +142,11 @@ include::_include/tasks-role.adoc[tag=add-role]
   - Example: "Use the NetApp Console's Identity and Access Management (IAM) to organize your NetApp resources... The Console provides access roles..."
 
 ### Console Agent Terminology
-- **First reference**: Always use "Console agent" (capitalized)
+- **First reference**: Always use "Console agent" (capitalize te word "Console")
+  - ✅ Correct: "Console agents are initially tied to the project where they are created..."
+  - ✅ Correct: "Select *Console Agent*.
+  - ❌ Incorrect: "A console agent is created by the organization admin..."
+  - ❌ Incorrect: "A Console Agent is created by the organization admin..."
 - **Subsequent references**: Can use either "Console agent" or "agent" (lowercase when generic)
 - Example: "Console agents are initially tied to the project where they are created, but admins can add them to other projects or associate an agent with a folder..."
 
@@ -152,6 +156,89 @@ include::_include/tasks-role.adoc[tag=add-role]
 - Example: `https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html[Learn about the API for NetApp Console IAM^]`
 - Internal links (relative paths ending in `.html`) do NOT use `^`
 
+## Voice and Active Writing
+
+### Use Active Voice (Primary Rule)
+**Active voice makes writing clear, direct, and user-focused.** The subject performs the action, making it easier for users to understand who does what.
+
+**Pattern:** [Subject] + [Verb] + [Object]
+
+**CORRECT examples from this codebase:**
+- ✅ "The Console provides access roles..." (Console = subject, provides = active verb)
+- ✅ "Console agents enable you to orchestrate storage management tasks..." (agents = subject, enable = active verb)
+- ✅ "You assign users permissions to the project..." (You = subject, assign = active verb)
+- ✅ "NetApp Console supports management of both on-premises and cloud storage systems..." (Console = subject, supports = active verb)
+
+**INCORRECT examples (passive voice):**
+- ❌ "A project is used to provide access to a storage resource." 
+  - ✅ BETTER: "Use a project to provide access to a storage resource."
+  - ✅ OR: "Projects provide access to storage resources."
+
+- ❌ "Permissions are provided by attaching a custom role to the service account."
+  - ✅ BETTER: "Provide permissions by attaching a custom role to the service account."
+  - ✅ OR: "The service account gets permissions from the custom role."
+
+- ❌ "The role is up to date as new permissions are added in subsequent releases."
+  - ✅ BETTER: "Keep the role up to date as subsequent releases add new permissions."
+
+- ❌ "An Azure Private Link connection is used between Cloud Volumes ONTAP..."
+  - ✅ BETTER: "Cloud Volumes ONTAP uses an Azure Private Link connection..."
+
+### When Passive Voice is Acceptable
+
+Use passive voice **only** in these specific cases:
+
+1. **The actor is unknown or irrelevant**
+   - ✅ "Two policies are required due to a maximum character size limit." (AWS imposed the limit, but the actor isn't important)
+
+2. **You want to avoid blaming users**
+   - ✅ "If the deployment fails, a warning message is displayed." (better than "If you fail to deploy correctly, the system shows...")
+
+3. **Describing prerequisites or system requirements**
+   - ✅ "A Console agent is required to initiate actions."
+   - ✅ "Several APIs are required to deploy Cloud Volumes ONTAP."
+
+### Common Passive Patterns to Avoid
+
+Watch for these passive voice indicators and rewrite:
+
+| Passive Pattern | Active Rewrite |
+|----------------|----------------|
+| "is used to" | "use" or "[subject] uses" |
+| "are used for" | "use" or "[subject] uses" |
+| "is provided by" | "[subject] provides" |
+| "are provided by" | "[subject] provides" |
+| "is configured by" | "[subject] configures" or "Configure" |
+| "is managed by" | "[subject] manages" or "Manage" |
+| "is required" | "requires" or "must" (when acceptable passive) |
+| "are required" | "require" or "must" (when acceptable passive) |
+
+### Quick Test for Active Voice
+
+Ask: **"Can I identify who or what is doing the action?"**
+- If YES and it's clear → Active voice ✅
+- If NO or unclear → Likely passive voice, rewrite
+
+### Examples from Concept Pages
+
+**Concept pages should use active voice for "How..." titles:**
+
+❌ WRONG: "How data is replicated by SnapCenter"
+✅ CORRECT: "How SnapCenter replicates data"
+
+❌ WRONG: "How resources are managed in the Console"
+✅ CORRECT: "How the Console manages resources"
+
+### Implementation Checklist
+
+When writing or reviewing content:
+
+1. ☑ Search for passive indicators: "is/are + past participle" (is used, are managed, is configured)
+2. ☑ Identify the true subject (who/what performs the action)
+3. ☑ Rewrite with subject performing the action
+4. ☑ Verify it's one of the acceptable passive voice cases if keeping passive
+5. ☑ Read aloud - active voice sounds more direct and natural
+
 ## Content Structure Guidelines
 
 ### Task Files Structure
@@ -160,7 +247,7 @@ include::_include/tasks-role.adoc[tag=add-role]
 3. **Overview** section (when applicable)
 4. **Prerequisites** (as `.Before you begin` or bullet list)
 5. **Steps** with numbered procedures
-6. **Result** or **What's next** sections
+
 
 ### Reference Files Structure
 - Permission files contain JSON/YAML policy documents in code blocks
