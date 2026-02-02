@@ -859,7 +859,7 @@ projects and can be moved to folders later."
 ✅ CORRECT:
 "Associating an agent with a project enables management of resources in that project, 
 while associating an agent with a folder lets folder or project admins decide which 
-projects should use the agent. Agents must be linked to specific projects to provide 
+projects should use the agent. Agents must be associated to specific projects to provide 
 management capabilities."
 
 ❌ INCORRECT:
@@ -890,6 +890,6 @@ When authoring or reviewing NetApp Console documentation:
 3. **Validate cloud-specific terms** match the provider's official terminology (IAM role ARN for AWS, service principal for Azure, service account for GCP)
 4. **Use exact deployment mode names** (standard mode, restricted mode, private mode - never "offline" or "air-gapped")
 5. **Maintain Console agent naming consistency** (first reference: "Console agent", subsequent: "Console agent" or "agent")
-6. **Use precise agent relationship language** ("associated with", "linked to", "enables management of")
+6. **Use precise agent relationship language** ("associated with", "enables management of")
 
 These guidelines ensure users can reliably understand and apply IAM concepts, successfully configure multi-cloud deployments, and correctly deploy and manage Console agents.
