@@ -821,7 +821,7 @@ permissions allow API calls to various AWS services."
 
 #### 3.3 Agent-Resource Relationships and Association
 
-**Rule:** Use precise language when describing how agents relate to projects, folders, and resources. Agents are "associated with" or projects/folders, and this association "enables management" of resources.
+**Rule:** Use precise language when describing how agents relate to projects, folders, and resources. Agents are "associated with" or projects/folders, and this association "enables management" of resources. Do not say that an agent is "linked" to a project, folder or organization.
 
 **Standard Terminology:**
 - "Console agents are initially associated to the project where they are created"
