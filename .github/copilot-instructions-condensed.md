@@ -35,8 +35,7 @@ Always use exact order: Organization → Folders → Projects → Resources
 Subject performs action: "Console agents enable you to..." NOT "Storage is managed by..."
 Acceptable passive only for: unknown actor, avoiding blame, prerequisites
 
-### Multi-Cloud Patterns
-Check parallel files when updating: `task-adding-{aws|azure|gcp}-accounts.adoc`
+
 
 ## AsciiDoc Patterns
 
