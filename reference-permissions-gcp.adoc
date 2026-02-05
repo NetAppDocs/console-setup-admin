@@ -425,7 +425,7 @@ Added and removed permissions are noted below.
 
 === 09 February 2026
 
-The `compute.forwardingRules.update` permission is added to facilitate SVM-based management of the Cloud Volumes ONTAP systems converted from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager.
+The `compute.forwardingRules.update` and `cloudbuild.builds.get` permissions are added to facilitate SVM-based management of the Cloud Volumes ONTAP systems converted from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager.
 
 === 08 December 2025
 NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to deploy and run the Console agent in Google Cloud. The following permissions were added to support this change.
