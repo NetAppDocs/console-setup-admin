@@ -427,7 +427,7 @@ Added and removed permissions are noted below.
 
 === 09 February 2026
 
-The `compute.forwardingRules.update`, `cloudbuild.workerpools.list`, and `cloudbuild.workerpools.get` permissions are added to facilitate SVM-based management of the Cloud Volumes ONTAP systems converted from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager. The `cloudbuild.workerpools.list` and `cloudbuild.workerpools.get` permissions are only required for private mode deployments needing transition from Deployment Manager to Infrastructure Manager.
+The `cloudbuild.workerpools.get`, `cloudbuild.workerpools.list`, and `compute.forwardingRules.update`permissions are added for supporting Infrastructure Manager in Cloud Volumes ONTAP deployments in Google Cloud. The `cloudbuild.workerpools.get` and `cloudbuild.workerpools.list` permissions are only required for private mode Cloud Volumes ONTAP deployments supporting Infrastructure Manager.
 
 === 08 December 2025
 NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to deploy and run the Console agent in Google Cloud. The following permissions were added to support this change.
