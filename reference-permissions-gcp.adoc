@@ -52,6 +52,7 @@ includedPermissions:
 - cloudbuild.repositories.accessReadToken
 - cloudbuild.repositories.list
 - cloudbuild.workerpools.get
+- cloudbuild.workerpools.list
 - cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
@@ -334,6 +335,7 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | cloudkms.keyRings.list  | Yes | Yes | No
 | cloudbuild.builds.get  | Yes | No | No
 | cloudbuild.workerpools.get| To access worker pool information during deployment of Cloud Volumes ONTAP systems in private mode. | Yes | Yes | Yes
+| cloudbuild.workerpools.list | To list worker pools during deployment of Cloud Volumes ONTAP systems in private mode. | Yes | No | No
 | compute.instances.setServiceAccount .6+| To set a service account on the Cloud Volumes ONTAP instance. This service account provides permissions for data tiering to a Google Cloud Storage bucket. | Yes | Yes | No
 | iam.serviceAccounts.actAs  | Yes | No | No
 | iam.serviceAccounts.create  | Yes | No | No
@@ -425,7 +427,7 @@ Added and removed permissions are noted below.
 
 === 09 February 2026
 
-The `compute.forwardingRules.update` and `cloudbuild.workerpools.get` permissions are added to facilitate SVM-based management of the Cloud Volumes ONTAP systems converted from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager.
+The `compute.forwardingRules.update`, `cloudbuild.workerpools.list`, and `cloudbuild.workerpools.get` permissions are added to facilitate SVM-based management of the Cloud Volumes ONTAP systems converted from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager. The `cloudbuild.workerpools.list` and `cloudbuild.workerpools.get` permissions are only required for private mode deployments needing transition from Deployment Manager to Infrastructure Manager.
 
 === 08 December 2025
 NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to deploy and run the Console agent in Google Cloud. The following permissions were added to support this change.
