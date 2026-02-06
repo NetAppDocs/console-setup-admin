@@ -1,4 +1,5 @@
 # NetApp Console Documentation Guide
+For general AsciiDoc and writing conventions, refer to the content-standards repository. This file covers NetApp Console-specific terminology, product features, and audience considerations.
 
 ## Table of Contents
 
@@ -32,9 +33,16 @@ NetApp Console unifies storage management and protection across both on-premises
 
 It is available as a service (SaaS) platform or a self-hosted option that you can install in your sovereign cloud. It provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
 
+### Content audience
+The content audience understands networking concepts, cloud deployments, and identity and access management. They are looking for clear, concise, and user-focused documentation to help them effectively use NetApp Console's features and capabilities. They prefer examples as well as step-by-step instructions to guide them through complex tasks. They also value best practices and troubleshooting tips to optimize their experience with NetApp Console. Your key audience is a NetApp Console administrator who needs to ensure the following:
+* Agents are installed securely and have the connectivity they need
+* Resources are organized effectively and that users can access the projects they need
+* User management functions like federation, and role-based access are applied effectively
+
 
 
 ## 3. Product-Specific Technology
+
 ### Content Style Rules
 
 #### Product Name Usage
@@ -59,20 +67,32 @@ It is available as a service (SaaS) platform or a self-hosted option that you ca
 
 ## 4. Documentation Conventions
 
+### AsciiDoc filenames
+File names use prefixes to indicate page type:
 
-#### External Link Notation
-- **Absolute URLs**: Always include `^` at the end of link text to indicate an external link that opens in a new window
+**task-** for procedural pages with numbered steps
+- Pattern: `task-<action>-<object>.adoc`
+- Examples: `task-create-agent.adoc`, `task-configure-proxy-settings.adoc`
+- Title uses imperative verb: "Create a Console agent"
+
+**concept-** for informational pages that explain features
+- Pattern: `concept-<topic>.adoc`
+- Examples: `concept-agents.adoc`, `concept-identity-and-access-management.adoc`
+- Title is descriptive: "Learn about Console agents"
+
+**reference-** for lookup information and specifications
+- Pattern: `reference-<topic>.adoc`
+- Examples: `reference-agent-default-config.adoc`, `reference-iam-analyst-roles.adoc`
+- Contains tables, lists, commands, or configuration details
+
+Files like `legal-notices.adoc` and `whats-new.adoc` don't use prefixes. Use prefixes only for standard content pages.
+
+
+### External Link Notation
+- **Absolute URLs**: Always include `^` at the end of link text when the corresponding link starts with https: 
 - Pattern: `https://docs.netapp.com/us-en/<path>[Link text^]`
 - Example: `https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html[Learn about the API for NetApp Console IAM^]`
 - Internal links (relative paths ending in `.html`) do NOT use `^`
-
-
-## 5. Common Writer Tasks
-
-### External Documentation Links
-- Other NetApp doc sites: `https://docs.netapp.com/us-en/<product>/`
-- Always use `^` suffix for external links to open in new window
-- Console automation API: `https://docs.netapp.com/us-en/console-automation/`
 
 
 
