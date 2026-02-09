@@ -17,7 +17,7 @@ Use NetApp Console's Identity and Access Management (IAM) to organize your NetAp
 
 Resources are arranged hierarchically: the organization is at the top, followed by folders (which can contain other folders or projects), and then projects, which contain storage systems, workloads, and agents.
 
-Assign role-based access control (RBAC) permissions to members at the organization, folder, or project level to ensure users have the appropriate access to resources.
+Assign access roles at the organization, folder, or project level so users have the right access to resources.
 
 NOTE: You must have the _Super admin_, _Organization admin_ , or _Folder or project admin_ roles to manage IAM in NetApp Console.
 
@@ -59,7 +59,7 @@ link:task-iam-manage-folders-projects.html[Learn how to add folders to your orga
 
 === Resources
 
-A _resource_ is an entity that the Console is aware of, such as a storage system, a Console agent, or a Backup and Recovery workload. _Resources_ include storage systems, Keystone subscriptions, as well as Console agents.
+A _resource_ is an entity that the Console is aware of and that can be assigned to a project. _Resources_ include storage systems, Keystone subscriptions, some Backup and Recovery workloads, as well as Console agents.
 
 +
 You must associate a resource with a project before anyone can access it.
@@ -74,15 +74,21 @@ link:task-iam-manage-resources.html[Learn how to associate resources to projects
 
 
 Storage systems and Keystone subscriptions::
-Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. You must add a storage system to a project before anyone can access it.
+Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. You must add a storage system to a project so that it can be accessed by those assigned to the project.
 
 +
 
-Storage systems are automatically associated with the project where they are added, but you can also associate them with other projects or folders from the *Resources* page.
+Storage systems::
+Storage systems are automatically associated with the project where they are added, but you can associate them with other projects or folders from the *Resources* page. You cannot associate FSx for NetApp ONTAP storage systems with projects or folders, but you can view them on the *Systems* page or from Workloads.
 
 +
-
+Keystone subscriptions::
 Keystone subscriptions are also resources that you can associate with projects in order to grant users access to the subscription in NetApp Console. 
+
++
+
+Backup and Recovery workloads (Oracle and Microsoft SQL Server)::
+Some Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and
 
 
 
