@@ -51,8 +51,6 @@ includedPermissions:
 - cloudbuild.connections.list
 - cloudbuild.repositories.accessReadToken
 - cloudbuild.repositories.list
-- cloudbuild.workerpools.get
-- cloudbuild.workerpools.list
 - cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
@@ -334,8 +332,8 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | cloudkms.cryptoKeys.list  | Yes | Yes | No
 | cloudkms.keyRings.list  | Yes | Yes | No
 | cloudbuild.builds.get  | Yes | No | No
-| cloudbuild.workerpools.get| To access worker pool information during private mode deployment and conversion of Cloud Volumes ONTAP systems using Infrastructure Manager. | Yes | Yes | Yes
-| cloudbuild.workerpools.list | To list worker pool information during private mode deployment of Cloud Volumes ONTAP systems using Infrastructure Manager. | Yes | No | No
+//| cloudbuild.workerpools.get| To access worker pool information during private mode deployment and conversion of Cloud Volumes ONTAP systems using Infrastructure Manager. | Yes | Yes | Yes
+//| cloudbuild.workerpools.list | To list worker pool information during private mode deployment of Cloud Volumes ONTAP systems using Infrastructure Manager. | Yes | No | No
 | compute.instances.setServiceAccount .6+| To set a service account on the Cloud Volumes ONTAP instance. This service account provides permissions for data tiering to a Google Cloud Storage bucket. | Yes | Yes | No
 | iam.serviceAccounts.actAs  | Yes | No | No
 | iam.serviceAccounts.create  | Yes | No | No
@@ -427,7 +425,9 @@ Added and removed permissions are noted below.
 
 === 09 February 2026
 
-The `cloudbuild.workerpools.get`, `cloudbuild.workerpools.list`, and `compute.forwardingRules.update` permissions are added for supporting Infrastructure Manager in Cloud Volumes ONTAP deployments in Google Cloud. The `cloudbuild.workerpools.get` and `cloudbuild.workerpools.list` permissions are only required for private mode Cloud Volumes ONTAP deployments supporting Infrastructure Manager.
+The `compute.forwardingRules.update` permission is added for supporting Infrastructure Manager in Cloud Volumes ONTAP deployments in Google Cloud.
+
+//The `cloudbuild.workerpools.get`, `cloudbuild.workerpools.list`, and `compute.forwardingRules.update` permissions are added for supporting Infrastructure Manager in Cloud Volumes ONTAP deployments in Google Cloud. The `cloudbuild.workerpools.get` and `cloudbuild.workerpools.list` permissions are only required for private mode Cloud Volumes ONTAP deployments supporting Infrastructure Manager.
 
 === 08 December 2025
 NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to deploy and run the Console agent in Google Cloud. The following permissions were added to support this change.
