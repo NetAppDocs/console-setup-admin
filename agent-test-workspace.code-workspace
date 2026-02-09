@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.github-private"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../content-standards"
+		}
+	],
+	"settings": {}
+}
