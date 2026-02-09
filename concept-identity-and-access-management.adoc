@@ -59,7 +59,7 @@ link:task-iam-manage-folders-projects.html[Learn how to add folders to your orga
 
 === Resources
 
-_Resources_ include storage systems, Keystone subscriptions, as well as Console agents.
+A _resource_ is an entity that the Console is aware of, such as a storage system, a Console agent, or a Backup and Recovery workload. _Resources_ include storage systems, Keystone subscriptions, as well as Console agents.
 
 +
 You must associate a resource with a project before anyone can access it.
