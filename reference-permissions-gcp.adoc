@@ -100,9 +100,9 @@ includedPermissions:
 - compute.firewalls.list
 - compute.forwardingRules.create
 - compute.forwardingRules.delete
-- compute.forwardingRules.update
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
+- compute.forwardingRules.update
 - compute.globalOperations.get
 - compute.healthChecks.create
 - compute.healthChecks.delete
@@ -189,6 +189,7 @@ includedPermissions:
 - storage.buckets.list
 - storage.objects.create
 - storage.objects.delete
+- storage.objects.list
 - storage.objects.update
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
@@ -202,6 +203,7 @@ includedPermissions:
 - iam.serviceAccounts.list
 - iam.serviceAccountKeys.create
 - storage.objects.get
+- storage.objects.list
 - storage.buckets.getIamPolicy
 
 
@@ -252,8 +254,8 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | compute.forwardingRules.create| Create forwarding rules for traffic routing to backend services.  | No | Yes | No
 | compute.forwardingRules.delete | Delete existing forwarding rules. | No | Yes | No
 | compute.forwardingRules.get | Retrieve details about existing forwarding rules. | No | Yes | No
-| compute.forwardingRules.update | Update existing forwarding rules for traffic management. | No | Yes | No
 | compute.forwardingRules.setLabels | Set or update labels on forwarding rules for organization. | No | Yes | No
+| compute.forwardingRules.update | Update existing forwarding rules for traffic management. | No | Yes | No
 | compute.globalOperations.get | To get the status of operations. | Yes | Yes | No
 | compute.healthChecks.create .4+| Create and manage health checks to monitor backend service health. | No | Yes | No
 | compute.healthChecks.delete   | No | Yes | No
@@ -319,7 +321,6 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | logging.privateLogEntries.list  | Yes | Yes | No
 | logging.logEntries.create .2+| Create and route log entires for monitoring, debugging, and auditing. | Yes | Yes | No
 | logging.logEntries.route |  Yes | Yes | No
-
 | resourcemanager.projects.get | To support multi-projects. | Yes | Yes | No
 | storage.buckets.create .5+| To create and manage a Google Cloud Storage bucket for data tiering. | Yes | Yes | No
 | storage.buckets.delete  | No | Yes | Yes
@@ -331,6 +332,8 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | cloudkms.cryptoKeys.list  | Yes | Yes | No
 | cloudkms.keyRings.list  | Yes | Yes | No
 | cloudbuild.builds.get  | Yes | No | No
+//| cloudbuild.workerpools.get| To access worker pool information during private mode deployment and conversion of Cloud Volumes ONTAP systems using Infrastructure Manager. | Yes | Yes | Yes
+//| cloudbuild.workerpools.list | To list worker pool information during private mode deployment of Cloud Volumes ONTAP systems using Infrastructure Manager. | Yes | No | No
 | compute.instances.setServiceAccount .6+| To set a service account on the Cloud Volumes ONTAP instance. This service account provides permissions for data tiering to a Google Cloud Storage bucket. | Yes | Yes | No
 | iam.serviceAccounts.actAs  | Yes | No | No
 | iam.serviceAccounts.create  | Yes | No | No
@@ -420,7 +423,11 @@ a|* compute.subnetworks.use
 
 Added and removed permissions are noted below.
 
+=== 09 February 2026
 
+The `compute.forwardingRules.update` permission is added for supporting Infrastructure Manager in Cloud Volumes ONTAP deployments in Google Cloud.
+
+//The `cloudbuild.workerpools.get`, `cloudbuild.workerpools.list`, and `compute.forwardingRules.update` permissions are added for supporting Infrastructure Manager in Cloud Volumes ONTAP deployments in Google Cloud. The `cloudbuild.workerpools.get` and `cloudbuild.workerpools.list` permissions are only required for private mode Cloud Volumes ONTAP deployments supporting Infrastructure Manager.
 
 === 08 December 2025
 NetApp is moving from Google Cloud Deployment Manager to Google Cloud Infrastructure Manager (IM) to deploy and run the Console agent in Google Cloud. The following permissions were added to support this change.

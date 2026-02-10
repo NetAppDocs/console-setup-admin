@@ -1,0 +1,23 @@
+//All links and images must use the absolute URL.
+
+
+=== Console agent 4.4.0
+
+The 4.4.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes.
+
+
+
+
+=== NetApp Console administration
+This release includes the following:
+
+.Support for role-based access for NetApp Backup and Recovery workloads (Oracle and Microsoft SQL Server)
+You can associate Backup and Recovery workloads (Oracle and Microsoft SQL Server) with projects. After assigning to a project, users who are assigned a Backup and Recovery role for the project can work with the workloads. Other workloads are not supported with role-based access at this time. 
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html[Learn more about setting up role-based access for Backup and Recovery workloads.^]
+
+
+
+

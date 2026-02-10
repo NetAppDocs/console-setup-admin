@@ -29,7 +29,7 @@ sidebar:
               url: /concept-modes.html
             - title: NetApp support accounts
               url: /task-adding-nss-accounts.html
-            - title: Console agents
+            - title: Understand Console agents
               url: /concept-agents.html
             - title: Identity and access management
               url: /concept-identity-and-access-management.html
@@ -69,6 +69,8 @@ sidebar:
       entries:
         - title: Log in to NetApp Console
           url: /task-logging-in.html
+        - title: Work with multiple Console agents
+          url: /task-manage-multiple-agents.html
         - title: View metrics on the NetApp Console Home page
           url: /task-dashboard.html
         - title: Manage your NetApp Console user settings
@@ -133,16 +135,12 @@ sidebar:
                   url: /task-installing-https-cert.html
                 - title: Configure a Console agent to use a proxy server
                   url: /task-configuring-proxy.html
-                - title: Work with multiple Console agents
-                  url: /task-manage-multiple-agents.html
                 - title: Troubleshoot the Console agent
                   url: /task-troubleshoot-agent.html
                 - title: Uninstall and remove the Console agent
                   url: /task-uninstall-agent.html
-                - title: Default configuration
-                  url: /reference-agent-default-config.html
-                - title: Enforce ONTAP permissions in NetApp Console
-                  url: /task-ontap-access-agent.html
+             
+               
             - title: Manage cloud provider credentials
               entries:
                 - title: AWS
@@ -245,6 +243,8 @@ sidebar:
                       url: /task-federation-manage.html
                     - title: Import your existing federated connection
                       url: /task-federation-import.html
+            - title: Enforce ONTAP permissions in NetApp Console
+              url: /task-ontap-access-agent.html
             - title: Enable read-only mode for an organization
               url: /task-enable-read-only-mode.html
             - title: SOC-2 compliance for NetApp Console
@@ -270,7 +270,7 @@ sidebar:
         - title: Agent maintenance console
           entries:
             - title: Configuration checks
-              url: /reference-agent-maint-console.html
+              url: /reference-agent-maint-console-config-checker.html
             - title: Transparent proxy 
               url: /reference-agent-maint-console-proxy.html
         - title: Cloud Provider agent permissions and network requirements
@@ -299,6 +299,8 @@ sidebar:
           url: /reference-networking-saas-console-previous.html
         - title: Require the use of IMDSv2 on EC2 instances
           url: /task-require-imdsv2.html
+        - title: Default agent configuration
+          url: /reference-agent-default-config.html
     - title: Knowledge and support
       entries:
         - title: Register for support
