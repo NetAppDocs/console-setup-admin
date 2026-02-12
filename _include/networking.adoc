@@ -25,7 +25,7 @@ The network location where you deploy the Console agent must have an outbound in
 
 //tag::endpoints-console[]
 Endpoints contacted from the NetApp console::
-As you use the web-based NetApp Console that's provided through the SaaS layer, it contacts several endpoints to complete data management tasks. This includes endpoints that are contacted to deploy the Console agent from the the Console.
+As you use the web-based NetApp Console SaaS application, it contacts several endpoints to complete data management tasks. This includes endpoints that are contacted to deploy the Console agent from the the Console.
 +
 link:reference-networking-saas-console.html[View the list of endpoints contacted from the NetApp console].
 //end::endpoints-console[]

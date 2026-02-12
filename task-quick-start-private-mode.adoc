@@ -47,7 +47,7 @@ This portion of the table lists support for managing storage systems from the Ne
 
 .15+| *Services*
 | Alerts  | No
-| Backup and Recovery 
+| NetApp Backup and Recovery 
 | Yes
 
 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity[View the list of supported backup destinations for ONTAP volume data^]
@@ -72,7 +72,6 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Multi-factor authentication  | No 
 | NSS accounts  | No 
 | Notifications  | No 
-| Search  | No 
 | Audit | Yes 
 
 |===

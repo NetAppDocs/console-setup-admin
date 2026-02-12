@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: concept-modes.html
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private
-summary: The NetApp Console offers multiple _deployment modes_ that enable you to meet your business and security requirements. _Standard mode_ leverages a software as a service (SaaS) layer to provide full functionality, while _restricted mode_ and _private mode_ are available for organizations that have connectivity restrictions.
+summary: The NetApp Console offers multiple _deployment modes_ that enable you to meet your business and security requirements. _Standard mode_ leverages a software as a service (SaaS) application to provide full functionality, while _restricted mode_ and _private mode_ are available for organizations that have connectivity restrictions.
 ---
 
 = Learn about NetApp Console deployment modes
@@ -13,7 +13,7 @@ summary: The NetApp Console offers multiple _deployment modes_ that enable you t
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Console offers multiple _deployment modes_ that enable you to meet your business and security requirements. _Standard mode_ leverages a software as a service (SaaS) layer to provide full functionality, while _restricted mode_ and _private mode_ are available for organizations that have connectivity restrictions.
+You can use NetApp Console through the SaaS application or install it yourself in your own environment. When you use the SaaS application (standard mode), you have full functionality and access to all of the data services that the Console supports. Installing it yourself in in the cloud (in a government, sovereign, or commercial region) or on-premises, . The NetApp Console offers multiple _deployment modes_ that enable you to meet your business and security requirements. _Standard mode_ leverages a software as a service (SaaS) application to provide full functionality, while _restricted mode_ and _private mode_ are available for organizations that have connectivity restrictions.
 
 
 While NetApp Console inhibits the flow of traffic, communication, and data when using restricted mode or private mode, it's your responsibility to ensure that your environment (on-premises and in the cloud) is in compliance with the required regulations for your business.
@@ -23,19 +23,19 @@ While NetApp Console inhibits the flow of traffic, communication, and data when 
 Each deployment mode differs in outbound connectivity, location, installation, authentication, data services, and charging methods.
 
 Standard mode::
-You use a SaaS service from the web-based console. Depending on the data services and features that you plan to use, a Console organization admin creates one or more Console agents to manage data within your hybrid cloud environment. 
+You use the NetApp Console SaaS application. Depending on the data services and features that you plan to use, a Console organization admin creates one or more Console agents to manage data within your hybrid cloud environment. 
 +
 This mode uses encrypted data transmission over the public internet.
 
 Restricted mode::
-You install a Console agent in the cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console SaaS layer.
+You install a Console agent in the cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console SaaS application where API endpoints are hosted.
 +
 This mode is typically used by state and local governments and regulated companies.
 +
-<<Restricted mode, Learn more about outbound connectivity to the SaaS layer>>.
+<<Restricted mode, Learn more about outbound connectivity to the NetApp Console SaaS application>>.
 
 Private mode::
-You install a Console agent on-premises or in the cloud (in a secure region, sovereign cloud region, or commercial region) and has _no_ connectivity to the NetApp Console SaaS layer. Users access the NetApp Console provided by an agent locally, not the SaaS layer.
+You install a Console agent on-premises or in the cloud (in a secure region, sovereign cloud region, or commercial region) and has _no_ connectivity to the NetApp Console SaaS application (where API endpoints are hosted). Users access the NetApp Console provided by an agent locally, not the SaaS application.
 
 +
 A secure region includes https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], and https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^]
@@ -49,7 +49,7 @@ The following table provides a comparison of these modes.
 | Restricted mode
 | Private mode
 
-| Connection required to NetApp Console SaaS layer?
+| Connection required to NetApp Console SaaS application?
 | Yes
 | Outbound only
 | No
@@ -70,12 +70,12 @@ The following table provides a comparison of these modes.
 | Manual upgrade required
 
 | UI access
-| From the Console SaaS layer
+| From the Console SaaS application
 | Locally from an agent VM
 | Locally from the agent VM
 
 | API endpoint
-| The Console SaaS layer
+| The Console SaaS application
 | an agent
 | an agent
 
@@ -107,12 +107,12 @@ Read through the following sections to learn more about these modes, including w
 
 The following image is an example of a standard mode deployment.
 
-image:diagram-standard-mode.png["A conceptual image that shows the public internet where the web-based console, SaaS layer, and auth0 authentication are available, a virtual network in the cloud where an agent is running and managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
+image:diagram-standard-mode.png["A conceptual image that shows the public internet where the web-based console, SaaS application and auth0 authentication are available, a virtual network in the cloud where an agent is running and managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
 
 The Console works as follows in standard mode:
 
 Outbound communication::
-Connectivity is required from an agent to the Console SaaS layer, to your cloud provider's publicly available resources, and to other essential components for day-to-day operations.
+Connectivity is required from an agent to the Console SaaS application, to your cloud provider's publicly available resources, and to other essential components for day-to-day operations.
 +
 * link:task-install-agent-aws-bluexp.html#step-1-set-up-networking[Endpoints that an agent contacts in AWS]
 * link:task-install-agent-azure-bluexp.html#step-1-set-up-networking[Endpoints that an agent contacts in Azure]
@@ -128,11 +128,11 @@ Console agent upgrades::
 NetApp provides automated upgrades of an agent software with monthly updates.
 
 User interface access::
-The user interface is accessible from the web-based console that's provided through the SaaS layer.
+The user interface is accessible from the web-based console that's provided through the SaaS application.
 
 API endpoint::
 API calls are made to the following endpoint:
-\https://cloudmanager.cloud.netapp.com
+\https://api.bluexp.netapp.com
 
 Authentication::
 NetApp Console provides authentication with auth0 or NetApp Support Site (NSS) logins. Identity federation is available.
@@ -152,14 +152,14 @@ link:task-quick-start-standard-mode.html[Learn how to get started with standard 
 
 The following image is an example of a restricted mode deployment.
 
-image:diagram-restricted-mode.png["A conceptual image that shows the public internet where the SaaS layer and auth0 authentication are available, a virtual network in the cloud where an agent is running and providing access to the web-based console, and is managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
+image:diagram-restricted-mode.png["A conceptual image that shows the public internet where the SaaS application and auth0 authentication are available, a virtual network in the cloud where an agent is running and providing access to the web-based console, and is managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
 
 The Console works as follows in restricted mode:
 
 Outbound communication::
-An agent requires outbound connectivity to the Console SaaS layer for data services, software upgrades, authentication, and metadata transmission.
+An agent requires outbound connectivity to the Console SaaS application for support of data services, software upgrades, authentication, and metadata transmission.
 +
-The Console SaaS layer does not initiate communication to an agent. All communication is initiated by an agent, which can pull or push data from or to the SaaS layer as required.
+The Console SaaS application does not initiate communication to an agent. All communication is initiated by an agent, which can pull or push data from or to the SaaS application as required.
 +
 A connection is also required to cloud provider resources from within the region.
 
@@ -239,7 +239,7 @@ Note that you can't change the restricted mode setting after you create the orga
 [[private-mode]]
 == Private mode
 
-In private mode, you install a Console agent either on-premises or in the cloud and then use NetApp Console to manage data across your hybrid cloud. There is no connectivity to the NetApp Console SaaS layer.
+In private mode, you install a Console agent either on-premises or in the cloud and then use NetApp Console to manage data across your hybrid cloud. There is no connectivity to the NetApp Console SaaS applications (where API endpoints reside).
 
 The following image shows an example of a private mode deployment where the Console agent is installed in the cloud and manages both Cloud Volumes ONTAP and an on-premises ONTAP cluster.
 
@@ -252,7 +252,7 @@ image:diagram-private-mode-onprem.png["A conceptual image that shows an on-premi
 NetApp Console works as follows in private mode:
 
 Outbound communication::
-No outbound connectivity is required to the Console SaaS layer. All packages, dependencies, and essential components are packaged with the Console agent and served from the local machine. Connectivity to your cloud provider's publicly available resources is required only if you are deploying Cloud Volumes ONTAP.
+No outbound connectivity is required to the Console SaaS application (where API endpoints reside). All packages, dependencies, and essential components are packaged with the Console agent and served from the local machine. Connectivity to your cloud provider's publicly available resources is required only if you are deploying Cloud Volumes ONTAP.
 
 Supported location for the Console agent::
 In private mode, the Console agent is supported in the cloud or on-premises.
@@ -400,7 +400,6 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Multi-factor authentication | Yes | No
 | NSS accounts | Yes | No 
 | Notifications | Yes | No 
-| Search | Yes | No
 | Audit | Yes | Yes
 
 |===

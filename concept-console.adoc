@@ -73,12 +73,12 @@ The following table provides a comparison of the NetApp console.
 
 
 | UI access
-| From the Console SaaS layer
+| From the Console SaaS application
 | Locally from an agent VM
 
 
 | API endpoint
-| The Console SaaS layer
+| The Console SaaS application
 | A Console agent
 
 

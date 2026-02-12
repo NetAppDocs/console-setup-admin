@@ -15,7 +15,7 @@ summary: The Console unifies storage management and protection across hybrid mul
 [.lead]
 The Console unifies storage management and protection across hybrid multi-cloud with integrated data services to protect and optimize data.
 
-It is available as a service (SaaS) platform or a self-hosted option that you can install in your sovereign cloud. It provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
+It is available as a service (SaaS) application or you can install it yourself in your own environment (restricted mode or private mode). It provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
 
 
 
