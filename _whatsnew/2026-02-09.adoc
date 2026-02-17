@@ -5,8 +5,7 @@
 
 The 4.4.0 release supports both standard mode and restricted mode.
 
-This release of the Console agent includes security improvements and bug fixes
-
+This release of the Console agent includes security improvements and bug fixes.
 
 
 
@@ -14,8 +13,20 @@ This release of the Console agent includes security improvements and bug fixes
 === NetApp Console administration
 This release includes the following:
 
-.Access NetApp Data Infrastructure Insights from NetApp Console
-NetApp Data Infrastructure Insights is now accessible from within NetApp Console. This integration allows users to navigate seamlessly between the two platforms, enhancing their ability to monitor and manage their data infrastructure. Access Data Infrastructure Insights directly from the left navigation pane in NetApp Console. Go to *Governance* > *Data Infrastructure Insights* to explore insights and analytics about your data environment.
+.Support for role-based access for NetApp Backup and Recovery workloads (Oracle and Microsoft SQL Server)
+You can associate Backup and Recovery workloads (Oracle and Microsoft SQL Server) with projects. After assigning to a project, users who are assigned a Backup and Recovery role for the project can work with the workloads. Other workloads are not supported with role-based access at this time. 
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html[Learn more about setting up role-based access for Backup and Recovery workloads.^]
+
+
+
+
+
+
+
+
+
+
 
 
 
