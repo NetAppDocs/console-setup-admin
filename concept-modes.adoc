@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: concept-modes.html
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private
-summary: The NetApp Console offers multiple _deployment modes_ that enable you to meet your business and security requirements. _Standard mode_ leverages a software as a service (SaaS) application to provide full functionality, while _restricted mode_ and _private mode_ are available for organizations that have connectivity restrictions.
+summary: You can use NetApp Console through the SaaS application or install it yourself in your own environment (cloud or on-premises). 
 ---
 
 = Learn about NetApp Console deployment modes
@@ -17,28 +17,20 @@ You can use NetApp Console through the SaaS application or install it yourself i
 
 NetApp refers to these use cases as _deployment modes_. Each mode offers different connectivity, features, and services for your business and security needs.
 
-* **Standard mode (SaaS)** The NetApp Console SaaS (software-as-a-service) application helps organizations manage storage and protect data across hybrid cloud environments. It enables access to all NetApp data services, automated updates, and flexible authentication options such as identity federation and NetApp Support Site logins. This mode supports marketplace subscriptions and BYOL licensing. Businesses can use all features without connectivity limits.
+Standard mode (SaaS)::
+The NetApp Console SaaS (software-as-a-service) application helps organizations manage storage and protect data across hybrid cloud environments. It enables access to all NetApp data services, automated updates, and flexible authentication options such as identity federation and NetApp Support Site logins. This mode supports marketplace subscriptions and BYOL licensing. Businesses can use all features without connectivity limits.
 
-* **Restricted mode** Restricted mode is for organizations needing enhanced security and limited connectivity, such as governments and regulated companies. You install the NetApp Console in your own public cloud. This deployment option provides access to key data services including Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in government and commercial regions), and data classification, along with automated software upgrades and identity federation. Organizations use NetApp's cloud innovation and comply with limited outbound connection rules.
+Restricted mode (installed in your own public cloud)::
+Restricted mode is for organizations needing enhanced security and limited connectivity, such as governments and regulated companies. You install the NetApp Console in your own public cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application). Restricted mode provides access to key data services including Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in government and commercial regions), and data classification, along with automated software upgrades and identity federation. 
 
-* **Private mode** serves organizations with the strictest security and sovereignty requirements, including those operating in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or completely air-gapped environments. Private mode has no connection requirements to the NetApp Console SaaS application, so you have full control over your data and follow rules that block outside communication. Available services focus on backup and recovery, classification, replication, and Cloud Volumes ONTAP. Organizations fully control storage, use local authentication, and keep all data inside their environment. This mode is suggested for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
+Private mode (installed on your premises)::
+Private mode serves organizations with the strictest security and sovereignty requirements, including those operating in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or completely air-gapped environments. Private mode has no connection requirements to the NetApp Console SaaS application where additional API endpoints are hosted, so you have full control over your data and follow rules that block outside communication. Available services focus on backup and recovery, classification, replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. This mode is suggested for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
 
 NOTE: NetApp Console limits data flow in restricted and private modes, but you must ensure your environment complies with regulations.
 
 Each deployment mode differs in outbound connectivity, location, installation, authentication, data services, and charging methods.
 
 === Standard mode (SaaS)
-You use the NetApp Console SaaS application.
-
-+
-
-Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment. You can install agents in the cloud or on-premises, and they communicate with the Console SaaS application to provide advanced storage management capabilities and access to NetApp data services.
-
-
-+ Users access the web-based Console SaaS application over the public internet.
-
-+
-This mode uses encrypted data transmission over the public internet.
 
 The following table lists the storage management features, data services, and administrative features available in the NetApp Console SaaS application (standard mode).
 
