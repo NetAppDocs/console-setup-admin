@@ -18,15 +18,15 @@ You can use NetApp Console through the SaaS application or install it yourself i
 NetApp refers to these use cases as _deployment modes_. Each mode offers different connectivity, features, and services for your business and security needs.
 
 Standard mode (SaaS)::
-The NetApp Console SaaS (software-as-a-service) application helps organizations manage storage and protect data across hybrid cloud environments. It enables access to all NetApp data services, automated updates, and flexible authentication options such as identity federation and NetApp Support Site logins. This mode supports marketplace subscriptions and BYOL licensing. Businesses can use all features without connectivity limits.
+The NetApp Console SaaS (software-as-a-service) application enables access to all NetApp data services, automated updates, and flexible authentication options such as identity federation and NetApp Support Site logins. This mode supports marketplace subscriptions and BYOL licensing. This mode is ideal for most users and organizations, especially those who want the most features and services available with NetApp Console.
 
 Restricted mode (installed in your own public cloud)::
 Restricted mode is for organizations needing enhanced security and limited connectivity, such as governments and regulated companies. You install the NetApp Console in your own public cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application). Restricted mode provides access to key data services including Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in government and commercial regions), and data classification, along with automated software upgrades and identity federation. 
 
 Private mode (installed on your premises)::
-Private mode serves organizations with the strictest security and sovereignty requirements, including those operating in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or completely air-gapped environments. Private mode has no connection requirements to the NetApp Console SaaS application where additional API endpoints are hosted, so you have full control over your data and follow rules that block outside communication. Available services focus on backup and recovery, classification, replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. This mode is suggested for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
+Private mode serves organizations with the strictest security and sovereignty requirements, including those operating in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or completely air-gapped environments. Private mode has no connection requirements to the NetApp Console SaaS application (where additional API endpoints are hosted), so you have full control over your data and follow rules that block outside communication. Available services focus on backup and recovery, classification, replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. This mode is suggested for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
 
-NOTE: NetApp Console limits data flow in restricted and private modes, but you must ensure your environment complies with regulations.
+NOTE: NetApp Console limits data flow in restricted and private modes, but you must ensure your environment complies with your regulations.
 
 Each deployment mode differs in outbound connectivity, location, installation, authentication, data services, and charging methods.
 
@@ -79,7 +79,7 @@ This portion of the table lists support for managing storage systems from the Ne
 | Identity and access management 
 | Manage cloud provider credentials  
 | Federation 
-| Licenses and subscriptions 
+| Licenses and subscriptions management
 | Multi-factor authentication (local users)
 | NSS accounts 
 | Organization Partnerships 
@@ -91,20 +91,61 @@ This portion of the table lists support for managing storage systems from the Ne
 
 
 
-== Restricted mode
+== Restricted mode (installed in your own public cloud)
 You install a Console agent in the cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application).
-
-+ 
 
 Users access the local UI provided by the Console agent, not the SaaS application.
 
-
-+ 
 Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
 +
 <<Restricted mode, Learn more about outbound connectivity to the NetApp Console SaaS application>>.
 
-The following table lists the storage management features, data services, and administrative features available in the NetApp Console SaaS application (standard mode).
+The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in restricted mode.
+
+[options="header",cols="19,27,19"]
+|===
+
+| Product area
+| NetApp service or feature
+| Console agent required
+
+
+.3+| *Storage systems management*
+
+This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
+| Azure NetApp Files | No
+| Cloud Volumes ONTAP | Yes
+| On-premises ONTAP clusters | Yes for advanced view (System Manager) and no for basic view (Cluster Manager)
+
+.3+| *Data Services* (restricted mode supports fewer data services than standard mode)
+
+| Backup and Recovery 
+| NetApp Classification 
+| NetApp Replication 
+
+| *NetApp support contract features*
+| None 
+
+
+.10+| *Administrative features*
+| Identity and access management 
+| Manage cloud provider credentials  
+| Federation 
+| Licenses and subscriptions management
+| Multi-factor authentication (local users)
+| NSS accounts 
+| Organization Partnerships 
+| Read-only mode 
+| Notifications 
+| Audit 
+
+|===
+
+Private mode (installed in your own secure cloud region or on premises)::
+You install a Console agent on-premises or in the cloud (in a secure region, sovereign cloud region, or commercial region) and has _no_ connectivity to the NetApp Console API endpoints (hosted by the SaaS application). You access the local UI provided by the Console agent, not the SaaS application.
+
++
+A secure region includes https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], and https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^]
 
 [options="header",cols="19,27"]
 |===
@@ -113,10 +154,9 @@ The following table lists the storage management features, data services, and ad
 | NetApp service or feature
 
 
-.3+| *Storage systems management*
+.2+| *Storage systems management*
 
 This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
-| Azure NetApp Files 
 | Cloud Volumes ONTAP 
 | On-premises ONTAP clusters 
 
@@ -126,28 +166,20 @@ This portion of the table lists support for managing storage systems from the Ne
 | NetApp Classification 
 | NetApp Replication 
 
+| *NetApp support contract features*
+| None
+
 
 .10+| *Administrative features*
 | Identity and access management 
 | Manage cloud provider credentials  
-| Federation 
-| Licenses and subscriptions 
-| Multi-factor authentication (local users)
-| NSS accounts 
-| Organization Partnerships 
+| Licenses and subscriptions management
 | Read-only mode 
 | Notifications 
 | Audit 
 
 |===
 
-Private mode::
-You install a Console agent on-premises or in the cloud (in a secure region, sovereign cloud region, or commercial region) and has _no_ connectivity to the NetApp Console API endpoints (hosted by the SaaS application). 
-
-Users access the NetApp Console provided by an agent locally, with an IP address you provide.
-
-+
-A secure region includes https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], and https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^]
 
 The following table compares these modes.
 
