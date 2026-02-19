@@ -19,18 +19,16 @@ Use the Console as a software-as-a-service (SaaS) application or install it in y
 
 The Console works in tandem with Console agents that you deploy in your environment to manage resources and orchestrate processes across your on-premises and cloud environments.
 
-== How NetApp Console works
 
-The NetApp Console is a web-based console accessed through a SaaS application or a Console agent you install. You deploy additional Console agents to connect your storage to NetApp Console features.
 
-=== Choose how to access NetApp Console
+== Choose how to access NetApp Console
 
 You can start using NetApp Console by signing up for the SaaS application (standard mode) or installing it in your own cloud (restricted mode) or on your premises (private mode). When you deploy NetApp Console in the cloud (restricted mode), NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when you install in your own cloud or on-premises.
 
 
 link:concept-modes.html[Learn more about deployment modes].
 
-=== Enable features with Console agents
+== Enable features with Console agents
 
 Console agents are lightweight software components that provide connectivity to the NetApp Console SaaS application and cloud-based APIs, enabling advanced features and data services.
 
@@ -39,7 +37,7 @@ In restricted or private mode, install a Console agent in your cloud or on-premi
 
 link:concept-agents.html[Learn more about Console agents].
 
-=== Identity and access management (IAM)
+== Manage user access and permissions in NetApp Console
 
 The Console provides identity and access management (IAM) to improve security and control across your data infrastructure. Organize your storage and data services around organizational roles and responsibilities to reduce the risk of unauthorized access while maintaining operational efficiency:
 
@@ -50,7 +48,7 @@ The Console provides identity and access management (IAM) to improve security an
 
 link:concept-identity-and-access-management.html[Learn more about IAM in NetApp Console]
 
-=== Security and compliance
+== Security and compliance
 Enable security and compliance features like single sign-on (SSO) to control access to your storage and data services. Console administrators can enable read-only mode by default so that users must request elevated permissions to make changes to storage systems and use data services. You can also use NetApp Console to monitor storage management and user activity. NetApp Console is SOC 2 Type 2 certified, and NetApp provides SOC 2 reports to customers.
 
 https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 2 reports^]
@@ -132,7 +130,7 @@ Detect anomalies that might result in ransomware attacks. Protect and recover wo
 NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
-== Cost and compliance management services
+== Available cost and compliance management services
 Track hardware and software contract status across all systems to support better cost management, compliance monitoring, and informed purchasing decisions. 
 
 Automation hub::
