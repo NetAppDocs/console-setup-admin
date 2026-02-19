@@ -21,7 +21,7 @@ The Console works in tandem with Console agents that you can deploy in your envi
 
 == How NetApp Console works
 
-The NetApp Console is a web-based console accessed through a SaaS application or a Console agent you install. You need to deploy additional Console agents to bridge the network gap between your storage and NetApp Console features.
+The NetApp Console is a web-based console accessed through a SaaS application or a Console agent you install. You need to deploy additional Console agents to connect your storage to NetApp Console features.
 
 === SaaS versus installed
 
@@ -82,7 +82,7 @@ Cloud object storage::
 
 
 == Maintain infrastructure visibility
-Centralized performance observability and real-time health monitoring across all storage systems provide complete visibility into your infrastructure from a single console, reducing blind spots and management overhead.
+You gain full visibility into your infrastructure from one console through centralized performance and health monitoring, reducing blind spots and overhead.
 
 Licenses and subscriptions::
 Manage and monitor your licenses and subscriptions.
@@ -104,25 +104,25 @@ Analyze the sustainability of your storage systems.
 
 == Protect and optimize data
 
-Built-in data services enable organizations to safeguard critical data and optimize storage efficiency without deploying separate tools.
+Use built-in data services to protect critical data and optimize storage efficiency without extra tools.
 
 NetApp Backup and Recovery::
-Back up and restore cloud and on-premises data.
+Back up and restore cloud and on-premises data. Requires subscription.
 
 NetApp Copy and Sync::
 Sync data between on-premises and cloud data stores.
 
 NetApp Disaster Recovery::
-Protect on-premises VMware workloads using VMware Cloud on Amazon FSx for ONTAP as a disaster recovery site.
+Protect on-premises VMware workloads using VMware Cloud on Amazon FSx for ONTAP as a disaster recovery site. Requires subscriptions
 
 NetApp Ransomware Resilience::
-Detect anomalies that might result in ransomware attacks. Protect and recover workloads.
+Detect anomalies that might result in ransomware attacks. Protect and recover workloads. Requires subscription.
 
 NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
 == Manage costs and compliance
-Complete tracking of hardware and software contract status across all systems supports better cost management, compliance monitoring, and informed purchasing decisions, while flexible deployment options--cloud-based agents or direct on-premises access--allow you to choose the architecture that fits your security and budget requirements.
+Complete tracking of hardware and software contract status across all systems supports better cost management, compliance monitoring, and informed purchasing decisions. Flexible deployment options--cloud-based agents or direct on-premises access--allow you to choose the architecture that fits your security and budget requirements.
 
 Automation hub::
 Use scripted solutions to automate the deployment and integration of NetApp products and services for greater operational efficiency and consistency.
@@ -131,7 +131,7 @@ NetApp Cloud Tiering::
 Extend your on-premises ONTAP storage to the cloud for cost optimization and data lifecycle management.
 
 NetApp Data Classification::
-Get your application data and cloud environments privacy ready for compliance with data privacy regulations.
+Get your application data and cloud environments privacy ready for compliance with data privacy regulations. Free with subscription.
 
 NetApp Volume Caching::
 Create a writable cache volume to speed up access to data or offload traffic from heavily accessed volumes for increased performance and cost efficiency.
