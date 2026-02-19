@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: concept-overview.html
 keywords: overview, concepts, features, use case, cloud manager, netapp console, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works
-summary: The Console unifies storage management and protection across hybrid multi-cloud with integrated data services to protect and optimize data.
+summary: The NetApp Console helps you manage and protect your data across all your cloud and on-premises systems. It includes tools to keep your data safe and working well.
 ---
 
-= Learn about NetApp Console
+= NetApp Console for unified storage management
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: The Console unifies storage management and protection across hybrid mul
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Console unifies storage management and protection across your hybrid multi-cloud data infrastructure with integrated data services to protect and optimize data.
+The NetApp Console helps you manage and protect your data across all your cloud and on-premises systems. It includes tools to keep your data safe and working well.
 
 Use the Console as a software-as-a-service (SaaS) application or install it in your cloud or on-premises environment (restricted or private mode). Each mode supports different feature sets and security requirements.
 
@@ -21,18 +21,18 @@ The Console works in tandem with Console agents that you deploy in your environm
 
 == How NetApp Console works
 
-The NetApp Console is a web-based console accessed through a SaaS application or a Console agent you install. You need to deploy additional Console agents to connect your storage to NetApp Console features.
+The NetApp Console is a web-based console accessed through a SaaS application or a Console agent you install. You deploy additional Console agents to connect your storage to NetApp Console features.
 
 === SaaS versus installed
 
-You can start using NetApp Console by signing up for the SaaS application (Standard mode) or installing it in your own cloud (restricted mode) or on your premises (private mode). When you deploy NetApp Console in the cloud (restricted mode), NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when you install in your own cloud or on-premises.
+You can start using NetApp Console by signing up for the SaaS application (standard mode) or installing it in your own cloud (restricted mode) or on your premises (private mode). When you deploy NetApp Console in the cloud (restricted mode), NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when you install in your own cloud or on-premises.
 
 
 link:concept-modes.html[Learn more about deployment modes].
 
 === Console agents
 
-Console agents are lightweight software components that you can deploy in your environment to manage resources and processes across your on-premises and cloud environments. Console agents enable you to manage storage, use data services, and access advanced features that require a network connectivity between your storage and NetApp Console.
+Console agents are lightweight software components that you deploy in your environment that enable you to manage storage, use data services, and access advanced features that require network connectivity between your storage and NetApp Console.
 
 When you deploy NetApp Console in the cloud (restricted mode) or on-premises (private mode), you install an Console agent that is used to access the Console. Depending on the network topology of your storage infrastructure, you need to deploy additional Console agents to enable features that require a network connection between your storage and NetApp Console SaaS application and NetApp APIs.
 
@@ -40,7 +40,7 @@ link:concept-agents.html[Learn more about Console agents].
 
 === Identity and access management (IAM)
 
-The Console provides identity and access management (IAM) to improve security and control across your data infrastructure. By organizing your storage and data services around organizational roles and responsibilities, you reduce the risk of unauthorized access while maintaining operational efficiency:
+The Console provides identity and access management (IAM) to improve security and control across your data infrastructure. Organize your storage and data services around organizational roles and responsibilities to reduce the risk of unauthorized access while maintaining operational efficiency:
 
 * A top-level _organization_ enables you to grant and revoke access to storage systems and projects across your entire infrastructure
 * _Folders_ enable you to group storage resources and projects together based on business function or compliance requirements
@@ -84,13 +84,15 @@ In the Console, _Systems_ represent your discovered or deployed storage. Manage 
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
 
-=== Available infrastructure management services
+=== Available storage management services
 
 NetApp Console provides unified management of your NetApp storage infrastructure through a single interface.
 
-In the Console, _Systems_ represent your discovered or deployed storage. Manage systems with direct volume management or by opening the system's management interface. Use data services to protect and optimize your data in the cloud or on-premises.
+In the Console, _Systems_ represent your discovered or deployed storage. Perform day-to-day storage management tasks with direct volume management or by opening the system's management interface directly from the Console. 
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
+
+In addition to storage administration, use infrastructure services to monitor and manage your storage infrastructure across all your environments.
 
 
 Licenses and subscriptions::
@@ -113,7 +115,7 @@ Analyze the sustainability of your storage systems.
 
 == Available data security and protection services
 
-Use built-in data services to protect critical data and optimize storage efficiency without extra tools.
+Use built-in data services to protect critical data and optimize storage efficiency.
 
 NetApp Backup and Recovery::
 Back up and restore cloud and on-premises data. Requires subscription.
