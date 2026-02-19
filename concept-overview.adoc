@@ -49,20 +49,13 @@ The Console provides identity and access management (IAM) capabilities that stre
 
 link:concept-identity-and-access-management.html[Learn more about IAM in NetApp Console]
 
-=== Console agents
-
-Console agents are lightweight software components that you can deploy in your environment to manage resources and processes across your on-premises and cloud environments. Console agents enable you to manage storage, use data services, and access features that require a network bridge between your storage and NetApp Console.
-
-When you deploy NetApp Console in the cloud (restricted mode) or on-premises (private mode), you access the Console through a Console agent. Depending on your use case, you might need to deploy additional Console agents to access features that require a network bridge between your storage and NetApp Console SaaS application and NetApp APIs.
-
-link:concept-agents.html[Learn more about Console agents].
 
 
 == Centralized storage management
 
-Discover, deploy, and manage cloud and on-premises storage with the Console.
+Discover, deploy, and manage all of your cloud and on-premises storage with the Console.
 
-_Systems_ in the Console represent your discovered or deployed storage. You can manage the storage system directly from the Console by adding volumes directly from the Console or accessing the system's management interface. Apply data services to your storage systems to protect and optimize your data. You can also use the Console to manage your cloud storage accounts and view your storage capacity.
+_Systems_ in the Console represent your discovered or deployed storage. You can manage the storage systems directly from the Console by adding volumes directly from the Console or accessing the system's management interface. Apply data services to your storage systems to protect and optimize your data. You can also use the Console to manage your cloud storage accounts and view your storage capacity.
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
 
