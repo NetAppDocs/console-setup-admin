@@ -54,11 +54,9 @@ link:concept-identity-and-access-management.html[Learn more about IAM in NetApp 
 
 NetApp Console provides unified management of your NetApp storage infrastructure through a single interface.
 
-In the Console, Systems represent your discovered or deployed storage. Manage systems by adding volumes or opening the system's management interface. Use data services to protect and optimize your data in the cloud or on-premises.
+In the Console, _Systems_ represent your discovered or deployed storage. Manage systems with direct volume management or by opening the system's management interface. Use data services to protect and optimize your data in the cloud or on-premises.
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
-
-Direct volume management and integrated advanced management access enable administrators to provision, configure, and manage storage systems without extra operational steps.
 
 === Supported cloud and on-premises storage
 
@@ -84,6 +82,9 @@ Cloud object storage::
 == Maintain infrastructure visibility
 You gain full visibility into your infrastructure from one console through centralized performance and health monitoring, reducing blind spots and overhead.
 
+=== Infrastructure management services
+
+
 Licenses and subscriptions::
 Manage and monitor your licenses and subscriptions.
 
@@ -102,7 +103,7 @@ View issues related to capacity, availability, performance, protection, and secu
 Sustainability dashboard::
 Analyze the sustainability of your storage systems.
 
-== Protect and optimize data
+== Data protection and optimization services
 
 Use built-in data services to protect critical data and optimize storage efficiency without extra tools.
 
@@ -121,7 +122,7 @@ Detect anomalies that might result in ransomware attacks. Protect and recover wo
 NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
-== Manage costs and compliance
+== Cost and compliance management services
 Complete tracking of hardware and software contract status across all systems supports better cost management, compliance monitoring, and informed purchasing decisions. Flexible deployment options--cloud-based agents or direct on-premises access--allow you to choose the architecture that fits your security and budget requirements.
 
 Automation hub::
