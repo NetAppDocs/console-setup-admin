@@ -55,9 +55,14 @@ link:concept-identity-and-access-management.html[Learn more about IAM in NetApp 
 
 Discover, deploy, and manage all of your cloud and on-premises storage with the Console.
 
+NetApp Console solves key storage management challenges by providing unified management of your NetApp storage infrastructure through a single interface.
+
 _Systems_ in the Console represent your discovered or deployed storage. You can manage the storage systems directly from the Console by adding volumes directly from the Console or accessing the system's management interface. Apply data services to your storage systems to protect and optimize your data. You can also use the Console to manage your cloud storage accounts and view your storage capacity.
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
+
+== Simplify Storage Operations
+Direct volume management and integrated ONTAP System Manager access enable administrators to provision, configure, and manage on-premises ONTAP, AFF/FAS, and ONTAP Select systems without operational complexity.
 
 === Supported cloud and on-premises storage
 
@@ -79,7 +84,9 @@ Cloud object storage::
 * Azure Blob storage
 * Google Cloud Storage
 
-=== Storage management features
+
+== Maintain Infrastructure Visibility
+Centralized performance observability and real-time health monitoring across all storage systems provide complete visibility into your infrastructure from a single console, reducing blind spots and management overhead.
 
 Licenses and subscriptions::
 Manage and monitor your licenses and subscriptions.
@@ -99,29 +106,15 @@ View issues related to capacity, availability, performance, protection, and secu
 Sustainability dashboard::
 Analyze the sustainability of your storage systems.
 
+== Protect and Optimize Data
 
-== Data services
-
-NetApp Console data services protect, secure, and optimize your storage investment across hybrid cloud environments. Integrated data services help you reduce risk, ensure business continuity, and maximize storage value.
-
-=== Data services available in NetApp Console
-
-
-Automation hub::
-Use scripted solutions to automate the deployment and integration of NetApp products and services.
+Built-in data services including replication, backup, scanning, classification, and tiering enable organizations to safeguard critical data and optimize storage efficiency without deploying separate tools.
 
 NetApp Backup and Recovery::
 Back up and restore cloud and on-premises data.
 
-
-NetApp Cloud Tiering::
-Extend your on-premises ONTAP storage to the cloud.
-
-NetApp Data Classification::
-Get your application data and cloud environments privacy ready.
-
 NetApp Copy and Sync::
-Sync data between on-premisesand cloud data stores.
+Sync data between on-premises and cloud data stores.
 
 NetApp Disaster Recovery::
 Protect on-premises VMware workloads using VMware Cloud on Amazon FSx for ONTAP as a disaster recovery site.
@@ -132,15 +125,25 @@ Detect anomalies that might result in ransomware attacks. Protect and recover wo
 NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
+== Manage Costs and Compliance
+Complete tracking of hardware and software contract status across all systems supports better cost management, compliance monitoring, and informed purchasing decisions, while flexible deployment options--cloud-based agents or direct on-premises access--allow you to choose the architecture that fits your security and budget requirements.
+
+Automation hub::
+Use scripted solutions to automate the deployment and integration of NetApp products and services for greater operational efficiency and consistency.
+
+NetApp Cloud Tiering::
+Extend your on-premises ONTAP storage to the cloud for cost optimization and data lifecycle management.
+
+NetApp Data Classification::
+Get your application data and cloud environments privacy ready for compliance with data privacy regulations.
 
 NetApp Volume Caching::
-Create a writable cache volume to speed up access to data or offload traffic from heavily accessed volumes.
+Create a writable cache volume to speed up access to data or offload traffic from heavily accessed volumes for increased performance and cost efficiency.
 
 NetApp Workloads::
-Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP.
+Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
 
-https://www.netapp.com/bluexp/[Learn more about the NetApp Console and the available data services^]
-
+The data services listed above are available across the supported cloud providers described next.
 == Supported cloud providers
 
 The Console enables you to manage cloud storage and use cloud services in Amazon Web Services, Microsoft Azure, and Google Cloud.
