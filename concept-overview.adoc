@@ -52,15 +52,13 @@ link:concept-identity-and-access-management.html[Learn more about IAM in NetApp 
 
 == Simplify storage operations
 
-Discover, deploy, and manage all of your cloud and on-premises storage with the Console.
+NetApp Console provides unified management of your NetApp storage infrastructure through a single interface.
 
-NetApp Console solves key storage management challenges by providing unified management of your NetApp storage infrastructure through a single interface.
-
-_Systems_ in the Console represent your discovered or deployed storage. You can manage the storage systems directly from the Console by adding volumes directly from the Console or accessing the system's management interface. Apply data services to your storage systems to protect and optimize your data. You can also use the Console to manage your cloud storage accounts and view your storage capacity.
+In the Console, Systems represent your discovered or deployed storage. Manage systems by adding volumes or opening the system's management interface. Use data services to protect and optimize your data in the cloud or on-premises.
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
 
-Direct volume management and integrated ONTAP System Manager access enable administrators to provision, configure, and manage on-premises ONTAP, AFF/FAS, and ONTAP Select systems without operational complexity.
+Direct volume management and integrated advanced management access enable administrators to provision, configure, and manage storage systems without extra operational steps.
 
 === Supported cloud and on-premises storage
 
