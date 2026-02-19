@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-overview.html
-keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works
+keywords: overview, concepts, features, use case, cloud manager, netapp console, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works
 summary: The Console unifies storage management and protection across hybrid multi-cloud with integrated data services to protect and optimize data.
 ---
 
@@ -50,8 +50,7 @@ The Console provides identity and access management (IAM) capabilities that stre
 link:concept-identity-and-access-management.html[Learn more about IAM in NetApp Console]
 
 
-
-== Centralized storage management
+== Simplify storage operations
 
 Discover, deploy, and manage all of your cloud and on-premises storage with the Console.
 
@@ -61,7 +60,6 @@ _Systems_ in the Console represent your discovered or deployed storage. You can 
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
 
-== Simplify Storage Operations
 Direct volume management and integrated ONTAP System Manager access enable administrators to provision, configure, and manage on-premises ONTAP, AFF/FAS, and ONTAP Select systems without operational complexity.
 
 === Supported cloud and on-premises storage
@@ -85,7 +83,7 @@ Cloud object storage::
 * Google Cloud Storage
 
 
-== Maintain Infrastructure Visibility
+== Maintain infrastructure visibility
 Centralized performance observability and real-time health monitoring across all storage systems provide complete visibility into your infrastructure from a single console, reducing blind spots and management overhead.
 
 Licenses and subscriptions::
@@ -106,9 +104,9 @@ View issues related to capacity, availability, performance, protection, and secu
 Sustainability dashboard::
 Analyze the sustainability of your storage systems.
 
-== Protect and Optimize Data
+== Protect and optimize data
 
-Built-in data services including replication, backup, scanning, classification, and tiering enable organizations to safeguard critical data and optimize storage efficiency without deploying separate tools.
+Built-in data services enable organizations to safeguard critical data and optimize storage efficiency without deploying separate tools.
 
 NetApp Backup and Recovery::
 Back up and restore cloud and on-premises data.
@@ -144,6 +142,7 @@ NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
 
 The data services listed above are available across the supported cloud providers described next.
+
 == Supported cloud providers
 
 The Console enables you to manage cloud storage and use cloud services in Amazon Web Services, Microsoft Azure, and Google Cloud.
