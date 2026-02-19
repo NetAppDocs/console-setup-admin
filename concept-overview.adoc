@@ -23,18 +23,19 @@ The Console works in tandem with Console agents that you deploy in your environm
 
 The NetApp Console is a web-based console accessed through a SaaS application or a Console agent you install. You deploy additional Console agents to connect your storage to NetApp Console features.
 
-=== SaaS versus installed
+=== Choose how to access NetApp Console
 
 You can start using NetApp Console by signing up for the SaaS application (standard mode) or installing it in your own cloud (restricted mode) or on your premises (private mode). When you deploy NetApp Console in the cloud (restricted mode), NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when you install in your own cloud or on-premises.
 
 
 link:concept-modes.html[Learn more about deployment modes].
 
-=== Console agents
+=== Enable features with Console agents
 
-Console agents are lightweight software components that you deploy in your environment that enable you to manage storage, use data services, and access advanced features that require network connectivity between your storage and NetApp Console.
+Console agents are lightweight software components that provide connectivity to the NetApp Console SaaS application and cloud-based APIs, enabling advanced features and data services.
 
-When you deploy NetApp Console in the cloud (restricted mode) or on-premises (private mode), you install an Console agent that is used to access the Console. Depending on the network topology of your storage infrastructure, you need to deploy additional Console agents to enable features that require a network connection between your storage and NetApp Console SaaS application and NetApp APIs.
+In restricted or private mode, install a Console agent in your cloud or on-premises environment to access the NetApp Console application. You need to deploy additional agents to support features that require direct connectivity to NetApp Console and its APIs.
+
 
 link:concept-agents.html[Learn more about Console agents].
 
@@ -45,9 +46,14 @@ The Console provides identity and access management (IAM) to improve security an
 * A top-level _organization_ enables you to grant and revoke access to storage systems and projects across your entire infrastructure
 * _Folders_ enable you to group storage resources and projects together based on business function or compliance requirements
 * _Projects_ enable you to control which teams access specific storage systems, volumes, and data services
-* _Role-based access control (RBAC)_ enables you to assign storage management permissions to team members at different levels, ensuring appropriate delegation without overprovisioning access
+* _Role-based access control (RBAC)_ lets you give storage management permissions to team members at different levels, so you can delegate tasks without giving too much access
 
 link:concept-identity-and-access-management.html[Learn more about IAM in NetApp Console]
+
+=== Security and compliance
+Enable security and compliance features like single sign-on (SSO) to control access to your storage and data services. Console administrators can enable read-only mode by default so that users must request elevated permissions to make changes to storage systems and use data services. You can also use NetApp Console to monitor storage management and user activity. NetApp Console is SOC 2 Type 2 certified, and NetApp provides SOC 2 reports to customers.
+
+https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 2 reports^]
 
 
 === Supported cloud and on-premises storage
@@ -76,15 +82,9 @@ NetApp does not charge for the Console. You incur costs when you deploy Console 
 https://bluexp.netapp.com/pricing[Learn about NetApp data services pricing^]
 
 
-== Maintain infrastructure visibility
 
-Manage your NetApp storage infrastructure through a single interface,  including performance and health monitoring, reducing blind spots and overhead.
 
-In the Console, _Systems_ represent your discovered or deployed storage. Manage storage systems with direct volume management or by opening the system's management interface. Use data services to protect and optimize your data in the cloud or on-premises.
-
-image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
-
-=== Available storage management services
+== Available storage management services
 
 NetApp Console provides unified management of your NetApp storage infrastructure through a single interface.
 
@@ -149,14 +149,3 @@ Create a writable cache volume to speed up access to data or offload traffic fro
 
 NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
-
-
-
-
-
-
-== SOC 2 Type 2 certification
-
-An independent auditor confirms the Console meets SOC 2 Type 2 requirements.
-
-https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 2 reports^]
