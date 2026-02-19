@@ -34,13 +34,13 @@ link:concept-modes.html[Learn more about deployment modes].
 
 Console agents are lightweight software components that you can deploy in your environment to manage resources and processes across your on-premises and cloud environments. Console agents enable you to manage storage, use data services, and access advanced features that require a network connectivity between your storage and NetApp Console.
 
-When you deploy NetApp Console in the cloud (restricted mode) or on-premises (private mode), you install an Console agent that is used to access the Console. Depending on the network topology of your storage infrastructure, you need to deploy additional Console agents to enable features that require a network bridge between your storage and NetApp Console SaaS application and NetApp APIs.
+When you deploy NetApp Console in the cloud (restricted mode) or on-premises (private mode), you install an Console agent that is used to access the Console. Depending on the network topology of your storage infrastructure, you need to deploy additional Console agents to enable features that require a network connection between your storage and NetApp Console SaaS application and NetApp APIs.
 
 link:concept-agents.html[Learn more about Console agents].
 
 === Identity and access management (IAM)
 
-The Console provides identity and access management (IAM) capabilities that strengthen your security posture and governance across your data infrastructure. By organizing your storage and data services around organizational roles and responsibilities, you reduce the risk of unauthorized access while maintaining operational efficiency:
+The Console provides identity and access management (IAM) to improve security and control across your data infrastructure. By organizing your storage and data services around organizational roles and responsibilities, you reduce the risk of unauthorized access while maintaining operational efficiency:
 
 * A top-level _organization_ enables you to grant and revoke access to storage systems and projects across your entire infrastructure
 * _Folders_ enable you to group storage resources and projects together based on business function or compliance requirements
@@ -72,16 +72,15 @@ Cloud object storage::
 
 === Cost
 
-NetApp does not charge for the Console. You incur costs if you deploy Console agents or Restricted mode in the cloud. There are costs associated with some NetApp data services.
+NetApp does not charge for the Console. You incur costs when you deploy Console agents or use Restricted mode in the cloud. Some NetApp data services also have associated costs.
 https://bluexp.netapp.com/pricing[Learn about NetApp data services pricing^]
 
 
 == Maintain infrastructure visibility
-You gain full visibility into your infrastructure from one console through centralized performance and health monitoring, reducing blind spots and overhead.
 
-NetApp Console provides unified management of your NetApp storage infrastructure through a single interface.
+Manage your NetApp storage infrastructure through a single interface,  including performance and health monitoring, reducing blind spots and overhead.
 
-In the Console, _Systems_ represent your discovered or deployed storage. Manage systems with direct volume management or by opening the system's management interface. Use data services to protect and optimize your data in the cloud or on-premises.
+In the Console, _Systems_ represent your discovered or deployed storage. Manage storage systems with direct volume management or by opening the system's management interface. Use data services to protect and optimize your data in the cloud or on-premises.
 
 image:screenshot-canvas.png["A screenshot of the Console that shows several systems. One is selected and shows the ability to enable NetApp data services or to select *Enter system* to manage storage."]
 
@@ -123,7 +122,7 @@ NetApp Copy and Sync::
 Sync data between on-premises and cloud data stores.
 
 NetApp Disaster Recovery::
-Protect on-premises VMware workloads using VMware Cloud on Amazon FSx for ONTAP as a disaster recovery site. Requires subscriptions
+Protect on-premises VMware workloads using VMware Cloud on Amazon FSx for ONTAP as a disaster recovery site. Requires subscription.
 
 NetApp Ransomware Resilience::
 Detect anomalies that might result in ransomware attacks. Protect and recover workloads. Requires subscription.
@@ -132,10 +131,10 @@ NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
 == Cost and compliance management services
-Complete tracking of hardware and software contract status across all systems supports better cost management, compliance monitoring, and informed purchasing decisions. Flexible deployment options--cloud-based agents or direct on-premises access--allow you to choose the architecture that fits your security and budget requirements.
+Track hardware and software contract status across all systems to support better cost management, compliance monitoring, and informed purchasing decisions. 
 
 Automation hub::
-Use scripted solutions to automate the deployment and integration of NetApp products and services for greater operational efficiency and consistency.
+Use scripted solutions to automate the setup and connection of NetApp products and services for smoother and more consistent operations.
 
 NetApp Cloud Tiering::
 Extend your on-premises ONTAP storage to the cloud for cost optimization and data lifecycle management.
@@ -149,7 +148,6 @@ Create a writable cache volume to speed up access to data or offload traffic fro
 NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
 
-The data services listed above are available across the supported cloud providers described next.
 
 
 
