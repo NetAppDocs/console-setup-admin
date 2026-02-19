@@ -20,7 +20,6 @@ Use the Console as a software-as-a-service (SaaS) application or install it in y
 The Console works in tandem with Console agents that you deploy in your environment to manage resources and orchestrate processes across your on-premises and cloud environments.
 
 
-
 == Choose how to access NetApp Console
 
 You can start using NetApp Console by signing up for the SaaS application (standard mode) or installing it in your own cloud (restricted mode) or on your premises (private mode). When you deploy NetApp Console in the cloud (restricted mode), NetApp limits outbound connectivity to meet your organization's security and compliance requirements. Not all features and services are available when you install in your own cloud or on-premises.
@@ -54,30 +53,7 @@ Enable security and compliance features like single sign-on (SSO) to control acc
 https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 2 reports^]
 
 
-=== Supported cloud and on-premises storage
 
-Manage these storage types from the Console:
-
-Cloud storage solutions::
-* Amazon FSx for NetApp ONTAP
-* Azure NetApp Files
-* Cloud Volumes ONTAP
-* Google Cloud NetApp Volumes
-
-On-premises flash and object storage::
-* E-Series systems
-* ONTAP clusters
-* StorageGRID systems
-
-Cloud object storage::
-* Amazon S3 storage
-* Azure Blob storage
-* Google Cloud Storage
-
-=== Cost
-
-NetApp does not charge for the Console. You incur costs when you deploy Console agents or use Restricted mode in the cloud. Some NetApp data services also have associated costs.
-https://bluexp.netapp.com/pricing[Learn about NetApp data services pricing^]
 
 
 
@@ -147,3 +123,28 @@ Create a writable cache volume to speed up access to data or offload traffic fro
 
 NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
+
+== Supported cloud and on-premises storage
+
+Manage these storage types from the Console:
+
+Cloud storage solutions::
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* Google Cloud NetApp Volumes
+
+On-premises flash and object storage::
+* E-Series systems
+* ONTAP clusters
+* StorageGRID systems
+
+Cloud object storage::
+* Amazon S3 storage
+* Azure Blob storage
+* Google Cloud Storage
+
+== Cost
+
+NetApp does not charge for the Console. You incur costs when you deploy Console agents or use Restricted mode in the cloud. Some NetApp data services also have associated costs.
+https://bluexp.netapp.com/pricing[Learn about NetApp data services pricing^]
