@@ -121,7 +121,7 @@ Detect anomalies that might result in ransomware attacks. Protect and recover wo
 NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
-== Manage Costs and Compliance
+== Manage costs and compliance
 Complete tracking of hardware and software contract status across all systems supports better cost management, compliance monitoring, and informed purchasing decisions, while flexible deployment options--cloud-based agents or direct on-premises access--allow you to choose the architecture that fits your security and budget requirements.
 
 Automation hub::
