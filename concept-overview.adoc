@@ -54,7 +54,7 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 
 
 
 
-== Supported storage types, features, and data services within NetApp Console
+==  NetApp Console capabilities and supported storage
 
 NetApp Console supports a wide range of storage types, features, and data services across your on-premises and cloud environments. Use the Console to manage your storage systems, monitor their health and performance, and enable data services to protect and optimize your data.
 
