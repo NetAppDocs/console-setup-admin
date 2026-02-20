@@ -54,11 +54,12 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 
 
 
 
+== Supported storage types, features, and data services within NetApp Console
+
+NetApp Console supports a wide range of storage types, features, and data services across your on-premises and cloud environments. Use the Console to manage your storage systems, monitor their health and performance, and enable data services to protect and optimize your data.
 
 
-
-
-== Available storage management services
+=== Available storage management services
 
 NetApp Console provides unified management of your NetApp storage infrastructure through a single interface.
 
@@ -124,7 +125,7 @@ Create a writable cache volume to speed up access to data or offload traffic fro
 NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
 
-== Supported cloud and on-premises storage
+=== Supported cloud and on-premises storage
 
 Manage these storage types from the Console:
 
@@ -144,7 +145,7 @@ Cloud object storage::
 * Azure Blob storage
 * Google Cloud Storage
 
-== Cost
+=== Cost
 
 NetApp does not charge for the Console. You incur costs when you deploy Console agents or use Restricted mode in the cloud. Some NetApp data services also have associated costs.
 https://bluexp.netapp.com/pricing[Learn about NetApp data services pricing^]
