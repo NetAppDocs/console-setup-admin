@@ -51,6 +51,8 @@ includedPermissions:
 - cloudbuild.connections.list
 - cloudbuild.repositories.accessReadToken
 - cloudbuild.repositories.list
+- cloudbuild.workerpools.list
+- cloudbuild.workerpools.get
 - cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
