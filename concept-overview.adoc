@@ -88,7 +88,7 @@ View issues related to capacity, availability, performance, protection, and secu
 Sustainability dashboard::
 Analyze the sustainability of your storage systems.
 
-== Available data security and protection services
+=== Available data security and protection services
 
 Use built-in data services to protect critical data and optimize storage efficiency.
 
@@ -107,7 +107,7 @@ Detect anomalies that might result in ransomware attacks. Protect and recover wo
 NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
-== Available cost and compliance management services
+=== Available cost and compliance management services
 Track hardware and software contract status across all systems to support better cost management, compliance monitoring, and informed purchasing decisions. 
 
 Automation hub::
