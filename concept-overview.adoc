@@ -47,7 +47,7 @@ The Console provides identity and access management (IAM) to improve security an
 
 link:concept-identity-and-access-management.html[Learn more about IAM in NetApp Console]
 
-== Security and compliance
+== Security and compliance in NetApp Console
 Enable security and compliance features like single sign-on (SSO) to control access to your storage and data services. Console administrators can enable read-only mode by default so that users must request elevated permissions to make changes to storage systems and use data services. You can also use NetApp Console to monitor storage management and user activity. NetApp Console is SOC 2 Type 2 certified, and NetApp provides SOC 2 reports to customers.
 
 https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 2 reports^]
@@ -58,7 +58,7 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/[View NetApp's SOC 
 
 NetApp Console supports a wide range of storage types, features, and data services across your on-premises and cloud environments. Use the Console to manage your storage systems, monitor their health and performance, and enable data services to protect and optimize your data.
 
-=== Supported cloud and on-premises storage
+=== Supported cloud and on-premises storage in NetApp Console
 
 Manage these storage types from the Console:
 
@@ -79,7 +79,7 @@ Cloud object storage::
 * Google Cloud Storage
 
 
-=== Available storage management services
+=== Storage management services in NetApp Console
 
 NetApp Console provides unified management of your NetApp storage infrastructure through a single interface.
 
@@ -108,7 +108,7 @@ View issues related to capacity, availability, performance, protection, and secu
 Sustainability dashboard::
 Analyze the sustainability of your storage systems.
 
-=== Available data security and protection services
+=== Data security and protection services in NetApp Console
 
 Use built-in data services to protect critical data and optimize storage efficiency.
 
@@ -127,7 +127,7 @@ Detect anomalies that might result in ransomware attacks. Protect and recover wo
 NetApp Replication::
 Replicate data between storage systems to support backup and disaster recovery.
 
-=== Available cost and compliance management services
+=== Cost and compliance management services in NetApp Console
 Track hardware and software contract status across all systems to support better cost management, compliance monitoring, and informed purchasing decisions. 
 
 Automation hub::
@@ -146,7 +146,7 @@ NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
 
 
-== Cost
+== NetApp Console cost
 
 NetApp does not charge for the Console. You incur costs when you deploy Console agents or use Restricted mode in the cloud. Some NetApp data services also have associated costs.
 https://bluexp.netapp.com/pricing[Learn about NetApp data services pricing^]
