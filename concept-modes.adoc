@@ -98,14 +98,7 @@ See the following sections for details about supported features and services in 
 
 
 == Restricted mode (installed in your own public cloud)
-You install a Console agent in the cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application).
 
-Users access the local UI provided by the Console agent, not the SaaS application.
-
-Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
-
-
-<<Restricted mode, Learn more about outbound connectivity to the NetApp Console SaaS application>>.
 
 
 
@@ -225,6 +218,15 @@ Go to the https://console.netapp.com[NetApp Console^] and sign up.
 link:task-quick-start-standard-mode.html[Learn how to get started with standard mode].
 
 == Restricted mode
+
+You install a Console agent in the cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application).
+
+Users access the local UI provided by the Console agent, not the SaaS application.
+
+Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
+
+
+<<Restricted mode, Learn more about outbound connectivity to the NetApp Console SaaS application>>.
 
 The following image is an example of a restricted mode deployment.
 
