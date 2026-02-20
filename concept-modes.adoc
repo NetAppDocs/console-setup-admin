@@ -93,11 +93,36 @@ The following table compares these modes.
 
 See the following sections for details about supported features and services in each mode.
 
-=== Standard mode (SaaS)
+
+
+
+
+== Restricted mode (installed in your own public cloud)
+You install a Console agent in the cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application).
+
+Users access the local UI provided by the Console agent, not the SaaS application.
+
+Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
+
+
+<<Restricted mode, Learn more about outbound connectivity to the NetApp Console SaaS application>>.
+
+
+
+
+
+
+See the following sections for details about supported features and services in each mode.
+
+== Standard mode
+
+The following image shows a standard mode deployment.
+
+image:diagram-standard-mode.png["A conceptual image that shows the public internet where the web-based console, SaaS application and auth0 authentication are available, a virtual network in the cloud where an agent is running and managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
 
 The following table lists the storage management features, data services, and administrative features available in the NetApp Console SaaS application (standard mode).
 
-[options="header",cols="19,27"]
+[options="header",cols="19,27, 19"]
 |===
 
 | Product area
@@ -114,14 +139,10 @@ This portion of the table lists support for managing storage systems from the Ne
 | Azure Blob | No
 | Azure NetApp Files | No
 | Cloud Volumes ONTAP | Yes
-| Economic efficiency | Yes
 | E-Series | Yes
 | Google Cloud NetApp Volumes | No
 | Google Cloud Storage | Yes
-| Economic efficiency | Yes
-| Lifecycle planning | Yes
 | On-premises ONTAP clusters | Required for discovery and management. Discovery without a Console agent (direct discovery) is also supported, but management features aren't available without an agent.
-| Sustainability | Yes
 | StorageGRID | Yes
 | Workloads | No
 
@@ -136,14 +157,15 @@ This portion of the table lists support for managing storage systems from the Ne
 | NetApp Cloud Tiering | Yes
 | NetApp Volume Caching | Yes
 
-.4+| *NetApp support contract features*
+.5+| *NetApp support contract features*
 | Digital advisor | Yes
+| Economic efficiency | Yes
 | Lifecycle Planning | Yes
 | Software updates | No
 | Sustainability | Yes
 
 
-.9+| *Administrative features*
+.12+| *Administrative features*
 | Audit | N/A
 | Automation hub | N/A
 | Federation | N/A
@@ -160,111 +182,6 @@ This portion of the table lists support for managing storage systems from the Ne
 
 |===
 
-
-
-== Restricted mode (installed in your own public cloud)
-You install a Console agent in the cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application).
-
-Users access the local UI provided by the Console agent, not the SaaS application.
-
-Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
-+
-<<Restricted mode, Learn more about outbound connectivity to the NetApp Console SaaS application>>.
-
-The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in restricted mode.
-
-[options="header",cols="19,27,19"]
-|===
-
-| Product area
-| NetApp service or feature
-| Console agent required
-
-
-.3+| *Storage systems management*
-
-This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
-| Azure NetApp Files | No
-| Cloud Volumes ONTAP | Yes
-| On-premises ONTAP clusters | Required for discovery and management. Discovery without a Console agent (direct discovery) is also supported, but management features aren't available without an agent.
-
-.3+| *Data Services* (restricted mode supports fewer data services than standard mode)
-
-| Backup and Recovery | Yes
-| NetApp Classification | Yes
-| NetApp Replication | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
-
-| *NetApp support contract features*
-| None 
-
-
-.10+| *Administrative features*
-| Audit | N/A
-| Automation hub | N/A
-| Federation | N/A
-| Identity and access management | N/A
-| Licenses and subscriptions management | N/A
-| Manage cloud provider credentials | N/A 
-| Multi-factor authentication (local users) | N/A
-| Notifications | N/A
-| NSS accounts | N/A
-| Organization Partnerships | N/A
-| Read-only mode | N/A
-| Notifications | N/A
-
-
-|===
-
-Private mode (installed in your own secure cloud region or on premises)::
-You install a Console agent on-premises or in the cloud (in a secure region, sovereign cloud region, or commercial region) and has _no_ connectivity to the NetApp Console API endpoints (hosted by the SaaS application). You access the local UI provided by the Console agent, not the SaaS application.
-
-+
-A secure region includes https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], and https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^]
-
-[options="header",cols="19,27"]
-|===
-
-| Product area
-| NetApp service or feature
-
-
-.2+| *Storage systems management*
-
-This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
-| Cloud Volumes ONTAP 
-| On-premises ONTAP clusters 
-
-.3+| *Data Services*
-
-| Backup and Recovery 
-| NetApp Classification 
-| NetApp Replication 
-
-| *NetApp support contract features*
-| None
-
-
-.10+| *Administrative features*
-| Audit 
-| Licenses and subscriptions management
-| Identity and access management
-| Licenses and subscriptions management 
-| Manage cloud provider credentials  
-| Read-only mode 
-| Notifications 
-
-|===
-
-
-
-
-See the following sections for details about supported features and services in each mode.
-
-== Standard mode
-
-The following image shows a standard mode deployment.
-
-image:diagram-standard-mode.png["A conceptual image that shows the public internet where the web-based console, SaaS application and auth0 authentication are available, a virtual network in the cloud where an agent is running and managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
 
 The Console works as follows in standard mode:
 
@@ -312,6 +229,90 @@ link:task-quick-start-standard-mode.html[Learn how to get started with standard 
 The following image is an example of a restricted mode deployment.
 
 image:diagram-restricted-mode.png["A conceptual image that shows the public internet where the SaaS application and auth0 authentication are available, a virtual network in the cloud where an agent is running and providing access to the web-based console, and is managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
+
+The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in restricted mode.
+
+[options="header",cols="19,27,19"]
+|===
+
+| Product area
+| NetApp service or feature
+| Console agent required
+
+
+.3+| *Storage systems management*
+
+This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
+| Azure NetApp Files | No
+| Cloud Volumes ONTAP | Yes
+| On-premises ONTAP clusters | Required for discovery and management. Discovery without a Console agent (direct discovery) is also supported, but management features aren't available without an agent.
+
+.3+| *Data Services* (restricted mode supports fewer data services than standard mode)
+
+| Backup and Recovery | Yes
+| NetApp Classification | Yes
+| NetApp Replication | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
+
+| *NetApp support contract features*
+| None | N/A
+
+
+
+.12+| *Administrative features*
+| Audit | N/A
+| Automation hub | N/A
+| Federation | N/A
+| Identity and access management | N/A
+| Licenses and subscriptions management | N/A
+| Manage cloud provider credentials | N/A 
+| Multi-factor authentication (local users) | N/A
+| Notifications | N/A
+| NSS accounts | N/A
+| Organization Partnerships | N/A
+| Read-only mode | N/A
+| Notifications | N/A
+
+|===
+
+Private mode (installed in your own secure cloud region or on premises)::
+You install a Console agent on-premises or in the cloud (in a secure region, sovereign cloud region, or commercial region) and has _no_ connectivity to the NetApp Console API endpoints (hosted by the SaaS application). You access the local UI provided by the Console agent, not the SaaS application.
+
++
+A secure region includes https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], and https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^]
+
+[options="header",cols="19,27"]
+|===
+
+| Product area
+| NetApp service or feature
+
+
+.2+| *Storage systems management*
+
+This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
+| Cloud Volumes ONTAP 
+| On-premises ONTAP clusters 
+
+.3+| *Data Services*
+
+| Backup and Recovery 
+| NetApp Classification 
+| NetApp Replication 
+
+| *NetApp support contract features*
+| None
+
+
+.10+| *Administrative features*
+| Audit 
+| Licenses and subscriptions management
+| Identity and access management
+| Licenses and subscriptions management 
+| Manage cloud provider credentials  
+| Read-only mode 
+| Notifications 
+
+|===
 
 The Console works as follows in restricted mode:
 
