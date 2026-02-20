@@ -101,6 +101,8 @@ The following image shows a standard mode deployment.
 
 image:diagram-standard-mode.png["A conceptual image that shows the public internet where the web-based console, SaaS application and auth0 authentication are available, a virtual network in the cloud where an agent is running and managing Cloud Volumes ONTAP and an AFF cluster in an on-premises data center."]
 
+
+=== Supported features and services for NetApp Console in standard mode
 The following table lists the storage management features, data services, and administrative features available in the NetApp Console SaaS application (standard mode).
 
 [options="header",cols="19,27, 19"]
