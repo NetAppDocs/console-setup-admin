@@ -27,7 +27,7 @@ You can start using NetApp Console by signing up for the SaaS application (stand
 
 link:concept-modes.html[Learn more about deployment modes].
 
-== Enable features with Console agents
+==  Extend Console capabilities with Console agents
 
 Console agents are lightweight software components that provide connectivity to the NetApp Console SaaS application and cloud-based APIs, enabling advanced features and data services.
 
@@ -146,7 +146,7 @@ NetApp Workloads::
 Design, set up, and operate key workloads using Amazon FSx for NetApp ONTAP to optimize performance and cost for specific applications.
 
 
-== NetApp Console cost
+=== NetApp Console cost
 
 NetApp does not charge for the Console. You incur costs when you deploy Console agents or use Restricted mode in the cloud. Some NetApp data services also have associated costs.
 https://bluexp.netapp.com/pricing[Learn about NetApp data services pricing^]
