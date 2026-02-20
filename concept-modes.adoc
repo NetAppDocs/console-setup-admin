@@ -369,7 +369,9 @@ image:diagram-private-mode-onprem.png["A conceptual image that shows an on-premi
 
 === Supported features and services for NetApp Console in private mode
 
-The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in private mode.
+The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in private mode. Features differ when you install the NetApp Console in the cloud versus your premises.
+
+Installed in the cloud::
 
 [options="header",cols="19,27, 19"]
 |===
@@ -412,6 +414,9 @@ Back up and restore of application data and virtual machine data is not supporte
 | Notifications | N/A
 
 |===
+
+Installed on-premises::
+
 
 === How NetApp Console works in private mode
 
@@ -509,7 +514,7 @@ link:task-quick-start-private-mode.html[Learn how to get started with private mo
 +
 NOTE: If you want to use NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], then you should follow separate instructions to get started in those environments. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
 
-== Service and feature comparison
+== NetApp Console service and feature comparison
 
 The following table can help you quickly identify which services and features are supported with restricted mode and private mode.
 
