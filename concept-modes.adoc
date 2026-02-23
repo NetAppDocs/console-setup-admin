@@ -105,7 +105,7 @@ image:diagram-standard-mode.png["A conceptual image that shows the public intern
 === Supported features and services for NetApp Console in standard mode
 The following table lists the storage management features, data services, and administrative features available in the NetApp Console SaaS application (standard mode).
 
-[options="header",cols="19,27, 19"]
+[cols=3*,options="header,autowidth"]
 |===
 
 | Product area
@@ -153,7 +153,9 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Automation hub | N/A
 | Federation | N/A
 | Identity and access management | N/A
-| Licenses and subscriptions management | N/A
+a| Licenses and subscriptions management
+
+* Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depends on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options. | N/A
 | Manage cloud provider credentials | N/A 
 | Multi-factor authentication (local users) | N/A
 | Notifications | N/A
@@ -195,13 +197,10 @@ API calls are made to the following endpoint:
 Authentication::
 NetApp Console provides authentication with auth0 or NetApp Support Site (NSS) logins. Identity federation is available.
 
-Supported data services::
-All NetApp data services are available to users.
 
-Supported licensing options::
-Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depends on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options.
 
-How to get started with standard mode::
+
+=== How to get started with standard mode
 Go to the https://console.netapp.com[NetApp Console^] and sign up.
 +
 link:task-quick-start-standard-mode.html[Learn how to get started with standard mode].
@@ -225,7 +224,7 @@ image:diagram-restricted-mode.png["A conceptual image that shows the public inte
 
 The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in restricted mode.
 
-[options="header",cols="19,27,19"]
+[cols=3*,options="header,autowidth"]
 |===
 
 | Product area
@@ -242,9 +241,19 @@ This table shows which storage systems you can manage from the NetApp Console. I
 
 .3+| *Data Services* (restricted mode supports fewer data services than standard mode)
 
-| Backup and Recovery | Yes
-| NetApp Classification | Yes
-| NetApp Replication | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
+a| Backup and Recovery
+
+* Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
+
+* In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^] |Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
+
+In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
+a| NetApp Data Classification 
+
+* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode.|  Yes
+a| NetApp Replication
+
+* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes*,  (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
 
 | *NetApp support contract features*
 | None | N/A
@@ -256,7 +265,19 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Automation hub | N/A
 | Federation | N/A
 | Identity and access management | N/A
-| Licenses and subscriptions management | N/A
+a| Licenses and subscriptions management
+
+
+Note the following:
+
+* Marketplace subscriptions (hourly and annual contracts)
+
+** For Cloud Volumes ONTAP, only capacity-based licensing is supported.
+** In Azure, annual contracts are not supported with government regions.
+
+* BYOL
++
+For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing are supported with BYOL. | N/A
 | Manage cloud provider credentials | N/A 
 | Multi-factor authentication (local users) | N/A
 | Notifications | N/A
@@ -281,65 +302,19 @@ A connection is also required to cloud provider resources from within the region
 Supported location for an agent::
 In restricted mode, you install agents in the cloud: in a government region, sovereign region, or commercial region.
 
-
 Console agent upgrades::
 NetApp Console upgrades agent software automatically each month.
 
 User interface access::
-The user interface is accessible from an agent virtual machine that's deployed in your cloud region.
+Users access the Console  from an agent virtual machine that's deployed in your cloud region.
 
 API endpoint::
 API calls are made to an agent virtual machine.
 
-
 Authentication::
 Authentication is provided through NetApp Console's cloud service using auth0. Identity federation is also available.
 
-Supported services::
-NetApp Console supports the following storage and data services with restricted mode:
-+
-[cols=2*,options="header,autowidth"]
-|===
-| Supported services
-| Notes
-
-| Azure NetApp Files | Full support
-
-| NetApp Backup and recovery | Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
-
-In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
-
-Back up and restore of application data and virtual machine data is not supported.
-
-| NetApp Data Classification a| Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. 
-
-| Cloud Volumes ONTAP | Full support
-
-| Licenses and subscriptions | You can access license and subscription information with the supported licensing options listed below for restricted mode.
-
-| On-premises ONTAP clusters | Discovery with a CConsole agent and discovery without a Console agent (direct discovery) are both supported. 
-
-When you discover an on-premises cluster with a Console, the Advanced view (System Manager) is not supported.
-
-| NetApp Replication | Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode.
-
-|===
-
-Supported licensing options::
-The following licensing options are supported with restricted mode:
-
-* Marketplace subscriptions (hourly and annual contracts)
-+
-Note the following:
-+
-** For Cloud Volumes ONTAP, only capacity-based licensing is supported.
-** In Azure, annual contracts are not supported with government regions.
-
-* BYOL
-+
-For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing are supported with BYOL.
-
-How to get started with restricted mode::
+=== How to get started with restricted mode
 You need to enable restricted mode when you create your NetApp Console account.
 +
 If you do not have an organization, you are prompted to create one and enable restricted mode when you first log in to your installed Console agent.
@@ -367,9 +342,9 @@ image:diagram-private-mode-onprem.png["A conceptual image that shows an on-premi
 
 The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in private mode. Features differ when you install the NetApp Console in the cloud versus your premises.
 
-Installed in the cloud::
+Private mode installed in the cloud::
 
-[options="header",cols="19,27, 19"]
+[cols=3*,options="header,autowidth"]
 |===
 
 | Product area
@@ -381,7 +356,12 @@ Installed in the cloud::
 
 This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
 | Cloud Volumes ONTAP | Yes, but because there's no internet access, the following features aren't available: automated software upgrades and AutoSupport.
-| On-premises ONTAP clusters | You can use direct discovery without a Console agent, but you need an agent to use management features.
+a| On-premises ONTAP clusters
+
+* Requires connectivity from the cloud (where the Console agent is installed) to the on-premises environment.
+
++
+You must have an installed Console agent to discover on-premises ONTAP clusters. | You can use direct discovery without a Console agent, but you need an agent to use management features.
 
 .3+| *Data Services*
 
@@ -394,7 +374,11 @@ Back up and restore of application data and virtual machine data is not supporte
 
 
 
-| NetApp Classification | Yes
+a| NetApp Classification 
+
+* The only supported data sources are the ones that you can discover locally. https://docs.netapp.com/us-en/data-services-classification/task-deploy-compliance-dark-site.html#supported-data-sources[View the sources that you can discover locally^]
+
+* Features that require outbound internet access are not supported. https://docs.netapp.com/us-en/data-services-classification/task-deploy-compliance-dark-site.html#limitations[View the feature limitations^]| Yes
 | NetApp Replication | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
 
 | *NetApp support contract features*
@@ -403,7 +387,15 @@ Back up and restore of application data and virtual machine data is not supporte
 
 .6+| *Administrative features*
 | Audit | N/A
-| Licenses and subscriptions management (You can track the supported licensing options listed below for private mode.)| N/A
+a| Licenses and subscriptions management 
+
+* Only BYOL is supported with private mode. 
+
++
+
+For Cloud Volumes ONTAP BYOL, only node-based licensing is supported. Capacity-based licensing is not supported. Because an outbound internet connection isn't available, you need to manually upload your Cloud Volumes ONTAP licensing file in the Console.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses[Learn how to add licenses^]| N/A
 | Identity and access management | N/A
 | Manage cloud provider credentials | N/A
 | Read-only mode | N/A
@@ -411,7 +403,61 @@ Back up and restore of application data and virtual machine data is not supporte
 
 |===
 
-Installed on-premises::
+
+Private mode installed on-premises::
+
+[cols=3*,options="header,autowidth"]
+|===
+
+| Product area
+| NetApp service or feature
+| Console agent required
+
+
+.2+| *Storage systems management*
+
+This portion of the table lists support for managing storage systems from the NetApp Console. It does not indicate the supported backup destinations for NetApp Backup and Recovery.
+
+a| On-premises ONTAP clusters
+
+* Requires connectivity from the cloud (where the Console agent is installed) to the on-premises environment.
+
++
+You must have an installed Console agent to discover on-premises ONTAP clusters. | You can use direct discovery without a Console agent, but you need an agent to use management features.
+
+.3+| *Data Services*
+
+a| Backup and Recovery
+
+* In private mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
+
+* Back up and restore of application data and virtual machine data is not supported.
+ | Yes
+
+
+
+a| NetApp Classification 
+
+* The only supported data sources are the ones that you can discover locally. https://docs.netapp.com/us-en/data-services-classification/task-deploy-compliance-dark-site.html#supported-data-sources[View the sources that you can discover locally^]
+
+* Features that require outbound internet access are not supported. https://docs.netapp.com/us-en/data-services-classification/task-deploy-compliance-dark-site.html#limitations[View the feature limitations^]| Yes
+| NetApp Replication | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
+
+| *NetApp support contract features*
+| None | N/A
+
+
+.6+| *Administrative features*
+| Audit | N/A
+a| Licenses and subscriptions management 
+
+* Only BYOL is supported with private mode.
+| Identity and access management | N/A
+| Manage cloud provider credentials | N/A
+| Read-only mode | N/A
+| Notifications | N/A
+
+|===
 
 
 === How NetApp Console works in private mode
@@ -429,7 +475,7 @@ Console agent upgrades::
 You must manually upgrade the Console agent software. NetApp publishes the Console agent software to the NetApp Support Site at undefined intervals.
 
 User interface access::
-The user interface is accessible from the Console agent that's deployed in your cloud region or on-premises.
+Users access the Console from the Console agent that's deployed in your cloud region or on-premises.
 
 API endpoint::
 API calls are made to the Console agent virtual machine.
@@ -437,71 +483,11 @@ API calls are made to the Console agent virtual machine.
 Authentication::
 Authentication is provided through local user management and access. Authentication is not provided through NetApp Console's cloud service.
 
-NetApp data services in cloud deployments::
-NetApp Console supports the following storage and data services with private mode when the Console agent is installed in the cloud:
-+
-[cols=2*,options="header,autowidth"]
-|===
-| Supported services
-| Notes
 
-| NetApp Backup and recovery | Supported in AWS and Azure commercial regions. 
 
-Not supported in Google Cloud or in https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], or https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^]
 
-In private mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
-Back up and restore of application data and virtual machine data is not supported.
 
-| Cloud Volumes ONTAP | Because there's no internet access, the following features aren't available: automated software upgrades and AutoSupport.
-
-| Licenses and subscriptions | You can track the supported licensing options listed below for private mode.
-
-| On-premises ONTAP clusters | Requires connectivity from the cloud (where the Console agent is installed) to the on-premises environment.
-
-You must have an installed Console agent to discover on-premises ONTAP clusters.
-|===
-
-Supported NetApp Console services in on-premises deployments::
-NetApp Console supports the following storage and data services with private mode when the Console agent is installed on your premises:
-+
-[cols=2*,options="header,autowidth"]
-|===
-| Supported services
-| Notes
-
-| Backup and recovery
-a| 
-
-In private mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP volume data^]
-
-Back up and restore of application data and virtual machine data is not supported.
-
-| NetApp Classification
-a| 
-* The only supported data sources are the ones that you can discover locally.
-+
-https://docs.netapp.com/us-en/data-services-classification/task-deploy-compliance-dark-site.html#supported-data-sources[View the sources that you can discover locally^]
-
-* Features that require outbound internet access are not supported.
-+ 
-https://docs.netapp.com/us-en/data-services-classification/task-deploy-compliance-dark-site.html#limitations[View the feature limitations^]
-
-| Licenses and subscriptions | You can use track the supported licensing options listed below for private mode.
-
-| On-premises ONTAP clusters | You must have an installed Console agent to discover on-premises ONTAP clusters.
-
-| Replication | Full support
-
-|===
-
-Supported licensing options::
-Only BYOL is supported with private mode. 
-+
-For Cloud Volumes ONTAP BYOL, only node-based licensing is supported. Capacity-based licensing is not supported. Because an outbound internet connection isn't available, you need to manually upload your Cloud Volumes ONTAP licensing file in the Console.
-+
-https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses[Learn how to add licenses^]
-
-How to get started with private mode::
+=== How to get started with private mode
 Private mode is available by downloading the "offline" installer from the NetApp Support Site.
 +
 link:task-quick-start-private-mode.html[Learn how to get started with private mode].
