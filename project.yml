@@ -23,9 +23,9 @@ sidebar:
       entries:
         - title: Learn the basics
           entries: 
-            - title: NetApp Console
+            - title: Learn about NetApp Console
               url: /concept-overview.html
-            - title: SaaS versus restricted deployment modes
+            - title: Choose a NetApp Console deployment mode for your business needs
               url: /concept-modes.html
             - title: NetApp support accounts
               url: /task-adding-nss-accounts.html
@@ -33,7 +33,7 @@ sidebar:
               url: /concept-agents.html
             - title: Identity and access management
               url: /concept-identity-and-access-management.html
-        - title: Get started with NetApp Console (Saas)
+        - title: Get started with NetApp Console (SaaS)
           entries:
             - title: Getting started workflow
               url: /task-quick-start-standard-mode.html

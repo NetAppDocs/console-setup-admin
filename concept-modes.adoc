@@ -5,7 +5,7 @@ keywords: dark site, internet, on prem, no internet, supported deployments, govc
 summary: You can use NetApp Console through the SaaS application or install it yourself in your own environment (cloud or on-premises). 
 ---
 
-= Learn about NetApp Console deployment modes
+= Choose a NetApp Console deployment mode for your business needs
 :hardbreaks:
 :nofooter:
 :icons: font
