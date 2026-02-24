@@ -30,7 +30,7 @@ sidebar:
             - title: NetApp support accounts
               url: /task-adding-nss-accounts.html
             - title: Understand Console agents
-              url: /concept-agents.html
+              url: /concept-agent-overview.html
             - title: Identity and access management
               url: /concept-identity-and-access-management.html
         - title: Get started with NetApp Console (SaaS)

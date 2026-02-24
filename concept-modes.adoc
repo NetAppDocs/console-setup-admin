@@ -295,9 +295,9 @@ For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing 
 The Console works as follows in restricted mode:
 
 Outbound communication::
-An agent requires outbound connectivity to the Console SaaS application for support of data services, software upgrades, authentication, and metadata transmission.
+An agent requires outbound connectivity to the NetApp cloud-based APIs for support of data services, software upgrades, authentication, and metadata transmission.
 +
-The Console SaaS application does not initiate communication to an agent. The agent initiates all communication and can pull or push data from or to the SaaS application as required.
+NetApp does not initiate communication to an agent. The agent initiates all communication and can pull or push data from or to the NetApp APIs and services as required.
 +
 A connection is also required to cloud provider resources from within the region.
 
@@ -308,7 +308,7 @@ Console agent upgrades::
 NetApp Console upgrades agent software automatically each month.
 
 User interface access::
-Users access the Console  from an agent virtual machine that's deployed in your cloud region.
+Users access the Console from an agent virtual machine that's deployed in your cloud region.
 
 API endpoint::
 API calls are made to an agent virtual machine.
