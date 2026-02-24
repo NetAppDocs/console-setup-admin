@@ -61,16 +61,13 @@ When you access the NetApp Console for the first time, you'll be prompted to set
 .Steps
 
 . Open a web browser and enter the IP address of the Linux host where you installed the Console agent.
-+
-You should see the following screen.
-+
-image:screenshot-onprem-darksite-welcome.png[A screenshot of the Welcome page that appears after you enter the IP address of the Console agent into your web browser.]
+
+
 
 . Select *Set Up New Console agent* and follow the prompts to set up the system.
 
 * *System Details*: Enter a name for the Console agent and your company name.
-+
-image:screenshot-onprem-darksite-details.png[A screenshot of the System Details page that prompts you to enter the Console agent name and Company name.]
+
 * *Create an Admin User*: Create the admin user for the system.
 
 * *Review*: Review the details, accept the license agreement, and then select *Set Up*.

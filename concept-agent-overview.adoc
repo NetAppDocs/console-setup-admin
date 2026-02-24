@@ -96,10 +96,19 @@ Each agent operates independently and can manage multiple storage systems and da
 
 
 == Deploy and manage Console agents
-To learn how to deploy and manage Console agents, refer to the following documentation:
+Where you deploy an agent depends on how you will be accessing the NetApp Console and where your storage lives in your environment. 
 
-link:task-install-agent-aws-console.html[Install an agent in AWS].
+=== Agents for the SaaS application (standard mode)
+You can install agents directly from the Console when using the SaaS application (standard mode). You can install in AWS, Azure, or Google Cloud, or on your premises. 
 
-link:task-install-agent-azure-console.html[Install an agent in Azure].
+If installing an agent from which you will be accessing the NetApp Console, you can install it from your cloud provider's marketplace, or by manually installing the software on your own Linux host in the cloud or on your premises (private mode only) or in your VCenter environment.
 
-link:task-install-agent-google-console.html[Install an agent in Google Cloud].
+NetApp supports installing agents in AWS, Google, or Azure regions. When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
+
+* link:task-install-agent-aws-console.html[Install an agent in AWS].
+
+* link:task-install-agent-azure-console.html[Install an agent in Azure].
+
+* link:task-install-agent-google-console-gcloud.html[Install an agent in Google Cloud].
+
+* link:task-install-agent-on-prem.html[Install an agent on-premises].
