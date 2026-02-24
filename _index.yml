@@ -9,7 +9,7 @@ indexpage:
         - title: Learn about NetApp Console
           url: concept-overview.html
         - title: Learn about Console agents
-          url: concept-agents.html
+          url: concept-agent-overview.html
         - title: Learn about identity and access management
           url: concept-identity-and-access-management.html
         - title: Learn about deployment modes 
