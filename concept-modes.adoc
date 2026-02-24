@@ -178,7 +178,7 @@ Connectivity is required from an agent to the Console SaaS application, to your 
 +
 * link:task-install-agent-aws-console.html#networking-aws-agent[Endpoints that an agent contacts in AWS]
 * link:task-install-agent-azure-console.html#networking-azure-agent[Endpoints that an agent contacts in Azure]
-* link:task-install-agent-google-console.html#networking-gcp-agent[Endpoints that an agent contacts in Google Cloud]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent[Endpoints that an agent contacts in Google Cloud]
 
 Supported location for a Console agent::
 In standard mode, you can install a Console agent in the cloud or on your premises.
@@ -216,7 +216,7 @@ Users access the local UI provided by the Console agent, not the SaaS applicatio
 Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
 
 
-<<Restricted mode, Learn more about outbound connectivity to the NetApp Console SaaS application>>.
+<<Restricted mode, Learn more about outbound connectivity to the NetApp Console APIs>>.
 
 The following image is an example of a restricted mode deployment.
 
