@@ -77,14 +77,14 @@ Install agents in your public cloud region (government, sovereign, or commercial
 **Private mode (on-premises):**
 Install agents in your data center or air-gapped environment. Agents have no connectivity to NetApp API endpoints. All operations remain local, with full data sovereignty and control.
 
-== Agent architecture
+=== Agent architecture
 
-Agents operate as lightweight processes that:
+Agents operate with lightweight processes that:
 
 * Pull or push data to and from the Console SaaS application (standard and restricted modes) or operate purely locally (private mode)
 * Initiate all communication—the Console never initiates outbound calls to agents
 * Connect to your storage systems using standard management protocols
-* Support high-availability deployments across multiple regions or availability zones
+* Use TLS 1.3 for secure communication with cloud providers and the NetApp Console APIs
 
 == Multiple agents
 
@@ -96,14 +96,19 @@ Each agent operates independently and can manage multiple storage systems and da
 
 
 == Deploy and manage Console agents
-Where you deploy an agent depends on how you will be accessing the NetApp Console and where your storage lives in your environment. 
+Where you deploy an agent depends on how you will be accessing the NetApp Console and where your storage lives in your environment. NetApp supports deploying agents in AWS, Azure, Google Cloud, and on your premises. You can deploy agents directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host or in your VCenter environment.
 
 === Agents for the SaaS application (standard mode)
-You can install agents directly from the Console when using the SaaS application (standard mode). You can install in AWS, Azure, or Google Cloud, or on your premises. 
+You can install agents directly from the Console when using the SaaS application (standard mode). You can install in AWS, Azure, or Google Cloud, or manually on your premises on your own Linux host or in your VCenter environment. 
 
-If installing an agent from which you will be accessing the NetApp Console, you can install it from your cloud provider's marketplace, or by manually installing the software on your own Linux host in the cloud or on your premises (private mode only) or in your VCenter environment.
+When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
 
-NetApp supports installing agents in AWS, Google, or Azure regions. When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
+=== Agents for NetApp Console in restricted or private mode
+If you're using NetApp Console in restricted mode or private mode, you install agents from your cloud provider's marketplace, or by manually installing the software on your own Linux host in the cloud or on your premises or in your VCenter environment.
+
+You'll need to install one agent from which users will access the NetApp Console. Additional agents are needed to enable data services and to manage storage systems. When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
+
+ When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
 
 * link:task-install-agent-aws-console.html[Install an agent in AWS].
 
@@ -112,3 +117,10 @@ NetApp supports installing agents in AWS, Google, or Azure regions. When you ins
 * link:task-install-agent-google-console-gcloud.html[Install an agent in Google Cloud].
 
 * link:task-install-agent-on-prem.html[Install an agent on-premises].
+
+=== Use multiple agents when needed
+
+Each agent operates independently and can manage multiple storage systems and data services. Deploy multiple agents when you need:
+
+* Isolation by storage type or organizational function
+* Meet geographic or network segmentation requirements
