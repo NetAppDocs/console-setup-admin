@@ -5,7 +5,7 @@ keywords: console agent, agent, what is an agent, deployment, hybrid cloud, stor
 summary: You enable NetApp Console capabilities by deploying Console agents, a lightweight software component provides a secure connection between your on-premises and cloud storage systems and the NetApp Console, enabling advanced storage orchestration and data services.
 ---
 
-= Understand NetApp Console agents
+= Learn about NetApp Console agents
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: You enable NetApp Console capabilities by deploying Console agents, a l
 :imagesdir: ./media/
 
 [.lead]
-You enable NetApp Console capabilities by deploying Console agents, a lightweight software component provides a secure connection between your on-premises and cloud storage systems and the NetApp Console, enabling advanced storage orchestration and data services.
+You enable NetApp Console capabilities by  deploying Console agents, lightweight software components that provide a secure connection between your on-premises and cloud storage systems and the NetApp Console, enabling advanced storage orchestration and data services.
 
 == What a Console agent does
 
