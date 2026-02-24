@@ -19,10 +19,10 @@ You enable NetApp Console capabilities by  deploying Console agents, lightweight
 
 A Console agent bridges the network gap between your storage systems and NetApp Console. It connects your infrastructure to the NetApp APIs and the Console securely, allowing you to:
 
-* Discover and manage storage systems across AWS, Azure, Google Cloud, and on-premises environments
-* Orchestrate storage provisioning and configuration tasks
-* Enable advanced data protection and optimization services
-* Associate your cloud provider credentials for billing integration
+* Discover and perform advanced management tasks on storage systems across AWS, Azure, Google Cloud, and on-premises environments from the NetApp Console.
+* Orchestrate storage provisioning and configuration tasks on storage systems from the NetApp Console. 
+* Enable advanced data protection and optimization services.
+* Associate your cloud provider credentials with a Console agent to securely track cloud service usage and connect deployments to the correct subscription for accurate billing and cost management.
 
 
 == When you need a Console agent
@@ -30,7 +30,7 @@ A Console agent bridges the network gap between your storage systems and NetApp 
 You need at least one Console agent to:
 
 * Use restricted or private deployment modes (Console installed in your own environment)
-* Access advanced data services (backup, disaster recovery, ransomware protection, tiering, classification)
+* Access advanced data services (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Data Classification and more)
 * Manage Cloud Volumes ONTAP systems
 * Perform advanced management tasks on on-premises ONTAP clusters
 * Track licenses, monitor storage health, and plan lifecycle upgrades
@@ -66,16 +66,7 @@ Suggestion: Console agents are critical infrastructure for NetApp Console. NetAp
 * Infrastructure failures are resolved quickly
 * Agent VMs are maintained and upgraded according to NetApp recommendations
 
-== How agents work in each deployment mode
 
-**Standard mode (SaaS):**
-Deploy agents in your cloud or on-premises to bridge connectivity to the cloud-hosted Console SaaS application. Agents enable advanced features while the Console UI remains accessible from anywhere.
-
-**Restricted mode (cloud-hosted):**
-Install agents in your public cloud region (government, sovereign, or commercial). You access the Console UI locally from an agent VM.
-
-**Private mode (on-premises):**
-Install agents in your data center or air-gapped environment. Agents have no connectivity to NetApp API endpoints. All operations remain local, with full data sovereignty and control.
 
 === Agent architecture
 
@@ -99,16 +90,33 @@ Each agent operates independently and can manage multiple storage systems and da
 Where you deploy an agent depends on how you will be accessing the NetApp Console and where your storage lives in your environment. NetApp supports deploying agents in AWS, Azure, Google Cloud, and on your premises. You can deploy agents directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host or in your VCenter environment.
 
 === Agents for the SaaS application (standard mode)
+Deploy agents in your cloud or on-premises to bridge connectivity to the cloud-hosted Console SaaS application. Agents enable advanced features while the Console UI remains accessible from anywhere.
+
 You can install agents directly from the Console when using the SaaS application (standard mode). You can install in AWS, Azure, or Google Cloud, or manually on your premises on your own Linux host or in your VCenter environment. 
 
 When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
 
-=== Agents for NetApp Console in restricted or private mode
-If you're using NetApp Console in restricted mode or private mode, you install agents from your cloud provider's marketplace, or by manually installing the software on your own Linux host in the cloud or on your premises or in your VCenter environment.
+=== Agents for NetApp Console in restricted mode
 
-You'll need to install one agent from which users will access the NetApp Console. Additional agents are needed to enable data services and to manage storage systems. When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
+You need to install one agent from which users will access the NetApp Console. Additional agents are needed to enable data services and to manage storage systems. 
 
- When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
+If you're using NetApp Console in restricted mode, you install agents from your cloud provider's marketplace, or by manually installing the software on your own Linux host in the cloud or on your premises or in your VCenter environment.
+
+You'll need to install one agent from which users will access the NetApp Console. Additional agents are needed to enable data services and to manage storage systems. 
+
+When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
+
+=== Agents for NetApp Console in private mode (on-premises or in the cloud with no outbound connectivity)
+
+You need to install one agent from which users will access the NetApp Console. Additional agents are needed to enable data services and to manage storage systems. 
+
+Install agents in your data center or air-gapped environment. Agents have no connectivity to NetApp API endpoints. All operations remain local, with full data sovereignty and control. 
+
+You'll need to install one agent from which users will access the NetApp Console. Additional agents are needed to enable data services and to manage storage systems. 
+
+When you install an agent on your premises, you can associate the respective cloud provider credentials to enable billing integration and data services.
+
+Learn how to deploy Console agents:
 
 * link:task-install-agent-aws-console.html[Install an agent in AWS].
 
