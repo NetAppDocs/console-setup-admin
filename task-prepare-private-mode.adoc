@@ -18,13 +18,7 @@ Prepare your environment before you deploy NetApp Console in private mode. You n
 NOTE: To use NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], follow the specific instructions for those environments. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
 
 == Step 1: Understand how private mode works
-Private mode allows you to use the NetApp Console with no outbound connectivity. This mode is designed for environments that require heightened security and isolation.
-
-When using private mode, there are some important differences compared to standard mode (SaaS).
-
-For example, you need to use the browser-based interface that is available locally from the Console agent that you  install.
-
-In addition, not all features and services are available.
+In private mode, you install a Console agent either on-premises or in the cloud and then use NetApp Console to manage your storage systems (ONTAP on-premises and Cloud Volumes ONTAP). There is no connectivity to the NetApp Console API endpoints or the NetApp Console SaaS application, so you access the Console from the local UI provided by the Console agent.
 
 link:concept-modes.html[Learn how private mode works].
 
@@ -32,7 +26,7 @@ link:concept-modes.html[Learn how private mode works].
 
 In private mode, you can install the Console agent on-premises or in the cloud by manually installing the agent on your own Linux host.
 
-Where you install the Console agent determines which NetApp Console services and features are available when using private mode. The Console agent must be installed in the cloud if you want to deploy and manage Cloud Volumes ONTAP. link:concept-modes.html#private-mode[Learn more about private mode].
+Where you install the Console agent determines which NetApp Console services and features are available when using private mode. The Console agent must be installed in the cloud if you want to deploy and manage Cloud Volumes ONTAP.
 
 == Step 3: Review host requirements
 
@@ -64,6 +58,7 @@ include::_include/podman-docker.adoc[]
 == Step 5: Prepare networking
 
 Set up networking for the Console agent to manage resources in your public cloud. Other than having a virtual network and subnet for the Console agent, ensure that the following requirements are met.
+
 Connections to target networks::
 The Console agent must have a network connection to the location where you plan to manage storage. For example, the VPC or VNet where you plan to deploy Cloud Volumes ONTAP, or the data center where your on-premises ONTAP clusters reside.
 
@@ -98,7 +93,7 @@ With private mode, the only time that NetApp Console sends outbound traffic is t
 Ports::
 There's no incoming traffic to the Console agent, unless you initiate it.
 +
-HTTP (80) and HTTPS (443) provide access to the NetApp Console. SSH (22) is only needed if you need to connect to the host for troubleshooting.
+HTTP (80) and HTTPS (443) provide access to the NetApp Console. SSH (22) is needed if you need to connect to the host for troubleshooting.
 
 //NTP
 include::_include/networking.adoc[tag=ntp]

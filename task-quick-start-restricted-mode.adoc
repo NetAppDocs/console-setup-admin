@@ -6,7 +6,7 @@ summary: Get started with the NetApp Console in restricted mode by preparing you
 
 ---
 
-= Getting started workflow (restricted mode)
+= Get started workflow for NetApp Console in restricted mode
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -41,3 +41,71 @@ Restricted mode is typically used by state and local governments and regulated c
 
 [role="quick-margin-para"]
 Optional: Subscribe to NetApp Intelligent Services from your cloud provider's marketplace to pay for data services at an hourly rate (PAYGO) or through an annual contract. NetApp Intelligent Services include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience and NetApp Disaster Recovery. NetApp Data Classification is included with your subscription at no additional cost.
+
+== Supported features and services for NetApp Console in restricted mode
+
+The following table lists the storage management features, data services, and administrative features available in NetApp Console when you install it in restricted mode.
+
+[cols=3*,options="header,autowidth"]
+|===
+
+| Product area
+| NetApp service or feature
+| Console agent required
+
+
+.3+| *Storage systems management*
+
+This table shows which storage systems you can manage from the NetApp Console. It does not list backup destinations for NetApp Backup and Recovery.
+| Azure NetApp Files | No
+| Cloud Volumes ONTAP | Yes
+| On-premises ONTAP clusters | Required for discovery and management. You can use direct discovery without a Console agent, but you need an agent to use management features.
+
+.3+| *Data Services* (restricted mode supports fewer data services than standard mode)
+
+a| Backup and Recovery
+
+* Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
+
+* In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^] |Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
+
+In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
+a| NetApp Data Classification 
+
+* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode.|  Yes
+a| NetApp Replication
+
+* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes*,  (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
+
+| *NetApp support contract features*
+| None | N/A
+
+
+
+.12+| *Administrative features*
+| Audit | No
+| Automation hub | No
+| Federation | No
+| Identity and access management | No
+a| Licenses and subscriptions management
+
+
+Note the following:
+
+* Marketplace subscriptions (hourly and annual contracts)
+
+** For Cloud Volumes ONTAP, only capacity-based licensing is supported.
+** In Azure, annual contracts are not supported with government regions.
+
+* BYOL
++
+For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing are supported with BYOL. | No
+| Manage cloud provider credentials | No
+| Multi-factor authentication (local users) | No
+| Notifications | No
+| NSS accounts | No
+| Organization Partnerships | No
+| Read-only mode | No
+| Notifications | No
+
+|===

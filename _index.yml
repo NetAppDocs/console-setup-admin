@@ -9,7 +9,7 @@ indexpage:
         - title: Learn about NetApp Console
           url: concept-overview.html
         - title: Learn about Console agents
-          url: concept-agent-overview.html
+          url: concept-agents.html
         - title: Learn about identity and access management
           url: concept-identity-and-access-management.html
         - title: Learn about deployment modes 
@@ -18,14 +18,14 @@ indexpage:
       links:
         - title: Getting started with NetApp Console (SaaS)
           url: task-quick-start-standard-mode.html
-        - title: Prepare network access for NetApp Console 
-          url: reference-networking-saas-console.html
         - title: Sign up to NetApp Console 
           url: task-sign-up-saas.html
         - title: Use the NetApp Console assistant (SaaS)
           url: task-console-assistant.html
-        - title: Deploy NetApp Console in restricted mode (Sovereign cloud deployments)
+        - title: Deploy NetApp Console in restricted mode 
           url: /task-quick-start-restricted-mode.html
+        - title: Deploy NetApp Console in private mode 
+          url: /task-quick-start-private-mode.html
     - title: Implement identity and access management (IAM)
       links:
         - title: Plan your IAM strategy

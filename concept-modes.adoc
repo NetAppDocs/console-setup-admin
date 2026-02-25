@@ -5,7 +5,7 @@ keywords: dark site, internet, on prem, no internet, supported deployments, govc
 summary: You can use NetApp Console through the SaaS application or install it yourself in your own environment (cloud or on-premises). 
 ---
 
-= Choose a NetApp Console deployment mode for your business needs
+= Choose a NetApp Console deployment mode
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -24,7 +24,7 @@ Restricted mode (installed in your own public cloud)::
 Restricted mode is for organizations needing enhanced security and limited connectivity, such as governments and regulated companies. You install the NetApp Console in your own public cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application). Restricted mode provides access to key data services including Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in government and commercial regions), and data classification, along with automated software upgrades and identity federation. 
 
 Private mode (installed on your premises or in the cloud)::
-Private mode is for organizations with strict security needs, such as those in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or air-gapped environments. It does not connect to the NetApp Console SaaS application or NetApp cloud-based APIs, giving you full control and blocking outside communication. Available services focus on backup and recovery, classification, replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. Use this mode for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
+Private mode is for organizations with strict security needs, such as those in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or air-gapped environments. It does not connect to the NetApp Console SaaS application or NetApp cloud-based APIs, giving you full control and blocking outside communication. Supported data services include NetApp backup and recovery, NetApp Data Classification, NetApp Replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. Use this mode for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
 
 When installed on your premises, only ONTAP storage systems are supported.
 
@@ -326,7 +326,7 @@ link:task-quick-start-restricted-mode.html[Learn how to get started with restric
 [[private-mode]]
 == NetApp console in private mode
 
-In private mode, you install a Console agent either on-premises or in the cloud and then use NetApp Console to manage data across your hybrid cloud. There is no connectivity to the NetApp Console SaaS applications (where API endpoints reside).
+In private mode, you install a Console agent either on-premises or in the cloud and then use NetApp Console to manage data across your hybrid cloud. There is no connectivity to the NetApp Console API endpoints or the NetApp Console SaaS application, so you access the Console from the local UI provided by the Console agent.
 
 The following image shows an example of a private mode deployment where the Console agent is installed in the cloud and manages both Cloud Volumes ONTAP and an on-premises ONTAP cluster.
 
