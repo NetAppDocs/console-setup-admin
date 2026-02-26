@@ -13,7 +13,7 @@ summary: Install a CA-signed certificate for user access to the web-based consol
 :imagesdir: ./media/
 
 [.lead]
-When you use the NetApp Console in restricted mode, the user interface is accessible from the Console agent virtual machine that's deployed in your cloud region or on-premises. By default, the Console uses a self-signed SSL certificate to provide secure HTTPS access to the web-based console running on the Console agent. 
+When you use the NetApp Console in restricted mode or private mode, the user interface is accessible from the Console agent virtual machine that's deployed in your cloud region or on-premises. By default, the Console uses a self-signed SSL certificate to provide secure HTTPS access to the web-based console running on the Console agent. 
 
 If required by your business, you can install a certificate signed by a certificate authority (CA), which provides better security protection than a self-signed certificate. After you install the certificate, the Console uses the CA-signed certificate when users access the web-based console.
 

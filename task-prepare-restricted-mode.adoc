@@ -19,7 +19,7 @@ Prepare your environment before you deploy NetApp Console in restricted mode. Yo
 
 Understand how the NetApp Console works in restricted mode before starting.
 
-Use the browser-based interface available locally from the installed NetApp Console agent. You can't access the NetApp Console from the web-based console that's provided through the SaaS layer.
+Use the browser-based interface available locally from the installed NetApp Console agent. You can't access the NetApp Console from the web-based console that's provided through the SaaS application.
 
 In addition, not all Console features and NetApp data services are available.
 

@@ -1,4 +1,0 @@
----
-permalink: reference-whats-next-private-mode.html
-redirect: console-setup-admin/task-quick-start-private-mode.html
----

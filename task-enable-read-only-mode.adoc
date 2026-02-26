@@ -17,6 +17,8 @@ As a security precaution, you can enable read-only mode for your NetApp Console 
 
 In read-only mode, users with admin roles must manually elevate their permissions to make changes, which ensures that changes are intentional.
 
+NOTE: Read-only mode is not available when NetApp Console is in private mode. link:concept-modes.html[Learn more about NetApp Console modes].
+
 .Required access roles
 Super admin or Org admin.
 

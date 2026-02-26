@@ -1,0 +1,135 @@
+---
+sidebar: sidebar
+permalink: task-install-private-mode.html
+keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet
+summary: Deploy the NetApp Console in private mode so that you can use it with no outbound connectivity. To get started, install a Console agent, set up the NetApp Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
+---
+
+= Deploy the Console agent in private mode 
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Deploy the NetApp Console in private mode so that you can use it with no outbound connectivity. To get started, install a Console agent, set up the NetApp Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
+
+
+== Step 1: Install the Console agent
+
+Download the product installer from the NetApp Support Site and then manually install the Console on your own Linux host.
+
+To use the NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], then you should follow separate instructions to get started in those environments. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
+
+.Before you begin
+
+* Root privileges are required to install the Console agent.
+
+* Depending on your operating system, either Podman or Docker Engine is required before you install the Console agent.
+
+.Steps
+
+. Download the Console agent software from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^]
++
+Be sure to download the offline installer for private networks without internet access.
+
+. Copy the installer to the Linux host.
+
+. Assign permissions to run the script.
++
+[source,cli]
+chmod +x /path/NetApp-Console-Private-Mode-<version>
++
+Where <version> is the version of the Console agent that you downloaded.
+
+. Run the installation script:
++
+[source,cli]
+sudo /path/NetApp-Console-Private-Mode-<version>
++
+Where <version> is the version of the Console agent that you downloaded.
+
+.Result
+
+The Console agent is installed. You can now set up the NetApp Console.
+
+== Step 2: Set up NetApp Console
+
+When you access the NetApp Console for the first time, you'll be prompted to set up NetApp Console.
+
+.Steps
+
+. Open a web browser and enter the IP address of the Linux host where you installed the Console agent.
+
+
+
+. Select *Set Up New Console agent* and follow the prompts to set up the system.
+
+* *System Details*: Enter a name for the Console agent and your company name.
+
+* *Create an Admin User*: Create the admin user for the system.
+
+* *Review*: Review the details, accept the license agreement, and then select *Set Up*.
+
+. Log in to NetApp Console using the admin user that you just created.
+
+.Result
+
+The Console agent is now installed. Access its IP address in a web browser to access the NetApp Console in private mode.
+
+When new versions of the Console software are available, they'll be posted to the NetApp Support Site. link:task-upgrade-agent.html[Learn how to upgrade the Console agent].
+
+.What's next?
+
+Provide the Console agent with the cloud provider permissions that you previously set up.
+
+== Step 3: Provide permissions to Console agent
+
+If you want to create Cloud Volumes ONTAP working environments, you'll need to provide the Console agent with the cloud provider permissions that you previously set up.
+
+link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions[Learn how to prepare cloud permissions].
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.AWS IAM role
+--
+Attach the IAM role that you previously created to the Console agent EC2 instance.
+
+include::_include/provide-permissions-iam-role.adoc[]
+--
+
+.AWS access key
+--
+Provide the Console agent with the AWS access key for an IAM user that has the required permissions.
+
+.Steps
+
+include::_include/provide-permissions-access-key.adoc[]
+--
+
+.Azure role
+--
+include::_include/azure-provide-permissions-role.adoc[]
+--
+
+.Azure service principal
+--
+Provide the Console agent with the credentials for the Azure service principal that you previously setup.
+
+.Steps
+
+include::_include/azure-provide-permissions-service-principal.adoc[]
+
+--
+
+.Google Cloud service account
+--
+include::_include/google-provide-permissions.adoc[]
+--
+
+====
+// end tabbed area
