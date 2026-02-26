@@ -22,7 +22,7 @@ The 4.4.0 release includes updates to the following NetApp Console components an
 | Version included in this release
 | Changes since the previous private mode release
 
-| Console agent | 4.4.0 | Go to the https://docs.netapp.com/us-en/console-setup-admin/whats-new.html[What's new in NetApp Console page^] and refer to the changes included for versions 3.4.0.
+| Console agent | 4.4.0 | Go to the https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html[What's new in NetApp Console page^] and refer to the changes included for versions 4.4.0.
 
 
 | Backup and recovery | 5.0.2 (9 February 2026)| Go to the https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html[what's new in NetApp Backup and Recovery page^].
