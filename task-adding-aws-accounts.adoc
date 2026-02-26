@@ -140,7 +140,7 @@ Add AWS credentials by providing the ARN of an IAM role that gives the permissio
 
 === Set up the IAM role
 
-Set up an IAM role that enables the NetApp Console software as a service (SaaS) layer to assume the role.
+Set up an IAM role that enables the NetApp Console software as a service (SaaS) application to assume the role.
 
 .Steps
 

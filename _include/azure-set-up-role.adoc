@@ -1,4 +1,4 @@
-. Copy the contents of the link:reference-permissions-azure.html[custom role permissions for the Connector] and save them in a JSON file.
+. Copy the contents of the link:reference-permissions-azure.html[custom role permissions for the Console agent] and save them in a JSON file.
 
 . Modify the JSON file by adding Azure subscription IDs to the assignable scope.
 +

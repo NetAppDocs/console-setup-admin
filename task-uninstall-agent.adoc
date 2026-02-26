@@ -15,9 +15,8 @@ summary: Uninstall the a Console agent to troubleshoot issues or to permanently 
 [.lead]
 Uninstall the a Console agent to troubleshoot issues or to permanently remove it from the host. The steps that you need to use depends on the deployment mode that you're using. Once you have removed a Console agent from your environment, you can remove it from the Console.
 
-link:concept-modes.html[Learn about NetApp Console deployment modes].
 
-== Uninstall the agent when using standard or restricted mode
+== Uninstall the agent when it has outbound connectivity
 
 If you're using standard mode or restricted mode (in other words, the agent host has outbound connectivity), then you should follow the steps below to uninstall the agent.
 
@@ -30,6 +29,43 @@ If you're using standard mode or restricted mode (in other words, the agent host
 `/opt/application/netapp/service-manager-2/uninstall.sh [silent]`
 +
 _silent_ runs the script without prompting you for confirmation.
+
+== Uninstall the agent when it has no outbound connectivity
+
+If your agent has no outbound connectivity (for example, in private mode), you must manually remove the agent software from the host.
+
+.Step
+
+. Connect to the Linux VM for the Console agent.
+
+. From the Linux host, run the following commands:
++
+[source,cli]
+/opt/application/netapp/ds/cleanup.sh
+rm -rf /opt/application/netapp/
+
+. From the Linux host, delete old, unused container image files to free space in the /var directory for re-installation.
+
++
+
+[role="tabbed-block"]
+====
+
+.Podman
+--
+
+[source,cli]
+podman system prune --all
+--
+
+.Docker
+--
+
+[source,cli]
+docker system prune -a
+--
+
+====
 
 
 

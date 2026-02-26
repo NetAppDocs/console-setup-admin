@@ -1,0 +1,53 @@
+//All links and images must use the absolute URL.
+
+
+=== Private mode release (4.4.0)
+
+A new private mode release is now available to download from the https://mysupport.netapp.com/site/downloads[NetApp Support Site^] 
+
+==== BlueXP private mode is now NetApp Console private mode
+
+NetApp Console 4.4.0 is the first release of NetApp Console in private mode. 
+
+The NetApp Console, built on the enhanced and restructured BlueXP foundation, provides centralized management of NetApp storage and NetApp Data Services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration that is highly secure and compliant.
+
+Learn more about the new NetApp Console in the https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2025-10-06.html[what's new in NetApp Console page^].
+
+The 4.4.0 release includes updates to the following NetApp Console components and services.
+
+[cols=3*,options="header,autowidth"]
+|===
+
+| Component or service
+| Version included in this release
+| Changes since the previous private mode release
+
+| Console agent | 4.4.0 | Go to the https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html[What's new in NetApp Console page^] and refer to the changes included for versions 4.4.0.
+
+
+| Backup and recovery | 5.0.2 (9 February 2026)| Go to the https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html[what's new in NetApp Backup and Recovery page^].
+
+
+| Classification | 1.5.1 (9 February 2026)| Go to the https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[what's new in NetApp Classification page^].
+
+
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

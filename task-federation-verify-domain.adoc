@@ -18,7 +18,7 @@ If you want to federate with a domain that is different than your email domain, 
 .Required roles
 The Federation admin role is required to make create and manage federations. Federation viewer can view the Federation page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
 
-Verifying your domain involves adding a TXT record to your domain's DNS settings. This record is used to prove that you own the domain and allows the NetApp Console to trust the domain for federation. You may need to coordinate with your IT or network administrator to complete this step.
+Verifying your domain involves adding a TXT record to your domain's DNS settings. This record is used to prove that you own the domain and allows the NetApp Console to trust the domain for federation. You may need to coordinate with your IT or network administrator to complete this step. 
 
 .Steps
 
