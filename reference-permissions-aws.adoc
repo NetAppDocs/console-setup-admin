@@ -889,7 +889,7 @@ You only need the following permissions if you enabled legacy indexing features 
 * glue:BatchDeletePartition
 //eng::additional-permissions[]
 
-=== Classification
+=== Data Classification
 
 The agent makes the following API requests to deploy NetApp Data Classification:
 
