@@ -22,7 +22,7 @@ The Console works with Console agents that you deploy in your environment to man
 
 == Choose how to access NetApp Console
 
-Start using NetApp Console by signing up for the SaaS application (standard mode), installing it in your cloud (restricted mode), or on your premises (private mode). In restricted mode and private mode, NetApp limits outbound connectivity to meet security and compliance requirements. Some features are unavailable in restricted or private mode.
+Start using NetApp Console by signing up for the SaaS application (standard mode), installing it in your cloud (restricted mode), or on your premises (private mode). Some features are unavailable in restricted or private mode.
 
 
 link:concept-modes.html[Learn more about deployment modes].

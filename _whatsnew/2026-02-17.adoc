@@ -3,7 +3,7 @@
 
 === Console agent 4.4.1
 
-The 4.4.0 release supports both standard mode and restricted mode.
+The 4.4.1 release supports both standard mode and restricted mode.
 
 This release of the Console agent includes security improvements and bug fixes.
 
