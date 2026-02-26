@@ -425,7 +425,7 @@ a|* compute.subnetworks.use
 
 Added and removed permissions are noted below.
 
-=== 25 February 2026
+=== 26 February 2026
 
 The `cloudbuild.workerpools.get` and `cloudbuild.workerpools.list` permissions are added for supporting Infrastructure Manager in private mode deployments of Cloud Volumes ONTAP in Google Cloud.
 
