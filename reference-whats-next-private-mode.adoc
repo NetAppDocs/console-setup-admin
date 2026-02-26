@@ -21,5 +21,5 @@ For help, refer to the following documentation:
 * https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html[Scan on-premises ONTAP volume data using NetApp Classification^]
 * https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-on-prem-clusters.html[Monitor license usage ^]
 
-* https://docs.netapp.com/us-en/active-iq/index.html[View storage health information with digital advisor^]
+
 

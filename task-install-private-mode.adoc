@@ -20,7 +20,7 @@ Deploy the NetApp Console in private mode so that you can use it with no outboun
 
 Download the product installer from the NetApp Support Site and then manually install the Console on your own Linux host.
 
-If you want to use the NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], then you should follow separate instructions to get started in those environments. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
+To use the NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], then you should follow separate instructions to get started in those environments. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
 
 .Before you begin
 
@@ -39,14 +39,14 @@ Be sure to download the offline installer for private networks without internet 
 . Assign permissions to run the script.
 +
 [source,cli]
-chmod +x /path/BlueXP-Connector-offline-<version>
+chmod +x /path/NetApp-Console-Private-Mode-<version>
 +
 Where <version> is the version of the Console agent that you downloaded.
 
 . Run the installation script:
 +
 [source,cli]
-sudo /path/BlueXP-Connector-offline-<version>
+sudo /path/NetApp-Console-Private-Mode-<version>
 +
 Where <version> is the version of the Console agent that you downloaded.
 
@@ -76,7 +76,7 @@ When you access the NetApp Console for the first time, you'll be prompted to set
 
 .Result
 
-The Console agent is now installed and set up and you can use it to access the NetApp Console in private mode.
+The Console agent is now installed. Access its IP address in a web browser to access the NetApp Console in private mode.
 
 When new versions of the Console software are available, they'll be posted to the NetApp Support Site. link:task-upgrade-agent.html[Learn how to upgrade the Console agent].
 
