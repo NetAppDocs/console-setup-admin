@@ -110,6 +110,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "cloudformation:CreateStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "cloudformation:DeleteStack",
         "iam:PassRole",
@@ -413,6 +414,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "s3:GetObject",
         "s3:ListBucket",
@@ -560,6 +562,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -682,6 +685,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -891,7 +895,7 @@ You only need the following permissions if you enabled legacy indexing features 
 * glue:BatchDeletePartition
 //eng::additional-permissions[]
 
-=== Data Classification
+=== NetApp Data Classification
 
 The agent makes the following API requests to deploy NetApp Data Classification:
 
