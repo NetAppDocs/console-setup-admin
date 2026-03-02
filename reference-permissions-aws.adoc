@@ -1048,7 +1048,7 @@ The agent makes the following API requests to deploy and manage Cloud Volumes ON
 | ec2:DeleteTags | No | Yes | Yes
 | ec2:DescribeTags | No | Yes | No
 
-.6+| Create and manage stacks for AWS CloudFormation templates
+.5+| Create and manage stacks for AWS CloudFormation templates
 | cloudformation:CreateStack | Yes | No | No
 | cloudformation:DeleteStack | Yes | No | No
 | cloudformation:DescribeStacks | Yes | Yes | No
