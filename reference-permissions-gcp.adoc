@@ -66,14 +66,13 @@ includedPermissions:
 - config.deployments.get
 - config.deployments.getLock
 - config.deployments.getState
+- config.deployments.list
+- config.deployments.lock
 - config.deployments.update
 - config.deployments.updateState
 - config.previews.upload
 - config.revisions.get
 - config.revisions.getState
-- config.deployments.getLock
-- config.deployments.list
-- config.deployments.lock
 - config.operations.get
 - config.previews.get
 - config.previews.list
@@ -191,6 +190,7 @@ includedPermissions:
 - storage.buckets.list
 - storage.objects.create
 - storage.objects.delete
+- storage.objects.get
 - storage.objects.list
 - storage.objects.update
 - cloudkms.cryptoKeyVersions.useToEncrypt
@@ -204,8 +204,6 @@ includedPermissions:
 - iam.serviceAccounts.getIamPolicy
 - iam.serviceAccounts.list
 - iam.serviceAccountKeys.create
-- storage.objects.get
-- storage.objects.list
 - storage.buckets.getIamPolicy
 
 
