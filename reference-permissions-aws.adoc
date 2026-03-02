@@ -110,6 +110,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "cloudformation:CreateStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "cloudformation:DeleteStack",
         "iam:PassRole",
@@ -173,6 +174,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "cloudformation:CreateStack",
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
+        "cloudformation:ListStacks",
         "ec2:DescribeVpcEndpoints",
         "kms:ListAliases",
         "glue:GetDatabase",
@@ -891,7 +893,7 @@ You only need the following permissions if you enabled legacy indexing features 
 * glue:BatchDeletePartition
 //eng::additional-permissions[]
 
-=== Data Classification
+=== NetApp Data Classification
 
 The agent makes the following API requests to deploy NetApp Data Classification:
 
@@ -1044,11 +1046,12 @@ The agent makes the following API requests to deploy and manage Cloud Volumes ON
 | ec2:DeleteTags | No | Yes | Yes
 | ec2:DescribeTags | No | Yes | No
 
-.5+| Create and manage stacks for AWS CloudFormation templates
+.6+| Create and manage stacks for AWS CloudFormation templates
 | cloudformation:CreateStack | Yes | No | No
 | cloudformation:DeleteStack | Yes | No | No
 | cloudformation:DescribeStacks | Yes | Yes | No
 | cloudformation:DescribeStackEvents | Yes | No | No
+| cloudformation:ListStacks | Yes | Yes | No | No
 | cloudformation:ValidateTemplate | Yes | No | No
 
 .15+| Create and manage an S3 bucket that a Cloud Volumes ONTAP system uses as a capacity tier for data tiering
