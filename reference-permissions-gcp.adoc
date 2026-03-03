@@ -228,7 +228,7 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | config.deployments.create .15+| To deploy the Cloud Volumes ONTAP virtual machine instance using Google Cloud Infrastructure Manager. | Yes | No | No
 | config.deployments.delete  | No | No | Yes
 | config.deployments.deleteState  | No | No | Yes
-| config.deployments.get   |No | Yes| No
+| config.deployments.get   |No | Yes| Yes
 | config.deployments.getLock |No | Yes| No
 | config.deployments.getState | No | Yes | No
 | config.deployments.list  |No | Yes | No
