@@ -92,12 +92,12 @@ View the Console agent version to confirm the upgrade or share it with your NetA
 The Console displays the version at the top of the page.
 
 
-== Verify network access
+== Verify network and port access for the Console agent
 Ensure that the Console agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access points.]
 
 === Run configuration checks on the Console agent
 
-Run configuration checks on Console agents from the Console or or the Agent maintenance console to make sure they are connected.
+Run configuration checks on Console agents from the Console or or the Agent maintenance console to make sure they can access required endpoints and the required ports are open. 
 
 You can also run configuration checks using the agent maintenance console. link:reference-agent-maint-console-config-checker.html[Learn more about using the config-checker validate command.]
 
