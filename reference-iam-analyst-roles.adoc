@@ -5,7 +5,7 @@ keywords: predefined roles, iam roles, organization admin, folder or project adm
 summary: You can assign the Operational support analyst role to users to provide them access to alerts and monitoring. Users with this role can also open support cases.
 ---
 
-= Operational support analyst access role for NetApp Console
+= Operational support analyst access role in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
