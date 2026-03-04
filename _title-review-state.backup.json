@@ -17,7 +17,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-agent-maint-console-config-checker.adoc",
@@ -37,7 +38,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-agent-maint-console-proxy.adoc",
@@ -57,7 +59,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-compliance.adoc",
@@ -77,7 +80,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-analyst-roles.adoc",
@@ -97,7 +101,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-backup-rec-roles.adoc",
@@ -117,7 +122,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-disaster-rec-roles.adoc",
@@ -137,7 +143,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-gcnv-roles.adoc",
@@ -157,7 +164,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-keystone-roles.adoc",
@@ -177,7 +185,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-platform-roles.adoc",
@@ -197,7 +206,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-predefined-roles.adoc",
@@ -217,7 +227,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "No",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-ransomware-roles.adoc",
@@ -237,7 +248,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-iam-storage-roles.adoc",
@@ -257,7 +269,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-limitations.adoc",
@@ -277,7 +290,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-networking-saas-console-previous.adoc",
@@ -297,7 +311,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-networking-saas-console.adoc",
@@ -317,7 +332,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "No"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-permissions-aws.adoc",
@@ -337,7 +353,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-permissions-azure.adoc",
@@ -357,7 +374,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-permissions-gcp.adoc",
@@ -377,7 +395,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-permissions.adoc",
@@ -397,7 +416,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-ports-aws.adoc",
@@ -417,7 +437,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-ports-azure.adoc",
@@ -437,7 +458,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-ports-gcp.adoc",
@@ -457,7 +479,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-ports-on-prem.adoc",
@@ -477,7 +500,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "Yes"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-whats-next-private-mode.adoc",
@@ -497,7 +521,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "No"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-whats-next-restricted-mode.adoc",
@@ -517,7 +542,8 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "No"
-    }
+    },
+    "verification": "Yes"
   },
   {
     "fileName": "reference-whats-next.adoc",
@@ -537,6 +563,7 @@
       "titleLength": "Yes",
       "noForbiddenPatterns": "Yes",
       "capGrammarVoice": "No"
-    }
+    },
+    "verification": "Yes"
   }
 ]
