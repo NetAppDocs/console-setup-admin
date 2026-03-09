@@ -40,7 +40,8 @@ You can assign following roles to partner users:
 * link:reference-iam-disaster-rec-roles.html[Disaster recovery viewer]
 * link:reference-iam-storage-roles.html[Operations support analyst]
 * link:reference-iam-predefined-roles.html[Classification viewer]
-
+* link:reference-iam-keystone-roles.html[Keystone admin]
+* link:reference-iam-keystone-roles.html[Keystone viewer]
 
 link:reference-iam-predefined-roles.html[Learn more about predefined roles]
 
