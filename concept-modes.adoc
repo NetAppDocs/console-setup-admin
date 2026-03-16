@@ -285,7 +285,7 @@ For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing 
 | Notifications | No
 | NSS accounts | No
 | Organization Partnerships | No
-| Read-only mode | No
+| Read-only mode | Yes
 | Notifications | No
 
 |===
@@ -508,7 +508,7 @@ Note that some services might be supported with limitations. For more details ab
 | Restricted mode
 | Private mode
 
-.10+| *Storage systems management*
+.12+| *Storage systems management*
 
 This table shows which storage systems you can manage from the NetApp Console. It does not list backup destinations for NetApp Backup and Recovery.
 | Alerts | No | No
@@ -557,7 +557,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Multi-factor authentication | Yes | No
 | NSS accounts | Yes | No 
 | Organization Partnerships | Yes | No
-| Read-only mode | No | No
+| Read-only mode | Yes| No
 | Notifications | Yes | No 
 | Audit | Yes | Yes
 
