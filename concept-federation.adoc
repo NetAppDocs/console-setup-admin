@@ -52,12 +52,15 @@ NOTE: If you previously configured federation using NetApp Cloud Central (an ext
 NetApp supports the following protocols and identity providers for federation:
 
 .Protocols
-* Security Assertion Markup Language (SAML) identity providers
-* Active Directory Federation Services (AD FS)
+
+* link:task-federation-adfs.html[Active Directory Federation Services (AD FS)]
+* link:task-federation-entra-id.html[Microsoft Entra ID]
+* link:link:task-federation-saml.html[Security Assertion Markup Language (SAML) identity providers]
+
 
 .Identity providers
-* Microsoft Entra ID
-* PingFederate
+* link:task-federation-entra-id.html[Microsoft Entra ID]
+* link:task-federation-ping.html[PingFederate]
 
 === Federation with NetApp Console workflow
 
@@ -91,13 +94,7 @@ Test your federated connection before enabling it. Use the test option on the Fe
 
 [role="quick-margin-para"]
 After you enable the connection, users can log in to the Console using their corporate credentials. 
-
-Review the topic for your respective protocol or IdP to get started:
-
-* link:task-federation-adfs.html[Set up a federated connection with AD FS]
-* link:task-federation-entra-id.html[Set up a federated connection with Microsoft Entra ID]
-* link:task-federation-ping.html[Set up a federated connection with PingFederate]       
-* link:task-federation-saml.html[Set up a federated connection with a SAML identity provider]    
+  
 
 
 
