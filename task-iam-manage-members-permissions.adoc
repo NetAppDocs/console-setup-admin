@@ -23,7 +23,7 @@ NetApp Console uses role-based access control (RBAC) to manage permissions. Assi
 
 Note the following about granting access in NetApp Console:
 
-* All users must first sign up for the NetApp Console before they can be granted access to resources
+* All users must first sign up for the NetApp Console before they can be granted access to resources.
 * You must explicitly assign a role to each user in the Console before they can access resources, even if they are members of a federated group that has been assigned a role.   
 * You can add service accounts directly from the Console and assign them roles.
 
