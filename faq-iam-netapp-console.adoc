@@ -6,9 +6,7 @@ summary: "Frequently asked questions about identity and access management and ro
 ---
 
 = Identity and access management FAQ for NetApp Console
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :nofooter:
 :icons: font
 :linkattrs:

@@ -169,6 +169,8 @@ sidebar:
               url: /concept-identity-and-access-management.html
             - title: Get started with identity and access
               url: /task-iam-get-started.html
+            - title: Frequently asked questions about identity and access management
+              url: /faq-iam-netapp-console.html
             - title: Set up your Console organization
               entries:
                 - title: Create folders and projects
