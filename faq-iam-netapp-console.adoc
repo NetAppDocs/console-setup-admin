@@ -1,0 +1,110 @@
+---
+sidebar: sidebar
+permalink: faq-iam-netapp-console.html
+keywords: faq, frequently asked questions, frequently asked questions about netapp console iam, identity and access management, role-based access control, rbac, iam, roles, permissions, organization, folders, projects, members, agents, service accounts, federated groups
+summary: "Frequently asked questions about identity and access management and role-based access control in NetApp Console."
+---
+
+= Identity and access management FAQ for NetApp Console
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This FAQ answers common questions about identity and access management (IAM) in the NetApp Console. It focuses on role-based access control concepts, hierarchy behavior, and member management that are useful when planning and implementing access for your organization.
+
+== Getting started
+
+.What are the first steps to set up IAM after creating a new NetApp Console organization?
+
+When you sign up, the Console creates an organization with one Organization admin and one default project. From there, the recommended setup steps are:
+
+. Edit the default project or create additional projects and folders to match your business hierarchy.
+. Add members to your organization.
+. Add or discover resources.
+. Associate resources with additional projects as needed.
+
+== Resource hierarchy: organizations, folders, and projects
+
+.What is the difference between a folder and a project in NetApp Console IAM?
+
+Folders group related projects for organizational structure and role delegation. Projects contain resources and are where members access those resources. Resources cannot be directly associated with folders — they must be associated with projects. Assigning a role at the folder level gives that member inherited access to all child projects and folders.
+
+.Are folders visible to all members of my organization?
+
+No. Folders are only visible to members who have IAM permissions: Organization admin, Folder or project admin, or Super admin. Regular members access projects directly and do not see folders.
+
+.Can I associate a resource directly with a folder?
+
+No. Resources must be associated with projects, not folders. However, an Organization admin can associate a resource with a folder so that a Folder or project admin can then link it to the appropriate projects within that folder.
+
+.How deep can I nest folders and projects in my organization's hierarchy?
+
+You can create up to seven levels of folders and projects in your organization's resource structure.
+
+.What types of resources can be associated with projects in NetApp Console?
+
+Resources that can be associated with projects include:
+
+* Storage systems
+* Keystone subscriptions
+* Some Backup and Recovery workloads
+* Console agents
+
+== Roles and permissions
+
+.What is the difference between an Organization admin and a Folder or project admin?
+
+An Organization admin has unrestricted access to all projects and folders across the entire organization and is the only role that can create Console agents. A Folder or project admin can only manage the specific folders and projects they are assigned and cannot create Console agents.
+
+.Who can create Console agents in NetApp Console?
+
+Only users with the Organization admin role can create Console agents. Folder or project admins cannot create Console agents.
+
+.What role should I assign to a user who only needs to monitor storage health and manage support cases?
+
+Assign the *Operation support analyst* role, which provides access to alerts and monitoring tools and the ability to enter and manage support cases.
+
+.Can I change a member's role at the project level if that access was inherited from a folder?
+
+No. You cannot change member access at a lower level if it was inherited from a higher level. To modify the access, you must change the member's permission at the higher hierarchy level (folder or organization) where it was originally assigned.
+
+== Managing members and access
+
+.What must happen before I can add a user to my NetApp Console organization?
+
+The user must have already signed up for the NetApp Console before you can add them to your organization, folder, or project. This requirement applies even to users who are members of a federated group.
+
+.Do federated users automatically get access to resources when I add their group to the Console?
+
+No. Even when a federated group is assigned a role, individual users must meet two requirements before they can access resources:
+
+. The user must have already signed up for the NetApp Console.
+. The user must be explicitly assigned a role in the Console.
+
+NetApp recommends assigning a minimum access role such as Organization viewer to these users.
+
+.What authentication options are available for service accounts?
+
+Service accounts support two authentication methods:
+
+* *Client ID and secret*: Simpler setup for straightforward integrations. The Console shows the client secret only once.
+* *JWT (JSON Web Token)*: Stronger security for automated or cloud-native environments. Requires uploading a public RSA key or certificate (PEM, CRT, or CER format) and supports expiry notifications at 7 or 30 days.
+
+== Console agents
+
+.What happens to a Console agent after it is created, and can it be used in other projects?
+
+Console agents are initially tied to the project where they are created. After creation, admins can add agents to other projects or associate them with a folder from the Agents page.
+
+== Related information
+
+* link:concept-identity-and-access-management.html[Learn about NetApp Console identity and access management]
+* link:reference-iam-predefined-roles.html[Learn about NetApp Console access roles]
+* link:task-iam-get-started.html[Get started with identity and access in NetApp Console]
+* link:task-iam-manage-folders-projects.html[Add folders and projects to your NetApp Console organization]
+* link:task-iam-manage-members-permissions.html[Add users to a NetApp Console organization]
