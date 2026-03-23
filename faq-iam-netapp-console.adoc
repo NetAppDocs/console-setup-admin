@@ -86,12 +86,6 @@ No. Even when a federated group is assigned a role, individual users must meet t
 
 NetApp recommends assigning a minimum access role such as Organization viewer to these users.
 
-.What authentication options are available for service accounts?
-
-Service accounts support two authentication methods:
-
-* *Client ID and secret*: Simpler setup for straightforward integrations. The Console shows the client secret only once.
-* *JWT (JSON Web Token)*: Stronger security for automated or cloud-native environments. Requires uploading a public RSA key or certificate (PEM, CRT, or CER format) and supports expiry notifications at 7 or 30 days.
 
 == Console agents
 
