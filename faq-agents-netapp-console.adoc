@@ -1,0 +1,158 @@
+---
+sidebar: sidebar
+permalink: faq-agents-netapp-console.html
+keywords: faq, frequently asked questions, frequently asked questions about console agents, console agent, agent, networking, proxy, deployment modes, netapp console, ports, upgrade, limitations
+summary: "Frequently asked questions about Console agents for NetApp Console."
+---
+
+= Console agent FAQ for NetApp Console
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This FAQ answers common questions about Console agents for NetApp Console. It focuses on concepts, deployment options, networking requirements, and operational constraints that are useful when planning, installing, and managing Console agents in your environment.
+
+== Overview
+
+.What is a Console agent and what does it do?
+
+A Console agent is a lightweight software component that bridges the network gap between your storage systems and the NetApp Console. It provides a secure connection that lets you discover and monitor storage systems, orchestrate storage provisioning, enable advanced data protection and optimization services, and associate cloud provider credentials for billing integration.
+
+.When do I need to deploy a Console agent?
+
+You need a Console agent when you want to:
+
+* Use restricted or private deployment modes
+* Access advanced data services (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Data Classification, and others)
+* Manage Cloud Volumes ONTAP systems
+* Perform advanced management tasks on on-premises ONTAP clusters
+* Track licenses, monitor storage health, and plan lifecycle upgrades
+
+Without an agent, you can perform only basic storage discovery and a limited set of monitoring features.
+
+.Where can I deploy a Console agent?
+
+You can deploy Console agents in:
+
+* Amazon Web Services (standard, restricted, or private modes)
+* Microsoft Azure (standard, restricted, or private modes)
+* Google Cloud (standard, restricted, or private modes)
+* On your premises (standard or private modes)
+
+.Does the NetApp Console SaaS application initiate connections to my Console agent?
+
+No. The Console agent initiates all communication—the Console never initiates outbound calls to agents. Agents pull or push data to and from the Console SaaS application.
+
+== Deployment modes and upgrades
+
+.How do the three NetApp Console deployment modes differ for Console agents?
+
+The three deployment modes differ as follows:
+
+* *Standard mode*: Install agents from the Console, cloud marketplace, or manually. Agent upgrades are automatic. You access the UI from the Console SaaS application.
+* *Restricted mode*: Install agents from the cloud marketplace or manually in the cloud. Agent upgrades are automatic. You access the UI locally from the agent VM.
+* *Private mode*: Install agents manually in an air-gapped environment. Agent upgrades are manual. You access the UI locally from the agent VM with no outbound connectivity to the NetApp SaaS application.
+
+.What happens if my Console agent goes down?
+
+Console agents are critical infrastructure. The Console can handle short outages, but you are responsible for ensuring agents remain up, operational, and accessible at all times. You must resolve infrastructure failures quickly. Operating the product outside the documentation may impact functionality and your EULA rights.
+
+== Infrastructure requirements
+
+.What are the default VM specifications for a Console agent?
+
+Default VM specifications vary by cloud provider:
+
+* *AWS*: t3.2xlarge EC2 instance, Ubuntu 22.04 LTS, 100 GiB gp2 disk, Docker Engine included
+* *Azure*: Standard_D8s_v3 VM, Ubuntu 22.04 LTS, 100 GiB premium SSD disk, Docker Engine included
+* *Google Cloud*: n2-standard-8 instance, Ubuntu 22.04 LTS, 100 GiB SSD persistent disk, Docker Engine included
+
+None of the images include a GUI; you must use a terminal to access the system.
+
+.What TLS version does the Console agent use for communication?
+
+The Console agent uses TLS 1.3 for all communication with AWS, Azure, Google Cloud, and the NetApp Console APIs.
+
+.Can I install a Console agent on a shared Linux host or add third-party extensions to the agent VM?
+
+No. The Console agent must run on a VM dedicated to the agent software—shared VMs are not supported. In addition, third-party agents or VM extensions are not supported on the agent VM.
+
+== Networking
+
+.What inbound ports do Console agents require?
+
+Console agents require the following inbound ports:
+
+* *SSH (22)*: SSH access to the agent host (AWS, Azure, GCP only)
+* *HTTP (80)*: HTTP access from browsers and used during Cloud Volumes ONTAP upgrades
+* *HTTPS (443)*: HTTPS access from browsers and Data Classification connections
+* *TCP (3128)*: Cloud Volumes ONTAP internet access (must be opened manually after deployment)
+
+For on-premises agents, only ports 80 and 443 apply.
+
+.What are the networking endpoint requirements for Console agents?
+
+Console agents must have outbound internet access to reach required NetApp Console endpoints, cloud provider endpoints specific to their deployment environment, and additional endpoints for any NetApp data services in use (such as Cloud Volumes ONTAP or NetApp Workloads). Starting with version 4.0.0, required endpoints were reduced. NetApp recommends updating your firewall rules to the current endpoint list after confirming successful agent upgrades.
+
+.Are there known IP address conflicts I should watch out for when deploying a Console agent?
+
+Yes. The Console agent deploys with two interfaces that use IP addresses in the 172.17.0.0/16 and 172.18.0.0/16 ranges. If your network has subnets configured in either of these ranges, you may experience connectivity failures such as failing to discover on-premises ONTAP clusters.
+
+.How do I validate my Console agent's network connectivity and configuration?
+
+Use the `config-checker validate` command from the Console agent maintenance console located at `/opt/application/netapp/service-manager-2/agent-maint-console`. Run it with `--services PLATFORM --validationTypes NETWORK` to validate connectivity to required Console endpoints. Include `--proxy <url>` if your agent uses a proxy server, and `--certs <paths>` if your agent uses a custom certificate in PEM format.
+
+== Proxy configuration
+
+.What proxy types are supported for Console agents?
+
+Both explicit and transparent proxy servers are supported, but with restrictions:
+
+* *Explicit proxy*: Supported with all agents. Configure through the Console UI. HTTP and HTTPS are supported.
+* *Transparent proxy*: Supported only for agents that serve Cloud Volumes ONTAP. Configure using the command-line maintenance console on the agent host.
+
+.Can I change the proxy type on a Console agent after it is configured?
+
+No. Once you configure a proxy type, you cannot change it. If you need to change the proxy type, you must remove the Console agent and deploy a new agent with the correct proxy type.
+
+.Can I use a transparent proxy for an agent that also manages NetApp data services other than Cloud Volumes ONTAP?
+
+No. Transparent proxy servers are supported only for agents associated exclusively with Cloud Volumes ONTAP. If you use NetApp data services alongside Cloud Volumes ONTAP, you must create a dedicated agent for Cloud Volumes ONTAP to use a transparent proxy, and use a separate agent for the data services.
+
+.What does the Console agent's proxy server provide for Cloud Volumes ONTAP systems?
+
+The agent's proxy server provides outbound internet access for the agent without requiring a public IP or NAT gateway. If Cloud Volumes ONTAP systems lack outbound internet access, the Console configures them to use the agent's proxy server. For this to work, you must manually open inbound port 3128 on the agent's security group after deployment. Note that if the agent itself does not have outbound internet access, Cloud Volumes ONTAP systems cannot use the configured proxy.
+
+.What should I do if my Console agent loses internet access due to a proxy configuration change?
+
+If the proxy configuration changes (for example, a password or certificate update), you need to access the Console UI directly from the agent host and update the settings. Ensure you have network access to the agent host and can log in to the Console.
+
+== Project and folder management
+
+.How do I associate a Console agent with a project or folder?
+
+From *Administration > Identity and access > Agents*, find the agent, select *View details*, then select *Associate to folder or project*. After associating the agent, also associate the agent's resources with the same folders and projects from the *Resources* page.
+
+.Who can associate Console agents with projects and folders?
+
+Super admins and Org admins can create agents and associate any agent with any project or folder. Folder or project admins can only associate existing agents with folders and projects for which they have permissions.
+
+== Maintenance and troubleshooting
+
+.Where are Console agent log files located?
+
+For standard deployments, log files are at:
+
+* `/opt/application/netapp/cloudmanager/log` or `/opt/application/netapp/service-manager-2/logs` (starting with 3.9.23 installations) — for Console agent details
+* `/opt/application/netapp/cloudmanager/docker_occm/data/log` — for cloud services and Console service details
+
+For private mode (no internet access) deployments, logs are at `/var/lib/docker/volumes/ds_occmdata/_data/log`.
+
+.Is upgrading the Console agent supported through the VCenter or ESXi maintenance console?
+
+No. Upgrading the agent through the VCenter or ESXi VM maintenance console is not yet supported. Additionally, through the VM maintenance console you can only view (not update) network settings such as IP address and DNS details.
