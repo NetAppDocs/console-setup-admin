@@ -15,13 +15,13 @@ summary: Console agent maintenance tasks depend on whether you installed the age
 [.lead]
 Console agent maintenance tasks depend on whether you installed the agent using a VCenter OVA or by manually installing on a Linux VM. Choose the maintenance path that matches how your agent was deployed.
 
-== VCenter-installed agents (OVA)
+== VCenter-installed Console agents (OVA)
 
 If you deployed the Console agent using the OVA in VCenter, you perform maintenance through the VSphere client and a menu-driven maintenance console (`maint` user). This console lets you resize resources, configure network settings, and access diagnostics.
 
 link:task-agent-vm-config.html[Maintain a VCenter-installed agent]
 
-== Manually installed agents
+== Manually installed Console agents
 
 If you deployed the Console agent by manually installing on a Linux VM (in AWS, Azure, Google Cloud, or on-premises), you perform maintenance using standard Linux tools and your cloud provider's management console. This includes applying OS security patches and connecting to the VM via SSH for diagnostics.
 
