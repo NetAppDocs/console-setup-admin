@@ -18,7 +18,20 @@ Maintaining the operating system on the Console agent host is your (the customer
 
 == Operating system patches and the agent
 
-Apply OS security patches without stopping agent host services.
+Apply OS security patches without stopping agent host services. 
+
+To maintain compatibility with supported configurations, you should prevent Docker or Podman from being upgraded during routine OS patching. You can do this by either temporarily excluding Docker or Podman during updates or by permanently configuring the package manager to skip Docker or Podman updates.
+
+.Podman example
+[source,bash]
+sudo apt-mark hold podman
+sudo apt update 
+sudo apt upgrade
+
+.Docker example
+[source,bash]
+sudo dnf update --exclude=docker*
+
 
 == VM or instance type
 
