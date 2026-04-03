@@ -129,27 +129,26 @@ sidebar:
                       url: /reference-ports-on-prem.html
             - title: Maintain Console agents
               entries:
-                   - title: Maintain Console agent virtual machines
-                     url: /concept-agent-maintenance.html
-                     entries:
-                      - title: Maintain a VCenter-installed agent
-                        url: /task-agent-vm-config.html
-                      - title: Maintain a manually installed agent
-                        url: /task-maintain-agents.html
-                   - title: Update agent addressing and URIs
-                     url: /task-update-agent-addressing.html
-                   - title: Install a CA-signed certificate for web-console access
-                     url: /task-installing-https-cert.html
-                   - title: Configure a Console agent to use a proxy server
-                     url: /task-configuring-proxy.html
-                   - title: Troubleshoot the Console agent
-                     url: /task-troubleshoot-agent.html
-                   - title: Upgrade the Console agent
-                     url: /task-upgrade-agent.html
-                   - title: Uninstall and remove the Console agent
-                     url: /task-uninstall-agent.html
-             
-               
+                - title: Maintain Console agent virtual machines
+                  entries:
+                    - title: Learn about Console agents virtual machines
+                      url: /concept-agent-maintenance.html
+                    - title: Maintain a VCenter-installed agent
+                      url: /task-agent-vm-config.html
+                    - title: Maintain a manually installed agent
+                      url: /task-maintain-agents.html
+                - title: Update agent addressing and URIs
+                  url: /task-update-agent-addressing.html
+                - title: Install a CA-signed certificate for web-console access
+                  url: /task-installing-https-cert.html
+                - title: Configure a Console agent to use a proxy server
+                  url: /task-configuring-proxy.html
+                - title: Troubleshoot the Console agent
+                  url: /task-troubleshoot-agent.html
+                - title: Upgrade the Console agent
+                  url: /task-upgrade-agent.html
+                - title: Uninstall and remove the Console agent
+                  url: /task-uninstall-agent.html
             - title: Manage cloud provider credentials
               entries:
                 - title: AWS
@@ -294,16 +293,16 @@ sidebar:
                   url: /reference-ports-aws.html
             - title: Azure permissions and required security rules
               entries:
-               - title: Azure permissions for the Console agent
-                 url: /reference-permissions-azure.html
-               - title: Console agent security group rules in Azure
-                 url: /reference-ports-azure.html
+                - title: Azure permissions for the Console agent
+                  url: /reference-permissions-azure.html
+                - title: Console agent security group rules in Azure
+                  url: /reference-ports-azure.html
             - title: Google Cloud permissions and required firewall rules
               entries:
-               - title: Google Cloud permissions for the Console agent
-                 url: /reference-permissions-gcp.html
-               - title: Console agent firewall rules in Google Cloud
-                 url: /reference-ports-gcp.html
+                - title: Google Cloud permissions for the Console agent
+                  url: /reference-permissions-gcp.html
+                - title: Console agent firewall rules in Google Cloud
+                  url: /reference-ports-gcp.html
         - title: Console network access (legacy)
           url: /reference-networking-saas-console-previous.html
         - title: Require the use of IMDSv2 on EC2 instances

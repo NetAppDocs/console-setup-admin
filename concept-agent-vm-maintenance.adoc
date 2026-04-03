@@ -5,7 +5,7 @@ keywords: agent maintenance, vm maintenance, vcenter agent, manually installed a
 summary: Console agent maintenance tasks depend on whether you installed the agent using a VCenter OVA or by manually installing on a Linux VM.
 ---
 
-= Maintain Console agent virtual machines
+= Learn about Console agent virtual machines
 :hardbreaks:
 :nofooter:
 :icons: font
