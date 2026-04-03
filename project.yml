@@ -132,7 +132,7 @@ sidebar:
                 - title: Maintain Console agent virtual machines
                   entries:
                     - title: Learn about Console agents virtual machines
-                      url: /concept-agent-maintenance.html
+                      url: /concept-agent-vm-maintenance.html
                     - title: Maintain a VCenter-installed agent
                       url: /task-agent-vm-config.html
                     - title: Maintain a manually installed agent
