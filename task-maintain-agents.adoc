@@ -22,6 +22,8 @@ Apply OS security patches without stopping agent host services.
 
 To maintain compatibility with supported configurations, you should prevent Docker or Podman from being upgraded during routine OS patching. You can do this by either temporarily excluding Docker or Podman during updates or by permanently configuring the package manager to skip Docker or Podman updates.
 
+The following are examples of how to exclude Docker or Podman updates for different Linux distributions. Consult your Linux distribution's documentation for the most up-to-date instructions on how to exclude packages from updates.
+
 .Podman example
 [source,bash]
 sudo apt-mark hold podman
