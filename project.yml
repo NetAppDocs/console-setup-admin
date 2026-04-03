@@ -129,25 +129,25 @@ sidebar:
                       url: /reference-ports-on-prem.html
             - title: Maintain Console agents
               entries:
-                - title: Maintain Console agent virtual machines
-                  url: /concept-agent-maintenance.html
-                  entries:
-                   - title: Maintain a VCenter-installed agent
-                     url: /task-agent-vm-config.html
-                   - title: Maintain a manually installed agent
-                     url: /task-maintain-agents.html
-                - title: Update agent addressing and URIs
-                  url: /task-update-agent-addressing.html
-                - title: Install a CA-signed certificate for web-console access
-                  url: /task-installing-https-cert.html
-                - title: Configure a Console agent to use a proxy server
-                  url: /task-configuring-proxy.html
-                - title: Troubleshoot the Console agent
-                  url: /task-troubleshoot-agent.html
-                - title: Upgrade the Console agent
-                  url: /task-upgrade-agent.html
-                - title: Uninstall and remove the Console agent
-                  url: /task-uninstall-agent.html
+                   - title: Maintain Console agent virtual machines
+                     url: /concept-agent-maintenance.html
+                     entries:
+                      - title: Maintain a VCenter-installed agent
+                        url: /task-agent-vm-config.html
+                      - title: Maintain a manually installed agent
+                        url: /task-maintain-agents.html
+                   - title: Update agent addressing and URIs
+                     url: /task-update-agent-addressing.html
+                   - title: Install a CA-signed certificate for web-console access
+                     url: /task-installing-https-cert.html
+                   - title: Configure a Console agent to use a proxy server
+                     url: /task-configuring-proxy.html
+                   - title: Troubleshoot the Console agent
+                     url: /task-troubleshoot-agent.html
+                   - title: Upgrade the Console agent
+                     url: /task-upgrade-agent.html
+                   - title: Uninstall and remove the Console agent
+                     url: /task-uninstall-agent.html
              
                
             - title: Manage cloud provider credentials
