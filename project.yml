@@ -69,7 +69,7 @@ sidebar:
       entries:
         - title: Log in to NetApp Console
           url: /task-logging-in.html
-        - title: Work with multiple Console agents
+        - title: View systems associated with different Console agents
           url: /task-manage-multiple-agents.html
         - title: View metrics on the NetApp Console Home page
           url: /task-dashboard.html
@@ -136,6 +136,8 @@ sidebar:
                      url: /task-agent-vm-config.html
                    - title: Maintain a manually installed agent
                      url: /task-maintain-agents.html
+                - title: Update agent addressing and URIs
+                  url: /task-update-agent-addressing.html
                 - title: Install a CA-signed certificate for web-console access
                   url: /task-installing-https-cert.html
                 - title: Configure a Console agent to use a proxy server

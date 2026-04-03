@@ -182,7 +182,7 @@ include::_include/azure-set-up-service-principal.adoc[tags=secret]
 
 
 == Install a Console agent in your VCenter environment
-NetApp supports installing the Console agent in your VCenter environment. The OVA file includes a pre-configured VM image that you can deploy in your VMware environment.  A file download or URL deployment is available directly from the NetApp Console. It includes the Console agent software and a self-signed certificate.
+NetApp supports installing the Console agent in your VCenter environment. The OVA file includes a pre-configured VM image that you can deploy in your VMware environment. A file download or URL deployment is available directly from the NetApp Console. It includes the Console agent software and a self-signed certificate.
 
 === Download the OVA or copy the URL    
 
@@ -198,13 +198,13 @@ Download the OVA or copy the OVA URL directly from the NetApp Console.
 
 
 
-=== Deploy the agent in your VCenter
+=== Deploy the agent in your VCenter environment
 
 Log into your VCenter environment to deploy the agent.
 
 .Steps
 
-. Upload the self-signed certificate to your trusted certificates if your environment requires it. You replace this certificate after installation.link:task-installing-https-cert.html[Learn how to replace the self-signed certificate.]
+. Upload the self-signed certificate to your trusted certificates if your environment requires it. You replace this certificate after installation.
 
 . Deploy the OVA from the content library or local system.
 +
