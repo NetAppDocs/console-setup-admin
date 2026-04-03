@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: concept-agent-vm-maintenance.html
+keywords: agent maintenance, vm maintenance, vcenter agent, manually installed agent, ova agent, agent operating system, agent host, maintenance console, maint console
+summary: Console agent maintenance tasks depend on whether you installed the agent using a VCenter OVA or by manually installing on a Linux VM.
+---
+
+= Maintain Console agent virtual machines
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Console agent maintenance tasks depend on whether you installed the agent using a VCenter OVA or by manually installing on a Linux VM. Choose the maintenance path that matches how your agent was deployed.
+
+== VCenter-installed agents (OVA)
+
+If you deployed the Console agent using the OVA in VCenter, you perform maintenance through the VSphere client and a menu-driven maintenance console (`maint` user). This console lets you resize resources, configure network settings, and access diagnostics.
+
+link:task-agent-vm-config.html[Maintain a VCenter-installed agent]
+
+== Manually installed agents
+
+If you deployed the Console agent by manually installing on a Linux VM (in AWS, Azure, Google Cloud, or on-premises), you perform maintenance using standard Linux tools and your cloud provider's management console. This includes applying OS security patches and connecting to the VM via SSH for diagnostics.
+
+link:task-maintain-agents.html[Maintain a manually installed agent]
+
+== Maintenance task comparison
+
+[cols=3*,options="header",cols="40,28,28",width="95%"]
+|===
+| Task
+| VCenter-installed (OVA)
+| Manually installed
+
+| Apply OS security patches
+| Not applicable (managed by OVA)
+| Yes — apply using your Linux package manager without stopping agent services
+
+| Scale CPU or RAM
+| Yes — edit VM settings in VSphere, then apply using the maintenance console
+| Yes — resize the VM instance in your cloud provider
+
+| Configure network settings (static routes, DNS search)
+| Yes — using the maintenance console
+| Not applicable
+
+| Connect to the VM
+| VSphere web console using the `maint` user
+| SSH using your cloud provider's connectivity tools
+
+| Access agent diagnostic tools
+| Yes — using the maintenance console (`diag` user, one-time SSH password)
+| Yes — connect via SSH and run diagnostic commands
+
+| Monitor disk space, CPU, and RAM
+| Yes — Console Notifications Center
+| Yes — Console Notifications Center
+
+| Stop and start the agent
+| Yes — using your VCenter or ESXi tools
+| Yes — using your cloud provider's console or standard on-premises procedures
+
+|===

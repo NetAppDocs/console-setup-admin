@@ -129,8 +129,13 @@ sidebar:
                       url: /reference-ports-on-prem.html
             - title: Maintain Console agents
               entries:
-                - title: Maintain a VCenter-installed agent
-                  url: /task-agent-vm-config.html
+                - title: Maintain Console agent virtual machines
+                  url: /concept-agent-maintenance.html
+                  entries:
+                   - title: Maintain a VCenter-installed agent
+                     url: /task-agent-vm-config.html
+                   - title: Maintain a manually installed agent
+                     url: /task-maintain-agents.html
                 - title: Install a CA-signed certificate for web-console access
                   url: /task-installing-https-cert.html
                 - title: Configure a Console agent to use a proxy server

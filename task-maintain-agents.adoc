@@ -5,7 +5,7 @@ keywords: agent operating system, agent maintenance, vm maintenance, os updates,
 summary: Maintaining the operating system on the agent host is your responsibility. For example, you should apply security updates to the operating system on the Console agent host by following your company's standard procedures for operating system distribution.
 ---
 
-= Maintain the Console agent VM and operating system 
+= Maintain the VM for a manually installed Console agent
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,10 +13,10 @@ summary: Maintaining the operating system on the agent host is your responsibili
 :imagesdir: ./media/
 
 [.lead]
-Maintaining the operating system on the Console agent host is your (the customer's) responsibility. For example, you (the customer) should apply security updates to the operating system on the agent host by following your company's standard procedures for operating system distribution.
+When you manually install a Console agent, maintaining the operating system on the agent host is your (the customer's) responsibility. For example, you (the customer) should apply security updates to the operating system on the agent host by following your company's standard procedures for operating system distribution.
 
 
-== Operating system patches and the agent
+== Apply operating system updates to the agent host
 
 Apply OS security patches without stopping agent host services. 
 
@@ -56,7 +56,7 @@ For example, the Console notifies you when an agent resource (CPU, RAM, or disk 
 NOTE: Work with NetApp support if you have questions about modifying your agent VM.
 
 
-link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#notification-center[Learn more.^]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center[Learn more.^]
 
 [cols=2*,options="header",cols="47,47",width="95%"]
 |===
