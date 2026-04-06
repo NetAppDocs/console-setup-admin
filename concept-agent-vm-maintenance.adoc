@@ -21,13 +21,13 @@ If you deployed the Console agent using the OVA in VCenter, you perform maintena
 
 link:task-agent-vm-config.html[Learn how to maintain a VCenter-installed agent]
 
-== Manually installed Console agents
+== Manually-installed Console agents
 
 If you deployed the Console agent by manually installing on a Linux VM (in AWS, Azure, Google Cloud, or on-premises), you perform maintenance using standard Linux tools and your cloud provider's management console. This includes applying OS security patches and connecting to the VM via SSH for diagnostics.
 
 link:task-maintain-agents.html[Learn how to maintain a manually installed agent]
 
-== Maintenance task comparison
+== Maintain Console agents in different environments
 
 [cols=3*,options="header",cols="40,28,28",width="95%"]
 |===
