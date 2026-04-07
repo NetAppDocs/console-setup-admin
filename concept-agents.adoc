@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: concept-agent-overview.html
+permalink: concept-agents.html
 keywords: console agent, agent, what is an agent, deployment, hybrid cloud, storage management, data services
 summary: A Console agent is a lightweight software component that you install in your network to connect your storage infrastructure to the NetApp Console. It enables advanced storage orchestration, data services, and secure cloud integration.
 ---
