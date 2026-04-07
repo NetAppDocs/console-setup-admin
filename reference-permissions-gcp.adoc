@@ -241,7 +241,7 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | config.previews.list   | No | Yes | No
 | config.resources.list  | No | Yes | No
 | config.revisions.get  | No | Yes | No
-| compute.disks.create .7+|To create and manage disks on Cloud Volumes ONTAP systems. | Yes | Yes | No
+| compute.disks.create .8+|To create and manage disks on Cloud Volumes ONTAP systems. | Yes | Yes | No
 | compute.disks.createSnapshot  | No | Yes | No
 | compute.disks.delete | No | Yes | Yes
 | compute.disks.get | No | Yes | No
@@ -249,7 +249,8 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | compute.disks.setLabels | Yes | Yes | No
 | compute.disks.update | No | Yes | No
 | compute.disks.use | No | Yes | No
-| compute.firewalls.create .4+| To create firewall rules for Cloud Volumes ONTAP. | Yes | No | No
+| compute.firewalls.create .4+| To create firewall rules for Cloud Volumes ONTAP. 
+| Yes | No | No
 | compute.firewalls.delete | No | Yes | Yes
 | compute.firewalls.get  | Yes | Yes | No
 | compute.firewalls.list  | Yes | Yes | No
