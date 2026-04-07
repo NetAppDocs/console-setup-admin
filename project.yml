@@ -89,50 +89,44 @@ sidebar:
               url: /concept-agents.html            
             - title: Deploy a Console agent
               entries:
+                - title: Choose a Console agent deployment method
+                  url: /concept-install-options.html
                 - title: AWS
                   entries:
-                    - title: Console agent installation options
-                      url: /concept-install-options-aws.html
-                    - title: Create a Console agent from NetApp Console
+                    - title: Create a Console agent in AWS from NetApp Console
                       url: /task-install-agent-aws-console.html
-                    - title: Create a Console agent from the AWS marketplace
+                    - title: Create a Console agent in AWS from the AWS marketplace
                       url: /task-install-agent-aws-marketplace.html
-                    - title: Manually install the Console agent
+                    - title: Manually install a Console agent in AWS
                       url: /task-install-agent-aws-manual.html
                 - title: Azure
                   entries:
-                    - title: Console agent installation options
-                      url: /concept-install-options-azure.html
-                    - title: Create a Console agent from NetApp Console
+                    - title: Create a Console agent in Azure from NetApp Console
                       url: /task-install-agent-azure-console.html
-                    - title: Create a Console agent from the Azure marketplace
+                    - title: Create a Console agent in Azure from the Azure marketplace
                       url: /task-install-agent-azure-marketplace.html
-                    - title: Manually install the Console agent
+                    - title: Manually install a Console agent in Azure
                       url: /task-install-agent-azure-manual.html
                 - title: Google Cloud
                   entries:
-                    - title: Console agent installation options
-                      url: /concept-install-options-google.html
-                    - title: Create a Console agent from NetApp Console
+                    - title: Create a Console agent in Google Cloud from NetApp Console
                       url: /task-install-agent-google-console-gcloud.html
-                    - title: Create a Console agent from Google Cloud
+                    - title: Create a Console agent in Google Cloud from Google Cloud
                       url: /task-install-agent-google-gcloud.html
-                    - title: Manually install the Console agent
+                    - title: Manually install a Console agent in Google Cloud
                       url: /task-install-agent-google-manual.html
                 - title: Install an agent on-premises
                   entries:
-                    - title: Manually install an agent on-premises
+                    - title: Manually install a Console agent on-premises
                       url: /task-install-agent-on-prem.html
-                    - title: Install an on-premises agent in VCenter
+                    - title: Install a Console agent on-premises in VCenter
                       url: /task-install-agent-on-prem-ova.html
                     - title: Ports for the on-premises Console agent
                       url: /reference-ports-on-prem.html
             - title: Maintain Console agents
               entries:
-                - title: Maintain Console agent virtual machines
+                - title: Maintain manually installed Console agents
                   entries:
-                    - title: Learn about Console agents virtual machines
-                      url: /concept-agent-vm-maintenance.html
                     - title: Maintain a VCenter-installed agent
                       url: /task-agent-vm-config.html
                     - title: Maintain a manually installed agent

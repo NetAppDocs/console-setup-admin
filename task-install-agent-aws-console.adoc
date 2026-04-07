@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: task-install-agent-aws-console.html
-keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector
-summary: You can create a Console agent in AWS directly from the NetApp Console. Before creating a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console
+summary: You can deploy a Console agent in AWS directly from the NetApp Console. Before deploying a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
 ---
 
-= Create a Console agent in AWS from NetApp Console
+= Deploy a Console agent in AWS from NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,14 @@ summary: You can create a Console agent in AWS directly from the NetApp Console.
 :imagesdir: ./media/
 
 [.lead]
-You can create a Console agent in AWS directly from the NetApp Console. Before creating a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
+You can deploy a Console agent in AWS directly from the NetApp Console. Before deploying a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
+
+Deploying an agent in AWS launches an EC2 instance running Linux and the Console agent software in a VPC of your choice.
+
 
 .Before you begin
 
-* You should have an link:concept-agents.html[understanding of Console agents].
+* link:concept-agents.html[Learn about Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
-permalink: concept-agents.html
-keywords: concept, connectors, learn about connectors, what are connectors, what is a connector, what's a connector, days, 14 days, when is an agent required, agent supported locations, restricted mode, private mode, dark site, permissions, multiple agents, disaster recovery, agents, multiple agents, what is a Console agent
-summary: You use a Console agent to connect NetApp Console to your infrastructure and securely orchestrate storage solutions across AWS, Azure, Google Cloud, or on-premises environments, as well as use data protection servicers.   
+permalink: concept-agent-overview.html
+keywords: console agent, agent, what is an agent, deployment, hybrid cloud, storage management, data services
+summary: A Console agent is a lightweight software component that you install in your network to connect your storage infrastructure to the NetApp Console. It enables advanced storage orchestration, data services, and secure cloud integration.
 ---
 
 = Learn about NetApp Console agents
@@ -13,25 +13,55 @@ summary: You use a Console agent to connect NetApp Console to your infrastructur
 :imagesdir: ./media/
 
 [.lead]
-You use a Console agent to connect NetApp Console to your infrastructure and securely orchestrate storage solutions across AWS, Azure, Google Cloud, or on-premises environments, as well as use data protection services.  
-
-A Console agent enables you to:
-
-* Orchestrate storage management tasks from the NetApp Console such as provisioning Cloud Volumes ONTAP, setting up storage volumes, using data classification, and more.
-* Authenticate using your cloud provider's IAM roles for subscription billing integration
-* Use advanced data services (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, and NetApp Cloud Tiering)
+A Console agent is a lightweight software component that you install in your network to connect your storage infrastructure to the NetApp Console. It enables advanced storage orchestration, data services, and secure cloud integration.
 
 
-If you don't need advanced orchestration or data protection services, you can centrally manage on-premises ONTAP clusters and cloud-native storage services without deploying an agent. Some monitoring and data mobility tools are also available without an agent.
+== What a Console agent does
 
-The following table shows which features and services you can use with and without a Console agent.
+A Console agent bridges the connectivity gap between your storage systems and NetApp Console. It securely connects your infrastructure to the NetApp APIs and the Console, allowing you to:
 
+* Discover and monitor storage systems across AWS, Azure, Google Cloud, and on-premises environments from the NetApp Console.
+* Orchestrate storage provisioning and configuration tasks on storage systems from the NetApp Console. 
+* Use intelligent data protection and management workflows.
+* Securely track cloud service usage and connect deployments to the correct subscription for accurate billing and cost management.
+
+=== Console agent architecture
+
+Agents operate with lightweight processes that:
+
+* Pull or push data to and from the Console SaaS application (standard and restricted modes) 
+* Initiate all communication—the Console never initiates outbound calls to agents
+* Connect to your storage systems using standard management protocols
+* Use TLS 1.3 for secure communication with cloud providers and the NetApp Console APIs
+
+=== Console agent availability and operational requirements
+
+Console agents are critical for NetApp Console. Agents must stay operational and reachable for uninterrupted management and data services. You are responsible for ensuring:
+
+* Agents remain up and running
+* Agents have network connectivity to required endpoints
+* Infrastructure failures are resolved quickly
+* Agent VMs are maintained and upgraded according to NetApp recommendations
+
+
+== When you need a Console agent
+
+You need to deploy at least one Console agent when you want to: 
+
+* Use restricted or private deployment modes (Console installed in your own environment). Additional agents may be required to enable some services.
+* Access advanced data services (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Data Classification and more).
+* Manage Cloud Volumes ONTAP systems.
+* Perform advanced management tasks on on-premises ONTAP clusters.
+* Track licenses, monitor storage health, and plan lifecycle upgrades.
+
+Without an agent, you can perform basic storage discovery and access a limited set of monitoring and storage management features. However, most enterprise use cases require one or more operational agents.
+
+The following table shows which storage systems and services are available with and without a Console agent.
 
 [cols=3*,options="header",cols="40,20a,20a",width="100%"]
 |===
 |  | Available with agent| Available without agent
-3+| *Supported Storage systems*:
-
+3+| *Supported storage systems*:
 
 | Amazon FSx for ONTAP| Yes (discovery and management features) | Yes (discovery only)
 | Amazon S3 storage | Yes | No
@@ -42,7 +72,7 @@ The following table shows which features and services you can use with and witho
 | Google Cloud NetApp Volumes| Yes | Yes
 | Google Cloud storage buckets | Yes | No
 | StorageGRID systems | Yes | No
-| On-premises ONTAP cluster  (advanced management and discovery) | Yes (advanced management and discovery) | No (basic discovery only)
+| On-premises ONTAP cluster | Yes (advanced management and discovery) | No (basic discovery only)
 3+| *Storage management and health services*:
 | Alerts | Yes | No
 | Automation hub | Yes| Yes
@@ -54,7 +84,6 @@ The following table shows which features and services you can use with and witho
 | Sustainability | Yes | No
 | Software updates | Yes  | Yes
 | NetApp Workloads | Yes | Yes
-
 3+| *Available data services*:
 | NetApp Backup and Recovery | Yes | No
 | NetApp Data Classification | Yes | No
@@ -63,103 +92,70 @@ The following table shows which features and services you can use with and witho
 | NetApp Disaster Recovery | Yes | No
 | NetApp Ransomware Resilience | Yes | No
 | NetApp Volume Caching | Yes | No
-
-
-
 |===
 
 ^1^ You can view Lifecycle planning without a Console agent, but a Console agent is required to initiate actions.
 
-^2^ Accurate metrics on the Home page require appropriately sized and configured Console agents.
+^2^ Accurate home page metrics require appropriately sized and configured Console agents.
+
+link:concept-modes.html[Learn about NetApp Console deployment modes] to understand when you need an agent and the capabilities agents enable.
 
 
+== Deployment options for Console agents
 
-[[agents-must-be-operational-at-all-times]]
-== Console agents must be operational at all times
-
-Console agents are a fundamental part of the NetApp Console. It's your responsibility (the customer) to ensure that relevant agents are up, operational, and accessible at all times. The Console can handle short agent outages, but you must fix infrastructure failures quickly.
-
-This documentation is governed by the EULA. Operating the product outside the documentation may impact its functionality and your EULA rights.
-
-
-== Supported locations
-
-You can install agents in the following locations:
+You can deploy Console agents in:
 
 * Amazon Web Services
-
 * Microsoft Azure
-+
-Deploy a Console agent in Azure in the same region as the Cloud Volumes ONTAP systems it manages. Alternatively, deploy it in the https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies[Azure region pair^]. This ensures that an Azure Private Link connection is used between Cloud Volumes ONTAP and its associated storage accounts. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html[Learn how Cloud Volumes ONTAP uses an Azure Private Link^]
-
 * Google Cloud
 +
-To use the Console and data services with Google Cloud, deploy your agent in Google Cloud.
+To manage Google Cloud resources, deploy your agent in Google Cloud. An on-premises agent cannot manage Google Cloud resources.
+* On your premises (standard or private modes only)
 
-* On your premises
+Your Console deployment mode, storage environment, and data sovereignty needs determine where you deploy agents. Deploy multiple agents across environments for organizational separation or business needs.
 
-== Communication with cloud providers
-
-The agent uses TLS 1.3 for all communication to AWS, Azure, and Google Cloud.
- 
-
-[[agent-installation]]
-== How to install a Console agent
-
-You can install a Console agent directly from the Console, from your cloud provider's marketplace, or by manually installing the software on your own Linux host or in your VCenter environment.
-
-* link:concept-modes.html[Learn about NetApp Console deployment modes]
-* link:task-quick-start-standard-mode.html[Get started with NetApp Console in standard mode]
-* link:task-quick-start-restricted-mode.html[Get started with NetApp Console in restricted mode]
-
-
-== Cloud provider permissions
-
-You need specific permissions to create the Console agent directly from the NetApp Console and another set of permissions for the Console agent itself. If you create the Console agent in AWS or Azure directly from the Console, then the Console creates the Console agent with the permissions that it needs.
-
-When using the Console in standard mode, how you provide permissions depends on how you plan to create the Console agent.
-
-To learn how to set up permissions, refer to the following:
-
-* Standard mode
-** link:concept-install-options-aws.html[Agent installation options in AWS]
-** link:concept-install-options-azure.html[Agent installation options in Azure]
-** link:concept-install-options-google.html[Agent installation options in Google Cloud]
-** link:task-install-agent-on-prem.html#agent-permission-aws-azure[Set up cloud permissions for on-premises deployments]
-* link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Set up permissions for restricted mode]
-
-
-To view the exact permissions that the Console agent needs for day-to-day operations, refer to the following pages:
-
-* link:reference-permissions-aws.html[Learn how the Console agent uses AWS permissions]
-* link:reference-permissions-azure.html[Learn how the Console agent uses Azure permissions]
-* link:reference-permissions-gcp.html[Learn how the Console agent uses Google Cloud permissions]
-
-It's your responsibility to update the Console agent policies as new permissions are added in subsequent releases. The release notes list new permissions.
-
-== Agent upgrades
-
-NetApp updates agent software monthly to add features and improve stability. Some Console features, like Cloud Volumes ONTAP and on-premises ONTAP cluster management, rely on the Console agent version and settings.
-
-When you install your agent in the cloud, the Console agent updates automatically if it has internet access. 
-
-
-== Operating system and VM maintenance
-
-include::_include/vm-maintenance.adoc[]
-
-<<agents-must-be-operational-at-all-times,The Console agent must be operational at all times>>.
-
-== Multiple systems and agents
-
-An agent can manage multiple systems and support data services in the Console. You can use a single agent to manage multiple systems based on deployment size and the data services you use.
-
-For large-scale deployments, work with your NetApp representative to size your environment. Contact NetApp Support if you experience issues.
+You can deploy agents directly from the Console, from your cloud marketplace, or manually in VCenter or on your premises. link:concept-agents-install-options.html[Compare deployment methods to choose the right one for your environment].
 
 
 
-Here are a few examples of agent deployments:
+=== Agents for the NetApp Console SaaS application (standard mode)
+Deploy agents in your cloud or on-premises to bridge connectivity to the cloud-hosted Console SaaS application. Agents enable advanced features while the Console UI remains accessible from anywhere.
 
-* You have a multicloud environment (for example, AWS and Azure) and you prefer to have one agent in AWS and another in Azure. Each manages the Cloud Volumes ONTAP systems running in those environments.
+You can install agents directly from the Console when using the SaaS application (standard mode). You can install in AWS, Azure, or Google Cloud, or manually on your premises on your own Linux host or in your VCenter environment. 
 
-* A service provider might use one Console organization to provide services for their customers, while using another organization to provide disaster recovery for one of their business units. Each organization needs its own agent.
+
+=== Agents for NetApp Console in restricted mode
+In restricted mode, users access the NetApp Console directly from an installed agent — not from the cloud-hosted SaaS application. You must install at least one agent to serve as the Console access point. Additional agents are needed to enable data services and manage storage systems.
+
+Install agents from your cloud provider's marketplace or by manually installing the software on your own Linux host in the cloud, on your premises, or in your VCenter environment.
+
+
+
+=== Agents for NetApp Console in private mode (on-premises or in the cloud with no outbound connectivity)
+
+In private mode, users access the NetApp Console directly from an installed agent. You must install at least one agent to serve as the Console access point. Additional agents are needed to enable data services and manage storage systems.
+
+Install agents in your data center or air-gapped environment. Agents have no connectivity to NetApp API endpoints, and all operations remain local, with full data sovereignty and control.
+
+=== Use multiple agents when needed
+
+Each agent operates independently and can manage multiple storage systems and data services. Deploy multiple agents when you need:
+
+* Isolation by storage type or organizational function
+* Geographic or network segmentation requirements
+
+For example:
+
+* In a multicloud environment, you might deploy one agent in AWS and another in Azure. Each agent manages the Cloud Volumes ONTAP systems in its respective environment.
+* A service provider might use one Console organization to provide services for customers and another organization for disaster recovery for a business unit. Each organization needs its own agent.
+
+
+
+
+
+== Console agent upgrades
+
+Agents in the cloud upgrade automatically when they have outbound internet access. For agents without internet access (private mode), see link:task-upgrade-agent.html[Manage Console agent upgrades] for manual upgrade instructions.
+
+
+
