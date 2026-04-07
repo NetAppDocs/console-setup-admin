@@ -37,6 +37,7 @@ Choose one or more services to validate. Valid service names are:
 `--validationTypes <comma-separated list validation types to run>` --*REQUIRED*--
 Choose from one or more validation types to run. Valid validation types are:
 * `NETWORK` which validates network connectivity to required Console endpoints.
+* `HARDWARE` which validates that the agent host meets the minimum hardware requirements for the Console agent. 
 
 `--proxy <url>` --*OPTIONAL*--
 [role="quick-margin-para"]
@@ -48,26 +49,27 @@ Specifies the path to one or more certificate files to use for the validation. T
 
 
 === Config-checker validate examples
+The following examples include validating network connectivity, required ports, and hardware requirments along with different combinations of using a proxy server and custom certificates.
 
-.Basic validation:
+.Validation for both network ports, endpoint connectivity, and hardware requirements:
 [role="quick-margin-para"]
 [source,cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE
 ----
 
 .Validation where a proxy server is used for the agent:
 [role="quick-margin-para"]
 [source,cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --proxy http://proxy.company.com:8080
 ----
 
 .Validation where a certificate is used for the agent:
 [role="quick-margin-para"]
 [source,cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
 
