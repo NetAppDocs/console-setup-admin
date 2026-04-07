@@ -1,0 +1,34 @@
+//All links and images must use the absolute URL.
+
+
+
+=== Console agent 4.6.0
+
+The 4.6.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes as well as the following new feature.
+
+.Support for configuration checks of required disk space
+
+You can validate that the required disk space for the Console agent is available using configuration checks. You can perform configuration checks from the Console or the Agent maintenance console. link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html[Learn more about running configuration checks on the Console agent.]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
