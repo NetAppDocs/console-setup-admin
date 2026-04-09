@@ -5,7 +5,7 @@ keywords: permissions, gcp, gcp permissions, bluexp, console agent
 summary: The Console agent requires permissions to perform actions in your cloud provider. These permissions are included in the policies provided by NetApp. You should understand what the agent does with these permissions.
 ---
 
-= Google Cloud permissions for the Console agent
+= Google Cloud permissions for the NetApp Console agent
 :hardbreaks:
 :nofooter:
 :icons: font

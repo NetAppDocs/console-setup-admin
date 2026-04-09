@@ -5,7 +5,7 @@ keywords: permissions, azure, azure permissions, bluexp
 summary: When the NetApp Console launches a Console agent in Azure, it attaches a custom role to the VM that provides the agent with permissions to manage resources and processes within that Azure subscription. The agent uses the permissions to make API calls to several Azure services.
 ---
 
-= Azure permissions for the Console agent
+= Azure permissions for the NetApp Console agent
 :hardbreaks:
 :nofooter:
 :icons: font
