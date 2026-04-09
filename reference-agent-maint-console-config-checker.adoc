@@ -5,7 +5,7 @@ keywords: transparent proxy, connector certificate, agent maintenance console, p
 summary: You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
 ---
 
-= Agent validation with the maintenance console
+= Console agent validation with the maintenance console in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

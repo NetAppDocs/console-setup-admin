@@ -5,7 +5,7 @@ keywords: linux, user name, operating system, installation files, installation f
 summary: Learn about Console agent default configurations for standard deployments (with internet access) across AWS, Azure, and Google Cloud, as well as restricted deployments (without internet access) for on-premises environments.
 ---
 
-= Default configuration for the Console agent
+= Console agent default configuration in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
