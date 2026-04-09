@@ -148,7 +148,5 @@ SSH access enables advanced terminal features like copy and paste.
 . Use an SSH tool such as Putty to connect to the agent VM using the user name `diag` and the one-time password that you configured.
 
 
-== Apply NetApp security fixes to the OS
-NetApp provides security fixes for the underlying operating system of the Console agent. When a new security fix is released, you can apply it to your agent VM using the maintenance console.
 
 
