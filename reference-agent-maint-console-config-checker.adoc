@@ -32,10 +32,13 @@ The `config-checker validate` command allows you to validate the configuration o
 `--services <comma-separated list of services to validate>` --*REQUIRED*--
 [role="quick-margin-para"]
 Choose one or more services to validate. Valid service names are: 
+
 *`PLATFORM` which validates network connectivity to required Console endpoints as well as if the required ports are open for the Console agent.
+
 
 `--validationTypes <comma-separated list validation types to run>` --*REQUIRED*--
 Choose from one or more validation types to run. Valid validation types are:
+
 * `NETWORK` which validates network connectivity to required Console endpoints.
 * `HARDWARE` which validates that the agent host meets the minimum hardware requirements for the Console agent. 
 

@@ -54,7 +54,7 @@ NetApp supports the following protocols and identity providers for federation:
 .Protocols
 
 * link:task-federation-adfs.html[Active Directory Federation Services (AD FS)]
-* link:link:task-federation-saml.html[Security Assertion Markup Language (SAML) identity providers]
+* link:task-federation-saml.html[Security Assertion Markup Language (SAML) identity providers]
 
 
 .Identity providers

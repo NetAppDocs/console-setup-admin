@@ -23,7 +23,7 @@ Perform these maintenance tasks using the VM web console:
 * Update search domains
 
 .Limitations
-Upgrading the agent through the console is not yet supported. In addition, you can only view information about the IP address, DNS, and gateways.
+You can only view (not update) information about the IP address, DNS, and gateways through the maintenance console.
 
 == Access the VM maintenance console
 
@@ -147,5 +147,8 @@ SSH access enables advanced terminal features like copy and paste.
 . Enter `2` to access the diagnostic tools and follow the on-screen prompts to configure a one-time password that expires in 24 hours.
 . Use an SSH tool such as Putty to connect to the agent VM using the user name `diag` and the one-time password that you configured.
 
+
+== Apply NetApp security fixes to the OS
+NetApp provides security fixes for the underlying operating system of the Console agent. When a new security fix is released, you can apply it to your agent VM using the maintenance console.
 
 
