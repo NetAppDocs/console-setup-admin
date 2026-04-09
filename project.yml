@@ -86,7 +86,9 @@ sidebar:
         - title: Console agents
           entries:
             - title: Learn about Console agents
-              url: /concept-agents.html            
+              url: /concept-agents.html   
+            - title: Choose a deployment method for your Console agent
+              url: /concept-agent-install-options.html       
             - title: Deploy a Console agent
               entries:
                 - title: AWS
