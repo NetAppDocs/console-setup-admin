@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: concept-agent-install-options.html
-keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, pros and cons
-summary: You can deploy a Console agent from the NetApp Console, from your cloud provider's marketplace, or by manually installing software on a Linux host. The method you choose affects what control you have over the host and how quickly you can get started.
+keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
+summary: Deploy a Console agent using the NetApp Console, your cloud provider's marketplace, or by manually installing software on a Linux host. Your deployment method determines your control over the host and how quickly you can start
 ---
 
 = Choose a Console agent deployment method
