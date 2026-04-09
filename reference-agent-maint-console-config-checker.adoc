@@ -54,7 +54,7 @@ Specifies the path to one or more certificate files to use for the validation. T
 === Config-checker validate examples
 The following examples include validating network connectivity, required ports, and hardware requirments along with different combinations of using a proxy server and custom certificates.
 
-.Validation for both network ports, endpoint connectivity, and hardware requirements:
+.Validation for network connectivity and hardware requirements:
 [role="quick-margin-para"]
 [source,cli]
 ----
