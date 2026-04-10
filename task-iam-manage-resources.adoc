@@ -30,10 +30,10 @@ Storage resources are the most common type of resource in your organization and 
 NOTE: Users with the Org admin role can add resources to folder to delegate the task of associating the resource with projects to Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
 
 Console agents::
-If you used a Console agent to discover storage systems, add the agent to the same folder or project. This allows users to perform agent-enabled functions, such as data services or Console-native storage management. You can add agents to folders or projects from the *Agents* page in the Console. link:task-iam-associate-agents.html[Learn how to associate a Console agent with a folder or project].
+If you used a Console agent to discover storage systems, add the agent to the same project as the storage system. This allows users to perform agent-enabled functions, such as data services or Console-native storage management. You can add agents to projects from the *Agents* page in the Console. link:task-iam-associate-agents.html[Learn how to associate a Console agent with a project].
 
 Keystone subscriptions::
-If you have Keystone subscriptions in your organization, you can view them on the *Resources* page. You can associate Keystone subscriptions with folders or projects to provide access to members who have permissions for those folders or projects.
+If you have Keystone subscriptions in your organization, you can view them on the *Resources* page. You can associate Keystone subscriptions with projects to provide access to members who have permissions for those projects.
 
 
 Backup and Recovery workloads::

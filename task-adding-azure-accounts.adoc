@@ -146,11 +146,9 @@ After you provide an Azure account with the required permissions, you can add th
 
 .Before you begin
 
-If you just created these credentials in your cloud provider, it might take a few minutes until they are available for use. Wait a few minutes before you add the credentials to the Console.
+* If you just created these credentials in your cloud provider, it might take a few minutes until they are available for use. Wait a few minutes before you add the credentials to the Console.
 
-.Before you begin
-
-You need to create a Console agent before you can configure a subscription. link:concept-agent-install-options.html[Learn how to create a Console agent].
+* You need to create a Console agent before you can configure a subscription. link:concept-agent-install-options.html[Learn how to create a Console agent].
 
 .Steps
 

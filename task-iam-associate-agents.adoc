@@ -18,6 +18,8 @@ Associate Console agents with specific projects to enable resource management an
 Super admins and Org admins can create agents and associate any agent with any project or folder. Folder or project admins can only associate existing agents with folders and projects that they have permissions for.
 link:reference-iam-predefined-roles.html[Learn more about the actions that a _Folder or project admin_ can complete].
 
+NOTE: Users with the Org admin role can add resources to folder to delegate the task of associating the resource with projects to Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
+
 
 .Steps
 

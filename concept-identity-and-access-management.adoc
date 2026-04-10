@@ -69,19 +69,17 @@ For example, you might associate a Cloud Volumes ONTAP system with one project o
 link:task-iam-manage-resources.html[Learn how to associate resources to projects.]
 
 
-Storage systems and Keystone subscriptions::
+Storage systems::
 Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. You must add a storage system to a project so that it can be accessed by those assigned to the project.
 
 +
 
-Storage systems::
 Storage systems are automatically associated with the project where they are added, but you can associate them with other projects or folders from the *Resources* page. You cannot associate FSx for NetApp ONTAP storage systems with projects or folders, but you can view them on the *Systems* page or from Workloads.
 
-+
+
 Keystone subscriptions::
 Keystone subscriptions are also resources that you can associate with projects in order to grant users access to the subscription in NetApp Console. 
 
-+
 
 Backup and Recovery workloads (Oracle and Microsoft SQL Server)::
 Some Backup and Recovery workloads are also considered resources. Assign a Backup and Recovery workload to a project in order to grant users access. 
