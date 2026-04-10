@@ -35,12 +35,12 @@ Within your IAM structure, you work with three organizational components are org
 
 Organization::
 
-An _organization_ is the top level of the Console IAM system and typically represents your company. Your organization consists of folders, projects, members, roles, and resources. Agents are associated with specific projects in the organization.
+An _organization_ is the top level of the Console IAM system and typically represents your company. Your organization consists of folders, projects, members, roles, and resources. Resources are associated with projects, and members are assigned roles at the organization, folder, or project level.
 
 
 Projects::
 
-A _project_ is used to provide access to a storage resource. You must assign a resources to project before anyone can access them. You can assign multiple resources to a single project and you can also have multiple projects. You then assign users permissions to the project to give them access to the resources within it. 
+A project grants users access to storage resources. You assign resources to projects and grant users access to projects, not directly to resources. Multiple resources can belong to one project, and a resource can belong to more than one project. You can create multiple projects with their own resources. Granting a user access to a project gives them access to its resources.
 
 +
 
@@ -52,9 +52,10 @@ link:task-iam-manage-folders-projects.html[Learn how to add projects to your org
 
 Folders::
 
-Group related projects in _folders_ to organize them by location, site, or business unit. You can't associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
+Group related projects in _folders_ to organize them by location, site, or business unit. You can't associate resources directly to folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
 
-link:task-iam-manage-folders-projects.html[Learn how to add folders to your organization.]
+NOTE: Users with the Org admin role can add resources to folder to delegate the task of associating the resource with projects to Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
+
 
 
 === Resources
