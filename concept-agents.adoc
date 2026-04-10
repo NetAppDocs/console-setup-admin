@@ -34,7 +34,8 @@ Agents operate with lightweight processes that:
 * Connect to your storage systems using standard management protocols
 * Use TLS 1.3 for secure communication with cloud providers and the NetApp Console APIs
 
-[agents-must-be-operational-at-all-times]
+[[agents-must-be-operational-at-all-times]]
+
 === Console agent availability and operational requirements
 
 Console agents are critical for NetApp Console. Agents must stay operational and reachable for uninterrupted management and data services. You are responsible for ensuring:
