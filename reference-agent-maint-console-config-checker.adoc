@@ -42,6 +42,10 @@ Choose from one or more validation types to run. Valid validation types are:
 * `NETWORK` which validates network connectivity to required Console endpoints.
 * `HARDWARE` which validates that the agent host meets the minimum hardware requirements for the Console agent. 
 
++
+
+NOTE: During installation, NetApp checks that the agent host has at least 80 percent of total disk space available, which includes 48 GB in `/opt` and 32 GB in `/var` (80 GB total). After installation, it requires at least 20 percent of total disk to remain available, which includes 12 GB in `/opt` and 8 GB in `/var` (20 GB total).
+
 `--proxy <url>` --*OPTIONAL*--
 [role="quick-margin-para"]
 Specifies the proxy server URL to use for the validation. Required if your agent is configured to use a proxy server.
