@@ -91,11 +91,8 @@ Some Backup and Recovery workloads are also considered resources. Assign a Backu
 [#associate-agents]
 Console agents::
 
-Organization admins create Console agents to manage storage systems and enable NetApp data services. Agents are initially tied to the project where they are created, but admins can add them to other projects or folders from the Agents page. 
+Organization admins create Console agents to manage storage systems and enable NetApp data services. Agents are initially tied to the project where they are created, but admins can add them to other projects from the *Agents* page. 
 
-+
-
-Associating an agent with a project enables management of resources in that project, while associating an agent with a folder lets folder or project admins decide which projects should use the agent. Agents must be linked to specific projects to provide management capabilities.
 
 +
 
