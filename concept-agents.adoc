@@ -114,7 +114,7 @@ To manage Google Cloud resources, deploy your agent in Google Cloud. An on-premi
 
 Your Console deployment mode, storage environment, and data sovereignty needs determine where you deploy agents. Deploy multiple agents across environments for organizational separation or business needs.
 
-You can deploy agents directly from the Console, from your cloud marketplace, or manually in VCenter or on your premises. link:concept-agents-install-options.html[Compare deployment methods to choose the right one for your environment].
+You can deploy agents directly from the Console, from your cloud marketplace, or manually in VCenter or on your premises. link:concept-agent-install-options.html[Compare deployment methods to choose the right one for your environment].
 
 
 
