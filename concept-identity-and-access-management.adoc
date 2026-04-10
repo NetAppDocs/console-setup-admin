@@ -61,14 +61,10 @@ link:task-iam-manage-folders-projects.html[Learn how to add folders to your orga
 
 A _resource_ is an entity that the Console is aware of and that can be assigned to a project. _Resources_ include storage systems, Keystone subscriptions, some Backup and Recovery workloads, as well as Console agents.
 
-+
 You must associate a resource with a project before anyone can access it.
-
-+
 
 For example, you might associate a Cloud Volumes ONTAP system with one project or with all projects in your organization. How you associate a resource depends on your organization's needs.
 
-+
 
 link:task-iam-manage-resources.html[Learn how to associate resources to projects.]
 
@@ -88,7 +84,7 @@ Keystone subscriptions are also resources that you can associate with projects i
 +
 
 Backup and Recovery workloads (Oracle and Microsoft SQL Server)::
-Some Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and
+Some Backup and Recovery workloads are also considered resources. Assign a Backup and Recovery workload to a project in order to grant users access. 
 
 
 
