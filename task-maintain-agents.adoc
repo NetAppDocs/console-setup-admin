@@ -26,13 +26,14 @@ The following are examples of how to exclude Docker or Podman updates for differ
 
 .Podman example
 [source,bash]
-sudo apt-mark hold podman
-sudo apt update 
-sudo apt upgrade
+sudo yum update --exclude=podman
+sudo yum upgrade
 
 .Docker example
 [source,bash]
-sudo dnf update --exclude=docker*
+sudo apt-mark hold docker-ce docker-ce-cli containerd.io
+sudo apt update
+sudo apt upgrade
 
 
 == VM or instance type
