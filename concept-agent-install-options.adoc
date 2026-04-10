@@ -92,7 +92,7 @@ Choose this method when:
 
 a| * Supports environments with limited outbound internet access (restricted mode or private mode)
 * Upgrades are automatically handled when the Console agent has internet access
-a| * Most steps of any deployment method — you must prepare the host, install Podman or Docker, configure networking, install the software, and provide permissions manually
+a| * Most steps of any deployment method. You must prepare the host, install Podman or Docker, configure networking, install the software, and provide permissions manually
  
  * * Deployment is initiated outside the NetApp Console, so the guided workflow is not available
 

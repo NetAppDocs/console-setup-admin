@@ -90,7 +90,7 @@ sidebar:
             - title: Deploy a Console agent
               entries:
                 - title: Choose a Console agent deployment method
-                  url: /concept-install-options.html
+                  url: /concept-agent-install-options.html
                 - title: AWS
                   entries:
                     - title: Console agent installation options for AWS
