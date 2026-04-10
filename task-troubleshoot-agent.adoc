@@ -92,8 +92,11 @@ View the Console agent version to confirm the upgrade or share it with your NetA
 The Console displays the version at the top of the page.
 
 
-== Validate your Console agent configuration
-Ensure that the Console agent has the network access and disk space that it needs. 
+== Validate that the Console agent meet requirements
+Console agents require access to certain network endpoints, need to have several ports open, and must meet hardware requirements. You can validate that your Console agent meets these requirements from the Console or by using the agent maintenance console.
+
+link:reference-networking-saas-console.html[Learn more about required network access points.]
+link:
 
 During installation, NetApp checks that the agent host has at least 80 percent of total disk space available, which includes 48 GB in `/opt` and 32 GB in `/var` (80 GB total). After installation, it requires at least 20 percent of total disk to remain available, which includes 12 GB in `/opt` and 8 GB in `/var` (20 GB total).
 

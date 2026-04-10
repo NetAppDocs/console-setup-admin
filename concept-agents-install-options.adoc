@@ -1,0 +1,179 @@
+---
+sidebar: sidebar
+permalink: concept-install-options.html
+keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, pros and cons
+summary: You can deploy a Console agent from the NetApp Console, from your cloud provider's marketplace, or by manually installing software on a Linux host. The method you choose affects what control you have over the host and how quickly you can get started.
+---
+
+= Choose a Console agent deployment method
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can deploy a Console agent from the NetApp Console, from your cloud provider's marketplace, or by manually installing software on a Linux host. The method you choose affects what control you have over the host and how quickly you can get started.
+
+
+== Deploy from the NetApp Console
+
+Deploying from the NetApp Console is the recommended method when using standard mode. The Console guides you through networking and permissions setup, then launches the VM or instance in your cloud provider automatically.
+
+Choose this method when:
+
+* You are deploying in a standard cloud environment with outbound internet access.
+* You want the fastest path to a running agent with the least manual setup.
+
+
+[cols=2*,options="header",cols="47,47",width="95%"]
+|===
+| Advantages
+| Disadvantages
+
+a| * Guided setup — the Console handles VM creation, software installation, and initial registration in a single workflow
+* Automatically applies the correct VM image and configuration
+* Fewest manual steps of any cloud deployment method
+a| * Requires the Console to authenticate with your cloud provider to launch the VM, which means setting up an IAM role or access key before you deploy
+* Not available for on-premises or air-gapped environments
+* You have less control over the underlying host configuration compared to a manual install
+
+|===
+
+link:task-install-agent-aws-console.html[Deploy a Console agent in AWS from the Console]
+link:task-install-agent-azure-console.html[Deploy a Console agent in Azure from the Console]
+link:task-install-agent-google-console-gcloud.html[Deploy a Console agent in Google Cloud from the Console]
+
+== Deploy from a cloud provider marketplace
+
+Deploying from the AWS Marketplace or Azure Marketplace initiates the VM launch directly from the marketplace, not from the NetApp Console. This method is commonly used in environments where marketplace-based deployments are required for procurement, compliance, or billing purposes.
+
+NOTE: A marketplace-equivalent option is available in Google Cloud using Google Cloud tools (gcloud CLI or Google Cloud console) rather than a traditional marketplace listing.
+
+Choose this method when:
+
+* Your organization requires all cloud software to be procured through the marketplace.
+* You prefer to initiate deployments from your cloud provider's interface rather than the NetApp Console.
+
+NOTE: A marketplace-equivalent option is available in Google Cloud using Google Cloud tools (gcloud CLI or Google Cloud console) rather than a traditional marketplace listing.
+
+[cols=2*,options="header",cols="47,47",width="95%"]
+|===
+| Advantages
+| Disadvantages
+
+
+a| * Satisfies marketplace procurement and billing requirements
+* Familiar deployment interface for teams already working in the cloud provider's console
+a| * Deployment is initiated outside the NetApp Console, so the guided workflow is not available
+* Requires the same permissions preparation as the Console-based method, but without step-by-step guidance
+
+* Not available for on-premises environments
+
+|===
+
+link:task-install-agent-aws-marketplace.html[Deploy a Console agent in AWS from the marketplace]
+link:task-install-agent-azure-marketplace.html[Deploy a Console agent in Azure from the marketplace]
+link:task-install-agent-google-gcloud.html[Deploy a Console agent in Google Cloud using Google Cloud tools]
+
+== Manually install on a Linux host in the cloud
+
+Manual installation lets you install the Console agent software directly on a Linux host that you provide and manage in AWS, Azure, or Google Cloud.
+
+Choose this method when:
+
+* You need to deploy in a restricted mode environment without outbound internet access.
+* Your organization requires all software to be installed on pre-approved, internally managed hosts.
+* You want full control over the host operating system and container runtime (Docker or Podman).
+
+[cols=2*,options="header",cols="47,47",width="95%"]
+|===
+| Advantages
+| Disadvantages
+
+a| * Supports environments with limited outbound internet access (restricted mode)
+* Upgrades are automatically handled when the Console agent has internet access
+a| * Most steps of any deployment method — you must prepare the host, install Podman or Docker, configure networking, install the software, and provide permissions manually
+ 
+ * No guided workflow — you follow the installation instructions directly
+
+|===
+
+link:task-install-agent-aws-manual.html[Manually install a Console agent in AWS]
+link:task-install-agent-azure-manual.html[Manually install a Console agent in Azure]
+link:task-install-agent-google-manual.html[Manually install a Console agent in Google Cloud]
+
+== Manually install on-premises using VCenter (OVA)
+
+If you use VMware VCenter, you can deploy the Console agent by importing an OVA (Open Virtual Appliance) file. The OVA is a pre-configured virtual machine image that you deploy using the vSphere client, without installing Linux or configuring a container runtime manually.
+
+Choose this method when:
+
+* You are deploying on-premises in a VMware environment.
+* You want a simpler on-premises installation that requires less maintenance and Linux setup.
+
+NOTE: You cannot manage Google Cloud resources from an on-premises Console agent. To manage Google Cloud resources, install the agent in Google Cloud.
+
+[cols=2*,options="header",cols="47,47",width="95%"]
+|===
+| Advantages
+| Disadvantages
+
+a| * Simpler on-premises installation with no Linux or container runtime setup required
+* On-premises only; not available for cloud deployments
+
+* Includes a menu-driven maintenance console for agent maintenance tasks
+
+* Familiar deployment workflow for VMware administrators
+* Pre-configured VM image reduces the risk of misconfiguration and lowers maintenance overhead
+a| * Requires VCenter; cannot be installed directly on a bare ESXi host
+
+
+* Less control over the underlying OS configuration compared to manual installation
+
+|===
+
+link:task-install-agent-on-prem-ova.html[Deploy on-premises using VCenter]
+
+
+== Manually install on-premises (without VCenter)
+
+You can manually install the Console agent on any Linux host running on-premises. This method requires you to set up the Linux host and container runtime (Docker or Podman) yourself, then install the Console agent software on that host. This method gives you the most control over the underlying host configuration, but also requires the most manual steps and ongoing maintenance.
+
+Choose this method when:
+
+* You are deploying on-premises and do not have a VMware VCenter environment.
+* You are comfortable with Linux administration and want to manage the underlying host yourself.
+* You want to control when the Console agent is upgraded.
+
+[cols=2*,options="header",cols="47,47",width="95%"]
+|===
+| Advantages
+| Disadvantages
+
+a| * Works on any Linux-compatible on-premises hardware or VM platform — no VMware required
+* Supports private mode (air-gapped) deployments with no outbound internet access
+* Full control over host OS, storage configuration, and container runtime
+a| * Requires Linux administration knowledge and manual setup of Docker or Podman
+* OS patching and VM maintenance are your ongoing responsibility
+
+
+
+|===
+
+link:task-install-agent-on-prem.html[Manually install on-premises]
+
+
+== Cloud provider permissions for Console agents
+
+If you plan on managing cloud resources with a Console agent, including data services or Cloud Volumes ONTAP, you need to associate cloud provider permissions with the agent.
+
+You need two sets of permissions for a Console agent: one to create the agent, and one for the agent's day-to-day operations. If you deploy directly from the NetApp Console, the Console creates the agent with the permissions it needs. For marketplace and manual deployments, you set up permissions before deployment.
+
+To view the exact permissions the Console agent needs for day-to-day operations, see:
+
+* link:reference-permissions-aws.html[AWS permissions for the Console agent]
+* link:reference-permissions-azure.html[Azure permissions for the Console agent]
+* link:reference-permissions-gcp.html[Google Cloud permissions for the Console agent]
+
+You are responsible for updating the Console agent policies when new permissions are added in subsequent releases. The release notes list new permissions.

@@ -5,7 +5,7 @@ keywords: install connector, google cloud connector installation, google cloud c
 summary: To create a Console agent in Google Cloud from the NetApp Consoel or by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
 ---
 
-= Create a Console agent in Google Cloud from NetApp Console
+= Deploy a Console agent in Google Cloud from NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,9 @@ summary: To create a Console agent in Google Cloud from the NetApp Consoel or by
 :imagesdir: ./media/
 
 [.lead]
-You can create a Console agent in Google Cloud from the Console. You need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
+You can deploy a Console agent in Google Cloud from the Console. You need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then deploy the Console agent.
+
+Deploying an agent in Google Cloud launches a VM instance running Linux and the Console agent software in a VPC of your choice.
 
 .Before you begin
 
