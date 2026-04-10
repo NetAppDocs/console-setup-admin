@@ -95,10 +95,12 @@ The Console displays the version at the top of the page.
 == Validate your Console agent configuration
 Ensure that the Console agent has the network access and disk space that it needs. 
 
+During installation, NetApp checks that the agent host has at least 80 percent of total disk space available, which includes 48 GB in `/opt` and 32 GB in `/var` (80 GB total). After installation, it requires at least 20 percent of total disk to remain available, which includes 12 GB in `/opt` and 8 GB in `/var` (20 GB total).
+
 link:reference-networking-saas-console.html[Learn more about required network access points.]
 link:
 
-You can also run configuration checks using the agent maintenance console. link:reference-agent-maint-console-config-checker.html[Learn more about using the config-checker validate command.]
+You can also run validation checks using the agent maintenance console. link:reference-agent-maint-console-config-checker.html[Learn more about using the config-checker validate command.]
 
 
 NOTE: You can only validate agents that have a status of *Connected*.
