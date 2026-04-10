@@ -15,7 +15,7 @@ summary: Use NetApp Console's Identity and Access Management (IAM) to structure 
 [.lead]
 Use NetApp Console's Identity and Access Management (IAM) to organize your NetApp resources and control access according to your business structure—by location, department, or project. 
 
-Resources are arranged hierarchically: the organization is at the top, followed by folders (which can contain other folders or projects), and then projects, which contain storage systems, workloads, and agents.
+You organize resources in a hierarchy: the organization is at the top, then folders (which can have other folders or projects), and then projects, which have storage systems, workloads, and agents.
 
 Assign access roles at the organization, folder, or project level so users have the right access to resources.
 
@@ -39,7 +39,7 @@ An _organization_ is the top level of the Console IAM system and typically repre
 
 Projects::
 
-A project grants users access to storage resources. You assign resources to projects and grant users access to projects, not directly to resources. Multiple resources can belong to one project, and a resource can belong to more than one project. You can create multiple projects with their own resources. Granting a user access to a project gives them access to its resources.
+Projects group storage resources. Assign resources to projects and grant users access at the project level. Resources can belong to multiple projects. Users with project access can use its resources.
 
 +
 
@@ -61,7 +61,7 @@ NOTE: Users with the Org admin role can add resources to folder to delegate the 
 
 A _resource_ is an entity that the Console is aware of and that can be assigned to a project. _Resources_ include storage systems, Keystone subscriptions, some Backup and Recovery workloads, as well as Console agents.
 
-You must associate a resource with a project before anyone can access it.
+Associate a resource with a project so that users with access to the project can use the resource.
 
 For example, you might associate a Cloud Volumes ONTAP system with one project or with all projects in your organization. How you associate a resource depends on your organization's needs.
 
@@ -70,7 +70,7 @@ link:task-iam-manage-resources.html[Learn how to associate resources to projects
 
 
 Storage systems::
-Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. You must add a storage system to a project so that it can be accessed by those assigned to the project.
+Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. Add a storage system to a  project so that users with access to the project can access it.
 
 +
 
@@ -98,13 +98,14 @@ link:task-iam-associate-agents.html[Learn how to associate agents with projects.
 
 
 === Members and roles
+Members are the users and service accounts in your organization. Roles define what actions they can perform and at what level of the hierarchy—organization, folder, or project.
 
 Members::
 
 Members of your organization are user accounts or service accounts. A service account is typically used by an application to complete specified tasks without human intervention.
 
 +
-You need to add members to your organization after they sign up for NetApp Console. Once added, you can assign them roles to provide access to resources. You can manually add service accounts from within the Console or automate their creation and management through the NetApp Console IAM API.
+Add members to your organization after they sign up for NetApp Console. After you add them, assign roles to provide access to resources. You can manually add service accounts from within the Console or automate their creation and management through the NetApp Console IAM API.
 
 +
 
@@ -133,6 +134,7 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 
 
 == IAM strategy examples
+The right IAM structure depends on the size of your organization and how your teams are organized. The following examples show how different organizations can use the IAM hierarchy to manage access effectively.
 
 === Small organization strategy
 
