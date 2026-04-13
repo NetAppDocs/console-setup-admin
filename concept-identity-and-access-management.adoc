@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-identity-and-access-management.html
-keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM
+keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam
 summary: Use NetApp Console's Identity and Access Management (IAM) to structure and control resource access according to your business hierarchy, such as by location, department, or project.
 ---
 
@@ -19,12 +19,12 @@ You organize resources in a hierarchy: the organization is at the top, then fold
 
 Assign access roles at the organization, folder, or project level so users have the right access to resources.
 
-NOTE: You must have the _Super admin_, _Organization admin_ , or _Folder or project admin_ roles to manage IAM in NetApp Console.
+NOTE: You must have the _Super admin_, _Organization admin_, or _Folder or project admin_ roles to manage IAM in NetApp Console.
 
 
 The following image illustrates this hierarchy at a basic level.
 
-image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the components of resource management]]
+image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the components of resource management]
 
 == Identity and access management components
 NetApp Console IAM is built on three types of components: organizational components that define the hierarchy, resources that are assigned within that hierarchy, and members and roles that control who can access what.
@@ -53,7 +53,7 @@ Folders::
 
 Group related projects in _folders_ to organize them by location, site, or business unit. You can't associate resources directly to folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
 
-NOTE: Users with the Org admin role can add resources to folder to delegate the task of associating the resource with projects to Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
+NOTE: Users with the Org admin role can add resources to a folder to delegate the task of associating the resource with projects to a Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
 
 
 
@@ -70,7 +70,7 @@ link:task-iam-manage-resources.html[Learn how to associate resources to projects
 
 
 Storage systems::
-Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. Add a storage system to a  project so that users with access to the project can access it.
+Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. Add a storage system to a project so that users with access to the project can access it.
 
 +
 
@@ -123,10 +123,10 @@ When you associate a member with a role, you can grant that role for the entire 
 
 +
 
-NetApp Console provides granular roles that adhere to the principles of "least privilege" which means access roles are designed to give users access to only that that they need
+NetApp Console provides granular roles that adhere to the principles of "least privilege", which means access roles are designed to give users access to only what they need.
 
 +
-This means users may have multiple roles assigned to them as their duties expand.
+Users may have multiple roles as their duties expand.
 
 +
 

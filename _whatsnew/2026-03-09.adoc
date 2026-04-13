@@ -15,7 +15,7 @@ You can validate that the required ports for the Console agent are open using co
 
 === Console administration
 
-You can assign Keystone roles to partner users to allow those users to manage Keystone resources in a partner organization. link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html[Learn more about assigning Keystone roles to partner users.]
+You can assign Keystone roles to partner users to allow those users to manage Keystone resources in a partner organization. link:https://docs.netapp.com/console-setup-admin/task-partnerships-assign-users.html[Learn more about assigning Keystone roles to partner users.]
 
 
 
