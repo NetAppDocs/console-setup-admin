@@ -539,7 +539,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | NetApp Disaster Recovery | No | No
 | NetApp Ransomware Protection | No | No
 | NetApp Replication | Yes | Yes
-| NetApp Cloud Tiering | No | No
+| NetApp Cloud Tiering* | No | No
 | NetApp Volume Caching | No | No
 
 .4+| *NetApp support contract features*
@@ -563,3 +563,5 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Audit | Yes | Yes
 
 |===
+
+include::_include/cloud-tiering-eol.adoc[]

@@ -1190,3 +1190,5 @@ kms:GenerateDataKeyWithoutPlaintext
 The following permission is now required for NetApp Cloud Tiering:
 
 ec2:DescribeVpcEndpoints
+
+include::_include/cloud-tiering-eol.adoc[]
