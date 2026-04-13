@@ -5,7 +5,7 @@ keywords: install connector, aws connector installation, aws connector, install 
 summary: To create a Console agent from the AWS Marketplace, you need to set up your networking, prepare AWS permissions, review instance requirements, and then create the Console agent.
 ---
 
-= Create a Console agent from the AWS Marketplace
+= Deploy a Console agent from the AWS Marketplace
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,9 @@ summary: To create a Console agent from the AWS Marketplace, you need to set up 
 :imagesdir: ./media/
 
 [.lead]
-You create a Console agent in AWS directly from the AWS Marketplace. To create a Console agent from the AWS Marketplace, you need to set up your networking, prepare AWS permissions, review instance requirements, and then create the Console agent.
+You deploy a Console agent in AWS directly from the AWS Marketplace. To deploy a Console agent from the AWS Marketplace, you need to set up your networking, prepare AWS permissions, review instance requirements, and then deploy the Console agent.
+
+Deploying an agent in AWS launches an EC2 instance running Linux and the Console agent software in a VPC of your choice.
 
 .Before you begin
 

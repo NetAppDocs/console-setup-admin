@@ -5,7 +5,7 @@ keywords: standard mode, what you can do
 summary: Now that you've logged in and set up the NetApp Console in standard mode, users can create and discover storage systems and use NetApp data services.
 ---
 
-= What you can do next (standard mode)
+= Next steps for NetApp Console in standard mode
 :hardbreaks:
 :nofooter:
 :icons: font

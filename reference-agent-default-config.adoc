@@ -5,7 +5,7 @@ keywords: linux, user name, operating system, installation files, installation f
 summary: Learn about Console agent default configurations for standard deployments (with internet access) across AWS, Azure, and Google Cloud, as well as restricted deployments (without internet access) for on-premises environments.
 ---
 
-= Default configuration for the Console agent
+= Console agent default configuration in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -75,11 +75,11 @@ The logs in this folder provide details about cloud services and the Console ser
 
 === Console agent service
 
-* The Console agent service is named occm.
+* The Console agent service is named `occm`.
 
-* The occm service is dependent on the MySQL service.
+* The `occm` service is dependent on the MySQL service.
 +
-If the MySQL service is down, then the occm service is down too.
+If the MySQL service is down, then the `occm` service is down too.
 
 === Ports
 

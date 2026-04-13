@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-manage-multiple-agents.html
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors
-summary: If you use multiple Console agents, you can switch between those agents directly from the Console.
+summary: If your organization uses multiple Console agents, you can switch between those Console agents directly from the Systems page to view the associated systems. 
 ---
 
-= Work with multiple Console agents
+= View systems associated with different Console agents
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,17 +13,19 @@ summary: If you use multiple Console agents, you can switch between those agents
 :imagesdir: ./media/
 
 [.lead]
-If you use multiple Console agents, you can switch between those Console agents directly from the Console to view the associated systems. 
+If your organization uses multiple Console agents, you can switch between them to see the systems that are associated with a specific agent.
 
-== Switch between Console agents
+For users with the Org admin role, this is helpful when implementing your resource management strategy. You can switch to a different agent when discovering storage systems to automatically associate those systems with the agent that is in the same environment. 
 
-If you have multiple Console agents, you can switch between them to see the systems that are associated with a specific agent.
+For storage administrators, switch between agents to manage the systems that are associated with each agent.
 
-For example, in a multi-cloud environment, you might have one agent in AWS and another in Google Cloud. Switch between these agents to manage the Cloud Volumes ONTAP systems in the respective cloud environments.
+For example, in a multicloud environment, your organization might have one agent in AWS and another in Google Cloud. Switch between these agents to manage the Cloud Volumes ONTAP systems in the respective cloud environments.
 
-NOTE: This option is not available when viewing the NetApp Console from the agent's local UI
+NOTE: This option is not available when viewing the NetApp Console from the agent's local UI.
 
 .Step
+
+. Select *Storage* > *Management* > *Systems*.
 
 . Select the Console agents icon (image:icon-agent.png[agent icon]) in the top right to view the list of available agents.
 +

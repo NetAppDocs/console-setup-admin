@@ -6,7 +6,7 @@ summary: The Google Cloud firewall rules for the agent requires both inbound and
 
 ---
 
-= Agent firewall rules in Google Cloud
+= Console agent firewall rules in Google Cloud
 :hardbreaks:
 :nofooter:
 :icons: font

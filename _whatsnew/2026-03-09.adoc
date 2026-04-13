@@ -8,14 +8,14 @@ The 4.5.0 release supports both standard mode and restricted mode.
 
 This release of the Console agent includes security improvements and bug fixes as well as the following new feature.
 
-.Support for configuration checks to required ports
+.Support for configuration checks of required ports
 
-You can validate that the required ports for the Console agent are open using configuration checks. You can perform configuration checks from the Console or the Agent maintenance console. link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html[Learn more about running configuration checks on the Console agent.]
+You can validate that the required ports for the Console agent are open using configuration checks. You can perform configuration checks from the Console or the Agent maintenance console. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html[Learn more about running configuration checks on the Console agent.]
 
 
 === Console administration
 
-You can assign Keystone roles to partner users to allow those users to manage Keystone resources in a partner organization. link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html[Learn more about assigning Keystone roles to partner users.]
+You can assign Keystone roles to partner users to allow those users to manage Keystone resources in a partner organization. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html[Learn more about assigning Keystone roles to partner users.]
 
 
 

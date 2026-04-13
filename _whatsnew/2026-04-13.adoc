@@ -1,0 +1,38 @@
+//All links and images must use the absolute URL.
+
+
+
+=== Console agent 4.6.0
+
+The 4.6.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes as well as the following new feature.
+
+.Support for configuration checks of required disk space
+
+You can validate that the required disk space for the Console agent is available using configuration checks. You can perform configuration checks from the Console or the Agent maintenance console. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html[Learn more about running configuration checks on the Console agent^]
+
+.Upgrade a vCenter-deployed Console agent using an ISO
+
+If you deployed a Console agent in vCenter using an OVA, you can now upgrade it to a new version by mounting an ISO to the VM and running the upgrade from the VM maintenance console. link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html[Learn how to upgrade a vCenter-deployed Console agent^]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

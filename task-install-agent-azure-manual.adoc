@@ -15,6 +15,10 @@ summary: To manually install the Console agent on your own Linux host, you need 
 [.lead]
 To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Azure permissions, install the Console agent, and then provide the permissions that you prepared.
 
+Deploying an agent in Azure launches a VM running Linux and the Console agent software in a VNet of your choice.
+
+NOTE: Deploy a Console agent in the same Azure region as the Cloud Volumes ONTAP systems it manages, or in the https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies[Azure region pair^]. This ensures that an Azure Private Link connection is used between Cloud Volumes ONTAP and its associated storage accounts.
+
 .Before you begin
 
 * You should have an link:concept-agents.html[understanding of Console agents].

@@ -15,6 +15,10 @@ summary: To create a Console agent from the Azure Marketplace, you need to set u
 [.lead]
 You can create a Console agent in Azure directly from the Azure Marketplace. To create a Console agent from the Azure Marketplace, you need to set up your networking, prepare Azure permissions, review instance requirements, and then create the Console agent.
 
+Deploying an agent in Azure launches a VM running Linux and the Console agent software in a VNet of your choice.
+
+NOTE: Deploy a Console agent in the same Azure region as the Cloud Volumes ONTAP systems it manages, or in the https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies[Azure region pair^]. This ensures that an Azure Private Link connection is used between Cloud Volumes ONTAP and its associated storage accounts.
+
 .Before you begin
 
 * You should have an link:concept-agents.html[understanding of Console agents].
