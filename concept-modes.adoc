@@ -450,7 +450,7 @@ a| NetApp Classification
 a| Licenses and subscriptions management 
 
 * Only BYOL is supported with private mode. |No
-| Identity and access management | No
+| Identity and access management | Yes
 | Manage cloud provider credentials | No
 | Read-only mode | No
 | Notifications | No
