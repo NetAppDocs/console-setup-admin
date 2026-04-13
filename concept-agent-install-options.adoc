@@ -36,7 +36,7 @@ Choose this method when:
 a| * Guided setup — the Console handles VM creation, software installation, and initial registration in a single workflow
 * Automatically applies the correct VM image and configuration
 * Fewest manual steps of any cloud deployment method
-a| * Requires the Console to authenticate with your cloud provider to launch the VM, which means setting up an IAM role or access key before you deploy
+a| 
 * Not available for on-premises, restricted mode or air-gapped environments
 
 |===

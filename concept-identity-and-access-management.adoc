@@ -119,7 +119,7 @@ The Console provides access roles that you can assign to the members of your org
 
 +
 
-When you associate a member with a role, you can grant that role for the entire organization, a specific folder, or a specific project. The role that you select gives a member permissions to the resources in the selected part of the hierarchy.
+When you associate a member with a role, you can grant that role for the entire organization, a specific folder, or a specific project. The role that you select gives a member permission to the resources in the selected part of the hierarchy.
 
 +
 
