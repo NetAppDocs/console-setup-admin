@@ -5,7 +5,7 @@ keywords: install connector, google cloud connector installation, google cloud c
 summary: To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, install the Console, and then provide the permissions that you prepared.
 ---
 
-= Manually install the Console agent in Google Cloud
+= Manually deploy the Console agent in Google Cloud
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,13 @@ summary: To manually install the Console agent on your own Linux host, you need 
 :imagesdir: ./media/
 
 [.lead]
-To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, install the Console, and then provide the permissions that you prepared.
+To manually deploy the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, install the Console, and then provide the permissions that you prepared.
+
+Deploying an agent in Google Cloud launches a VM instance running Linux and the Console agent software in a VPC of your choice.
 
 .Before you begin
 
-* You should have an link:concept-agents.html[understanding of Console agents].
+* link:concept-agents.html[Learn about Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Review host requirements

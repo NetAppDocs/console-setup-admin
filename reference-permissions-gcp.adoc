@@ -94,6 +94,7 @@ includedPermissions:
 - compute.disks.get
 - compute.disks.list
 - compute.disks.setLabels
+- compute.disks.update
 - compute.disks.use
 - compute.firewalls.create
 - compute.firewalls.delete
@@ -240,14 +241,16 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | config.previews.list   | No | Yes | No
 | config.resources.list  | No | Yes | No
 | config.revisions.get  | No | Yes | No
-| compute.disks.create .7+|To create and manage disks for Cloud Volumes ONTAP. | Yes | Yes | No
+| compute.disks.create .8+|To create and manage disks on Cloud Volumes ONTAP systems. | Yes | Yes | No
 | compute.disks.createSnapshot  | No | Yes | No
 | compute.disks.delete | No | Yes | Yes
 | compute.disks.get | No | Yes | No
 | compute.disks.list | Yes | Yes | No
 | compute.disks.setLabels | Yes | Yes | No
+| compute.disks.update | No | Yes | No
 | compute.disks.use | No | Yes | No
-| compute.firewalls.create .4+| To create firewall rules for Cloud Volumes ONTAP. | Yes | No | No
+| compute.firewalls.create .4+| To create firewall rules for Cloud Volumes ONTAP. 
+| Yes | No | No
 | compute.firewalls.delete | No | Yes | Yes
 | compute.firewalls.get  | Yes | Yes | No
 | compute.firewalls.list  | Yes | Yes | No
@@ -422,6 +425,9 @@ a|* compute.subnetworks.use
 == Change log
 
 Added and removed permissions are noted below.
+
+=== 13 April 2026
+The `compute.disks.update` permission is added to update IOPS and throughput parameters on a Hyperdisk Balanced aggregate or disk in Cloud Volumes ONTAP systems.
 
 === 26 February 2026
 

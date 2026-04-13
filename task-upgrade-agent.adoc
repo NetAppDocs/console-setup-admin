@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: task-upgrade-agent.html
-keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade
-summary: The Console agent is automatically upgraded when it has outbound connectivity. If your Console agent does not have outbound connectivity, you can manually upgrade it (such as with private mode).
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade
+summary: The Console agent is automatically upgraded when it has outbound connectivity. If your Console agent does not have outbound connectivity, you can manually upgrade it. If your agent was deployed in vCenter, you can upgrade it using an ISO.
 ---
 
-= Manage Console agent upgrades
+= Upgrade the Console agent
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,7 +14,7 @@ summary: The Console agent is automatically upgraded when it has outbound connec
 
 [.lead]
 
-The Console agent is automatically upgraded when it has outbound connectivity. If your Console agent does not have outbound connectivity, you can manually upgrade it (such as with private mode).
+The Console agent is automatically upgraded when it has outbound connectivity. If your Console agent does not have outbound connectivity, you can manually upgrade it. If your agent was deployed in vCenter using an OVA, you can upgrade it to a new version by mounting an ISO to the VM.
 
 
 == Upgrade the Console agent
@@ -46,3 +46,44 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 Where <version> is the version of the agent that you downloaded.
 
 . After the upgrade is complete, you can verify the agent's version by going to *Administration > Support > Agents*.
+
+
+== Upgrade a vCenter-deployed Console agent using an ISO
+
+If your Console agent was deployed in vCenter using an OVA, you can upgrade it to a new version by mounting an ISO to the VM and running the upgrade from the VM maintenance console. 
+
+Before you begin, take a snapshot of the VM in case you need to roll back.
+
+.Steps
+
+. Download the Console agent ISO from the https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab[NetApp Support Site^].
+
+. Upload the ISO to a datastore that is accessible from vCenter.
+
+. In the vSphere client, log in to your vCenter and select the VM instance that hosts the Console agent.
+
+. Mount the ISO to the VM:
+.. Right-click the VM and select *Edit Settings*.
+.. Select the CD/DVD drive and choose *Datastore ISO File*.
+.. Browse to and select the Console agent ISO.
+.. Make sure *Connect* is enabled.
+.. Select *OK*.
+
+. With the VM selected, select *Launch Web Console*.
+
+. Log in to the maintenance console using the username `maint` and the maintenance password that you specified when you deployed the OVA.
+
+. Enter `1` to open the *System Configuration* menu.
+
+. Enter `3` to select *Upgrade* and follow the on-screen prompts.
++
+The upgrade installs the updated OS, Docker runtime, and Console agent services in place. If the kernel is updated, the VM restarts automatically.
+
+. After the upgrade completes, verify that the Console agent is running correctly:
+.. In the vSphere client, confirm that the VM is powered on and the web console is accessible.
+.. In the NetApp Console, go to *Administration > Support > Agents* and confirm the agent version reflects the new version.
+
+. Unmount the ISO from the VM:
+.. In the vSphere client, right-click the VM and select *Edit Settings*.
+.. Select the CD/DVD drive and choose *Client Device* or disconnect the datastore ISO.
+.. Select *OK*.

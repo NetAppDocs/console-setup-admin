@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-identity-and-access-management.html
-keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM
+keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam
 summary: Use NetApp Console's Identity and Access Management (IAM) to structure and control resource access according to your business hierarchy, such as by location, department, or project.
 ---
 
@@ -15,32 +15,31 @@ summary: Use NetApp Console's Identity and Access Management (IAM) to structure 
 [.lead]
 Use NetApp Console's Identity and Access Management (IAM) to organize your NetApp resources and control access according to your business structure—by location, department, or project. 
 
-Resources are arranged hierarchically: the organization is at the top, followed by folders (which can contain other folders or projects), and then projects, which contain storage systems, workloads, and agents.
+You organize resources in a hierarchy: the organization is at the top, then folders (which can have other folders or projects), and then projects, which have storage systems, workloads, and agents.
 
 Assign access roles at the organization, folder, or project level so users have the right access to resources.
 
-NOTE: You must have the _Super admin_, _Organization admin_ , or _Folder or project admin_ roles to manage IAM in NetApp Console.
+NOTE: You must have the _Super admin_, _Organization admin_, or _Folder or project admin_ roles to manage IAM in NetApp Console.
 
 
 The following image illustrates this hierarchy at a basic level.
 
-image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the components of resource management]]
+image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the components of resource management]
 
 == Identity and access management components
-Within NetApp Console, you organize your storage resources using three main components: organizational components, resource components, and user access components.
+NetApp Console IAM is built on three types of components: organizational components that define the hierarchy, resources that are assigned within that hierarchy, and members and roles that control who can access what.
 
-=== Projects and folders within your organization
-
-Within your IAM structure, you work with three organizational components are organizations, projects, and folders. You can grant users access by assigning them roles at any of these levels.
+=== NetApp Console organizational components
+The organizational components—organization, folders, and projects—form a hierarchy that determines how resources are grouped and how access is delegated.
 
 Organization::
 
-An _organization_ is the top level of the Console IAM system and typically represents your company. Your organization consists of folders, projects, members, roles, and resources. Agents are associated with specific projects in the organization.
+An _organization_ is the top level of the Console IAM system and typically represents your company. Your organization consists of folders, projects, members, roles, and resources. Resources are associated with projects, and members are assigned roles at the organization, folder, or project level.
 
 
 Projects::
 
-A _project_ is used to provide access to a storage resource. You must assign a resources to project before anyone can access them. You can assign multiple resources to a single project and you can also have multiple projects. You then assign users permissions to the project to give them access to the resources within it. 
+Projects group storage resources. Assign resources to projects and grant users access at the project level. Resources can belong to multiple projects. Users with project access can use its resources.
 
 +
 
@@ -52,54 +51,46 @@ link:task-iam-manage-folders-projects.html[Learn how to add projects to your org
 
 Folders::
 
-Group related projects in _folders_ to organize them by location, site, or business unit. You can't associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
+Group related projects in _folders_ to organize them by location, site, or business unit. You can't associate resources directly to folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
 
-link:task-iam-manage-folders-projects.html[Learn how to add folders to your organization.]
+NOTE: Users with the Org admin role can add resources to a folder to delegate the task of associating the resource with projects to a Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
+
 
 
 === Resources
 
 A _resource_ is an entity that the Console is aware of and that can be assigned to a project. _Resources_ include storage systems, Keystone subscriptions, some Backup and Recovery workloads, as well as Console agents.
 
-+
-You must associate a resource with a project before anyone can access it.
-
-+
+Associate a resource with a project so that users with access to the project can use the resource.
 
 For example, you might associate a Cloud Volumes ONTAP system with one project or with all projects in your organization. How you associate a resource depends on your organization's needs.
 
-+
 
 link:task-iam-manage-resources.html[Learn how to associate resources to projects.]
 
 
-Storage systems and Keystone subscriptions::
-Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. You must add a storage system to a project so that it can be accessed by those assigned to the project.
+Storage systems::
+Storage systems are the primary resources that you manage in NetApp Console. NetApp Console supports management of both on-premises and cloud storage systems. Add a storage system to a project so that users with access to the project can access it.
 
 +
 
-Storage systems::
 Storage systems are automatically associated with the project where they are added, but you can associate them with other projects or folders from the *Resources* page. You cannot associate FSx for NetApp ONTAP storage systems with projects or folders, but you can view them on the *Systems* page or from Workloads.
 
-+
+
 Keystone subscriptions::
 Keystone subscriptions are also resources that you can associate with projects in order to grant users access to the subscription in NetApp Console. 
 
-+
 
 Backup and Recovery workloads (Oracle and Microsoft SQL Server)::
-Some Backup and Recovery workloads are also considered resources. You can assign users permissions to access Backup and
+Some Backup and Recovery workloads are also considered resources. Assign a Backup and Recovery workload to a project in order to grant users access. 
 
 
 
 [#associate-agents]
 Console agents::
 
-Organization admins create Console agents to manage storage systems and enable NetApp data services. Agents are initially tied to the project where they are created, but admins can add them to other projects or folders from the Agents page. 
+Organization admins create Console agents to manage storage systems and enable NetApp data services. Agents are initially tied to the project where they are created, but admins can add them to other projects from the *Agents* page. 
 
-+
-
-Associating an agent with a project enables management of resources in that project, while associating an agent with a folder lets folder or project admins decide which projects should use the agent. Agents must be linked to specific projects to provide management capabilities.
 
 +
 
@@ -107,13 +98,14 @@ link:task-iam-associate-agents.html[Learn how to associate agents with projects.
 
 
 === Members and roles
+Members are the users and service accounts in your organization. Roles define what actions they can perform and at what level of the hierarchy—organization, folder, or project.
 
 Members::
 
 Members of your organization are user accounts or service accounts. A service account is typically used by an application to complete specified tasks without human intervention.
 
 +
-You need to add members to your organization after they sign up for NetApp Console. Once added, you can assign them roles to provide access to resources. You can manually add service accounts from within the Console or automate their creation and management through the NetApp Console IAM API.
+Add members to your organization after they sign up for NetApp Console. After you add them, assign roles to provide access to resources. You can manually add service accounts from within the Console or automate their creation and management through the NetApp Console IAM API.
 
 +
 
@@ -127,14 +119,14 @@ The Console provides access roles that you can assign to the members of your org
 
 +
 
-When you associate a member with a role, you can grant that role for the entire organization, a specific folder, or a specific project. The role that you select gives a member permissions to the resources in the selected part of the hierarchy.
+When you associate a member with a role, you can grant that role for the entire organization, a specific folder, or a specific project. The role that you select gives a member permission to the resources in the selected part of the hierarchy.
 
 +
 
-NetApp Console provides granular roles that adhere to the principles of "least privilege" which means access roles are designed to give users access to only that that they need
+NetApp Console provides granular roles that adhere to the principles of "least privilege", which means access roles are designed to give users access to only what they need.
 
 +
-This means users may have multiple roles assigned to them as their duties expand.
+Users may have multiple roles as their duties expand.
 
 +
 
@@ -142,6 +134,7 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 
 
 == IAM strategy examples
+The right IAM structure depends on the size of your organization and how your teams are organized. The following examples show how different organizations can use the IAM hierarchy to manage access effectively.
 
 === Small organization strategy
 

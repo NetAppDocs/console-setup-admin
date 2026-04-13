@@ -34,8 +34,8 @@ indexpage:
           url: task-iam-manage-members-permissions.html
     - title: Deploy Console agents
       links:
-        - title: Learn about Console agents
-          url: concept-agents.html
+        - title: Choose a Console agent deployment method
+          url: /concept-agent-install-options.html
         - title: Deploy an agent on-premises 
           url: /task-install-agent-on-prem.html
         - title: Deploy an agent in AWS 
@@ -45,7 +45,7 @@ indexpage:
         - title: Deploy an agent in Google Cloud
           url: /task-install-agent-google-console-gcloud.html
         - title: Maintain Console agents
-          url: task-maintain-agents.html
+          url: /task-maintain-agents.html
     - title: Security and compliance
       links:
         - title: Federate with your identity provider

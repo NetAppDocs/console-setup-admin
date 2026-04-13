@@ -32,11 +32,19 @@ The `config-checker validate` command allows you to validate the configuration o
 `--services <comma-separated list of services to validate>` --*REQUIRED*--
 [role="quick-margin-para"]
 Choose one or more services to validate. Valid service names are: 
+
 *`PLATFORM` which validates network connectivity to required Console endpoints as well as if the required ports are open for the Console agent.
+
 
 `--validationTypes <comma-separated list validation types to run>` --*REQUIRED*--
 Choose from one or more validation types to run. Valid validation types are:
+
 * `NETWORK` which validates network connectivity to required Console endpoints.
+* `HARDWARE` which validates that the agent host meets the minimum hardware requirements for the Console agent. 
+
++
+
+NOTE: During installation, NetApp checks that the agent host has at least 80 percent of total disk space available, which includes 48 GB in `/opt` and 32 GB in `/var` (80 GB total). After installation, it requires at least 20 percent of total disk to remain available, which includes 12 GB in `/opt` and 8 GB in `/var` (20 GB total).
 
 `--proxy <url>` --*OPTIONAL*--
 [role="quick-margin-para"]
@@ -48,26 +56,27 @@ Specifies the path to one or more certificate files to use for the validation. T
 
 
 === Config-checker validate examples
+The following examples include validating network connectivity, required ports, and hardware requirments along with different combinations of using a proxy server and custom certificates.
 
-.Basic validation:
+.Validation for network connectivity and hardware requirements:
 [role="quick-margin-para"]
 [source,cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE
 ----
 
 .Validation where a proxy server is used for the agent:
 [role="quick-margin-para"]
 [source,cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --proxy http://proxy.company.com:8080
 ----
 
 .Validation where a certificate is used for the agent:
 [role="quick-margin-para"]
 [source,cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
 
