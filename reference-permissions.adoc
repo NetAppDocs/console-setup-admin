@@ -108,6 +108,8 @@ Keep the policy up to date as new permissions are added in later releases.
 	
 === NetApp Cloud Tiering
 
+include::_include/cloud-tiering-eol.adoc[]
+
 [cols=3*,options="header",cols="20,60,20"]
 |===
 | Goal
@@ -272,6 +274,8 @@ The Console requires StorageGRID permissions for two services.
 |===
 	
 === NetApp Cloud Tiering
+
+include::_include/cloud-tiering-eol.adoc[]
 
 [cols=3*,options="header",cols="20,60,20"]
 |===

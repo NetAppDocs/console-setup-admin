@@ -72,4 +72,6 @@ TIP: If you install a Console agent in AWS, Microsoft Azure, or Google Cloud, th
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] link:task-subscribe-standard-mode.html[Subscribe to NetApp Intelligent Services (optional)]
 
 [role="quick-margin-para"]
-Sign up for NetApp Intelligent Services through your cloud provider for hourly (PAYGO) or annual billing. A subscription includes NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience, NetApp Disaster Recovery, and NetApp Data Classification.
+Sign up for NetApp Intelligent Services through your cloud provider for hourly (PAYGO) or annual billing. A subscription includes NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience, NetApp Disaster Recovery, and NetApp Data Classification.
+
+include::_include/cloud-tiering-eol.adoc[]

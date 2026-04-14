@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-federation.html
-keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, NetApp Console
 summary: Identity federation enables single sign-on with the NetApp Console so that users can log in using credentials from your corporate identity. To get started, review the setup process.
 ---
 

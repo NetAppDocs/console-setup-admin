@@ -81,24 +81,23 @@ The following table shows which storage systems and services are available with 
 | Digital Advisor (Active IQ) | Yes | No
 | License and subscription management  | Yes | No
 | Economic efficiency | Yes | No
-| Home page dashboard metrics | Yes^2^ | No
-| Lifecycle planning | Yes | No^1^
+| Home page dashboard metrics | Yes. Accurate home page metrics require appropriately sized and configured Console agents. | No
+| Lifecycle planning | Yes | No. You can view Lifecycle planning without a Console agent, but a Console agent is required to initiate actions.
 | Sustainability | Yes | No
 | Software updates | Yes  | Yes
 | NetApp Workloads | Yes | Yes
 3+| *Available data services*:
 | NetApp Backup and Recovery | Yes | No
 | NetApp Data Classification | Yes | No
-| NetApp Cloud Tiering | Yes | No
+a| NetApp Cloud Tiering* | Yes | No
 | NetApp Copy and Sync | Yes | No
 | NetApp Disaster Recovery | Yes | No
 | NetApp Ransomware Resilience | Yes | No
 | NetApp Volume Caching | Yes | No
 |===
 
-^1^ You can view Lifecycle planning without a Console agent, but a Console agent is required to initiate actions.
 
-^2^ Accurate home page metrics require appropriately sized and configured Console agents.
+include::_include/cloud-tiering-eol.adoc[]
 
 link:concept-modes.html[Learn about NetApp Console deployment modes] to understand when you need an agent and the capabilities agents enable.
 

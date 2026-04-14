@@ -107,6 +107,8 @@ image:diagram-standard-mode.png["A conceptual image that shows the public intern
 === Supported features and services for NetApp Console in standard mode
 The following table lists the storage management features, data services, and administrative features available in the NetApp Console SaaS application (standard mode).
 
+include::_include/cloud-tiering-eol.adoc[]
+
 [cols=3*,options="header,autowidth"]
 |===
 
@@ -139,7 +141,7 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | NetApp Disaster Recovery | Yes
 | NetApp Ransomware Protection |Yes
 | NetApp Replication | No
-| NetApp Cloud Tiering | Yes
+| NetApp Cloud Tiering  | Yes
 | NetApp Volume Caching | Yes
 
 .5+| *NetApp support contract features*
@@ -214,6 +216,7 @@ You install a Console agent in the cloud (in a government, sovereign, or commerc
 Users access the local UI provided by the Console agent, not the SaaS application.
 
 Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
+
 
 
 <<Restricted mode, Learn more about outbound connectivity to the NetApp Console APIs>>.
@@ -450,7 +453,7 @@ a| NetApp Classification
 a| Licenses and subscriptions management 
 
 * Only BYOL is supported with private mode. |No
-| Identity and access management | No
+| Identity and access management | Yes
 | Manage cloud provider credentials | No
 | Read-only mode | No
 | Notifications | No
@@ -539,7 +542,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | NetApp Disaster Recovery | No | No
 | NetApp Ransomware Protection | No | No
 | NetApp Replication | Yes | Yes
-| NetApp Cloud Tiering | No | No
+| NetApp Cloud Tiering* | No | No
 | NetApp Volume Caching | No | No
 
 .4+| *NetApp support contract features*
@@ -563,3 +566,5 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Audit | Yes | Yes
 
 |===
+
+

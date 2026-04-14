@@ -531,6 +531,8 @@ The Console agent makes the following API requests for daily operations.
 * Microsoft.Storage/storageAccounts/read
 //end::tiering-permissions-operations[]
 
+include::_include/cloud-tiering-eol.adoc[]
+
 == Change log
 
 As permissions are added and removed, we'll note them in the sections below.
