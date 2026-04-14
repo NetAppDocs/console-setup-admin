@@ -94,7 +94,7 @@ sidebar:
                 - title: AWS
                   entries:
                     - title: Console agent installation options for AWS
-                      url: /concept-install-aws.html
+                      url: /concept-install-options-aws.html
                     - title: Create a Console agent in AWS from NetApp Console
                       url: /task-install-agent-aws-console.html
                     - title: Create a Console agent in AWS from the AWS marketplace
@@ -104,7 +104,7 @@ sidebar:
                 - title: Azure
                   entries:
                     - title:  Console agent installation options for Azure
-                      url: /concept-install-azure.html
+                      url: /concept-install-options-azure.html
                     - title: Create a Console agent in Azure from NetApp Console
                       url: /task-install-agent-azure-console.html
                     - title: Create a Console agent in Azure from the Azure marketplace
@@ -114,7 +114,7 @@ sidebar:
                 - title: Google Cloud
                   entries:
                     - title: Console agent installation options for Google Cloud
-                      url: /concept-install-google.html
+                      url: /concept-install-optionsgoogle.html
                     - title: Create a Console agent in Google Cloud from NetApp Console
                       url: /task-install-agent-google-console-gcloud.html
                     - title: Create a Console agent in Google Cloud from Google Cloud
