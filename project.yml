@@ -93,8 +93,6 @@ sidebar:
                   url: /concept-agent-install-options.html
                 - title: AWS
                   entries:
-                    - title: Console agent installation options for AWS
-                      url: /concept-install-options-aws.html
                     - title: Create a Console agent in AWS from NetApp Console
                       url: /task-install-agent-aws-console.html
                     - title: Create a Console agent in AWS from the AWS marketplace
