@@ -17,7 +17,7 @@ Deploy a Console agent using the NetApp Console, your cloud provider's marketpla
 
 For cloud deployments, you can deploy an agent in Amazon Web Services (AWS), Microsoft Azure, or Google Cloud. 
 
-
+[[agent-console-deploy]]
 == Deploy from the NetApp Console
 
 NetApp recommends deploying from the NetApp Console when you use standard mode. The NetApp Console guides you through networking and permissions setup, then automatically launches the VM or instance in your cloud provider. The Console guides you through networking and permissions setup, then launches the VM or instance in your cloud provider automatically.
@@ -45,6 +45,8 @@ link:task-install-agent-aws-console.html[Deploy a Console agent in AWS from the 
 link:task-install-agent-azure-console.html[Deploy a Console agent in Azure from the Console]
 link:task-install-agent-google-console-gcloud.html[Deploy a Console agent in Google Cloud from the Console]
 
+
+[[agent-marketplace-deploy]]
 == Deploy from a cloud provider marketplace
 
 Deploying from the AWS Marketplace or Azure Marketplace initiates the agent installation directly from the marketplace, not from the NetApp Console.
@@ -75,6 +77,8 @@ link:task-install-agent-aws-marketplace.html[Deploy a Console agent in AWS from 
 link:task-install-agent-azure-marketplace.html[Deploy a Console agent in Azure from the marketplace]
 link:task-install-agent-google-gcloud.html[Deploy a Console agent in Google Cloud using Google Cloud tools]
 
+
+[[agent-cloud-manual-deploy]]
 == Manually install on a Linux host in the cloud
 
 Manual installation lets you install the Console agent software directly on a Linux host that you provide and manage in AWS, Azure, Google Cloud or on-premises. 
@@ -102,6 +106,7 @@ link:task-install-agent-aws-manual.html[Manually install a Console agent in AWS]
 link:task-install-agent-azure-manual.html[Manually install a Console agent in Azure]
 link:task-install-agent-google-manual.html[Manually install a Console agent in Google Cloud]
 
+[[agent-ova-on-prem-deploy]]
 == Manually install on-premises using VCenter (OVA)
 
 If you use VMware VCenter, you can deploy the Console agent by importing an OVA (Open Virtual Appliance) file. The OVA is a pre-configured VM image you deploy with the vSphere client, without installing Linux or configuring a container runtime.
@@ -132,7 +137,7 @@ a| * Requires VCenter; cannot be installed directly on a bare ESXi host
 
 link:task-install-agent-on-prem-ova.html[Deploy on-premises using VCenter]
 
-
+[[agent-manual-on-prem-deploy]]
 == Manually install on-premises (without VCenter)
 
 You can manually install the Console agent on any on-premises Linux host. You must set up the Linux host and container runtime (Docker or Podman), then install the Console agent.

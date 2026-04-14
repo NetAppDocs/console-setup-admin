@@ -19,7 +19,7 @@ Deploying an agent in Google Cloud launches a VM instance running Linux and the 
 
 .Before you begin
 
-* You should have an link:concept-agents.html[understanding of Console agents].
+* link:concept-agent-install-options.html#agent-console-deploy[Learn when to deploy from the Console].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 [[networking-gcp-agent]]
