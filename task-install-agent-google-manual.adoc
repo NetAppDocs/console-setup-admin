@@ -19,7 +19,7 @@ Deploying an agent in Google Cloud launches a VM instance running Linux and the 
 
 .Before you begin
 
-* link:concept-agents.html[Learn about Console agents].
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy[Learn when to deploy manually in the Google Cloud].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Review host requirements

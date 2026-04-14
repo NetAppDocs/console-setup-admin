@@ -21,7 +21,7 @@ NOTE: Deploy a Console agent in the same Azure region as the Cloud Volumes ONTAP
 
 .Before you begin
 
-* You should have an link:concept-agents.html[understanding of Console agents].
+* link:concept-agent-install-options.html#agent-marketplace-deploy[Learn when to deploy from the Azure Marketplace].
 * Review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Set up networking

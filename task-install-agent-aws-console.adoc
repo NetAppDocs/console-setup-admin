@@ -20,7 +20,7 @@ Deploying an agent in AWS launches an EC2 instance running Linux and the Console
 
 .Before you begin
 
-* link:concept-agents.html[Learn about Console agents].
+* link:concept-agent-install-options.html#agent-console-deploy[Learn when to deploy from the Console].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 
