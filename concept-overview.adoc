@@ -138,7 +138,7 @@ Automation hub::
 Use scripted solutions to automate the setup and connection of NetApp products and services for smoother and more consistent operations.
 
 NetApp Cloud Tiering::
-Extend your on-premises ONTAP storage to the cloud for cost optimization and data lifecycle management.
+include::_include/cloud-tiering-eol.adoc[]
 
 NetApp Data Classification::
 Get your application data and cloud environments privacy ready for compliance with data privacy regulations. Free with subscription.

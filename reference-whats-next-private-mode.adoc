@@ -5,7 +5,7 @@ keywords: private mode, supported features for private mode
 summary: After you get up and running with NetApp Console in private mode, you can start using the services that are supported with private mode.
 ---
 
-= What you can do next (private mode)
+= Next steps for NetApp Console in private mode
 :hardbreaks:
 :nofooter:
 :icons: font

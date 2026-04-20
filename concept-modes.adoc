@@ -107,6 +107,8 @@ image:diagram-standard-mode.png["A conceptual image that shows the public intern
 === Supported features and services for NetApp Console in standard mode
 The following table lists the storage management features, data services, and administrative features available in the NetApp Console SaaS application (standard mode).
 
+include::_include/cloud-tiering-eol.adoc[]
+
 [cols=3*,options="header,autowidth"]
 |===
 
@@ -139,7 +141,7 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | NetApp Disaster Recovery | Yes
 | NetApp Ransomware Protection |Yes
 | NetApp Replication | No
-| NetApp Cloud Tiering | Yes
+| NetApp Cloud Tiering  | Yes
 | NetApp Volume Caching | Yes
 
 .5+| *NetApp support contract features*
@@ -216,6 +218,7 @@ Users access the local UI provided by the Console agent, not the SaaS applicatio
 Depending on the data services and features that you plan to use, a Console organization admin creates additional Console agents to manage data within your hybrid cloud environment.
 
 
+
 <<Restricted mode, Learn more about outbound connectivity to the NetApp Console APIs>>.
 
 The following image is an example of a restricted mode deployment.
@@ -285,7 +288,7 @@ For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing 
 | Notifications | No
 | NSS accounts | No
 | Organization Partnerships | No
-| Read-only mode | No
+| Read-only mode | Yes
 | Notifications | No
 
 |===
@@ -450,7 +453,7 @@ a| NetApp Classification
 a| Licenses and subscriptions management 
 
 * Only BYOL is supported with private mode. |No
-| Identity and access management | No
+| Identity and access management | Yes
 | Manage cloud provider credentials | No
 | Read-only mode | No
 | Notifications | No
@@ -487,9 +490,10 @@ Authentication is provided through local user management and access. Authenticat
 
 === How to get started with private mode
 Private mode is available by downloading the "offline" installer from the NetApp Support Site.
-+
+
 link:task-quick-start-private-mode.html[Learn how to get started with private mode].
-+
+
+
 NOTE: If you want to use NetApp Console in the https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^] or the https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], then you should follow separate instructions to get started in those environments. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html[Learn how to get started with Cloud Volumes ONTAP in the AWS Secret Cloud or Top Secret Cloud^]
 
 == NetApp Console service and feature comparison
@@ -508,7 +512,7 @@ Note that some services might be supported with limitations. For more details ab
 | Restricted mode
 | Private mode
 
-.10+| *Storage systems management*
+.12+| *Storage systems management*
 
 This table shows which storage systems you can manage from the NetApp Console. It does not list backup destinations for NetApp Backup and Recovery.
 | Alerts | No | No
@@ -538,7 +542,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | NetApp Disaster Recovery | No | No
 | NetApp Ransomware Protection | No | No
 | NetApp Replication | Yes | Yes
-| NetApp Cloud Tiering | No | No
+| NetApp Cloud Tiering* | No | No
 | NetApp Volume Caching | No | No
 
 .4+| *NetApp support contract features*
@@ -557,8 +561,10 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Multi-factor authentication | Yes | No
 | NSS accounts | Yes | No 
 | Organization Partnerships | Yes | No
-| Read-only mode | No | No
+| Read-only mode | Yes| No
 | Notifications | Yes | No 
 | Audit | Yes | Yes
 
 |===
+
+

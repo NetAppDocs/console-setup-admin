@@ -5,7 +5,7 @@ keywords: install connector, aws connector installation, aws connector, install 
 summary: You can manually install a Console agent on a Linux host running in AWS. To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare AWS permissions, install the Console agent, and then provide the permissions that you prepared.
 ---
 
-= Manually install the Console agent in AWS
+= Manually deploy the Console agent in AWS
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,13 @@ summary: You can manually install a Console agent on a Linux host running in AWS
 :imagesdir: ./media/
 
 [.lead]
-You can manually install a Console agent on a Linux host running in AWS. To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare AWS permissions, install the Console agent, and then provide the permissions that you prepared.
+You can manually deploy a Console agent on a Linux host running in AWS. To manually deploy the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare AWS permissions, deploy the Console agent, and then provide the permissions that you prepared.
+
+Deploying an agent in AWS launches an EC2 instance running Linux and the Console agent software in a VPC of your choice.
 
 .Before you begin
 
-* You should have an link:concept-agents.html[understanding of Console agents].
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy[Learn when to deploy manually in AWS].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Review host requirements

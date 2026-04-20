@@ -1,0 +1,62 @@
+---
+sidebar: sidebar
+permalink: task-update-agent-addressing.html
+keywords: agent ip address, agent uri, change ip address, edit uri, agent network, agent addressing
+summary: When network configuration changes, you may need to update the agent's IP address in your cloud provider and its registered URIs in the Console.
+---
+
+= Update agent addressing and URIs
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When network configuration changes, you may need to update the agent's IP address in your cloud provider and its registered URIs in the Console.
+
+== Change the IP address for an agent
+
+You can change the internal and public IP addresses of the agent instance assigned by your cloud provider if needed.
+
+.Steps
+
+. Follow the instructions from your cloud provider to change the local IP address or public IP address (or both) for the agent instance.
+
+. Restart the agent instance to register a new public IP address with the Console.
+
+. If you changed the private IP address, update the backup location for Cloud Volumes ONTAP configuration files so that the backups are being sent to the new private IP address on the agent.
++
+Update the backup location for each Cloud Volumes ONTAP system.
+
+.. From the Cloud Volumes ONTAP CLI, set the privilege level to advanced:
+[source,cli]
+----
+set -privilege advanced
+----
+.. Run the following command to display the current backup target:
+[source,cli]
+----
+system configuration backup settings show
+----
+.. Run the following command to update the IP address for the backup target:
+[source,cli]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+== Edit an agent's URIs
+
+Updating the URI of a Console agent if your network requirements change. This ensures uninterrupted, secure, and compliant management of your storage infrastructure.
+
+.Steps
+
+. Select *Administration > Agents*.
+
+. On the *Overview* page, select the action menu for a Console agent and select *Edit agent*.
++
+The Console agent must be active to edit it.
+
+. Expand the *Agent URIs* bar to view agent URIs.
+
+. Add and remove URIs and then select *Apply*.

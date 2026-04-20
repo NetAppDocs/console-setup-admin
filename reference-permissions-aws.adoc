@@ -5,7 +5,7 @@ keywords: permissions, actions, aws, aws permissions, top secret, secret, aws to
 summary: When the NetApp Console launches the agent in AWS, it attaches a policy to the agent that provides the agent with permissions to manage resources and processes within that AWS account. The agent uses the permissions to make API calls to several AWS services, including EC2, S3, CloudFormation, IAM, the Key Management Service, and more.
 ---
 
-= AWS permissions for the Console agent
+= AWS permissions for the NetApp Console agent
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -1190,3 +1190,5 @@ kms:GenerateDataKeyWithoutPlaintext
 The following permission is now required for NetApp Cloud Tiering:
 
 ec2:DescribeVpcEndpoints
+
+include::_include/cloud-tiering-eol.adoc[]

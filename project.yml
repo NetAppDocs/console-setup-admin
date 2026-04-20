@@ -29,7 +29,7 @@ sidebar:
               url: /concept-modes.html
             - title: NetApp support accounts
               url: /task-adding-nss-accounts.html
-            - title: Understand Console agents
+            - title: Learn about Console agents
               url: /concept-agents.html
             - title: Identity and access management
               url: /concept-identity-and-access-management.html
@@ -65,11 +65,47 @@ sidebar:
               url: /task-install-private-mode.html
             - title: What you can do next
               url: /reference-whats-next-private-mode.html    
+        - title: Deploy a Console agent
+          entries:
+            - title: Choose a Console agent deployment method
+              url: /concept-agent-install-options.html
+            - title: AWS
+              entries:
+                - title: Create a Console agent in AWS from NetApp Console
+                  url: /task-install-agent-aws-console.html
+                - title: Create a Console agent in AWS from the AWS marketplace
+                  url: /task-install-agent-aws-marketplace.html
+                - title: Manually install a Console agent in AWS
+                  url: /task-install-agent-aws-manual.html
+            - title: Azure
+              entries:
+                - title: Create a Console agent in Azure from NetApp Console
+                  url: /task-install-agent-azure-console.html
+                - title: Create a Console agent in Azure from the Azure marketplace
+                  url: /task-install-agent-azure-marketplace.html
+                - title: Manually install a Console agent in Azure
+                  url: /task-install-agent-azure-manual.html
+            - title: Google Cloud
+              entries:
+                - title: Create a Console agent in Google Cloud from NetApp Console
+                  url: /task-install-agent-google-console-gcloud.html
+                - title: Create a Console agent in Google Cloud from Google Cloud
+                  url: /task-install-agent-google-gcloud.html
+                - title: Manually install a Console agent in Google Cloud
+                  url: /task-install-agent-google-manual.html
+            - title: Install an agent on-premises
+              entries:
+                - title: Manually install a Console agent on-premises
+                  url: /task-install-agent-on-prem.html
+                - title: Install a Console agent on-premises in VCenter
+                  url: /task-install-agent-on-prem-ova.html
+                - title: Ports for the on-premises Console agent
+                  url: /reference-ports-on-prem.html
     - title: Use NetApp Console
       entries:
         - title: Log in to NetApp Console
           url: /task-logging-in.html
-        - title: Work with multiple Console agents
+        - title: View systems associated with different Console agents
           url: /task-manage-multiple-agents.html
         - title: View metrics on the NetApp Console Home page
           url: /task-dashboard.html
@@ -87,50 +123,17 @@ sidebar:
           entries:
             - title: Learn about Console agents
               url: /concept-agents.html            
-            - title: Deploy a Console agent
-              entries:
-                - title: AWS
-                  entries:
-                    - title: Console agent installation options
-                      url: /concept-install-options-aws.html
-                    - title: Create a Console agent from NetApp Console
-                      url: /task-install-agent-aws-console.html
-                    - title: Create a Console agent from the AWS marketplace
-                      url: /task-install-agent-aws-marketplace.html
-                    - title: Manually install the Console agent
-                      url: /task-install-agent-aws-manual.html
-                - title: Azure
-                  entries:
-                    - title: Console agent installation options
-                      url: /concept-install-options-azure.html
-                    - title: Create a Console agent from NetApp Console
-                      url: /task-install-agent-azure-console.html
-                    - title: Create a Console agent from the Azure marketplace
-                      url: /task-install-agent-azure-marketplace.html
-                    - title: Manually install the Console agent
-                      url: /task-install-agent-azure-manual.html
-                - title: Google Cloud
-                  entries:
-                    - title: Console agent installation options
-                      url: /concept-install-options-google.html
-                    - title: Create a Console agent from NetApp Console
-                      url: /task-install-agent-google-console-gcloud.html
-                    - title: Create a Console agent from Google Cloud
-                      url: /task-install-agent-google-gcloud.html
-                    - title: Manually install the Console agent
-                      url: /task-install-agent-google-manual.html
-                - title: Install an agent on-premises
-                  entries:
-                    - title: Manually install an agent on-premises
-                      url: /task-install-agent-on-prem.html
-                    - title: Install an on-premises agent in VCenter
-                      url: /task-install-agent-on-prem-ova.html
-                    - title: Ports for the on-premises Console agent
-                      url: /reference-ports-on-prem.html
+          
             - title: Maintain Console agents
               entries:
-                - title: Maintain a VCenter-installed agent
-                  url: /task-agent-vm-config.html
+                - title: Maintain manually installed Console agents
+                  entries:
+                    - title: Maintain a VCenter-installed agent
+                      url: /task-agent-vm-config.html
+                    - title: Maintain a manually installed agent
+                      url: /task-maintain-agents.html
+                - title: Update agent addressing and URIs
+                  url: /task-update-agent-addressing.html
                 - title: Install a CA-signed certificate for web-console access
                   url: /task-installing-https-cert.html
                 - title: Configure a Console agent to use a proxy server
@@ -141,8 +144,6 @@ sidebar:
                   url: /task-upgrade-agent.html
                 - title: Uninstall and remove the Console agent
                   url: /task-uninstall-agent.html
-             
-               
             - title: Manage cloud provider credentials
               entries:
                 - title: AWS
@@ -169,6 +170,8 @@ sidebar:
               url: /concept-identity-and-access-management.html
             - title: Get started with identity and access
               url: /task-iam-get-started.html
+            - title: Frequently asked questions about identity and access management
+              url: /faq-iam-netapp-console.html
             - title: Set up your Console organization
               entries:
                 - title: Create folders and projects
@@ -287,16 +290,16 @@ sidebar:
                   url: /reference-ports-aws.html
             - title: Azure permissions and required security rules
               entries:
-               - title: Azure permissions for the Console agent
-                 url: /reference-permissions-azure.html
-               - title: Console agent security group rules in Azure
-                 url: /reference-ports-azure.html
+                - title: Azure permissions for the Console agent
+                  url: /reference-permissions-azure.html
+                - title: Console agent security group rules in Azure
+                  url: /reference-ports-azure.html
             - title: Google Cloud permissions and required firewall rules
               entries:
-               - title: Google Cloud permissions for the Console agent
-                 url: /reference-permissions-gcp.html
-               - title: Console agent firewall rules in Google Cloud
-                 url: /reference-ports-gcp.html
+                - title: Google Cloud permissions for the Console agent
+                  url: /reference-permissions-gcp.html
+                - title: Console agent firewall rules in Google Cloud
+                  url: /reference-ports-gcp.html
         - title: Console network access (legacy)
           url: /reference-networking-saas-console-previous.html
         - title: Require the use of IMDSv2 on EC2 instances

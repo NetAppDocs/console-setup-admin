@@ -5,7 +5,7 @@ keywords: install connector, google cloud connector installation, google cloud c
 summary: To create a Console agent in Google Cloud by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
 ---
 
-= Create a Console agent from Google Cloud
+= Deploy a Console agent from Google Cloud
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,13 @@ summary: To create a Console agent in Google Cloud by using Google Cloud, you ne
 :imagesdir: ./media/
 
 [.lead]
-To create a Console agent in Google Cloud by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
+To deploy a Console agent in Google Cloud by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then deploy the Console agent.
+
+Deploying an agent in Google Cloud launches a VM instance running Linux and the Console agent software in a VPC of your choice.
 
 .Before you begin
 
-* You should have a link:concept-agents.html[understanding of Console agents].
+* You should have a link:concept-agents.html[Learn about Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Set up networking
@@ -175,19 +177,8 @@ $ gcloud components update
 +
 [source,bash]
 ----
-gcloud compute instances create <instance-name>
-  --machine-type=n2-standard-8
-  --image-project=netapp-cloudmanager
-  --image-family=cloudmanager
-  --scopes=cloud-platform
-  --project=<project>
-  --service-account=<service-account>
-  --zone=<zone>
-  --no-address
-  --tags <network-tag>
-  --network <network-path>
-  --subnet <subnet-path>
-  --boot-disk-kms-key <kms-key-path>
+
+gcloud compute instances create <instance-name> --machine-type=n2-standard-8 --image-project=<image-project-name> --image-family=<image-family-name> --scopes=cloud-platform --project=<project-name> --service-account="<service-account-name>" --zone=<zone-name> --no-address --tags "<tags>" --network "<network-path>" --subnet "<subnet-path>"
 ----
 +
 instance-name:: The desired instance name for the VM instance.

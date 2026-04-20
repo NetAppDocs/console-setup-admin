@@ -5,7 +5,7 @@ keywords: restricted mode, what you can do
 summary: After you get up and running with NetApp Console in restricted mode, you can start using the services that are supported with restricted mode.
 ---
 
-= What you can do next (restricted mode)
+= Next steps for NetApp Console in restricted mode
 :hardbreaks:
 :nofooter:
 :icons: font

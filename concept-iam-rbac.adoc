@@ -25,6 +25,7 @@ You can assign users multiple roles for the same scope or different scopes, depe
 
 == Types of Console organization members
 There are three types of members in a NetApp Console organization:
+
 * _User accounts_: Individual users who log in to the NetApp Console to manage resources. Users must sign up for the NetApp Console before they can be added to an organization. 
 * _Service accounts_: Non-human accounts used by applications or services to interact with the NetApp Console via APIs. You can add service accounts directly to your Console organization.
 * _Federated groups_: Groups synchronized from your identity provider (IdP) that allow you to manage access for multiple users collectively. Each user within a federated group must have signed up for the NetApp Console and been added to your organization with an access role before they can access resources granted to the group.
