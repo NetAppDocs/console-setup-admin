@@ -26,7 +26,6 @@ Restricted mode is for organizations needing enhanced security and limited conne
 Private mode (installed on your premises or in the cloud)::
 Private mode is for organizations with strict security needs, such as those in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or air-gapped environments. It does not connect to the NetApp Console SaaS application or NetApp cloud-based APIs, giving you full control and blocking outside communication. Supported data services include NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. Use this mode for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
 
-When installed on your premises, only ONTAP storage systems are supported.
 
 NOTE: NetApp Console limits data flow in restricted and private modes, but you must ensure your environment complies with your regulations.
 
