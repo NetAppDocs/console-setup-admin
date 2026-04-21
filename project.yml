@@ -180,12 +180,6 @@ sidebar:
                   url: /task-iam-manage-resources.html
                 - title: Associate a Console agent with other folders and projects
                   url: /task-iam-associate-agents.html
-            - title: Verify your organization
-              entries:
-                - title: Learn about verified organizations
-                  url: /concept-verified-organization.html
-                - title: Verify your organization
-                  url: /task-verify-organization.html
             - title: Add users to your Console organization
               entries:
                 - title: Add users, service accounts, and federated groups
