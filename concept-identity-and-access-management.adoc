@@ -36,6 +36,8 @@ Organization::
 
 An _organization_ is the top level of the Console IAM system and typically represents your company. Your organization consists of folders, projects, members, roles, and resources. Resources are associated with projects, and members are assigned roles at the organization, folder, or project level.
 
+You can also verify your organization to link it with your NetApp business account identity for consistent governance across NetApp systems. link:concept-verified-organization.html[Learn about verified organizations in NetApp Console].
+
 
 Projects::
 
