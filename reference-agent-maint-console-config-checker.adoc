@@ -15,6 +15,8 @@ summary: You can use the Console agent maintenance console to configure a Consol
 [.lead]
 You can use the Console agent maintenance console to validate the installation and configuration of a Console agent.
 
+
+
 == Access the agent maintenance console
 You can access the maintenance Console from the Console agent host. Navigate to the following directory:
 [source,cli]
@@ -27,6 +29,8 @@ You can access the maintenance Console from the Console agent host. Navigate to 
 
 The `config-checker validate` command allows you to validate the configuration of a Console agent. 
 
+link:reference-networking-saas-console.html[Learn more about required network access points.]
+link:task-install-agent-on-prem.html#os-req-agent[Learn more about host requirements.]
 
 === Parameters
 `--services <comma-separated list of services to validate>` --*REQUIRED*--
@@ -56,7 +60,7 @@ Specifies the path to one or more certificate files to use for the validation. T
 
 
 === Config-checker validate examples
-The following examples include validating network connectivity, required ports, and hardware requirments along with different combinations of using a proxy server and custom certificates.
+The following examples include validating network connectivity, required ports, and hardware requirements along with different combinations of using a proxy server and custom certificates.
 
 .Validation for network connectivity and hardware requirements:
 [role="quick-margin-para"]
