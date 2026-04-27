@@ -186,6 +186,8 @@ Although the previous endpoints are still supported, NetApp recommends updating 
 
 //end::upgrade-endpoints-restricted[]
 
+//the below tag is not in use
+
 //tag::upgrade-endpoints-explanation[]
 
 //Same text is also in endpoints-manual-install but this text is obsolete
@@ -196,6 +198,7 @@ Although the previous endpoints are still supported, NetApp recommends updating 
 * If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
 //end::upgrade-endpoints-explanation[]
 
+// the below tag is no longer in use
 
 //tag::upgrade-endpoints-restricted-mode[]
 |
