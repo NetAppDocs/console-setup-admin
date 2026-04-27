@@ -155,7 +155,7 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Audit | No
 | Automation hub | No
 | Federation | No
-| Identity and access management | No
+| Identity and access management | Yes
 a| Licenses and subscriptions management
 
 * Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depends on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options. | No
@@ -268,7 +268,7 @@ a| NetApp Replication
 | Audit | No
 | Automation hub | No
 | Federation | No
-| Identity and access management | No
+| Identity and access management | Yes
 a| Licenses and subscriptions management
 
 
@@ -396,7 +396,7 @@ a| Licenses and subscriptions management
 For Cloud Volumes ONTAP BYOL, only node-based licensing is supported. Capacity-based licensing is not supported. Because an outbound internet connection isn't available, you need to manually upload your Cloud Volumes ONTAP licensing file in the Console.
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses[Learn how to add licenses^]| No
-| Identity and access management | No
+| Identity and access management | Yes
 | Manage cloud provider credentials | No
 | Read-only mode | No
 | Notifications | No
