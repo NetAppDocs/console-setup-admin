@@ -181,9 +181,6 @@ The validation check does not include the restricted mode upgrade endpoints. If 
 Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to the current endpoints as soon as possible. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
 
 
-
-
-
 //end::upgrade-endpoints-restricted[]
 
 //the below tag is not in use
