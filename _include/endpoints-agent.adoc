@@ -182,8 +182,6 @@ Although the previous endpoints are still supported, NetApp recommends updating 
 
 
 
-* When you update to the current endpoints in your firewall, your existing agents will continue to work.
-
 
 
 //end::upgrade-endpoints-restricted[]
@@ -198,17 +196,11 @@ Although the previous endpoints are still supported, NetApp recommends updating 
 * If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
 //end::upgrade-endpoints-explanation[]
 
+
 //tag::upgrade-endpoints-restricted-mode[]
 |
 If the Console agent is in an AWS Government region:
-\https://*.blob.core.windows.net
-\https://cloudmanagerinfraprod.azurecr.io
 
-| To obtain images for Console agent upgrades when the Console agent is installed in an AWS Government region.
-
-| 
-If the Console agent is in an Azure Government region:
-\https://*.blob.core.windows.net
 \https://occmclientinfragov.azurecr.us
 
 | To obtain images for Console agent upgrades when the Console agent is installed in an Azure Government region.
