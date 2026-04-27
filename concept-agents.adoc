@@ -78,7 +78,7 @@ The following table shows which storage systems and services are available with 
 3+| *Storage management and health services*:
 | Alerts | Yes | No
 | Automation hub | Yes| Yes
-| Digital Advisor (Active IQ) | Yes | No
+| Digital Advisor (Active IQ) | Yes | Yes
 | License and subscription management  | Yes | No
 | Economic efficiency | Yes | No
 | Home page dashboard metrics | Yes. Accurate home page metrics require appropriately sized and configured Console agents. | No
