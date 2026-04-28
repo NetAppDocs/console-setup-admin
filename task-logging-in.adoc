@@ -22,7 +22,7 @@ After you sign up, your Console organization administrator must add your user ac
 
 . Navigate to the NetApp Console URL. The URL depends on which mode of the Console that your organization is using:
 +
-* **Standard mode*: Open a web browser and go to the https://console.netapp.com[NetApp Console]
+* *Standard mode*: Open a web browser and go to the https://console.netapp.com[NetApp Console]
 
 * **Restricted mode or Private mode**: Open a web browser and go to the IP address where the Console agent is installed.
 
