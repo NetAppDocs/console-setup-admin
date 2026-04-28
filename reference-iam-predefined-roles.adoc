@@ -20,14 +20,16 @@ Identity and access management (IAM) in the NetApp Console provides predefined r
 == Platform roles
 Platform roles grant NetApp Console administration permissions, including role assignment and user management. The Console has several platform roles. 
 
-[cols="1,2",options="header"]
+[cols="1,2,3",options="header"]
 |===
 
 | Platform role
+| API name
 | Responsibilities
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin] | Allows a user unrestricted access to all projects and folders within an organization, add members to any project or folder, as well as perform any task and use any data service that does not have an explicit role associated with it. 
+| link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin] | ORGANIZATION_ADMIN
+| Allows a user unrestricted access to all projects and folders within an organization, add members to any project or folder, as well as perform any task and use any data service that does not have an explicit role associated with it. 
 
 Users with this role manage your organization by creating folders and projects, assigning roles, adding users, and managing systems if they have the proper credentials.
 
