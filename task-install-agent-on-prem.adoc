@@ -5,7 +5,7 @@ keywords: deploy agent, on prem agent deployment, on prem agent, deploy connecto
 summary: Deploy a Console agent on-premises and then log in and set it up to work with your Console organization.
 ---
 
-= Manually deploy a Console agent on-premises
+= Manually install a Console agent on-premises
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -26,7 +26,7 @@ Before you install a Console agent, you should ensure you have a host machine th
 [[os-req-agent]]
 === Review Console agent host requirements
 
-Run the Console agent on a x86 host that meets operating system, RAM, and port requirements. Ensure that your host meets these requirements before you install the Console agent.
+Run the Console agent on an x86 host that meets operating system, RAM, and port requirements. Ensure that your host meets these requirements before you install the Console agent.
 
 include::_include/os-reqs.adoc[tag=manual-uid-range]
 
@@ -78,7 +78,7 @@ include::_include/networking.adoc[tag=ntp]
 [[agent-permission-aws-azure]]
 === Create Console agent cloud permissions for AWS or Azure
 
-If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider and then you add the credentials to the Console agent after you install it.
+If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider and then add the credentials to the Console agent after you install it.
 
 TIP: You must install the Console agent in Google Cloud to manage any resources that reside there.
 
@@ -169,7 +169,7 @@ You'll need to register the Console agent within the NetApp Console.
 [[register-agent]]
 == Register the Console agent with NetApp Console
 
-Log into the Console and associate the Console agent with your organization. How you log in depends on the mode in which you are using Console. If you are using the Console in standard mode, you log in through the SaaS website. If you are using the Console in restricted mode or private mode, you log in locally from the Console agent host.
+Log into the Console and associate the Console agent with your organization. How you log in depends on the mode in which you are using the Console. If you are using the Console in standard mode, you log in through the SaaS website. If you are using the Console in restricted mode or private mode, you log in locally from the Console agent host.
 
 .Steps
 

@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-install-agent-on-prem-ova.html
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install
-summary: If you are a VMWare user, you can use an OVA to install a Console agent in your VCenter. THe OVA download or URL is available through the NetApp Console.
+summary: If you are a VMware user, you can use an OVA to install a Console agent in your vCenter. The OVA download or URL is available through the NetApp Console.
 ---
 
-= Deploy a Console agent on-premises using VCenter
+= Install a Console agent on-premises using vCenter
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,9 +13,9 @@ summary: If you are a VMWare user, you can use an OVA to install a Console agent
 :imagesdir: ./media/
 
 [.lead]
-If you are a VMWare user, you can use an OVA to deploy a Console agent in your VCenter. THe OVA download or URL is available through the NetApp Console.
+If you are a VMware user, you can use an OVA to deploy a Console agent in your vCenter. The OVA download or URL is available through the NetApp Console.
 
-NOTE: When you deploy a Console agent with your VCenter tools, you can use the VM web console to perform maintenance tasks. link:task-agent-vm-config.html[Learn more about the VM console for the agent.]
+NOTE: When you deploy a Console agent with your vCenter tools, you can use the VM web console to perform maintenance tasks. link:task-agent-vm-config.html[Learn more about the VM console for the agent.]
 
 
 == Prepare to install the Console agent
@@ -51,7 +51,7 @@ include::_include/endpoints-console.adoc[]
 //Endpoints contacted from the Console agent 
 include::_include/endpoints-agent.adoc[tag=intro]
 
-NOTE:  You can't manage resources in Google Cloud with an Console agent installed on your premises. To manage Google Cloud resources, install an agent in Google Cloud.
+NOTE:  You can't manage resources in Google Cloud with a Console agent installed on your premises. To manage Google Cloud resources, install an agent in Google Cloud.
 
 include::_include/endpoints-agent-onprem-tabbed.adoc[]
 
@@ -96,7 +96,7 @@ include::_include/aws-permissions.adoc[tag=keys]
 
 .Result
 
-You should now have IAM user access keys with the required permissions.After you install the Console agent, associate these credentials with the Console agent from the Console.
+You should now have IAM user access keys with the required permissions. After you install the Console agent, associate these credentials with the Console agent from the Console.
 --
 
 .Azure
@@ -121,7 +121,7 @@ include::_include/azure-set-up-service-principal.adoc[tag=ids]
 
 .Create a client secret
 
-include::_include/azure-set-up-service-principal.adoc[tags=secret]
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
 
 --
 
@@ -129,8 +129,8 @@ include::_include/azure-set-up-service-principal.adoc[tags=secret]
 // end tabbed area
 
 
-== Install a Console agent in your VCenter environment
-NetApp supports installing the Console agent in your VCenter environment. The OVA file includes a pre-configured VM image that you can deploy in your VMware environment. A file download or URL deployment is available directly from the NetApp Console. It includes the Console agent software and a self-signed certificate.
+== Install a Console agent in your vCenter environment
+NetApp supports installing the Console agent in your vCenter environment. The OVA file includes a pre-configured VM image that you can deploy in your VMware environment. A file download or URL deployment is available directly from the NetApp Console. It includes the Console agent software and a self-signed certificate.
 
 === Download the OVA or copy the URL    
 
@@ -142,13 +142,13 @@ Download the OVA or copy the OVA URL directly from the NetApp Console.
 
 . Select *With OVA*.
 
-. Choose to either download the OVA or copy the URL to use in VCenter.
+. Choose to either download the OVA or copy the URL to use in vCenter.
 
 
 
-=== Deploy the agent in your VCenter environment
+=== Deploy the agent in your vCenter environment
 
-Log into your VCenter environment to deploy the agent.
+Log into your vCenter environment to deploy the agent.
 
 .Steps
 
@@ -177,15 +177,15 @@ b. Select *Actions* > *New VM from this template*
 . Select the datastore where you want to deploy the VM, then select *Next*. Be sure it meets host requirements.
 . Select the network to which you want to connect the VM, then select *Next*. Ensure the network is IPv4 and has outbound internet access to the required endpoints.
 
-. in the *Customize template* window, complete the following fields:
+. In the *Customize template* window, complete the following fields:
 
 +
 * *Proxy information* 
-** If you selected explicit proxy, enter the proxy server hostname or IP address and port number, as well as the username, password. 
+** If you selected explicit proxy, enter the proxy server hostname or IP address and port number, as well as the username and password. 
 ** If you selected transparent proxy, upload the respective certificate.
 * *Virtual Machine Configuration*
 ** *Skip config check*: This check box is unchecked by default which means the agent runs a configuration check to validate network access. 
-*** NetApp recommends leaving this box unchecked so that the installation includes a configuration check of the agent. The Configuration check validates that the agent has network access to the required endpoints. If it deployment fails because of connectivity issues, you can access the validation report and logs from the agent host. In some cases, if you are confident that the agent has network access, you can choose to skip the check. For example, if you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, mark the check box to install without a validation check.  link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
+*** NetApp recommends leaving this box unchecked so that the installation includes a configuration check of the agent. The configuration check validates that the agent has network access to the required endpoints. If the deployment fails because of connectivity issues, you can access the validation report and logs from the agent host. In some cases, if you are confident that the agent has network access, you can choose to skip the check. For example, if you are still using the link:reference-networking-saas-console-previous.html[previous endpoints] used for agent upgrades, the validation fails with an error. To avoid this, select the check box to install without a validation check.  link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
 
 
 
@@ -195,7 +195,7 @@ b. Select *Actions* > *New VM from this template*
 ** *Hostname*: Set the hostname for this VM. It must not include the search domain. For example, an FQDN of console10.searchdomain.company.com should be entered as console10.
 ** *Primary DNS*: Specify the primary DNS server to use for name resolution.
 ** *Secondary DNS*: Specify the secondary DNS server to use for name resolution.
-** Search domains: Specify the search domain name to use when resolving the hostname. For example, if the FQDN is console10.searchdomain.company.com, then enter searchdomain.company.com.
+** *Search domains*: Specify the search domain name to use when resolving the hostname. For example, if the FQDN is console10.searchdomain.company.com, then enter searchdomain.company.com.
 ** *IPv4 address*: The IP address that is mapped to the hostname.
 ** *IPv4 subnet mask*: The subnet mask for the IPv4 address.
 ** *IPv4 gateway address*: The gateway address for the IPv4 address.
@@ -203,7 +203,7 @@ b. Select *Actions* > *New VM from this template*
 . Select *Next*.
 
 
-. Review the details in the *Ready to complete* window, select *Finish*.
+. Review the details in the *Ready to complete* window, and then select *Finish*.
 +
 The vSphere task bar shows the progress as the Console agent is deployed.
 . Power on the VM.
