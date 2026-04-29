@@ -65,9 +65,28 @@ NOTE: A Console agent installed on your premises cannot manage resources in Goog
 [role="tabbed-block"]
 ====
 
-.AWS
+.NetApp endpoints (always required)
 --
-When the Console agent is installed on-premises, it needs network access to the following AWS endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in AWS.
+These endpoints are required for all Console agent deployments. Additional endpoints are required when you deploy in AWS or Azure.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+
+include::_include/endpoints-agent.adoc[tag=nss-endpoints]
+
+include::_include/endpoints-agent.adoc[tag=saas-endpoints]
+
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
+
+|===
+--
+
+.Endpoints required for AWS deployments
+--
+When the Console agent is installed on-premises, it needs network access to the following additional AWS endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in AWS.
 
 [cols="2a,1a",options="header,autowidth"]
 |===
@@ -85,9 +104,9 @@ include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 |===
 --
 
-.Azure
+.Endpoints required for Azure deployments
 --
-When the Console agent is installed on-premises, it needs network access to the following Azure endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in Azure.
+When the Console agent is installed on-premises, it needs network access to the following additional Azure endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in Azure.
 
 [cols="2a,1a",options="header,autowidth"]
 |===
