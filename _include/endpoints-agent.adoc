@@ -165,10 +165,10 @@ Although the previous endpoints are still supported, NetApp recommends updating 
 
 
 
-//end::upgrade-endpoints-restricted[]
+//end::upgrade-endpoints[]
 
-//tag::upgrade-endpoints[]
-a| \https://occmclientinfragov.azurecr.us.io
+//tag::upgrade-endpoints-restricted[]
+a| \https://occmclientinfragov.azurecr.us
 \https://bluexpinfraprod.azurecr.io 
 a| To obtain images for Console agent upgrades. 
 
