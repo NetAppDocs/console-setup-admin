@@ -84,7 +84,7 @@ include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 |===
 --
 
-.Endpoints required for AWS deployments
+.Additional endpoints for AWS deployments
 --
 When the Console agent is installed on-premises, it needs network access to the following additional AWS endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in AWS.
 
@@ -95,16 +95,12 @@ When the Console agent is installed on-premises, it needs network access to the 
 
 include::_include/endpoints-agent.adoc[tag=aws-endpoints]
 
-include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-agent.adoc[tag=saas-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 --
 
-.Endpoints required for Azure deployments
+.Additional endpoints for Azure deployments
 --
 When the Console agent is installed on-premises, it needs network access to the following additional Azure endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in Azure.
 
@@ -118,11 +114,8 @@ include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
 include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
 
-include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
-include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 |===
 
