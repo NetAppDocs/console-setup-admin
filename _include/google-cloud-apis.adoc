@@ -5,5 +5,5 @@
 * Cloud Resource Manager API
 * Compute Engine API
 * Identity and Access Management (IAM) API
-* Cloud Key Management Service (KMS) API (Required only if you are planning to use NetApp Backup and Recovery with customer-managed encryption keys (CMEK))
+* Cloud Key Management Service (KMS) API (required only if you are planning to use NetApp Backup and Recovery with customer-managed encryption keys (CMEK))
 * Cloud Quotas API (required for Cloud Volumes ONTAP deployments using Infrastructure Manager)
