@@ -14,7 +14,7 @@ summary: Private mode is typically used with on-premises environments that have 
 
 [.lead]
 
-You can install NetApp Console on-premises or in a secure cloud environment. Private mode is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], and https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^]
+You can install NetApp Console on-premises or in a secure cloud environment. Private mode is typically used with on-premises environments that have no internet connection and with secure cloud regions, which include https://aws.amazon.com/federal/secret-cloud/[AWS Secret Cloud^], https://aws.amazon.com/federal/top-secret-cloud/[AWS Top Secret Cloud^], and https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6[Azure IL6^].
 
 
 
