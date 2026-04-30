@@ -10,7 +10,7 @@ The Console agent requires a dedicated host. Any architecture is supported if it
 The agent uses `/opt` to install the `/opt/application/netapp` directory and its contents.
 ** `/var`: 40 GiB of space must be available
 +
-The Console agent requires this space in `/var` because Podman or Docker are architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage`  directory and `/var/lib/docker` for Docker. External mounts or symlinks do not work for this space.
+The Console agent requires this space in `/var` because Podman or Docker is architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage` directory and `/var/lib/docker` for Docker. External mounts or symlinks do not work for this space.
 //end::dedicated[]
 
 //tag::vmhost[]
@@ -24,7 +24,7 @@ The Console agent requires this space in `/var` because Podman or Docker are arc
 //end::vmhost[]
 
 //tag::manual-uid-range[]
-NOTE: The Console agent reserves the UID and GID range of 19000 to 19200. This range is fixed and cannot be modified. If any third-party software on your host is using UIDs or GIDs within this range, the agent installation will fail. NetApp recommends using a host that is free of third-party software to avoid conflicts. 
+NOTE: The Console agent reserves the UID and GID range of 19000 to 19200. This range is fixed and cannot be modified. If any third-party software on your host is using UIDs or GIDs within this range, the agent installation will fail. NetApp recommends using a host that is free of third-party software to avoid conflicts.
 
 //end::manual-uid-range[]
 
@@ -96,7 +96,7 @@ Supported in enforcing mode or permissive mode
 | 
 | 24.04 LTS
 | 3.9.45 or later with the NetApp Console in standard mode or restricted mode
-| Docker Engine 23.06 to 28.0.0.
+| Docker Engine 23.0.6 to 28.0.0.
 | Not supported
 
 | 
@@ -200,5 +200,5 @@ The agent uses `/opt` to install the `/opt/application/netapp` directory and its
 
 Disk space in /var:: 20 GiB of space must be available
 +
-The Console agent requires this space in `/var` because Docker or Podman are architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage` directory. External mounts or symlinks do not work for this space.
+The Console agent requires this space in `/var` because Docker or Podman is architected to create the containers within this directory. Specifically, they will create containers in the `/var/lib/containers/storage` directory. External mounts or symlinks do not work for this space.
 //end::disk-space[]

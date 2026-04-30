@@ -6,11 +6,6 @@ When you manually install the Console agent on your own Linux host, the installe
 |===
 | Endpoints
 | Purpose
-
-
-
-
-
 | \https://mysupport.netapp.com |
 | \https://signin.b2c.netapp.com | (this endpoint is the CNAME URL for \https://mysupport.netapp.com)
 | \https://cloudmanager.cloud.netapp.com/tenancy |
@@ -25,7 +20,7 @@ a|** Option 1 (recommended):
 ^1^ The endpoints listed in option 1 are recommended because they are more secure. We recommend that you set up your firewall to allow the endpoints listed in option 1, while disallowing the endpoints listed in option 2. Note the following about these endpoints:
 
 
-* The endpoints listed in option 1 are supported starting with the 3.9.47 release of the Console agent. There is no backwards compatibility with previous releases of the Console agent.
+* The endpoints listed in option 1 are supported starting with the 3.9.47 release of the Console agent. There is no backward compatibility with previous releases of the Console agent.
 * The Console agent contacts the endpoints listed in option 2 first. If those endpoints aren't accessible, the Console agent automatically contacts the endpoints listed in option 1.
 * The endpoints in option 1 are not supported if you use the Console agent with NetApp Backup and Recovery or NetApp Ransomware Resilience. In this case, you can disallow the endpoints listed in option 1, while allowing the endpoints listed in option 2.
 
@@ -93,20 +88,20 @@ a| **Option 1 (recommended):**
 
 a| The endpoints listed in option 1 are recommended because they are more secure. We recommend that you set up your firewall to allow the endpoints listed in option 1, while disallowing the endpoints listed in option 2. Note the following about these endpoints:
 
-* The endpoints listed in option 1 are supported starting with the 3.9.47 release of the Console agent. There is no backwards compatibility with previous releases of the Console agent.
+* The endpoints listed in option 1 are supported starting with the 3.9.47 release of the Console agent. There is no backward compatibility with previous releases of the Console agent.
 * The Console agent contacts the endpoints listed in option 2 first. If those endpoints aren't accessible, the Console agent automatically contacts the endpoints listed in option 1.
 * The endpoints in option 1 are not supported if you use the Console agent with NetApp Backup and Recovery or NetApp Ransomware Resilience. In this case, you can disallow the endpoints listed in option 1, while allowing the endpoints listed in option 2.
 
 |===
-+
+
 //end::endpoint-list-restricted[]
 
 //tag::endpoint-list-images-explanation[]
 //Same text is also in endpoints-connector
 The endpoints listed in option 1 are recommended because they are more secure. We recommend that you set up your firewall to allow the endpoints listed in option 1, while disallowing the endpoints listed in option 2. Note the following about these endpoints:
-** The endpoints listed in option 1 are supported starting with the 3.9.47 release of the Console agent. There is no backwards compatibility with previous releases of the Console agent.
+** The endpoints listed in option 1 are supported starting with the 3.9.47 release of the Console agent. There is no backward compatibility with previous releases of the Console agent.
 ** The Console agent contacts the endpoints listed in option 2 first. If those endpoints aren't accessible, the Console agent automatically contacts the endpoints listed in option 1.
-** The endpoints in option 1 are not supported if you use the Console agent with NetApp Backup and Recovery or NetpApp Ransomware Resilience. In this case, you can disallow the endpoints listed in option 1, while allowing the endpoints listed in option 2.
+** The endpoints in option 1 are not supported if you use the Console agent with NetApp Backup and Recovery or NetApp Ransomware Resilience. In this case, you can disallow the endpoints listed in option 1, while allowing the endpoints listed in option 2.
 //end::endpoint-list-images-explanation[]
 
 //tag::update[]
