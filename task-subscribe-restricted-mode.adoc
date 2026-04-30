@@ -27,7 +27,7 @@ NetApp Data Classification is enabled through your subscription, but there is no
 
 .Before you begin
 
-You must have already deployed a Console agent in order to subscribe to data services. You need to associate a marketplace subscription to the cloud credentials connected to a Console agent.
+You must have already deployed a Console agent to subscribe to data services. You need to associate a marketplace subscription to the cloud credentials connected to a Console agent.
 
 // start tabbed area
 

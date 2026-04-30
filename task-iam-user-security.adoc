@@ -16,7 +16,7 @@ summary: Manage your organization's members to provide permissions across differ
 Secure user access to your NetApp Console organization by managing member security settings. You can reset user passwords, manage multi-factor authentication (MFA), and recreate service account credentials.
 
 .Required access roles
-Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). Link:reference-iam-predefined-roles.html[Learn about access roles].
+Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). link:reference-iam-predefined-roles.html[Learn about access roles].
 
 
 == Reset user passwords (local users only)
@@ -54,7 +54,7 @@ The *Members* table lists the members of your organization.
 
 == Recreate the credentials for a service account
 
-You can create new credentials for a service if you lose or need to update them.
+You can create new credentials for a service account if you lose or need to update them.
 
 Creating new credentials deletes the old ones. You cannot use the old credentials.
 

@@ -75,13 +75,12 @@ After you set up MFA, the Console prompts you to enter a one-time code from your
 You can only use recovery codes once. If you use or lose yours, create a new one.
 
 .Steps
-. Select the profile icon in the upper right corner of the the Console to view the User settings panel.
+. Select the profile icon in the upper right corner of the Console to view the User settings panel.
 . Select image:icon-action.png["An icon that is three side-by-side dots"] next to the *Multi-Factor Authentication* header.
 . Select *Regenerate recovery code*.
 . Copy the generated recovery code and save it in a secure location.
 
 == Delete your MFA configuration
-When you're finished, either log out of the Console or move the slider back to return to read-only mode. The system removes your elevated permissions when your session expires.
 
 NOTE: If you are unable to access your authentication app or recovery code, you will need to contact your Organization administrator to reset your MFA configuration.
 

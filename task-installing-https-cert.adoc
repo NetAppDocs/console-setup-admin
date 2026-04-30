@@ -44,7 +44,7 @@ The Console agent must be connected to edit it.
 
 . In the HTTPS Setup page, install a certificate by generating a certificate signing request (CSR) or by installing your own CA-signed certificate:
 +
-[cols=2*,options="header",cols="25,75"]
+[cols="25,75",options="header"]
 |===
 | Option
 | Description
@@ -85,6 +85,6 @@ You should renew the agent's HTTPS certificate before it expires to ensure secur
 
 . On the *Overview* page, select the action menu for a Console agent and select *HTTPS Setup*.
 +
-Details about the certificate displays, including the expiration date.
+Details about the certificate display, including the expiration date.
 
 . Select *Change Certificate* and follow the steps to generate a CSR or install your own CA-signed certificate.

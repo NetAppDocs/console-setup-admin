@@ -8,7 +8,7 @@ summary: If needed, you can change the name of your NetApp Console organization.
 = Organization and project IDs
 :hardbreaks:
 :nofooter:
-:icons: font
+:icons: fontapp
 :linkattrs:
 :imagesdir: ./media/
 
@@ -17,7 +17,7 @@ Your NetApp Console organization has a name and an ID. You can choose a name for
 
 == Rename your organization
 
-You can rename your organization. This is helpful if you support more than organization.
+You can rename your organization. This is helpful if you support more than one organization.
 
 .Steps
 
@@ -27,7 +27,7 @@ You can rename your organization. This is helpful if you support more than organ
 
 . From the *Organization* page, navigate to the first row in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *Edit organization*.
 +
-image:screenshot-iam-edit-organization.png[A screenshot of Overview page that shows the actions icon and the Edit organization option.]
+image:screenshot-iam-edit-organization.png[A screenshot of Organization page that shows the actions icon and the Edit organization option.]
 
 . Enter a new organization name and select *Apply*.
 
