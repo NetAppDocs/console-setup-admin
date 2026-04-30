@@ -16,7 +16,7 @@ image:screenshot_gcp_associate.gif[A screenshot of a Google Cloud project and su
 +
 NOTE: Before you complete the following steps, ensure that you have both Billing Admin privileges in your Google Cloud account as well as a NetApp Console login.
 
-.. After you're redirected to the https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager[NetApp Intelligent Services page on the Google Cloud Marketplace^], ensure that the correct project is selected at the top navigation menu.
+.. After you're redirected to the https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager[NetApp Intelligent Services page on the Google Cloud Marketplace^], ensure that the correct project is selected in the top navigation menu.
 +
 image:screenshot_gcp_cvo_marketplace.png[A screenshot of the Cloud Volumes ONTAP marketplace page in Google Cloud.]
 
@@ -36,7 +36,7 @@ image:screenshot_gcp_marketplace_register.png[A screenshot of a registration pop
  
 .. Complete the steps on the *Subscription Assignment* page:
 +
-NOTE: If someone from your organization has already has a marketplace subscription from your billing account, then you will be redirected to https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=[the Cloud Volumes ONTAP page within NetApp Console^] instead. If this is unexpected, contact your NetApp sales team. Google enables only one subscription per Google billing account.
+NOTE: If someone from your organization already has a marketplace subscription from your billing account, then you will be redirected to https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=[the Cloud Volumes ONTAP page within NetApp Console^] instead. If this is unexpected, contact your NetApp sales team. Google enables only one subscription per Google billing account.
 +
 * Select the Console organization that you'd like to associate this subscription with.
 * In the *Replace existing subscription* field, choose whether you'd like to automatically replace the existing subscription for one organization with this new subscription.
