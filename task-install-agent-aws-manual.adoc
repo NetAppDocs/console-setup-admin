@@ -111,7 +111,7 @@ Follow the steps to prepare permissions for the Console.
 
 include::_include/aws-permissions.adoc[tag=policy]
 +
-Depending on the NetApp data services you plann to use, you might need to create a second policy. For standard regions, the permissions are spread across two policies. Two policies are required due to a maximum character size limit for managed policies in AWS. link:reference-permissions-aws.html[Learn more about IAM policies for the Console agent].
+Depending on the NetApp data services you plan to use, you might need to create a second policy. For standard regions, the permissions are spread across two policies. Two policies are required due to a maximum character size limit for managed policies in AWS. link:reference-permissions-aws.html[Learn more about IAM policies for the Console agent].
 
 include::_include/aws-permissions.adoc[tag=role]
 
@@ -153,7 +153,7 @@ include::_include/manual-install.adoc[tag=main-steps]
 
 include::_include/manual-install.adoc[tag=standard-mode-steps-for-cloud]
 
-If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html[Learn how to manage S3 buckets from NetApp ConsoleP^]
+If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]
 
 == Step 6: Provide permissions to NetApp Console
 
