@@ -54,12 +54,12 @@ The Console notifies you when the agent VM is unhealthy, including disk space, R
 For example, the Console notifies you when an agent resource (CPU, RAM, or disk space) exceeds 90% of its total capacity for 30 consecutive minutes. Afterwards, if the resource usage drops below that threshold, the notification displays as resolved (green) in the Notifications Center.
 
 
-NOTE: Work with NetApp support if you have questions about modifying your agent VM.
+NOTE: Work with NetApp Support if you have questions about modifying your agent VM.
 
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center[Learn more.^]
 
-[cols=2*,options="header",cols="47,47",width="95%"]
+[cols="47,47",options="header",width="95%"]
 |===
 
 | Notification

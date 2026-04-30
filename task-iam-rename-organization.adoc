@@ -8,7 +8,7 @@ summary: If needed, you can change the name of your NetApp Console organization.
 = Organization and project IDs
 :hardbreaks:
 :nofooter:
-:icons: font
+:icons: fontapp
 :linkattrs:
 :imagesdir: ./media/
 
