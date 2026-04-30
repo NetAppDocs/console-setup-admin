@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-install-agent-google-console-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector
-summary: To create a Console agent in Google Cloud from the NetApp Consoel or by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
+summary: To create a Console agent in Google Cloud from the NetApp Console or by using Google Cloud, you need to set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, and then create the Console agent.
 ---
 
 = Deploy a Console agent in Google Cloud from NetApp Console
@@ -89,7 +89,10 @@ include::_include/google-cloud-deployment-permissions.adoc[]
 +
 The following example creates a role named "agentDeployment" at the project level:
 +
-gcloud iam roles create connectorDeployment --project=myproject --file=agent-deployment.yaml
+[source, shell]
+----
+gcloud iam roles create agentDeployment --project=myproject --file=agent-deployment.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud[Google Cloud docs: Creating and managing custom roles^]
 
@@ -133,7 +136,7 @@ You should have the following:
 
 * The required Google Cloud permissions to create the Console agent and a service account for the Console agent VM.
 
-* A VPC and subnet that meets networking requirements.
+* A VPC and subnet that meet networking requirements.
 
 * Details about a proxy server, if a proxy is required for internet access from the Console agent.
 
@@ -141,7 +144,7 @@ You should have the following:
 
 . Select *Administration > Agents*. 
 
-. On the *Overview* page, select *Deploy agent > Google Cloud*
+. On the *Overview* page, select *Deploy agent > Google Cloud*.
 
 . On the *Deploying an agent* page, review the details about what you'll need. You have two options:
 
@@ -161,9 +164,9 @@ The form is owned and hosted by Google. Your credentials are not provided to Net
 
 * *Network*: Choose whether to enable a public IP address and optionally specify a proxy configuration.
 
-* *Network tags*: Add a network tag to the Console agent instance if using a transparent proxy.  Network tags must start with a lowercase letter and can contain lowercase letters, numbers, and hyphens. Tags must end with a lowercase letter or number. For example, you might use the tag "console-agent-proxy".
+* *Network tags*: Add a network tag to the Console agent instance if using a transparent proxy.  Network tags must start with a lowercase letter and can contain lowercase letters, numbers, and hyphens. Tags must end with a lowercase letter or number. For example, you might use the tag `console-agent-proxy`.
 
-* *Firewall Policy*: Choose whether to create a new firewall policy or whether to select an existing firewall policy that allows the required inbound and outbound rules.
+* *Firewall policy*: Choose whether to create a new firewall policy or whether to select an existing firewall policy that allows the required inbound and outbound rules.
 +
 link:reference-ports-gcp.html[Firewall rules in Google Cloud]
 
@@ -181,7 +184,7 @@ After the process completes, the Console agent is available for use.
 
 NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
 
-If you have Google Cloud Storage buckets in the same Google Cloud account where you created the Console agent, you'll see a Google Cloud Storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html[Learn how to manage Google Cloud Storage from the Console]
+If you have Google Cloud Storage buckets in the same Google Cloud account where you created the Console agent, a Google Cloud Storage system appears automatically on the *Systems* page. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html[Learn how to manage Google Cloud Storage from the Console^].
 
 
 

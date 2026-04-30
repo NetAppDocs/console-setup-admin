@@ -1,0 +1,67 @@
+
+
+
+
+[role="tabbed-block"]
+====
+
+.Minimum required endpoints
+--
+These endpoints are required for all Console agent deployments. Additional endpoints are required to manage NetApp resources in AWS or Azure.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+
+include::endpoints-agent.adoc[tag=nss-endpoints]
+
+include::endpoints-agent.adoc[tag=saas-endpoints]
+
+include::endpoints-agent.adoc[tag=upgrade-endpoints]
+
+|===
+--
+
+.Additional endpoints for AWS resources
+--
+When the Console agent is installed on-premises, it needs network access to the following additional AWS endpoints to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in AWS.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+include::endpoints-agent.adoc[tag=aws-endpoints]
+
+
+
+|===
+--
+
+.Additional endpoints for Azure resources
+--
+When the Console agent is installed on-premises, it needs network access to the following additional Azure endpoints to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in Azure.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
+
+
+include::endpoints-agent.adoc[tag=azure-public-endpoints]
+
+include::endpoints-agent.adoc[tag=azure-china-endpoints]
+
+
+
+|===
+
+
+
+--
+
+
+
+====
