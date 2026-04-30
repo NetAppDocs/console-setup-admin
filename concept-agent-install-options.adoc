@@ -28,7 +28,7 @@ Choose this method when:
 * You want the fastest path to a running agent with the least manual setup.
 
 
-[cols=2*,options="header",cols="47,47",width="95%"]
+[cols="47,47",options="header",width="95%"]
 |===
 | Advantages
 | Disadvantages
@@ -37,7 +37,7 @@ a| * Guided setup — the Console handles VM creation, software installation, an
 * Automatically applies the correct VM image and configuration
 * Fewest manual steps of any cloud deployment method
 a| 
-* Not available for on-premises, restricted mode or air-gapped environments
+* Not available for on-premises, restricted mode, or air-gapped environments
 
 |===
 
@@ -59,7 +59,7 @@ Choose this method when:
 * You prefer to initiate deployments from your cloud provider's interface rather than the NetApp Console.
 
 
-[cols=2*,options="header",cols="47,47",width="95%"]
+[cols="47,47",options="header",width="95%"]
 |===
 | Advantages
 | Disadvantages
@@ -81,7 +81,7 @@ link:task-install-agent-google-gcloud.html[Deploy a Console agent in Google Clou
 [[agent-cloud-manual-deploy]]
 == Manually install on a Linux host in the cloud
 
-Manual installation lets you install the Console agent software directly on a Linux host that you provide and manage in AWS, Azure, Google Cloud or on-premises. 
+Manual installation lets you install the Console agent software directly on a Linux host that you provide and manage in AWS, Azure, Google Cloud, or on-premises. 
 
 Choose this method when:
 
@@ -89,7 +89,7 @@ Choose this method when:
 * Your organization requires all software to be installed on pre-approved, internally managed hosts.
 
 
-[cols=2*,options="header",cols="47,47",width="95%"]
+[cols="47,47",options="header",width="95%"]
 |===
 | Advantages
 | Disadvantages
@@ -98,7 +98,7 @@ a| * Supports environments with limited outbound internet access (restricted mod
 * Upgrades are automatically handled when the Console agent has internet access
 a| * Most steps of any deployment method. You must prepare the host, install Podman or Docker, configure networking, install the software, and provide permissions manually
  
- * * Deployment is initiated outside the NetApp Console, so the guided workflow is not available
+ * Deployment is initiated outside the NetApp Console, so the guided workflow is not available
 
 |===
 
@@ -107,9 +107,9 @@ link:task-install-agent-azure-manual.html[Manually install a Console agent in Az
 link:task-install-agent-google-manual.html[Manually install a Console agent in Google Cloud]
 
 [[agent-ova-on-prem-deploy]]
-== Manually install on-premises using VCenter (OVA)
+== Manually install on-premises using vCenter (OVA)
 
-If you use VMware VCenter, you can deploy the Console agent by importing an OVA (Open Virtual Appliance) file. The OVA is a pre-configured VM image you deploy with the vSphere client, without installing Linux or configuring a container runtime.
+If you use VMware vCenter, you can deploy the Console agent by importing an OVA (Open Virtual Appliance) file. The OVA is a pre-configured VM image you deploy with the vSphere client, without installing Linux or configuring a container runtime.
 
 Choose this method when:
 
@@ -118,7 +118,7 @@ Choose this method when:
 
 NOTE: You cannot manage Google Cloud resources from an on-premises Console agent. To manage Google Cloud resources, install the agent in Google Cloud.
 
-[cols=2*,options="header",cols="47,47",width="95%"]
+[cols="47,47",options="header",width="95%"]
 |===
 | Advantages
 | Disadvantages
@@ -129,22 +129,22 @@ a| * Simpler on-premises installation with no Linux or container runtime setup r
 * Includes a menu-driven maintenance console for agent maintenance tasks
 
 * Familiar deployment workflow for VMware administrators
-* * Pre-configured VM image helps prevent mistakes and makes maintenance easier
-a| * Requires VCenter; cannot be installed directly on a bare ESXi host
+* Pre-configured VM image helps prevent mistakes and makes maintenance easier
+a| * Requires vCenter; cannot be installed directly on a bare ESXi host
 
 
 |===
 
-link:task-install-agent-on-prem-ova.html[Deploy on-premises using VCenter]
+link:task-install-agent-on-prem-ova.html[Deploy on-premises using vCenter]
 
 [[agent-manual-on-prem-deploy]]
-== Manually install on-premises (without VCenter)
+== Manually install on-premises (without vCenter)
 
 You can manually install the Console agent on any on-premises Linux host. You must set up the Linux host and container runtime (Docker or Podman), then install the Console agent.
 
 Choose this method when:
 
-* You are deploying on-premises and do not have a VMware VCenter environment.
+* You are deploying on-premises and do not have a VMware vCenter environment.
 * You are comfortable with Linux administration and want to manage the underlying host yourself.
 * You want to control when the Console agent is upgraded.
 
