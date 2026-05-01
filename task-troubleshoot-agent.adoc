@@ -37,11 +37,11 @@ a|Cannot access the NetApp agent UI
 a|This message appears when trying to access the IP address of an agent. The agent can fail to initialize if it doesn't have the correct network access or if it is unstable.
 a|
 * Connect to the Console agent.
-* Verify that the Service Manager service
+* Verify that the Service Manager service is active.
 * Verify that the agent has the network access it needs. link:reference-networking-saas-console.html[Learn more about required network access endpoints.]
 
 a|Unable to load agent settings
-a|The Console displays this message when you try to access the Agent settings page..
+a|The Console displays this message when you try to access the Agent settings page.
 a|
 * Check if the OCCM container is running and working.
 * If the issue persists, contact support.
@@ -56,7 +56,7 @@ a|
 [[check-agent-status]]
 == Check the Console agent status
 
-Use one of the following commands to verify your Console agent. All services should have a status of _Running_. If this isn't the case, contact NetApp support.
+Use one of the following commands to verify your Console agent. All services should have a status of _Running_. If this isn't the case, contact NetApp Support.
 
 [NOTE]
 ====
@@ -64,10 +64,10 @@ Use one of the following commands to verify your Console agent. All services sho
 For more detailed information about accessing the Console agent diagnostics, see the following topics:
 
 * link:task-maintain-agents.html#connect-linux-host[Check the Console agent status (for Linux host deployments)]
-* link:task-agent-vm-config.html#connect-vcenter-host[Check the Console agent status (for VCenter deployments)]
+* link:task-agent-vm-config.html#connect-vcenter-host[Check the Console agent status (for vCenter deployments)]
 ====
 
-Docker (for Ubuntu and VCenter deployments):: 
+Docker (for Ubuntu and vCenter deployments):: 
 +
 [source,cli]
 ----
@@ -92,16 +92,13 @@ View the Console agent version to confirm the upgrade or share it with your NetA
 The Console displays the version at the top of the page.
 
 
-== Validate that the Console agent meet requirements
+== Validate that the Console agent meets requirements
 Console agents require access to certain network endpoints, need to have several ports open, and must meet hardware requirements. You can validate that your Console agent meets these requirements from the Console or by using the agent maintenance console.
 
 link:reference-networking-saas-console.html[Learn more about required network access points.]
-link:
 
 During installation, NetApp checks that the agent host has at least 80 percent of total disk space available, which includes 48 GB in `/opt` and 32 GB in `/var` (80 GB total). After installation, it requires at least 20 percent of total disk to remain available, which includes 12 GB in `/opt` and 8 GB in `/var` (20 GB total).
 
-link:reference-networking-saas-console.html[Learn more about required network access points.]
-link:
 
 You can also run validation checks using the agent maintenance console. link:reference-agent-maint-console-config-checker.html[Learn more about using the config-checker validate command.]
 
@@ -172,7 +169,7 @@ systemctl restart netapp-service-manager.service
 
 
 == Work with NetApp Support
-If you haven't been able to resolve the issues with your Console agent, you may want to contact NetApp Support. NetApp support may ask for the Console agent ID or for you to send the Console agent logs to them if they don't have them already.
+If you haven't been able to resolve the issues with your Console agent, you may want to contact NetApp Support. NetApp Support may ask for the Console agent ID or for you to send the Console agent logs to them if they don't have them already.
 
 
 === Find the Console agent ID 
@@ -194,7 +191,7 @@ image:screenshot-system-id.png[A screenshot that shows the System ID that appear
 
 === Download or send an AutoSupport message
 
-If you're having problems, NetApp might ask you to send an AutoSupport message to NetApp support for troubleshooting purposes.
+If you're having problems, NetApp might ask you to send an AutoSupport message to NetApp Support for troubleshooting purposes.
 
 NOTE: The NetApp Console takes up to five hours to send AutoSupport messages due to load balancing. For urgent communication, download the file and send it manually.
 
@@ -218,10 +215,12 @@ The Console agent automatically downloads software updates for Cloud Volumes ONT
 
 .	Submit a PUT request to /occm/config with the following JSON as body:
 +
-[source.json]
+[source,json]
+----
 {
   "maxDownloadSessions": 32
 }
+----
 +
 The value for _maxDownloadSessions_ can be 1 or any integer greater than 1. If the value is 1, then the downloaded image will not be divided.
 +

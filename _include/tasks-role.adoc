@@ -1,7 +1,7 @@
 
 
 //tag::add-role[]
-. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the member that you want to assign a role and select *Add a role*.
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the member to whom you want to assign a role and select *Add a role*.
 
 . To add a role, complete the steps in the dialog box:
 +
@@ -30,7 +30,7 @@ If you select the organization or a folder, the member will have permissions to 
 
 .. To change a member's role, select *Change* next to the role you want to change. You can only change a role to a role within the same role category. For example, you can change from one data service role to another. Confirm the change.
 
-.. To unassign a member's role, select image:icon-delete.png[An icon that resembles a trash can] next to the role to remove the respective role from the member.. You'll be asked to confirm the removal.
+.. To unassign a member's role, select image:icon-delete.png[An icon that resembles a trash can] next to the role to remove the respective role from the member. You'll be asked to confirm the removal.
 
 //end::remove-role[]
 

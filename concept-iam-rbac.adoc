@@ -15,9 +15,9 @@ summary: Manage user access to NetApp Console with role-based access control (RB
 [.lead]
 Manage user access to NetApp Console with role-based access control (RBAC), assigning predefined roles at the organization, folder, or project level. Each role grants specific permissions that define what actions users can perform within their assigned scope.
 
-NetApp designs Console roles with least-privilege, so each role includes only the permissions needed for its tasks. This approach enhances security by limiting access to what each member requires.
+NetApp designs Console roles with least privilege so that each role includes only the permissions needed for its tasks. This approach enhances security by limiting access to what each member requires.
 
-After you organize resources into folders and projects, assign organization members a role or roles for specific folders or projects, that allow them to perform only the ir responsibilities.
+After you organize resources into folders and projects, assign members a role or roles for specific folders or projects, that allow them to perform only their responsibilities.
 
 For example, you can assign a member the Ransomware Resilience admin role for a specific project level, allowing them to perform Ransomware Resilience operations for resources within that project, without granting them broader access to the entire organization. This same user can be granted the role for several projects within your organization. 
 
@@ -36,7 +36,7 @@ link:task-iam-manage-members-permissions.html#add-members[Learn how to add membe
 == Predefined roles in NetApp Console
 NetApp Console includes predefined roles that you can assign to organization members. Each role includes permissions that specify what actions a member can do within their assigned scope (organization, folder, or project). 
 
-NetApp Console roles use least-privilege principles that ensure members have only the permissions needed for their tasks, and categorizes roles by the type of access they provide:
+NetApp Console roles use least-privilege principles that ensure members have only the permissions needed for their tasks, and categorize roles by the type of access they provide:
 
 * Platform roles: Provide Console administration permissions
 * Data services roles: Provide permissions for managing specific data services, such as Ransomware Resilience and Backup and Recovery

@@ -21,7 +21,7 @@ The NetApp Console requires AWS permissions for a Console agent and for individu
 
 === Console agents
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -44,7 +44,7 @@ Keep the policy up to date as new permissions are added in later releases.
 
 === NetApp Backup and Recovery
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -58,7 +58,7 @@ Keep the policy up to date as new permissions are added in later releases.
 
 === Cloud Volumes ONTAP
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -72,7 +72,7 @@ Keep the policy up to date as new permissions are added in later releases.
 	
 === NetApp Copy and Sync
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -94,7 +94,7 @@ Keep the policy up to date as new permissions are added in later releases.
 
 === FSx for ONTAP
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -110,7 +110,7 @@ Keep the policy up to date as new permissions are added in later releases.
 
 include::_include/cloud-tiering-eol.adoc[]
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -128,7 +128,7 @@ The Console requires Azure permissions for a Console agent and for individual se
 
 === Console agent
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -151,7 +151,7 @@ a| link:reference-permissions-azure.html[Azure permissions for a Console agent]
 
 === NetApp Backup and Recovery
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -174,9 +174,9 @@ a|
 |===
 
 	
-=== NetApp Copy and sync
+=== NetApp Copy and Sync
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -194,7 +194,7 @@ The Console requires Google Cloud permissions for a Console agent and for indivi
 
 === Console agents
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -214,7 +214,7 @@ Keep the policy up to date as new permissions are added in later releases.
 	
 === NetApp Backup and Recovery
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -239,7 +239,7 @@ a|
 
 === NetApp Copy and Sync
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -261,7 +261,7 @@ The Console requires StorageGRID permissions for two services.
 
 === NetApp Backup and Recovery
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description
@@ -277,7 +277,7 @@ The Console requires StorageGRID permissions for two services.
 
 include::_include/cloud-tiering-eol.adoc[]
 
-[cols=3*,options="header",cols="20,60,20"]
+[cols="20,60,20",options="header"]
 |===
 | Goal
 | Description

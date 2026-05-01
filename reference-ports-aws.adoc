@@ -41,7 +41,7 @@ The predefined security group for the agent opens all outbound traffic. If that 
 
 The predefined security group for the agent includes the following outbound rules.
 
-[cols=3*,options="header",width=70%,cols="20,20,60"]
+[cols="20,20,60",options="header",width=70%]
 |===
 
 | Protocol
@@ -55,7 +55,7 @@ The predefined security group for the agent includes the following outbound rule
 
 === Advanced outbound rules
 
-If you need rigid rules for outbound traffic, you can use the following information to open only those ports that are required for outbound communication by the agent
+If you need rigid rules for outbound traffic, you can use the following information to open only those ports that are required for outbound communication by the agent.
 
 NOTE: The source IP address is the agent host.
 
@@ -71,6 +71,6 @@ NOTE: The source IP address is the agent host.
 | API calls and AutoSupport | HTTPS | 443 | Outbound internet and ONTAP cluster management LIF | API calls to AWS, to ONTAP, to NetApp Data Classification, and sending AutoSupport messages to NetApp
 .2+| API calls | TCP | 3000 | ONTAP HA mediator | Communication with the ONTAP HA mediator
 | TCP | 8080 | Data Classification | Probe to Data Classification instance during deployment
-| DNS | UDP	| 53 | DNS | Used for DNS resolve by the Console
+| DNS | UDP	| 53 | DNS | Used for DNS resolution by the Console
 
 |===

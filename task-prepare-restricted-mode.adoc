@@ -72,10 +72,10 @@ Ensure the Console agent has a network connection to the storage locations. For 
 Prepare networking for user access to NetApp Console::
 In restricted mode, users access the Console from the Console agent VM. The Console agent contacts a few endpoints to complete data management tasks. These endpoints are contacted from a user's computer when completing specific actions from the Console.
 
-NOTE: Console agents previous to version 4.0.0 need additional endpoints. If you upgraded to 4.0.0 or later, you can remove the old endpoints from your allow list. link:reference-networking-saas-console-previous.html[Learn more about the required network access for versions previous to 4.0.0.]
+NOTE: Console agents previous to version 4.0.0 support different endpoints. If you upgraded to 4.0.0 or later, you can remove the old endpoints from your allow list. link:reference-networking-saas-console-previous.html[Learn more about the required network access for versions previous to 4.0.0.]
 
 
-+
+
 [cols=2*,options="header,autowidth"]
 
 |===
@@ -190,7 +190,7 @@ include::_include/aws-permissions.adoc[tag=keys]
 --
 Create an Azure custom role with the required permissions. You'll assign this role to the Console agent VM.
 
-Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^].
 
 .Steps
 
@@ -223,7 +223,7 @@ include::_include/azure-set-up-service-principal.adoc[tag=ids]
 
 .Create a client secret
 
-include::_include/azure-set-up-service-principal.adoc[tags=secret]
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
 
 .Result
 

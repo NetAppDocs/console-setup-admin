@@ -60,7 +60,7 @@ Without an agent, you can perform basic storage discovery and access a limited s
 
 The following table shows which storage systems and services are available with and without a Console agent.
 
-[cols=3*,options="header",cols="40,20a,20a",width="100%"]
+[cols="40,20a,20a",options="header",width="100%"]
 |===
 |  | Available with agent| Available without agent
 3+| *Supported storage systems*:
@@ -78,7 +78,7 @@ The following table shows which storage systems and services are available with 
 3+| *Storage management and health services*:
 | Alerts | Yes | No
 | Automation hub | Yes| Yes
-| Digital Advisor (Active IQ) | Yes | No
+| Digital Advisor (Active IQ) | Yes | Yes
 | License and subscription management  | Yes | No
 | Economic efficiency | Yes | No
 | Home page dashboard metrics | Yes. Accurate home page metrics require appropriately sized and configured Console agents. | No
@@ -115,14 +115,14 @@ To manage Google Cloud resources, deploy your agent in Google Cloud. An on-premi
 
 Your Console deployment mode, storage environment, and data sovereignty needs determine where you deploy agents. Deploy multiple agents across environments for organizational separation or business needs.
 
-You can deploy agents directly from the Console, from your cloud marketplace, or manually in VCenter or on your premises. link:concept-agent-install-options.html[Compare deployment methods to choose the right one for your environment].
+You can deploy agents directly from the Console, from your cloud marketplace, or manually in vCenter or on your premises. link:concept-agent-install-options.html[Compare deployment methods to choose the right one for your environment].
 
 
 
 === Agents for the NetApp Console SaaS application (standard mode)
 Deploy agents in your cloud or on-premises to bridge connectivity to the cloud-hosted Console SaaS application. Agents enable advanced features while the Console UI remains accessible from anywhere.
 
-You can install agents directly from the Console when using the SaaS application (standard mode). You can install in AWS, Azure, or Google Cloud, or manually on your premises on your own Linux host or in your VCenter environment. 
+You can install agents directly from the Console when using the SaaS application (standard mode). You can install in AWS, Azure, or Google Cloud, or manually on your premises on your own Linux host or in your vCenter environment. 
 
 
 === Agents for NetApp Console in restricted mode

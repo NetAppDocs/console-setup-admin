@@ -89,7 +89,7 @@ The Console deploys the Console agent VM in Azure, enables a https://docs.micros
 
 
 
-Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^].
 
 .Steps
 
@@ -339,11 +339,11 @@ These permissions are for the Console agent itself. It's a different set of perm
 
 . Select *Administration > Agents*. 
 
-. On the *Overview* page, select *Deploy agent > Azure*
+. On the *Overview* page, select *Deploy agent > Azure*.
 
 . On the *Review* page, review the requirements for deploying an agent. Those requirements are also detailed above on this page.
 
-. On the  *Virtual Machine Authentication* page, select the authentication option that matches how you set up Azure permissions:
+. On the *Virtual Machine Authentication* page, select the authentication option that matches how you set up Azure permissions:
 +
 * Select *Log in* to log in to your Microsoft account, which should have the required permissions.
 +
@@ -364,17 +364,18 @@ TIP: If you're already logged in to an Azure account, then the Console automatic
 
 . On the *Virtual Machine Authentication* page, choose an Azure subscription, a location, a new resource group or an existing resource group, and then choose an authentication method for the Console agent virtual machine that you're creating.
 +
++
 The authentication method for the virtual machine can be a password or an SSH public key.
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux[Learn about connecting to a Linux VM in Azure^]
 
-. On the  *Details* page, enter a name for the agent, specify tags, and choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-azure.html[the required permissions].
+. On the *Details* page, enter a name for the agent, specify tags, and choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-azure.html[the required permissions].
 +
 Note that you can choose the Azure subscriptions associated with this role. Each subscription that you choose provides the Console agent permissions to manage resources in that subscription (for example, Cloud Volumes ONTAP).
 
 . On the *Network* page, choose a VNet and subnet, whether to enable a public IP address, and optionally specify a proxy configuration.
 
-* On the *Security Group* page, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
+. On the *Security Group* page, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
 +
 link:reference-ports-azure.html[View security group rules for Azure].
 
