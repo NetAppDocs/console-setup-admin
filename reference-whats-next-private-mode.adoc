@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-whats-next-private-mode.html
-keywords: private mode, supported features for private mode 
+keywords: private mode, supported features for private mode
 summary: After you get up and running with NetApp Console in private mode, you can start using the services that are supported with private mode.
 ---
 

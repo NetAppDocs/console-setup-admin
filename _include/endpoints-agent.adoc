@@ -17,11 +17,11 @@ The endpoints listed below are all CNAME entries.
 
 | To manage AWS resources. The endpoint depends on your AWS region. https://docs.aws.amazon.com/general/latest/gr/rande.html[Refer to AWS documentation for details^]
 
-| Amazon FsX for NetApp ONTAP:
+| Amazon FSx for NetApp ONTAP:
 
 * api.workloads.netapp.com
 
-| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP based workloads.
+| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
 //end::aws-endpoints[]
 
 //tag::azure-public-endpoints[]
@@ -78,9 +78,9 @@ The endpoints listed below are all CNAME entries.
 
 //tag::nss-endpoints[]
 | 
-\https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support.
+\https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp Support.
 | \https://signin.b2c.netapp.com | To update NetApp Support Site (NSS) credentials or to add new NSS credentials to the NetApp Console.
-| \https://support.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp support as well as to receive software updates for Cloud Volumes ONTAP.
+| \https://support.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp Support as well as to receive software updates for Cloud Volumes ONTAP.
 //end::nss-endpoints[]
 
 //tag::saas-endpoints[]
@@ -139,8 +139,8 @@ a| To obtain images for Console agent upgrades.
 NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints, unless you are using Ransomware Resilience or Backup and Recovery. Note the following about these endpoints:
 
 
-* Option 1 endpoints are supported in 3.9.47 and higher. Releases previous to 3.9.47 do not support backwards compatibility.
-* The Console agent initiates contact with the endpoints in option 2 first. If those endpoints are not accessible, it automatically contacts the endpoints in option 1.
+* Option 1 endpoints are supported in 3.9.47 and higher. Releases previous to 3.9.47 do not support backward compatibility.
+* The Console agent first contacts the endpoints in Option 2. If those endpoints are not accessible, it automatically contacts the endpoints in Option 1.
 * If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
 
 |===
@@ -159,14 +159,30 @@ a| To obtain images for Console agent upgrades.
 
 
 
+* When you update to the current endpoints in your firewall, your existing agents will continue to work.
+
+
+
+//end::upgrade-endpoints[]
+
 //tag::upgrade-endpoints-restricted[]
-a| \https://occmclientinfragov.azurecr.us.io
+a| \https://occmclientinfragov.azurecr.us
+\https://bluexpinfraprod.azurecr.io 
 a| To obtain images for Console agent upgrades. 
 
 
 
 //end::upgrade-endpoints-restricted[]
 
+
+
+//Same text is also in endpoints-manual-install
+^1^ NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints. Note the following about these endpoints:
++
+* Starting with the 3.9.47 release of the Console agent, the system supports the endpoints listed in Option 1. Previous releases of the Console agent do not support backward compatibility.
+* The Console agent first contacts the endpoints in Option 2. If those endpoints are not accessible, it automatically contacts the endpoints in Option 1.
+* If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
+//end::upgrade-endpoints-explanation[]
 
 
 

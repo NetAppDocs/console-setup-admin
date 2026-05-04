@@ -134,11 +134,11 @@ Create a client secret and provide its value to the Console for authentication w
 
 .Steps
 
-include::_include/azure-set-up-service-principal.adoc[tags=secret]
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
 
 .Result
 
-Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you add an Azure account.
+Your service principal is now set up and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you add an Azure account.
 
 === Add the credentials to the Console
 
@@ -156,7 +156,7 @@ include::_include/azure-provide-permissions-service-principal.adoc[]
 
 .Result
 
-You can switch to a different set of credentials from the Details and Credentials page https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html[when adding a system to the Console^]
+You can switch to a different set of credentials from the Details and Credentials page https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html[when adding a system to the Console^].
 
 image:screenshot_accounts_switch_azure.gif[A screenshot that shows selecting between credentials after selecting Edit Credentials in the Details & Credentials page.]
 

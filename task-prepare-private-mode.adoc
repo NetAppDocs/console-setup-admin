@@ -88,7 +88,7 @@ include::_include/networking.adoc[tag=azure-public-ip]
 //Proxy server
 include::_include/networking.adoc[tag=proxy]
 +
-With private mode, the only time that NetApp Console sends outbound traffic is to your cloud provider in order to create a Cloud Volumes ONTAP system.
+With private mode, the only time that NetApp Console sends outbound traffic is to your cloud provider to create a Cloud Volumes ONTAP system.
 
 Ports::
 There's no incoming traffic to the Console agent, unless you initiate it.
@@ -100,7 +100,7 @@ include::_include/networking.adoc[tag=ntp]
 
 == Step 6: Prepare cloud permissions
 
-If the Console agent is installed in the cloud and you plan to create Cloud Volumes ONTAP systems, NetApp Console requires cloud provider permissions. You need to set up permissions in your cloud provider and then associate those permission with the Console agent instance after you install it.
+If the Console agent is installed in the cloud and you plan to create Cloud Volumes ONTAP systems, NetApp Console requires cloud provider permissions. You need to set up permissions in your cloud provider and then associate those permissions with the Console agent instance after you install it.
 
 To view the required steps, select the authentication option that you'd like to use for your cloud provider. 
 
@@ -147,7 +147,7 @@ The account now has the required permissions.
 --
 Create an Azure custom role with the required permissions. Assign this role to the Console agent VM.
 
-Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^]
+Note that you can create an Azure custom role using the Azure portal, Azure PowerShell, Azure CLI, or REST API. The following steps show how to create the role using the Azure CLI. If you would prefer to use a different method, refer to https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role[Azure documentation^].
 
 .Steps
 
@@ -180,11 +180,11 @@ include::_include/azure-set-up-service-principal.adoc[tag=ids]
 
 .Create a client secret
 
-include::_include/azure-set-up-service-principal.adoc[tags=secret]
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
 
 .Result
 
-Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. Enter this information in NetApp Console when you add an Azure credential.
+Your service principal is now set up and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. Enter this information in NetApp Console when you add an Azure credential.
 --
 
 .Google Cloud service account
