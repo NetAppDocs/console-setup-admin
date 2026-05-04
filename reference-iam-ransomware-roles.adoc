@@ -15,19 +15,18 @@ summary: Ransomware Resilience offers different user roles to manage access to s
 [.lead]
 Ransomware Resilience roles provide users access to NetApp Ransomware Resilience. Ransomware Resilience supports the following roles:
 
-**Baseline roles**
+*Baseline roles*
 
 * Ransomware Resilience admin - Configure Ransomware Resilience settings; investigate and respond to encryption alerts
 * Ransomware Resilience viewer - View encryption incidents, reports, and discovery settings
 
-**User behavior activity roles**
+*User behavior activity roles*
 link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[Suspicious user activity detection^] alerts provide visibility into data such as file activity events; these alerts include file names and file actions (such as Read, Write, Delete, Rename) performed by the user. To limit the visibility of this data, only users with these roles can manage or view these alerts.
 
 * Ransomware Resilience user behavior admin - Activate suspicious user activity detection, investigate and respond to suspicious user activity alerts 
 * Ransomware Resilience user behavior viewer - View suspicious user activity alerts
 
-[NOTE]
-User behavior roles are not standalone roles; they are designed to be added to Ransomware Resilience admin or viewer roles. For more information, see <<User behavior roles>>.
+NOTE: User behavior roles are not standalone roles; they are designed to be added to Ransomware Resilience admin or viewer roles. For more information, see <<User behavior roles>>.
 
 Consult the following tables for detailed descriptions of each role.
 
@@ -35,7 +34,7 @@ Consult the following tables for detailed descriptions of each role.
 
 The following table describes the actions available to the Ransomware Resilience admin and viewer roles.  
 
-[cols=3*,options="header",cols="40,20a,20a",width="100%"]
+[cols="40,20a,20a",options="header",width="100%"]
 |===
 | Feature and action
 | Ransomware Resilience admin
@@ -90,14 +89,13 @@ The following table describes the actions available to the Ransomware Resilience
 
 To configure suspicious user behavior settings and respond to alerts, a user must have the Ransomware Resilience user behavior admin role. To only view suspicious user behavior alerts, a user should have the Ransomware Resilience user behavior viewer role.
 
-User behavior roles should be conferred on users with existing Ransomware Resilience admin or viewer priviliges who need access to link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[suspicious user activity settings and alerts^]. A user with the Ransomware Resilience admin role, for example, should receive the Ransomware Resilience user behavior admin role to configure user activity agents and block or unblock users. The Ransomware Resilience user behavior admin role should not be conferred on a Ransomware Resilience viewer.
+User behavior roles should be conferred on users with existing Ransomware Resilience admin or viewer privileges who need access to link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html[suspicious user activity settings and alerts^]. A user with the Ransomware Resilience admin role, for example, should receive the Ransomware Resilience user behavior admin role to configure user activity agents and block or unblock users. The Ransomware Resilience user behavior admin role should not be conferred on a Ransomware Resilience viewer.
 
-[NOTE]
-To activate suspicious user activity detection, you must have the Console Organization admin role. 
+NOTE: To activate suspicious user activity detection, you must have the Console Organization admin role. 
 
 The following table describes the actions available to the Ransomware Resilience user behavior admin and viewer roles.  
 
-[cols=3*,options="header",cols="40,20a,20a",width="100%"]
+[cols="40,20a,20a",options="header",width="100%"]
 |===
 | Feature and action
 | Ransomware Resilience user behavior admin

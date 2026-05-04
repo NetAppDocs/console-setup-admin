@@ -212,7 +212,7 @@ You should now have an IAM role that has the required permissions or an IAM user
 
 == Step 3: Create the Console agent
 
-Create the Console agent directly from the the Console web-based console.
+Create the Console agent directly from the Console web-based console.
 
 .About this task
 
@@ -241,14 +241,14 @@ You should have the following:
 
 . Select *Administration > Agents*. 
 
-. On the *Overview* page, select *Deploy agent > AWS*
+. On the *Overview* page, select *Deploy agent > AWS*.
 
 
 . Follow the steps in the wizard to create the Console agent:
 
-. On the *Introduction* page provides an overview of the process
+. On the *Introduction* page, review the overview of the process.
 
-. On the *AWS Credentials* page,  specify your AWS region and then choose an authentication method, which is either an IAM role that the Console can assume or an AWS access key and secret key.
+. On the *AWS Credentials* page, specify your AWS region and then choose an authentication method, which is either an IAM role that the Console can assume or an AWS access key and secret key.
 +
 TIP: If you choose *Assume Role*, you can create the first set of credentials from the Console agent deployment wizard. Any additional set of credentials must be created from the Credentials page. They will then be available from the wizard in a drop-down list. link:task-adding-aws-accounts.html[Learn how to add additional credentials].
 
@@ -259,11 +259,11 @@ TIP: If you choose *Assume Role*, you can create the first set of credentials fr
 ** Choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-aws.html[the required permissions].
 ** Choose whether you want to encrypt the Console agent's EBS disks. You have the option to use the default encryption key or to use a custom key.
 
-. On the *Network* page, Specify a VPC, subnet, and key pair for the agent, choose whether to enable a public IP address, and optionally specify a proxy configuration.
+. On the *Network* page, specify a VPC, subnet, and key pair for the agent, choose whether to enable a public IP address, and optionally specify a proxy configuration.
 +
 Ensure you have the correct key pair to access the Console agent virtual machine. Without a key pair, you cannot access it.
 
-. On the  *Security Group* page, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
+. On the *Security Group* page, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
 +
 link:reference-ports-aws.html[View security group rules for AWS].
 

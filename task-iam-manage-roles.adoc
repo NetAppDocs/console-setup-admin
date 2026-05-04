@@ -16,14 +16,14 @@ summary: Within the NetApp Console, you can assign roles to users based on what 
 Manage member access in your Console organization. Assign roles to set permissions. Remove members when they leave.
 
 .Required access roles
-Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). Link:reference-iam-predefined-roles.html[Learn about access roles].
+Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). link:reference-iam-predefined-roles.html[Learn about access roles].
 
-You can assign access roles on a project or folder basis. For example, assign a role to a user for two specific projects or assign the role at the folder level to give a user the Ransomware Resilience admin role for all projects in a folder
+You can assign access roles on a project or folder basis. For example, assign a role to a user for two specific projects or assign the role at the folder level to give a user the Ransomware Resilience admin role for all projects in a folder.
 
 NOTE: Add your folders and projects before assigning users access. link:task-iam-manage-folders-projects.html[Learn how to add folders and projects.]
 
-== Understand how access is granted in NetApp Console           
-NetApp Console uses a role-based access control (RBAC) model to manage user permissions. You can assign predefined roles to members individually or through federated groups. You can add and assign roles to service accounts, as well as federated groups. Each role defines what actions a member can perform at the associated resources.
+== Understand how access is granted in NetApp Console
+The NetApp Console uses a role-based access control (RBAC) model to manage user permissions. You can assign predefined roles to members individually or through federated groups. You can add and assign roles to service accounts, as well as federated groups. Each role defines what actions a member can perform on the associated resources.
 
 Note the following about granting access in NetApp Console:
 
@@ -56,9 +56,9 @@ The *Members* table lists the members of your organization.
 . From the *Members* page, navigate to a member in the table, select image:icon-action.png["An icon that is three side-by-side dots"] and then select *View details*.
 
 [#manage-permissions]
-== View roles(s) assigned to a member
+== View role(s) assigned to a member
 
-You can verify which roles they are currently assigned.
+You can verify which roles the member is currently assigned.
 
 If you have the _Folder or project admin_ role, the page displays all members in the organization. However, you can only view and manage member permissions for the folders and projects for which you have permissions. link:reference-iam-predefined-roles.html[Learn more about the actions that a _Folder or project admin_ can complete].
 

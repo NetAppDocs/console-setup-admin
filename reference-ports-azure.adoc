@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-ports-azure.html
 keywords: ports, security group, http, https, inbound, outbound
-summary: The Azure security group for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. for other installation options, You need to set up this security group manually.
+summary: The Azure security group for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. For other installation options, you need to set up this security group manually.
 ---
 
 = Console agent security group rules in Azure
@@ -13,7 +13,7 @@ summary: The Azure security group for the agent requires both inbound and outbou
 :imagesdir: ./media/
 
 [.lead]
-The Azure security group for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. for other installation options, You need to set up this security group manually.
+The Azure security group for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. For other installation options, you need to set up this security group manually.
 
 == Inbound rules
 
@@ -70,6 +70,6 @@ NOTE: The source IP address is the agent host.
 
 | API calls and AutoSupport | HTTPS | 443 | Outbound internet and ONTAP cluster management LIF | API calls to Azure, to ONTAP, to NetApp Data Classification, and sending AutoSupport messages to NetApp
 | API calls | TCP | 8080 | Data Classification | Probe to Data Classification instance during deployment
-| DNS | UDP | 53 | DNS | Used for DNS resolve by the Console
+| DNS | UDP | 53 | DNS | Used for DNS resolution by the Console
 
 |===
