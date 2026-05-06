@@ -123,7 +123,6 @@ include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
 include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted]
 
-
 |===
 
 
