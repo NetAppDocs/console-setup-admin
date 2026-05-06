@@ -151,6 +151,7 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 //tag::upgrade-endpoints[]
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io
 \https://bluexpinfraprod.azurecr.io 
+\https://occmclientinfragov.azurecr.us (needed for restricted mode deployments)
 a| To obtain images for Console agent upgrades. 
 
 
@@ -159,15 +160,9 @@ a| To obtain images for Console agent upgrades.
 
 
 
-* When you update to the current endpoints in your firewall, your existing agents will continue to work.
-
-
-
-//end::upgrade-endpoints[]
 
 //tag::upgrade-endpoints-restricted[]
 a| \https://occmclientinfragov.azurecr.us
-\https://bluexpinfraprod.azurecr.io 
 a| To obtain images for Console agent upgrades. 
 
 
