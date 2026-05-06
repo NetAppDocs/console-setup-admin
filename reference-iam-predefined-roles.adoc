@@ -62,14 +62,14 @@ The following is a list of roles in the application category. Each role grants s
 | Application role | API name | 
 Responsibilities
 
-| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes admin] | | Users with the Google Cloud NetApp Volumes role can discover and manage Google Cloud NetApp Volumes.
+| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes admin] | GCNV_ADMIN | Users with the Google Cloud NetApp Volumes role can discover and manage Google Cloud NetApp Volumes.
 
 | link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes viewer] | | Users with the Google Cloud NetApp Volumes user role can view Google Cloud NetApp Volumes.
 
 | link:reference-iam-keystone-roles.html[Keystone admin] | KEYSTONE_ADMIN | Users with the Keystone admin role can create service requests. Allows users to monitor and view usage, resources, and admin details within the Keystone tenant they are accessing.
 | link:reference-iam-keystone-roles.html[Keystone viewer] | KEYSTONE_VIEWER | Users with the Keystone viewer role CANNOT create service requests. Allows users to monitor and view consumption, assets, and administrative information within the Keystone tenant they are accessing.
 | ONTAP Mediator setup role | ONTAP_MEDIATOR_SETUP | Service accounts with the ONTAP Mediator setup role can create service requests. This role is required in a service account to configure an instance of the link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html[ONTAP Cloud Mediator^]. 
-|link:reference-iam-analyst-roles.html[Operation support analyst] | | Provides access to alerts and monitoring tools and ability to enter and manage support cases.
+|link:reference-iam-analyst-roles.html[Operations support analyst] | OPERATIONS_SUPPORT_ANALYST | Provides access to alerts and monitoring tools and ability to enter and manage support cases.
 | link:reference-iam-storage-roles.html[Storage admin] | STORAGE_ADMIN | Administer storage health and governance functions, discover storage resources, as well as modify and delete existing systems.
 | link:reference-iam-storage-roles.html[Storage viewer] | STORAGE_VIEWER | View storage health and governance functions, as well as view previously discovered storage resources. Cannot discover, modify, or delete existing storage systems.
 | link:reference-iam-storage-roles.html[System health specialist] | SYSTEM_HEALTH_SPECIALIST | Administer storage and health and governance functions, all permissions of the Storage admin except cannot modify or delete existing systems.
@@ -83,7 +83,7 @@ Responsibilities
 The following is a list of roles in the data service category. Each role grants specific permissions within its designated scope. Users who do not have the required data service role or a platform role will be unable to access the data service.
 
 
-[cols="1,2,3",options="header"]
+[cols="1,2,3",options="header",width="100%"]
 |===
 
 | Data service role
@@ -105,7 +105,7 @@ The following is a list of roles in the data service category. Each role grants 
 Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. Data Classification does not have an admin role.
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| RANSOMWARE_PROTECTION_ADMIN | Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| RANSOMWARE_PROTECTION_VIEWER | View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | RANSOMWARE_RESILIENCE_USER​_BEHAVIOR_ADMIN | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | pass:[RANSOMWARE_RESILIENCE_USER<wbr>_BEHAVIOR_ADMIN] | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | View suspicious user behavior alerts and insights in Ransomware Resilience. 
 | SnapCenter admin | SNAPCENTER_ADMIN | Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
 
