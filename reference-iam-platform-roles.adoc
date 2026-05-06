@@ -41,7 +41,7 @@ The following tables indicate the actions that each Console platform role can pe
 
 | Create agents | Yes | No 
 
-| Create, modify or delete systems from the Console (add or discover systems) |	Yes | Yes 
+| Create, modify, or delete systems from the Console (add or discover systems) |	Yes | Yes 
 
 | Create folders and projects, including deleting | Yes | No
 

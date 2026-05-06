@@ -15,7 +15,7 @@ summary: Add folders and projects to match your business structure. After you cr
 [.lead]
 Add folders and projects to match your business structure. After you create folders and projects, you can associate resources with them and manage member access to those projects.
 
-The Console automatically creates one project for you when you create a new organization. Most organizations have the need for more than one project, as well as folders to keep things organized. link:concept-identity-and-access-management.html[Learn about the resource hierarchy in NetApp Console].
+The Console automatically creates one project for you when you create a new organization. Most organizations need more than one project, as well as folders to keep things organized. link:concept-identity-and-access-management.html[Learn about the resource hierarchy in NetApp Console].
 
 
 
@@ -29,7 +29,7 @@ Folders also enable you to manage member access more efficiently using role inhe
 
 NOTE: Folders are an organizational tool and not visible to members who do not have IAM permissions such as the Org admin, Folder or project admin, or Super admin roles. Members access projects, not folders.
 
-Org admins can delegate administrative responsibilities by creating folders. After creating a folder, an Org admin can assign a member the Folder or project admin roles for particular folders. These members can then manage all projects within that folder without having access to the entire organization.
+Org admins can delegate administrative responsibilities by creating folders. After creating a folder, an Org admin can assign a member the Folder or project admin role for particular folders. These members can then manage all projects within that folder without having access to the entire organization.
 
 
 Folders can have other folders or projects as children, but they cannot have resources directly associated with them. Resources must be associated with a project.
@@ -183,7 +183,7 @@ image:screenshot-iam-member-access.png[A screenshot of the Edit project page tha
 
 Modify member access to control resource access. Remember that roles assigned at the folder level are inherited by all child projects and folders.
 
-You cannot change member access at lower levels if it is inherited from the folder or organization level. Change the member's permission at the higher hierarchy level to change access Alternatively, you can link:task-iam-manage-roles.html#manage-permissions[manage permissions from the Members page].
+You cannot change member access at lower levels if it is inherited from the folder or organization level. Change the member's permission at the higher hierarchy level to change access. Alternatively, you can link:task-iam-manage-roles.html#manage-permissions[manage permissions from the Members page].
 
 
 .Steps

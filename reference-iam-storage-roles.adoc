@@ -45,7 +45,7 @@ The organization has two additional users with the *Organization admin* role who
 
 The following table shows the actions each storage role performs.
 
-[cols=4*,options="header",cols="40,20a,20a,20a", width="100%"]
+[cols="40,20a,20a,20a",options="header",width="100%"]
 |===
 | Feature and action
 | Storage admin

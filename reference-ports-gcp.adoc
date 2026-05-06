@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-ports-gcp.html
 keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent
-summary: The Google Cloud firewall rules for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. for other installation options, you need to set up this security group manually.
+summary: The Google Cloud firewall rules for the agent require both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. For other installation options, you need to set up this security group manually.
 
 ---
 
@@ -14,7 +14,7 @@ summary: The Google Cloud firewall rules for the agent requires both inbound and
 :imagesdir: ./media/
 
 [.lead]
-The Google Cloud firewall rules for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. for other installation options, you need to set up this security group manually.
+The Google Cloud firewall rules for the agent require both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. For other installation options, you need to set up this security group manually.
 
 == Inbound rules
 
@@ -42,7 +42,7 @@ The agent's predefined firewall rules open all outbound traffic. Follow basic ou
 
 The predefined firewall rules for the agent include the following outbound rules.
 
-[cols=3*,options="header",width=70%,cols="20,20,60"]
+[cols="20,20,60",options="header",width=70%]
 |===
 
 | Protocol
@@ -71,6 +71,6 @@ NOTE: The source IP address is the agent host.
 
 | API calls and AutoSupport | HTTPS | 443 | Outbound internet and ONTAP cluster management LIF | API calls to Google Cloud, to ONTAP, to NetApp Data Classification, and sending AutoSupport messages to NetApp
 | API calls | TCP | 8080 | Data Classification | Probe to Data Classification instance during deployment
-| DNS | UDP	| 53 | DNS | Used for DNS resolve by Data Classification
+| DNS | UDP	| 53 | DNS | Used for DNS resolution by Data Classification
 
 |===

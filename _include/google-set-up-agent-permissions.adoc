@@ -16,7 +16,9 @@ It's your responsibility to update the custom role as new permissions are added 
 +
 The following example creates a role named "agent" at the project level:
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
+
+[source, shell]
+gcloud iam roles create agent --project=myproject --file=agent.yaml
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud[Google Cloud docs: Creating and managing custom roles^]
 
@@ -28,11 +30,11 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 
 .. Select the role that you just created.
 
-.. Finish the remaining steps to create the role.
+.. Finish the remaining steps to create the service account.
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account[Google Cloud docs: Creating a service account^]
 
-. If you plan to deploy Cloud Volumes ONTAP systems in different projects than the project where the Console agent resides, then you'll need to provide the Console agent's service account with access to those projects.
+. If you plan to deploy Cloud Volumes ONTAP systems in projects other than the project where the Console agent resides, then you'll need to provide the Console agent's service account with access to those projects.
 +
 For example, let's say the Console agent is in project 1 and you want to create Cloud Volumes ONTAP systems in project 2. You'll need to grant access to the service account in project 2.
 

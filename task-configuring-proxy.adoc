@@ -28,7 +28,7 @@ If the Console agent itself doesn't have an outbound internet connection, Cloud 
 * HTTP and HTTPS. 
 * The proxy server can reside in the cloud or in your network.
 
-IMPORTANT: Once you have configured a proxy, you cannot change the proxy type. If you need to change the proxy type, you remove the Console agent and add a new agent with the new proxy type.
+IMPORTANT: Once you have configured a proxy, you cannot change the proxy type. If you need to change the proxy type, you must remove the Console agent and add a new agent with the new proxy type.
 
 
 == Enable an explicit proxy on a Console agent
@@ -112,7 +112,7 @@ Ensure that the certificate file is in PEM format and resides in the same direct
 
 You can update a Console agent's existing transparent proxy server by using the `proxy update` command or remove the transparent proxy server by using the `proxy remove` command. For more information, review the documentation for link:reference-agent-maint-console-proxy.html[Agent maintenance console].
 
-IMPORTANT: Once you have configured a proxy, you cannot change the proxy type. If you need to change the proxy type, you remove the Console agent and add a new agent with the new proxy type.
+IMPORTANT: Once you have configured a proxy, you cannot change the proxy type. If you need to change the proxy type, you must remove the Console agent and add a new agent with the new proxy type.
 
 == Update the Console agent proxy if it loses access to the internet
 If the proxy configuration for your network changes, your agent might lose access to the internet. For example, if someone changes the password for the proxy server or updates the certificate. In this case, you'll need to access the UI from the Console agent host directly and update the settings. Ensure you have network access to the Console agent host and that you can log into the Console.
@@ -121,7 +121,7 @@ If the proxy configuration for your network changes, your agent might lose acces
 
 == Enable direct API traffic
 
-If you configured a Console agent to use a proxy server, you can enable direct API traffic on the Console agent in order to send API calls directly to cloud provider services without going through the proxy. Agents running in AWS, Azure, or Google Cloud support this option.
+If you configured a Console agent to use a proxy server, you can enable direct API traffic on the Console agent to send API calls directly to cloud provider services without going through the proxy. Agents running in AWS, Azure, or Google Cloud support this option.
 
 If you disable Azure Private Links with Cloud Volumes ONTAP and use service endpoints, enable direct API traffic. Otherwise, the traffic won't be routed properly.
 

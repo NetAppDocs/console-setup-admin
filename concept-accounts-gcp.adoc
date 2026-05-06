@@ -23,7 +23,7 @@ Two sets of permissions must be in place before you deploy a Console agent direc
 
 . You need to deploy a Console agent using a Google account that has permissions to launch the Console agent from the Console.
 
-. When deploying the Console agent, you are prompted to select a https://cloud.google.com/iam/docs/service-accounts[service account^] for the agent The Console gets permissions from the service account to create and manage Cloud Volumes ONTAP systems, to manage backups using NetApp backup and recovery, and more. Permissions are provided by attaching a custom role to the service account.
+. When deploying the Console agent, you are prompted to select a https://cloud.google.com/iam/docs/service-accounts[service account^] for the agent. The Console gets permissions from the service account to create and manage Cloud Volumes ONTAP systems, to manage backups using NetApp backup and recovery, and more. Permissions are provided by attaching a custom role to the service account.
 
 The following image depicts the permission requirements described in numbers 1 and 2 above:
 

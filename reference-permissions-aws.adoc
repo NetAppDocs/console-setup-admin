@@ -893,7 +893,7 @@ You only need the following permissions if you enabled legacy indexing features 
 * glue:CreateDatabase
 * glue:CreateTable
 * glue:BatchDeletePartition
-//eng::additional-permissions[]
+//end::legacy-permissions[]
 
 === NetApp Data Classification
 
