@@ -6,8 +6,8 @@ When you manually install the Console agent on your own Linux host, the installe
 |===
 | Endpoints
 | Purpose
-| \https://mysupport.netapp.com |
-| \https://signin.b2c.netapp.com | (this endpoint is the CNAME URL for \https://mysupport.netapp.com)
+| \https://mysupport.netapp.com | For licensing and contacting NetApp Support.
+| \https://signin.b2c.netapp.com | For licensing and contacting NetApp Support. (this endpoint is the CNAME URL for \https://mysupport.netapp.com)
 | \https://cloudmanager.cloud.netapp.com/tenancy |
 | \https://stream.cloudmanager.cloud.netapp.com |
 | \https://production-artifacts.cloudmanager.cloud.netapp.com |
