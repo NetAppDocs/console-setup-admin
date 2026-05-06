@@ -105,8 +105,10 @@ The following is a list of roles in the data service category. Each role grants 
 Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. Data Classification does not have an admin role.
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| RANSOMWARE_PROTECTION_ADMIN | Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| RANSOMWARE_PROTECTION_VIEWER | View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | pass:[RANSOMWARE_RESILIENCE_USER<wbr>_BEHAVIOR_ADMIN] | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | View suspicious user behavior alerts and insights in Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | RANSOMWARE_RESILIENCE_USER +
+_BEHAVIOR_ADMIN | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer] | RANSOMWARE_RESILIENCE_USER +
+_BEHAVIOR_VIEWER | View suspicious user behavior alerts and insights in Ransomware Resilience. 
 | SnapCenter admin | SNAPCENTER_ADMIN | Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
 
 * Complete any action from Backup and Recovery > Applications
