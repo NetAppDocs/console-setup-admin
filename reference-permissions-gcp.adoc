@@ -322,7 +322,7 @@ The Console agent uses the permissions in the custom role to manage Cloud Volume
 | deploymentmanager.types.list  | Yes | No | No
 | logging.logEntries.list .2+| To get stack log drives. | Yes | Yes | No
 | logging.privateLogEntries.list  | Yes | Yes | No
-| logging.logEntries.create .2+| Create and route log entires for monitoring, debugging, and auditing. | Yes | Yes | No
+| logging.logEntries.create .2+| Create and route log entries for monitoring, debugging, and auditing. | Yes | Yes | No
 | logging.logEntries.route |  Yes | Yes | No
 | resourcemanager.projects.get | To support multi-projects. | Yes | Yes | No
 | storage.buckets.create .5+| To create and manage a Google Cloud Storage bucket for data tiering. | Yes | Yes | No

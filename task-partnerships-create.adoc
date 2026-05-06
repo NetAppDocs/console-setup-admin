@@ -19,7 +19,7 @@ Partnerships let you securely manage NetApp resources across boundaries with rol
 
 
 .Required roles
-The *Partnership admin* role is required to make create and manage partnerships. The *Partnership viewer* can view the Partnerships page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+The *Partnership admin* role is required to create and manage partnerships. The *Partnership viewer* can view the Partnerships page. link:reference-iam-predefined-roles.html[Learn more about access roles.]
 
 
 
@@ -56,7 +56,7 @@ An organization partnership request must be accepted by the receiving organizati
 
 . Review the details of the partnership, including the name and organization ID of the organization that requested the partnership and select *Next.*
 
-. Optional, add organization members to the partnership and select *Apply*.
+. Optionally, add organization members to the partnership and select *Apply*.
 +
 You can add additional members through the *Partnership* page at any time. 
 
@@ -64,7 +64,7 @@ You can add additional members through the *Partnership* page at any time.
 NOTE: Any members you add become visible in the partner's organization where the partner can assign them to resources.
 
 .Result
-The partnership you approved now shows a status of *Established*. Users with the *Partnership admim* or *Partnership viewer* roles in either organization can view the partnership.
+The partnership you approved now shows a status of *Established*. Users with the *Partnership admin* or *Partnership viewer* roles in either organization can view the partnership.
 
 
 
@@ -82,9 +82,9 @@ Partnership admin, Partnership viewer. link:reference-iam-predefined-roles.html[
 
 . Select *Administration > Identity and access*.
 
-. Select the *Partnerships*.
+. Select the *Partnerships* tab.
 
-. Select either the *Initiated partnerships* the *Received partnerships* tab.
+. Select either the *Initiated partnerships* or the *Received partnerships* tab.
 
 . Review the respective table that displays partnerships and their statuses.
 
@@ -100,9 +100,9 @@ Partnership admin. link:reference-iam-predefined-roles.html[Learn more about acc
 
 . Select *Administration > Identity and access*.
 
-. Select the *Partnerships*.
+. Select the *Partnerships* tab.
 
-. Select either the *Initiated partnerships* tab.
+. Select the *Initiated partnerships* tab.
 
 . Review the respective table that displays partnerships and their statuses.
 

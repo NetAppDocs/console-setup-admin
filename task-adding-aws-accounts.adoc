@@ -13,7 +13,7 @@ summary: Add and manage AWS credentials so that the NetApp Console has the permi
 :imagesdir: ./media/
 
 [.lead]
-Add and manage AWS credentials so that you deploy and manage cloud resources in your AWS accounts from the NetApp Console. If you manage multiple AWS Marketplace subscriptions, you can assign each one of them to different AWS credentials from the Credentials page.
+Add and manage AWS credentials so that you can deploy and manage cloud resources in your AWS accounts from the NetApp Console. If you manage multiple AWS Marketplace subscriptions, you can assign each one of them to different AWS credentials from the Credentials page.
 
 == Overview
 
@@ -84,7 +84,7 @@ The account has the required permissions. <<add-the-credentials,You can now add 
 
 ==== Grant permissions by providing AWS keys
 
-If you want to provide the Console with AWS keys for an IAM user, then you need to grant the required permissions to that user. The the Console IAM policy defines the AWS actions and resources that the Console is allowed to use.
+If you want to provide the Console with AWS keys for an IAM user, then you need to grant the required permissions to that user. The Console IAM policy defines the AWS actions and resources that the Console is allowed to use.
 
 You must use this authentication method if a Console agent is installed on-premises. You can't use an IAM role.
 
@@ -173,7 +173,7 @@ For example, the policy should look like this:
 }
 ----
 +
-Refer to link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html[AWS Identity and Access Management  (IAM) documentation^] for more information on cross account resource access in IAM.
+Refer to link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html[AWS Identity and Access Management (IAM) documentation^] for more information on cross account resource access in IAM.
 * Create a policy that includes the permissions required to create a Console agent.
 +
 ** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[View the permissions needed for FSx for ONTAP^]
@@ -191,7 +191,7 @@ After you provide the IAM role with the required permissions, add the role ARN t
 
 .Before you begin
 
-If you just created the IAM role, it might take a few minutes until they are available for use. Wait a few minutes before you add the credentials to the Console.
+If you just created the IAM role, it might take a few minutes until it is available for use. Wait a few minutes before you add the credentials to the Console.
 
 .Steps
 
@@ -210,7 +210,7 @@ image:screenshot-settings-icon-organization.png[A screenshot that shows the Sett
 
 == Add credentials to the Console for Amazon FSx for ONTAP
 
-For details, refer to the https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[the Console documentation for Amazon FSx for ONTAP^]
+For details, refer to the https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[Console documentation for Amazon FSx for ONTAP^]
 
 [[subscribe]]
 == Configure an AWS subscription
@@ -232,7 +232,7 @@ include::_include/subscribe-aws.adoc[]
 
 == Associate an existing subscription with your organization 
 
-When you subscribe to from the AWS Marketplace, the last step in the process is to associate the subscription with your organization. If you didn't complete this step, then you can't use the subscription with your organization.
+When you subscribe from the AWS Marketplace, the last step in the process is to associate the subscription with your organization. If you didn't complete this step, then you can't use the subscription with your organization.
 
 
 * link:concept-modes.html[Learn about the Console deployment modes]

@@ -4,7 +4,7 @@
 
 . Select *Add Credentials* and follow the steps in the wizard.
 
-.. *Credentials Location*: Select *Amazon Web Services > Agent.
+.. *Credentials Location*: Select *Amazon Web Services > Agent*.
 
 .. *Define Credentials*: Enter an AWS access key and secret key.
 

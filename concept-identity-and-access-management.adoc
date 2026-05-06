@@ -13,13 +13,13 @@ summary: Use NetApp Console's Identity and Access Management (IAM) to structure 
 :imagesdir: ./media/
 
 [.lead]
-Use NetApp Console's Identity and Access Management (IAM) to organize your NetApp resources and control access according to your business structure—by location, department, or project. 
+Use the NetApp Console's Identity and Access Management (IAM) to organize your NetApp resources and control access according to your business structure—by location, department, or project. 
 
 You organize resources in a hierarchy: the organization is at the top, then folders (which can have other folders or projects), and then projects, which have storage systems, workloads, and agents.
 
 Assign access roles at the organization, folder, or project level so users have the right access to resources.
 
-NOTE: You must have the _Super admin_, _Organization admin_, or _Folder or project admin_ roles to manage IAM in NetApp Console.
+NOTE: You must have the _Super admin_, _Organization admin_, or _Folder or project admin_ role to manage IAM in the NetApp Console.
 
 
 The following image illustrates this hierarchy at a basic level.
@@ -27,7 +27,7 @@ The following image illustrates this hierarchy at a basic level.
 image:diagram-iam-resource-hierarchy.png[A conceptual diagram that shows the components of resource management]
 
 == Identity and access management components
-NetApp Console IAM is built on three types of components: organizational components that define the hierarchy, resources that are assigned within that hierarchy, and members and roles that control who can access what.
+The NetApp Console IAM is built on three types of components: organizational components that define the hierarchy, resources that are assigned within that hierarchy, and members and roles that control who can access what.
 
 === NetApp Console organizational components
 The organizational components—organization, folders, and projects—form a hierarchy that determines how resources are grouped and how access is delegated.
@@ -53,9 +53,9 @@ link:task-iam-manage-folders-projects.html[Learn how to add projects to your org
 
 Folders::
 
-Group related projects in _folders_ to organize them by location, site, or business unit. You can't associate resources directly to folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
+Group related projects in _folders_ to organize them by location, site, or business unit. You can't associate resources directly with folders, but assigning a user a role at the folder level gives them access to all projects in that folder.
 
-NOTE: Users with the Org admin role can add resources to a folder to delegate the task of associating the resource with projects to a Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
+NOTE: Users with the Org admin role can add resources to a folder to delegate the task of associating the resource with projects to Folder or project admins of the respective folder. link:task-iam-manage-folders-projects.html#associate-resource-folder[Learn about associating a resource with a folder].
 
 
 
@@ -80,11 +80,11 @@ Storage systems are automatically associated with the project where they are add
 
 
 Keystone subscriptions::
-Keystone subscriptions are also resources that you can associate with projects in order to grant users access to the subscription in NetApp Console. 
+Keystone subscriptions are also resources that you can associate with projects to grant users access to the subscription in NetApp Console. 
 
 
 Backup and Recovery workloads (Oracle and Microsoft SQL Server)::
-Some Backup and Recovery workloads are also considered resources. Assign a Backup and Recovery workload to a project in order to grant users access. 
+Some Backup and Recovery workloads are also considered resources. Assign a Backup and Recovery workload to a project to grant users access. 
 
 
 
@@ -125,10 +125,10 @@ When you associate a member with a role, you can grant that role for the entire 
 
 +
 
-NetApp Console provides granular roles that adhere to the principles of "least privilege", which means access roles are designed to give users access to only what they need.
+NetApp Console provides granular roles that adhere to the principle of "least privilege", which means access roles are designed to give users access to only what they need.
 
 +
-Users may have multiple roles as their duties expand.
+Users might have multiple roles as their duties expand.
 
 +
 
@@ -142,50 +142,50 @@ The right IAM structure depends on the size of your organization and how your te
 
 For organizations with fewer than 50 users and centralized storage management, consider a simplified approach using Super admin and Super viewer roles.
 
-**Example: ABC Corporation (5-person team)**
+*Example: ABC Corporation (5-person team)*
 
-* **Structure:** Single organization with 3 projects (Production, Development, Backup)
-* **Roles:**
+* *Structure:* Single organization with 3 projects (Production, Development, Backup)
+* *Roles:*
 ** 2 senior members: *Super admin* role for full administrative access
 ** 3 team members: *Super viewer* role for monitoring without modification rights
-* **Agent strategy:** Single agent associated with all projects for shared resource access
-* **Benefits:** Simplified administration, reduced role complexity, suitable for teams requiring broad access
+* *Agent strategy:* Single agent associated with all projects for shared resource access
+* *Benefits:* Simplified administration, reduced role complexity, suitable for teams requiring broad access
 
 === Multi-regional enterprise strategy
 
 For large organizations with regional operations and specialized teams, implement a hierarchical approach with folders representing geographical or business unit boundaries.
 
-**Example: XYZ Corporation (multinational company)**
+*Example: XYZ Corporation (multinational company)*
 
-* **Structure:** Organization > Regional folders (North America, Europe, Asia-Pacific) > Project folders per region
-* **Platform roles:**
+* *Structure:* Organization > Regional folders (North America, Europe, Asia-Pacific) > Project folders per region
+* *Platform roles:*
 ** 1 *Organization admin*: Global oversight and policy management
 ** 3 *Folder or project admins*: Regional control (one per region)
 ** 1 *Federation admin*: Corporate identity provider integration
-* **Storage roles by region:**
+* *Storage roles by region:*
 ** 9 *Storage admin*: Discover and manage storage systems in assigned regions
 ** 2 *Storage viewer*: Monitor storage resources across regions
 ** 1 *System health specialist*: Manage storage health without system modifications
-* **Data service roles:**
+* *Data service roles:*
 ** *Backup and Recovery admin*: Per-project based on backup responsibilities
 ** *Ransomware Resilience admin*: Security team monitoring across projects
-* **Agent strategy:** Regional agents associated with appropriate geographical projects
-* **Benefits:** Enhanced security through role segregation, regional autonomy, and compliance with local regulations
+* *Agent strategy:* Regional agents associated with appropriate geographical projects
+* *Benefits:* Enhanced security through role segregation, regional autonomy, and compliance with local regulations
 
 === Departmental specialization strategy
 
 For organizations with specialized teams requiring specific data service access, use targeted role assignments based on functional responsibilities.
 
-**Example: TechCorp (mid-size technology company)**
+*Example: TechCorp (mid-size technology company)*
 
-* **Structure:** Organization > Department folders (IT, Security, Development) > Project-specific resources
-* **Specialized roles:**
+* *Structure:* Organization > Department folders (IT, Security, Development) > Project-specific resources
+* *Specialized roles:*
 ** Security team: *Ransomware Resilience admin* and *Classification viewer* roles
 ** Backup team: *Backup and Recovery super admin* for comprehensive backup operations
 ** Development team: *Storage admin* for test environment management
 ** Compliance team: *Operation support analyst* for monitoring and support case management
-* **Agent strategy:** Agents linked to departmental projects based on resource ownership
-* **Benefits:** Tailored access control, improved operational efficiency, and clear accountability for specialized tasks
+* *Agent strategy:* Agents linked to departmental projects based on resource ownership
+* *Benefits:* Tailored access control, improved operational efficiency, and clear accountability for specialized tasks
 
 
 == Next steps with IAM in NetApp Console

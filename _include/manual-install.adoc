@@ -7,7 +7,7 @@ You should have the following:
 
 * Details about a proxy server, if a proxy is required for internet access from the Console agent.
 +
-You have the option to configure a proxy server after installation but doing so requires restarting the Console agent.
+You have the option to configure a proxy server after installation, but doing so requires restarting the Console agent.
 
 
 * A CA-signed certificate, if the proxy server uses HTTPS or if the proxy is an intercepting proxy.
@@ -36,7 +36,7 @@ If you don't remove these system variables, the installation fails.
 
 . Download the Console agent software and then copy it to the Linux host. You can download it either from the NetApp Console or the NetApp Support site.
 +
-* NetApp Console: Go to *Agents > Management > Deploy agent > On-prem > Manual install*.
+* NetApp Console: Go to *Agents > Management  > Deploy agent > On-prem > Manual install*.
 +
 Choose download the agent installer files or a URL to the files.
 
@@ -44,6 +44,8 @@ Choose download the agent installer files or a URL to the files.
 * https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab[NetApp Support Site^] (needed if you don't already have access to the Console).
 +
 NOTE: Download the "online" agent installer that's meant for use in your network or in the cloud. A separate "offline" installer is available for the Console agent, but it's only supported with private mode deployments.
+
+* NetApp Support Site (needed if you don't already have access to the Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab[NetApp Support Site^]. 
 
 . Assign permissions to run the script.
 +
@@ -68,10 +70,11 @@ You'll need to add proxy information if your network requires a proxy for intern
 +
 NOTE: If you want to configure a transparent proxy, you can do so after you've installed. link:reference-agent-maint-console-proxy.html[Learn about the agent maintenance console].
 +
-Here is an example configuring an explicit proxy server with a CA-signed certificate:
+Here is an example of configuring an explicit proxy server with a CA-signed certificate:
 +
 [source,cli]
 ----
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +

@@ -23,7 +23,7 @@ If your company doesn't have a NetApp Console organization, sign up to create on
 
 .Steps
 
-. Open a web browser and go to the https://console.netapp.com[NetApp Console^]
+. Open a web browser and go to the https://console.netapp.com[NetApp Console^].
 
 . If you have a NetApp Support Site account, enter the email address associated with your account directly on the *Log in* page.
 +
@@ -57,7 +57,7 @@ If your company already has a NetApp Console organization, sign up or log in to 
 
 .Steps
 
-. Open a web browser and go to the https://console.netapp.com[NetApp Console^]
+. Open a web browser and go to the https://console.netapp.com[NetApp Console^].
 
 . If you have a NetApp Support Site account or if your company has set up single sign-on (SSO), enter your associated email address or SSO credentials on the *Log in* page. Follow the prompts to complete login.
 +

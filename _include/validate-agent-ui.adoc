@@ -14,4 +14,4 @@ NOTE: If the Console successfully deploys the agent, it does not generate a repo
 You must start the entire process over if you want to try deploying the agent again.
 
 
-Access the report and logs from the Console agent host
+. Access the report and logs from the Console agent host

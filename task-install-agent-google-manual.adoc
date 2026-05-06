@@ -19,7 +19,7 @@ Deploying an agent in Google Cloud launches a VM instance running Linux and the 
 
 .Before you begin
 
-* link:concept-agent-install-options.html#agent-cloud-manual-deploy[Learn when to deploy manually in the Google Cloud].
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy[Learn when to deploy manually in Google Cloud].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Review host requirements
@@ -35,9 +35,6 @@ include::_include/os-reqs.adoc[tag=google-machine]
 include::_include/os-reqs.adoc[tag=hypervisor]
 
 include::_include/os-reqs.adoc[tag=os]
-
-
-include::_include/os-reqs.adoc[tag=google-machine]
 
 
 [[podman-configuration]]
