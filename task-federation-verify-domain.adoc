@@ -15,6 +15,8 @@ summary: If you want to federate with a domain that is different from your email
 [.lead]
 If you want to federate with a domain that is different from your email domain, you must first verify that you own the domain. You can only use verified domains for federation.
 
+This domain verification workflow is different from organization verification. link:task-verify-organization.html[Learn how to verify your organization].
+
 .Required roles
 The Federation admin role is required to create and manage federations. Federation viewer can view the Federation page. link:reference-iam-predefined-roles.html[Learn more about access roles.]
 

@@ -95,7 +95,9 @@ The Console displays the version at the top of the page.
 == Validate that the Console agent meets requirements
 Console agents require access to certain network endpoints, need to have several ports open, and must meet hardware requirements. You can validate that your Console agent meets these requirements from the Console or by using the agent maintenance console.
 
-link:reference-networking-saas-console.html[Learn more about required network access points.
+NOTE: You can only validate agents that have a status of *Connected*.
+
+link:reference-networking-saas-console.html[Learn more about required network access points.]
 link:task-install-agent-on-prem.html#os-req-agent[Learn more about host requirements.]
 
 
@@ -103,7 +105,6 @@ You can also run validation checks using the agent maintenance console. link:ref
 
 IMPORTANT: For government cloud customers (restricted mode), NetApp Console does not validate the restricted mode upgrade endpoint. You must manually confirm that your firewall rules allow access to this endpoint.link:task-prepare-restricted-mode.html[Learn more about required network access points for restricted mode.]
 
-NOTE: You can only validate agents that have a status of *Connected*.
 
 .Steps from the Console
 . Select *Administration > Agents*.
