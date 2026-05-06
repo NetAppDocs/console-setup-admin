@@ -163,7 +163,6 @@ a| To obtain images for Console agent upgrades.
 
 //tag::upgrade-endpoints-restricted[]
 a| \https://occmclientinfragov.azurecr.us
-\https://bluexpinfraprod.azurecr.io 
 a| To obtain images for Console agent upgrades. 
 
 
@@ -188,20 +187,6 @@ Although the previous endpoints are still supported, NetApp recommends updating 
 * If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
 //end::upgrade-endpoints-explanation[]
 
-//tag::upgrade-endpoints-restricted-mode[]
-|
-If the Console agent is in an AWS Government region:
-\https://occmclientinfragov.azurecr.us
-
-| To obtain images for Console agent upgrades when the Console agent is installed in an AWS Government region.
-
-| 
-If the Console agent is in an Azure Government region:
-\https://occmclientinfragov.azurecr.us
-
-| To obtain images for Console agent upgrades when the Console agent is installed in an Azure Government region.
- 
-//end::upgrade-endpoints-restricted-mode[]
 
 
 //tag::endpoints-comparison[]

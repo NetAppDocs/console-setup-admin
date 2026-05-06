@@ -122,7 +122,7 @@ include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
 include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted]
-include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted-mode]
+
 
 |===
 
