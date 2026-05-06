@@ -154,78 +154,21 @@ a| \https://bluexpinfraprod.eastus2.data.azurecr.io
 a| To obtain images for Console agent upgrades. 
 
 
-* When you deploy a new agent, the validation check tests connectivity to current endpoints. If you use link:reference-networking-saas-console-previous.html[previous endpoints], the validation check fails. To avoid this failure, skip the validation check.
-+
-
-Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to the current endpoints as soon as possible. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
-
-
-
-* When you update to the current endpoints in your firewall, your existing agents will continue to work.
-
-
 
 //end::upgrade-endpoints[]
 
+
+
+
 //tag::upgrade-endpoints-restricted[]
-a| \https://occmclientinfragov.azurecr.us
-\https://bluexpinfraprod.azurecr.io 
-a| To obtain images for Console agent upgrades. 
-
-
-* When you deploy a new agent, the validation check tests connectivity to current endpoints. If you use link:reference-networking-saas-console-previous.html[previous endpoints], the validation check fails. To avoid this failure, skip the validation check.
-+
-
-Although the previous endpoints are still supported, NetApp recommends updating your firewall rules to the current endpoints as soon as possible. link:reference-networking-saas-console-previous.html#update-endpoint-list[Learn how to update your endpoint list].
-
-
-
-* When you update to the current endpoints in your firewall, your existing agents will continue to work.
-
+a| \https://occmclientinfragov.azurecr.us.io
+a| To obtain images for Console agent upgrades.
 
 
 //end::upgrade-endpoints-restricted[]
 
-//tag::upgrade-endpoints-explanation[]
 
-//Same text is also in endpoints-manual-install
-^1^ NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints. Note the following about these endpoints:
-+
-* Starting with the 3.9.47 release of the Console agent, the system supports the endpoints listed in Option 1. Previous releases of the Console agent do not support backward compatibility.
-* The Console agent first contacts the endpoints in Option 2. If those endpoints are not accessible, it automatically contacts the endpoints in Option 1.
-* If you use the Console agent with NetApp Backup and Recovery or Ransomware Resilience, the system does not support Option 1 endpoints. Allow Option 2 endpoints and disallow Option 1.
-//end::upgrade-endpoints-explanation[]
 
-//tag::upgrade-endpoints-restricted-mode[]
-|
-If the Console agent is in an AWS Government region:
-\https://*.blob.core.windows.net
-\https://cloudmanagerinfraprod.azurecr.io
-
-| To obtain images for Console agent upgrades when the Console agent is installed in an AWS Government region.
-
-| 
-If the Console agent is in an Azure Government region:
-\https://*.blob.core.windows.net
-\https://occmclientinfragov.azurecr.us
-
-| To obtain images for Console agent upgrades when the Console agent is installed in an Azure Government region.
- 
-a|
-If the Console agent is in a commercial region or sovereign region, you can choose between two sets of endpoints:
-
-* Option 1 (recommended) ^1^
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io
-\https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net
-\https://cloudmanagerinfraprod.azurecr.io
-
-| To obtain images for Console agent upgrades when the Console agent is installed in a commercial region or sovereign region.
-//end::upgrade-endpoints-restricted-mode[]
 
 
 //tag::endpoints-comparison[]
@@ -269,6 +212,7 @@ a|
 a|
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
+* \https://occmclientinfragov.azurecr.us.io (if in a restricted mode environment)
 | To obtain images for Console agent upgrades.
 
 |===
