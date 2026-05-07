@@ -19,7 +19,7 @@ Deploying an agent in Google Cloud launches a VM instance running Linux and the 
 
 .Before you begin
 
-* You should have a link:concept-agents.html[Learn about Console agents].
+* link:concept-agents.html[Learn about Console agents].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Set up networking
@@ -74,7 +74,7 @@ Set up permissions for the Google Cloud user to deploy the Console agent VM from
 
 .Steps
 
-. Create a custom role in Google Platform:
+. Create a custom role in Google Cloud:
 
 .. Create a YAML file that includes the following permissions:
 +
@@ -92,7 +92,10 @@ include::_include/google-cloud-deployment-permissions.adoc[]
 +
 The following example creates a role named "connectorDeployment" at the project level:
 +
+[source,bash]
+----
 gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud[Google Cloud docs: Creating and managing custom roles^]
 

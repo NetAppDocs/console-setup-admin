@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: concept-verified-organization.html
+keywords: verified organization, organization verification, cmat, crm id, business account, identity and access management, iam, organization governance
+summary: Verified organizations link your NetApp Console organization to your NetApp business account so identity and governance are consistent across systems.
+---
+
+= Learn about verified organizations in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+A verified organization links your organization in the NetApp Console to your NetApp business account identity (for example, a CMAT ID). This helps the Console apply a consistent organization identity and governance model across NetApp systems.
+
+== Why verify your organization
+Verifying your organization can help you:
+
+* Align your Console organization with your NetApp business account identity.
+* Improve consistency for administration, reporting, and support workflows.
+* Reduce ambiguity when your teams work across multiple NetApp services.
+* Support governance controls that depend on a trusted organization identity.
+
+== What changes after verification
+After your organization is verified:
+
+* The organization is associated with a NetApp business account identity.
+* The Console can treat that organization identity as authoritative for business-level mapping.
+* Some organization profile changes might be restricted in the Console if they are managed by the source system.
+
+== Before you verify
+Before you verify your organization, confirm the following:
+
+* You have the required administrative role for your organization.
+* You have the organization details needed for verification.
+* You have coordinated with your NetApp account team if business-account mapping needs validation.
+
+== Related information
+
+* link:task-verify-organization.html[Verify your organization]
+* link:concept-identity-and-access-management.html[Learn about identity and access management]
+* link:task-iam-rename-organization.html[Organization and project IDs]

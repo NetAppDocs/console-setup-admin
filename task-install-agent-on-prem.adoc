@@ -5,7 +5,7 @@ keywords: deploy agent, on prem agent deployment, on prem agent, deploy connecto
 summary: Deploy a Console agent on-premises and then log in and set it up to work with your Console organization.
 ---
 
-= Manually deploy a Console agent on-premises
+= Manually install a Console agent on-premises
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,9 +15,9 @@ summary: Deploy a Console agent on-premises and then log in and set it up to wor
 [.lead]
 Deploy a Console agent on-premises and then log in and set it up to work with your Console organization. 
 
-NOTE: If you are a VMWare user, you can use an OVA to deploy a Console agent in your VCenter. link:task-install-agent-on-prem-ova.html[Learn more about deploying an agent in a VCenter.]
+NOTE: If you are a VMware user, you can use an OVA to deploy a Console agent in your vCenter. link:task-install-agent-on-prem-ova.html[Learn more about deploying an agent in a vCenter.]
 
-Before you install, you'll need to ensure your host (VM or Linux host) meets requirements and ensure that the Console agent will have outbound access to the internet as well as targeted networks. If you plan to NetApp data services, or cloud storage options such as Cloud Volumes ONTAP, you'll need to create credentials in your cloud provider to add to the Console so that the Console agent can perform actions in the cloud on your behalf.
+Before you install, you'll need to ensure your host (VM or Linux host) meets requirements and ensure that the Console agent will have outbound access to the internet as well as targeted networks. If you plan to use NetApp data services, or cloud storage options such as Cloud Volumes ONTAP, you'll need to create credentials in your cloud provider to add to the Console so that the Console agent can perform actions in the cloud on your behalf.
 
 
 == Prepare to install the Console agent
@@ -26,7 +26,7 @@ Before you install a Console agent, you should ensure you have a host machine th
 [[os-req-agent]]
 === Review Console agent host requirements
 
-Run the Console agent on a x86 host that meets operating system, RAM, and port requirements. Ensure that your host meets these requirements before you install the Console agent.
+Run the Console agent on an x86 host that meets operating system, RAM, and port requirements. Ensure that your host meets these requirements before you install the Console agent.
 
 include::_include/os-reqs.adoc[tag=manual-uid-range]
 
@@ -61,62 +61,8 @@ include::_include/endpoints-agent.adoc[tag=intro]
 
 NOTE: A Console agent installed on your premises cannot manage resources in Google Cloud. If you want to manage Google Cloud resources, you need to install an agent in Google Cloud.
 
+include::_include/endpoints-agent-onprem-tabbed.adoc[]
 
-[role="tabbed-block"]
-====
-
-.AWS
---
-When the Console agent is installed on-premises, it needs network access to the following AWS endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in AWS.
-
-include::_include/endpoints-agent.adoc[tag=intro]
-+
-[cols="2a,1a",options="header,autowidth"]
-|===
-| Endpoints
-| Purpose
-
-include::_include/endpoints-agent.adoc[tag=aws-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=nss-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=saas-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
-
-|===
---
-
-.Azure
---
-When the Console agent is installed on-premises, it needs network access to the following Azure endpoints in order to manage NetApp systems (such as Cloud Volumes ONTAP) deployed in Azure.
-
-[cols="2a,1a",options="header,autowidth"]
-|===
-| Endpoints
-| Purpose
-
-
-include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=nss-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=saas-endpoints]
-
-include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
-
-|===
-
-
-
---
-
-
-
-====
-// end tabbed area
 
 
 
@@ -132,7 +78,7 @@ include::_include/networking.adoc[tag=ntp]
 [[agent-permission-aws-azure]]
 === Create Console agent cloud permissions for AWS or Azure
 
-If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider and then you add the credentials to the Console agent after you install it.
+If you want to use NetApp data services in AWS or Azure with an on-premises Console agent, then you need to set up permissions in your cloud provider and then add the credentials to the Console agent after you install it.
 
 TIP: You must install the Console agent in Google Cloud to manage any resources that reside there.
 
@@ -184,7 +130,7 @@ include::_include/azure-set-up-service-principal.adoc[tag=ids]
 
 .Create a client secret
 
-include::_include/azure-set-up-service-principal.adoc[tags=secret]
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
 
 --
 
@@ -194,7 +140,7 @@ include::_include/azure-set-up-service-principal.adoc[tags=secret]
 
 
 == Manually install a Console agent
-When you manually install a Console agent, you need to prepare your machine environment so that it meets requirements. You'll need an Linux machine and you'll need to install Podman or Docker, depending on your Linux operating system. 
+When you manually install a Console agent, you need to prepare your machine environment so that it meets requirements. You'll need a Linux machine and you'll need to install Podman or Docker, depending on your Linux operating system. 
 
 
 [[podman-configuration]]
@@ -223,7 +169,7 @@ You'll need to register the Console agent within the NetApp Console.
 [[register-agent]]
 == Register the Console agent with NetApp Console
 
-Log into the Console and associate the Console agent with your organization. How you log in depends on the mode in which you are using Console. If you are using the Console in standard mode, you log in through the SaaS website. If you are using the Console in restricted mode or private mode, you log in locally from the Console agent host.
+Log into the Console and associate the Console agent with your organization. How you log in depends on the mode in which you are using the Console. If you are using the Console in standard mode, you log in through the SaaS website. If you are using the Console in restricted mode or private mode, you log in locally from the Console agent host.
 
 .Steps
 
@@ -271,7 +217,7 @@ You can now go to the https://console.netapp.com[NetApp Console^] to start using
 
 .Before you begin
 
-If you just created these Azure credentials, they may take a few minutes to become available. Wait a few minutes before you add the credentials the Console agent.
+If you just created these Azure credentials, they may take a few minutes to become available. Wait a few minutes before you add the credentials to the Console agent.
 
 .Steps
 

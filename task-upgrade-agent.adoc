@@ -19,7 +19,7 @@ The Console agent is automatically upgraded when it has outbound connectivity. I
 
 == Upgrade the Console agent
 
-The Console agent needs to restart during the upgrade process so the NetApp Console will be unavailable during the upgrade.
+The Console agent needs to restart during the upgrade process, so the NetApp Console will be unavailable during the upgrade.
 
 .Steps
 

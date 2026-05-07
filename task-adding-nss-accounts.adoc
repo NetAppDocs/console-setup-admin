@@ -47,7 +47,7 @@ NOTE: NetApp uses Microsoft Entra ID as the identity provider for authentication
 
 .Steps
 
-. In *Administration > Support*.
+. Select *Administration > Support*.
 
 . Select *NSS Management*.
 
@@ -65,7 +65,7 @@ This is a system-generated ID that maps to your email. On the *NSS Management* p
 
 * If you ever need to refresh your login credential tokens, there is also an *Update Credentials* option in the image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png[An icon of three horizontal dots] menu. 
 +
-Using this option prompts you to log in again. Note that the token for these accounts expire after 90 days. A notification will be posted to alert you of this.
+Using this option prompts you to log in again. Note that the token for these accounts expires after 90 days. A notification will be posted to alert you of this.
 
 .What's next?
 
@@ -90,7 +90,7 @@ Additionally, you can update the NSS credentials associated with your organizati
 
 .Steps
 
-. In *Administration > Support*.
+. Select *Administration > Support*.
 
 . Select *NSS Management*.
 
@@ -111,7 +111,7 @@ You must first have associated the account with the Console.
 
 .Steps
 
-. In *Administration > Support*.
+. Select *Administration > Support*.
 
 . Select *NSS Management*.
 
@@ -135,7 +135,7 @@ TIP: When you go to the NSS Management page, the Console generates a token for e
 
 .Steps
 
-. In *Administration > Support*.
+. Select *Administration > Support*.
 
 . Select *NSS Management*.
 
@@ -151,7 +151,7 @@ You can't delete an account that is currently associated with a Cloud Volumes ON
 
 .Steps
 
-. In *Administration > Support*.
+. Select *Administration > Support*.
 
 . Select *NSS Management*.
 

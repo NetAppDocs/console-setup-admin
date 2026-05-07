@@ -280,7 +280,7 @@ include::_include/azure-provide-permissions-role.adoc[]
 
 .Azure service principal
 --
-Provide the NetApp Console with the credentials for the Azure service principal that you previously setup.
+Provide the NetApp Console with the credentials for the Azure service principal that you previously set up.
 
 .Steps
 
@@ -288,7 +288,7 @@ include::_include/azure-provide-permissions-service-principal.adoc[]
 
 .Result
 
-the NetApp Console now has the permissions that it needs to perform actions in Azure on your behalf.
+The NetApp Console now has the permissions that it needs to perform actions in Azure on your behalf.
 --
 
 .Google Cloud service account

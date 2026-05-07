@@ -14,10 +14,10 @@ summary: Federate with your SAML 2.0 IdP provider to enable single sign-on (SSO)
 
 
 [.lead]
-Federate with your SAML 2.0 IdP provider to enable single sign-on (SSO) for the NEtApp Console. This allows users to log in using their corporate credentials.
+Federate with your SAML 2.0 IdP provider to enable single sign-on (SSO) for the NetApp Console. This allows users to log in using their corporate credentials.
 
 .Required role
-The Federation admin role is required to make create and manage federations. Federation viewer can view the Federation page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+The Federation admin role is required to create and manage federations. Federation viewer can view the Federation page. link:reference-iam-predefined-roles.html[Learn more about access roles.]
 
 NOTE: You can federate with your corporate IdP or with the NetApp Support Site. You can't federate with both.
 

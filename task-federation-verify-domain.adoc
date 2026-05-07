@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-federation-verify-domain.html
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity
-summary: You can only use verified domains for federation.If you want to federate with a domain that is different than your email domain, you must first verify that you own the domain. You can only use verified domains for federation.
+summary: If you want to federate with a domain that is different from your email domain, you must first verify that you own the domain. You can only use verified domains for federation.
 ---
 
 = Verify the email domain for your federated connection
@@ -13,14 +13,16 @@ summary: You can only use verified domains for federation.If you want to federat
 :imagesdir: ./media/
 
 [.lead]
-If you want to federate with a domain that is different than your email domain, you must first verify that you own the domain. You can only use verified domains for federation.
+If you want to federate with a domain that is different from your email domain, you must first verify that you own the domain. You can only use verified domains for federation.
+
+This domain verification workflow is different from organization verification. link:task-verify-organization.html[Learn how to verify your organization].
 
 .Required roles
-The Federation admin role is required to make create and manage federations. Federation viewer can view the Federation page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+The Federation admin role is required to create and manage federations. Federation viewer can view the Federation page. link:reference-iam-predefined-roles.html[Learn more about access roles.]
 
 Verifying your domain involves adding a TXT record to your domain's DNS settings. This record is used to prove that you own the domain and allows the NetApp Console to trust the domain for federation. You may need to coordinate with your IT or network administrator to complete this step. 
 
-For example, if using Microsoft Entra ID, you can follow the steps in the Microsoft documentation link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain[Add a domain with Microsoft Entra ID].
+For example, if using Microsoft Entra ID, you can follow the steps in the Microsoft documentation https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain[Add a domain with Microsoft Entra ID^].
 
 .Steps
 
