@@ -64,7 +64,7 @@ Responsibilities
 
 | link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes admin] | GCNV_ADMIN | Users with the Google Cloud NetApp Volumes role can discover and manage Google Cloud NetApp Volumes.
 
-| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes viewer] | | Users with the Google Cloud NetApp Volumes user role can view Google Cloud NetApp Volumes.
+| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes viewer] | GCNV_VIEWER | Users with the Google Cloud NetApp Volumes user role can view Google Cloud NetApp Volumes.
 
 | link:reference-iam-keystone-roles.html[Keystone admin] | KEYSTONE_ADMIN | Users with the Keystone admin role can create service requests. Allows users to monitor and view usage, resources, and admin details within the Keystone tenant they are accessing.
 | link:reference-iam-keystone-roles.html[Keystone viewer] | KEYSTONE_VIEWER | Users with the Keystone viewer role CANNOT create service requests. Allows users to monitor and view consumption, assets, and administrative information within the Keystone tenant they are accessing.
