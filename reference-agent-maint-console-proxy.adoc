@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-agent-maint-console-proxy.html
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy, agent proxy
 summary: You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
 ---
 
@@ -17,7 +17,7 @@ You can use the Console agent maintenance console to configure a Console agent t
 
 
 == Access the agent maintenance console
-You can access the maintenance Console from the Console agent host. Navigate to the following directory:
+You can access the maintenance console from the Console agent host. Navigate to the following directory:
 
 [source,cli]
 ----
@@ -38,7 +38,6 @@ The `proxy get` command displays information about the current transparent proxy
 
 === Proxy get example
 
-To view the current transparent proxy server configuration, use the following command:
 [source,cli]
 ----
 ./agent-maint-console proxy get
@@ -82,7 +81,7 @@ To update the certificate for a transparent proxy server, use the following comm
 The `proxy remove` command removes the transparent proxy server configuration from the agent.
 
 === Proxy remove example
-To remove transparent proxy server, use the following command:
+To remove the transparent proxy server, use the following command:
 [source,cli]
 ----
 ./agent-maint-console proxy remove

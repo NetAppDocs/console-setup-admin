@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference-iam-disaster-rec-roles.html
-keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles
-summary:  You can assign the following roles to users to provide them access to NetApp Disaster Recovery within the Console. Disaster Recovery roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization. How you assign roles depends on your own business and storage management practices.
+keywords: disaster recovery, role-based access control, failover admin, replication plans, job monitoring, business continuity, compliance management, operational governance, access delegation, rbac, IAM roles
+summary: You can assign the following roles to users to provide them access to NetApp Disaster Recovery within the Console. Disaster Recovery roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization. How you assign roles depends on your own business and storage management practices.
 ---
 
 = NetApp Disaster Recovery roles in NetApp Console
@@ -23,7 +23,7 @@ Disaster Recovery uses the following roles:
 
 The following table indicates the actions that each role can perform. 
 
-[cols=5*,options="header",cols="30,20a,20a,20a,20a",width="100%"]
+[cols="30,20a,20a,20a,20a",options="header",width="100%"]
 |===
 | Feature and action
 | Disaster recovery admin

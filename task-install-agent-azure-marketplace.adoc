@@ -26,7 +26,7 @@ NOTE: Deploy a Console agent in the same Azure region as the Cloud Volumes ONTAP
 
 == Step 1: Set up networking
 
-Ensure that the network location where you plan to install the Console agent supports the following requirements.These requirements enable the Console agent to manage resources in your hybrid cloud.
+Ensure that the network location where you plan to install the Console agent supports the following requirements. These requirements enable the Console agent to manage resources in your hybrid cloud.
 
 //Azure regions
 include::_include/networking.adoc[tag=azure-region]
@@ -129,7 +129,7 @@ include::_include/azure-set-up-service-principal.adoc[tag=ids]
 
 .Create a client secret
 
-include::_include/azure-set-up-service-principal.adoc[tags=secret]
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
 
 --
 
@@ -186,7 +186,7 @@ Note the following as you configure the VM:
 +
 link:reference-ports-azure.html[View security group rules for Azure].
 
-* Identity*: Under *Management*, select *Enable system assigned managed identity*.
+* *Identity*: Under *Management*, select *Enable system assigned managed identity*.
 +
 This setting is important because a managed identity allows the Console agent virtual machine to identify itself to Microsoft Entra ID without providing any credentials. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview[Learn more about managed identities for Azure resources^].
 
@@ -202,7 +202,7 @@ NOTE: If the installation fails, you can view logs and a report to help you trou
 https://_ipaddress_
 
 . After you log in, set up the Console agent:
-.. Specify the the Console organization to associate with the Console agent.
+.. Specify the Console organization to associate with the Console agent.
 .. Enter a name for the system.
 .. Under *Are you running in a secured environment?* keep restricted mode disabled.
 +
@@ -211,7 +211,7 @@ Keep restricted mode disabled to use the Console in standard mode. You should en
 
 .Result
 
-You have now installed the Console agent and set it up with your the Console organization.
+You have now installed the Console agent and set it up with your Console organization.
 
 If you have Azure Blob storage in the same Azure subscription where you created the Console agent, you'll see an Azure Blob storage system appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html[Learn how to manage Azure Blob storage from the Console^]
 

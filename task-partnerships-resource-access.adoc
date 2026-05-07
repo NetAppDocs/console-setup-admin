@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-partnerships-resource-access.html
-keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization
+keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization
 summary: You can grant access to partnership users by assigning them specific roles for folders and projects within your organization.
 ---
 
@@ -24,7 +24,7 @@ A partner organization must first add members to the partnership before you can 
 
 You can manage roles for members of partner organizations in the same way that you do for your own. However, not all roles are available to partnership users. In particular, you can't grant partner users a role that allows software updates. Updating ONTAP software generally requires direct network access.
 
-You can assign following roles to partner users:
+You can assign the following roles to partner users:
 
 * link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin]
 * link:reference-iam-platform-roles.html#organization-admin-roles[Folder or project admin]
@@ -61,7 +61,7 @@ For example, if you had two projects and wanted the same user to have the role o
 
 . Select the *Partnership initiated* tab.
 
-. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the established partnership that you want view and select *View details*.
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the established partnership that you want to view and select *View details*.
 + 
 The *Member* list displays the members that the partner organization has added to the partnership.
 
@@ -75,7 +75,7 @@ You can change or remove a role that you have assigned to a member of a partner 
 . Select *Administration > Identity and access*.
 . Select *Partnerships*.
 . Select the *Partnership initiated* tab.
-. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the established partnership that you want view and select *View details*.
+. Select the actions menu image:icon-action.png[an icon with three vertical dots] next to the established partnership that you want to view and select *View details*.
 + 
 The *Member* list displays the members that the partner organization has added to the partnership.
 
