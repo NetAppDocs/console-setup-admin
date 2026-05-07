@@ -218,7 +218,7 @@ Depending on the data services and features that you plan to use, a Console orga
 
 
 
-<<Restricted mode, Learn more about outbound connectivity to the NetApp Console APIs>>.
+link:task-install-restricted-mode.html[Learn more about outbound connectivity to the NetApp Console APIs].
 
 The following image is an example of a restricted mode deployment.
 
