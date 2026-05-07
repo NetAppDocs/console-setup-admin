@@ -205,7 +205,7 @@ NetApp Console provides authentication with auth0 or NetApp Support Site (NSS) l
 
 === How to get started with standard mode
 Go to the https://console.netapp.com[NetApp Console^] and sign up.
-+
+
 link:task-quick-start-standard-mode.html[Learn how to get started with standard mode].
 
 == NetApp Console in restricted mode (installed in your own public cloud)
