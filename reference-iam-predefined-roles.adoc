@@ -13,18 +13,21 @@ summary: NetApp Console identity and access management includes predefined roles
 :imagesdir: ./media/
 
 [.lead]
-Identity and access management (IAM) in the NetApp Console provides predefined roles that you can assign to the members of your organization across different levels of your resource hierarchy. Before you assign these roles, you should understand the permissions that each role includes. Roles fall into the following categories: platform, application, and data service.
+Identity and access management (IAM) in the NetApp Console provides predefined roles that you can assign to the members of your organization across different levels of your resource hierarchy. Before you assign these roles, you should understand the permissions that each role includes. Roles fall into the following categories: platform, application, and data service. The tables also include each role’s API name for customers who manage role assignments using the API.
+
 
 
 [[platform-roles]]
 == Platform roles
 Platform roles grant NetApp Console administration permissions, including role assignment and user management. The Console has several platform roles. 
 
+*API name is the role identifier used in APIs. Copy the value exactly as shown (including capitalization and underscores).
+
 [cols="1,2,3",options="header"]
 |===
 
 | Platform role
-| API name
+| API name*
 | Responsibilities
 
 
@@ -56,10 +59,9 @@ Folder or project admins cannot create Console agents.
 == Application roles
 The following is a list of roles in the application category. Each role grants specific permissions within its designated scope. Users without the required application or platform role cannot access the respective application.
 
-
 [cols="1,2,3",options="header"]
 |===
-| Application role | API name | 
+| Application role | API name* | 
 Responsibilities
 
 | link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes admin] | GCNV_ADMIN | Users with the Google Cloud NetApp Volumes role can discover and manage Google Cloud NetApp Volumes.
@@ -82,12 +84,11 @@ Responsibilities
 == Data service roles
 The following is a list of roles in the data service category. Each role grants specific permissions within its designated scope. Users who do not have the required data service role or a platform role will be unable to access the data service.
 
-
 [cols="1,2,3",options="header",width="100%"]
 |===
 
 | Data service role
-| API name
+| API name*
 | Responsibilities
 
 | link:reference-iam-backup-rec-roles.html[Backup and Recovery super admin] | BACKUP_SUPER_ADMIN | Perform any actions in NetApp Backup and Recovery.
