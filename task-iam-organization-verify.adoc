@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: task-iam-organization-verify.html
+keywords: verify Console organization, associate business account, CMAT account, digital advisor, filtering, organization verification,, business account management, multi-account NetApp customers, organization governance, account ownership verification, resource visibility control
+summary: By default, Digital Advisor shows all NetApp accounts associated with your company, rather than just your Console organization. To limit what is shown in Digital Advisor to a specific account, verify the business account you want to use with your Console organization.
+---
+
+= Verify your NetApp Console organization
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+By default, Digital Advisor shows all NetApp accounts associated with your company, rather than just your Console organization. To limit what is shown in Digital Advisor to a specific account, verify the business account you want to use with your Console organization.
+
+
+== Before you begin
+You must have the Organization admin role to verify your organization. Your user must also be associated with a NetApp Support Site (NSS) account. link:task-adding-nss-accounts[Learn how to associate your NSS account].
+
+NOTE: If your company has only one business account and your user is associated with a NetApp Support Site account, the Console automatically verifies your organization.
+
+
+== Verify your organization
+
+
+
+.Steps
+
+. If your user has access to more than one organization, select the organization you want to verify from the Organization drop-down menu.
+
+. In *Administration >  Identity and access*.
+
+. Select *Organization*.
+
+. Next to the page title, select *Verify*.
++
+image:screenshot-iam-verify-org.png[A screenshot of the Organization page with the Verify button highlighted.]
++
+NOTE: If your company has only one business account, the tag next to the page header will say *Verified* and there is no action to take. 
+
+. In the *Associate business account* dialog, select the business account you want to associate with your Console organization from the drop-down menu. Then select *Associate*.
+
+

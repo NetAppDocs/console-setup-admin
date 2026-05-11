@@ -1,0 +1,37 @@
+//All links and images must use the absolute URL.
+
+
+
+=== Console agent 4.7.0
+
+The 4.7.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes.
+
+=== NetApp Console administration
+
+This release includes the following new feature.
+
+.Verify your Console organization
+By default, Digital Advisor shows all NetApp accounts associated with your company, rather than just your Console organization. To limit what is shown in Digital Advisor to a specific account, verify the business account you want to use with your Console organization. link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-organization-verify.html[Learn how to verify your Console organization^]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
