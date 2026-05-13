@@ -13,7 +13,7 @@ summary: Now that you've logged in and set up the NetApp Console in standard mod
 :imagesdir: ./media/
 
 [.lead]
-Now that you've logged in and set up NetApp Console in standard mode, users can create and discover storage systems and use NetApp data services.
+Now that you've logged in and set up the NetApp Console in standard mode, users can create and discover storage systems and use NetApp data services.
 
 TIP: If you installed a Console agent in AWS, Microsoft Azure, or Google Cloud, then the Console automatically discovers information about the Amazon S3 buckets, Azure Blob storage, or Google Cloud Storage buckets in the location where the agent is installed. These systems are automatically added to the *Systems* page.
 

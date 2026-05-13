@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: reference-agent-maint-console-config-checker.html
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy
-summary: You can use the Console agent maintenance console to configure a Console agent to use a transparent proxy server.
+keywords: agent maintenance console, agent troubleshooting, network connectivity validation, agent validation, hardware requirements, deployment readiness, operational compliance, installation troubleshooting
+summary: You can use the Console agent maintenance console to validate the installation and configuration of a Console agent.
 ---
 
 = Console agent validation with the maintenance console in NetApp Console
@@ -15,8 +15,10 @@ summary: You can use the Console agent maintenance console to configure a Consol
 [.lead]
 You can use the Console agent maintenance console to validate the installation and configuration of a Console agent.
 
+
+
 == Access the agent maintenance console
-You can access the maintenance Console from the Console agent host. Navigate to the following directory:
+You can access the maintenance console from the Console agent host. Navigate to the following directory:
 [source,cli]
 ----
 /opt/application/netapp/service-manager-2/agent-maint-console
@@ -27,16 +29,18 @@ You can access the maintenance Console from the Console agent host. Navigate to 
 
 The `config-checker validate` command allows you to validate the configuration of a Console agent. 
 
+link:reference-networking-saas-console.html[Learn more about required network access points.]
+link:task-install-agent-on-prem.html#os-req-agent[Learn more about host requirements.]
 
 === Parameters
 `--services <comma-separated list of services to validate>` --*REQUIRED*--
 [role="quick-margin-para"]
 Choose one or more services to validate. Valid service names are: 
 
-*`PLATFORM` which validates network connectivity to required Console endpoints as well as if the required ports are open for the Console agent.
+* `PLATFORM` which validates network connectivity to required Console endpoints as well as if the required ports are open for the Console agent.
 
 
-`--validationTypes <comma-separated list validation types to run>` --*REQUIRED*--
+`--validationTypes <comma-separated list of validation types to run>` --*REQUIRED*--
 Choose from one or more validation types to run. Valid validation types are:
 
 * `NETWORK` which validates network connectivity to required Console endpoints.
@@ -56,7 +60,7 @@ Specifies the path to one or more certificate files to use for the validation. T
 
 
 === Config-checker validate examples
-The following examples include validating network connectivity, required ports, and hardware requirments along with different combinations of using a proxy server and custom certificates.
+The following examples include validating network connectivity, required ports, and hardware requirements along with different combinations of using a proxy server and custom certificates.
 
 .Validation for network connectivity and hardware requirements:
 [role="quick-margin-para"]

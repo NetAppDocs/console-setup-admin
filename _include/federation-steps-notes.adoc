@@ -23,7 +23,7 @@ NOTE: When using the Console in restricted mode, copy the URL to either an incog
 
 . Set up notifications. 
 +
-Choose between seven days or 30 days. The system emails expiry notifications and shows them in the Console to any user with the following roles: Super admin, Org admin, Federation admin, and Federation viewer.
+Choose between seven days and 30 days. The system emails expiry notifications and shows them in the Console to any user with the following roles: Super admin, Org admin, Federation admin, and Federation viewer.
 
 . Review the federation details and then select *Enable federation*.
 
@@ -45,9 +45,9 @@ After you enable the federation, users log in to the NetApp Console using their 
 
 
 
-//tag::federation--prereq[]
+//tag::federation-prereq[]
 .Before you begin
 * An IdP account with administrative privileges is required. Coordinate with your IdP administrator to complete the steps.
-* Identify the domain you want to use for federation. You can use your email domain or a different domain that you own. If you want to use a domain other than your email domain, you must first verify the domain in the Console. You can do this by following the steps in the link:task-federation-verify-domain.html[Verify your domain in NetApp Console] topic.
-//end::federation--prereq[]
+* Identify the domain you want to use for federation. You can use your email domain or a different domain that you own. If you want to use a domain other than your email domain, you must first verify the domain in the Console. For instructions, see link:task-federation-verify-domain.html[Verify your domain in NetApp Console].
+//end::federation-prereq[]
 

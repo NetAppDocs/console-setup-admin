@@ -13,10 +13,10 @@ summary: After you've added a federated connection, you can manage it in the Net
 :imagesdir: ./media/
 
 [.lead]
-You can manage your federation in the NetApp Console. You can disable it, update expired credentials, as well as disable it if you no longer need it.
+You can manage your federation in the NetApp Console. You can disable it, update expired credentials, as well as delete it if you no longer need it.
 
 .Required roles
-The Federation admin role is required to make create and manage federations. Federation viewer can view the Federation page.  link:reference-iam-predefined-roles.html[Learn more about access roles.]
+The Federation admin role is required to create and manage federations. Federation viewer can view the Federation page. link:reference-iam-predefined-roles.html[Learn more about access roles.]
 
 You can also add an additional verified domain to an existing federation, which allows you to use multiple domains for your federated connection.
 
@@ -93,7 +93,7 @@ Test the connection of an existing federation to verify that it works. This can 
 
 . Select the *Federation* tab.
 
-. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to add a verified domain to and select *Test connection*. 
+. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to test and select *Test connection*. 
 
 . Select *Test*. The system prompts you to log in with your corporate credentials. If the connection is successful, you are redirected to the NetApp Console. If the connection fails, you see an error message indicating the issue with the federation.
 
@@ -110,7 +110,7 @@ Disable a federation before deleting it, such as when decommissioning the IdP or
 
 . Select the *Federation* tab.
 
-. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to add a verified domain to and select *Disable*. 
+. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to disable and select *Disable*. 
 
 == Delete a federation
 If you no longer need a federation, you can delete it. This removes the federation and prevents any users associated with the federation from logging in to the Console using their corporate credentials. For example, if the IdP is being decommissioned or if the federation is no longer needed. 
@@ -121,9 +121,9 @@ IMPORTANT: You must disable a federation before you can delete it. You cannot un
 
 .Steps
 
-. Select *Administration > Identity and access* .
+. Select *Administration > Identity and access*.
 . Select *Federations* to view the *Federations* page.
-. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to add a verified domain to and select *Delete*. 
+. Select the actions menu image:button_3_vert_dots.png[an icon with three vertical dots] next to the federation that you want to delete and select *Delete*. 
 
 
 

@@ -17,9 +17,9 @@ You manage AWS credentials and marketplace subscriptions directly from NetApp Co
 
 == Initial AWS credentials
 
-When you deploy an Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console agent in AWS. The required permissions are listed in the link:task-install-agent-aws-console.html#aws-permissions-agent[Agent deployment policy for AWS].
+When you deploy a Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console agent in AWS. The required permissions are listed in the link:task-install-agent-aws-console.html#aws-permissions-agent[Agent deployment policy for AWS].
 
-When the Console launches the Console agent in AWS, it creates an IAM role and a profile for the agent. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the Agent uses the permissions].
+When the Console launches the Console agent in AWS, it creates an IAM role and a profile for the agent. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the agent uses the permissions].
 
 image:diagram_permissions_initial_aws.png[A conceptual image that shows the Console deploying the Console agent in an AWS account.]
 
@@ -27,7 +27,7 @@ If you add a new Cloud Volumes ONTAP system, the Console selects these AWS crede
 
 image:screenshot_accounts_select_aws.gif[A screenshot that shows the Switch Account option in the Details & Credentials page.]
 
-Deploy all of your Cloud Volumes ONTAP systems using the initial AWS credentials, or you can add additional credentials.
+You can deploy all of your Cloud Volumes ONTAP systems using the initial AWS credentials, or you can add additional credentials.
 
 == Additional AWS credentials
 
@@ -105,7 +105,7 @@ No, it's not possible to move the AWS resources associated with your Cloud Volum
 
 === How do credentials work for marketplace deployments and on-premises deployments?
 
-The sections above describe the recommended deployment method for the Console agent, which is from the Console. You can also deploy an agent in AWS from the AWS Marketplace and you can manually install the Console agent software on your own Linux host or in your VCenter.
+The sections above describe the recommended deployment method for the Console agent, which is from the Console. You can also deploy an agent in AWS from the AWS Marketplace and you can manually install the Console agent software on your own Linux host or in your vCenter.
 
 If you use the Marketplace, permissions are provided in the same way. You just need to manually create and set up the IAM role, and then provide permissions for any additional accounts.
 

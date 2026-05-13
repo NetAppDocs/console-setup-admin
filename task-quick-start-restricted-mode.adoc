@@ -40,7 +40,7 @@ Restricted mode is typically used by state and local governments and regulated c
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] link:task-subscribe-restricted-mode.html[Subscribe to NetApp Intelligent Services (optional)]
 
 [role="quick-margin-para"]
-Optional: Subscribe to NetApp Intelligent Services from your cloud provider's marketplace to pay for data services at an hourly rate (PAYGO) or through an annual contract. NetApp Intelligent Services include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience and NetApp Disaster Recovery. NetApp Data Classification is included with your subscription at no additional cost.
+Optional: Subscribe to NetApp Intelligent Services from your cloud provider's marketplace to pay for data services at an hourly rate (PAYGO) or through an annual contract. NetApp Intelligent Services include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience, and NetApp Disaster Recovery. NetApp Data Classification is included with your subscription at no additional cost.
 
 include::_include/cloud-tiering-eol.adoc[]
 
@@ -77,18 +77,18 @@ a| NetApp Data Classification
 * Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode.|  Yes
 a| NetApp Replication
 
-* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes*,  (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
+* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
 
 | *NetApp support contract features*
 | None | N/A
 
 
 
-.12+| *Administrative features*
+.11+| *Administrative features*
 | Audit | No
 | Automation hub | No
 | Federation | No
-| Identity and access management | No
+| Identity and access management | Yes
 a| Licenses and subscriptions management
 
 
@@ -108,6 +108,6 @@ For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing 
 | NSS accounts | No
 | Organization Partnerships | No
 | Read-only mode | No
-| Notifications | No
+
 
 |===

@@ -22,7 +22,7 @@ By default, the NetApp Console displays the Console assistant on the Home page f
  
 //image:screenshot-home-assistant.png[Console assistant on the Home page]
  
-Use the assistant to complete these tasks, which provide the minimal set up for your NetApp Console environment:
+Use the assistant to complete these tasks, which provide the minimum setup for your NetApp Console environment:
  
 * Add a NetApp Support Site (NSS) account.
 +

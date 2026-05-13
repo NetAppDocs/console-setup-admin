@@ -26,7 +26,6 @@ Restricted mode is for organizations needing enhanced security and limited conne
 Private mode (installed on your premises or in the cloud)::
 Private mode is for organizations with strict security needs, such as those in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or air-gapped environments. It does not connect to the NetApp Console SaaS application or NetApp cloud-based APIs, giving you full control and blocking outside communication. Supported data services include NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. Use this mode for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
 
-When installed on your premises, only ONTAP storage systems are supported.
 
 NOTE: NetApp Console limits data flow in restricted and private modes, but you must ensure your environment complies with your regulations.
 
@@ -68,8 +67,8 @@ The following table compares these modes.
 
 | API endpoint
 | The Console SaaS application
-| an agent
-| an agent
+| An agent
+| An agent
 
 | Authentication
 | Through SaaS using auth0, NSS login, or identity federation
@@ -137,9 +136,9 @@ This table shows which storage systems you can manage from the NetApp Console. I
 
 | NetApp Backup and Recovery | Yes
 | NetApp Classification | Yes
-| NetApp Copy and sync | Yes
+| NetApp Copy and Sync | Yes
 | NetApp Disaster Recovery | Yes
-| NetApp Ransomware Protection |Yes
+| NetApp Ransomware Resilience |Yes
 | NetApp Replication | No
 | NetApp Cloud Tiering  | Yes
 | NetApp Volume Caching | Yes
@@ -156,17 +155,16 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Audit | No
 | Automation hub | No
 | Federation | No
-| Identity and access management | No
+| Identity and access management | Yes
 a| Licenses and subscriptions management
 
-* Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depends on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options. | No
+* Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depend on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options. | No
 | Manage cloud provider credentials | No
 | Multi-factor authentication (local users) | No
 | Notifications | No
 | NSS accounts | No
 | Organization Partnerships | No
 | Read-only mode | No
-| Notifications | No
 
 
 |===
@@ -258,7 +256,7 @@ a| NetApp Data Classification
 * Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode.|  Yes
 a| NetApp Replication
 
-* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes*,  (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
+* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
 
 | *NetApp support contract features*
 | None | N/A
@@ -269,7 +267,7 @@ a| NetApp Replication
 | Audit | No
 | Automation hub | No
 | Federation | No
-| Identity and access management | No
+| Identity and access management | Yes
 a| Licenses and subscriptions management
 
 
@@ -289,7 +287,6 @@ For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing 
 | NSS accounts | No
 | Organization Partnerships | No
 | Read-only mode | Yes
-| Notifications | No
 
 |===
 
@@ -397,7 +394,7 @@ a| Licenses and subscriptions management
 For Cloud Volumes ONTAP BYOL, only node-based licensing is supported. Capacity-based licensing is not supported. Because an outbound internet connection isn't available, you need to manually upload your Cloud Volumes ONTAP licensing file in the Console.
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses[Learn how to add licenses^]| No
-| Identity and access management | No
+| Identity and access management | Yes
 | Manage cloud provider credentials | No
 | Read-only mode | No
 | Notifications | No
@@ -523,10 +520,10 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Cloud Volumes ONTAP | Yes | Yes 
 | Google Cloud NetApp Volumes | No | No
 | Google Cloud Storage | No | No
-| On-premisesONTAP clusters | Yes | Yes
+| On-premises ONTAP clusters | Yes | Yes
 | E-Series | No | No
 | StorageGRID | No | No 
-| Workload factory | No | No
+| Workloads | No | No
 
 .8+| *Data Services*
 
@@ -538,9 +535,9 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 
 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity[View the list of supported backup destinations for ONTAP volume data^]
 | NetApp Classification | Yes | Yes
-| Copy and sync | No | No
+| NetApp Copy and Sync | No | No
 | NetApp Disaster Recovery | No | No
-| NetApp Ransomware Protection | No | No
+| NetApp Ransomware Resilience | No | No
 | NetApp Replication | Yes | Yes
 | NetApp Cloud Tiering* | No | No
 | NetApp Volume Caching | No | No

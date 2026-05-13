@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-agent-vm-config.html
 keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, agent maintenance, agent operating system, agent host
-summary: You can make changes to your existing VCenter or ESXi host after you deploy the Console agent. For example, you can increase the CPU or RAM of the VM instance that hosts the Console agent. 
+summary: You can make changes to your existing vCenter or ESXi host after you deploy the Console agent. For example, you can increase the CPU or RAM of the VM instance that hosts the Console agent. 
 ---
 
-= Maintain a VCenter or ESXi host for the Console agent
+= Maintain a vCenter or ESXi host for the Console agent
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: You can make changes to your existing VCenter or ESXi host after you de
 :imagesdir: ./media/
 
 [.lead]
-You can make changes to your existing VCenter or ESXi host after you deploy the Console agent. For example, you can increase the CPU or RAM of the VM instance that hosts the Console agent. 
+You can make changes to your existing vCenter or ESXi host after you deploy the Console agent. For example, you can increase the CPU or RAM of the VM instance that hosts the Console agent. 
 
 Perform these maintenance tasks using the VM web console:
 
@@ -27,10 +27,10 @@ You can only view (not update) information about the IP address, DNS, and gatewa
 
 == Access the VM maintenance console
 
-You can access the maintenance Console from the VSphere client.
+You can access the maintenance console from the vSphere client.
 
 .Steps
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
@@ -41,7 +41,7 @@ You can access the maintenance Console from the VSphere client.
 You can change the password for the `maint` user.
 
 .Steps
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
@@ -51,10 +51,10 @@ You can change the password for the `maint` user.
 === Increase the CPU or RAM of the VM instance
 You can increase the CPU or RAM of the VM instance that hosts the Console agent.
 
-Edit the VM instance settings in your VCenter or ESXi host, then use the maintenance Console to apply the changes.
+Edit the VM instance settings in your vCenter or ESXi host, then use the maintenance console to apply the changes.
 
-.Steps in the VSphere client
-. Open the VSphere client and log in to your VCenter.
+.Steps in the vSphere client
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Right-click the VM instance and select *Edit Settings*.
 . Increase the hard drive space used for /opt or the /var partition.
@@ -64,21 +64,21 @@ Edit the VM instance settings in your VCenter or ESXi host, then use the mainten
 
 .Steps in the maintenance console
 
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
-. Enter `1 to view the `System Configuration` menu.
+. Enter `1` to view the `System Configuration` menu.
 . Enter `2` and follow the on-screen prompts. The console scans for new settings and increases the size of the partitions.
 
 
 === View network settings for the agent VM
 
-View the network settings for the agent VM in the VSphere client to confirm or troubleshoot network issues. You can only view (not update) the following network settings: IP address and DNS details.
+View the network settings for the agent VM in the vSphere client to confirm or troubleshoot network issues. You can only view (not update) the following network settings: IP address and DNS details.
 
 .Steps
 
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
@@ -90,7 +90,7 @@ Add, update, or remove static routes for the agent VM as needed.
 
 .Steps
 
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
@@ -105,11 +105,11 @@ You can update the search domain settings for the agent VM.
 
 .Steps
 
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
-. Enter `2`` to view the `Network Configuration` menu.
+. Enter `2` to view the `Network Configuration` menu.
 . Enter `8` to update the domain search settings and follow the on-screen prompts.
 . Press Enter.
 . Optionally, make additional changes.
@@ -123,7 +123,7 @@ You can update the search domain settings for the agent VM.
 Access diagnostic tools to troubleshoot issues with the Console agent. NetApp Support may ask you to do this when troubleshooting issues.
 
 .Steps
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.
@@ -139,7 +139,7 @@ SSH access enables advanced terminal features like copy and paste.
 
 
 .Steps
-. Open the VSphere client and log in to your VCenter.
+. Open the vSphere client and log in to your vCenter.
 . Select the VM instance that hosts the Console agent.
 . Select *Launch Web Console*.
 . Log in to the VM instance using the user name and password that you specified when you created the VM instance. The username is `maint` and the password is the one that you specified when you created the VM instance.

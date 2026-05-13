@@ -16,7 +16,7 @@ You must select credentials that are associated with a Console agent. You can't 
 +
 image:screenshot_aws_configure_subscription.png[A screenshot of the action menu for a set of existing credentials.]
 
-. To associate the credentials with an existing subscription, select the subscription from the down-down list and select *Configure*.
+. To associate the credentials with an existing subscription, select the subscription from the drop-down list and select *Configure*.
 
 . To associate the credentials with a new subscription, select *Add Subscription > Continue* and follow the steps in the AWS Marketplace:
 

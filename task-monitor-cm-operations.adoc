@@ -17,7 +17,7 @@ You can monitor the status of the operations that the Console is performing to s
 
 The table highlights the features of the Audit page and Notification Center by comparing them.
 
-[cols=2*,options="header",cols="47,47",width="95%"]
+[cols="47,47",options="header",width="95%"]
 |===
 
 | Notification Center
@@ -76,7 +76,7 @@ https://docs.netapp.com/us-en/console-alerts/index.html[Learn more about NetApp 
 
 The Console classifies notifications into the following categories:
 
-[cols=2*,options="header",cols="20,60",width="85%"]
+[cols="20,60",options="header",width="85%"]
 |===
 
 | Notification type
@@ -125,7 +125,7 @@ You must have the Organization admin role to customize the notifications setting
 
 .Steps
 
-. Select *Administration >  Notifications settings*.
+. Select *Administration > Notifications settings*.
 
 . Select *Organization users* or *Additional recipients*. 
 
