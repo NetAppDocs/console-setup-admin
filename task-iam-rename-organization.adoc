@@ -13,7 +13,7 @@ summary: If needed, you can change the name of your NetApp Console organization.
 :imagesdir: ./media/
 
 [.lead]
-Your NetApp Console organization has a name and an ID. You can choose a name for your organization to help identify it. You may also need to retrieve the organization ID for certain integrations.
+Your NetApp Console organization has a name and an ID. You can choose a name for your organization to help identify it. You may also need to know the organization ID to use for API calls.
 
 == Rename your organization
 

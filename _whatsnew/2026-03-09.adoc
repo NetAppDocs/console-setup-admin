@@ -13,7 +13,7 @@ This release of the Console agent includes security improvements and bug fixes a
 You can validate that the required ports for the Console agent are open using configuration checks. You can perform configuration checks from the Console or the Agent maintenance console. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html[Learn more about running configuration checks on the Console agent.]
 
 
-=== Console administration
+=== NetApp Console administration
 
 You can assign Keystone roles to partner users to allow those users to manage Keystone resources in a partner organization. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html[Learn more about assigning Keystone roles to partner users.]
 
