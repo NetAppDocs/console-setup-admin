@@ -14,16 +14,12 @@ To manage Licenses and subscriptions in the NetApp Console, you need to ensure u
 
 Licenses and subscriptions uses the following roles: 
 
-* *License and Subscription admin*: Perform any actions.
-* *License and Subscription viewer*: Perform failover and migrations. 
+* *License and Subscription admin*
+* *License and Subscription viewer*
 
-// org level 
-
-
-// tabs are Overview, Marketplace subscriptions, Billing preferences, Keystone subscriptions
 [cols=3*,options="header",cols="40,30,30",width="100%"]
 |===
-| Capability | Licenses and Subscription admin | License and Subscription viewer
+| Capability | Licenses and subscriptions admin | License and subscriptions viewer
 | Add license | Yes | No 
 | View license | Yes| Yes
 | Update license | Yes | No 
