@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-iam-predefined-roles.html
-keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access roles, rbac, console
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access role, rbac, console
 summary: NetApp Console identity and access management includes predefined roles that you can assign to the members of your organization.
 ---
 
