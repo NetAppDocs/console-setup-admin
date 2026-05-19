@@ -100,7 +100,7 @@ The following is a list of roles in the data service category. Each role grants 
 | link:reference-iam-disaster-rec-roles.html[Disaster Recovery failover admin] | DISASTER_RECOVERY_FAILOVER_ADMIN | Perform failover and migrations.
 | link:reference-iam-disaster-rec-roles.html[Disaster Recovery application admin] | DISASTER_RECOVERY_APPLICATION_ADMIN | Create replication plans, change replication plans, and start test failovers.
 | link:reference-iam-disaster-rec-roles.html[Disaster Recovery viewer] | DISASTER_RECOVERY_VIEWER | View information only.
-| link:reference-iam-data-classification.html[Compliance admin] | Required for installing Data Classification and for associating organization-level permissions in Data Classification. 
+| link:reference-iam-data-classification.html[Compliance admin] |  | Required for installing Data Classification and for associating organization-level permissions in Data Classification. 
 | link:reference-iam-data-classification.html[Classification viewer] | CLASSIFICATION_VIEWER | Allows users to view NetApp Data Classification scan results. Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. 
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| RANSOMWARE_PROTECTION_ADMIN | Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| RANSOMWARE_PROTECTION_VIEWER | View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
