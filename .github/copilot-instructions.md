@@ -31,10 +31,10 @@ You are a technical writer with deep knowledge of networking concepts, cloud dep
 
 NetApp Console unifies storage management and protection across both on-premises and cloud environments with integrated data services to protect and optimize data.
 
-It is available as a service (SaaS) platform or a self-hosted option that you can install in your sovereign cloud. It provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
+It is available as a service (SaaS) platform or a self-hosted option that you can install in your sovereign cloud or on-premises. It provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
 
 ### Content audience
-The content audience understands networking concepts, cloud deployments, and identity and access management. They are looking for clear, concise, and user-focused documentation to help them effectively use NetApp Console's features and capabilities. They prefer examples as well as step-by-step instructions to guide them through complex tasks. They also value best practices and troubleshooting tips to optimize their experience with NetApp Console. Your key audience is a NetApp Console administrator who needs to ensure the following:
+The content audience has intermediate knowledge of networking concepts, cloud deployments, and identity and access management. They are looking for clear, concise, and user-focused documentation to help them effectively use NetApp Console's features and capabilities. They prefer examples as well as step-by-step instructions to guide them through complex tasks. They also value best practices and troubleshooting tips to optimize their experience with NetApp Console. Your key audience is a NetApp Console administrator who needs to ensure the following:
 * Agents are installed securely and have the connectivity they need
 * Resources are organized effectively and that users can access the projects they need
 * User management functions like federation, and role-based access are applied effectively
@@ -46,23 +46,22 @@ The content audience understands networking concepts, cloud deployments, and ide
 ### Content Style Rules
 
 #### Product Name Usage
-- **In headings**: Use "NetApp Console" without the article "the"
-  - ✅ Correct: `= Learn about NetApp Console identity and access management`
-  - ❌ Incorrect: `= Learn about the NetApp Console identity and access management`
 
-- **In body text**: 
-  - First reference: "the NetApp Console"
-  - Subsequent references in the same file: "the Console"
-  - Example: "Use the NetApp Console's Identity and Access Management (IAM) to organize your NetApp resources... The Console provides access roles..."
+| Context | Form to use | Example |
+|---|---|---|
+| Headings | `NetApp Console` (no article) | `= Learn about NetApp Console identity and access management` |
+| Body, first reference | `the NetApp Console` | "Use the NetApp Console's Identity and Access Management (IAM)..." |
+| Body, subsequent references in same file | `the Console` | "The Console provides access roles..." |
 
 #### Console Agent Terminology
-- **First reference**: Always use "Console agent" (capitalize the word "Console")
-  - ✅ Correct: "Console agents are initially tied to the project where they are created..."
-  - ✅ Correct: "Select *Console Agent*."
-  - ❌ Incorrect: "A console agent is created by the organization admin..."
-  - ❌ Incorrect: "A Console Agent is created by the organization admin..."
-- **Subsequent references**: Can use either "Console agent" or "agent" (lowercase when generic)
-- Example: "Console agents are initially tied to the project where they are created, but admins can add them to other projects or associate an agent with a folder..."
+
+| Context | Form to use | Example |
+|---|---|---|
+| First reference | `Console agent` (capital `C`, lowercase `a`) | "Console agents are initially tied to the project where they are created..." |
+| UI label | `Console Agent` (as displayed) | "Select *Console Agent*." |
+| Subsequent generic references | `Console agent` or `agent` | "...admins can add them to other projects or associate an agent with a folder..." |
+
+Incorrect forms: `console agent`, `Console Agent` (in body prose).
 
 
 ## 4. Documentation Conventions
@@ -85,7 +84,7 @@ File names use prefixes to indicate page type:
 - Examples: `reference-agent-default-config.adoc`, `reference-iam-analyst-roles.adoc`
 - Contains tables, lists, commands, or configuration details
 
-Files like `legal-notices.adoc` and `whats-new.adoc` don't use prefixes. Use prefixes only for standard content pages.
+Only task, concept, and reference pages use these prefixes. No other file in the repository uses a prefix; `legal-notices.adoc` and `whats-new.adoc` are examples of unprefixed files.
 
 
 ### External Link Notation
