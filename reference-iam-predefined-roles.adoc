@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-iam-predefined-roles.html
-keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access roles, rbac, bluexp
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access roles, rbac, console
 summary: NetApp Console identity and access management includes predefined roles that you can assign to the members of your organization.
 ---
 
@@ -13,36 +13,42 @@ summary: NetApp Console identity and access management includes predefined roles
 :imagesdir: ./media/
 
 [.lead]
-Identity and access management (IAM) in the NetApp Console provides predefined roles that you can assign to the members of your organization across different levels of your resource hierarchy. Before you assign these roles, you should understand the permissions that each role includes. Roles fall into the following categories: platform, application, and data service.
+Identity and access management (IAM) in the NetApp Console provides predefined roles that you can assign to the members of your organization across different levels of your resource hierarchy. Before you assign these roles, you should understand the permissions that each role includes. Roles fall into the following categories: platform, application, and data service. The tables also include each role’s API name for customers who manage role assignments using the API.
+
 
 
 [[platform-roles]]
 == Platform roles
 Platform roles grant NetApp Console administration permissions, including role assignment and user management. The Console has several platform roles. 
 
-[cols="1,2",options="header"]
+*API name is the role identifier used in APIs. Copy the value exactly as shown (including capitalization and underscores).
+
+[cols="1,2,3",options="header"]
 |===
 
 | Platform role
+| API name*
 | Responsibilities
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin] | Allows a user unrestricted access to all projects and folders within an organization. Can add members to any project or folder, as well as perform any task and use any data service that does not have an explicit role associated with it. 
+| link:reference-iam-platform-roles.html#organization-admin-roles[Organization admin] | ORGANIZATION_ADMIN
+| Allows a user unrestricted access to all projects and folders within an organization. Can add members to any project or folder, as well as perform any task and use any data service that does not have an explicit role associated with it. 
 
 Users with this role manage your organization by creating folders and projects, assigning roles, adding users, and managing systems if they have the proper credentials.
 
 This is the only access role that can create Console agents.
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles[Folder or project admin]|	Allows a user unrestricted access to assigned projects and folders. Can add members to folders or projects they manage, as well as perform any task and use any data service or application on resources within the folder or project they are assigned. 
+| link:reference-iam-platform-roles.html#organization-admin-roles[Folder or project admin]|	FOLDER_OR_PROJECT_ADMIN
+|Allows a user unrestricted access to assigned projects and folders. Can add members to folders or projects they manage, as well as perform any task and use any data service or application on resources within the folder or project they are assigned. 
 
 Folder or project admins cannot create Console agents.
-| link:reference-iam-platform-roles.html#federation-roles[Federation admin]|	Allows a user to create and manage federations with the Console, which enables single-sign on (SSO). 
-| link:reference-iam-platform-roles.html#federation-roles[Federation viewer]|	Allows a user to view existing federations with the Console. Cannot create or manage federations.
-| link:reference-iam-platform-roles.html#partnership-roles[Partnership admin]|	Allows a user to create and manage partnerships.
-| link:reference-iam-platform-roles.html#partnership-roles[Partnership viewer]|	Allows a user to view existing partnerships. Cannot create or manage partnerships.
-| link:reference-iam-platform-roles.html#super-admin-roles[Super admin]| Gives the user a subset of admin roles. This role is designed for smaller organizations that may not need to distribute Console responsibilities across multiple users. 
-| link:reference-iam-platform-roles.html#super-admin-roles[Super viewer]|	Gives the user a subset of viewer roles. This role is designed for smaller organizations that may not need to distribute Console responsibilities across multiple users.
+| link:reference-iam-platform-roles.html#federation-roles[Federation admin]| FEDERATION_ADMIN |	Allows a user to create and manage federations with the Console, which enables single-sign on (SSO). 
+| link:reference-iam-platform-roles.html#federation-roles[Federation viewer]| FEDERATION_VIEWER	| Allows a user to view existing federations with the Console. Cannot create or manage federations.
+| link:reference-iam-platform-roles.html#partnership-roles[Partnership admin]| PARTNERSHIP_ADMIN |Allows a user to create and manage partnerships.
+| link:reference-iam-platform-roles.html#partnership-roles[Partnership viewer]|	PARTNERSHIP_VIEWER | Allows a user to view existing partnerships. Cannot create or manage partnerships.
+| link:reference-iam-platform-roles.html#super-admin-roles[Super admin]| SUPER_ADMIN | Gives the user a subset of admin roles. This role is designed for smaller organizations that may not need to distribute Console responsibilities across multiple users. 
+| link:reference-iam-platform-roles.html#super-admin-roles[Super viewer]| SUPER_VIEWER | Gives the user a subset of viewer roles. This role is designed for smaller organizations that may not need to distribute Console responsibilities across multiple users.
 
 
 
@@ -53,22 +59,24 @@ Folder or project admins cannot create Console agents.
 == Application roles
 The following is a list of roles in the application category. Each role grants specific permissions within its designated scope. Users without the required application or platform role cannot access the respective application.
 
-
-[cols="1,2",options="header"]
+[cols="1,2,3",options="header"]
 |===
-| Application role | Responsibilities
+| Application role | API name* | 
+Responsibilities
 
-| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes admin] | Users with the Google Cloud NetApp Volumes role can discover and manage Google Cloud NetApp Volumes.
+| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes admin] | GCNV_ADMIN | Users with the Google Cloud NetApp Volumes role can discover and manage Google Cloud NetApp Volumes.
 
-| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes viewer] | Users with the Google Cloud NetApp Volumes user role can view Google Cloud NetApp Volumes.
+| link:reference-iam-gcnv-roles.html[Google Cloud NetApp Volumes viewer] | GCNV_VIEWER | Users with the Google Cloud NetApp Volumes user role can view Google Cloud NetApp Volumes.
 
-| link:reference-iam-keystone-roles.html[Keystone admin] | Users with the Keystone admin role can create service requests. Allows users to monitor and view usage, resources, and admin details within the Keystone tenant they are accessing.
-| link:reference-iam-keystone-roles.html[Keystone viewer] | Users with the Keystone viewer role CANNOT create service requests. Allows users to monitor and view consumption, assets, and administrative information within the Keystone tenant they are accessing.
-| ONTAP Mediator setup role | Service accounts with the ONTAP Mediator setup role can create service requests. This role is required in a service account to configure an instance of the link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html[ONTAP Cloud Mediator^]. 
-|link:reference-iam-analyst-roles.html[Operation support analyst] | Provides access to alerts and monitoring tools and ability to enter and manage support cases.
-| link:reference-iam-storage-roles.html[Storage admin] | Administer storage health and governance functions, discover storage resources, as well as modify and delete existing systems.
-| link:reference-iam-storage-roles.html[Storage viewer] | View storage health and governance functions, as well as view previously discovered storage resources. Cannot discover, modify, or delete existing storage systems.
-| link:reference-iam-storage-roles.html[System health specialist] | Administer storage and health and governance functions, all permissions of the Storage admin except cannot modify or delete existing systems.
+| link:reference-iam-keystone-roles.html[Keystone admin] | KEYSTONE_ADMIN | Users with the Keystone admin role can create service requests. Allows users to monitor and view usage, resources, and admin details within the Keystone tenant they are accessing.
+| link:reference-iam-keystone-roles.html[Keystone viewer] | KEYSTONE_VIEWER | Users with the Keystone viewer role CANNOT create service requests. Allows users to monitor and view consumption, assets, and administrative information within the Keystone tenant they are accessing.
+| link:reference-iam-licenses-subscriptions.html[License and subscription admin] | Users with the License and subscription admin role can create, update, and delete direct licenses and marketplace subscriptions for the NetApp Console and affiliated data services. 
+| link:reference-iam-licenses-subscriptions.html[License and subscription viewer] | Users with the License and subscription viewer role can view direct licenses and marketplace subscriptions for the NetApp Console and affiliated data services. 
+| ONTAP Mediator setup role | ONTAP_MEDIATOR_SETUP | Service accounts with the ONTAP Mediator setup role can create service requests. This role is required in a service account to configure an instance of the link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html[ONTAP Cloud Mediator^]. 
+|link:reference-iam-analyst-roles.html[Operations support analyst] | OPERATIONS_SUPPORT_ANALYST | Provides access to alerts and monitoring tools and ability to enter and manage support cases.
+| link:reference-iam-storage-roles.html[Storage admin] | STORAGE_ADMIN | Administer storage health and governance functions, discover storage resources, as well as modify and delete existing systems.
+| link:reference-iam-storage-roles.html[Storage viewer] | STORAGE_VIEWER | View storage health and governance functions, as well as view previously discovered storage resources. Cannot discover, modify, or delete existing storage systems.
+| link:reference-iam-storage-roles.html[System health specialist] | SYSTEM_HEALTH_SPECIALIST | Administer storage and health and governance functions, all permissions of the Storage admin except cannot modify or delete existing systems.
 |===
 
 
@@ -78,29 +86,29 @@ The following is a list of roles in the application category. Each role grants s
 == Data service roles
 The following is a list of roles in the data service category. Each role grants specific permissions within its designated scope. Users who do not have the required data service role or a platform role will be unable to access the data service.
 
-
-[cols="10,24",options="header"]
+[cols="1,2,3",options="header",width="100%"]
 |===
 
 | Data service role
+| API name*
 | Responsibilities
 
-| link:reference-iam-backup-rec-roles.html[Backup and Recovery super admin] | Perform any actions in NetApp Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and Recovery admin] | Perform backups to local snapshots, replicate to secondary storage, and back up to object storage.
-| link:reference-iam-backup-rec-roles.html[Backup and Recovery restore admin] | Restore workloads in Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and Recovery clone admin] | Clone applications and data in Backup and Recovery.
-| link:reference-iam-backup-rec-roles.html[Backup and Recovery viewer] | View Backup and Recovery information.
-| link:reference-iam-disaster-rec-roles.html[Disaster Recovery admin] | Perform any actions in NetApp Disaster Recovery service.
-| link:reference-iam-disaster-rec-roles.html[Disaster Recovery failover admin] | Perform failover and migrations.
-| link:reference-iam-disaster-rec-roles.html[Disaster Recovery application admin] | Create replication plans, change replication plans, and start test failovers.
-| link:reference-iam-disaster-rec-roles.html[Disaster Recovery viewer] | View information only.
-| link:reference-iam-data-classification.html[Compliance admin] | Required for installing Data Classification and for associating organization-level permissions in Data Classification. 
-| link:reference-iam-data-classification.html[Classification viewer] | Allows users to view NetApp Data Classification scan results. Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. 
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
-| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer] | View suspicious user behavior alerts and insights in Ransomware Resilience. 
-| SnapCenter admin | Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery super admin] | BACKUP_SUPER_ADMIN | Perform any actions in NetApp Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery admin] | BACKUP_ADMIN | Perform backups to local snapshots, replicate to secondary storage, and back up to object storage.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery restore admin] | RESTORE_ADMIN | Restore workloads in Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery clone admin] | CLONE_ADMIN | Clone applications and data in Backup and Recovery.
+| link:reference-iam-backup-rec-roles.html[Backup and Recovery viewer] | BACKUP_VIEWER | View Backup and Recovery information.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery admin] | DISASTER_RECOVERY_ADMIN | Perform any actions in NetApp Disaster Recovery service.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery failover admin] | DISASTER_RECOVERY_FAILOVER_ADMIN | Perform failover and migrations.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery application admin] | DISASTER_RECOVERY_APPLICATION_ADMIN | Create replication plans, change replication plans, and start test failovers.
+| link:reference-iam-disaster-rec-roles.html[Disaster Recovery viewer] | DISASTER_RECOVERY_VIEWER | View information only.
+| link:reference-iam-data-classification.html[Compliance admin] |  | Required for installing Data Classification and for associating organization-level permissions in Data Classification. 
+| link:reference-iam-data-classification.html[Classification viewer] | CLASSIFICATION_VIEWER | Allows users to view NetApp Data Classification scan results. Users with this role can view compliance information and generate reports for resources that they have permission to access. These users can't enable or disable scanning of volumes, buckets, or database schemas. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience admin]| RANSOMWARE_PROTECTION_ADMIN | Manage actions on the Protect, Alerts, Recover, Settings, and Reports tabs of NetApp Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| RANSOMWARE_PROTECTION_VIEWER | View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
+| link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | View suspicious user behavior alerts and insights in Ransomware Resilience. 
+| SnapCenter admin | SNAPCENTER_ADMIN | Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
 
 * Complete any action from Backup and Recovery > Applications
 * Manage all systems in the projects and folders for which they have permissions
