@@ -113,7 +113,7 @@ You can send specific types of notifications by email so you can be informed of 
 
 [NOTE]
 ====
-* The Console sends email notifications for the agent, licenses and subscriptions, NetApp Copy and Sync, and NetApp Backup and Recovery.
+* The Console sends email notifications for the agent, licenses and subscriptions, NetApp Copy and Sync, NetApp Backup and Recovery and NetApp Ransomware Resilience.
 * Sending email notifications is not supported when the Console agent is installed in a site without internet access.
 ====
 
