@@ -23,7 +23,7 @@ XYZ Corporation has four storage engineers from different departments who view K
 
 The following table indicates the actions that each Keystone role can perform. 
 
-[cols=3*,options="header",cols="40,20a,20a",width="100%"]
+[cols="40,20a,20a",options="header",width="100%"]
 |===
 | Feature and action
 | Keystone admin

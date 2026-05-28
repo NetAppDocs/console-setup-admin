@@ -67,8 +67,8 @@ The following table compares these modes.
 
 | API endpoint
 | The Console SaaS application
-| an agent
-| an agent
+| An agent
+| An agent
 
 | Authentication
 | Through SaaS using auth0, NSS login, or identity federation
@@ -137,9 +137,9 @@ This table shows which storage systems you can manage from the NetApp Console. I
 
 | NetApp Backup and Recovery | Yes
 | NetApp Classification | Yes
-| NetApp Copy and sync | Yes
+| NetApp Copy and Sync | Yes
 | NetApp Disaster Recovery | Yes
-| NetApp Ransomware Protection |Yes
+| NetApp Ransomware Resilience |Yes
 | NetApp Replication | No
 | NetApp Cloud Tiering  | Yes
 | NetApp Volume Caching | Yes
@@ -156,17 +156,16 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Audit | No
 | Automation hub | No
 | Federation | No
-| Identity and access management | No
+| Identity and access management | Yes
 a| Licenses and subscriptions management
 
-* Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depends on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options. | No
+* Marketplace subscriptions and BYOL are supported with standard mode; however, the supported licensing options depend on which NetApp data service you are using. Review the documentation for each service to learn more about the available licensing options. | No
 | Manage cloud provider credentials | No
 | Multi-factor authentication (local users) | No
 | Notifications | No
 | NSS accounts | No
 | Organization Partnerships | No
 | Read-only mode | No
-| Notifications | No
 
 
 |===
@@ -206,7 +205,7 @@ NetApp Console provides authentication with auth0 or NetApp Support Site (NSS) l
 
 === How to get started with standard mode
 Go to the https://console.netapp.com[NetApp Console^] and sign up.
-+
+
 link:task-quick-start-standard-mode.html[Learn how to get started with standard mode].
 
 == NetApp Console in restricted mode (installed in your own public cloud)
@@ -219,7 +218,7 @@ Depending on the data services and features that you plan to use, a Console orga
 
 
 
-<<Restricted mode, Learn more about outbound connectivity to the NetApp Console APIs>>.
+link:task-install-restricted-mode.html[Learn more about outbound connectivity to the NetApp Console APIs].
 
 The following image is an example of a restricted mode deployment.
 
@@ -258,7 +257,7 @@ a| NetApp Data Classification
 * Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode.|  Yes
 a| NetApp Replication
 
-* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes*,  (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
+* Supported in Government regions with restricted mode. Not supported in commercial regions or in sovereign regions with restricted mode. | Yes* (not needed if replicating from ONTAP on-premises to ONTAP on-premises)
 
 | *NetApp support contract features*
 | None | N/A
@@ -269,7 +268,7 @@ a| NetApp Replication
 | Audit | No
 | Automation hub | No
 | Federation | No
-| Identity and access management | No
+| Identity and access management | Yes
 a| Licenses and subscriptions management
 
 
@@ -289,7 +288,6 @@ For Cloud Volumes ONTAP, both capacity-based licensing and node-based licensing 
 | NSS accounts | No
 | Organization Partnerships | No
 | Read-only mode | Yes
-| Notifications | No
 
 |===
 
@@ -398,7 +396,7 @@ a| Licenses and subscriptions management
 For Cloud Volumes ONTAP BYOL, only node-based licensing is supported. Capacity-based licensing is not supported. Because an outbound internet connection isn't available, you need to manually upload your Cloud Volumes ONTAP licensing file in the Console.
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses[Learn how to add licenses^]| No
-| Identity and access management | No
+| Identity and access management | Yes
 | Manage cloud provider credentials | No
 | Read-only mode | No
 | Notifications | No
@@ -524,10 +522,10 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Cloud Volumes ONTAP | Yes | Yes 
 | Google Cloud NetApp Volumes | No | No
 | Google Cloud Storage | No | No
-| On-premisesONTAP clusters | Yes | Yes
+| On-premises ONTAP clusters | Yes | Yes
 | E-Series | No | No
 | StorageGRID | No | No 
-| Workload factory | No | No
+| Workloads | No | No
 
 .8+| *Data Services*
 
@@ -539,9 +537,9 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 
 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity[View the list of supported backup destinations for ONTAP volume data^]
 | NetApp Classification | Yes | Yes
-| Copy and sync | No | No
+| NetApp Copy and Sync | No | No
 | NetApp Disaster Recovery | No | No
-| NetApp Ransomware Protection | No | No
+| NetApp Ransomware Resilience | No | No
 | NetApp Replication | Yes | Yes
 | NetApp Cloud Tiering* | No | No
 | NetApp Volume Caching | No | No

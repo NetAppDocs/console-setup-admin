@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: reference-iam-data-classification.html
+keywords: role-based access control, IAM roles, access delegation, data classification, cloud data sense, compliance admin, classification viewer
+summary: NetApp Data Classification supports two roles to manage read and write access to assets. 
+---
+= NetApp Data Classification roles in NetApp Console
+:hardbreaks:
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+NetApp Data Classification supports identity and access management role to give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization. How you assign roles depends on your own business and storage management practices.
+
+Data Classification supports two roles:
+
+* Compliance admin
+* Classification viewer
+
+== Compliance admin
+
+The Compliance admin role works only at the organization level to manage access to Data Classification resources. If a user has responsibilities less than an Organization admin, they must have  the Compliance admin role to install Data Classification. 
+
+[IMPORTANT]
+The Compliance admin role is not a standalone role. Users with the Compliance admin role must also be associated with at least one link:reference-iam-platform-roles.html[Platform role].
+
+[NOTE]
+The Compliance admin was added to Data Classification in version 1.54. If you had deployed Data Classification prior to this release and had a platform role with less access than an organization admin, the Compliance admin role was automatically associated with the user account. 
+
+== Classification viewer 
+
+The Classification viewer is designed for users who need access to scan results in Data Classification, but don't need access to configuration resources. Users with Classification viewer role can view results of mapping and full scans to assess areas for storage savings or potential data risks. Users with the Classification viewer role can also generate reports for resources they have access to. These users can't enable or disable scanning of volumes, buckets, or database schemas. 
+
+== More information 
+
+* link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html[Learn about NetApp Data Classification^]

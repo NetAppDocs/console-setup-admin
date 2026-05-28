@@ -12,13 +12,14 @@ summary: Manage your organization's members to provide permissions across differ
 :linkattrs:
 :imagesdir: ./media/
 
-[.lead]Within the Console, you grant users access to projects or folders according to an access role. An _access role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at the assigned level of the resource hierarchy. 
+[.lead]
+Within the Console, you grant users access to projects or folders according to an access role. An _access role_ contains a set of permissions that enables a member (user or service account) to perform specific actions at the assigned level of the resource hierarchy. 
 
 .Required access roles
 Super admin, Org admin, or Folder or project admin (for folders and projects that they are administering). link:reference-iam-predefined-roles.html[Learn about access roles].
 
 == Understand how access is granted in NetApp Console           
-NetApp Console uses role-based access control (RBAC) to manage permissions. Assign roles to users individually or through federated groups. Each role defines allowed actions for specific resources.
+The NetApp Console uses role-based access control (RBAC) to manage permissions. Assign roles to users individually or through federated groups. Each role defines allowed actions for specific resources.
 
 Note the following about granting access in NetApp Console:
 
@@ -49,7 +50,7 @@ Users sign up for the NetApp Console, but an Org admin or Folder or project admi
 .Before you begin:
 The user must have already signed up for the NetApp Console. If they haven't signed up yet, direct them to link:task-sign-up-saas.html[sign up for the NetApp Console.]
 
-NOTE: If you are adding a user that is part of a federated group, ensure that the user has already signed up for the NetApp Console and been explicitly assigned a role in the Console. NetApp recommends assigning minimum access role such as Organization viewer.
+NOTE: If you are adding a user that is part of a federated group, ensure that the user has already signed up for the NetApp Console and been explicitly assigned a role in the Console. NetApp recommends assigning a minimum access role, such as Organization viewer.
 
 .Steps
 
@@ -107,7 +108,7 @@ For JWT authentication, prepare your public key or certificate.
 . To use JWT authentication, select *Use private key JWT authentication* and upload your public RSA key or certificate. Skip if using client ID and secret.
 
 +  
-Your X.509 certificate. It must be in PEM, CRT, or CER format.
+Upload your X.509 certificate in PEM, CRT, or CER format.
 
 +
 .. Set up expiry notifications for your certificate. Choose between seven days or 30 days. Expiry notifications are emailed and shown in the Console to users with the Super admin or Org admin role.
@@ -129,7 +130,7 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 . To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
 
 
-. If you didn't choose to use JWT authentication, download or copy the client ID and client secret. 
+. If you didn't use JWT authentication, download or copy the client ID and client secret. 
 +
 The Console shows the client secret only once. Copy it securely; you can recreate it later if you lose it.
 
@@ -141,12 +142,12 @@ The Console shows the client secret only once. Copy it securely; you can recreat
 
 You can add a federated group from your identity provider (IdP) to your organization and assign it a role or roles. Members of the federated group inherit the roles that you assign to the group in the Console.
 
-IMPORTANT: When you add a federated group to the Console and assign it a role, only users that are members of the group in your IdP and have already signed up for the NetApp Console and been explicitly assigned a role in the Console can access resources. NetApp recommends assigning minimum access role such as Organization viewer to these users.
+IMPORTANT: When you add a federated group to the Console and assign it a role, only users that are members of the group in your IdP and have already signed up for the NetApp Console and been explicitly assigned a role in the Console can access resources. NetApp recommends assigning a minimum access role, such as Organization viewer, to these users.
 
 Before you can assign a role to a federated group, ensure the following:
 
 * Set up federation between your IdP and the Console. link:concept-federation.html[Learn how to set up federation.]
-* The group must already exist in your IdP and been assigned app access to the Console.
+* The group must already exist in your IdP and have been assigned app access to the Console.
 
 
 .Steps
@@ -154,7 +155,7 @@ Before you can assign a role to a federated group, ensure the following:
 . Select *Members*.
 . Select *Add a member*.
 . For *Member Type*, select *Federated Group*.
-. Select the federation of which the group is a member
+. Select the federation of which the group is a member.
 . For *Group name*, enter the exact name of the group in your IdP.
 . Use the *Select an organization, folder, or project* section to choose the level of your resource hierarchy that the member should have permissions for.
 +

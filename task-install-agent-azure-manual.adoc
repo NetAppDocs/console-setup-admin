@@ -21,7 +21,7 @@ NOTE: Deploy a Console agent in the same Azure region as the Cloud Volumes ONTAP
 
 .Before you begin
 
-* link:concept-agent-install-options.html#agent-cloud-manual-deploy[Learn when to deploy manually in the Azure].
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy[Learn when to deploy manually in Azure].
 * You should review link:reference-limitations.html[Console agent limitations].
 
 == Step 1: Review host requirements
@@ -144,11 +144,11 @@ include::_include/azure-set-up-service-principal.adoc[tag=ids]
 
 .Create a client secret
 
-include::_include/azure-set-up-service-principal.adoc[tags=secret]
+include::_include/azure-set-up-service-principal.adoc[tag=secret]
 
 .Result
 
-Your service principal is now setup and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you add an Azure account.
+Your service principal is now set up and you should have copied the application (client) ID, the directory (tenant) ID, and the value of the client secret. You need to enter this information in the Console when you add an Azure account.
 --
 
 ====

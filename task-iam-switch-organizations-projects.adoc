@@ -34,9 +34,6 @@ The *Partnership* tab does not display if you don't have any partner organizatio
 
 . Select another organization and then select *Switch*.
 
-+ 
-If you have any partnership organizations, select the *Partnership* tab to view the available partner organizations. 
-
 
 == Switch between projects
 

@@ -1,6 +1,6 @@
 .Steps
 
-. Go to the https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui[NetApp Console agent listing on the AWS Marketplace^]
+. Go to the https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui[NetApp Console agent listing on the AWS Marketplace^].
 
 . On the Marketplace page, select *Continue to Subscribe*.
 +

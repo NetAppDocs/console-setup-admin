@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-org-partnerships.html
-keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP
+keywords: organization partnerships, partner access, Partnership admin role, Partnership viewer role, organization ID, managed service provider, MSP collaboration, reseller access, cross-organization management, delegated administration
 summary: Creating partnerships between organizations in the NetApp Console lets organization partners securely manage NetApp resources across organizational boundaries, streamlining collaboration and enhancing security.
 ---
 
@@ -27,7 +27,7 @@ Customers can authorize MSPs or resellers to manage NetApp environments without 
 As a partner, you gain centralized visibility and control across customer environments. You can easily switch to a customer's organization to manage resources, run data services, and monitor health within defined boundaries, reducing custom tooling and ensuring alignment with each customer’s policies.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Assign one or more users the Partnership admin role
-Assign one or more users in both the initiating and receiving organizations  the Partnership admin role to create and manage partnerships. you can assign the Partnership viewer role to users who only need to view partnerships, and not manage.
+Assign one or more users in both the initiating and receiving organizations  the Partnership admin role to create and manage partnerships. You can assign the Partnership viewer role to users who only need to view partnerships, not manage them.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Share your organization ID with the initiating organization
 
