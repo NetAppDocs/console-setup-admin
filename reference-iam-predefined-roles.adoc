@@ -24,7 +24,8 @@ Platform roles grant NetApp Console administration permissions, including role a
 |===
 
 | Platform role
-| API name*
+a| API name*
+*API name is the role identifier used in APIs. Copy the value exactly as shown (including capitalization and underscores).
 | Mode availability
 | Responsibilities
 
