@@ -26,6 +26,7 @@ Note the following about granting access in NetApp Console:
 * All users must first sign up for the NetApp Console before they can be granted access to resources, even if they are part of a federated group.
 * You must explicitly assign a role to each user in the Console before they can access resources, even if they are members of a federated group that has been assigned a role.   
 * You can add service accounts directly from the Console and assign them roles.
+* You can choose from supported roles when assigning roles to users or service accounts.
 
 
 
@@ -73,7 +74,7 @@ Note the following:
 . *Select a category* then select a *Role* that provides the member with permissions for the resources that are associated with the organization, folder, or project that you selected.
 
 +
-link:reference-iam-predefined-roles.html[Learn about access roles].
+Only supported roles are displayed in the drop-down list. link:reference-iam-predefined-roles.html[Learn about access roles].
 
 . To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
 
@@ -164,12 +165,14 @@ Note the following:
 ** Selecting an organization or folder grants the member permissions to all its contents.
 ** You can only assign the *Organization admin* role at the organization level.
 
+
 . Select a *Category* then select a *Role* that gives the member permissions for the resources in the organization, folder, or project you selected.
 
 +
-link:reference-iam-predefined-roles.html[Learn about access roles].
+Only supported roles are displayed in the drop-down list. link:reference-iam-predefined-roles.html[Learn about access roles].
 
 . To give access to more folders, projects, or roles, select *Add role*, choose the folder, project, or role category, and select a role.
+
 
 
 
