@@ -17,6 +17,10 @@ Learn what's new with NetApp Console administration features: identity and acces
 
 //All links and images must use the absolute URL.
 
+== 15 June 2026
+
+include::_whatsnew/2026-06-15.adoc[]
+
 == 11 May 2026
 
 include::_whatsnew/2026-05-11.adoc[]
@@ -96,9 +100,11 @@ include::_whatsnew/2025-05-12.adoc[]
 include::_whatsnew/2025-04-14.adoc[]
 
 
+
 == 28 March 2025
 
 include::_whatsnew/2025-03-28.adoc[]
+
 
 
 == 10 March 2025
@@ -110,6 +116,7 @@ include::_whatsnew/2025-03-10.adoc[]
 == 06 March 2025
 
 include::_whatsnew/2025-03-06.adoc[]
+
 
 
 == 18 February 2025
@@ -177,7 +184,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 .Updated SSL certificate for local UI access
 
-When you use BlueXP in restricted mode or private mode, the user interface is accessible from the Connector virtual machine that's deployed in your cloud region or on-premises. By default, BlueXP uses a self-signed SSL certificate to provide secure HTTPS access to the web-based console running on the Connector.
+When you use BlueXP in restricted mode or private mode, the user interface is accessible from the Connector virtual machine that's deployed in your cloud region or on-premises. By default, BlueXP uses a self-signed SSL certificate to provide secure HTTPS access from the local web browser.
 
 In this release, we made changes to the SSL certificate for new and existing Connectors:
 
@@ -210,7 +217,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 === Updated AWS and Azure permissions
 
-We updated the AWS and Azure policies for the Connector to remove permissions that are no longer required. The permissions were related to BlueXP edge caching and discovery and management of Kubernetes clusters, which are no longer supported as of August, 2024.
+We updated the AWS and Azure policies for the Connector to remove permissions that are no longer required. The permissions were related to BlueXP edge caching and discovery and management of Kubernetes clusters in Azure and AWS.
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html#change-log[Learn what changed in the AWS policy].
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#change-log[Learn what changed in the Azure policy].
@@ -230,7 +237,7 @@ Support for this release includes an update to the Connector policy for Azure. T
 "Microsoft.Compute/virtualMachineScaleSets/delete"
 ----
 
-These permissions are required for Cloud Volumes ONTAP support of Virtual Machine Scale Sets. If you have existing Connectors and you want to use this new feature, you'll need to add these permissions to the custom roles that are associated with your Azure credentials.
+These permissions are required for Cloud Volumes ONTAP support of Virtual Machine Scale Sets. If you have existing Connectors and you want to use this new feature, you'll need to add these permissions to the custom policies associated with the Azure credentials.
 
 * https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes[Learn about the Cloud Volumes ONTAP 9.15.1 release^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html[View Azure permissions for the Connector].
@@ -363,7 +370,7 @@ On June 30, 2024, RHEL 7 reached end of maintenance (EOM), while CentOS 7 reache
 
 https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance[Red Hat: What to know about Red Hat Enterprise Linux 7 End of Maintenance^]
 
-If you have an existing agent running on RHEL 7 or CentOS 7, NetApp does not support upgrading or converting the operating system to RHEL 8 or 9. You need to create a new agent on a supported operating system.
+If you have an existing agent running on RHEL 7 or CentOS 7, NetApp does not support upgrading or converting the operating system to RHEL 8 or 9. You need to create a new agent on a supported operating system. Follow these high-level steps to make the switch:
 
 . Set up a RHEL 8 or 9 host.
 . Install Podman.
@@ -420,38 +427,3 @@ To learn more about what's included in the versions of these BlueXP services, re
 * https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[Learn what's new with BlueXP classification^]
 
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html[Learn what's new with Cloud Volumes ONTAP management in BlueXP^]
-
-== 17 May 2024
-
-=== Connector 3.9.40
-
-This release of the BlueXP Connector includes support for additional operating systems, minor security improvements, and bug fixes.
-
-At this time, the 3.9.40 release is available for standard mode and restricted mode.
-
-.Support for RHEL 8 and 9
-
-The Connector is now supported on hosts running the following versions of Red Hat Enterprise Linux with _new_ Connector installations when using BlueXP in standard mode or restricted mode:
-
-* 8.6 to 8.9
-* 9.1 to 9.3
-
-Podman is required as the container orchestration tool for these operating systems.
-
-You should be aware of Podman requirements, known limitations, a summary of operating system support, what to do if you have a RHEL 7 host, how to get started, and more.
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn about support for RHEL 8 and 9 with the Connector].
-
-.End of support for RHEL 7 and CentOS 7
-
-On June 30, 2024, RHEL 7 will reach end of maintenance (EOM), while CentOS 7 will reach end of life (EOL). NetApp will continue to support the Connector on these Linux distributions until June 30, 2024.
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html[Learn what to do if you have an existing Connector running on RHEL 7 or CentOS 7].
-
-.AWS permissions update
-
-In the 3.9.38 release, we updated the Connector policy for AWS to include the "ec2:DescribeAvailabilityZones" permission. This permission is now required to support AWS Local Zones with Cloud Volumes ONTAP.
-
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html[View AWS permissions for the Connector].
-* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html[Learn more about support for AWS Local Zones^]
-
