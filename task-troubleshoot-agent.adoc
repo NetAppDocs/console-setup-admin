@@ -127,9 +127,8 @@ include::_include/endpoints-config-check-note.adoc[]
 
 [[disable-config-check]]
 === Disable configuration checks for manual installations
+=== Disable configuration checks for manual installations
 There may be times when you need to disable the configuration checks that verify outbound connectivity during installation. For example, when manually installing an agent in your Government Cloud environment, you need to disable the configuration checks or the installation will fail. 
-
-.Steps
 
 You disable the configuration check by setting the _skipConfigCheck_ flag in the _com/opt/application/netapp/service-manager-2/config.json_ file. By default, this flag is set to false and the configuration check verifies outbound access for the agent. Set this flag to true to disable the check. Be familiar with JSON syntax before completing this step.
 
@@ -143,6 +142,8 @@ To re-enable the configuration check, use these steps and set the _skipConfigChe
 
 . Stop the service manager 2 service by running the following command:
 
++
+
 [source,cli]
 ----
 systemctl stop netapp-service-manager.service
@@ -153,6 +154,7 @@ systemctl stop netapp-service-manager.service
 ----
   "skipConfigCheck": true
 ----
+
 . Save your file.
 
 . Restart the service manager 2 service by running the following command:
@@ -162,8 +164,6 @@ systemctl stop netapp-service-manager.service
 ----
 systemctl restart netapp-service-manager.service
 ----
-
-
 
 
 
