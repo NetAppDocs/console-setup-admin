@@ -1,0 +1,45 @@
+//All links and images must use the absolute URL.
+
+
+=== Private mode release (4.7.0)
+
+A new private mode release is now available to download from the https://mysupport.netapp.com/site/downloads[NetApp Support Site^] 
+
+The 4.7.0 release includes updates to the following NetApp Console components and services.
+
+[cols=3*,options="header,autowidth"]
+|===
+
+| Component or service
+| Version included in this release
+| Changes since the previous private mode release
+
+| Console agent | 4.7.0 | Go to the https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-05-11.html[What's new in NetApp Console page^] and refer to the changes included for versions 4.7.0.
+
+
+| NetApp Backup and Recovery | 5.4.0 (08 June 2026)| Go to the https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html[what's new in NetApp Backup and Recovery page^].
+
+
+| NetApp Data Classification | 1.54.0 (11 May 2026)| Go to the https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[what's new in NetApp Classification page^].
+
+
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
