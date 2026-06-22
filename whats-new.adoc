@@ -19,7 +19,7 @@ Learn what's new with NetApp Console administration features: identity and acces
 
 == 15 June 2026
 
-include::_whatsnew/2026-06-10.adoc[]
+include::_whatsnew/2026-06-15.adoc[]
 
 == 11 May 2026
 
