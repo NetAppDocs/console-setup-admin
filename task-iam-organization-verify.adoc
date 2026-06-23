@@ -17,7 +17,7 @@ By default, Digital Advisor shows all NetApp accounts associated with your compa
 
 
 == Before you begin
-You must have the Organization admin role to verify your organization. Your user must also be associated with a NetApp Support Site (NSS) account. link:task-adding-nss-accounts[Learn how to associate your NSS account].
+You must have the Organization admin role to verify your organization. Your user must also be associated with a NetApp Support Site (NSS) account. link:task-adding-nss-accounts.html[Learn how to associate your NSS account].
 
 NOTE: If your company has only one business account and your user is associated with a NetApp Support Site account, the Console automatically verifies your organization.
 
