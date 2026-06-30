@@ -5,7 +5,7 @@ keywords: cloud volumes ontap, role-based access control, rbac, viewer, operator
 summary: You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within the Console. Cloud Volumes ONTAP roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization.
 ---
 
-= Cloud Volumes ONTAP access roles for NetApp Console
+= Cloud Volumes ONTAP access roles in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,24 +17,24 @@ You can assign the following roles to users to provide them access to Cloud Volu
 
 Cloud Volumes ONTAP uses the following roles:
 
-* *Cloud Volumes ONTAP admin*: Perform any actions.
-* *Cloud Volumes ONTAP operator*: Discover and manage Cloud Volumes ONTAP working environments, including adding volumes, aggregates, snapshots, and replications, configuring CIFS setup, and upgrading ONTAP.
-* *Cloud Volumes ONTAP viewer*: View information only, but not perform any actions.
+* *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
+* *Cloud Volumes ONTAP operator*: Perform important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
+* *Cloud Volumes ONTAP viewer*: View information only, but not perform any operations. Some tabs and screens containing configuration information might be unavailable to viewers.
 
 For details about all NetApp Console access roles, see link:reference-iam-predefined-roles.html[access roles].
 
 The following table indicates the actions that each role can perform.
 
-[cols="40,20a,20a,20a",options="header",width="100%"]
+[cols="40a,20a,20a,20a",options="header",width="100%"]
 |===
 | Feature and action
 | Cloud Volumes ONTAP viewer
 | Cloud Volumes ONTAP operator
 | Cloud Volumes ONTAP admin
 
-4+| *On the Systems page*:
-| Enter a system | Yes | Yes | Yes
-| View volumes | Yes | Yes | Yes
+4+| *Systems page*:
+| ##Enter a system## | Yes | Yes | Yes
+| View a volume | Yes | Yes | Yes
 | Discover a system | No | Yes | Yes
 | Add a volume | No | Yes | Yes
 | Use *Replication* (not applicable to FSx for ONTAP or on-premises systems) | No | Yes | Yes
@@ -45,11 +45,11 @@ The following table indicates the actions that each role can perform.
 | ##Turn On## | No | No | Yes
 | Remove a system | No | No | Yes
 
-4+| *On the Agents page*:
+4+| *Agents page*:
 | View Cloud Volumes ONTAP settings | Yes | Yes | Yes
 | Edit Cloud Volumes ONTAP settings | No | No | Yes
 
-4+| *On the Overview tab*:
+4+| *Overview tab*:
 | Add a volume | No | Yes | Yes
 | Add an aggregate | No | Yes | Yes
 | Use *Upgrade now* | No | Yes | Yes
@@ -60,9 +60,19 @@ The following table indicates the actions that each role can perform.
 | Set a password | No | No | Yes
 | Remove the system from the workspace | No | No | Yes
 | Delete the system | No | No | Yes
-| Edit *System tags*, *Scheduled downtime*, *Storage classes*, *Instance type*, *Charging method*, *Write speed*, *Ransomware protection*, *Support registration*, and *WORM* from the pencil menu | No | No | Yes
+| Edit the following using the pencil icon on the right pane:
 
-4+| *On the Volumes tab*:
+* *System tags*
+* *Scheduled downtime*
+* *Storage classes*
+* *Instance type*
+* *Charging method*
+* *Write speed*
+* *Ransomware protection*
+* *Support registration*
+* *WORM* | No | No | Yes
+
+4+| *Volumes tab*:
 | Add a volume | No | Yes | Yes
 | Clone a volume | No | Yes | Yes
 | Create a snapshot copy | No | Yes | Yes
@@ -72,13 +82,13 @@ The following table indicates the actions that each role can perform.
 | Change the disk type | No | No | Yes
 | Change the tiering policy | No | No | Yes
 
-4+| *On the Aggregates tab*:
+4+| *Aggregates tab*:
 | Add an aggregate | No | Yes | Yes
 | Add a volume | No | Yes | Yes
 | Increase capacity | No | No | Yes
 | Delete an aggregate | No | No | Yes
 
-4+| *On the Replication page* (with Cloud Volumes ONTAP as the source or destination):
+4+| *Replication page* (with Cloud Volumes ONTAP as the source or destination):
 | Break replication | No | No | Yes
 | Resync replication | No | No | Yes
 | Reverse resync replication | No | No | Yes
