@@ -83,4 +83,8 @@ a| \https://api.workloads.netapp.com
 
 a| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
 
+a| \ws.workloads.bluexp.netapp.com
+
+a| Used by the Workload Factory backend to poll the Console agent for ONTAP operations.
+
 |===
