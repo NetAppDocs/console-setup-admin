@@ -1,0 +1,30 @@
+//All links and images must use the absolute URL.
+
+=== Console agent 4.8.0
+
+The 4.8.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes.
+
+=== NetApp Console administration
+
+This release includes the security improvements and bug fixes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
