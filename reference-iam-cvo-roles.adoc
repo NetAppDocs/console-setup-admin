@@ -19,7 +19,14 @@ Cloud Volumes ONTAP uses the following roles:
 
 * *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
 * *Cloud Volumes ONTAP operator*: Perform important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
-* *Cloud Volumes ONTAP viewer*: View information only, but not perform any operations. Some tabs and screens containing configuration information might be unavailable to viewers.
+* *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
+
+== How role changes take effect
+
+Cloud Volumes ONTAP enforces role-based access control (RBAC) by using a local cache of each role assignment. The cache refreshes automatically every hour. If a role is newly assigned or changed, it can take up to one hour for the change to take effect. After the refresh completes, the Console enables the workflows permitted by that role.
+
+NOTE: When a Console agent is deployed for the first time, or when an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time seeding process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete.
+
 
 For details about all NetApp Console access roles, see link:reference-iam-predefined-roles.html[access roles].
 
@@ -42,7 +49,7 @@ The following table indicates the actions that each role can perform.
 | Add a system | No | No | Yes
 | Access *Optimized cost and performance* | No | No | Yes
 | Open System Manager | No | No | Yes
-| ##Turn On## | No | No | Yes
+| ##Turn on Cloud Volumes ONTAP## | No | No | Yes
 | Remove a system | No | No | Yes
 
 4+| *Agents page*:
