@@ -97,9 +97,9 @@ The following is a list of roles in the data service category. Each role grants 
 | link:reference-iam-backup-rec-roles.html[Backup and Recovery restore admin] | RESTORE_ADMIN | Standard, Restricted, Private | Restore workloads in the Backup and Recovery.
 | link:reference-iam-backup-rec-roles.html[Backup and Recovery clone admin] | CLONE_ADMIN | Standard, Restricted, Private | Clone applications and data in the Backup and Recovery.
 | link:reference-iam-backup-rec-roles.html[Backup and Recovery viewer] | BACKUP_VIEWER | Standard, Restricted, Private | View Backup and Recovery information.
-| link:reference-iam-cvo-roles.html[Cloud Volumes ONTAP admin] |CVO_ADMIN| Standard, Restricted, Private | ##Provides full access to all Cloud Volumes ONTAP operations.##
-| link:reference-iam-cvo-roles.html[Cloud Volumes ONTAP operator] |CVO_OPERATOR | Standard, Restricted, Private | ##Enables day-to-day management tasks, including adding volumes, configuring replication, and managing storage.##
-| link:reference-iam-cvo-roles.html[Cloud Volumes ONTAP viewer] |CVO_VIEWER| Standard, Restricted, Private | ##Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations.##
+| link:reference-iam-cvo-roles.html[Cloud Volumes ONTAP admin] |CVO_ADMIN| Standard, Restricted, Private | Provides full access to all Cloud Volumes ONTAP operations.
+| link:reference-iam-cvo-roles.html[Cloud Volumes ONTAP operator] |CVO_OPERATOR | Standard, Restricted, Private | Enables day-to-day management tasks, including adding volumes, configuring replication, and managing storage.
+| link:reference-iam-cvo-roles.html[Cloud Volumes ONTAP viewer] |CVO_VIEWER| Standard, Restricted, Private | Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations.
 | link:reference-iam-disaster-rec-roles.html[Disaster Recovery admin] | DISASTER_RECOVERY_ADMIN | Standard | Perform any actions in NetApp Disaster Recovery service.
 | link:reference-iam-disaster-rec-roles.html[Disaster Recovery failover admin] | DISASTER_RECOVERY_FAILOVER_ADMIN | Standard | Perform failover and migrations.
 | link:reference-iam-disaster-rec-roles.html[Disaster Recovery application admin] | DISASTER_RECOVERY_APPLICATION_ADMIN | Standard | Create replication plans, change replication plans, and start test failovers.

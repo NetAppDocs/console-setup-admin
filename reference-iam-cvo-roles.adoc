@@ -40,7 +40,7 @@ The following table indicates the actions that each role can perform.
 | Cloud Volumes ONTAP admin
 
 4+| *Systems page*:
-| ##Enter a system## | Yes | Yes | Yes
+| Enter a system| Yes | Yes | Yes
 | View a volume | Yes | Yes | Yes
 | Discover a system | No | Yes | Yes
 | Add a volume | No | Yes | Yes
@@ -49,7 +49,7 @@ The following table indicates the actions that each role can perform.
 | Add a system | No | No | Yes
 | Access *Optimized cost and performance* | No | No | Yes
 | Open System Manager | No | No | Yes
-| ##Turn on Cloud Volumes ONTAP## | No | No | Yes
+| Turn on Cloud Volumes ONTAP | No | No | Yes
 | Remove a system | No | No | Yes
 
 4+| *Agents page*:
