@@ -1,0 +1,34 @@
+//All links and images must use the absolute URL.
+
+
+=== Console agent 4.9.0
+
+The 4.9.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes.
+
+=== NetApp Console administration
+
+.Support for role-based access for Cloud Volumes ONTAP 
+Console supports role-based access for Cloud Volumes ONTAP.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html[Learn more about role-based access for Cloud Volumes ONTAP^].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
