@@ -1,0 +1,109 @@
+---
+sidebar: sidebar
+permalink: reference-iam-cvo-roles.html
+keywords: cloud volumes ontap, role-based access control, rbac, viewer, operator, admin, access control, permissions, volumes, aggregates, replication, snapshots, ontap upgrade, IAM roles
+summary: You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within the Console. Cloud Volumes ONTAP roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization.
+---
+
+= Cloud Volumes ONTAP access roles in NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within the Console. Cloud Volumes ONTAP roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization. How you assign roles depends on your own business and storage management practices.
+
+Cloud Volumes ONTAP uses the following roles:
+
+* *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
+* *Cloud Volumes ONTAP operator*: Perform important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
+* *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
+
+For details about all NetApp Console access roles, see link:reference-iam-predefined-roles.html[access roles].
+
+== How role changes take effect
+
+Cloud Volumes ONTAP enforces role-based access control (RBAC) by using a local cache of each role assignment. The cache refreshes automatically every hour. If a role is newly assigned or changed, it can take up to one hour for the change to take effect. After the refresh completes, the Console enables the workflows permitted by that role.
+
+NOTE: When a Console agent is deployed for the first time, or when an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time seeding process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete.
+
+
+== Cloud Volumes ONTAP role permissions
+
+The following table indicates the actions that each role can perform.
+
+[cols="40a,20a,20a,20a",options="header",width="100%"]
+|===
+| Feature and action
+| Cloud Volumes ONTAP viewer
+| Cloud Volumes ONTAP operator
+| Cloud Volumes ONTAP admin
+
+4+| *Systems page*:
+| Enter a system| Yes | Yes | Yes
+| View a volume | Yes | Yes | Yes
+| Discover a system | No | Yes | Yes
+| Add a volume | No | Yes | Yes
+| Use *Replication* (not applicable to FSx for ONTAP or on-premises systems) | No | Yes | Yes
+| Use drag-and-drop for *Replication* (with Cloud Volumes ONTAP as the source or destination) | No | Yes | Yes
+| Add a system | No | No | Yes
+| Access *Optimized cost and performance* | No | No | Yes
+| Open System Manager | No | No | Yes
+| Turn on Cloud Volumes ONTAP | No | No | Yes
+| Remove a system | No | No | Yes
+
+4+| *Agents page*:
+| View Cloud Volumes ONTAP settings | Yes | Yes | Yes
+| Edit Cloud Volumes ONTAP settings | No | No | Yes
+
+4+| *Overview tab*:
+| Add a volume | No | Yes | Yes
+| Add an aggregate | No | Yes | Yes
+| Use *Upgrade now* | No | Yes | Yes
+| Update the ONTAP version | No | Yes | Yes
+| Edit *CIFS setup* from the pencil menu | No | Yes | Yes
+| Open System Manager | No | No | Yes
+| Use the On/Off button | No | No | Yes
+| Set a password | No | No | Yes
+| Remove the system from the workspace | No | No | Yes
+| Delete the system | No | No | Yes
+| Edit the following using the pencil icon on the right pane:
+
+* *System tags*
+* *Scheduled downtime*
+* *Storage classes*
+* *Instance type*
+* *Charging method*
+* *Write speed*
+* *Ransomware protection*
+* *Support registration*
+* *WORM* | No | No | Yes
+
+4+| *Volumes tab*:
+| Add a volume | No | Yes | Yes
+| Clone a volume | No | Yes | Yes
+| Create a snapshot copy | No | Yes | Yes
+| Edit volume settings | No | No | Yes
+| Delete a volume | No | No | Yes
+| Restore from a snapshot copy | No | No | Yes
+| Change the disk type | No | No | Yes
+| Change the tiering policy | No | No | Yes
+
+4+| *Aggregates tab*:
+| Add an aggregate | No | Yes | Yes
+| Add a volume | No | Yes | Yes
+| Increase capacity | No | No | Yes
+| Delete an aggregate | No | No | Yes
+
+4+| *Replication page* (with Cloud Volumes ONTAP as the source or destination):
+| Break replication | No | No | Yes
+| Resync replication | No | No | Yes
+| Reverse resync replication | No | No | Yes
+| Edit the schedule | No | No | Yes
+| Edit the maximum transfer rate | No | No | Yes
+| Update replication | No | No | Yes
+| Delete replication | No | No | Yes
+
+|===
