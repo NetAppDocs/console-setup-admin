@@ -10,9 +10,9 @@ This release of the Console agent includes security improvements and bug fixes.
 === NetApp Console administration
 
 .Support for role-based access for Cloud Volumes ONTAP 
-You can associate Backup and Recovery workloads (Oracle and Microsoft SQL Server) with projects. After assigning to a project, users who are assigned a Backup and Recovery role for the project can work with the workloads. Other workloads are not supported with role-based access at this time. 
+Console supports role-based access for Cloud Volumes ONTAP.
 
-link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html[Learn more about setting up role-based access for Backup and Recovery workloads.^]
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html[Learn more about role-based access for Cloud Volumes ONTAP^].
 
 
 
