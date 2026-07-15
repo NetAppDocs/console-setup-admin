@@ -216,6 +216,8 @@ sidebar:
                   entries:
                     - title: Backup and Recovery roles
                       url: /reference-iam-backup-rec-roles.html
+                    - title: Cloud Volumes ONTAP roles
+                      url: /reference-iam-cvo-roles.html
                     - title: Data Classification roles 
                       url: /reference-iam-data-classification.html
                     - title: Disaster Recovery roles
