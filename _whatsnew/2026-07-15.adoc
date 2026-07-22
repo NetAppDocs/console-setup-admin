@@ -9,6 +9,8 @@ This release of the Console agent includes security improvements and bug fixes.
 
 === NetApp Console administration
 
+NetApp Console 4.9.0 administration includes the following new feature.
+
 .Support for role-based access for Cloud Volumes ONTAP 
 Console supports role-based access for Cloud Volumes ONTAP.
 
