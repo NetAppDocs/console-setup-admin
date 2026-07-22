@@ -53,7 +53,7 @@ include::_include/os-reqs.adoc[tag=disk-space]
 
 You need to prepare the host for the Console agent by installing Podman or Docker Engine.
 
-include::_include/podman-docker.adoc[]
+include::_include/podman-docker-private-mode.adoc[]
 
 == Step 5: Prepare networking
 
