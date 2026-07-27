@@ -51,7 +51,7 @@ The Console agent must be active to edit it.
 . Select *Explicit proxy* in the Configuration type field.
 
 . Select *Enable Proxy*.
-. Specify the server using the syntax http://_address:port_ or https://_address:port_
+. Specify the server using the syntax 'http://_address:port_' or 'https://_address:port_'
 . Specify a user name and password if basic authentication is required for the server.
 
 +
