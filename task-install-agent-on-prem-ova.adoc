@@ -187,7 +187,7 @@ b. Select *Actions* > *New VM from this template*
 ** *Skip config check*: This check box is unchecked by default which means the agent runs a configuration check to validate network access. 
 *** NetApp recommends leaving this box unchecked so that the installation includes a configuration check of the agent. The configuration check validates that the agent has network access to the required endpoints. If the deployment fails because of connectivity issues, you can access the validation report and logs from the agent host. In some cases, if you are confident that the agent has network access, you can choose to skip the check. 
 
-include::_include/agent-deploy-console-check.adoc[]
+
 
 
 
@@ -202,6 +202,8 @@ include::_include/agent-deploy-console-check.adoc[]
 ** *IPv4 gateway address*: The gateway address for the IPv4 address.
 
 . Select *Next*.
+
+include::_include/agent-deploy-console-check.adoc[]
 
 
 . Review the details in the *Ready to complete* window, and then select *Finish*.
