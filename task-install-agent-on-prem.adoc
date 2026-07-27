@@ -32,13 +32,12 @@ include::_include/os-reqs.adoc[tag=manual-uid-range]
 
 include::_include/os-reqs.adoc[tag=dedicated]
 
+NOTE: During installation, NetApp checks that the agent host has at least 80 percent of total disk space available, which includes 48 GB in /opt and 32 GB in /var (80 GB total). After installation, it requires at least 20 percent of total disk to remain available, which includes 12 GB in /opt and 8 GB in /var (20 GB total).
+
 include::_include/os-reqs.adoc[tag=hypervisor]
 
 include::_include/os-reqs.adoc[tag=os]
 
-NOTE: If you are still using the previous endpoints used for agent upgrades, the validation fails with an error. To avoid this, clear the check box to skip the validation check.
-
-During installation, NetApp checks that the agent host has at least 80 percent of total disk space available, which includes 48 GB in /opt and 32 GB in /var (80 GB total). After installation, it requires at least 20 percent of total disk to remain available, which includes 12 GB in /opt and 8 GB in /var (20 GB total).
 
 
 
