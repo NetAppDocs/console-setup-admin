@@ -363,10 +363,12 @@ TIP: If you're already logged in to an Azure account, then the Console automatic
 
 
 . On the *Virtual Machine Authentication* page, choose an Azure subscription, a location, a new resource group or an existing resource group, and then choose an authentication method for the Console agent virtual machine that you're creating.
+
 +
-+
+
 The authentication method for the virtual machine can be a password or an SSH public key.
 +
+
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux[Learn about connecting to a Linux VM in Azure^]
 
 . On the *Details* page, enter a name for the agent, specify tags, and choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-azure.html[the required permissions].
