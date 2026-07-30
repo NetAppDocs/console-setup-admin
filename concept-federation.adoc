@@ -28,7 +28,6 @@ Organization admin, Federation admin, Federation viewer. link:reference-iam-pred
 Federating with the NetApp Support Site allows users to log in to the Console, Active IQ Digital Advisor, and other associated apps using the same credentials.
 
 
-NOTE: If you federate with the NetApp Support Site, you can't also federate with your corporate identity management provider. Choose which one works best for your organization.
 
 .Steps
 
