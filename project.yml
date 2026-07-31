@@ -43,6 +43,8 @@ sidebar:
               url: /task-sign-up-saas.html
             - title: Use the NetApp Console assistant
               url: /task-console-assistant.html  
+            - title: Subscribe to NetApp Intelligent Services
+              url: /task-subscribe-standard-mode.html
         - title: Get started with NetApp Console (restricted mode)
           entries:
             - title: Getting started workflow for restricted mode
