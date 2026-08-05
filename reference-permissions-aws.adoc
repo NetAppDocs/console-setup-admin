@@ -125,6 +125,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "iam:DeleteInstanceProfile",
         "iam:GetRolePolicy",
         "iam:GetRole",
+        "iam:TagRole",
         "sts:DecodeAuthorizationMessage",
         "sts:AssumeRole",
         "s3:GetBucketTagging",
@@ -369,6 +370,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -568,6 +570,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -691,6 +694,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -961,11 +965,12 @@ The agent makes the following API requests to deploy and manage Cloud Volumes ON
 | Used for daily operations?
 | Used for deletion?
 
-.13+| Create and manage IAM roles and instance profiles for Cloud Volumes ONTAP instances
+.14+| Create and manage IAM roles and instance profiles for Cloud Volumes ONTAP instances
 | iam:ListInstanceProfiles | Yes | Yes | No
 | iam:CreateRole | Yes | No | No
 | iam:DeleteRole | No | Yes | Yes
 | iam:PutRolePolicy | Yes | No | No
+| iam:TagRole | Yes | No | No
 | iam:CreateInstanceProfile | Yes | No | No
 | iam:DeleteRolePolicy | No | Yes | Yes
 | iam:AddRoleToInstanceProfile | Yes | No | No
