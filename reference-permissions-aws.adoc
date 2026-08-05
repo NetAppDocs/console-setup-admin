@@ -125,6 +125,7 @@ For standard regions, the permissions are spread across two policies. Two polici
         "iam:DeleteInstanceProfile",
         "iam:GetRolePolicy",
         "iam:GetRole",
+        "iam:TagRole",
         "sts:DecodeAuthorizationMessage",
         "sts:AssumeRole",
         "s3:GetBucketTagging",
