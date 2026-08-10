@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: console-differences.html
-keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, active directory, bring-your-own-license, local
+keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, autonomous, active directory, bring-your-own-license, local
 summary: "NetApp Console is a SaaS application that uses Console agents to manage cloud and on-premises storage systems. NetApp Console local deployment is a self-hosted, agentless virtual machine for enterprise-scale ONTAP fleet management with policy enforcement, drift remediation, and full data sovereignty."
 ---
 = Compare NetApp Console and NetApp Console local deployment
