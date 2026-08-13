@@ -5,7 +5,7 @@ keywords: switch organizations, switch projects, projects, organizations, change
 summary: You might belong to multiple Console organizations or have permissions to access multiple projects or agents within an organization. When needed, you can easily switch between organizations, projects, and Console agents to access the resources associated with that organization, project, or agent.
 ---
 
-= Switch between Console organizations, projects, and agents
+= Switch between NetApp Console organizations, projects, and agents
 :hardbreaks:
 :nofooter:
 :icons: font

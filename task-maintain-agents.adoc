@@ -5,7 +5,7 @@ keywords: agent operating system, agent maintenance, vm maintenance, os updates,
 summary: Maintaining the operating system on the agent host is your responsibility. For example, you should apply security updates to the operating system on the Console agent host by following your company's standard procedures for operating system distribution.
 ---
 
-= Maintain the VM for a manually installed Console agent
+= Maintain the VM for a manually installed NetApp Console agent
 :hardbreaks:
 :nofooter:
 :icons: font

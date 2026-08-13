@@ -5,7 +5,7 @@ keywords: role-based access, partnership access, partner resources, resource acc
 summary: You can grant access to partnership users by assigning them specific roles for folders and projects within your organization.
 ---
 
-= Provide resource access to partnership users
+= Provide resource access to partnership users in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

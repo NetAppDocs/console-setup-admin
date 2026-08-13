@@ -5,7 +5,7 @@ keywords: troubleshoot, system id, system ID, autosupport, asup, troubleshoot co
 summary: To troubleshoot issues with a Console agent, you can work with NetApp Support who might ask for your system ID, agent version, or the latest AutoSupport messages. You can also view the NetApp Knowledge Base to troubleshoot issues yourself.
 ---
 
-= Troubleshoot the Console agent
+= Troubleshoot the NetApp Console agent
 :hardbreaks:
 :nofooter:
 :icons: font

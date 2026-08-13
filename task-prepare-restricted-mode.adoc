@@ -5,7 +5,7 @@ keywords: restricted mode requirements, requirements, install options, restricte
 summary: Prepare your environment before you deploy NetApp Console in restricted mode. You need to review host requirements, prepare networking, set up permissions, and more.
 ---
 
-= Prepare for deployment in restricted mode
+= Prepare for deployment in NetApp Console restricted mode
 :hardbreaks:
 :nofooter:
 :icons: font

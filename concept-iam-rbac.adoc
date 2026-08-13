@@ -5,7 +5,7 @@ keywords: roles, permissions, role-based access control, rbac, iam, identity and
 summary: Manage user access to NetApp Console with role-based access control (RBAC), assigning predefined roles at the organization, folder, or project level. Each role grants specific permissions that define what actions users can perform within their assigned scope.
 ---
 
-= Learn about NetApp Console role-based access control (RBAC)
+= Learn about NetApp Console role-based access control
 :hardbreaks:
 :nofooter:
 :icons: font

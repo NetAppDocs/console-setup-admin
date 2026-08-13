@@ -5,7 +5,7 @@ keywords: install connector, azure connector installation, azure connector, inst
 summary: To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Azure permissions, install the Console agent, and then provide the permissions that you prepared.
 ---
 
-= Manually install the Console agent in Azure
+= Manually install the NetApp Console agent in Azure
 :hardbreaks:
 :nofooter:
 :icons: font

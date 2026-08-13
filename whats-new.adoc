@@ -5,7 +5,7 @@ keywords: what's new, features, new, release notes, enhancements, fixes, connect
 
 summary: "Learn what's new with NetApp Console administration."
 ---
-= What's new
+= What's new with NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

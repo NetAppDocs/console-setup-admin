@@ -5,7 +5,7 @@ keywords: agent ip address, agent uri, change ip address, edit uri, agent networ
 summary: When network configuration changes, you may need to update the agent's IP address in your cloud provider and its registered URIs in the Console.
 ---
 
-= Update agent addressing and URIs
+= Update NetApp Console agent addressing and URIs
 :hardbreaks:
 :nofooter:
 :icons: font

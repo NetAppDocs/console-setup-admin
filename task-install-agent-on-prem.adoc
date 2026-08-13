@@ -5,7 +5,7 @@ keywords: deploy agent, on prem agent deployment, on prem agent, deploy connecto
 summary: Deploy a Console agent on-premises and then log in and set it up to work with your Console organization.
 ---
 
-= Manually install a Console agent on-premises
+= Manually install a NetApp Console agent on-premises
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -5,7 +5,7 @@ keywords: federation, active directory federation services, adfs, ad fs, single 
 summary: If you want to federate with a domain that is different from your email domain, you must first verify that you own the domain. You can only use verified domains for federation.
 ---
 
-= Verify the email domain for your federated connection
+= Verify your email domain for federation in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

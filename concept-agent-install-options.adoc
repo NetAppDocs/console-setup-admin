@@ -5,7 +5,7 @@ keywords: install agent, deployment method, console install, marketplace install
 summary: Deploy a Console agent using the NetApp Console, your cloud provider's marketplace, or by manually installing software on a Linux host. Your deployment method determines how you maintain the agent host and differs depending on which NetApp Console deployment mode you are using.
 ---
 
-= Choose a Console agent deployment method
+= Learn about NetApp Console agent deployment methods
 :hardbreaks:
 :nofooter:
 :icons: font
