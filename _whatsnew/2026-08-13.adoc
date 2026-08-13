@@ -1,0 +1,31 @@
+//All links and images must use the absolute URL.
+
+
+=== Console agent 4.10.0
+
+The 4.10.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes.
+
+=== NetApp Console administration
+
+NetApp Console 4.10.0 administration includes security and bug fixes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
