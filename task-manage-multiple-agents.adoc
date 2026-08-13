@@ -5,7 +5,7 @@ keywords: switch connectors, multiple connectors, disaster recovery, dr, two con
 summary: If your organization uses multiple Console agents, you can switch between those Console agents directly from the Systems page to view the associated systems. 
 ---
 
-= View systems associated with different Console agents
+= View systems associated with different NetApp Console agents
 :hardbreaks:
 :nofooter:
 :icons: font

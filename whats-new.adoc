@@ -5,7 +5,7 @@ keywords: what's new, features, new, release notes, enhancements, fixes, connect
 
 summary: "Learn what's new with NetApp Console administration."
 ---
-= What's new
+= What's new with NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -16,6 +16,10 @@ summary: "Learn what's new with NetApp Console administration."
 Learn what's new with NetApp Console administration features: identity and access management (IAM), Console agents, cloud provider credentials, and more.
 
 //All links and images must use the absolute URL.
+
+== 13 August 2026
+
+include::_whatsnew/2026-08-13.adoc[]
 
 == 15 July 2026
 

@@ -5,7 +5,7 @@ keywords: managing connectors, uninstall connector, switch connectors, switch be
 summary: The NetApp Console supports IMDSv2 with the Console agent and with Cloud Volumes ONTAP. In most cases, IMDSv2 is automatically configured on new EC2 instances. IMDSv1 was enabled prior to March 2024. If required by your security policies, you might need to manually configure IMDSv2 on your EC2 instances.
 ---
 
-= Require the use of IMDSv2 on Amazon EC2 instances
+= Require the use of IMDSv2 on Amazon EC2 instances in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

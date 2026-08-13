@@ -5,7 +5,7 @@ keywords: federation, active directory federation services, adfs, ad fs, single 
 summary: Federate with your Active Directory Federation Services (AD FS) to enable single sign-on (SSO) for the NetApp Console. This allows users to log in using their corporate credentials.
 ---
 
-= Federate NetApp Console with Active Directory Federation Services (AD FS)
+= Federate NetApp Console with Active Directory Federation Services
 :hardbreaks:
 :nofooter:
 :icons: font

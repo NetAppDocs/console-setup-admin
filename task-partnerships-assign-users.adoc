@@ -5,7 +5,7 @@ keywords: switch organizations, switch projects, projects, organizations, change
 summary: You can add users to a partnership by adding them to the partner organization. After you add users, the partner organization is responsible for assigning them roles for particular resources in their organization.
 ---
 
-= Manage members for a partnership organization
+= Manage partnership members in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

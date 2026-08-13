@@ -5,7 +5,7 @@ keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML
 summary: Identity federation enables single sign-on with the NetApp Console so that users can log in using credentials from your corporate identity. To get started, review the setup process.
 ---
 
-= Enable single sign-on by using identity federation with NetApp Console
+= Learn about identity federation in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

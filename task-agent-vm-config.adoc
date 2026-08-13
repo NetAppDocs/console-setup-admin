@@ -5,7 +5,7 @@ keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, a
 summary: You can make changes to your existing vCenter or ESXi host after you deploy the Console agent. For example, you can increase the CPU or RAM of the VM instance that hosts the Console agent. 
 ---
 
-= Maintain a vCenter or ESXi host for the Console agent
+= Maintain a vCenter or ESXi host for the NetApp Console agent
 :hardbreaks:
 :nofooter:
 :icons: font
