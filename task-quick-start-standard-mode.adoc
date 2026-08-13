@@ -5,7 +5,7 @@ keywords: quick start, standard mode quick start
 summary: Get started with the NetApp Console (SaaS) by preparing networking for the Console, signing up and creating an account, and using the NetApp assistant to set up initial functionality.
 ---
 
-= Getting started workflow for NetApp Console (SaaS application)
+= Quick start for NetApp Console in standard mode
 :hardbreaks:
 :nofooter:
 :icons: font

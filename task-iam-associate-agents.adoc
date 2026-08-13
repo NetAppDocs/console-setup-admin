@@ -5,7 +5,7 @@ keywords: agent, associate agent, folder, project, associate folder with connect
 summary: If members of your organization need to use a Console agent in another project, you need to associate that Console agent with the respective project.
 ---
 
-= Associate a Console agent with other folders and projects
+= Associate a NetApp Console agent with other folders and projects
 :hardbreaks:
 :nofooter:
 :icons: font

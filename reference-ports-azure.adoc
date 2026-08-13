@@ -5,7 +5,7 @@ keywords: ports, security group, http, https, inbound, outbound
 summary: The Azure security group for the agent requires both inbound and outbound rules. The NetApp Console automatically creates this security group when you create a Console agent from the Console. For other installation options, you need to set up this security group manually.
 ---
 
-= Console agent security group rules in Azure
+= NetApp Console agent security group rules in Azure
 :hardbreaks:
 :nofooter:
 :icons: font

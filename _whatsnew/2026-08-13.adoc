@@ -1,0 +1,34 @@
+//All links and images must use the absolute URL.
+
+
+=== Console agent 4.10.0
+
+The 4.10.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes.
+
+==== Improved Cloud Mediator responsiveness and reliability
+The service now processes cluster status updates more efficiently, reducing intermittent timeouts and downtime and strengthening automatic unplanned failover mediation for SMaS relationships.
+
+=== NetApp Console administration
+
+NetApp Console 4.10.0 administration includes security and bug fixes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

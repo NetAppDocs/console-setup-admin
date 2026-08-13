@@ -5,7 +5,7 @@ keywords: networking, urls, endpoints, web browser, console, network, set up net
 summary: You need to ensure that the Console and any agents you install have the right network access to function properly. 
 ---
 
-= Network access for NetApp Console 3.9.55 and earlier
+= Network access for previous versions of NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

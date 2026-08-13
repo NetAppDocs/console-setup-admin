@@ -5,7 +5,7 @@ keywords: overview, concepts, features, use case, cloud manager, netapp console,
 summary: The NetApp Console helps you manage and protect your data across all your cloud and on-premises systems. It includes tools to keep your data safe and working well.
 ---
 
-= NetApp Console for unified storage management
+= Learn about NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

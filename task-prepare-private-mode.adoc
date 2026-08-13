@@ -5,7 +5,7 @@ keywords: private mode requirements, requirements, install options, private mode
 summary: Prepare your environment before you deploy NetApp Console in private mode. You need to review host requirements, prepare networking, set up permissions, and more.
 ---
 
-= Prepare for deployment in private mode
+= Prepare for deployment in NetApp Console private mode
 :hardbreaks:
 :nofooter:
 :icons: font
