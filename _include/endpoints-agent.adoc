@@ -15,83 +15,90 @@ The endpoints listed below are all CNAME entries.
 * Security Token Service (STS)
 * Simple Storage Service (S3)
 
-| To manage AWS resources. The endpoint depends on your AWS region. https://docs.aws.amazon.com/general/latest/gr/rande.html[Refer to AWS documentation for details^]
+a| To manage AWS resources. The endpoint depends on your AWS region. https://docs.aws.amazon.com/general/latest/gr/rande.html[Refer to AWS documentation for details^]
 
 | Amazon FSx for NetApp ONTAP:
 
 * api.workloads.netapp.com
 
-| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
+a| * The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
 //end::aws-endpoints[]
 
 //tag::azure-public-endpoints[]
-| \https://management.azure.com
-\https://login.microsoftonline.com
-\https://blob.core.windows.net
-\https://core.windows.net
+a|
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
 
-| To manage resources in Azure public regions.
+a| To manage resources in Azure public regions.
 
 //end::azure-public-endpoints[]
 
 //tag::azure-il6-endpoints[]
-| 
-\https://management.azure.microsoft.scloud
-\https://login.microsoftonline.microsoft.scloud
-\https://blob.core.microsoft.scloud
-\https://core.microsoft.scloud
+a|
+* \https://management.azure.microsoft.scloud
+* \https://login.microsoftonline.microsoft.scloud
+* \https://blob.core.microsoft.scloud
+* \https://core.microsoft.scloud
 
-| To manage resources in the Azure IL6 region.
+a| To manage resources in the Azure IL6 region.
 //end::azure-il6-endpoints[]
 
 //tag::azure-gov-endpoints[]
-| \https://management.usgovcloudapi.net
-\https://login.microsoftonline.us
-\https://blob.core.usgovcloudapi.net
-\https://core.usgovcloudapi.net
+a|
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
 
-| To manage resources in Azure Government regions.
+a| * To manage resources in Azure Government regions.
 //end::azure-gov-endpoints[]
 
 //tag::azure-china-endpoints[]
-| \https://management.chinacloudapi.cn
-\https://login.chinacloudapi.cn
-\https://blob.core.chinacloudapi.cn
-\https://core.chinacloudapi.cn
+a|
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
 
-| To manage resources in Azure China regions.
+a| To manage resources in Azure China regions.
 //end::azure-china-endpoints[]
 
 //tag::google-cloud-endpoints[]
-| \https://www.googleapis.com/compute/v1/
-\https://compute.googleapis.com/compute/v1
-\https://cloudresourcemanager.googleapis.com/v1/projects
-\https://www.googleapis.com/compute/beta
-\https://storage.googleapis.com/storage/v1
-\https://www.googleapis.com/storage/v1
-\https://iam.googleapis.com/v1
-\https://cloudkms.googleapis.com/v1
-\https://config.googleapis.com/v1/projects
+a|
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
 
-| To manage resources in Google Cloud.
+a| To manage resources in Google Cloud.
 //end::google-cloud-endpoints[]
 
 //tag::nss-endpoints[]
-| 
-\https://mysupport.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp Support.
-| \https://signin.b2c.netapp.com | To update NetApp Support Site (NSS) credentials or to add new NSS credentials to the NetApp Console.
-| \https://support.netapp.com | To obtain licensing information and to send AutoSupport messages to NetApp Support as well as to receive software updates for Cloud Volumes ONTAP.
+a|
+* \https://mysupport.netapp.com
+a| To obtain licensing information and to send AutoSupport messages to NetApp Support.
+a| * \https://signin.b2c.netapp.com
+a| To update NetApp Support Site (NSS) credentials or to add new NSS credentials to the NetApp Console.
+a| * \https://support.netapp.com
+a| To obtain licensing information and to send AutoSupport messages to NetApp Support as well as to receive software updates for Cloud Volumes ONTAP.
 //end::nss-endpoints[]
 
 //tag::saas-endpoints[]
-| 
-\https://api.bluexp.netapp.com
-\https://netapp-cloud-account.auth0.com
-\https://netapp-cloud-account.us.auth0.com
-\https://console.netapp.com
-\https://components.console.bluexp.netapp.com
-\https://cdn.auth0.com
-| To provide features and services within the NetApp Console.
+a|
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+a| To provide features and services within the NetApp Console.
 
 
 //end::saas-endpoints[]
@@ -105,18 +112,20 @@ The endpoints listed below are all CNAME entries.
 | Purpose
 
 
-a| \https://support.netapp.com
-\https://mysupport.netapp.com
+a|
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
 
 
 a| To obtain licensing information and to send AutoSupport messages to NetApp support.
 
-a| \https://\*.api.bluexp.netapp.com
-\https://api.bluexp.netapp.com
-\https://*.cloudmanager.cloud.netapp.com
-\https://cloudmanager.cloud.netapp.com
-\https://netapp-cloud-account.auth0.com
-\https://netapp-cloud-account.us.auth0.com
+a|
+* \https://\*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
 
 | To provide features and services within the NetApp Console.
 
@@ -126,13 +135,13 @@ Choose between two sets of endpoints:
 
 * Option 1 (recommended)
 +
-\https://bluexpinfraprod.eastus2.data.azurecr.io
-\https://bluexpinfraprod.azurecr.io
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
 
 * Option 2
 +
-\https://*.blob.core.windows.net
-\https://cloudmanagerinfraprod.azurecr.io
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
 
 a| To obtain images for Console agent upgrades.
 
@@ -149,9 +158,10 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 
 
 //tag::upgrade-endpoints[]
-a| \https://bluexpinfraprod.eastus2.data.azurecr.io
-\https://bluexpinfraprod.azurecr.io 
-\https://occmclientinfragov.azurecr.us (needed for restricted mode deployments in Government regions)
+a|
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io 
+* \https://occmclientinfragov.azurecr.us (needed for Restricted mode deployments in Government regions)
 a| To obtain images for Console agent upgrades. 
 
 
@@ -162,8 +172,8 @@ a| To obtain images for Console agent upgrades.
 
 
 //tag::upgrade-endpoints-restricted[]
-a| \https://occmclientinfragov.azurecr.us
-a| To obtain images for Console agent upgrades in . 
+a| * \https://occmclientinfragov.azurecr.us
+a|  To obtain images for Console agent upgrades. 
 
 
 

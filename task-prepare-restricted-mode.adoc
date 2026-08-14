@@ -87,7 +87,9 @@ include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 |\https://cdn.auth0.com
 
 \https://services.cloud.netapp.com
-| Your web browser connects to these endpoints for centralized user authentication through the NetApp Console.
+a| * Your web browser connects to these endpoints for centralized user authentication through the NetApp Console.
+
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
 
 
 |===
