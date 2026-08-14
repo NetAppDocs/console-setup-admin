@@ -21,7 +21,7 @@ a| To manage AWS resources. The endpoint depends on your AWS region. https://doc
 
 * api.workloads.netapp.com
 
-a| * The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
+a| The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP-based workloads.
 //end::aws-endpoints[]
 
 //tag::azure-public-endpoints[]
