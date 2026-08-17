@@ -157,6 +157,17 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 //end::previous-endpoints[]
 
 
+//tag::upgrade-endpoints-saas[]
+a|
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io 
+
+a| To obtain images for Console agent deployment and upgrades. 
+
+
+
+//end::upgrade-endpoints-saas[]
+
 //tag::upgrade-endpoints[]
 a|
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
