@@ -52,7 +52,7 @@ a|
 * \https://blob.core.usgovcloudapi.net
 * \https://core.usgovcloudapi.net
 
-a| * To manage resources in Azure Government regions.
+a| To manage resources in Azure Government regions.
 //end::azure-gov-endpoints[]
 
 //tag::azure-china-endpoints[]
@@ -161,8 +161,11 @@ NetApp recommends allowing Option 1 endpoints in your firewall as they are more 
 a|
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io 
-* \https://occmclientinfragov.azurecr.us (needed for Restricted mode deployments in Government regions)
-a| To obtain images for Console agent upgrades. 
+
+For Government regions, use the following endpoint instead:
+
+* \https://occmclientinfragov.azurecr.us 
+a| To obtain images for Console agent deployment and upgrades. 
 
 
 
@@ -182,6 +185,7 @@ a|  To obtain images for Console agent upgrades.
 
 
 //Same text is also in endpoints-manual-install
+//tag::upgrade-endpoints-explanation[]
 ^1^ NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints. Note the following about these endpoints:
 +
 * Starting with the 3.9.47 release of the Console agent, the system supports the endpoints listed in Option 1. Previous releases of the Console agent do not support backward compatibility.
