@@ -45,25 +45,20 @@ The Console agent is supported with the following operating systems when using t
 | Required container tool
 | SELinux
 
-5+| Red Hat Enterprise Linux
-
-|
+.3+| Red Hat Enterprise Linux
 a| 9.6
 
 * English language versions only.
 * The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 
 
-| 4.0.0 or later with the Console in standard mode or restricted mode
-a|
+| 4.0.0 or later with the Console in standard mode or restricted mode|
 Podman version 5.4.0 with podman-compose 1.5.0.
 
 <<podman-configuration,View Podman configuration requirements>>.
 a|
 Supported in enforcing mode or permissive mode
 
-
-|
 a| 9.1 to 9.4
 
 * English language versions only.
@@ -76,8 +71,6 @@ Podman version 4.9.4 with podman-compose 1.5.0.
 a|
 Supported in enforcing mode or permissive mode
 
-
-|
 a| 8.6 to 8.10
 
 * English language versions only.
@@ -91,15 +84,12 @@ a|
 Supported in enforcing mode or permissive mode
 
 
-5+| Ubuntu
-
-| 
+.2+| Ubuntu  
 | 24.04 LTS
 | 3.9.45 or later with the NetApp Console in standard mode or restricted mode
 | Docker Engine 23.0.6 to 28.0.0.
 | Not supported
 
-| 
 | 22.04 LTS
 | 3.9.50 or later
 | Docker Engine 23.0.6 to 28.0.0.
