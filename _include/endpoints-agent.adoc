@@ -170,6 +170,8 @@ a| To obtain images for Console agent deployment and upgrades.
 
 //tag::upgrade-endpoints[]
 a|
+For non-Government regions, use the following endpoints:
+
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io 
 
