@@ -49,7 +49,7 @@ a| To manage resources in the Azure IL6 region.
 a|
 * \https://management.usgovcloudapi.net
 * \https://login.microsoftonline.us
-* \https://blob.core.usgovcloudapi.net
+* \https://*blob.core.usgovcloudapi.net
 * \https://core.usgovcloudapi.net
 
 a| To manage resources in Azure Government regions.
