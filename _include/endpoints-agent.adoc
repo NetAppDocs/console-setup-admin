@@ -168,7 +168,9 @@ a| To obtain images for Console agent deployment and upgrades.
 
 //end::upgrade-endpoints-saas[]
 
-//tag::upgrade-endpoints[]
+//the endpoint tag below is old and out of use
+
+//tag::upgrade-endpoints-restricted[]
 a|
 For non-Government regions, use the following endpoints:
 
@@ -182,18 +184,18 @@ a| To obtain images for Console agent deployment and upgrades.
 
 
 
-//end::upgrade-endpoints[]
+//end::upgrade-endpoints-restricted[]
 
 
+//below is out of use
 
-
-//tag::upgrade-endpoints-restricted[]
+//tag::upgrade-endpoints-restricted-gov[]
 a| * \https://occmclientinfragov.azurecr.us
 a|  To obtain images for Console agent upgrades. 
 
 
 
-//end::upgrade-endpoints-restricted[]
+//end::upgrade-endpoints-restricted-gov[]
 
 
 

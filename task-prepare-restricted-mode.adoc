@@ -89,7 +89,7 @@ include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 \https://services.cloud.netapp.com
 a| * Your web browser connects to these endpoints for centralized user authentication through the NetApp Console.
 
-include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted]
 
 
 |===
@@ -123,7 +123,7 @@ include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
 include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-include::_include/endpoints-agent.adoc[tag=upgrade-endpoints]
+include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted]
 
 |===
 
