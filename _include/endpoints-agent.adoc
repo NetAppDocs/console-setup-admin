@@ -120,7 +120,7 @@ a|
 a| To obtain licensing information and to send AutoSupport messages to NetApp support.
 
 a|
-* \https://\*.api.bluexp.netapp.com
+* \https://*.api.bluexp.netapp.com
 * \https://api.bluexp.netapp.com
 * \https://*.cloudmanager.cloud.netapp.com
 * \https://cloudmanager.cloud.netapp.com
@@ -133,13 +133,15 @@ a|
 a| 
 Choose between two sets of endpoints:
 
-* Option 1 (recommended)
-+
+Option 1 (recommended)
+
+
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
 
-* Option 2
-+
+Option 2
+
+
 * \https://*.blob.core.windows.net
 * \https://cloudmanagerinfraprod.azurecr.io
 
@@ -168,7 +170,6 @@ a| To obtain images for Console agent deployment and upgrades.
 
 //end::upgrade-endpoints-saas[]
 
-//the endpoint tag below is old and out of use
 
 //tag::upgrade-endpoints-restricted[]
 a|
@@ -187,19 +188,10 @@ a| To obtain images for Console agent deployment and upgrades.
 //end::upgrade-endpoints-restricted[]
 
 
-//below is out of use
-
-//tag::upgrade-endpoints-restricted-gov[]
-a| * \https://occmclientinfragov.azurecr.us
-a|  To obtain images for Console agent upgrades. 
 
 
 
-//end::upgrade-endpoints-restricted-gov[]
-
-
-
-//Same text is also in endpoints-manual-install
+//Same text is also in endpoints-manual-install--not in use
 //tag::upgrade-endpoints-explanation[]
 ^1^ NetApp recommends allowing Option 1 endpoints in your firewall as they are more secure and disallowing Option 2 endpoints. Note the following about these endpoints:
 +
@@ -250,10 +242,16 @@ a|
 * \https://*.blob.core.windows.net
 * \https://cloudmanagerinfraprod.azurecr.io
 a|
+For standard mode and restricted mode non-Government regions, use the following endpoints:
+
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
-* \https://bluexpinfraprod.azurecr.io
-* \https://occmclientinfragov.azurecr.us.io (if in a restricted mode environment)
-| To obtain images for Console agent upgrades.
+* \https://bluexpinfraprod.azurecr.io 
+
+For Government regions in restricted mode, use the following endpoint instead:
+
+* \https://occmclientinfragov.azurecr.us 
+a| To obtain images for Console agent deployment and upgrades. 
+| To obtain images for Console agent deployment and upgrades.
 
 |===
 
