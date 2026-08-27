@@ -15,7 +15,7 @@ summary: Follow recommended steps to secure NetApp Console, IAM, identity federa
 [.lead]
 Secure NetApp Console from unauthorized or unintended changes by applying deployment, IAM, identity federation, least-privilege, and read-only controls.
 
-Take the following steps to set up a security baseline for your organization. Follow the setup workflow for your deployment mode before you apply the controls in this topic. link:concept-modes.html[Learn about NetApp Console deployment modes].
+Take the following steps to set up a security baseline for your organization. Follow the setup workflow for your deployment mode before you apply the security controls listed below. link:concept-modes.html[Learn about NetApp Console deployment modes].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Choose a NetApp Console deployment mode and complete initial setup
 
