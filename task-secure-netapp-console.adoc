@@ -13,9 +13,9 @@ summary: Follow recommended steps to harden access to NetApp Console and ONTAP S
 :imagesdir: ./media/
 
 [.lead]
-Secure NetApp Console and ONTAP System Manager with deployment-mode controls, corporate identity controls, least-privilege roles, and read-only safeguards.
+Protect storage operations from unauthorized or unintended changes by aligning deployment, identity, and permission controls with your organization’s security requirements.
 
-The following steps establish a security baseline for your organization. Follow the setup workflow for your deployment mode before you apply the controls in this topic. link:concept-modes.html[Learn about NetApp Console deployment modes].
+Take the following steps to set up a security baseline for your organization. Follow the setup workflow for your deployment mode before you apply the controls in this topic. link:concept-modes.html[Learn about NetApp Console deployment modes].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Choose a NetApp Console deployment mode and complete initial setup
 
@@ -30,7 +30,7 @@ Create the organization and establish the first Organization admin. Complete the
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Organize the NetApp Console IAM hierarchy
 
 [role="quick-margin-para"]
-Match the organization hierarchy to your operational boundaries. Scope storage systems, data services, and Console agents to the projects that manage them.
+Set up the organization hierarchy to match how your teams work. Scope storage systems, data services, and Console agents to the projects that manage them.
 
 [role="quick-margin-list"]
 * link:task-iam-manage-folders-projects.html[Create folders and projects]
@@ -65,7 +65,7 @@ Add federated users and groups to the Console organization and assign them Conso
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Enable read-only mode for a NetApp Console organization
 
 [role="quick-margin-para"]
-Require administrators to elevate their role before they make changes. This control reduces unintended changes to storage systems and data services.
+Require administrators to elevate their role before making changes. This control reduces unintended changes to storage systems and data services.
 
 link:task-enable-read-only-mode.html[Learn how to enable read-only mode].
 
@@ -74,29 +74,30 @@ NOTE: Read-only mode is not available when NetApp Console is in private mode.
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Enforce ONTAP permissions for ONTAP System Manager
 
 [role="quick-margin-para"]
-Enable *Force Credentials* on active Console agents that manage production ONTAP systems. Users then provide their ONTAP cluster credentials when they open ONTAP System Manager, and ONTAP applies their permissions.
+Enable *Force Credentials* on active Console agents that manage production ONTAP systems. Users provide their ONTAP cluster credentials when they open ONTAP System Manager, and ONTAP applies their permissions.
 
 link:task-ontap-access-agent.html[Learn how to enforce ONTAP permissions for ONTAP System Manager].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] Secure NetApp Console automation with service accounts
 
 [role="quick-margin-para"]
-Keep automation separate from human accounts. Assign each service account the minimum role and scope it needs. Store its credentials securely and recreate them when they are lost or require rotation.
+Keep automation separate from human accounts. Assign each service account the minimum role and scope it needs. Store credentials securely and recreate them when lost or rotated.
 
 link:task-iam-manage-members-permissions.html#service-account[Learn how to add a service account].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[Eight] Secure Console agent permissions, network access, and hosts
 
 [role="quick-margin-para"]
-Limit each agent's cloud permissions and network access. Protect web-console traffic, maintain the agent software, and apply AWS instance metadata safeguards where applicable.
+Limit each agent's cloud permissions and network access to the minimum required. Protect web-console traffic, maintain the agent software, and apply AWS instance metadata safeguards if your deployment uses AWS EC2 instances.
 
 [role="quick-margin-list"]
+
 * link:reference-permissions.html[Review cloud provider permissions and network requirements]
 * link:reference-networking-saas-console.html[Review network access requirements]
 * link:task-installing-https-cert.html[Install a CA-signed certificate]
 * link:task-configuring-proxy.html[Configure a proxy server]
 * link:task-upgrade-agent.html[Upgrade the Console agent]
-* link:task-require-imdsv2.html[Require IMDSv2 on EC2 instances]
+
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png[Nine] Review NetApp Console audit activity and security controls
 
@@ -108,7 +109,7 @@ Establish a recurring review process for members, group mappings, roles, credent
 * link:task-monitor-cm-operations.html[Monitor Console operations]
 
 .Security baseline
-* The first administrator used a corporate email address or an existing NSS account.
+* The first administrator uses a corporate email address or an existing NSS account.
 * The organization hierarchy matches operational boundaries.
 * Members and federated groups have only the roles and scopes they need.
 * Identity federation and corporate authentication policies protect federated sign-ins when required.
