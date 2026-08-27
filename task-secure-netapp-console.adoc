@@ -1,0 +1,116 @@
+---
+sidebar: sidebar
+permalink: task-secure-netapp-console.html
+keywords: security, hardening, netapp console, console agent, identity and access management, iam, rbac, federation, mfa, read-only mode, ontap system manager
+summary: Follow recommended steps to harden access to NetApp Console and ONTAP System Manager.
+---
+
+= Secure NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Harden access to NetApp Console and ONTAP System Manager by using corporate identity controls, least-privilege roles, and read-only safeguards.
+
+You can use this page as a security hardening path after you sign up for the Console. It links to the detailed procedures for each control. Adapt the order to your organization's requirements.
+
+Before you begin, choose the NetApp Console deployment mode that meets your connectivity and isolation requirements. link:concept-modes.html[Learn about NetApp Console deployment modes]. Identify the administrators who will manage your organization and the teams that need access to specific projects and resources. If you plan to use identity federation, prepare your corporate identity provider (IdP).
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] link:task-sign-up-saas.html[Sign up and create an organization]
+
+[role="quick-margin-para"]
+Sign up with a corporate email address or log in with an existing NetApp Support Site (NSS) account. Verify your email address and create the organization. The first user becomes an Organization admin, and the Console creates a default project.
+
+[role="quick-margin-para"]
+link:task-iam-organization-verify.html[Verify your Console organization].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] link:task-iam-manage-folders-projects.html[Organize folders and projects]
+
+[role="quick-margin-para"]
+Organize the organization into folders and projects that match your operational boundaries. Use projects to scope access to storage systems, data services, and Console agents.
+
+[role="quick-margin-list"]
+Harden access to NetApp Console and ONTAP System Manager by using deployment-mode controls, corporate identity controls, least-privilege roles, and read-only safeguards.
+* link:task-iam-manage-resources.html[Associate resources with projects]
+Use this page as a security hardening path after you deploy the Console. It links to the detailed procedures for each control instead of repeating them. Adapt the order to your organization's requirements.
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] link:task-iam-manage-members-permissions.html[Add members and assign least-privilege roles]
+Before you begin, choose the NetApp Console deployment mode that meets your connectivity and isolation requirements. link:concept-modes.html[Learn about NetApp Console deployment modes]. Identify the administrators who will manage your organization and the teams that need access to specific projects and resources. If you plan to use identity federation, prepare your corporate identity provider (IdP).
+[role="quick-margin-para"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Choose a deployment mode and complete initial setup
+
+[role="quick-margin-list"]
+Complete the setup workflow for your deployment mode before applying the security controls on this page.
+* link:reference-iam-predefined-roles.html[Review the predefined roles]
+[role="quick-margin-list"]
+* link:task-quick-start-standard-mode.html[Get started with NetApp Console in standard mode]
+* link:task-quick-start-restricted-mode.html[Get started with NetApp Console in restricted mode]
+* link:task-quick-start-private-mode.html[Get started with NetApp Console in private mode]
+
+[role="quick-margin-para"]
+For standard mode, link:task-sign-up-saas.html[sign up and create an organization]. The first user becomes an Organization admin, and the Console creates a default project. For restricted or private mode, follow the applicable setup workflow above.
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] link:concept-federation.html[Configure identity federation and federated groups]
+
+[role="quick-margin-para"]
+Configure identity federation so users can sign in with corporate credentials and use your IdP's authentication policies. NetApp Console supports AD FS, Microsoft Entra ID, PingFederate, and generic SAML identity providers.
+
+[role="quick-margin-para"]
+After federation is configured, users must still sign up for NetApp Console and be explicitly added to the organization with a role, even when they belong to a federated group. link:task-iam-manage-members-permissions.html#add-members[Learn how to add a federated group].
+
+[role="quick-margin-list"]
+* link:task-federation-verify-domain.html[Verify your domain]
+* link:task-federation-adfs.html[Federate with AD FS]
+* link:task-federation-entra-id.html[Federate with Microsoft Entra ID]
+* link:task-federation-ping.html[Federate with PingFederate]
+* link:task-federation-saml.html[Federate with a SAML identity provider]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Enable read-only mode when available
+
+[role="quick-margin-para"]
+Enable read-only mode when you want administrative changes to require intentional elevation. Users with administrator roles must elevate their role from User settings for the current session before making changes.
+
+link:task-enable-read-only-mode.html[Learn how to enable read-only mode].
+
+NOTE: Read-only mode is not available when NetApp Console is in private mode.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] link:task-ontap-access-agent.html[Enforce ONTAP permissions for System Manager]
+
+[role="quick-margin-para"]
+Enable *Force Credentials* on each active Console agent that manages production ONTAP systems. Users are prompted for their ONTAP cluster credentials when they open System Manager, and their ONTAP permissions apply.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] Secure automation with service accounts
+
+[role="quick-margin-para"]
+Create service accounts for automation instead of sharing human credentials. Assign each service account the minimum role at the required organization, folder, or project scope. Store client secrets or JWT information securely, and recreate credentials when they are lost or need to be rotated.
+
+link:task-iam-manage-members-permissions.html#service-account[Learn how to add a service account].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[Eight] Secure Console agents
+
+[role="quick-margin-para"]
+Review the environment and network controls for every Console agent.
+
+[role="quick-margin-list"]
+* Grant only the cloud permissions required by the agent. link:reference-permissions.html[Review cloud provider permissions and network requirements].
+* Allow the required network traffic and use a supported proxy configuration when necessary. link:reference-networking-saas-console.html[Review network access requirements].
+* Install a CA-signed certificate when users access an on-premises agent's web console over HTTPS. link:task-installing-https-cert.html[Install a CA-signed certificate].
+* Keep agents current. link:task-upgrade-agent.html[Upgrade the Console agent].
+* On AWS, consider requiring IMDSv2 for the EC2 instance hosting the agent. link:task-require-imdsv2.html[Require IMDSv2 on EC2 instances].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png[Nine] Review activity and validate the configuration
+
+[role="quick-margin-para"]
+Establish a recurring review process for members, group mappings, roles, credentials, agents, and recent operations. link:task-iam-audit-actions-timeline.html[Review the audit actions timeline] and link:task-monitor-cm-operations.html[monitor Console operations].
+
+.Checklist
+* The first administrator used a corporate email address or an existing NSS account.
+* Identity federation is enabled and tested when required by your organization.
+* Corporate MFA and conditional-access policies are enforced by the IdP for federated users.
+* IdP groups are mapped to least-privilege Console roles and scopes.
+* Read-only mode is enabled when appropriate, and administrators understand how to elevate their role.
+* *Force Credentials* is enabled on agents that manage production ONTAP systems.
+* Automation uses service accounts with scoped roles instead of shared human credentials.
+* The folder and project structure matches operational boundaries.
+* Members, group mappings, roles, credentials, agents, and recent operations are reviewed regularly.
