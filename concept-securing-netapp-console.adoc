@@ -1,0 +1,76 @@
+---
+sidebar: sidebar
+permalink: concept-securing-netapp-console.html
+keywords: security, hardening, netapp console, console agent, identity and access management, iam, rbac, federation, mfa
+summary: Learn how to secure NetApp Console deployments, user access, Console agents, and storage management operations.
+---
+
+= Securing NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Protect storage operations by limiting NetApp Console access, securing Console agents, and monitoring activity for unauthorized or unintended changes.
+
+Security is a shared responsibility. NetApp secures the Console service, while you are responsible for choosing the appropriate deployment mode, controlling user and service-account access, securing the environments where you deploy Console agents, and monitoring activity in your organization.
+
+== Choose the appropriate deployment mode
+
+Choose a deployment mode based on your connectivity, isolation, and operational requirements:
+
+* Standard mode uses the cloud-hosted SaaS application.
+* Restricted mode installs the Console in a public cloud environment with limited outbound connectivity to NetApp APIs.
+* Private mode installs the Console on premises or in an air-gapped environment with no outbound connectivity to NetApp.
+
+Each mode has different feature availability and security requirements. link:concept-modes.html[Learn about NetApp Console deployment modes].
+
+== Control identity and access
+
+Use Identity and Access Management (IAM) to give users and service accounts only the access they need to perform their tasks:
+
+* Organize resources in projects and, when appropriate, folders that reflect your business or operational boundaries.
+* Assign predefined roles at the lowest level of the organization hierarchy that provides the required access.
+* Review organization members, service accounts, and their roles regularly. Remove access that is no longer required.
+* Use identity federation for single sign-on when it meets your organization's requirements. Federation is not available in private mode.
+* Require local users to use multi-factor authentication (MFA), and protect service-account credentials as secrets. Recreate service-account credentials when they are lost or need to be rotated.
+
+link:concept-identity-and-access-management.html[Learn about IAM in NetApp Console].
+
+== Secure Console agents
+
+Console agents bridge the Console with storage systems and cloud or on-premises environments. Agents initiate communication with the Console; the Console does not initiate connections to agents.
+
+Apply the following controls to each agent:
+
+* Deploy the agent in an environment that meets your organization's host, network, and access-control requirements.
+* Allow only the required outbound network connections and required cloud permissions. Review the provider-specific permissions and port requirements before deployment.
+* Use a supported proxy configuration when outbound traffic must pass through a proxy server.
+* Install a CA-signed certificate when users access the agent web console over HTTPS.
+* Keep the agent software up to date. Private mode agents must be upgraded manually.
+* On AWS, consider requiring IMDSv2 for EC2 instances that host a Console agent.
+
+link:concept-agents.html[Learn about Console agents].
+
+== Reduce unintended changes
+
+Organization admins can enable read-only mode for an organization. Read-only mode helps prevent users from making changes to storage systems or using data services until they request elevated permissions.
+
+link:task-enable-read-only-mode.html[Learn how to enable read-only mode].
+
+== Monitor and review activity
+
+Use the operations timeline to review storage management and user activity in the Console. Regularly review member access, role assignments, service-account credentials, agent status, and recent operations as part of your organization's security process.
+
+link:task-monitor-cm-operations.html[Learn how to monitor Console operations].
+
+== Related security topics
+
+* link:task-iam-user-security.html[Manage user security], including MFA and service-account credentials.
+* link:concept-iam-rbac.html[Understand role-based access control (RBAC)].
+* link:concept-federation.html[Learn about identity federation].
+* link:reference-networking-saas-console.html[Review network access requirements for the SaaS application].
+* link:reference-permissions.html[Review cloud provider permissions and network requirements].
+* link:reference-compliance.html[Learn about security compliance for NetApp Console].
