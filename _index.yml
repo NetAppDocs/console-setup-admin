@@ -50,14 +50,14 @@ indexpage:
           url: /task-maintain-agents.html
     - title: Security and compliance
       links:
+        - title: Secure NetApp Console
+          url: task-secure-netapp-console.html
         - title: Federate with your identity provider
           url: /concept-federation.html
         - title: Enable read-only mode
           url: task-enable-read-only-mode.html
         - title: Monitor Console activity
           url: /task-monitor-cm-operations.html
-        - title: Deploy NetApp Console in Restricted mode (Sovereign cloud deployments)
-          url: /task-quick-start-restricted-mode.html
         - title: SOC-2 Compliance
           url: https://www.netapp.com/company/trust-center/compliance/soc-2/
     - title: Console partnerships
