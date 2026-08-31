@@ -13,7 +13,7 @@ summary: Learn how to secure NetApp Console deployments, user access, Console ag
 :imagesdir: ./media/
 
 [.lead]
-Use the security controls in the NetApp Console and in your deployment environment to protect access to your storage systems, data services, and Console operations.
+Protect storage operations by limiting NetApp Console access, securing Console agents, and monitoring activity for unauthorized or unintended changes.
 
 Security is a shared responsibility. NetApp secures the Console service, while you are responsible for choosing the appropriate deployment mode, controlling user and service-account access, securing the environments where you deploy Console agents, and monitoring activity in your organization.
 
