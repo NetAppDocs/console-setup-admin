@@ -10,7 +10,7 @@ summary: NetApp Data Classification supports two roles to manage read and write 
 :imagesdir: ./media/
 
 [.lead]
-NetApp Data Classification supports identity and access management roles to assign roles tailored to the tasks they need to accomplish. How you assign roles depends on your own business and storage management practices.
+NetApp Data Classification supports identity and access management (IAM) roles so you can tailor access to the tasks users need to accomplish. How you assign roles depends on your own business and storage management practices.
 
 Data Classification supports two roles:
 
