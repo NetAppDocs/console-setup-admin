@@ -220,6 +220,8 @@ sidebar:
                   entries:
                     - title: Backup and Recovery roles
                       url: /reference-iam-backup-rec-roles.html
+                    - title: Set up Cloud Volumes ONTAP role-based access
+                      url: /task-cvo-rbac-setup.html
                     - title: Cloud Volumes ONTAP roles
                       url: /reference-iam-cvo-roles.html
                     - title: Data Classification roles 

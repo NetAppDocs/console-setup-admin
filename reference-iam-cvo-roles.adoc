@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-iam-cvo-roles.html
-keywords: cloud volumes ontap, role-based access control, rbac, viewer, operator, admin, access control, permissions, volumes, aggregates, replication, snapshots, ontap upgrade, IAM roles
+keywords: cloud volumes ontap, role-based access, viewer, operator, admin, access control, permissions, volumes, aggregates, replication, snapshots, ontap upgrade, IAM roles
 summary: You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within the Console. Cloud Volumes ONTAP roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization.
 ---
 
@@ -18,14 +18,71 @@ You can assign the following roles to users to provide them access to Cloud Volu
 Cloud Volumes ONTAP uses the following roles:
 
 * *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
-* *Cloud Volumes ONTAP operator*: Perform important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
+* *Cloud Volumes ONTAP operator*: Performs important storage operations. Operators discover and manage Cloud Volumes ONTAP systems, add volumes, aggregates, snapshots, and replications, modify some configurations, and upgrade Cloud Volumes ONTAP versions.
 * *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
 
 For details about all NetApp Console access roles, see link:reference-iam-predefined-roles.html[access roles].
 
+== Plan access to Cloud Volumes ONTAP
+
+Assign a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system.
+
+NOTE: Platform roles control Console administration and don't replace the Cloud Volumes ONTAP role for Cloud Volumes ONTAP operations.
+
+Configuring or associating a Cloud Volumes ONTAP subscription is a separate Licenses and subscriptions task. A member must have the *Licenses and subscriptions admin* or *Super admin* role to add or modify a subscription. A Cloud Volumes ONTAP role does not provide permission to configure subscriptions. See link:reference-iam-licenses-subscriptions.html[Licenses and subscriptions roles].
+
+Use the following strategy for the two common access scenarios.
+
+=== Existing Console users
+
+If your organization already has Console users when role-based access for Cloud Volumes ONTAP is introduced by upgrading to 4.9.0, the Console automatically assigns Cloud Volumes ONTAP roles based on their existing platform roles. This one-time assignment, called seeding, preserves user access during migration so administrators don't assign every role manually. After seeding, review each user's Cloud Volumes ONTAP role and assign or remove a role when needed. For example, you might not want to assign the Cloud Volumes ONTAP admin role to a user who has the platform role of Super admin, but doesn't need to manage Cloud Volumes ONTAP systems.
+
+The following platform-role mappings apply during one-time seeding for existing users:
+
+[cols="40a,40a",options="header",width="100%"]
+|===
+| Existing platform role
+| Cloud Volumes ONTAP role assigned during seeding
+
+| Super admin
+| Cloud Volumes ONTAP admin
+
+| Organization admin
+| Cloud Volumes ONTAP admin
+
+| Federation admin
+| Cloud Volumes ONTAP admin
+
+| Folder or project admin
+| Cloud Volumes ONTAP admin
+
+| Super viewer
+| Cloud Volumes ONTAP viewer
+
+| Organization viewer
+| Cloud Volumes ONTAP viewer
+
+| Federation viewer
+| Cloud Volumes ONTAP viewer
+
+| Folder or project viewer
+| Cloud Volumes ONTAP viewer
+
+| Any other platform role
+| Cloud Volumes ONTAP viewer
+|===
+
+The mappings apply at the same hierarchy level as the existing platform role. For example, an organization-scoped platform role maps to an organization-scoped Cloud Volumes ONTAP role. A project-scoped role maps to a project-scoped role. These mappings describe migration seeding only. They do not mean that a platform role grants Cloud Volumes ONTAP permissions for new assignments. Assign the Cloud Volumes ONTAP role explicitly at the required scope. The seeding process assigns the Cloud Volumes ONTAP admin or viewer role based on the user's existing platform role. If a user needs operator-level permissions, assign the Cloud Volumes ONTAP operator role explicitly after seeding.
+
+=== New Cloud Volumes ONTAP subscribers
+
+New subscribers start by creating a Console organization. The first subscriber becomes the Organization admin. An Organization admin with the *Licenses and subscriptions admin* role can configure the subscription and set up access for users, but needs a Cloud Volumes ONTAP role to manage Cloud Volumes ONTAP. A *Super admin* can do all of these tasks. After setup, assign users a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system.
+
+For the setup procedure, see link:task-cvo-rbac-setup.html[Set up role-based access for Cloud Volumes ONTAP]. For general information about organizing resources and assigning members, see link:concept-identity-and-access-management.html[identity and access management] and link:task-iam-manage-members-permissions.html[add members to your organization].
+
 == How role changes take effect
 
-Cloud Volumes ONTAP enforces role-based access control (RBAC) by using a local cache of each role assignment. The cache refreshes automatically every hour. If a role is newly assigned or changed, it can take up to one hour for the change to take effect. After the refresh completes, the Console enables the workflows permitted by that role.
+Cloud Volumes ONTAP checks role-based access with a local cache of each role assignment. The cache refreshes automatically every hour. If you assign or change a role, the change can take up to one hour to take effect. After the refresh completes, the Console enables the workflows permitted by that role.
 
 NOTE: When a Console agent is deployed for the first time, or when an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time seeding process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete.
 
