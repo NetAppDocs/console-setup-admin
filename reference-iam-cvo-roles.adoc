@@ -17,21 +17,20 @@ You can assign the following roles to users to provide them access to Cloud Volu
 
 Cloud Volumes ONTAP uses the following roles:
 
-* *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
-* *Cloud Volumes ONTAP operator*: Performs important storage operations. Operators discover and manage Cloud Volumes ONTAP systems, add volumes, aggregates, snapshots, and replications, modify some configurations, and upgrade Cloud Volumes ONTAP versions.
-* *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
+*Cloud Volumes ONTAP admin*:: Provides full access to all Cloud Volumes ONTAP operations.
+*Cloud Volumes ONTAP operator*:: Performs important storage operations. Operators discover and manage Cloud Volumes ONTAP systems, add volumes, aggregates, snapshots, and replications, modify some configurations, and upgrade Cloud Volumes ONTAP versions.
+*Cloud Volumes ONTAP viewer*:: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
 
-For details about all NetApp Console access roles, see link:reference-iam-predefined-roles.html[access roles].
+link:reference-iam-predefined-roles.html[Learn about Console access roles].
 
 == Plan access to Cloud Volumes ONTAP
 
-Assign a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system.
+Assign a user a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system.
 
-NOTE: Platform roles control Console administration and don't replace the Cloud Volumes ONTAP role for Cloud Volumes ONTAP operations.
+NOTE: Platform roles control Console administration and cannot be used for Cloud Volumes ONTAP operations. If a user has a platform role, they must also be assigned a Cloud Volumes ONTAP role to do any operations in Cloud Volumes ONTAP
 
 Configuring or associating a Cloud Volumes ONTAP subscription is a separate Licenses and subscriptions task. A member must have the *Licenses and subscriptions admin* or *Super admin* role to add or modify a subscription. A Cloud Volumes ONTAP role does not provide permission to configure subscriptions. See link:reference-iam-licenses-subscriptions.html[Licenses and subscriptions roles].
 
-Use the following strategy for the two common access scenarios.
 
 === Existing Console users
 
@@ -78,7 +77,9 @@ The mappings apply at the same hierarchy level as the existing platform role. Fo
 
 New subscribers start by creating a Console organization. The first subscriber becomes the Organization admin. An Organization admin with the *Licenses and subscriptions admin* role can configure the subscription and set up access for users, but needs a Cloud Volumes ONTAP role to manage Cloud Volumes ONTAP. A *Super admin* can do all of these tasks. After setup, assign users a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system.
 
-For the setup procedure, see link:task-cvo-rbac-setup.html[Set up role-based access for Cloud Volumes ONTAP]. For general information about organizing resources and assigning members, see link:concept-identity-and-access-management.html[identity and access management] and link:task-iam-manage-members-permissions.html[add members to your organization].
+link:task-cvo-rbac-setup.html[Learn how to set up role-based access for Cloud Volumes ONTAP]. 
+link:concept-identity-and-access-management.html[Learn about identity and access management]. 
+link:task-iam-manage-members-permissions.html[Learn how to add members to your organization].
 
 == How role changes take effect
 
