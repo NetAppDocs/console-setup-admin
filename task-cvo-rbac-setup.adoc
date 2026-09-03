@@ -5,7 +5,7 @@ keywords: cloud volumes ontap, role-based access, iam, identity and access manag
 summary: Set up role-based access for Cloud Volumes ONTAP by organizing projects, adding Console members, and assigning Cloud Volumes ONTAP roles.
 ---
 
-= Set up role-based access for Cloud Volumes ONTAP
+= Set up role-based access for Cloud Volumes ONTAP in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,6 +17,8 @@ Set up access to Cloud Volumes ONTAP so existing Console users retain the access
 
 Assign a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system. Platform roles control Console administration and do not replace the Cloud Volumes ONTAP role for Cloud Volumes ONTAP operations.
 
+NetApp Console role-based access follows the principle of least privilege. In some cases, the same user might organize Cloud Volumes ONTAP systems into folders or projects, grant users access to those systems, and manage the systems. Assign both the required platform role and Cloud Volumes ONTAP role only when the user performs both types of work and needs both roles.
+
 If you need to configure or associate a Cloud Volumes ONTAP subscription, you must have the *Licenses and subscriptions admin* or *Super admin* role. Cloud Volumes ONTAP roles do not provide permission to configure subscriptions. See link:reference-iam-licenses-subscriptions.html[Licenses and subscriptions roles].
 
 For a description of each Cloud Volumes ONTAP role and its permissions, see link:reference-iam-cvo-roles.html[Cloud Volumes ONTAP access roles].
@@ -25,7 +27,7 @@ For a description of each Cloud Volumes ONTAP role and its permissions, see link
 
 New subscribers start by creating a Console organization. The first subscriber becomes the Organization admin.
 
-An Organization admin with the *Licenses and subscriptions admin* role can configure the subscription and set up access for users, but needs a Cloud Volumes ONTAP role to manage Cloud Volumes ONTAP. A *Super admin* can perform all of these tasks. After setup, assign each user a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system.
+An Organization admin with the *Licenses and subscriptions admin* role can configure the subscription and set up access for users, but needs a Cloud Volumes ONTAP role to manage Cloud Volumes ONTAP. A *Super admin* can perform all of these tasks. After setup, a user with the Organization admin role should assign each user a Cloud Volumes ONTAP role at the organization, folder, or project level containing the system.
 
 .Steps
 
@@ -39,7 +41,7 @@ An Organization admin with the *Licenses and subscriptions admin* role can confi
 
 == Verify access for existing Console users
 
-If your organization already has Console users when role-based access for Cloud Volumes ONTAP is introduced, the Console automatically assigns Cloud Volumes ONTAP roles to existing users based on their platform roles. This one-time assignment, called seeding, helps users retain appropriate Cloud Volumes ONTAP access without requiring an administrator to assign each role manually. The seeding process assigns the Cloud Volumes ONTAP admin or viewer role based on the user's existing platform role. These mappings apply to migration seeding only. A platform role does not replace an explicit Cloud Volumes ONTAP role for new assignments. After the assignment is complete, review each user's Cloud Volumes ONTAP role and adjust it at the organization, folder, or project level containing the system.
+If your organization already has Console users when role-based access for Cloud Volumes ONTAP is introduced by upgrading to use a Console agent that is 4.9.0 or higher, the Console automatically assigns Cloud Volumes ONTAP roles to existing users based on their platform roles. This one-time assignment, called seeding, helps users retain appropriate Cloud Volumes ONTAP access without requiring an administrator to assign each role manually. The seeding process assigns the Cloud Volumes ONTAP admin or viewer role based on the user's existing platform role. These mappings apply to migration seeding only. A platform role does not replace an explicit Cloud Volumes ONTAP role for new assignments. After the assignment is complete, review each user's Cloud Volumes ONTAP role and adjust it at the organization, folder, or project level containing the system.
 
 .Steps
 
