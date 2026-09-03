@@ -116,7 +116,7 @@ include::_include/cloud-tiering-eol.adoc[]
 | Console agent required
 
 
-.12+| *Storage systems management*
+.13+| *Storage systems management*
 
 This table shows which storage systems you can manage from the NetApp Console. It does not list backup destinations for NetApp Backup and Recovery.
 | Alerts | Yes
@@ -152,7 +152,7 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Sustainability | Yes
 
 
-.12+| *Administrative features*
+.11+| *Administrative features*
 | Audit | No
 | Automation hub | No
 | Federation | No
@@ -249,7 +249,9 @@ a| Backup and Recovery
 
 * Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
 
-* In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^] |Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
+* In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
+
+| Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
 
 In restricted mode, NetApp Backup and Recovery supports back up and restore of ONTAP volume data only. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity[View the list of supported backup destinations for ONTAP data^]
 a| NetApp Data Classification 
@@ -264,7 +266,7 @@ a| NetApp Replication
 
 
 
-.12+| *Administrative features*
+.11+| *Administrative features*
 | Audit | No
 | Automation hub | No
 | Federation | No
@@ -551,7 +553,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-j
 | Sustainability | No | No
 
 
-.9+| *Administrative features*
+.11+| *Administrative features*
 | Dashboard metrics for storage and data services | No | No
 | Identity and access management | Yes | Yes
 | Manage cloud provider credentials | Yes | Yes 
