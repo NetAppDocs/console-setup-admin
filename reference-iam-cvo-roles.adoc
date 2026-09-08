@@ -52,7 +52,7 @@ The following mappings apply only to this one-time migration process.
 | Super viewer
 | Cloud Volumes ONTAP viewer
 
-| Organization viewer
+| Organization admin
 | Cloud Volumes ONTAP viewer
 
 | Federation viewer
@@ -66,6 +66,8 @@ The following mappings apply only to this one-time migration process.
 |===
 
 The Console assigns the Cloud Volumes ONTAP role at the same hierarchy level as the existing platform role. These mappings do not apply to new role assignments. To review and adjust seeded roles, see link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent[Review roles after upgrading the Console agent].
+
+NOTE: A known issue currently prevents the *Organization viewer* and *Cloud Volumes ONTAP viewer* role combination from working at the organization scope. Use the *Organization admin* or *Folder or project admin* role as a temporary workaround.
 
 == How role changes take effect
 
