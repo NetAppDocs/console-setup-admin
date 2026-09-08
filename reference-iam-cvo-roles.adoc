@@ -13,7 +13,7 @@ summary: You can assign the following roles to users to provide them access to C
 :imagesdir: ./media/
 
 [.lead]
-You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within the Console. Cloud Volumes ONTAP roles give you the flexibility to assign users a role specific to the tasks they need to accomplish within your organization. How you assign roles depends on your own business and storage management practices.
+You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within NetApp Console.
 
 Cloud Volumes ONTAP uses the following roles:
 
@@ -21,13 +21,54 @@ Cloud Volumes ONTAP uses the following roles:
 * *Cloud Volumes ONTAP operator*: Perform important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
 * *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
 
-For details about all NetApp Console access roles, see link:reference-iam-predefined-roles.html[access roles].
+link:reference-iam-predefined-roles.html[Learn about access roles].
+
+Assign Cloud Volumes ONTAP roles at the organization, folder, or project level that contains the system. Platform roles enable users to administer NetApp Console resources, while Cloud Volumes ONTAP roles enable users to manage Cloud Volumes ONTAP systems. For guidance on planning role assignments, see link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments[Set up role-based access for Cloud Volumes ONTAP].
+
+== Role migrations for existing users
+
+When you upgrade a Console agent to version 4.9.0 or later, the Console assigns Cloud Volumes ONTAP roles to existing users based on their platform roles. The following mappings apply only to this one-time migration process.
+
+[cols="50,50",options="header"]
+|===
+| Existing platform role
+| Cloud Volumes ONTAP role assigned during seeding
+
+| Super admin
+| Cloud Volumes ONTAP admin
+
+| Organization admin
+| Cloud Volumes ONTAP admin
+
+| Federation admin
+| Cloud Volumes ONTAP admin
+
+| Folder or project admin
+| Cloud Volumes ONTAP admin
+
+| Super viewer
+| Cloud Volumes ONTAP viewer
+
+| Organization viewer
+| Cloud Volumes ONTAP viewer
+
+| Federation viewer
+| Cloud Volumes ONTAP viewer
+
+| Folder or project viewer
+| Cloud Volumes ONTAP viewer
+
+| Any other platform role
+| Cloud Volumes ONTAP viewer
+|===
+
+The Console assigns the Cloud Volumes ONTAP role at the same hierarchy level as the existing platform role. These mappings do not apply to new role assignments. To review and adjust seeded roles, see link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent[Review roles after upgrading the Console agent].
 
 == How role changes take effect
 
 Cloud Volumes ONTAP enforces role-based access control (RBAC) by using a local cache of each role assignment. The cache refreshes automatically every hour. If a role is newly assigned or changed, it can take up to one hour for the change to take effect. After the refresh completes, the Console enables the workflows permitted by that role.
 
-NOTE: When a Console agent is deployed for the first time, or when an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time seeding process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete.
+NOTE: When a Console agent is deployed for the first time, or when an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time seeding process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete. To review and adjust seeded roles, see link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent[Review roles after upgrading the Console agent].
 
 
 == Cloud Volumes ONTAP role permissions
