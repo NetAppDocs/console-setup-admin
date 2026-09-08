@@ -14,10 +14,9 @@ summary: You can assign the following roles to users to provide them access to C
 
 [.lead]
 You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within NetApp Console.
- 
 
 * *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
-* *Cloud Volumes ONTAP operator*: Perform important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
+* *Cloud Volumes ONTAP operator*: Performs important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
 * *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
 
 link:reference-iam-predefined-roles.html[Learn about access roles].
@@ -26,7 +25,7 @@ Assign Cloud Volumes ONTAP roles at the organization, folder, or project level t
 
 == Role migrations for existing users
 
-When you upgrade a Console agent to version 4.9.0 or later, the Console assigns additional Cloud Volumes ONTAP roles to existing users based on their platform roles. 
+When you upgrade a Console agent to version 4.9.0 or later, the Console assigns additional Cloud Volumes ONTAP roles to existing users based on their platform roles.
 
 NOTE: When an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time seeding process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete. To review and adjust seeded roles, see link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent[Review roles after upgrading the Console agent].
 
@@ -52,7 +51,7 @@ The following mappings apply only to this one-time migration process.
 | Super viewer
 | Cloud Volumes ONTAP viewer
 
-| Organization admin
+| Organization viewer
 | Cloud Volumes ONTAP viewer
 
 | Federation viewer
