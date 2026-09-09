@@ -51,7 +51,7 @@ indexpage:
     - title: Security and compliance
       links:
         - title: Secure NetApp Console
-          url: task-secure-netapp-console.html
+          url: /task-secure-netapp-console.html
         - title: Federate with your identity provider
           url: /concept-federation.html
         - title: Enable read-only mode
