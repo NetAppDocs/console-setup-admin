@@ -23,18 +23,19 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 
 Assign Cloud Volumes ONTAP roles at the organization, folder, or project level that contains the system. Platform roles enable users to administer NetApp Console resources, while Cloud Volumes ONTAP roles enable users to manage Cloud Volumes ONTAP systems. For guidance on planning role assignments, see link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments[Set up role-based access for Cloud Volumes ONTAP].
 
+[[seeding-mappings-for-existing-users]]
 == Role migrations for existing users
 
 When you upgrade a Console agent to version 4.9.0 or later, the Console assigns additional Cloud Volumes ONTAP roles to existing users based on their platform roles.
 
-NOTE: When an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time seeding process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete. To review and adjust seeded roles, see link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent[Review roles after upgrading the Console agent].
+NOTE: When an existing Console agent is upgraded to Console 4.9.0 or later, the Console runs a one-time migration process that assigns Cloud Volumes ONTAP roles to existing users in the organization. This process can take up to 30 minutes to complete. To review and adjust roles assigned during the migration, see link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent[Review roles after upgrading the Console agent].
 
 The following mappings apply only to this one-time migration process.
 
 [cols="50,50",options="header"]
 |===
 | Existing platform role
-| Cloud Volumes ONTAP role assigned during seeding
+| Cloud Volumes ONTAP role assigned during upgrade
 
 | Super admin
 | Cloud Volumes ONTAP admin
