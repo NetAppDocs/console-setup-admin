@@ -1,104 +1,40 @@
-# NetApp Console Documentation Guide
-For general AsciiDoc and writing conventions, refer to the content-standards repository. This file covers NetApp Console-specific terminology, product features, and audience considerations.
+# Copilot instructions for NetApp Console documentation
 
-## Table of Contents
+## Repository overview
 
-### 1. Product Identity
-- [Your Role](#your-role)
-- [What is NetApp Console?](#what-is-netapp-console)
+Product: NetApp Console
 
-### 3. Product-Specific Technology
-- [Content Style Rules](#content-style-rules)
-  - Product Name Usage
-  - Console Agent Terminology
+NetApp Console provides storage management, data protection, and related data services across on-premises and cloud environments. It is available as a SaaS platform or as a self-hosted deployment in a sovereign cloud or on-premises environment, managed through a web console and APIs.
 
-### 4. Documentation Conventions
-- [External Link Notation](#external-link-notation)
+This repository documents NetApp Console setup and administration, including deployment modes, Console agents, networking, cloud credentials, and identity and access management for NetApp Console administrators.
 
-### 5. Common Writer Tasks
-- [External Documentation Links](#external-documentation-links)
-- [Release notes guidelines](#release-notes-guidelines)
+## Repository structure
 
----
+Most documentation pages are in the repository root. Supporting directories include:
 
-## 1. Product Identity
+- `_include/` - Reusable AsciiDoc content
+- `_whatsnew/` - Release-note source content included in `whats-new.adoc`
+- `media/` - Images and other documentation media
+- `scripts/` - Documentation maintenance scripts
+- `store-redirects/` - Redirect definitions for moved or renamed topics
 
-### Your Role
+`project.yml` defines site settings and navigation. Update it or the index files only when a task requires a site-configuration or navigation change.
 
-You are a technical writer with deep knowledge of networking concepts, cloud deployments, and identity and access. Your expertise is in creating clear, concise, and user-focused documentation for complex technical products related to NetApp Console.
+## Product-specific context
 
-### What is NetApp Console?
+- Use `NetApp Console` in headings. In body text, use `the NetApp Console` on first reference and `the Console` afterward when the meaning is clear.
+- Use `Console agent` in body prose; use `Console Agent` only for the exact UI label.
+- NetApp Console supports standard, restricted, and private modes. State the applicable mode when a capability or procedure is not universal.
+- Console agents connect NetApp Console to storage systems and data services. They can be installed and maintained in AWS, Azure, Google Cloud, or on-premises environments.
+- IAM organizes resources through an organization, folders, and projects. Roles assigned at those levels determine member access to resources.
+- Keep AWS, Azure, and Google Cloud requirements separate because permissions, credentials, ports, and deployment procedures can differ.
+- Preserve established terminology and verify product behavior against nearby repository content. Do not invent permissions, commands, UI labels, or mode support.
 
-NetApp Console unifies storage management and protection across both on-premises and cloud environments with integrated data services to protect and optimize data.
+## Typical user workflows
 
-It is available as a service (SaaS) platform or a self-hosted option that you can install in your sovereign cloud or on-premises. It provides storage management, data mobility, data protection, and data analysis and control. Management capabilities are provided through a web-based console and APIs.
+Use these workflows when they help determine content scope or task order:
 
-### Content audience
-The content audience has intermediate knowledge of networking concepts, cloud deployments, and identity and access management. They are looking for clear, concise, and user-focused documentation to help them effectively use NetApp Console's features and capabilities. They prefer examples as well as step-by-step instructions to guide them through complex tasks. They also value best practices and troubleshooting tips to optimize their experience with NetApp Console. Your key audience is a NetApp Console administrator who needs to ensure the following:
-* Agents are installed securely and have the connectivity they need
-* Resources are organized effectively and that users can access the projects they need
-* User management functions like federation, and role-based access are applied effectively
-
-
-
-## 3. Product-Specific Technology
-
-### Content Style Rules
-
-#### Product Name Usage
-
-| Context | Form to use | Example |
-|---|---|---|
-| Headings | `NetApp Console` (no article) | `= Learn about NetApp Console identity and access management` |
-| Body, first reference | `the NetApp Console` | "Use the NetApp Console's Identity and Access Management (IAM)..." |
-| Body, subsequent references in same file | `the Console` | "The Console provides access roles..." |
-
-#### Console Agent Terminology
-
-| Context | Form to use | Example |
-|---|---|---|
-| First reference | `Console agent` (capital `C`, lowercase `a`) | "Console agents are initially tied to the project where they are created..." |
-| UI label | `Console Agent` (as displayed) | "Select *Console Agent*." |
-| Subsequent generic references | `Console agent` or `agent` | "...admins can add them to other projects or associate an agent with a folder..." |
-
-Incorrect forms: `console agent`, `Console Agent` (in body prose).
-
-
-## 4. Documentation Conventions
-
-### AsciiDoc filenames
-File names use prefixes to indicate page type:
-
-**task-** for procedural pages with numbered steps
-- Pattern: `task-<action>-<object>.adoc`
-- Examples: `task-create-agent.adoc`, `task-configure-proxy-settings.adoc`
-- Title uses imperative verb: "Create a Console agent"
-
-**concept-** for informational pages that explain features
-- Pattern: `concept-<topic>.adoc`
-- Examples: `concept-agents.adoc`, `concept-identity-and-access-management.adoc`
-- Title is descriptive: "Learn about Console agents"
-
-**reference-** for lookup information and specifications
-- Pattern: `reference-<topic>.adoc`
-- Examples: `reference-agent-default-config.adoc`, `reference-iam-analyst-roles.adoc`
-- Contains tables, lists, commands, or configuration details
-
-Only task, concept, and reference pages use these prefixes. No other file in the repository uses a prefix; `legal-notices.adoc` and `whats-new.adoc` are examples of unprefixed files.
-
-
-### External Link Notation
-- **Absolute URLs**: Always include `^` at the end of link text when the corresponding link starts with https: 
-- Pattern: `https://docs.netapp.com/us-en/<path>[Link text^]`
-- Example: `https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html[Learn about the API for NetApp Console IAM^]`
-- Internal links (relative paths ending in `.html`) do NOT use `^`
-
-
-
-### Release notes guidelines
-
- **CRITICAL - Use absolute URLs**: All links and images in whatsnew files MUST use complete absolute URLs (e.g., `https://docs.netapp.com/us-en/console-setup-admin/task-example.html[Link text^]`), not relative paths. This is because whatsnew files are included into the main whats-new.adoc and relative paths will break.
-
-
-
-
+- **Onboard:** Choose a deployment mode, prepare network access, sign up or deploy a Console agent, and subscribe to services as applicable.
+- **Administer agents:** Install or maintain an agent, configure connectivity or proxy settings, associate it with projects, and troubleshoot or upgrade it.
+- **Manage access:** Set up the organization, folders, and projects, then add members, assign roles, and associate resources.
+- **Connect cloud resources:** Configure provider-specific credentials and permissions before adding or managing cloud resources.
