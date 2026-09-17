@@ -1,21 +1,27 @@
 //All links and images must use the absolute URL.
 
 
-=== Console agent 4.11.0
 
-The 4.11.0 release supports both standard mode and restricted mode.
+=== Private mode release (4.10.0)
 
-This release of the Console agent includes security improvements and bug fixes.
+A new private mode release is now available to download from the https://mysupport.netapp.com/site/downloads[NetApp Support Site^] 
 
-==== Improved Cloud Mediator responsiveness and reliability
-The service now processes cluster status updates more efficiently, reducing intermittent timeouts and downtime and strengthening automatic unplanned failover mediation for SMaS relationships.
+The 4.10.0 release includes updates to the following NetApp Console components and services.
 
-=== NetApp Console administration
+[cols=3*,options="header,autowidth"]
+|===
+
+| Component or service
+| Version included in this release
+| Changes since the previous private mode release
+
+| Console agent | 4.10.0 | Go to the https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-08-13.html[What's new in NetApp Console page^] and refer to the changes included for versions 4.10.0.
 
 
-==== Simplified agent deployment flow for Cloud Volumes ONTAP subscribers in AWS Marketplace
-If you are a new subscriber to a link:https://us-east-1.console.aws.amazon.com/marketplace/search/listing/prodview-yi43o6oz7bf32?sr=0-2&ref_=ucaf&applicationId=AWS-Marketplace-Console[standalone Cloud Volumes ONTAP subscription in AWS Marketplace], the NetApp Console now simplifies agent deployment. You can configure AWS roles, policies, and credentials with fewer steps, use default values automatically on a single page, and move through the setup faster.
+| NetApp Backup and Recovery | 5.6.2 (17 August 2026)| Go to the https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html[what's new in NetApp Backup and Recovery page^].
 
+
+| NetApp Data Classification | 1.546.0 (10 August 2026)| Go to the https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[what's new in NetApp Classification page^].
 
 
 
