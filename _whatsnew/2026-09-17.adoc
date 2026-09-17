@@ -23,9 +23,7 @@ The 4.10.0 release includes updates to the following NetApp Console components a
 
 | NetApp Data Classification | 1.546.0 (10 August 2026)| Go to the https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html[what's new in NetApp Classification page^].
 
-
-
-
+|===
 
 
 
