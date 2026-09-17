@@ -7,11 +7,8 @@ The 4.11.0 release supports both standard mode and restricted mode.
 
 This release of the Console agent includes security improvements and bug fixes.
 
-==== Improved Cloud Mediator responsiveness and reliability
-The service now processes cluster status updates more efficiently, reducing intermittent timeouts and downtime and strengthening automatic unplanned failover mediation for SMaS relationships.
 
 === NetApp Console administration
-
 
 ==== Simplified agent deployment flow for Cloud Volumes ONTAP subscribers in AWS Marketplace
 If you are a new subscriber to a link:https://us-east-1.console.aws.amazon.com/marketplace/search/listing/prodview-yi43o6oz7bf32?sr=0-2&ref_=ucaf&applicationId=AWS-Marketplace-Console[standalone Cloud Volumes ONTAP subscription in AWS Marketplace], the NetApp Console now simplifies agent deployment. You can configure AWS roles, policies, and credentials with fewer steps, use default values automatically on a single page, and move through the setup faster.
