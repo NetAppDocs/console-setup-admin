@@ -112,7 +112,7 @@ Users with this role can view compliance information and generate reports for re
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience viewer]| RANSOMWARE_PROTECTION_VIEWER | Standard | View workload data, view alert data, download recovery data, and download reports in Ransomware Resilience.
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior admin] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN | Standard | Configure, manage, and view suspicious user behavior detection, alerts, and monitoring in Ransomware Resilience. 
 | link:reference-iam-ransomware-roles.html[Ransomware Resilience user behavior viewer] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | Standard | View suspicious user behavior alerts and insights in Ransomware Resilience. 
-| SnapCenter admin | SNAPCENTER_ADMIN | Standard, Private | Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
+| SnapCenter admin | SNAPCENTER_ADMIN | Standard, Private a| Provides the ability to back up snapshots from on-premises ONTAP clusters using NetApp Backup and Recovery for applications. A member who has this role can complete the following actions:
 
 * Complete any action from Backup and Recovery > Applications
 * Manage all systems in the projects and folders for which they have permissions
