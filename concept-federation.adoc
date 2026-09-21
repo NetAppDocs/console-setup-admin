@@ -5,7 +5,7 @@ keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML
 summary: Identity federation enables single sign-on with the NetApp Console so that users can log in using credentials from your corporate identity. To get started, review the setup process.
 ---
 
-= Enable single sign-on by using identity federation with NetApp Console
+= Learn about identity federation in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -28,7 +28,6 @@ Organization admin, Federation admin, Federation viewer. link:reference-iam-pred
 Federating with the NetApp Support Site allows users to log in to the Console, Active IQ Digital Advisor, and other associated apps using the same credentials.
 
 
-NOTE: If you federate with the NetApp Support Site, you can't also federate with your corporate identity management provider. Choose which one works best for your organization.
 
 .Steps
 

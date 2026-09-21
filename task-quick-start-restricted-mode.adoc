@@ -6,7 +6,7 @@ summary: Get started with the NetApp Console in restricted mode by preparing you
 
 ---
 
-= Get started workflow for NetApp Console in restricted mode
+= Quick start for NetApp Console in restricted mode
 :hardbreaks:
 :nofooter:
 :icons: font

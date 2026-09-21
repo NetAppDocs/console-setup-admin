@@ -122,7 +122,7 @@ https://_ipaddress_
 .. Enter a name for the system.
 .. Under *Are you running in a secured environment?* keep restricted mode disabled.
 +
-You should keep restricted mode disabled because these steps describe how to use the Console in standard mode. You should enable restricted mode only if you have a secure environment and want to disconnect this account from the Console backend services. If that's the case, link:task-quick-start-restricted-mode.html[follow steps to get started with the NetApp Console in restricted mode].
+You should keep restricted mode disabled because these steps describe how to use the Console in standard mode. You should enable restricted mode only if you have a secure environment and want to disconnect this account from the Console backend services. If that's the case, link:./task-quick-start-restricted-mode.html[follow steps to get started with the NetApp Console in restricted mode].
 .. Select *Let's start*.
 
 //end::standard-mode-steps-for-cloud[]

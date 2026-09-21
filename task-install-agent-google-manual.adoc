@@ -5,7 +5,7 @@ keywords: install connector, google cloud connector installation, google cloud c
 summary: To manually install the Console agent on your own Linux host, you need to review host requirements, set up your networking, prepare Google Cloud permissions, enable Google Cloud APIs, install the Console, and then provide the permissions that you prepared.
 ---
 
-= Manually deploy the Console agent in Google Cloud
+= Manually deploy the NetApp Console agent in Google Cloud
 :hardbreaks:
 :nofooter:
 :icons: font

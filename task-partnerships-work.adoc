@@ -5,7 +5,7 @@ keywords: partner organizations, create partnership, MSPs, service provider acce
 summary: Once you have been given a role in a partner organization, you can switch to that organization and perform actions that you have permission to perform.
 ---
 
-= Work in a partner organization
+= Work in a partner organization in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

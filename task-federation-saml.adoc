@@ -5,7 +5,7 @@ keywords: federation, SAML protocol, SAML, federation services,  federate, feder
 summary: Federate with your SAML 2.0 IdP provider to enable single sign-on (SSO) for the NetApp Console. This allows users to log in using their corporate credentials.
 ---
 
-= Federate with a SAML identity provider
+= Federate NetApp Console with a SAML identity provider
 :hardbreaks:
 :nofooter:
 :icons: font

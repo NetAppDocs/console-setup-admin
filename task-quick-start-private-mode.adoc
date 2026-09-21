@@ -5,7 +5,7 @@ keywords: private mode quick start, quick start, aws top secret cloud, aws secre
 summary: Private mode is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes AWS Secret Cloud, AWS Top Secret Cloud, and Azure IL6.  
 ---
 
-= Getting started workflow for NetApp Console in private mode
+= Quick start for NetApp Console in private mode
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -93,9 +93,6 @@ a| Licenses and subscriptions management
 
 * Only BYOL is supported with private mode. 
 
-+
-
-For Cloud Volumes ONTAP BYOL, only node-based licensing is supported. Capacity-based licensing is not supported. Because an outbound internet connection isn't available, you need to manually upload your Cloud Volumes ONTAP licensing file in the Console.
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses[Learn how to add licenses^]| No
 | Identity and access management | Yes

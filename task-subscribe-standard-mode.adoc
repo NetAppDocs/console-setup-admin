@@ -5,7 +5,7 @@ keywords: subscribe, subscription, marketplace subscription, paygo, contract, an
 summary: Subscribe to NetApp data services from your cloud provider's marketplace to pay for data services at an hourly rate or through an annual contract. If you purchased a license from NetApp, you also need to subscribe to the marketplace offering. Your license is always charged first, but you'll be charged at the hourly rate if you exceed your licensed capacity or if the license's term expires.
 ---
 
-= Subscribe to NetApp Intelligent Services (standard mode)
+= Subscribe to NetApp Console data services in standard mode
 :hardbreaks:
 :nofooter:
 :icons: font

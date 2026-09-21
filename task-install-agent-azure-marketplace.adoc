@@ -5,7 +5,7 @@ keywords: install connector, azure connector installation, azure connector, inst
 summary: To create a Console agent from the Azure Marketplace, you need to set up your networking, prepare Azure permissions, review instance requirements, and then create the Console agent.
 ---
 
-= Create a Console agent from the Azure Marketplace
+= Create a NetApp Console agent from the Azure Marketplace
 :hardbreaks:
 :nofooter:
 :icons: font

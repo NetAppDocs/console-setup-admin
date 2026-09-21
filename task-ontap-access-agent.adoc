@@ -5,7 +5,7 @@ keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-pre
 summary: Administrators can configure the NetApp Console to prompt a user for their ONTAP credentials.
 ---
 
-= Enforce ONTAP permissions for ONTAP Advanced View (ONTAP System Manager)
+= Enforce ONTAP permissions for ONTAP System Manager in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

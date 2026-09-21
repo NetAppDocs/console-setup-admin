@@ -5,7 +5,7 @@ keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade 
 summary: The Console agent is automatically upgraded when it has outbound connectivity. If your Console agent does not have outbound connectivity, you can manually upgrade it. If your agent was deployed in vCenter, you can upgrade it using an ISO.
 ---
 
-= Upgrade the Console agent
+= Upgrade the NetApp Console agent
 :hardbreaks:
 :nofooter:
 :icons: font

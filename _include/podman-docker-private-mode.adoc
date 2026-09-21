@@ -43,14 +43,6 @@ rm /var/run/docker.sock
 +
 You can obtain Podman from official Red Hat Enterprise Linux repositories.
 
-.. For Red Hat Enterprise Linux 9.6:
-+
-[source,cli]
-----
-sudo dnf install podman-5:<version>
-----
-+
-Where <version> is the supported version of Podman that you're installing. <<podman-versions,View the supported Podman versions>>.
 
 .. For Red Hat Enterprise Linux 9.1 to 9.4:
 +
@@ -158,8 +150,6 @@ systemctl restart podman
 ----
 podman info | grep networkBackend
 ----
-
-. If associating this agent with a Cloud Volumes ONTAP system, consider increasing the number of threads associated with the agent to improve performance. link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console[Learn about increasing the agent's container thread limit^].
 --
 
 .Docker Engine

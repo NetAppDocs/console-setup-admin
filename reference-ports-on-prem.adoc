@@ -5,7 +5,7 @@ keywords: networking, network, requirements, ports, on-prem, linux, http, https,
 summary: The Console agent uses _inbound_ ports when installed manually on an on-premises Linux host. Refer to these ports for planning purposes.
 ---
 
-= Ports for the on-premises Console agent
+= Ports for the on-premises Console agent in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

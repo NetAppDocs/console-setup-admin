@@ -5,7 +5,7 @@ keywords: iam, audit, monitor, audit iam actions, monitor iam actions
 summary: "Monitor or audit NetApp Console identity and access management actions from the Audit page."
 ---
 
-= Monitor or audit IAM activity
+= Monitor or audit IAM activity in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font

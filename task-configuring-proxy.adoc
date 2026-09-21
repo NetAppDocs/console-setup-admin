@@ -5,7 +5,7 @@ keywords: proxy, proxy server, proxy, internet, HTTP, http, https, bluexp
 summary: If your corporate policies require you to use a proxy server for all communication to the internet, then you need to configure your agents to use that proxy server. If you didn't configure a Console agent to use a proxy server during installation, then you can configure the Console agent to use that proxy server at any time. 
 ---
 
-= Configure a Console agent to use a proxy server
+= Configure a NetApp Console agent to use a proxy server
 :hardbreaks:
 :nofooter:
 :icons: font

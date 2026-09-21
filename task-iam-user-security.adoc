@@ -5,7 +5,7 @@ keywords: user, service account, member, role, permissions, organization, projec
 summary: Manage your organization's members to provide permissions across different levels of your organization's resource hierarchy.
 ---
 
-= User security
+= Manage user security in NetApp Console
 :hardbreaks:
 :nofooter:
 :icons: font
