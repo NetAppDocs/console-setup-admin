@@ -16,10 +16,10 @@ You can assign the following roles to users to provide them access to NetApp Dis
 Disaster Recovery uses the following roles:
 
 * *Disaster recovery admin*: Perform any actions.
-* *Disaster recovery failover admin*: Perform failover and migrations. 
+* *Disaster recovery failover admin*: Perform failovers and migrations. 
 * *Disaster recovery application admin*: Create replication plans. Modify replication plans. Start test failovers.
 * *Disaster recovery viewer*: View information only.
-    
+  
 
 The following table indicates the actions that each role can perform. 
 
@@ -33,8 +33,8 @@ The following table indicates the actions that each role can perform.
 
 5+| *Activation and discovery*
 
-| Activate license | Yes | No  |Yes |No
-| Initiate free trial | Yes | No  |No |No
+| Activate license | Yes | No |Yes |No
+| Initiate free trial | Yes | No |No |No
 | Initiate discovery of workloads | Yes | No |No |No
 | View dashboard and all tabs | Yes | Yes |Yes |Yes
 | View license information | Yes | Yes |Yes |Yes
@@ -49,28 +49,28 @@ The following table indicates the actions that each role can perform.
 
 
 5+| *Replication plans*: 
-| View replication plans | Yes | Yes  |Yes |Yes
-| View replication plan details | Yes | Yes  |Yes |Yes
-| Create or modify replication plans | Yes | Yes  |Yes |No
+| View replication plans | Yes | Yes |Yes |Yes
+| View replication plan details | Yes | Yes |Yes |Yes
+| Create or modify replication plans | Yes | Yes |Yes |No
 | Create reports | Yes | No |No | No
 | View snapshots | Yes | Yes | Yes | Yes
 | Perform failover tests | Yes | Yes | Yes |No
-| Perform failovers | Yes | Yes  | No |No
-| Perform failbacks | Yes | Yes  |No |No
-| Perform migrations | Yes | Yes  |No |No
+| Perform failovers | Yes | Yes | No |No
+| Perform failbacks | Yes | Yes |No |No
+| Perform migrations | Yes | Yes |No |No
 
 5+| *Settings*:
-| Create or view an AppVault | Yes | Yes | No | No
-| Create or modify a resource transformations | Yes | Yes | No | No
+| Create or modify AppVaults | Yes | Yes | No | No
+| Create or modify resource transformations | Yes | Yes | No | No
 
 
 5+| *Resource groups*: 
-| View resource groups | Yes | Yes  |Yes |Yes
+| View resource groups | Yes | Yes |Yes |Yes
 | Create, modify, or delete resource groups| Yes | No | Yes | No
 
 
 5+| *Job monitoring*:
-| View jobs| Yes | No  |Yes |Yes
+| View jobs | Yes | No |Yes |Yes
 | Cancel jobs| Yes | Yes |Yes |No
 
 
