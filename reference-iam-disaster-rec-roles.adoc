@@ -31,40 +31,39 @@ The following table indicates the actions that each role can perform.
 | Disaster recovery viewer
 
 5+| *Activation and discovery*
-| Activate license | Yes | No |Yes |No
-| Initiate free trial | Yes | No |No |No
-| Initiate discovery of workloads | Yes | No |No |No
-| View dashboard and all tabs | Yes | Yes |Yes |Yes
-| View license information | Yes | Yes |Yes |Yes
+| Activate license | Yes | No | Yes | No
+| Initiate free trial | Yes | No | No | No
+| Initiate discovery of workloads | Yes | No | No | No
+| View dashboard and all tabs | Yes | Yes | Yes | Yes
+| View license information | Yes | Yes | Yes | Yes
 | View credentials | Yes | Yes | No | No
 | Create, update, or delete credentials | Yes | Yes | No | No
 
 5+| *Sites*
-| View sites | Yes | Yes |Yes |Yes
-| Add, modify, or delete sites or clusters | Yes | No| No |No
+| View sites | Yes | Yes | Yes | Yes
+| Add, modify, or delete sites or clusters | Yes | No| No | No
 | View clusters | Yes | No | No | No
 
 5+| *Replication plans*
-| View replication plans | Yes | Yes |Yes |Yes
-| View replication plan details | Yes | Yes |Yes |Yes
-| Create or modify replication plans | Yes | Yes |Yes |No
-| Create reports | Yes | No |No | No
+| View replication plans | Yes | Yes | Yes | Yes
+| View replication plan details | Yes | Yes | Yes | Yes
+| Create or modify replication plans | Yes | Yes | Yes | No
+| Create reports | Yes | No | No | No
 | View snapshots | Yes | Yes | Yes | Yes
-| Perform failover tests | Yes | Yes | Yes |No
-| Perform failovers | Yes | Yes | No |No
-| Perform failbacks | Yes | Yes |No |No
-| Perform migrations | Yes | Yes |No |No
+| Perform failover tests | Yes | Yes | Yes | No
+| Perform failovers | Yes | Yes | No | No
+| Perform failbacks | Yes | Yes | No | No
+| Perform migrations | Yes | Yes | No | No
 
 5+| *Settings*
 | Create or modify AppVaults | Yes | Yes | No | No
 | Create or modify resource transformations | Yes | Yes | No | No
 
 5+| *Resource groups*
-| View resource groups | Yes | Yes |Yes |Yes
+| View resource groups | Yes | Yes | Yes | Yes
 | Create, modify, or delete resource groups| Yes | No | Yes | No
 
 5+| *Job monitoring*
-| View jobs | Yes | No |Yes |Yes
-| Cancel jobs| Yes | Yes |Yes |No
-
+| View jobs | Yes | No | Yes | Yes
+| Cancel jobs| Yes | Yes | Yes | No
 |===
