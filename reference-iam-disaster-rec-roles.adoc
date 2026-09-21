@@ -42,14 +42,13 @@ The following table indicates the actions that each role can perform.
 | Create, update, or delete credentials | Yes | Yes | No | No
 
 
-
 5+| *Sites*: 
 | View sites | Yes | Yes |Yes |Yes
 | Add, modify, or delete sites or clusters | Yes | No| No |No
 | View clusters | Yes | No | No | No
 
 
-5+| *Replication plan*: 
+5+| *Replication plans*: 
 | View replication plans | Yes | Yes  |Yes |Yes
 | View replication plan details | Yes | Yes  |Yes |Yes
 | Create or modify replication plans | Yes | Yes  |Yes |No
@@ -60,8 +59,10 @@ The following table indicates the actions that each role can perform.
 | Perform failbacks | Yes | Yes  |No |No
 | Perform migrations | Yes | Yes  |No |No
 
-// check category
+5+| *Settings*:
 | Create or view an AppVault | Yes | Yes | No | No
+| Create or modify a resource transformations | Yes | Yes | No | No
+
 
 5+| *Resource groups*: 
 | View resource groups | Yes | Yes  |Yes |Yes
