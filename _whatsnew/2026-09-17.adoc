@@ -25,6 +25,10 @@ The 4.10.0 release includes updates to the following NetApp Console components a
 
 |===
 
+=== Private mode 4.10.0 supports Red Hat Enterprise Linux (RHEL) 9.6
+
+Private mode can now be installed and run on Red Hat Enterprise Linux (RHEL) 9.6, providing users with the latest supported operating system for enhanced security and performance. link:https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements[Learn about host requirements for private mode^]
+
 
 
 
