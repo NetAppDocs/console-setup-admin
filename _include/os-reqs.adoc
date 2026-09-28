@@ -120,7 +120,7 @@ a| 9.6
 * The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 
 
-| 4.7.0 or later with the Console in private mode|
+| 4.10.0 or later with the Console in private mode|
 Podman version 5.4.0 with podman-compose 1.5.0.
 
 <<podman-configuration,View Podman configuration requirements>>.
