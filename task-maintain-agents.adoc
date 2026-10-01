@@ -40,11 +40,22 @@ sudo apt upgrade
 
 If you create a Console agent from the Console, it deploys a VM instance in your cloud provider with a default configuration. After you create the agent, don't switch to a smaller VM instance with less CPU or RAM.
 
-The following table lists the CPU and RAM requirements:
+If you receive notifications that your agent VM is under-provisioned, consider upgrading to a larger VM instance with more CPU or RAM to ensure optimal performance.
 
-include::_include/os-reqs.adoc[tag=cpu-ram]
 
 link:reference-agent-default-config.html[Learn about the default configuration for the agent].
+
+If you need to increase the CPU or RAM of your agent VM, follow the instructions provided by your cloud provider or on-premises virtualization platform to resize the VM instance. NetApp recommends doubling the current CPU and RAM allocation to ensure optimal performance. The following table shows recommended sizing tiers, with each tier doubling the CPU and RAM of the previous tier.
+
+[cols="1,1,1",options="header"]
+|===
+| Tier | CPU (cores or vCPUs) | RAM
+| Minimum | 8 | 32 GB
+| Medium | 16 | 64 GB
+| Large | 32 | 128 GB
+|===
+
+
 
 [[monitor-disk-space]]
 == Monitor the agent
@@ -66,8 +77,25 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 | Action needed
 
 | Disk space is too high | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM[Review the NetApp Knowledge Base article^].
-| CPU usage is too high | Increase the CPU size of the agent VM in your cloud provider or on-premises, depending on where you installed it. Alternatively, create additional agents and distribute the workload across multiple agents. RAM utilization can vary based on your environment, ONTAP workloads, number of Cloud Volumes ONTAP systems, and the data services that you are using.
-| RAM usage is too high | Increase the RAM of the agent VM in your cloud provider or on-premises, depending on where you installed it. Alternatively, create additional agents and distribute the workload across multiple agents. RAM utilization can vary based on your environment, ONTAP workloads, number of Cloud Volumes ONTAP systems, and the data services that you are using.
+a| CPU usage is too high a| Increase the CPU size of the agent VM in your cloud provider or on-premises, depending on where you installed it. Alternatively, create additional agents and distribute the workload across multiple agents. RAM utilization can vary based on your environment, ONTAP workloads, number of Cloud Volumes ONTAP systems, and the data services that you are using.
+
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html[Learn how to increase the size of the agent VM in AWS^].
+
+* link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal[Learn how to increase the size of the agent VM in Azure^].
+
+* link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance[Learn how to increase the size of an agent VM in Google Cloud^].
+
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance[Learn how to increase the size of an on-premises agent running in VCenter].
+
+a| RAM usage is too high a| Increase the RAM of the agent VM in your cloud provider or on-premises, depending on where you installed it. Alternatively, create additional agents and distribute the workload across multiple agents. RAM utilization can vary based on your environment, ONTAP workloads, number of Cloud Volumes ONTAP systems, and the data services that you are using.
+
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html[Learn how to increase the size of the agent VM in AWS^].
+
+* link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal[Learn how to increase the size of the agent VM in Azure^].
+
+* link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance[Learn how to increase the size of an agent VM in Google Cloud^].
+
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance[Learn how to increase the size of an on-premises agent running in VCenter].
 
 
 |===
