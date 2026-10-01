@@ -127,27 +127,26 @@ sidebar:
           entries:
             - title: Learn about Console agents
               url: /concept-agents.html            
-          
             - title: Maintain Console agents
               entries:
-                - title: Maintain manually installed Console agents
-                  entries:
-                    - title: Maintain a VCenter-installed agent
-                      url: /task-agent-vm-config.html
-                    - title: Maintain NetApp Console agent VMs
-                      url: /task-maintain-agents.html
+                - title: Maintain a VCenter-installed agent
+                  url: /task-agent-vm-config.html
+                - title: Maintain NetApp Console agent VMs
+                  url: /task-maintain-agents.html
+            - title: Secure Console agents
+              entries:
                 - title: Update agent addressing and URIs
                   url: /task-update-agent-addressing.html
                 - title: Install a CA-signed certificate for web-console access
                   url: /task-installing-https-cert.html
                 - title: Configure a Console agent to use a proxy server
                   url: /task-configuring-proxy.html
-                - title: Troubleshoot the Console agent
-                  url: /task-troubleshoot-agent.html
-                - title: Upgrade the Console agent
-                  url: /task-upgrade-agent.html
-                - title: Uninstall and remove the Console agent
-                  url: /task-uninstall-agent.html
+            - title: Troubleshoot the Console agent
+              url: /task-troubleshoot-agent.html
+            - title: Upgrade the Console agent
+              url: /task-upgrade-agent.html
+            - title: Uninstall and remove the Console agent
+              url: /task-uninstall-agent.html
             - title: Manage cloud provider credentials
               entries:
                 - title: AWS
