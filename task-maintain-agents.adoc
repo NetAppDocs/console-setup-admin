@@ -45,6 +45,8 @@ If you create a Console agent from the Console, it deploys a VM instance in your
 
 If you receive notifications that your agent VM is under-provisioned, consider upgrading to a larger VM instance with more CPU or RAM to ensure optimal performance.
 
+NOTE: If you installed the agent in VCenter, use the Console maintenance tool to resize the VM instance. link:task-agent-vm-config.html[Learn how to resize the agent VM in VCenter^].
+
 
 link:reference-agent-default-config.html[Learn about the default configuration for the agent].
 
