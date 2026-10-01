@@ -129,7 +129,7 @@ sidebar:
               url: /concept-agents.html            
             - title: Maintain Console agents
               entries:
-                - title: Maintain a VCenter-installed agent
+                - title: Maintain a vCenter-installed agent
                   url: /task-agent-vm-config.html
                 - title: Maintain NetApp Console agent VMs
                   url: /task-maintain-agents.html

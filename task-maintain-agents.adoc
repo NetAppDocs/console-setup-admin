@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-maintain-agents.html
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health
-summary: Maintaining the operating system on the agent host is your responsibility. For example, you should apply security updates to the operating system on the Console agent host by following your company's standard procedures for operating system distribution.
+summary: Learn how to maintain NetApp Console agent VMs, including OS security updates for manually installed agents, recommended CPU and RAM sizing, resource health notifications, and VM start and stop procedures.
 ---
 
 = Maintain NetApp Console agent VMs
@@ -13,11 +13,13 @@ summary: Maintaining the operating system on the agent host is your responsibili
 :imagesdir: ./media/
 
 [.lead]
-Ensure that your Console agent VMs are properly maintained and updated according to your organization's policies.
+Maintain NetApp Console agent VMs by applying OS security updates to manually installed agents, responding to CPU, RAM, and disk-space alerts, and resizing or stopping and starting VMs when needed.
 
 When you manually install a Console agent, maintaining the operating system on the agent host is your (the customer's) responsibility. For example, you (the customer) should apply security updates to the operating system on the agent host by following your company's standard procedures for operating system distribution.
 
 If an agent VM becomes under-provisioned or experiences performance issues, you should take appropriate actions to upgrade the VM resources.
+
+NOTE: If you installed the agent in vCenter, use the Console maintenance tool to resize the VM instance. link:task-agent-vm-config.html[Learn how to maintain a agent VM in vCenter^].
 
 == Apply operating system updates to the manually installed agent hosts
 
