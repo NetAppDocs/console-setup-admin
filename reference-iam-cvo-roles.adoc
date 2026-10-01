@@ -26,7 +26,7 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 Assign Cloud Volumes ONTAP roles at the organization, folder, or project level that contains the system. Platform roles enable users to administer NetApp Console resources, while Cloud Volumes ONTAP roles enable users to manage Cloud Volumes ONTAP systems. For guidance on planning role assignments, see link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments[Set up role-based access for Cloud Volumes ONTAP].
 
 [[seeding-mappings-for-existing-users]]
-== Role migrations for existing users
+== Role migrations for existing users after upgrading to Console agent version 4.9.0 or later
 
 When you upgrade a Console agent to version 4.9.0 or later, the Console assigns additional Cloud Volumes ONTAP roles to existing users based on their platform roles.
 
