@@ -53,6 +53,7 @@ The operating system does not include a GUI. You must use a terminal to access t
 * The installation includes Docker Engine, which is the required container orchestration tool.
 * The default system disk is a 100 GiB SSD persistent disk.
 
+
 === Installation folder
 
 The agent installation folder is in the following location:
