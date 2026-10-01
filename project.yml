@@ -134,7 +134,7 @@ sidebar:
                   entries:
                     - title: Maintain a VCenter-installed agent
                       url: /task-agent-vm-config.html
-                    - title: Maintain a manually installed agent
+                    - title: Maintain NetApp Console agent VMs
                       url: /task-maintain-agents.html
                 - title: Update agent addressing and URIs
                   url: /task-update-agent-addressing.html
