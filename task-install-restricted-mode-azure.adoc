@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-install-restricted-mode-azure.html
-keywords: government region, gov, govcloud, connector, sovereign cloud
-summary: Deploy the Console agent in restricted mode so that you can use the NetApp Console with limited outbound connectivity. To get started, install the Console agent, set up the Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
+keywords: restricted mode, Azure, Azure Government, Azure Marketplace, Console agent
+summary: Deploy the Console agent in restricted mode in Azure from the Marketplace, or follow the manual install topic for an AWS, Azure, or Google Cloud host.
 ---
 
 = Deploy the NetApp Console agent in restricted mode in Azure
@@ -23,6 +23,10 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn ho
 
 Allow the following outbound endpoints so the Console agent can manage Azure resources and access NetApp Console services.
 
+=== Azure endpoints
+
+Allow the endpoints that apply to your Azure region: public, Government, or China.
+
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
@@ -31,6 +35,19 @@ Allow the following outbound endpoints so the Console agent can manage Azure res
 include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
 include::_include/endpoints-agent.adoc[tag=azure-gov-endpoints]
+
+include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
+
+|===
+
+=== NetApp Console endpoints
+
+Allow the shared endpoints for NetApp Support, Console features, and Console agent deployment and upgrades.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
 
 include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
