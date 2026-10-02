@@ -145,6 +145,7 @@ include::_include/endpoints-agent.adoc[tag=google-cloud-endpoints]
 
 |===
 
+[[restricted-mode-console-endpoints]]
 ==== NetApp Console endpoints
 
 Allow the shared endpoints for NetApp Support, Console features, and Console agent deployment and upgrades.

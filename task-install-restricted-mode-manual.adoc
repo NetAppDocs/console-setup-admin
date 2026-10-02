@@ -31,6 +31,8 @@ Allow the outbound endpoints required for the cloud provider where you install t
 * Azure: link:task-prepare-restricted-mode.html#restricted-mode-azure-endpoints[Azure networking endpoints]
 * Google Cloud: link:task-prepare-restricted-mode.html#restricted-mode-google-cloud-endpoints[Google Cloud networking endpoints]
 
+For shared NetApp Console, NSS, and upgrade endpoints, see link:task-prepare-restricted-mode.html#restricted-mode-console-endpoints[Shared NetApp Console endpoints].
+
 For browser access and other networking requirements, see link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Prepare network access for restricted mode].
 
 

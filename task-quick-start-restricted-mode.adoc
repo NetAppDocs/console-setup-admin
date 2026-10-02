@@ -26,7 +26,7 @@ Restricted mode is typically used by state and local governments and regulated c
 
 .. Set up networking that provides access to the target networks, outbound internet access for manual installations, and outbound internet for day-to-day access.
 
-.. Set up permissions in your cloud provider so that you can associate those permissions with the Console agent instance after you deploy it.
+.. Prepare the cloud permissions required for your provider and deployment method.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Console agent
 
@@ -39,7 +39,7 @@ Restricted mode is typically used by state and local governments and regulated c
 
 .. Set up the NetApp Console by opening a web browser and entering the Linux host's IP address.
 
-.. Provide the Console agent with the permissions that you previously set up.
+.. Follow your provider-specific instructions to associate the required permissions with the Console agent. For AWS Marketplace deployments, select the IAM role when you launch the EC2 instance.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] link:task-subscribe-restricted-mode.html[Subscribe to NetApp Intelligent Services (optional)]
 
