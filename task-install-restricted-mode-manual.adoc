@@ -23,7 +23,18 @@ Before you install the Console agent, prepare the cloud provider permissions it 
 
 link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn how to prepare cloud permissions].
 
-== Step 2: Prepare network access
+[[restricted-mode-google-cloud-apis]]
+== Step 2: Enable Google Cloud APIs (Google Cloud only)
+
+If you are installing the Console agent in Google Cloud, enable the required APIs in your project before installation. Some APIs are needed only for specific Cloud Volumes ONTAP or NetApp Backup and Recovery features, as noted below.
+
+.Steps
+
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis[Enable the APIs in your Google Cloud project^]
++
+include::_include/google-cloud-apis.adoc[]
+
+== Step 3: Prepare network access
 
 Allow the outbound endpoints required for the cloud provider where you install the Console agent.
 
@@ -92,15 +103,18 @@ include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted]
 For browser access and other networking requirements, see link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Prepare network access for restricted mode].
 
 
-== Step 3: Manually install the NetApp Console restricted mode in your cloud environment (must use for Google Cloud)
+[[podman-configuration]]
+== Step 4: Install Podman or Docker Engine
+
+include::_include/podman-docker.adoc[]
+
+== Step 5: Manually install the NetApp Console restricted mode in your cloud environment (must use for Google Cloud)
 
 You can install the Console agent manually on your own Linux host running in AWS, Azure, or Google Cloud.
 
 include::_include/manual-install.adoc[tag=before]
 
 * You need to disable the configuration check that verifies outbound connectivity during installation. The manual install fails if this check is not disabled. link:task-troubleshoot-agent.html[Learn how to disable configuration checks for manual installations.]
-
-* Depending on your operating system, either Podman or Docker Engine is required before you install the Console agent.
 
 include::_include/manual-install.adoc[tag=about]
 
@@ -115,7 +129,7 @@ The Console agent is now installed. At the end of the installation, the Console 
 
 Set up the NetApp Console.
 
-== Step 4: Set up NetApp Console
+== Step 6: Set up NetApp Console
 
 When you access the console for the first time, you are prompted to choose an organization for the Console agent and need to enable restricted mode.
 
@@ -155,7 +169,7 @@ The Console agent is now installed and set up with your Console organization. Al
 
 Provide the Console with the permissions that you previously set up.
 
-== Step 5: Provide permissions to the Console agent
+== Step 7: Provide permissions to the Console agent
 
 If you installed the Console agent manually, you need to give the permissions you set up earlier.
  

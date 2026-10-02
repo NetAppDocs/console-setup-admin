@@ -5,7 +5,7 @@ keywords: restricted mode requirements, requirements, install options, restricte
 summary: Prepare your environment before you deploy NetApp Console in restricted mode. You need to review host requirements, prepare networking, set up permissions, and more.
 ---
 
-= Prepare for deployment in NetApp Console restricted mode
+= Prepare to deploy NetApp Console in restricted mode
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -25,7 +25,7 @@ In addition, not all Console features and NetApp data services are available.
 
 link:concept-modes.html[Learn how restricted mode works].
 
-== Step 2: Understand your installation options
+== Step 2: Choose a restricted-mode installation method
 
 In restricted mode, you can install the Console agent in the cloud and access the NetApp Console through the locally installed agent. You can install through a cloud marketplace (AWS or Azure only) or manually on your own Linux host running in AWS, Azure, or Google Cloud.
 
@@ -33,9 +33,10 @@ In restricted mode, you can install the Console agent in the cloud and access th
 * From the Azure Marketplace
 * Manually installing the Console agent on your own Linux host running in AWS, Azure, or Google Cloud
 +
-NOTE: You must install manually on a dedicated Linux host if deploying in Google Cloud.
+NOTE: You must install the Console agent manually on a dedicated Linux host if deploying in Google Cloud.
 
-== Step 3: Review host requirements
+[[step-3-review-host-requirements]]
+== Step 3: Review Console agent host requirements
 
 When you deploy the Console agent from the AWS or Azure Marketplace, the image includes the required OS and software components. You simply need to choose an instance type that meets CPU and RAM requirements.
 
@@ -58,13 +59,12 @@ include::_include/os-reqs.adoc[tag=os]
 
 
 [[podman-configuration]]
-== Step 4: Install Podman or Docker Engine
+== Step 4: Prepare Podman or Docker Engine for manual installation
 
-To manually install the Console agent, prepare the host by installing Podman or Docker Engine.
+For manual installations, install and configure Podman or Docker Engine by following the instructions in the link:task-install-restricted-mode-manual.html#podman-configuration[manual installation topic].
 
-include::_include/podman-docker.adoc[]
-
-== Step 5: Prepare network access
+[[step-5-prepare-network-access]]
+== Step 5: Prepare network access for restricted mode
 
 Set up network access so the Console agent can manage resources in your public cloud. In addition to having a virtual network and subnet for the Console agent, you need to ensure that the following requirements are met.
 
@@ -176,7 +176,8 @@ include::_include/networking.adoc[tag=ports]
 //NTP
 include::_include/networking.adoc[tag=ntp]
 
-== Step 6: Prepare cloud permissions
+[[step-6-prepare-cloud-permissions]]
+== Step 6: Prepare cloud provider permissions
 
 The Console agent requires permissions from your cloud provider to deploy Cloud Volumes ONTAP in a virtual network and to use NetApp data services. You need to set up permissions in your cloud provider and then associate those permissions with the Console agent.
 
@@ -274,12 +275,3 @@ include::_include/google-set-up-service-account.adoc[]
 ====
 // end tabbed area
 
-== Step 7: Enable Google Cloud APIs
-
-Several APIs are required to deploy Cloud Volumes ONTAP in Google Cloud.
-
-.Step
-
-. https://cloud.google.com/apis/docs/getting-started#enabling_apis[Enable the following Google Cloud APIs in your project^]
-+
-include::_include/google-cloud-apis.adoc[]
