@@ -1,0 +1,153 @@
+---
+sidebar: sidebar
+permalink: task-install-restricted-mode-manual.html
+keywords: government region, gov, govcloud, connector, sovereign cloud
+summary: Deploy the Console agent in restricted mode so that you can use the NetApp Console with limited outbound connectivity. To get started, install the Console agent, set up the Console by accessing the user interface that's running on the Console agent, and then provide the cloud permissions that you previously set up.
+---
+
+= Manually deploy the NetApp Console agent in restricted mode
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If you want to use the NetApp Console with limited outbound connectivity, you need to manually deploy the Console agent in restricted mode.
+
+If you don't want to use a marketplace subscription or are deploying Google Cloud, you need to manually install the Console agent.
+
+== Step 1: Prepare cloud permissions
+
+Before you install the Console agent, prepare the cloud provider permissions it needs to manage resources.
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn how to prepare cloud permissions].
+
+== Step 2: Prepare network access
+
+Allow the outbound endpoints required for the cloud provider where you install the Console agent:
+
+* AWS: link:task-prepare-restricted-mode.html#restricted-mode-aws-endpoints[AWS networking endpoints]
+* Azure: link:task-prepare-restricted-mode.html#restricted-mode-azure-endpoints[Azure networking endpoints]
+* Google Cloud: link:task-prepare-restricted-mode.html#restricted-mode-google-cloud-endpoints[Google Cloud networking endpoints]
+
+For browser access and other networking requirements, see link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Prepare network access for restricted mode].
+
+
+== Step 3: Manually install the NetApp Console restricted mode in your cloud environment (must use for Google Cloud)
+
+You can install the Console agent manually on your own Linux host running in AWS, Azure, or Google Cloud.
+
+include::_include/manual-install.adoc[tag=before]
+
+* You need to disable the configuration check that verifies outbound connectivity during installation. The manual install fails if this check is not disabled. link:task-troubleshoot-agent.html[Learn how to disable configuration checks for manual installations.]
+
+* Depending on your operating system, either Podman or Docker Engine is required before you install the Console agent.
+
+include::_include/manual-install.adoc[tag=about]
+
+
+include::_include/manual-install.adoc[tag=main-steps]
+
+.Result
+
+The Console agent is now installed. At the end of the installation, the Console agent service (occm) restarts twice if you specified a proxy server.
+
+.What's next?
+
+Set up the NetApp Console.
+
+== Step 4: Set up NetApp Console
+
+When you access the console for the first time, you are prompted to choose an organization for the Console agent and need to enable restricted mode.
+
+.Before you begin
+
+The person who sets up the Console agent must log in to the Console using a login that doesn't already belong to a Console organization.
+ 
+If your login is associated with another organization, you need to sign up with a new login. Otherwise, you do not see the option to enable restricted mode on the setup screen.
+
+.Steps
+
+. Open a web browser from a host that has a connection to the Console agent instance and enter the following URL of the Console agent you installed.
+
+. Sign up or log in to the NetApp Console.
+
+. After you're logged in, set up the Console:
+
+.. Enter a name for the Console agent.
+
+.. Enter a name for a new Console organization.
+
+.. Select *Are you running in a secured environment?*
+
+.. Select *Enable restricted mode on this account*.
++
+Note that you can't change this setting after the account is created. You can't enable restricted mode later and you can't disable it later.
++
+If you deployed the Console agent in a Government region, the checkbox is already enabled and can't be changed. This is because restricted mode is the only mode supported in Government regions.
+
+.. Select *Let's start*.
+
+.Result
+
+The Console agent is now installed and set up with your Console organization. All users need to access the Console using the IP address of the Console agent instance.
+
+.What's next?
+
+Provide the Console with the permissions that you previously set up.
+
+== Step 5: Provide permissions to the Console agent
+
+If you installed the Console agent manually, you need to give the permissions you set up earlier.
+ 
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn how to prepare cloud permissions].
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.AWS IAM role
+--
+Attach the IAM role that you previously created to the EC2 instance where you installed the Console agent.
+
+These steps apply only if you manually installed the Console agent in AWS. For AWS Marketplace deployments, you already associated the Console agent instance with an IAM role that includes the required permissions.
+
+include::_include/provide-permissions-iam-role.adoc[]
+--
+
+.AWS access key
+--
+Provide the NetApp Console with the AWS access key for an IAM user that has the required permissions.
+
+.Steps
+
+include::_include/provide-permissions-access-key.adoc[]
+--
+
+.Azure role
+--
+include::_include/azure-provide-permissions-role.adoc[]
+--
+
+.Azure service principal
+--
+Provide the NetApp Console with the credentials for the Azure service principal that you previously set up.
+
+.Steps
+
+include::_include/azure-provide-permissions-service-principal.adoc[]
+
+.Result
+
+The NetApp Console now has the permissions that it needs to perform actions in Azure on your behalf.
+--
+
+.Google Cloud service account
+--
+include::_include/google-provide-permissions.adoc[]
+--
+
+====
+// end tabbed area

@@ -54,7 +54,13 @@ sidebar:
             - title: Prepare for restricted NetApp Console deployment
               url: /task-prepare-restricted-mode.html
             - title: Deploy NetApp Console in restricted mode
-              url: /task-install-restricted-mode.html
+              entries:
+                - title: AWS
+                  url: /task-install-restricted-mode-aws.html
+                - title: Azure
+                  url: /task-install-restricted-mode-azure.html
+                - title: Manual installation
+                  url: /task-install-restricted-mode-manual.html
             - title: Subscribe to NetApp Intelligent Services
               url: /task-subscribe-restricted-mode.html
             - title: What you can do next  
