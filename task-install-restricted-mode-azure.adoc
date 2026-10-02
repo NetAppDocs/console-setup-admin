@@ -57,7 +57,7 @@ include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted]
 
 |===
 
-For browser access and other networking requirements, see link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Prepare network access for restricted mode]. For Azure-specific endpoints, see link:task-prepare-restricted-mode.html#restricted-mode-azure-endpoints[Azure networking endpoints].
+For browser access and other networking requirements, see link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Prepare network access for restricted mode].
 
 == Step 3: Deploy the NetApp Console in restricted mode in Azure
 
@@ -73,7 +73,7 @@ You should have the following:
 * A VNet and subnet that meets networking requirements.
 +
 
-link:task-prepare-restricted-mode.html[Learn about networking requirements]
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Learn about networking requirements]
 
 
 * An Azure custom role that includes the required permissions for the Console agent.

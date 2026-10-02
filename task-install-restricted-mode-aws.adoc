@@ -69,7 +69,7 @@ Have the following:
 
 * A VPC and subnet that meets networking requirements.
 +
-link:task-prepare-restricted-mode.html[Learn about networking requirements]
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Learn about networking requirements]
 
 * An IAM role with an attached policy that includes the required permissions for the Console agent.
 +
@@ -105,7 +105,7 @@ Have the following:
 
 * A VPC and subnet that meets networking requirements.
 +
-link:task-prepare-restricted-mode.html[Learn about networking requirements]
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access[Learn about networking requirements]
 
 * An IAM role with an attached policy that includes the required permissions for the Console agent.
 +

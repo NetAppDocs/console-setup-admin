@@ -26,7 +26,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions[Learn ho
 [[restricted-mode-google-cloud-apis]]
 == Step 2: Enable Google Cloud APIs (Google Cloud only)
 
-If you are installing the Console agent in Google Cloud, enable the required APIs in your project before installation. Some APIs are needed only for specific Cloud Volumes ONTAP or NetApp Backup and Recovery features, as noted below.
+If you are installing the Console agent in Google Cloud, enable the required APIs in your project before installation. These APIs are needed for specific Cloud Volumes ONTAP features.
 
 .Steps
 
