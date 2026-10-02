@@ -55,11 +55,11 @@ sidebar:
               url: /task-prepare-restricted-mode.html
             - title: Deploy NetApp Console in restricted mode
               entries:
-                - title: AWS
+                - title: Deploy NetApp Console restricted mode from AWS marketplace
                   url: /task-install-restricted-mode-aws.html
-                - title: Azure
+                - title: Deploy NetApp Console restricted mode in Azure marketplace
                   url: /task-install-restricted-mode-azure.html
-                - title: Manual installation
+                - title: Manually install NetApp Console restricted mode (required for Google Cloud)
                   url: /task-install-restricted-mode-manual.html
             - title: Subscribe to NetApp Intelligent Services
               url: /task-subscribe-restricted-mode.html
