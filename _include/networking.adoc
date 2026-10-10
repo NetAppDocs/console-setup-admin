@@ -21,6 +21,8 @@ The Console agent requires a network connection to the location where you're pla
 //tag::outbound[]
 Outbound internet access::
 The network location where you deploy the Console agent must have an outbound internet connection to contact specific endpoints.
++
+Allow outbound HTTPS (TCP port 443) from the Console agent host to the required endpoints.
 //end::outbound[]
 
 //tag::endpoints-console[]
