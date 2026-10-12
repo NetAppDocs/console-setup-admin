@@ -15,6 +15,8 @@ summary: Set up role-based access for Cloud Volumes ONTAP by organizing projects
 [.lead]
 Set up access to Cloud Volumes ONTAP so existing Console users retain the access they need and new subscribers can add users with appropriate permissions.
 
+NOTE: Access roles for Cloud Volumes ONTAP are available when you are running a Console agent version 4.9.0 or later.
+
 Use one of the following sections:
 
 * *New to NetApp Console and Cloud Volumes ONTAP*: Set up role-based access for new users and Cloud Volumes ONTAP systems.
