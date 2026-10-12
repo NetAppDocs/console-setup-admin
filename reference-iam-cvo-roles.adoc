@@ -15,6 +15,8 @@ summary: You can assign the following roles to users to provide them access to C
 [.lead]
 You can assign the following roles to users to provide them access to Cloud Volumes ONTAP within NetApp Console.
 
+NOTE: Access roles for Cloud Volumes ONTAP are available when you are running a Console agent version 4.9.0 or later.
+
 * *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
 * *Cloud Volumes ONTAP operator*: Performs important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
 * *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
@@ -24,7 +26,7 @@ link:reference-iam-predefined-roles.html[Learn about access roles].
 Assign Cloud Volumes ONTAP roles at the organization, folder, or project level that contains the system. Platform roles enable users to administer NetApp Console resources, while Cloud Volumes ONTAP roles enable users to manage Cloud Volumes ONTAP systems. For guidance on planning role assignments, see link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments[Set up role-based access for Cloud Volumes ONTAP].
 
 [[seeding-mappings-for-existing-users]]
-== Role migrations for existing users
+== Role migrations for existing users after upgrading to Console agent version 4.9.0 or later
 
 When you upgrade a Console agent to version 4.9.0 or later, the Console assigns additional Cloud Volumes ONTAP roles to existing users based on their platform roles.
 
