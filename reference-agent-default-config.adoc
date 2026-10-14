@@ -24,7 +24,7 @@ The following configuration details apply if you deployed a Console agent from t
 If you deployed a Console agent from the Console or from the AWS marketplace, note the following:
 
 * The EC2 instance type is t3.2xlarge.
-* The operating system for the image is Ubuntu 22.04 LTS.
+* The operating system for the image is Ubuntu 24.04 LTS.
 +
 The operating system does not include a GUI. You must use a terminal to access the system.
 * The installation includes Docker Engine, which is the required container orchestration tool.
@@ -36,7 +36,7 @@ The operating system does not include a GUI. You must use a terminal to access t
 If you deployed a Console agent from the Console or from the Azure marketplace, note the following:
 
 * The VM type is Standard_D8s_v3.
-* The operating system for the image is Ubuntu 22.04 LTS.
+* The operating system for the image is Ubuntu 24.04 LTS.
 +
 The operating system does not include a GUI. You must use a terminal to access the system.
 * The installation includes Docker Engine, which is the required container orchestration tool.
@@ -47,7 +47,7 @@ The operating system does not include a GUI. You must use a terminal to access t
 If you deployed a Console agent from the Console or from the Google Cloud marketplace, note the following:
 
 * The VM instance is n2-standard-8.
-* The operating system for the image is Ubuntu 22.04 LTS.
+* The operating system for the image is Ubuntu 24.04 LTS.
 +
 The operating system does not include a GUI. You must use a terminal to access the system.
 * The installation includes Docker Engine, which is the required container orchestration tool.
