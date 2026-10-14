@@ -27,8 +27,7 @@ Most documentation pages are in the repository root. Supporting directories incl
 - NetApp Console supports standard, restricted, and private modes. State the applicable mode when a capability or procedure is not universal.
 - Console agents connect NetApp Console to storage systems and data services. They can be installed and maintained in AWS, Azure, Google Cloud, or on-premises environments.
 - IAM organizes resources through an organization, folders, and projects. Roles assigned at those levels determine member access to resources.
-- Keep AWS, Azure, and Google Cloud requirements separate because permissions, credentials, ports, and deployment procedures can differ.
-- Preserve established terminology and verify product behavior against nearby repository content. Do not invent permissions, commands, UI labels, or mode support.
+
 
 ## Typical user workflows
 
