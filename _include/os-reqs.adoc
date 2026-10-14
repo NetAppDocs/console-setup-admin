@@ -161,11 +161,12 @@ Supported in enforcing mode or permissive mode
 | 24.04 LTS
 | 4.0.0 or later with the NetApp Console in private mode
 | Docker Engine 23.0.6 to 28.0.0.
-| Not supported
 
 26.0.0 is supported with _new_ agent 3.9.44 or later installations
-
 | Not supported
+
+
+
 
 |===
 
