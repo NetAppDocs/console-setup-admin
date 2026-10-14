@@ -158,7 +158,7 @@ Supported in enforcing mode or permissive mode
 
 
 .2+| Ubuntu  
-| 24.04.4 LTS
+| 24.04 LTS
 | 4.0.0 or later with the NetApp Console in private mode
 | Docker Engine 23.0.6 to 28.0.0.
 | Not supported
