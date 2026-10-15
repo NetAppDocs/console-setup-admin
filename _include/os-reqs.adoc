@@ -104,43 +104,73 @@ Supported in enforcing mode or permissive mode
 //tag::os-private[]
 [[podman-versions]]Operating system and container requirements::
 The Console agent is supported with the following operating systems when using the Console in private mode. A container orchestration tool is required before you install the agent.
-+
+
 [cols="2a,2a,2a,2a,2a",options="header"]
 |===
-
 | Operating system
 | Supported OS versions
 | Supported agent versions
 | Required container tool
 | SELinux
 
-| Red Hat Enterprise Linux
+.3+| Red Hat Enterprise Linux
+a| 9.6
 
-|
-9.1 to 9.4
+* English language versions only.
+* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
 
-8.6 to 8.10
 
-| 4.0.0 or later with the Console in private mode 
-
-| Podman version 4.6.1 or 4.9.4
+| 4.10.0 or later with the Console in private mode|
+Podman version 5.4.0 with podman-compose 1.5.0.
 
 <<podman-configuration,View Podman configuration requirements>>.
+a|
+Supported in enforcing mode or permissive mode
 
-| Supported in enforcing mode or permissive mode 
+a| 9.1 to 9.4
 
-| Ubuntu
+* English language versions only.
+* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
+| 4.0.0 or later with the Console in standard mode or restricted mode
+a|
+Podman version 4.9.4 with podman-compose 1.5.0.
 
-| 22.04 LTS
-| 4.0.0 or later
-| Docker Engine 23.0.6 to 26.0.0
+<<podman-configuration,View Podman configuration requirements>>.
+a|
+Supported in enforcing mode or permissive mode
+
+a| 8.6 to 8.10
+
+* English language versions only.
+* The host must be registered with Red Hat Subscription Management. If it's not registered, the host can't access repositories to update required 3rd-party software during agent installation.
+| 4.0.0 or later with the Console in private mode
+a|
+Podman version 4.6.1 or 4.9.4 with podman-compose 1.0.6.
+
+<<podman-configuration,View Podman configuration requirements>>.
+a|
+Supported in enforcing mode or permissive mode
+
+
+
+
+
+
+
+.2+| Ubuntu  
+| 24.04 LTS
+| 4.0.0 or later with the NetApp Console in private mode
+| Docker Engine 23.0.6 to 28.0.0.
 
 26.0.0 is supported with _new_ agent 3.9.44 or later installations
-
 | Not supported
 
+
+
+
 |===
-+
+
+
 Notes:
 
 . The Console agent is supported on English-language versions of these operating systems.
