@@ -21,7 +21,7 @@ Standard mode (SaaS)::
 The NetApp Console SaaS (software-as-a-service) application enables access to all NetApp data services, automated updates, and flexible authentication options such as identity federation and NetApp Support Site logins. This mode supports marketplace subscriptions and BYOL licensing. This mode is ideal for most users and organizations, especially those who want the most features and services available with NetApp Console.
 
 Restricted mode (installed in your own public cloud)::
-Restricted mode is for organizations needing enhanced security and limited connectivity, such as governments and regulated companies. You install the NetApp Console in your own public cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application). Restricted mode provides access to key data services including Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in government and commercial regions), and data classification, along with automated software upgrades and identity federation. 
+Restricted mode is for organizations needing enhanced security and limited connectivity, such as governments and regulated companies. You install the NetApp Console in your own public cloud (in a government, sovereign, or commercial region), and it has limited outbound connectivity to the NetApp Console API endpoints (hosted in the SaaS application). Restricted mode provides access to key data services including AI Data Engine, Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in government and commercial regions), and data classification, along with automated software upgrades and identity federation. 
 
 Private mode (installed on your premises or in the cloud)::
 Private mode is for organizations with strict security needs, such as those in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6, or air-gapped environments. It does not connect to the NetApp Console SaaS application or NetApp cloud-based APIs, giving you full control and blocking outside communication. Supported data services include NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication, and Cloud Volumes ONTAP. All storage and authentication remain local, keeping data within your environment. Use this mode for defense contractors, financial institutions with strict data residency rules, and government agencies with classified systems.
@@ -133,8 +133,9 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | StorageGRID | Yes
 | Workloads | No
 
-.8+| *Data Services*
+.9+| *Data Services*
 
+| AI Data Engine | Yes
 | NetApp Backup and Recovery | Yes
 | NetApp Classification | Yes
 | NetApp Copy and Sync | Yes
@@ -243,8 +244,9 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | Cloud Volumes ONTAP | Yes
 | On-premises ONTAP clusters | Required for discovery and management. You can use direct discovery without a Console agent, but you need an agent to use management features.
 
-.3+| *Data Services* (restricted mode supports fewer data services than standard mode)
+.4+| *Data Services* (restricted mode supports fewer data services than standard mode)
 
+| AI Data Engine | Yes
 a| Backup and Recovery
 
 * Supported in Government regions and commercial regions with restricted mode. Not supported in sovereign regions with restricted mode.
