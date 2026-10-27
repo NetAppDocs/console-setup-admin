@@ -135,7 +135,7 @@ This table shows which storage systems you can manage from the NetApp Console. I
 
 .9+| *Data Services*
 
-| AI Data Engine | Yes
+| NetApp AI Data Engine | Yes
 | NetApp Backup and Recovery | Yes
 | NetApp Classification | Yes
 | NetApp Copy and Sync | Yes
@@ -531,8 +531,9 @@ This table shows which storage systems you can manage from the NetApp Console. I
 | StorageGRID | No | No 
 | Workloads | No | No
 
-.8+| *Data Services*
+.9+| *Data Services*
 
+| AI Data Engine | Yes | No
 | Backup and Recovery 
 | Yes
 
