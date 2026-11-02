@@ -22,20 +22,24 @@ Restricted mode is typically used by state and local governments and regulated c
 
 
 [role="quick-margin-list"]
-.. Prepare a dedicated Linux host that meets requirements for CPU, RAM, disk space, container orchestration tool, and more.
+.. Review the host requirements. If manually installing, prepare a dedicated Linux host that meets the CPU, RAM, disk-space, and container orchestration tool requirements. link:task-prepare-restricted-mode.html#step-3-review-host-requirements[Review host requirements].
 
 .. Set up networking that provides access to the target networks, outbound internet access for manual installations, and outbound internet for day-to-day access.
 
-.. Set up permissions in your cloud provider so that you can associate those permissions with the Console agent instance after you deploy it.
+.. Prepare the cloud permissions required for your provider and deployment method.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] link:task-install-restricted-mode.html[Deploy the Console agent]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Console agent
 
 [role="quick-margin-list"]
-.. Install the Console agent from your cloud provider's marketplace or by manually installing the software on your own Linux host.
+.. Choose the deployment instructions for your cloud environment:
++
+* AWS: link:task-install-restricted-mode-aws.html[Deploy in AWS]
+* Azure: link:task-install-restricted-mode-azure.html[Deploy in Azure]
+* Manual installation: link:task-install-restricted-mode-manual.html[Manually deploy in AWS, Azure, or Google Cloud]
 
 .. Set up the NetApp Console by opening a web browser and entering the Linux host's IP address.
 
-.. Provide the Console agent with the permissions that you previously set up.
+.. Follow your provider-specific instructions to associate the required permissions with the Console agent. For AWS Marketplace deployments, select the IAM role when you launch the EC2 instance.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] link:task-subscribe-restricted-mode.html[Subscribe to NetApp Intelligent Services (optional)]
 
