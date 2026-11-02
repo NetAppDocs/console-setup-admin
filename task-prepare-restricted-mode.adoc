@@ -5,7 +5,7 @@ keywords: restricted mode requirements, requirements, install options, restricte
 summary: Prepare your environment before you deploy NetApp Console in restricted mode. You need to review host requirements, prepare networking, set up permissions, and more.
 ---
 
-= Prepare for deployment in NetApp Console restricted mode
+= Prepare to deploy NetApp Console in restricted mode
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -25,19 +25,22 @@ In addition, not all Console features and NetApp data services are available.
 
 link:concept-modes.html[Learn how restricted mode works].
 
-== Step 2: Review installation options
+== Step 2: Choose a restricted-mode installation method
 
-In restricted mode, you can only install the Console agent in the cloud. The following installation options are available:
+In restricted mode, you can install the Console agent in the cloud and access the NetApp Console through the locally installed agent. You can install through a cloud marketplace (AWS or Azure only) or manually on your own Linux host running in AWS, Azure, or Google Cloud.
 
 * From the AWS Marketplace
 * From the Azure Marketplace
 * Manually installing the Console agent on your own Linux host running in AWS, Azure, or Google Cloud
++
+NOTE: You must install the Console agent manually on a dedicated Linux host if deploying in Google Cloud.
 
-== Step 3: Review host requirements
-
-A host must meet specific OS, RAM, and port requirements to run the Console agent.
+[[step-3-review-host-requirements]]
+== Step 3: Review Console agent host requirements
 
 When you deploy the Console agent from the AWS or Azure Marketplace, the image includes the required OS and software components. You simply need to choose an instance type that meets CPU and RAM requirements.
+
+If you are installing manually on your own Linux host, ensure that the host meets the required OS, RAM, and port requirements.
 
 include::_include/os-reqs.adoc[tag=dedicated]
 
@@ -56,13 +59,12 @@ include::_include/os-reqs.adoc[tag=os]
 
 
 [[podman-configuration]]
-== Step 4: Install Podman or Docker Engine
+== Step 4: Prepare Podman or Docker Engine for manual installation
 
-To manually install the Console agent, prepare the host by installing Podman or Docker Engine.
+For manual installations, install and configure Podman or Docker Engine by following the instructions in the link:task-install-restricted-mode-manual.html#podman-configuration[manual installation topic].
 
-include::_include/podman-docker.adoc[]
-
-== Step 5: Prepare network access
+[[step-5-prepare-network-access]]
+== Step 5: Prepare network access for restricted mode
 
 Set up network access so the Console agent can manage resources in your public cloud. In addition to having a virtual network and subnet for the Console agent, you need to ensure that the following requirements are met.
 
@@ -70,7 +72,7 @@ Connections to target networks::
 Ensure the Console agent has a network connection to the storage locations. For example, the VPC or VNet where you plan to deploy Cloud Volumes ONTAP, or the data center where your on-premises ONTAP clusters reside.
 
 Prepare networking for user access to NetApp Console::
-In restricted mode, users access the Console from the Console agent VM. The Console agent contacts a few endpoints to complete data management tasks. These endpoints are contacted from a user's computer when completing specific actions from the Console.
+In restricted mode, users access the Console's local interface from a browser connected to the Console agent VM. When users complete certain actions in the Console, their browser must be able to reach the endpoints listed below.
 
 NOTE: Console agents previous to version 4.0.0 support different endpoints. If you upgraded to 4.0.0 or later, you can remove the old endpoints from your allow list. link:reference-networking-saas-console-previous.html[Learn more about the required network access for versions previous to 4.0.0.]
 
@@ -84,26 +86,39 @@ NOTE: Console agents previous to version 4.0.0 support different endpoints. If y
 
 include::_include/endpoints-agent.adoc[tag=saas-endpoints]
 
-|\https://cdn.auth0.com
 
-\https://services.cloud.netapp.com
-| Your web browser connects to these endpoints for centralized user authentication through the NetApp Console.
-
+|\https://services.cloud.netapp.com
+a| * Your web browser connects to these endpoints for centralized user authentication through the NetApp Console.
 
 |===
 
 
-Outbound internet access for day-to-day operations::
-The Console agent's network location must have outbound internet access. It needs to be able to reach the SaaS services of the NetApp Console as well as endpoints within your respective public cloud environment.
-+
+=== Outbound internet access for day-to-day operations
+
+The Console agent needs outbound internet access to manage resources in your cloud provider and use NetApp Console services. Allow the endpoints for your environment and the shared Console services below.
+[[restricted-mode-aws-endpoints]]
+==== AWS environments
+
+Allow these AWS service endpoints to manage AWS resources, including FSx for ONTAP.
+
 [cols="2a,1a",options="header,autowidth"]
 |===
 | Endpoints
 | Purpose
-2+| *AWS environments*
+
 include::_include/endpoints-agent.adoc[tag=aws-endpoints]
 
-2+| *Azure environments*
+|===
+
+[[restricted-mode-azure-endpoints]]
+==== Azure environments
+
+Allow the endpoints that apply to your Azure region: public, Government, or China.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
 
 include::_include/endpoints-agent.adoc[tag=azure-public-endpoints]
 
@@ -111,11 +126,34 @@ include::_include/endpoints-agent.adoc[tag=azure-gov-endpoints]
 
 include::_include/endpoints-agent.adoc[tag=azure-china-endpoints]
 
-2+| *Google Cloud environments*
+|===
+
+//Azure public IP
+include::_include/networking.adoc[tag=azure-public-ip]
+
+[[restricted-mode-google-cloud-endpoints]]
+==== Google Cloud environments
+
+Allow these Google Cloud API endpoints to manage resources in your project.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
 
 include::_include/endpoints-agent.adoc[tag=google-cloud-endpoints]
 
-2+| *NetApp Console endpoints*
+|===
+
+[[restricted-mode-console-endpoints]]
+==== NetApp Console endpoints
+
+Allow the shared endpoints for NetApp Support, Console features, and Console agent deployment and upgrades.
+
+[cols="2a,1a",options="header,autowidth"]
+|===
+| Endpoints
+| Purpose
 
 include::_include/endpoints-agent.adoc[tag=nss-endpoints]
 
@@ -126,8 +164,8 @@ include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-restricted]
 |===
 
 
-//Azure public IP
-include::_include/networking.adoc[tag=azure-public-ip]
+
+
 
 //Proxy server
 include::_include/networking.adoc[tag=proxy]
@@ -137,10 +175,9 @@ include::_include/networking.adoc[tag=ports]
 
 //NTP
 include::_include/networking.adoc[tag=ntp]
-+
-If you're planning to create a Console agent from your cloud provider's marketplace, implement this networking requirement after you create the Console agent.
 
-== Step 6: Prepare cloud permissions
+[[step-6-prepare-cloud-permissions]]
+== Step 6: Prepare cloud provider permissions
 
 The Console agent requires permissions from your cloud provider to deploy Cloud Volumes ONTAP in a virtual network and to use NetApp data services. You need to set up permissions in your cloud provider and then associate those permissions with the Console agent.
 
@@ -238,12 +275,3 @@ include::_include/google-set-up-service-account.adoc[]
 ====
 // end tabbed area
 
-== Step 7: Enable Google Cloud APIs
-
-Several APIs are required to deploy Cloud Volumes ONTAP in Google Cloud.
-
-.Step
-
-. https://cloud.google.com/apis/docs/getting-started#enabling_apis[Enable the following Google Cloud APIs in your project^]
-+
-include::_include/google-cloud-apis.adoc[]

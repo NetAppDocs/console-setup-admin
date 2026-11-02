@@ -19,7 +19,7 @@ include::endpoints-agent.adoc[tag=nss-endpoints]
 
 include::endpoints-agent.adoc[tag=saas-endpoints]
 
-include::endpoints-agent.adoc[tag=upgrade-endpoints]
+include::endpoints-agent.adoc[tag=upgrade-endpoints-saas]
 
 |===
 --
