@@ -295,8 +295,7 @@ Provide your authentication, deployment, network, and security group details so 
 
 * Creating the Console agent from the Console deploys an EC2 instance in AWS using a default configuration. Do not switch to a smaller EC2 instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
-* By default, the Console creates the agent role and its profile. Ensure the role is updated as new permissions are added in future releases. link:reference-permissions-aws.html[Learn more about the IAM policy for the Console agent].
-// SME review (BLUEXPDOC-1534): Does the update requirement apply to a role that the Console creates, or only to a role that you provide?
+* By default, the Console creates the agent role and its profile. If you provide your own agent role, ensure that you update it as new permissions are added in future releases. link:reference-permissions-aws.html[Learn more about the IAM policy for the Console agent].
 
 .Before you begin
 
