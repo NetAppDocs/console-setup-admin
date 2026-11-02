@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-install-agent-aws-console.html
-keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console
-summary: You can deploy a Console agent in AWS directly from the NetApp Console. Before deploying a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console, Create role for me, CloudFormation Quick Create, IAM role, IAM policy, Assume role, AWS keys, deployment role, external ID
+summary: Deploy a Console agent in AWS from the NetApp Console by using Create role for me, Assume role, or AWS keys. Set up networking and permissions first.
 ---
 
 = Deploy a Console agent in AWS from NetApp Console
@@ -13,21 +13,19 @@ summary: You can deploy a Console agent in AWS directly from the NetApp Console.
 :imagesdir: ./media/
 
 [.lead]
-You can deploy a Console agent in AWS directly from the NetApp Console. Before deploying a Console agent in AWS from the Console, you need to set up your networking and prepare AWS permissions.
+Deploy a Console agent in AWS without leaving the NetApp Console, so that you can start managing your AWS resources and data services.
 
-Deploying an agent in AWS launches an EC2 instance running Linux and the Console agent software in a VPC of your choice.
-
+Deploying a Console agent in AWS launches an EC2 instance running Linux and the Console agent software in a VPC of your choice.
 
 .Before you begin
 
 * link:concept-agent-install-options.html#agent-console-deploy[Learn when to deploy from the Console].
-* You should review link:reference-limitations.html[Console agent limitations].
-
+* Review link:reference-limitations.html[Console agent limitations].
 
 [[networking-aws-agent]]
-== Step 1: Set up networking for deploying a Console agent in AWS
+== Step 1: Set up networking to deploy a Console agent in AWS
 
-Ensure that the network location where you plan to install the Console agent supports the following requirements. These requirements enable the Console agent to manage resources and processes in your hybrid cloud.
+Ensure that the network location where you plan to deploy the Console agent supports the following requirements. These requirements enable the Console agent to manage resources and processes in your hybrid cloud.
 
 //VPC and subnet
 include::_include/networking.adoc[tag=vpc]
@@ -56,7 +54,6 @@ include::_include/endpoints-agent.adoc[tag=upgrade-endpoints-saas]
 
 |===
 
-
 //Console endpoints
 include::_include/networking.adoc[tag=endpoints-console]
 
@@ -71,16 +68,79 @@ include::_include/networking.adoc[tag=ntp]
 +
 You'll need to implement this networking requirement after you create the Console agent.
 
-
 [[aws-permissions-agent]]
-== Step 2: Set up AWS permissions for the Console agent
+== Step 2: Set up AWS permissions to deploy the Console agent
 
-The Console needs to authenticate with AWS before it can deploy the Console agent in your VPC. You can choose one of these authentication methods:
+Give the Console only the AWS permissions it needs to deploy the Console agent in your VPC, based on the authentication method that you choose.
 
-* Let the Console assume an IAM role that has the required permissions
-* Provide an AWS access key and secret key for an IAM user who has the required permissions
+Choose one of these authentication methods and set up only what it requires:
 
-With either option, the first step is to create an IAM policy. This policy contains only the permissions needed to launch the Console agent in AWS from the Console.
+.Authentication methods for deploying a Console agent
+[cols="1a,2a,2a",options="header"]
+|===
+| Method
+| What it does
+| What you set up
+
+| *Create role for me*
+| The Console opens AWS CloudFormation Quick Create, which creates the deployment role that the Console assumes.
+| Permissions for the AWS identity that submits the stack.
+
+| *Assume role*
+| The Console assumes an existing IAM role in your account.
+| A policy and an IAM role.
+
+| *AWS keys*
+| The Console uses an AWS access key and secret key.
+| A policy and an IAM user.
+|===
+
+With *Create role for me* and *Assume role*, the Console assumes an IAM role, called the *deployment role*, to deploy the Console agent. After deployment, the Console agent uses a separate IAM role attached to its EC2 instance, called the *agent role*. By default, the Console creates the agent role for you. link:#aws-agent-role[Learn how to use your own agent role].
+
+[[aws-permissions-quick-create]]
+=== Set up permissions for Create role for me (CloudFormation Quick Create)
+
+Use an AWS identity that can create the CloudFormation stack and the deployment role, so that the stack completes without permission errors.
+
+The identity that submits the CloudFormation Quick Create stack needs administrator permissions or the following minimum permissions. These permissions let CloudFormation create the deployment role. They are not the permissions of the agent role.
+
+// SME review (BLUEXPDOC-1534): Source is the CVO AWS Marketplace page, which shows no Resource element. Confirm "Resource": "*".
+[source,json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormationStack",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:GetTemplateSummary",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:GetRolePolicy",
+        "iam:PassRole",
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+[[aws-permissions-assume-role-keys]]
+=== Set up permissions for Assume role or AWS keys
+
+If you choose *Assume role* or *AWS keys*, create a policy with only the permissions needed to deploy the Console agent, and attach it to the role or user that the Console uses.
 
 If needed, you can restrict the IAM policy by using the IAM `Condition` element. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html[AWS documentation: Condition element^]
 
@@ -94,7 +154,7 @@ If needed, you can restrict the IAM policy by using the IAM `Condition` element.
 
 . Copy and paste the following policy:
 +
-This policy contains only the permissions needed to launch the Console agent in AWS from the Console. When the Console creates the Console agent, it applies a new set of permissions to the Console agent that enables the Console agent to manage AWS resources. link:reference-permissions-aws.html[View permissions required for the Console agent itself].
+This policy contains only the permissions needed to launch the Console agent in AWS from the Console. link:reference-permissions-aws.html[View the permissions of the agent role].
 +
 [source,json]
 ----
@@ -180,7 +240,7 @@ This policy contains only the permissions needed to launch the Console agent in 
 
 . Either attach the policy to an IAM role that the Console can assume or to an IAM user so that you can provide the Console with access keys:
 
-* (Option 1) Set up an IAM role that the Console can assume:
+* *Assume role*: Set up an IAM role that the Console can assume:
 +
 .. Go to the AWS IAM console in the target account.
 
@@ -194,7 +254,7 @@ This policy contains only the permissions needed to launch the Console agent in 
 
 .. After you create the role, copy the Role ARN so that you can paste it in the Console when you create the Console agent.
 
-* (Option 2) Set up permissions for an IAM user so that you can provide the Console with access keys:
+* *AWS keys*: Set up permissions for an IAM user so that you can provide the Console with access keys:
 +
 .. From the AWS IAM console, select *Users* and then select the user name.
 
@@ -208,24 +268,41 @@ This policy contains only the permissions needed to launch the Console agent in 
 
 .Result
 
-You should now have an IAM role that has the required permissions or an IAM user that has the required permissions. When you create the Console agent from the Console, you can provide information about the role or access keys.
+You now have a deployment role or an IAM user that has the required permissions. When you deploy the Console agent, you provide the role ARN or the access keys.
 
-== Step 3: Create the Console agent
+[[aws-agent-role]]
+== Step 3: Set up your own IAM role for the Console agent (optional)
 
-Create the Console agent directly from the Console web-based console.
+Create your own agent role if you want to select it instead of the role that the Console creates by default. Create the role before you deploy the Console agent.
+
+.Steps
+
+include::_include/aws-permissions.adoc[tag=policy]
++
+For standard regions, the permissions are spread across two policies. Two policies are required due to a maximum character size limit for managed policies in AWS. link:reference-permissions-aws.html[Learn more about IAM policies for the Console agent].
+
+include::_include/aws-permissions.adoc[tag=role]
+
+.Result
+
+You now have an agent role that you can select in *Agent deployment details* when you deploy the Console agent.
+
+== Step 4: Deploy the Console agent
+
+Provide your authentication, deployment, network, and security group details so that the Console launches the Console agent in your VPC.
 
 .About this task
 
 * Creating the Console agent from the Console deploys an EC2 instance in AWS using a default configuration. Do not switch to a smaller EC2 instance with fewer CPUs or less RAM after creating the Console agent. link:reference-agent-default-config.html[Learn about the default configuration for the Console agent].
 
-* When the Console creates the Console agent, it creates an IAM role and a profile for the agent. This role includes permissions that enables the Console agent to manage AWS resources. Ensure the role is updated as new permissions are added in future releases.
- link:reference-permissions-aws.html[Learn more about the IAM policy for the Console agent].
+* By default, the Console creates the agent role and its profile. Ensure the role is updated as new permissions are added in future releases. link:reference-permissions-aws.html[Learn more about the IAM policy for the Console agent].
+// SME review (BLUEXPDOC-1534): Does the update requirement apply to a role that the Console creates, or only to a role that you provide?
 
 .Before you begin
 
 You should have the following:
 
-* An AWS authentication method: either an IAM role or access keys for an IAM user with the required permissions.
+* An AWS authentication method: *Create role for me*, *Assume role*, or *AWS keys*.
 
 * A VPC and subnet that meets networking requirements.
 
@@ -233,57 +310,56 @@ You should have the following:
 
 * Details about a proxy server, if a proxy is required for internet access from the Console agent.
 
-* Set up link:#networking-aws-agent[networking requirements].
+* Completed link:#networking-aws-agent[Step 1].
 
-* Set up link:#aws-permissions-agent[AWS permissions].
+* Completed link:#aws-permissions-agent[Step 2].
 
 .Steps
 
-. Select *Administration > Agents*. 
+. Select *Administration > Agents*.
 
 . On the *Overview* page, select *Deploy agent > AWS*.
 
-
-. Follow the steps in the wizard to create the Console agent:
-
-. On the *Introduction* page, review the overview of the process.
-
-. On the *AWS Credentials* page, specify your AWS region and then choose an authentication method, which is either an IAM role that the Console can assume or an AWS access key and secret key.
+. In the *AWS credentials for agent deployment* section, choose one of the following authentication methods:
 +
-TIP: If you choose *Assume Role*, you can create the first set of credentials from the Console agent deployment wizard. Any additional set of credentials must be created from the Credentials page. They will then be available from the wizard in a drop-down list. link:task-adding-aws-accounts.html[Learn how to add additional credentials].
+* *Create role for me*:
++
+.. Select your AWS region and enter your AWS account ID. Optionally, enter an external ID.
+.. Select *Open CloudFormation Quick Create*.
+.. In AWS, acknowledge the terms and select *Create stack*.
+.. When AWS finishes creating the role, return to the Console and confirm the role.
+// SME review (BLUEXPDOC-1534): The control for confirming the role is unverified. Region may apply to all three methods.
+* *Assume role*: Enter the ARN of the IAM role and select *Validate credentials*.
+* *AWS keys*: Enter the access key and secret key, and select *Validate credentials*.
 
-. On the *Details* page, provide details about the Console agent.
+. In the *Agent deployment details* section, provide details about the Console agent.
 +
 ** Enter a name.
 ** Add custom tags (metadata).
-** Choose whether you want the Console to create a new role that has the required permissions, or if you want to select an existing role that you set up with link:reference-permissions-aws.html[the required permissions].
+** Choose whether you want the Console to create the agent role, or select an agent role that you link:#aws-agent-role[set up yourself].
 ** Choose whether you want to encrypt the Console agent's EBS disks. You have the option to use the default encryption key or to use a custom key.
+// SME review (BLUEXPDOC-1534): The EBS disk encryption option is from the previous wizard and I'm not seeing it on staging. Can you please confirm that it still appears.
 
-. On the *Network* page, specify a VPC, subnet, and key pair for the agent, choose whether to enable a public IP address, and optionally specify a proxy configuration.
+. In the *Networking configuration* section, specify a VPC, subnet, and key pair for the Console agent, choose whether to enable a public IP address, and optionally specify a proxy configuration.
 +
 Ensure you have the correct key pair to access the Console agent virtual machine. Without a key pair, you cannot access it.
 
-. On the *Security Group* page, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
+. In the *Security group* section, choose whether to create a new security group or whether to select an existing security group that allows the required inbound and outbound rules.
 +
 link:reference-ports-aws.html[View security group rules for AWS].
+
+// SME review (BLUEXPDOC-1534): The order of the form and the review page, and the location of Validate agent configuration, are unconfirmed.
 
 include::_include/agent-deploy-console-check.adoc[]
 
 . Select *Add*.
 +
-The Console deploys the agent in about 10 minutes. Stay on the page until the process completes.
+The Console deploys the Console agent in about 10 minutes. Stay on the page until the process completes.
 
 .Result
 
 After the process is complete, the Console agent is available for use from the Console.
 
-NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
-
-
 If you have Amazon S3 buckets in the same AWS account where you created the Console agent, you'll see an Amazon S3 working environment appear on the *Systems* page automatically. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html[Learn how to manage S3 buckets from NetApp Console^]
 
-
-
-
-
-
+include::_include/validate-agent-ui.adoc[]
