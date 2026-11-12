@@ -89,7 +89,7 @@ After you upgrade a Console agent to version 4.9.0 or later, the Console automat
 .Steps
 
 . Identify the organization, folder, or project that contains each Cloud Volumes ONTAP system.
-. Review the Cloud Volumes ONTAP role assigned to each user and confirm that it is assigned at the organization, folder, or project level containing the system. link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users[Learn about the Cloud Volumes ONTAP roles that are assigned automatically after upgrading].
+. Review the Cloud Volumes ONTAP role assigned to each user and confirm that it is assigned at the organization, folder, or project level containing the system. link:reference-iam-cvo-roles.html[Learn about the Cloud Volumes ONTAP roles that are assigned automatically after upgrading].
 . Assign or change the Cloud Volumes ONTAP role when the seeded role does not match the user's responsibilities. The seeding process assigns the Cloud Volumes ONTAP admin or viewer role based on the user's existing platform role. If a user needs operator-level permissions, assign the Cloud Volumes ONTAP operator role explicitly after seeding.
 . Wait up to one hour for new or updated role assignments to take effect. Cloud Volumes ONTAP refreshes role assignments every hour.
 . Have the user access the Cloud Volumes ONTAP system and confirm that the available operations match the assigned role.
