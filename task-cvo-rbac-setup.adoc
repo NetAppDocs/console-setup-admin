@@ -61,8 +61,8 @@ Use these role assignments when a user needs to administer Console resources and
 
 | Folder or project
 | Folder or project admin
-| ##Cloud Volumes ONTAP contributor##
-| ##When a user must administer Console resources in a particular folder or project and manage Cloud Volumes ONTAP systems##
+| Cloud Volumes ONTAP contributor
+| When a user must administer Console resources in a particular folder or project and manage Cloud Volumes ONTAP systems
 
 | Folder or project
 | Folder or project admin

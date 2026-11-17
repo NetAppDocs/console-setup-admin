@@ -18,7 +18,7 @@ You can assign the following roles to users to provide them access to Cloud Volu
 NOTE: Access roles for Cloud Volumes ONTAP are available when you are running a Console agent version 4.9.0 or later.
 
 * *Cloud Volumes ONTAP admin*: Provides full access to all Cloud Volumes ONTAP operations.
-* ##*Cloud Volumes ONTAP contributor*: Provides similar access as the Cloud Volumes ONTAP admin role, except for operations that delete or remove resources or turn systems on or off. Contributors can perform operations such as adding systems, managing replication, and editing volume and system settings, but can't delete systems, volumes, aggregates, or replication relationships.##
+* *Cloud Volumes ONTAP contributor*: Provides similar access as the Cloud Volumes ONTAP admin role, except for operations that delete or remove resources or turn systems on or off. Contributors can perform operations such as adding systems, managing replication, and editing volume and system settings, but can't delete systems, volumes, aggregates, or replication relationships.
 * *Cloud Volumes ONTAP operator*: Performs important storage operations, such as discovering and managing Cloud Volumes ONTAP systems, including adding volumes, aggregates, snapshots, and replications, modifying some configurations, and upgrading Cloud Volumes ONTAP versions.
 * *Cloud Volumes ONTAP viewer*: Provides read-only access to Cloud Volumes ONTAP information. This role can't perform any active operations. Some tabs and screens containing configuration information might be unavailable to viewers.
 
@@ -37,7 +37,7 @@ The following table indicates the actions that each role can perform.
 |===
 | Feature and action
 | Cloud Volumes ONTAP admin
-| ##Cloud Volumes ONTAP contributor##
+| Cloud Volumes ONTAP contributor
 | Cloud Volumes ONTAP operator
 | Cloud Volumes ONTAP viewer
 
