@@ -51,7 +51,7 @@ Use these role assignments when a user needs to administer Console resources and
 
 | Organization
 | Organization admin
-| Cloud Volumes ONTAP operator
+| Cloud Volumes ONTAP admin
 | When a user must administer Console resources (including Console agent settings) and manage Cloud Volumes ONTAP systems
 
 | Folder or project
