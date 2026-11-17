@@ -77,9 +77,9 @@ Before you begin, take a snapshot of the VM in case you need to roll back.
 
 . Enter `3` to select *Upgrade* and follow the on-screen prompts.
 +
-The upgrade installs the updated OS, Docker runtime, and Console agent services in place. If the kernel is updated, the VM restarts automatically.
+The upgrade installs the updated OS, Docker runtime, and Console agent services in place. When you upgrade to Console agent 4.13.0, ensure that the VM is restarted after the upgrade finishes. The VM might restart automatically. For other versions, the VM restarts automatically if the kernel is updated.
 
-. After the upgrade completes, verify that the Console agent is running correctly:
+. After the upgrade completes and any restart finishes, verify that the Console agent is running correctly:
 .. In the vSphere client, confirm that the VM is powered on and the web console is accessible.
 .. In the NetApp Console, go to *Administration > Support > Agents* and confirm the agent version reflects the new version.
 
