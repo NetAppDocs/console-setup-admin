@@ -17,7 +17,7 @@ You manage AWS credentials and marketplace subscriptions directly from NetApp Co
 
 == Initial AWS credentials
 
-When you deploy a Console agent from the Console, you need to provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console agent in AWS. The required permissions are listed in the link:task-install-agent-aws-console.html#aws-permissions-agent[Agent deployment policy for AWS].
+When you deploy a Console agent from the Console, you can have the Console create an IAM role for you, or you can provide the ARN of an IAM role or access keys for an IAM user. The authentication method must have permissions to deploy the Console agent in AWS. The required permissions are listed in the link:task-install-agent-aws-console.html#aws-permissions-agent[Agent deployment permissions for AWS].
 
 When the Console launches the Console agent in AWS, it creates an IAM role and a profile for the agent. It also attaches a policy that provides the Console agent with permissions to manage resources and processes within that AWS account. link:reference-permissions-aws.html[Review how the agent uses the permissions].
 

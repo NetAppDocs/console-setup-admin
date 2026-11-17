@@ -1,0 +1,35 @@
+//All links and images must use the absolute URL.
+
+
+=== Console agent 4.13.0
+
+The 4.13.0 release supports both standard mode and restricted mode.
+
+This release of the Console agent includes security improvements and bug fixes as well as the following new feature.
+
+.Create the AWS deployment role automatically when you deploy a Console agent
+
+You no longer need to create the IAM role for deploying a Console agent in AWS before you start. The NetApp Console can create the role for you. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-console.html[Learn how to deploy a Console agent in AWS from the Console^]
+
+
+=== NetApp Console administration
+This release includes security improvements and bug fixes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

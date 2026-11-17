@@ -182,9 +182,6 @@ The agent is ready in approximately 10 minutes; stay on the page until the proce
 
 After the process completes, the Console agent is available for use.
 
-NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
-
 If you have Google Cloud Storage buckets in the same Google Cloud account where you created the Console agent, a Google Cloud Storage system appears automatically on the *Systems* page. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html[Learn how to manage Google Cloud Storage from the Console^].
 
-
-
+include::_include/validate-agent-ui.adoc[]

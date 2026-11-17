@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-maintain-agents.html
-keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health
-summary: Learn how to maintain NetApp Console agent VMs, including OS security updates for manually installed agents, recommended CPU and RAM sizing, resource health notifications, and VM start and stop procedures.
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, os patching, security updates, ova, marketplace, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health
+summary: Learn how to maintain NetApp Console agent VMs, including operating system updates, recommended CPU and RAM sizing, resource health notifications, and VM start and stop procedures.
 ---
 
 = Maintain NetApp Console agent VMs
@@ -13,19 +13,19 @@ summary: Learn how to maintain NetApp Console agent VMs, including OS security u
 :imagesdir: ./media/
 
 [.lead]
-Maintain NetApp Console agent VMs by applying OS security updates to manually installed agents, responding to CPU, RAM, and disk-space alerts, and resizing or stopping and starting VMs when needed.
+Keep your Console agent VMs patched, correctly sized, and healthy so that the agent stays operational at all times.
 
-When you manually install a Console agent, maintaining the operating system on the agent host is your (the customer's) responsibility. For example, you (the customer) should apply security updates to the operating system on the agent host by following your company's standard procedures for operating system distribution.
+== Apply operating system updates to agent hosts
 
-If an agent VM becomes under-provisioned or experiences performance issues, you should take appropriate actions to upgrade the VM resources.
+Apply security updates to the operating system and associated packages on your agent host so that the host stays secure.
 
-NOTE: If you installed the agent in vCenter, use the Console maintenance tool to resize the VM instance. link:task-agent-vm-config.html[Learn how to maintain a agent VM in vCenter^].
+This is your responsibility as the customer. The Console agent software can upgrade itself, but it does not upgrade the operating system or associated packages.
 
-== Apply operating system updates to the manually installed agent hosts
+NOTE: If you deployed the Console agent in vCenter using an OVA, the operating system is part of the agent image. link:task-upgrade-agent.html#upgrade-a-vcenter-deployed-console-agent-using-an-iso[Upgrade the agent using an ISO^] to update the operating system.
 
-Apply OS security patches without stopping agent host services. 
+Follow your company's standard procedures for your operating system distribution. You don't need to stop agent host services when you apply OS security patches.
 
-To maintain compatibility with supported configurations, you should prevent Docker or Podman from being upgraded during routine OS patching. You can do this by either temporarily excluding Docker or Podman during updates or by permanently configuring the package manager to skip Docker or Podman updates.
+On agents that you did not deploy from an OVA, prevent Docker or Podman from being upgraded during routine OS patching to maintain compatibility with supported configurations. You can do this by either temporarily excluding Docker or Podman during updates or by permanently configuring the package manager to skip Docker or Podman updates.
 
 The following are examples of how to exclude Docker or Podman updates for different Linux distributions. Consult your Linux distribution's documentation for the most up-to-date instructions on how to exclude packages from updates.
 
@@ -41,16 +41,15 @@ sudo apt update
 sudo apt upgrade
 
 
-== Resizing the VM or instance type
+== Resize the VM or instance type
 
-If you create a Console agent from the Console, it deploys a VM instance in your cloud provider with a default configuration. After you create the agent, don't switch to a smaller VM instance with less CPU or RAM.
+Increase the CPU or RAM of an under-provisioned agent VM so that the agent keeps performing well.
 
-If you receive notifications that your agent VM is under-provisioned, consider upgrading to a larger VM instance with more CPU or RAM to ensure optimal performance.
+If you create a Console agent from the Console, it deploys a VM instance in your cloud provider with a default configuration. link:reference-agent-default-config.html[Learn more about the default settings for the agent]. After you create the agent, don't switch to a smaller VM instance with less CPU or RAM.
 
-NOTE: If you installed the agent in VCenter, use the Console maintenance tool to resize the VM instance. link:task-agent-vm-config.html[Learn how to resize the agent VM in VCenter^].
+If you receive notifications that your agent VM is under-provisioned, consider upgrading to a larger VM instance with more CPU or RAM.
 
-
-link:reference-agent-default-config.html[Learn about the default configuration for the agent].
+NOTE: If you installed the agent in vCenter, use the Console maintenance tool to resize the VM instance. link:task-agent-vm-config.html[Learn how to resize the agent VM in vCenter^].
 
 If you need to increase the CPU or RAM of your agent VM, follow the instructions provided by your cloud provider or on-premises virtualization platform to resize the VM instance. NetApp recommends doubling the current CPU and RAM allocation to ensure optimal performance. The following table shows recommended sizing tiers, with each tier doubling the CPU and RAM of the previous tier.
 
@@ -66,6 +65,8 @@ If you need to increase the CPU or RAM of your agent VM, follow the instructions
 
 [[monitor-disk-space]]
 == Monitor the agent
+
+Stay informed about disk space, RAM, and CPU problems on your agent VM so that you can resolve them.
 
 The Console notifies you when the agent VM is unhealthy, including disk space, RAM, and CPU issues. Monitor these notifications in the Notifications Center within the Console or configure email notifications. Occasional increases in disk space, memory, or CPU usage are normal, but if it happens frequently, you should take steps to resolve.
 
@@ -84,7 +85,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 | Action needed
 
 | Disk space is too high | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM[Review the NetApp Knowledge Base article^].
-a| CPU usage is too high a| Increase the CPU size of the agent VM in your cloud provider or on-premises, depending on where you installed it. Alternatively, create additional agents and distribute the workload across multiple agents. RAM utilization can vary based on your environment, ONTAP workloads, number of Cloud Volumes ONTAP systems, and the data services that you are using.
+a| CPU usage is too high a| Increase the CPU size of the agent VM in your cloud provider or on-premises, depending on where you installed it. Alternatively, create additional agents and distribute the workload across multiple agents.
 
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html[Learn how to increase the size of the agent VM in AWS^].
 
@@ -92,7 +93,7 @@ a| CPU usage is too high a| Increase the CPU size of the agent VM in your cloud 
 
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance[Learn how to increase the size of an agent VM in Google Cloud^].
 
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance[Learn how to increase the size of an on-premises agent running in VCenter].
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance[Learn how to increase the size of an on-premises agent running in vCenter].
 
 a| RAM usage is too high a| Increase the RAM of the agent VM in your cloud provider or on-premises, depending on where you installed it. Alternatively, create additional agents and distribute the workload across multiple agents. RAM utilization can vary based on your environment, ONTAP workloads, number of Cloud Volumes ONTAP systems, and the data services that you are using.
 
@@ -102,7 +103,7 @@ a| RAM usage is too high a| Increase the RAM of the agent VM in your cloud provi
 
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance[Learn how to increase the size of an agent VM in Google Cloud^].
 
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance[Learn how to increase the size of an on-premises agent running in VCenter].
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance[Learn how to increase the size of an on-premises agent running in vCenter].
 
 
 |===
@@ -110,7 +111,9 @@ a| RAM usage is too high a| Increase the RAM of the agent VM in your cloud provi
 
 
 
-== Stopping and starting the agent VM
+== Stop and start the agent VM
+
+Limit downtime when you stop and start the agent VM, because management and data services depend on the agent staying operational.
 
 If you need to, stop and start the agent VM using your cloud provider's console or standard on-premises procedures. 
 
@@ -119,6 +122,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times[Be aware that t
 
 [[connect-linux-host]]
 == Connect to the Linux VM
+
+Check the status of the Console agent from its Linux VM so that you can confirm that it's running.
 
 If you need to connect to the Linux VM that the agent runs on, use the connectivity options from your cloud provider.
 

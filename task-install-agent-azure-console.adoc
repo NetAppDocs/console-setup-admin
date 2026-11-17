@@ -389,7 +389,6 @@ The Console prepares the agent in about 10 minutes. Stay on the page until the p
 
 After the process is complete, the Console agent is available for use from the Console.
 
-NOTE: If the deployment fails, you can download a report and logs from the Console to help you fix the issues. link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
-
 If you have Azure Blob storage in the same Azure account where you created the Console agent, you'll see Azure Blob storage appear on the *Systems* page automatically. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html[Learn how to manage Azure Blob storage from NetApp Console^]
 
+include::_include/validate-agent-ui.adoc[]

@@ -1,17 +1,21 @@
-If you selected the *Validate agent configuration* check box on the *Review* page, the Console verifies the configuration of the Console agent after it's created. If the Console fails to deploy the agent, it provides a downloadable report to help you troubleshoot.
+// SME review (BLUEXPDOC-1534): Confirm that the Agent deployment failed dialog box, Download report, and Start over still work as described on the new deployment form. This include was rewritten from an unused version.
+[[troubleshoot-agent-deployment]]
+== Troubleshoot a failed Console agent deployment
 
+Use the deployment report to find what blocked the Console agent deployment, and then retry it.
 
-NOTE: If the Console successfully deploys the agent, it does not generate a report and a confirmation dialog appears that verifies a successful deployment.
-
+The Console provides a report only if the *Validate agent configuration* check box was selected. If the deployment succeeds, there is no report.
 
 .Steps
 
-. On the *Agent deployment failed* dialog box, select *Download report* to download a PDF file that contains the validation report.
+. In the *Agent deployment failed* dialog box, select *Download report*.
++
+The Console downloads a PDF file that contains the validation report.
 
-. Alternatively, you can select *Start over* to return to the *Deploy agent* wizard and try again. 
+. Review the report and fix the issues that it lists.
 
-+ 
-You must start the entire process over if you want to try deploying the agent again.
+. In the dialog box, select *Start over*, and then complete the deployment again.
++
+You must start the entire process over to try again.
 
-
-. Access the report and logs from the Console agent host
+link:task-troubleshoot-agent.html#troubleshoot-installation[Learn how to troubleshoot installation issues.]
