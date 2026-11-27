@@ -61,9 +61,9 @@ NOTE: NetApp uses Microsoft Entra ID as the identity provider for authentication
 
 Upon successful login, NetApp will store the NSS user name. 
 +
-This is a system-generated ID that maps to your email. On the *NSS Management* page, you can display your email from the image:icon-nss-menu.png[An icon of three horizontal dots] menu.
+This is a system-generated ID that maps to your email. On the *NSS Management* page, you can display your email from the image:icon-action.png[An icon of three horizontal dots] menu.
 
-* If you ever need to refresh your login credential tokens, there is also an *Update Credentials* option in the image:icon-nss-menu.png[An icon of three horizontal dots] menu. 
+* If you ever need to refresh your login credential tokens, there is also an *Update Credentials* option in the image:icon-action.png[An icon of three horizontal dots] menu. 
 +
 Using this option prompts you to log in again. Note that the token for these accounts expires after 90 days. A notification will be posted to alert you of this.
 
